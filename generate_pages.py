@@ -18,7 +18,6 @@ DETAIL_TMPL = """\
   <a class="logo" href="/trade/">Paper<span>Chase</span></a>
   <div class="topbar-nav">
     <a class="nav-link" href="/trade/">Leaderboard</a>
-    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
     <a class="nav-link" href="/">Home</a>
   </div>
 </div></nav>
@@ -38,7 +37,6 @@ DETAIL_TMPL = """\
     <div class="page-footer">
       <a class="footer-link" href="/trade/">← Leaderboard</a>
       <a class="footer-link" href="/trade/{bot_id}/records/">Full Records →</a>
-      <a class="footer-link" href="/market-sentinel/">Market Sentinel</a>
     </div>
   </div>
 </div>
@@ -68,7 +66,7 @@ RECORDS_TMPL = """\
   <a class="logo" href="/trade/">Paper<span>Chase</span></a>
   <div class="topbar-nav">
     <a class="nav-link" href="/trade/">Leaderboard</a>
-    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
+    <a class="nav-link" href="/">Home</a>
   </div>
 </div></nav>
 <div class="container">

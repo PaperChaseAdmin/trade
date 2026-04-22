@@ -12,7 +12,6 @@
   <a class="logo" href="/trade/">Paper<span>Chase</span></a>
   <div class="topbar-nav">
     <a class="nav-link active" href="/trade/">Leaderboard</a>
-    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
     <a class="nav-link" href="/">Home</a>
   </div>
 </div></nav>
@@ -88,7 +87,7 @@ async function load(){
   });
 
   document.getElementById('footer').innerHTML=
-    `<span class="live"></span> Updated ${ago(data.updated_at)} &nbsp;·&nbsp; Refreshes every 30 min during US market hours &nbsp;·&nbsp; <a href="/market-sentinel/" style="color:var(--accent);text-decoration:none">Market Sentinel</a>`;
+    `<span class="live"></span> Updated ${ago(data.updated_at)} &nbsp;·&nbsp; Refreshes every 30 min during US market hours`;
 
   setTimeout(load,90000);
 }
