@@ -2,156 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Elon — Trade Records · PaperChase</title>
-<style>
-:root {
-  --bg:#050508; --panel:#0b0b12; --border:#00ffff;
-  --text:#c8d0e0; --dim:#556070; --green:#00ff88; --red:#ff3355;
-  --font:'Courier New',monospace; --bot-color:#ff6b35;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;
-  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,255,.015) 2px,rgba(0,255,255,.015) 4px);
-  pointer-events:none;z-index:9999}
-body::after{content:'';position:fixed;inset:0;
-  background-image:linear-gradient(rgba(0,255,255,.04) 1px,transparent 1px),
-                   linear-gradient(90deg,rgba(0,255,255,.04) 1px,transparent 1px);
-  background-size:40px 40px;pointer-events:none;z-index:0}
-.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 20px 60px}
-.back{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--dim);text-decoration:none;padding:24px 0 32px;transition:color .2s}
-.back:hover{color:var(--border)}
-
-.page-header{margin-bottom:32px}
-.page-title{font-size:1.4rem;letter-spacing:.1em;color:#fff;margin-bottom:6px}
-.page-title span{color:var(--bot-color)}
-.page-sub{font-size:.72rem;color:var(--dim)}
-
-.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
-.filter-btn{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;
-  border:1px solid rgba(0,255,255,.15);background:none;color:var(--dim);cursor:pointer;transition:all .2s}
-.filter-btn.active,.filter-btn:hover{border-color:var(--border);color:var(--border)}
-.filter-btn.buy.active{border-color:var(--green);color:var(--green)}
-.filter-btn.sell.active{border-color:var(--red);color:var(--red)}
-.count{font-size:.7rem;color:var(--dim);margin-left:auto}
-
-table{width:100%;border-collapse:collapse;font-size:.74rem}
-th{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
-   padding:8px 12px;text-align:left;border-bottom:1px solid rgba(0,255,255,.15);white-space:nowrap}
-td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:top}
-tr:hover td{background:rgba(255,255,255,.02)}
-.badge{display:inline-block;font-size:.6rem;letter-spacing:.08em;padding:3px 8px;font-weight:bold}
-.badge-buy{background:rgba(0,255,136,.15);color:var(--green);border:1px solid rgba(0,255,136,.3)}
-.badge-sell{background:rgba(255,51,85,.15);color:var(--red);border:1px solid rgba(255,51,85,.3)}
-.pos{color:var(--green)} .neg{color:var(--red)}
-.reasoning-text{color:var(--dim);font-size:.7rem;max-width:300px;line-height:1.5}
-.no-trades{padding:60px;text-align:center;color:var(--dim);font-size:.8rem}
-.stats-row{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px}
-.stat{background:var(--panel);border:1px solid rgba(0,255,255,.12);padding:14px 18px;min-width:120px}
-.stat-lbl{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:5px}
-.stat-val{font-size:1.1rem;color:#fff}
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Elon Records · PaperChase</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="/trade/assets/style.css"/>
 </head>
 <body>
-<div class="wrap">
-  <a class="back" href="/trade/elon/">← Back to Elon's Profile</a>
-
-  <div class="page-header">
-    <div class="page-title">🚀 <span>Elon</span> — Complete Trade Records</div>
-    <div class="page-sub">Full history of every paper trade · All times UTC</div>
+<nav class="topbar"><div class="topbar-inner">
+  <a class="logo" href="/trade/">Paper<span>Chase</span></a>
+  <div class="topbar-nav">
+    <a class="nav-link" href="/trade/">Leaderboard</a>
+    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
   </div>
-
-  <div class="stats-row" id="stats-row"></div>
-
+</div></nav>
+<div class="container">
+  <a class="back-link" href="/trade/elon/">← <span id="bot-avatar"></span> <span id="bot-name"></span></a>
+  <div class="page-header">
+    <div class="page-title" style="color:#f97316">🚀 Elon — Trade Records</div>
+    <div class="page-sub">Complete history · All times UTC</div>
+  </div>
+  <div id="stats"></div>
   <div class="filters">
     <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
-    <button class="filter-btn buy"  onclick="setFilter('BUY',this)">BUY only</button>
-    <button class="filter-btn sell" onclick="setFilter('SELL',this)">SELL only</button>
-    <span class="count" id="count-label"></span>
+    <button class="filter-btn" onclick="setFilter('BUY',this)">Buys</button>
+    <button class="filter-btn" onclick="setFilter('SELL',this)">Sells</button>
+    <span class="filter-count" id="count"></span>
   </div>
-
-  <div id="records-table"></div>
+  <div id="records"></div>
 </div>
-
 <script>
-const BOT_ID  = 'elon';
-const BASE    = '../../data/bots/' + BOT_ID + '/';
-let allTrades = [];
-let filter    = 'all';
-
-function fmt(v){ return '$' + Math.abs(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-function fmtTime(ts){
-  const d = new Date(ts);
-  return d.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'}) + ' ' +
-         d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false});
-}
-
-function setFilter(f, btn) {
-  filter = f;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderTable();
-}
-
-function renderStats(trades) {
-  const buys  = trades.filter(t => t.action === 'BUY');
-  const sells = trades.filter(t => t.action === 'SELL');
-  const vol   = trades.reduce((s,t) => s + (t.total_value||0), 0);
-  document.getElementById('stats-row').innerHTML = `
-    <div class="stat"><div class="stat-lbl">Total Trades</div><div class="stat-val">${trades.length}</div></div>
-    <div class="stat"><div class="stat-lbl">Buys</div><div class="stat-val pos">${buys.length}</div></div>
-    <div class="stat"><div class="stat-lbl">Sells</div><div class="stat-val neg">${sells.length}</div></div>
-    <div class="stat"><div class="stat-lbl">Total Volume</div><div class="stat-val">${fmt(vol)}</div></div>
-  `;
-}
-
-function renderTable() {
-  const filtered = filter === 'all' ? allTrades : allTrades.filter(t => t.action === filter);
-  const el = document.getElementById('records-table');
-  document.getElementById('count-label').textContent = `Showing ${filtered.length} trade${filtered.length!==1?'s':''}`;
-
-  if (!filtered.length) {
-    el.innerHTML = `<div class="no-trades">${allTrades.length ? 'No trades match this filter.' : 'No trades yet — bot starts when US market opens.'}</div>`;
-    return;
-  }
-
-  let rows = '';
-  [...filtered].reverse().forEach((t, i) => {
-    const badge = t.action === 'BUY'
-      ? '<span class="badge badge-buy">BUY</span>'
-      : '<span class="badge badge-sell">SELL</span>';
-    rows += `<tr>
-      <td style="color:var(--dim)">${filtered.length - i}</td>
-      <td style="white-space:nowrap;color:var(--dim)">${fmtTime(t.timestamp)}</td>
-      <td>${badge}</td>
-      <td style="font-weight:bold;color:#fff">${t.ticker}</td>
-      <td>${t.shares}</td>
-      <td>${fmt(t.price)}</td>
-      <td>${fmt(t.total_value)}</td>
-      <td class="reasoning-text">${t.reasoning || '—'}</td>
-    </tr>`;
-  });
-
-  el.innerHTML = `<table>
-    <thead><tr>
-      <th>#</th><th>Date &amp; Time (UTC)</th><th>Action</th>
-      <th>Ticker</th><th>Shares</th><th>Price</th><th>Total Value</th><th>Reasoning</th>
-    </tr></thead>
-    <tbody>${rows}</tbody>
-  </table>`;
-}
-
-async function load() {
-  const data = await fetch(BASE + 'trades.json?t=' + Date.now()).then(r=>r.json());
-  allTrades = data.trades || [];
-  renderStats(allTrades);
-  renderTable();
-  setTimeout(load, 90000);
-}
-
-load().catch(e => { document.body.innerHTML += '<p style="padding:40px;color:red">Error: '+e.message+'</p>'; });
+const BOT_ID='elon',BOT_COLOR='#f97316',BOT_NAME='Elon',BOT_AVATAR='🚀';
 </script>
-</body>
-</html>
+<script src="/trade/assets/records.js"></script>
+</body></html>

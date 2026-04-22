@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Ray · PaperChase Trading Arena</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="/trade/assets/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<nav class="topbar"><div class="topbar-inner">
+  <a class="logo" href="/trade/">Paper<span>Chase</span></a>
+  <div class="topbar-nav">
+    <a class="nav-link" href="/trade/">Leaderboard</a>
+    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
+    <a class="nav-link" href="/">Home</a>
+  </div>
+</div></nav>
+<div class="container">
+  <a class="back-link" href="/trade/">← All Bots</a>
+  <div id="loading">Loading Ray...</div>
+  <div id="app">
+    <div id="hero"></div>
+    <div id="outlook"></div>
+    <div class="chart-card" id="chart-wrap"><canvas id="chart"></canvas></div>
+    <div class="section-label">Current Positions</div>
+    <div id="positions" style="margin-bottom:24px"></div>
+    <div class="section-label">Recent Trades</div>
+    <div id="trades"></div>
+    <div class="page-footer">
+      <a class="footer-link" href="/trade/">← Leaderboard</a>
+      <a class="footer-link" href="/trade/ray/records/">Full Records →</a>
+      <a class="footer-link" href="/market-sentinel/">Market Sentinel</a>
+    </div>
+  </div>
+</div>
+<script>
+const BOT_ID='ray',BOT_COLOR='#f59e0b',BOT_NAME='Ray';
+const BOT_AVATAR='⚖️',BOT_BIO='All Weather portfolio. Balanced across all economic environments.',BOT_STRATEGY='Macro diversification: gold, bonds, commodities, equities';
+const BOT_RISK='LOW',BOT_RISK_BAR=3;
+</script>
+<script src="/trade/assets/bot-detail.js"></script>
+</body></html>

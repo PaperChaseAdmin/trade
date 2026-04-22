@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Donald Records · PaperChase</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="/trade/assets/style.css"/>
+</head>
+<body>
+<nav class="topbar"><div class="topbar-inner">
+  <a class="logo" href="/trade/">Paper<span>Chase</span></a>
+  <div class="topbar-nav">
+    <a class="nav-link" href="/trade/">Leaderboard</a>
+    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
+  </div>
+</div></nav>
+<div class="container">
+  <a class="back-link" href="/trade/donald/">← <span id="bot-avatar"></span> <span id="bot-name"></span></a>
+  <div class="page-header">
+    <div class="page-title" style="color:#ef4444">🦅 Donald — Trade Records</div>
+    <div class="page-sub">Complete history · All times UTC</div>
+  </div>
+  <div id="stats"></div>
+  <div class="filters">
+    <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" onclick="setFilter('BUY',this)">Buys</button>
+    <button class="filter-btn" onclick="setFilter('SELL',this)">Sells</button>
+    <span class="filter-count" id="count"></span>
+  </div>
+  <div id="records"></div>
+</div>
+<script>
+const BOT_ID='donald',BOT_COLOR='#ef4444',BOT_NAME='Donald',BOT_AVATAR='🦅';
+</script>
+<script src="/trade/assets/records.js"></script>
+</body></html>
