@@ -172,16 +172,25 @@ Reply ONLY valid JSON:
 No trades: {{"trades":[],"market_outlook":"..."}}"""
 
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-    resp   = client.models.generate_content(
-        model="gemini-2.0-flash",
-        contents=prompt,
-        config=genai_types.GenerateContentConfig(
-            response_mime_type="application/json",
-            temperature=0.75,
-            max_output_tokens=600
-        )
-    )
-    return json.loads(resp.text)
+    for attempt in range(3):
+        try:
+            resp = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=prompt,
+                config=genai_types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.75,
+                    max_output_tokens=600
+                )
+            )
+            return json.loads(resp.text)
+        except Exception as e:
+            if "429" in str(e) and attempt < 2:
+                wait = 60 * (attempt + 1)
+                print(f"    Rate limit hit, waiting {wait}s...")
+                time.sleep(wait)
+            else:
+                raise
 
 
 # ── Leaderboard ───────────────────────────────────────────────────────────────
@@ -291,17 +300,6 @@ def main():
         print(f"{'='*55}\n")
         raise SystemExit(1)
     print(f"  Gemini API key: set ({len(api_key)} chars)")
-
-    # Quick connectivity test with a minimal prompt
-    print("  Gemini test call...")
-    try:
-        test_client = genai.Client(api_key=api_key)
-        test_resp   = test_client.models.generate_content(
-            model="gemini-2.0-flash", contents="Reply with the word OK only.")
-        print(f"  Gemini test: {test_resp.text.strip()[:30]}")
-    except Exception as e:
-        print(f"  FATAL: Gemini test failed — {type(e).__name__}: {e}")
-        raise SystemExit(1)
 
     print("\n[1] Market data...")
     md = get_market_data()
