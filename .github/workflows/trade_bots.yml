@@ -1,0 +1,39 @@
+name: Run Trading Bots
+
+on:
+  schedule:
+    # Every 30 min, Mon–Fri, 13:00–21:00 UTC (covers EDT 9:00am–5:00pm & EST 8:00am–4:00pm)
+    - cron: '0,30 13-21 * * 1-5'
+  workflow_dispatch:  # manual trigger & cron-job.org
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run trading bots
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python bot_runner.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "trading-bots[bot]"
+          git config user.email "trading-bots[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "trade: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
