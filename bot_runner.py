@@ -19,9 +19,25 @@ RATE_LIMIT_DELAY  = 4   # seconds between Gemini calls (15 RPM free tier)
 
 # ── Market Hours ──────────────────────────────────────────────────────────────
 def is_market_open():
-    now = datetime.now(ET)
-    if now.weekday() >= 5: return False
-    return now.replace(hour=9,minute=30,second=0) <= now <= now.replace(hour=16,minute=0,second=0)
+    """Check NYSE is currently open — handles weekends, holidays, and early closes."""
+    now_et = datetime.now(ET)
+    # Fast reject: weekends
+    if now_et.weekday() >= 5:
+        return False
+    # Fast reject: outside possible trading hours
+    if now_et.hour < 9 or now_et.hour >= 16:
+        return False
+    if now_et.hour == 9 and now_et.minute < 30:
+        return False
+    # Full check: NYSE calendar (handles US holidays + early close days)
+    try:
+        import exchange_calendars as xcals
+        import pandas as pd
+        cal = xcals.get_calendar("XNYS")
+        return bool(cal.is_open_at_time(pd.Timestamp.utcnow()))
+    except Exception as e:
+        print(f"  WARN Calendar check failed ({e}), falling back to time check")
+        return True
 
 
 # ── Prices ────────────────────────────────────────────────────────────────────
@@ -39,7 +55,7 @@ def get_prices(tickers):
                 try: prices[t] = round(float(close[t].dropna().iloc[-1]), 4)
                 except: pass
     except Exception as e:
-        print(f"  ⚠ yfinance batch: {e} — trying individually")
+        print(f"  WARN yfinance batch: {e} — trying individually")
         for t in tickers:
             try:
                 d = yf.Ticker(t).history(period="1d", interval="5m")
@@ -53,7 +69,7 @@ def get_prices(tickers):
 def get_market_data():
     try: return requests.get(MARKET_SENTINEL, timeout=15).json()
     except Exception as e:
-        print(f"  ⚠ Market Sentinel: {e}")
+        print(f"  WARN Market Sentinel: {e}")
         return {}
 
 
@@ -214,13 +230,13 @@ def run_bot(bot_id, prices, market_data):
         print(f"    → {outlook[:70]}")
         for trade in dec.get("trades", []):
             rec, err = execute(pf, trade, prices, profile)
-            if err: print(f"    ✗ {err}"); continue
+            if err: print(f"    FAIL {err}"); continue
             rec["timestamp"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
             rec["market_outlook"] = outlook
             new_trades.append(rec)
-            print(f"    ✓ {rec['action']} {rec['shares']}x {rec['ticker']} @${rec['price']:.2f}")
+            print(f"    OK {rec['action']} {rec['shares']}x {rec['ticker']} @${rec['price']:.2f}")
     except Exception as e:
-        print(f"    ✗ Error: {e}")
+        print(f"    FAIL Error: {e}")
         outlook = "Analysis unavailable"
 
     val = calc_value(pf, prices)
@@ -250,14 +266,19 @@ def run_bot(bot_id, prices, market_data):
 def main():
     now_et = datetime.now(ET)
     open_  = is_market_open()
-    print(f"\n{'═'*55}")
+    print(f"\n{'='*55}")
     print(f"  PaperChase Bots  {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}")
-    print(f"  ET: {now_et.strftime('%H:%M')}  Market: {'OPEN 🟢' if open_ else 'CLOSED 🔴'}")
-    print(f"{'═'*55}")
+    print(f"  ET: {now_et.strftime('%H:%M')}  Market: {'OPEN' if open_ else 'CLOSED'}")
+    print(f"{'='*55}")
+
+    if not open_:
+        print("  Market is closed — skipping this run.")
+        print(f"{'='*55}\n")
+        return
 
     print("\n[1] Market data...")
     md = get_market_data()
-    print(f"    Market Sentinel: {'✓' if md else '⚠'}")
+    print(f"    Market Sentinel: {'OK' if md else 'unavailable'}")
 
     all_tickers = set()
     for pid, p in BOT_PROFILES.items():
@@ -273,23 +294,14 @@ def main():
     results = []
     for bot_id, profile in BOT_PROFILES.items():
         try:
-            if not open_:
-                pf = load_json(pf_path(bot_id))
-                sync_prices(pf, prices)
-                pf["total_value"]  = calc_value(pf, prices)
-                pf["last_updated"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
-                save_json(pf_path(bot_id), pf)
-                results.append((pf, profile))
-                print(f"\n  {profile['avatar']} {profile['display_name']}: price update (closed)")
-            else:
-                results.append((run_bot(bot_id, prices, md), profile))
-                time.sleep(RATE_LIMIT_DELAY)   # Gemini 15 RPM rate limit
+            results.append((run_bot(bot_id, prices, md), profile))
+            time.sleep(RATE_LIMIT_DELAY)   # Gemini 15 RPM rate limit
         except Exception as e:
-            print(f"\n  ✗ {bot_id}: {e}")
+            print(f"\n  FAIL {bot_id}: {e}")
 
     print(f"\n[4] Leaderboard...")
     if results: update_leaderboard(results)
-    print(f"\n{'═'*55}  Done.\n")
+    print(f"\n{'='*55}  Done.\n")
 
 
 if __name__ == "__main__":
