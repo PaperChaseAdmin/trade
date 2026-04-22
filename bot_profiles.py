@@ -51,7 +51,7 @@ BOT_PROFILES = {
         "risk_level": "MED", "risk_bar": 6, "color": "#ef4444",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.30, "max_trades_per_session": 3,
-        "watchlist": ["LMT","RTX","NOC","GD","LHX","XOM","CVX","HAL","X","CAT","GEO","BA","F","GM","JPM"],
+        "watchlist": ["LMT","RTX","NOC","GD","LHX","XOM","CVX","HAL","NUE","CAT","GEO","BA","F","GM","JPM"],
         "prompt_persona": (
             "You are Donald, an America First trader. You love defense contractors, oil companies, "
             "US steel manufacturers, and companies that benefit from tariffs and protectionism. "
@@ -87,7 +87,7 @@ BOT_PROFILES = {
         "risk_level": "HIGH", "risk_bar": 8, "color": "#8b5cf6",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.30, "max_trades_per_session": 3,
-        "watchlist": ["TSLA","COIN","PLTR","CRSP","BEAM","NTLA","RKLB","PATH","ROKU","TWLO","EXAS","SQ","HOOD","RXRX","PACB"],
+        "watchlist": ["TSLA","COIN","PLTR","CRSP","BEAM","NTLA","RKLB","PATH","ROKU","TWLO","ILMN","AFRM","HOOD","RXRX","PACB"],
         "prompt_persona": (
             "You are Cathie, a visionary investor who believes in disruptive innovation. "
             "You invest in genomics, AI, space, autonomous vehicles, and fintech disruption. "
@@ -144,7 +144,7 @@ BOT_PROFILES = {
         "risk_level": "MED", "risk_bar": 5, "color": "#64748b",
         "initial_capital": 10000, "min_cash_reserve": 2000,
         "max_position_pct": 0.25, "max_trades_per_session": 2,
-        "watchlist": ["GEO","CVS","BABA","JD","STLD","X","OXY","BAC","WFC","PFE","KHC","F","INTC","WBA","PARA"],
+        "watchlist": ["GEO","CVS","BABA","JD","STLD","NUE","OXY","BAC","WFC","PFE","KHC","F","INTC","KR","CMCSA"],
         "prompt_persona": (
             "You are Michael, the contrarian investor who predicted the 2008 crash. "
             "You find value in beaten-down, unloved stocks that the market has thrown away. "
@@ -222,7 +222,7 @@ BOT_PROFILES = {
         "risk_level": "HIGH", "risk_bar": 7, "color": "#b45309",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.35, "max_trades_per_session": 3,
-        "watchlist": ["T","WBD","PARA","INTC","NKE","DIS","SBUX","F","GM","WBA","PYPL","NOK","XRX","VFC","BBWI"],
+        "watchlist": ["T","WBD","CMCSA","INTC","NKE","DIS","SBUX","F","GM","CVS","PYPL","NOK","HPQ","VFC","BBWI"],
         "prompt_persona": (
             "You are Gordon Gekko. Greed is good, and don't you forget it. "
             "You hunt for undervalued companies that are ripe for corporate restructuring or activist takeover. "
@@ -356,7 +356,7 @@ BOT_PROFILES = {
         "risk_level": "VERY HIGH", "risk_bar": 10, "color": "#d97706",
         "initial_capital": 10000, "min_cash_reserve": 300,
         "max_position_pct": 0.35, "max_trades_per_session": 3,
-        "watchlist": ["COIN","MSTR","MARA","RIOT","CLSK","HOOD","SQ","PYPL","CIFR","HUT","CORZ","IREN","BTBT","WULF","NVDA"],
+        "watchlist": ["COIN","MSTR","MARA","RIOT","CLSK","HOOD","BITO","PYPL","CIFR","HUT","CORZ","IREN","BTBT","WULF","NVDA"],
         "prompt_persona": (
             "You are Satoshi Nakamoto. You believe in a decentralized future. "
             "You invest in crypto-adjacent stocks: Bitcoin miners, crypto exchanges, blockchain companies. "

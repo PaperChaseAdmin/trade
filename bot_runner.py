@@ -7,7 +7,8 @@ Runs AI paper trading bots during US market hours using Gemini 2.0 Flash.
 import os, json, time, requests, yfinance as yf
 from datetime import datetime, date
 import pytz
-import google.generativeai as genai
+from google import genai
+from google.genai import types as genai_types
 from bot_profiles import BOT_PROFILES
 
 ET = pytz.timezone("America/New_York")
@@ -34,7 +35,7 @@ def is_market_open():
         import exchange_calendars as xcals
         import pandas as pd
         cal = xcals.get_calendar("XNYS")
-        return bool(cal.is_open_at_time(pd.Timestamp.utcnow()))
+        return bool(cal.is_open_at_time(pd.Timestamp.now('UTC')))
     except Exception as e:
         print(f"  WARN Calendar check failed ({e}), falling back to time check")
         return True
@@ -170,11 +171,16 @@ Reply ONLY valid JSON:
 {{"trades":[{{"action":"BUY","ticker":"X","shares":5,"reasoning":"one sentence"}}],"market_outlook":"one sentence"}}
 No trades: {{"trades":[],"market_outlook":"..."}}"""
 
-    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-    model = genai.GenerativeModel("gemini-2.0-flash")
-    resp  = model.generate_content(prompt,
-        generation_config=genai.types.GenerationConfig(
-            response_mime_type="application/json", temperature=0.75, max_output_tokens=600))
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    resp   = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=prompt,
+        config=genai_types.GenerateContentConfig(
+            response_mime_type="application/json",
+            temperature=0.75,
+            max_output_tokens=600
+        )
+    )
     return json.loads(resp.text)
 
 
@@ -236,7 +242,9 @@ def run_bot(bot_id, prices, market_data):
             new_trades.append(rec)
             print(f"    OK {rec['action']} {rec['shares']}x {rec['ticker']} @${rec['price']:.2f}")
     except Exception as e:
-        print(f"    FAIL Error: {e}")
+        import traceback
+        print(f"    FAIL {type(e).__name__}: {e}")
+        traceback.print_exc()
         outlook = "Analysis unavailable"
 
     val = calc_value(pf, prices)
@@ -275,6 +283,25 @@ def main():
         print("  Market is closed — skipping this run.")
         print(f"{'='*55}\n")
         return
+
+    # ── Gemini API key check ──────────────────────────────────────────────────
+    api_key = os.environ.get("GEMINI_API_KEY", "")
+    if not api_key:
+        print("  FATAL: GEMINI_API_KEY is not set. Aborting.")
+        print(f"{'='*55}\n")
+        raise SystemExit(1)
+    print(f"  Gemini API key: set ({len(api_key)} chars)")
+
+    # Quick connectivity test with a minimal prompt
+    print("  Gemini test call...")
+    try:
+        test_client = genai.Client(api_key=api_key)
+        test_resp   = test_client.models.generate_content(
+            model="gemini-2.0-flash", contents="Reply with the word OK only.")
+        print(f"  Gemini test: {test_resp.text.strip()[:30]}")
+    except Exception as e:
+        print(f"  FATAL: Gemini test failed — {type(e).__name__}: {e}")
+        raise SystemExit(1)
 
     print("\n[1] Market data...")
     md = get_market_data()
