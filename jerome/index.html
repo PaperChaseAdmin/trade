@@ -23,6 +23,8 @@
   <div id="app">
     <div id="hero"></div>
     <div id="outlook"></div>
+    <div id="specs"></div>
+    <div id="follow"></div>
     <div class="chart-card" id="chart-wrap"><canvas id="chart"></canvas></div>
     <div class="section-label">Current Positions</div>
     <div id="positions" style="margin-bottom:24px"></div>
@@ -39,6 +41,8 @@
 const BOT_ID='jerome',BOT_COLOR='#475569',BOT_NAME='Jerome';
 const BOT_AVATAR='📊',BOT_BIO='Data dependent. Adjusts portfolio with every CPI print.',BOT_STRATEGY='Fed-sensitive macro: bonds, utilities, banks based on rate outlook';
 const BOT_RISK='LOW',BOT_RISK_BAR=3;
+const BOT_WATCHLIST=["TLT", "IEF", "BIL", "XLU", "XLRE", "VNQ", "JPM", "BAC", "GS", "SPY", "XLF", "SHY", "TIP", "AGG", "PFF"];
+const BOT_MAX_POSITION=0.25,BOT_MAX_TRADES=2,BOT_MIN_CASH=1000;
 </script>
 <script src="/trade/assets/bot-detail.js"></script>
 </body></html>

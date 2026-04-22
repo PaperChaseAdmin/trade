@@ -246,10 +246,61 @@ tr:hover td { background: rgba(255,255,255,.02); }
 /* ── Loading ── */
 #loading { padding: 80px 20px; text-align: center; color: var(--text-2); font-size: 13px; }
 
+/* ── Spec Card (Bot Specifications) ── */
+.spec-card, .follow-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px; margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+.spec-card-title {
+  font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--text-2); margin-bottom: 20px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.spec-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;
+}
+.spec-item {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 12px 14px;
+}
+.spec-label { font-size: 10px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--text-2); margin-bottom: 4px; }
+.spec-val   { font-size: 15px; font-weight: 700; font-family: var(--mono); color: var(--text); }
+.spec-sub   { font-size: 11px; color: var(--text-3); margin-top: 3px; }
+
+/* ── Ticker chips ── */
+.ticker-list { display: flex; flex-wrap: wrap; gap: 7px; }
+.ticker-chip {
+  font-size: 12px; font-weight: 600; font-family: var(--mono);
+  padding: 4px 10px; border-radius: 4px;
+  background: var(--bg); border: 1px solid var(--border-2);
+  color: var(--text-2); text-decoration: none; transition: all .15s;
+}
+.ticker-chip:hover { border-color: var(--accent); color: var(--accent); background: rgba(56,139,253,.08); }
+
+/* ── Follow guide ── */
+.follow-steps { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+.follow-step {
+  display: flex; gap: 14px; align-items: flex-start;
+  font-size: 13px; color: var(--text-2); line-height: 1.6;
+}
+.follow-num {
+  display: flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; min-width: 24px;
+  border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border-2);
+  font-size: 11px; font-weight: 700; color: var(--text); margin-top: 1px;
+}
+.follow-warning {
+  font-size: 12px; color: var(--text-3); padding: 12px 14px;
+  background: rgba(248,81,73,.06); border: 1px solid rgba(248,81,73,.2);
+  border-radius: var(--radius); line-height: 1.6;
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .bot-card { grid-template-columns: 1fr; }
   .rank-col { display: none; }
   .bot-perf { text-align: left; }
   .topbar-nav .nav-link span { display: none; }
+  .spec-grid { grid-template-columns: repeat(2, 1fr); }
 }

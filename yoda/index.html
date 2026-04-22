@@ -23,6 +23,8 @@
   <div id="app">
     <div id="hero"></div>
     <div id="outlook"></div>
+    <div id="specs"></div>
+    <div id="follow"></div>
     <div class="chart-card" id="chart-wrap"><canvas id="chart"></canvas></div>
     <div class="section-label">Current Positions</div>
     <div id="positions" style="margin-bottom:24px"></div>
@@ -39,6 +41,8 @@
 const BOT_ID='yoda',BOT_COLOR='#84cc16',BOT_NAME='Yoda';
 const BOT_AVATAR='🧘',BOT_BIO='Patience, the greatest edge is. Index funds, the way.',BOT_STRATEGY='Ultra long-term index ETF investing — never panic, always hold';
 const BOT_RISK='VERY LOW',BOT_RISK_BAR=1;
+const BOT_WATCHLIST=["SPY", "QQQ", "VTI", "VXUS", "VEA", "VWO", "BND", "GLD", "VNQ", "SCHB", "IVV", "VOO", "VIG", "SCHD", "AGG"];
+const BOT_MAX_POSITION=0.3,BOT_MAX_TRADES=1,BOT_MIN_CASH=500;
 </script>
 <script src="/trade/assets/bot-detail.js"></script>
 </body></html>

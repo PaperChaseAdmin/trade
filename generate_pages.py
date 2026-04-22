@@ -1,5 +1,5 @@
 """Generate thin HTML wrapper pages for all bots."""
-import os
+import os, json
 from bot_profiles import BOT_PROFILES
 
 DETAIL_TMPL = """\
@@ -28,6 +28,8 @@ DETAIL_TMPL = """\
   <div id="app">
     <div id="hero"></div>
     <div id="outlook"></div>
+    <div id="specs"></div>
+    <div id="follow"></div>
     <div class="chart-card" id="chart-wrap"><canvas id="chart"></canvas></div>
     <div class="section-label">Current Positions</div>
     <div id="positions" style="margin-bottom:24px"></div>
@@ -44,6 +46,8 @@ DETAIL_TMPL = """\
 const BOT_ID='{bot_id}',BOT_COLOR='{color}',BOT_NAME='{name}';
 const BOT_AVATAR='{avatar}',BOT_BIO='{bio}',BOT_STRATEGY='{strategy}';
 const BOT_RISK='{risk_level}',BOT_RISK_BAR={risk_bar};
+const BOT_WATCHLIST={watchlist};
+const BOT_MAX_POSITION={max_position_pct},BOT_MAX_TRADES={max_trades},BOT_MIN_CASH={min_cash};
 </script>
 <script src="/trade/assets/bot-detail.js"></script>
 </body></html>
@@ -97,7 +101,11 @@ for bot_id, p in BOT_PROFILES.items():
         f.write(DETAIL_TMPL.format(
             bot_id=bot_id, name=p["display_name"], color=p["color"],
             avatar=p["avatar"], bio=p["bio"], strategy=p["strategy"],
-            risk_level=p["risk_level"], risk_bar=p["risk_bar"]
+            risk_level=p["risk_level"], risk_bar=p["risk_bar"],
+            watchlist=json.dumps(p["watchlist"]),
+            max_position_pct=p["max_position_pct"],
+            max_trades=p["max_trades_per_session"],
+            min_cash=p["min_cash_reserve"]
         ))
 
     # Records page

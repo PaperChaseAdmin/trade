@@ -11,6 +11,95 @@ function signPct(v){ const c=+v>=0?'profit':'loss'; return `<span class="${c}">$
 function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?`${m}m ago`:m<1440?`${Math.floor(m/60)}h ago`:`${Math.floor(m/1440)}d ago`; }
 function fmtTs(ts){ const d=new Date(ts); return d.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false})+' UTC'; }
 
+function renderSpecs(){
+  if(typeof BOT_WATCHLIST==='undefined') return;
+  const pct=(BOT_MAX_POSITION*100).toFixed(0);
+  const tickers=BOT_WATCHLIST.map(t=>
+    `<a class="ticker-chip" href="https://finance.yahoo.com/quote/${t}" target="_blank" rel="noopener">${t}</a>`
+  ).join('');
+  $('specs').innerHTML=`
+    <div class="spec-card">
+      <div class="spec-card-title">Bot Specifications</div>
+      <div class="spec-grid">
+        <div class="spec-item">
+          <div class="spec-label">AI Engine</div>
+          <div class="spec-val">Gemini 2.0 Flash</div>
+          <div class="spec-sub">Google DeepMind</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Market Data</div>
+          <div class="spec-val">Yahoo Finance</div>
+          <div class="spec-sub">~15 min delayed</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Update Frequency</div>
+          <div class="spec-val">Every 30 min</div>
+          <div class="spec-sub">During market hours</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Active Hours</div>
+          <div class="spec-val">Mon–Fri</div>
+          <div class="spec-sub">09:00–17:00 ET</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Max Position Size</div>
+          <div class="spec-val">${pct}%</div>
+          <div class="spec-sub">of portfolio per stock</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Max Trades / Session</div>
+          <div class="spec-val">${BOT_MAX_TRADES}</div>
+          <div class="spec-sub">per 30-min run</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Min Cash Reserve</div>
+          <div class="spec-val">${fmt(BOT_MIN_CASH)}</div>
+          <div class="spec-sub">always kept liquid</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Starting Capital</div>
+          <div class="spec-val">$10,000</div>
+          <div class="spec-sub">paper money</div>
+        </div>
+      </div>
+      <div class="spec-label" style="margin:20px 0 10px">Watchlist — ${BOT_WATCHLIST.length} tickers monitored each session</div>
+      <div class="ticker-list">${tickers}</div>
+    </div>`;
+}
+
+function renderFollowGuide(){
+  $('follow').innerHTML=`
+    <div class="follow-card">
+      <div class="spec-card-title">How to Follow This Bot</div>
+      <div class="follow-steps">
+        <div class="follow-step">
+          <span class="follow-num">1</span>
+          <span>Scroll down to <strong>Recent Trades</strong> — the bot's latest signals appear here. The page auto-refreshes every 90 seconds.</span>
+        </div>
+        <div class="follow-step">
+          <span class="follow-num">2</span>
+          <span>When you see a <span class="badge badge-buy">BUY</span>, consider opening a position at market price in your broker for the same ticker.</span>
+        </div>
+        <div class="follow-step">
+          <span class="follow-num">3</span>
+          <span>When you see a <span class="badge badge-sell">SELL</span>, consider closing or trimming your position in that ticker.</span>
+        </div>
+        <div class="follow-step">
+          <span class="follow-num">4</span>
+          <span>Read the <strong>Reasoning</strong> column — the AI explains its logic for every trade so you can judge whether it aligns with your own view.</span>
+        </div>
+        <div class="follow-step">
+          <span class="follow-num">5</span>
+          <span>Check <a href="/trade/${BOT_ID}/records/" style="color:var(--accent)">Full Trade Records →</a> for the complete history, win rate, and total volume.</span>
+        </div>
+      </div>
+      <div class="follow-warning">
+        ⚠ This bot trades with <strong>simulated paper money only</strong>. Past performance does not guarantee future results.
+        Nothing on this page is financial advice. Always do your own due diligence before trading real money.
+      </div>
+    </div>`;
+}
+
 async function load(){
   const [pf, tr] = await Promise.all([
     fetch(BASE+'portfolio.json?t='+Date.now()).then(r=>r.json()),
@@ -18,6 +107,8 @@ async function load(){
   ]);
   renderHero(pf);
   renderOutlook(pf);
+  renderSpecs();
+  renderFollowGuide();
   renderChart(pf);
   renderPositions(pf);
   renderTrades(tr.trades||[]);
@@ -95,7 +186,7 @@ function renderTrades(trades){
   let rows='';
   recent.forEach(t=>{
     const badge=t.action==='BUY'?'<span class="badge badge-buy">BUY</span>':'<span class="badge badge-sell">SELL</span>';
-    rows+=`<tr><td class="mono" style="color:var(--text-2);white-space:nowrap">${fmtTs(t.timestamp)}</td><td>${badge}</td><td class="mono" style="font-weight:600">${t.ticker}</td><td class="mono">${t.shares}</td><td class="mono">${fmt(t.price)}</td><td class="mono">${fmt(t.total_value)}</td><td style="color:var(--text-2);font-size:12px;max-width:240px">${t.reasoning||'—'}</td></tr>`;
+    rows+=`<tr><td class="mono" style="color:var(--text-2);white-space:nowrap">${fmtTs(t.timestamp)}</td><td>${badge}</td><td class="mono" style="font-weight:600">${t.ticker}</td><td class="mono">${t.shares}</td><td class="mono">${fmt(t.price)}</td><td class="mono">${fmt(t.total_value)}</td><td style="color:var(--text-2);font-size:12px;max-width:240px;line-height:1.5">${t.reasoning||'—'}</td></tr>`;
   });
   el.innerHTML=`<div class="table-wrap"><table><thead><tr><th>Time (UTC)</th><th>Action</th><th>Ticker</th><th>Shares</th><th>Price</th><th>Total</th><th>Reasoning</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }

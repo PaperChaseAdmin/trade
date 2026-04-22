@@ -23,6 +23,8 @@
   <div id="app">
     <div id="hero"></div>
     <div id="outlook"></div>
+    <div id="specs"></div>
+    <div id="follow"></div>
     <div class="chart-card" id="chart-wrap"><canvas id="chart"></canvas></div>
     <div class="section-label">Current Positions</div>
     <div id="positions" style="margin-bottom:24px"></div>
@@ -39,6 +41,8 @@
 const BOT_ID='michael',BOT_COLOR='#64748b',BOT_NAME='Michael';
 const BOT_AVATAR='🔍',BOT_BIO='I saw the crash coming. Always finds what others miss.',BOT_STRATEGY='Deep value contrarian — buys unloved, waits for the turn';
 const BOT_RISK='MED',BOT_RISK_BAR=5;
+const BOT_WATCHLIST=["GEO", "CVS", "BABA", "JD", "STLD", "X", "OXY", "BAC", "WFC", "PFE", "KHC", "F", "INTC", "WBA", "PARA"];
+const BOT_MAX_POSITION=0.25,BOT_MAX_TRADES=2,BOT_MIN_CASH=2000;
 </script>
 <script src="/trade/assets/bot-detail.js"></script>
 </body></html>

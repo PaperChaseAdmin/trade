@@ -23,6 +23,8 @@
   <div id="app">
     <div id="hero"></div>
     <div id="outlook"></div>
+    <div id="specs"></div>
+    <div id="follow"></div>
     <div class="chart-card" id="chart-wrap"><canvas id="chart"></canvas></div>
     <div class="section-label">Current Positions</div>
     <div id="positions" style="margin-bottom:24px"></div>
@@ -39,6 +41,8 @@
 const BOT_ID='ray',BOT_COLOR='#f59e0b',BOT_NAME='Ray';
 const BOT_AVATAR='⚖️',BOT_BIO='All Weather portfolio. Balanced across all economic environments.',BOT_STRATEGY='Macro diversification: gold, bonds, commodities, equities';
 const BOT_RISK='LOW',BOT_RISK_BAR=3;
+const BOT_WATCHLIST=["GLD", "GDX", "TLT", "IEF", "EEM", "FXI", "SPY", "VWO", "IAU", "BIL", "PDBC", "DJP", "GSG", "SHY", "TIPS"];
+const BOT_MAX_POSITION=0.2,BOT_MAX_TRADES=2,BOT_MIN_CASH=1000;
 </script>
 <script src="/trade/assets/bot-detail.js"></script>
 </body></html>
