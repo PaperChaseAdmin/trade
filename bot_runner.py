@@ -66,6 +66,121 @@ def get_prices(tickers):
     return prices
 
 
+# ── Daily Price Changes ───────────────────────────────────────────────────────
+def get_price_changes(tickers: list) -> dict:
+    """Return {ticker: daily_change_pct} vs previous close."""
+    changes = {}
+    try:
+        data = yf.download(" ".join(tickers), period="5d", interval="1d",
+                           progress=False, auto_adjust=True, threads=True)
+        if data.empty: return changes
+        close = data["Close"]
+        if len(tickers) == 1:
+            vals = close.dropna()
+            if len(vals) >= 2:
+                changes[tickers[0]] = round((float(vals.iloc[-1]) - float(vals.iloc[-2])) / float(vals.iloc[-2]) * 100, 2)
+        else:
+            for t in tickers:
+                try:
+                    vals = close[t].dropna()
+                    if len(vals) >= 2:
+                        changes[t] = round((float(vals.iloc[-1]) - float(vals.iloc[-2])) / float(vals.iloc[-2]) * 100, 2)
+                except: pass
+    except Exception as e:
+        print(f"  WARN price changes: {e}")
+    return changes
+
+
+# ── Per-Bot Domain Context ─────────────────────────────────────────────────────
+_DOMAIN_KEYWORDS = {
+    "elon":    ["tesla","nvidia","ai","chip","electric","autonomous","space","robotics","openai"],
+    "cathie":  ["genomics","crispr","ai","disruption","innovation","fintech","space","biotech"],
+    "tony":    ["semiconductor","ai","chip","robotics","defense","quantum","nvidia","amd"],
+    "nancy":   ["semiconductor","nvidia","intel","chip","legislation","tech","government","contract"],
+    "satoshi": ["bitcoin","crypto","blockchain","ethereum","mining","btc","exchange","digital","defi"],
+    "jordan":  ["short squeeze","meme","momentum","breakout","surge","rally","parabolic"],
+    "xi":      ["china","chinese","beijing","alibaba","stimulus","us-china","tariff","trade war"],
+    "donald":  ["defense","military","oil","energy","tariff","america","steel","aerospace"],
+    "jerome":  ["fed","interest rate","inflation","cpi","fomc","monetary","treasury","yield"],
+    "ray":     ["macro","gold","bond","yield","recession","inflation","dollar","commodity","gdp"],
+    "george":  ["crash","bubble","overvalued","systemic","hedge","macro","dislocation","currency"],
+    "warren":  ["earnings","dividend","moat","valuation","consumer","banking","berkshire","buyback"],
+    "kevin":   ["dividend","yield","reit","income","payout","telecom","pharma"],
+    "scrooge": ["dividend","yield","reit","income","gold","bdc","mlp"],
+    "michael": ["undervalued","contrarian","beaten","low pe","recovery","turnaround","oversold"],
+    "jamie":   ["bank","financial","interest rate","fed","jpmorgan","lending","credit","mortgage"],
+    "gordon":  ["restructuring","activist","takeover","layoffs","ceo","spinoff","acquisition","merger"],
+    "patrick": ["luxury","premium","consumer","brand","apple","retail","lifestyle","fashion"],
+    "thanos":  ["sector","rotation","rebalance","etf","allocation","diversif","balance"],
+    "yoda":    ["index","s&p500","market","passive","long-term","etf","vanguard"],
+}
+
+def build_bot_context(bot_id: str, profile: dict, prices: dict, changes: dict, market_data: dict) -> dict:
+    """Build per-bot enriched research context from filtered news + watchlist movers."""
+    stocks = market_data.get("stocks", {})
+    crypto = market_data.get("crypto", {})
+
+    all_news = (
+        [n.get("title", "") for n in (stocks.get("news") or [])[:12]] +
+        [n.get("title", "") for n in (crypto.get("news") or [])[:6]]
+    )
+
+    keywords = _DOMAIN_KEYWORDS.get(bot_id, [])
+    domain_news, other_news = [], []
+    for h in all_news:
+        if any(k in h.lower() for k in keywords):
+            domain_news.append(h)
+        else:
+            other_news.append(h)
+    selected_news = (domain_news[:4] + other_news[:1]) if domain_news else other_news[:4]
+
+    # Top movers within this bot's watchlist
+    wl_changes = [(t, changes.get(t, 0.0)) for t in profile["watchlist"] if t in prices]
+    top_movers = sorted(wl_changes, key=lambda x: abs(x[1]), reverse=True)[:6]
+
+    # Domain-specific extra context
+    extra_lines = []
+    idx = stocks.get("indices", {})
+
+    if bot_id in ("satoshi", "jordan"):
+        cs = crypto.get("news_summary") or crypto.get("reddit_summary") or ""
+        if cs:
+            extra_lines.append(f"CRYPTO SENTIMENT: {cs[:250]}")
+
+    if bot_id == "xi":
+        china = [h for h in all_news if any(k in h.lower() for k in ["china","chinese","beijing","alibaba","baidu","pdd"])]
+        if china:
+            extra_lines.append("CHINA FOCUS: " + " | ".join(china[:2]))
+
+    if bot_id in ("jerome", "ray", "george"):
+        if isinstance(idx, dict):
+            n_chg = idx.get("nasdaq", {}).get("change_24h", "N/A")
+            d_chg = idx.get("dow", {}).get("change_24h", "N/A")
+            vix_v = float(idx.get("vix", {}).get("value", 20) or 20)
+            vix_state = "ELEVATED — risk-off" if vix_v > 25 else "LOW — risk-on" if vix_v < 15 else "NORMAL"
+            extra_lines.append(f"MACRO: NASDAQ {n_chg:+.2f}%  DOW {d_chg:+.2f}%  VIX {vix_v:.1f} ({vix_state})")
+        mkt_reddit = stocks.get("reddit_summary") or ""
+        if mkt_reddit:
+            extra_lines.append(f"MARKET REDDIT: {mkt_reddit[:200]}")
+
+    if bot_id in ("warren", "michael", "kevin", "scrooge"):
+        fg = crypto.get("fear_greed", {})
+        fg_v = fg.get("value", 50)
+        fg_l = fg.get("label", "Neutral")
+        meaning = (
+            "Oversold — potential value opportunity" if fg_v < 30 else
+            "Extreme greed — valuations stretched, be selective" if fg_v > 75 else
+            "Moderate sentiment — stick to fundamentals"
+        )
+        extra_lines.append(f"VALUE CONTEXT: Fear&Greed={fg_v} ({fg_l}) — {meaning}")
+
+    return {
+        "selected_news": selected_news,
+        "top_movers":    top_movers,
+        "domain_extra":  "\n".join(extra_lines),
+    }
+
+
 # ── Market Sentinel Data ──────────────────────────────────────────────────────
 def get_market_data():
     try: return requests.get(MARKET_SENTINEL, timeout=15).json()
@@ -139,7 +254,8 @@ def execute(pf, trade, prices, profile):
 
 
 # ── Gemini Decision ───────────────────────────────────────────────────────────
-def get_decision(bot_id, profile, pf, prices, market_data):
+def get_decision(bot_id, profile, pf, prices, changes, market_data):
+    """Returns (decision_dict, context_dict). decision has trades/market_outlook/analysis."""
     total = calc_value(pf, prices)
     ret   = (total - profile["initial_capital"]) / profile["initial_capital"] * 100
 
@@ -148,28 +264,49 @@ def get_decision(bot_id, profile, pf, prices, market_data):
         "pnl": round((prices.get(t, p.get("current_price", p["avg_cost"])) - p["avg_cost"]) * p["shares"], 2)}
         for t, p in pf["positions"].items()}
 
-    stocks  = market_data.get("stocks", {})
-    fg      = market_data.get("crypto", {}).get("fear_greed", {})
-    sp500   = next((i.get("change_pct") for i in (stocks.get("indices") or []) if i.get("symbol")=="^GSPC"), "N/A")
-    vix     = next((i.get("price")      for i in (stocks.get("indices") or []) if i.get("symbol")=="^VIX"),  "N/A")
-    news    = " | ".join(n.get("title","") for n in (stocks.get("news") or [])[:3])
-    avail   = {t: prices[t] for t in profile["watchlist"] if t in prices}
+    stocks = market_data.get("stocks", {})
+    fg     = market_data.get("crypto", {}).get("fear_greed", {})
+    idx    = stocks.get("indices", {})
+    sp500  = idx.get("sp500", {}).get("change_24h", "N/A") if isinstance(idx, dict) else "N/A"
+    vix    = idx.get("vix",   {}).get("value",     "N/A") if isinstance(idx, dict) else "N/A"
+
+    ctx = build_bot_context(bot_id, profile, prices, changes, market_data)
+
+    # Watchlist with price + daily change
+    avail = {t: {"price": prices[t], "chg_pct": changes.get(t, 0.0)}
+             for t in profile["watchlist"] if t in prices}
+
+    movers_str = "  ".join(
+        f"{t} {'+' if c >= 0 else ''}{c:.1f}%"
+        for t, c in ctx["top_movers"]
+    ) or "minimal movement"
+
+    news_lines = "\n".join(f"  • {h}" for h in ctx["selected_news"]) or "  (no relevant headlines available)"
 
     prompt = f"""You are {profile['display_name']}, a paper trader on PaperChase Trading Arena.
 
 PERSONALITY: {profile['prompt_persona']}
 
 PORTFOLIO: Cash ${pf['cash']:.2f} | Total ${total:.2f} | Return {ret:+.2f}%
-POSITIONS: {json.dumps(pos_display) if pos_display else "None"}
-WATCHLIST PRICES: {json.dumps(avail)}
-MARKET: Fear&Greed={fg.get('value','N/A')} ({fg.get('value_classification','N/A')}) | S&P500={sp500}% | VIX={vix}
-NEWS: {news}
+POSITIONS: {json.dumps(pos_display) if pos_display else "None — fully in cash"}
 
-RULES: Only BUY from watchlist. Max {int(profile['max_position_pct']*100)}% per stock. Keep >=${profile['min_cash_reserve']} cash. Max {profile['max_trades_per_session']} trades.
+YOUR WATCHLIST (price + today's move):
+{json.dumps(avail)}
+
+MARKET CONDITIONS:
+  Fear & Greed: {fg.get('value','N/A')} — {fg.get('label', 'N/A')}
+  S&P 500 today: {sp500}% | VIX: {vix}
+  Your watchlist top movers today: {movers_str}
+
+NEWS RELEVANT TO YOUR STRATEGY:
+{news_lines}
+{ctx['domain_extra']}
+
+RULES: Only BUY from your watchlist. Max {int(profile['max_position_pct']*100)}% per stock. Keep >=${profile['min_cash_reserve']} cash reserve. Max {profile['max_trades_per_session']} trades this session.
 
 Reply ONLY valid JSON:
-{{"trades":[{{"action":"BUY","ticker":"X","shares":5,"reasoning":"one sentence"}}],"market_outlook":"one sentence"}}
-No trades: {{"trades":[],"market_outlook":"..."}}"""
+{{"trades":[{{"action":"BUY","ticker":"AAPL","shares":5,"reasoning":"one sentence citing specific data"}}],"market_outlook":"one sentence","analysis":"2-3 sentences: what specific data points you noticed, why you acted or held back, what you're watching next"}}
+No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
 
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     for attempt in range(3):
@@ -180,10 +317,13 @@ No trades: {{"trades":[],"market_outlook":"..."}}"""
                 config=genai_types.GenerateContentConfig(
                     response_mime_type="application/json",
                     temperature=0.75,
-                    max_output_tokens=600
+                    max_output_tokens=800
                 )
             )
-            return json.loads(resp.text)
+            result = json.loads(resp.text)
+            if not isinstance(result, dict):
+                raise ValueError(f"Gemini returned non-dict: {type(result)}")
+            return result, ctx
         except Exception as e:
             if "429" in str(e) and attempt < 2:
                 wait = 60 * (attempt + 1)
@@ -221,7 +361,7 @@ def update_leaderboard(results):
 
 
 # ── Single Bot Run ────────────────────────────────────────────────────────────
-def run_bot(bot_id, prices, market_data):
+def run_bot(bot_id, prices, changes, market_data):
     profile   = BOT_PROFILES[bot_id]
     pf        = load_json(pf_path(bot_id))
     trades_db = load_json(tr_path(bot_id))
@@ -237,37 +377,73 @@ def run_bot(bot_id, prices, market_data):
     start_val  = pf["today_start_value"]
     new_trades = []
     outlook    = ""
+    analysis   = ""
+    ctx        = {}
+
+    # Snapshot market context for transparency display
+    stocks   = market_data.get("stocks", {})
+    fg       = market_data.get("crypto", {}).get("fear_greed", {})
+    idx      = stocks.get("indices", {})
+    sp500_v  = idx.get("sp500", {}).get("change_24h", None) if isinstance(idx, dict) else None
+    vix_v    = idx.get("vix",   {}).get("value",     None) if isinstance(idx, dict) else None
 
     try:
         print(f"    → Gemini query...")
-        dec     = get_decision(bot_id, profile, pf, prices, market_data)
-        outlook = dec.get("market_outlook", "")
+        dec, ctx = get_decision(bot_id, profile, pf, prices, changes, market_data)
+        outlook  = dec.get("market_outlook", "")
+        analysis = dec.get("analysis", "")
         print(f"    → {outlook[:70]}")
+
         for trade in dec.get("trades", []):
             rec, err = execute(pf, trade, prices, profile)
             if err: print(f"    FAIL {err}"); continue
-            rec["timestamp"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+            ts = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+            rec["timestamp"]      = ts
             rec["market_outlook"] = outlook
+            rec["signal_context"] = {
+                "fg_value":         fg.get("value"),
+                "fg_label":         fg.get("label"),
+                "sp500_chg":        sp500_v,
+                "vix":              vix_v,
+                "ticker_chg_pct":   changes.get(rec["ticker"], None),
+                "trigger_news":     ctx.get("selected_news", [None])[0],
+            }
             new_trades.append(rec)
             print(f"    OK {rec['action']} {rec['shares']}x {rec['ticker']} @${rec['price']:.2f}")
+
     except Exception as e:
         import traceback
         print(f"    FAIL {type(e).__name__}: {e}")
         traceback.print_exc()
-        outlook = "Analysis unavailable"
+        outlook  = "Analysis unavailable"
+        analysis = ""
 
-    val = calc_value(pf, prices)
+    val      = calc_value(pf, prices)
+    now_str  = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+
     pf.update({
         "total_value":      val,
         "total_return_pct": round((val - profile["initial_capital"]) / profile["initial_capital"] * 100, 2),
         "today_pnl":        round(val - start_val, 2),
         "today_pnl_pct":    round((val - start_val) / start_val * 100, 2) if start_val else 0,
         "total_trades":     pf.get("total_trades", 0) + len(new_trades),
-        "last_updated":     datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "last_action":      outlook[:120] or ("Traded" if new_trades else "Analysed — no trades")
+        "last_updated":     now_str,
+        "last_action":      outlook[:200] or ("Traded" if new_trades else "Analysed — no trades"),
+        "last_session": {
+            "at":              now_str,
+            "fear_greed":      fg.get("value"),
+            "fear_greed_label":fg.get("label"),
+            "sp500_change":    sp500_v,
+            "vix":             vix_v,
+            "top_movers":      [[t, c] for t, c in ctx.get("top_movers", [])],
+            "news_read":       ctx.get("selected_news", []),
+            "domain_extra":    ctx.get("domain_extra", ""),
+            "ai_analysis":     analysis,
+            "outlook":         outlook,
+            "trades_made":     len(new_trades),
+        },
     })
-    pf.setdefault("portfolio_history", []).append(
-        {"timestamp": pf["last_updated"], "value": val})
+    pf.setdefault("portfolio_history", []).append({"timestamp": now_str, "value": val})
     pf["portfolio_history"] = pf["portfolio_history"][-500:]
 
     save_json(pf_path(bot_id), pf)
@@ -312,14 +488,19 @@ def main():
         except: pass
 
     print(f"\n[2] Prices for {len(all_tickers)} tickers...")
-    prices = get_prices(list(all_tickers))
+    tickers_list = list(all_tickers)
+    prices  = get_prices(tickers_list)
     print(f"    Got {len(prices)}/{len(all_tickers)}")
+
+    print(f"\n[2b] Daily changes...")
+    changes = get_price_changes(tickers_list)
+    print(f"    Got {len(changes)} changes")
 
     print(f"\n[3] Running {len(BOT_PROFILES)} bots...")
     results = []
     for bot_id, profile in BOT_PROFILES.items():
         try:
-            results.append((run_bot(bot_id, prices, md), profile))
+            results.append((run_bot(bot_id, prices, changes, md), profile))
             time.sleep(RATE_LIMIT_DELAY)   # Gemini 15 RPM rate limit
         except Exception as e:
             print(f"\n  FAIL {bot_id}: {e}")

@@ -27,6 +27,7 @@ DETAIL_TMPL = """\
   <div id="app">
     <div id="hero"></div>
     <div id="outlook"></div>
+    <div id="last-session"></div>
     <div id="specs"></div>
     <div id="follow"></div>
     <div class="chart-card" id="chart-wrap"><canvas id="chart"></canvas></div>

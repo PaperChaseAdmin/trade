@@ -107,6 +107,7 @@ async function load(){
   ]);
   renderHero(pf);
   renderOutlook(pf);
+  renderLastSession(pf);
   renderSpecs();
   renderFollowGuide();
   renderChart(pf);
@@ -151,6 +152,77 @@ function renderOutlook(pf){
   $('outlook').innerHTML=`<div class="outlook" style="--bot-color:${BOT_COLOR}"><div class="outlook-lbl">Latest Thinking</div>${pf.last_action}</div>`;
 }
 
+function renderLastSession(pf){
+  const s=pf.last_session;
+  const el=$('last-session');
+  if(!s||!s.at){ el.innerHTML=''; return; }
+
+  // Market condition chips
+  const fg=s.fear_greed;
+  const fgLabel=s.fear_greed_label||'';
+  const fgClass=fg!=null?(fg<30?'fear':fg>70?'greed':''):'';
+  const sp=s.sp500_change;
+  const spStr=sp!=null?`${sp>=0?'+':''}${Number(sp).toFixed(2)}%`:'N/A';
+  const spClass=sp!=null?(sp>=0?'up':'down'):'';
+  const vixVal=s.vix!=null?Number(s.vix).toFixed(1):'N/A';
+
+  const chips=[
+    `<span class="chip ${fgClass}">Fear&amp;Greed: ${fg??'N/A'} ${fgLabel?`(${fgLabel})`:''}</span>`,
+    `<span class="chip ${spClass}">S&amp;P 500: ${spStr}</span>`,
+    `<span class="chip">VIX: ${vixVal}</span>`,
+  ].join('');
+
+  // Watchlist movers
+  const movers=(s.top_movers||[]).map(([t,c])=>{
+    const cls=Math.abs(c)<0.1?'flat':c>0?'up':'down';
+    return `<span class="mover-chip ${cls}">${t} ${c>=0?'+':''}${Number(c).toFixed(1)}%</span>`;
+  }).join('');
+
+  // News
+  const newsItems=(s.news_read||[]).map(h=>`<li>${h}</li>`).join('');
+
+  // Domain extra
+  const extra=s.domain_extra?`<div class="session-block"><div class="session-block-lbl">Domain Context</div><div class="domain-extra">${s.domain_extra}</div></div>`:'';
+
+  // AI reasoning
+  const reasoning=s.ai_analysis?`<div class="session-block"><div class="session-block-lbl">AI Reasoning</div><div class="ai-reasoning" style="--bot-color:${BOT_COLOR}">${s.ai_analysis}</div></div>`:'';
+
+  // Decision badge
+  const n=s.trades_made||0;
+  const badgeClass=n>0?'traded':'';
+  const badgeText=n>0?`${n} trade${n>1?'s':''} executed`:'No trades — held position';
+
+  const sessionAt=new Date(s.at);
+  const timeStr=sessionAt.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' '+
+    sessionAt.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false})+' UTC';
+
+  el.innerHTML=`
+  <div class="session-card" style="--bot-color:${BOT_COLOR}">
+    <div class="session-header">
+      <span class="session-title">🔍 Last Session Analysis</span>
+      <span class="session-time">${timeStr}</span>
+    </div>
+
+    <div class="session-block">
+      <div class="session-block-lbl">Market Conditions Observed</div>
+      <div class="condition-chips">${chips}</div>
+      ${movers?`<div class="movers-row" style="margin-top:6px">${movers}</div>`:''}
+    </div>
+
+    ${newsItems?`<div class="session-block">
+      <div class="session-block-lbl">News Analyzed (filtered to this bot's domain)</div>
+      <ul class="session-news">${newsItems}</ul>
+    </div>`:''}
+
+    ${extra}
+    ${reasoning}
+
+    <div class="session-footer">
+      <span class="decision-badge ${badgeClass}">${badgeText}</span>
+    </div>
+  </div>`;
+}
+
 function renderChart(pf){
   const hist=(pf.portfolio_history||[]).slice(-120);
   if(hist.length<2){ $('chart-wrap').innerHTML='<div class="empty">No trading history yet</div>'; return; }
@@ -186,9 +258,35 @@ function renderTrades(trades){
   let rows='';
   recent.forEach(t=>{
     const badge=t.action==='BUY'?'<span class="badge badge-buy">BUY</span>':'<span class="badge badge-sell">SELL</span>';
-    rows+=`<tr><td class="mono" style="color:var(--text-2);white-space:nowrap">${fmtTs(t.timestamp)}</td><td>${badge}</td><td class="mono" style="font-weight:600">${t.ticker}</td><td class="mono">${t.shares}</td><td class="mono">${fmt(t.price)}</td><td class="mono">${fmt(t.total_value)}</td><td style="color:var(--text-2);font-size:12px;max-width:240px;line-height:1.5">${t.reasoning||'—'}</td></tr>`;
+    // Build signal context line
+    let ctxHtml='';
+    const sc=t.signal_context;
+    if(sc){
+      const parts=[];
+      if(sc.ticker_chg_pct!=null){
+        const cls=sc.ticker_chg_pct>0?'ctx-up':'ctx-down';
+        parts.push(`<span class="ctx-item ${cls}">${t.ticker}: ${sc.ticker_chg_pct>=0?'+':''}${Number(sc.ticker_chg_pct).toFixed(1)}%</span>`);
+      }
+      if(sc.fg_value!=null) parts.push(`<span class="ctx-item">F&amp;G: ${sc.fg_value} ${sc.fg_label?`(${sc.fg_label})`:''}</span>`);
+      if(sc.sp500_chg!=null){
+        const cls=sc.sp500_chg>=0?'ctx-up':'ctx-down';
+        parts.push(`<span class="ctx-item ${cls}">S&amp;P: ${sc.sp500_chg>=0?'+':''}${Number(sc.sp500_chg).toFixed(1)}%</span>`);
+      }
+      if(sc.vix!=null) parts.push(`<span class="ctx-item">VIX: ${Number(sc.vix).toFixed(1)}</span>`);
+      if(parts.length) ctxHtml=`<div class="signal-ctx">${parts.join('')}</div>`;
+    }
+    const reasonCell=`<div style="color:var(--text-2);font-size:12px;line-height:1.5;max-width:260px">${t.reasoning||'—'}</div>${ctxHtml}`;
+    rows+=`<tr>
+      <td class="mono" style="color:var(--text-2);white-space:nowrap">${fmtTs(t.timestamp)}</td>
+      <td>${badge}</td>
+      <td class="mono" style="font-weight:600">${t.ticker}</td>
+      <td class="mono">${t.shares}</td>
+      <td class="mono">${fmt(t.price)}</td>
+      <td class="mono">${fmt(t.total_value)}</td>
+      <td>${reasonCell}</td>
+    </tr>`;
   });
-  el.innerHTML=`<div class="table-wrap"><table><thead><tr><th>Time (UTC)</th><th>Action</th><th>Ticker</th><th>Shares</th><th>Price</th><th>Total</th><th>Reasoning</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  el.innerHTML=`<div class="table-wrap"><table><thead><tr><th>Time (UTC)</th><th>Action</th><th>Ticker</th><th>Shares</th><th>Price</th><th>Total</th><th>Reasoning &amp; Signal</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 
 document.addEventListener('DOMContentLoaded',()=>{

@@ -297,10 +297,94 @@ tr:hover td { background: rgba(255,255,255,.02); }
 }
 
 /* ── Responsive ── */
+/* ── Session Analysis Card ── */
+.session-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px 24px; margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+.session-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.session-title {
+  font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--text-2);
+}
+.session-time { font-size: 11px; color: var(--text-3); font-family: var(--mono); }
+
+.session-block { margin-bottom: 14px; }
+.session-block-lbl {
+  font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: 6px;
+}
+
+/* Market condition chips */
+.condition-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.chip {
+  font-size: 11px; font-family: var(--mono); font-weight: 500;
+  padding: 3px 9px; border-radius: 4px;
+  background: var(--surface-2); border: 1px solid var(--border-2); color: var(--text-2);
+}
+.chip.fear   { border-color: rgba(248,81,73,.4);  color: var(--loss);   background: rgba(248,81,73,.08); }
+.chip.greed  { border-color: rgba(63,185,80,.4);  color: var(--profit); background: rgba(63,185,80,.08); }
+.chip.up     { color: var(--profit); }
+.chip.down   { color: var(--loss); }
+
+/* Mover badges in watchlist */
+.movers-row { display: flex; flex-wrap: wrap; gap: 5px; }
+.mover-chip {
+  font-size: 11px; font-family: var(--mono); font-weight: 600;
+  padding: 2px 8px; border-radius: 4px;
+}
+.mover-chip.up   { color: var(--profit); background: rgba(63,185,80,.1);  border: 1px solid rgba(63,185,80,.25); }
+.mover-chip.down { color: var(--loss);   background: rgba(248,81,73,.1);  border: 1px solid rgba(248,81,73,.25); }
+.mover-chip.flat { color: var(--text-3); background: var(--surface-2);    border: 1px solid var(--border); }
+
+/* News list */
+.session-news { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.session-news li {
+  font-size: 12px; color: var(--text-2); line-height: 1.5;
+  padding-left: 12px; position: relative;
+}
+.session-news li::before { content: "•"; position: absolute; left: 0; color: var(--text-3); }
+
+/* AI reasoning text */
+.ai-reasoning {
+  font-size: 13px; color: var(--text); line-height: 1.7;
+  padding: 12px 14px; background: var(--bg);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  border-left: 3px solid var(--bot-color, var(--accent));
+}
+
+/* Decision badge */
+.session-footer { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.decision-badge {
+  font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px;
+  background: rgba(56,139,253,.12); border: 1px solid rgba(56,139,253,.3); color: var(--accent);
+}
+.decision-badge.traded {
+  background: rgba(63,185,80,.12); border-color: rgba(63,185,80,.3); color: var(--profit);
+}
+.domain-extra {
+  font-size: 11px; color: var(--text-3); font-family: var(--mono); line-height: 1.6;
+  margin-top: 6px; white-space: pre-line;
+}
+
+/* Signal context in trades table */
+.signal-ctx {
+  font-size: 11px; color: var(--text-3); font-family: var(--mono);
+  margin-top: 4px; line-height: 1.5;
+}
+.signal-ctx .ctx-item { margin-right: 10px; white-space: nowrap; }
+.signal-ctx .ctx-up   { color: var(--profit); }
+.signal-ctx .ctx-down { color: var(--loss); }
+
 @media (max-width: 640px) {
   .bot-card { grid-template-columns: 1fr; }
   .rank-col { display: none; }
   .bot-perf { text-align: left; }
   .topbar-nav .nav-link span { display: none; }
   .spec-grid { grid-template-columns: repeat(2, 1fr); }
+  .condition-chips { gap: 4px; }
 }
