@@ -15,7 +15,7 @@ ET = pytz.timezone("America/New_York")
 DATA_DIR          = "data/bots"
 LEADERBOARD_FILE  = "data/leaderboard.json"
 MARKET_SENTINEL   = "https://paperchase.online/market-sentinel/data/market_data.json"
-RATE_LIMIT_DELAY  = 4   # seconds between Gemini calls (15 RPM free tier)
+RATE_LIMIT_DELAY  = 5   # seconds between Gemini calls — keeps throughput ~10 RPM (free tier: 15 RPM)
 
 
 # ── Market Hours ──────────────────────────────────────────────────────────────
@@ -326,7 +326,7 @@ No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
             return result, ctx
         except Exception as e:
             if "429" in str(e) and attempt < 2:
-                wait = 60 * (attempt + 1)
+                wait = 20 * (attempt + 1)   # 20s then 40s (was 60/120s)
                 print(f"    Rate limit hit, waiting {wait}s...")
                 time.sleep(wait)
             else:

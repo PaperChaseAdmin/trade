@@ -6,6 +6,10 @@ on:
     - cron: '0,30 13-21 * * 1-5'
   workflow_dispatch:  # manual trigger & cron-job.org
 
+concurrency:
+  group: trade-bots
+  cancel-in-progress: true
+
 jobs:
   trade:
     runs-on: ubuntu-latest
