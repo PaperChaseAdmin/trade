@@ -1,4 +1,59 @@
 {
   "bot_id": "donald",
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "LMT",
+      "shares": 3,
+      "price": 512.66,
+      "total_value": 1537.98,
+      "reasoning": "Lockheed down 1% in fearful market - defense spending will increase and LMT is the premier defense contractor",
+      "timestamp": "2026-05-02T11:25:26Z",
+      "market_outlook": "Fear reading of 39 presents buying opportunity on quality American defense and energy names",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": -1.0,
+        "trigger_news": "Exxon Mobil CEO expects higher oil prices due to Iran war: \u2018The market hasn\u2019t seen the full impact\u2019"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XOM",
+      "shares": 6,
+      "price": 152.79,
+      "total_value": 916.74,
+      "reasoning": "Exxon CEO bullish on oil due to Iran war - down 1% today but fundamentals are incredibly bullish",
+      "timestamp": "2026-05-02T11:25:26Z",
+      "market_outlook": "Fear reading of 39 presents buying opportunity on quality American defense and energy names",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": -1.02,
+        "trigger_news": "Exxon Mobil CEO expects higher oil prices due to Iran war: \u2018The market hasn\u2019t seen the full impact\u2019"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "NOC",
+      "shares": 3,
+      "price": 568.25,
+      "total_value": 1704.75,
+      "reasoning": "Northrop down nearly 2% - another defense pure play benefiting from military spending",
+      "timestamp": "2026-05-02T11:25:26Z",
+      "market_outlook": "Fear reading of 39 presents buying opportunity on quality American defense and energy names",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": -1.96,
+        "trigger_news": "Exxon Mobil CEO expects higher oil prices due to Iran war: \u2018The market hasn\u2019t seen the full impact\u2019"
+      }
+    }
+  ]
 }

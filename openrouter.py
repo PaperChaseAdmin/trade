@@ -88,7 +88,7 @@ No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
                         {"role": "user", "content": prompt},
                     ],
                     "temperature": 0.75,
-                    "max_tokens": 800,
+                    "max_tokens": 1200,  # Higher for reasoning models like Nemotron
                     # Nemotron supports json_object; MiniMax needs text mode instead
                     "response_format": {"type": "text"},
                 },
@@ -123,7 +123,13 @@ No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
                     raise ValueError(f"OpenRouter returned no content. Full: {json.dumps(data['choices'][0]['message'])[:300]}")
             result = json.loads(content)
             if not isinstance(result, dict):
-                raise ValueError(f"OpenRouter returned non-dict: {type(result)}")
+                # Try to find JSON object anywhere in the content
+                import re
+                json_match = re.search(r'\{.*\}', content, re.DOTALL)
+                if json_match:
+                    result = json.loads(json_match.group())
+                else:
+                    raise ValueError(f"OpenRouter returned non-dict and no JSON found: {type(result)}")
             return result, ctx
 
         except Exception as e:
@@ -144,6 +150,7 @@ def _resolve_model_id(model_name):
         "nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b:free",
         "minimax": "minimax/minimax-m2.5:free",
         "minimax-m2.5": "minimax/minimax-m2.5:free",
+        "ling": "inclusionai/ling-2.6-1t:free",
     }
     result = mapping.get(model_name)
     if result:
@@ -195,7 +202,10 @@ def _build_bot_context(bot_id, profile, prices, changes, market_data):
             d_chg = idx.get("dow", {}).get("change_24h", "N/A")
             vix_v = float(idx.get("vix", {}).get("value", 20) or 20)
             vix_state = "ELEVATED \u2014 risk-off" if vix_v > 25 else "LOW \u2014 risk-on" if vix_v < 15 else "NORMAL"
-            extra_lines.append(f"MACRO: NASDAQ {n_chg:+.2f}%  DOW {d_chg:+.2f}%  VIX {vix_v:.1f} ({vix_state})")
+            try:
+                extra_lines.append(f"MACRO: NASDAQ {float(n_chg):+.2f}%  DOW {float(d_chg):+.2f}%  VIX {vix_v:.1f} ({vix_state})")
+            except (ValueError, TypeError):
+                pass
         mkt_reddit = stocks.get("reddit_summary") or ""
         if mkt_reddit:
             extra_lines.append(f"MARKET REDDIT: {mkt_reddit[:200]}")

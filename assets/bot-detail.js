@@ -22,10 +22,12 @@ function renderSpecs(){
   let modelName, modelProvider, modelBadge;
   if(BOT_MODEL === 'gemini'){
     modelName='Gemini 2.0 Flash'; modelProvider='Google DeepMind'; modelBadge='Free';
-  } else if(BOT_MODEL === 'openrouter/nemotron'){
-    modelName='Nemotron 3 Super 120B'; modelProvider='NVIDIA (OpenRouter)'; modelBadge='Free';
   } else if(BOT_MODEL === 'openrouter/minimax'){
     modelName='MiniMax M2.5'; modelProvider='MiniMax (OpenRouter)'; modelBadge='Free';
+  } else if(BOT_MODEL === 'openrouter/ling'){
+    modelName='Ling 2.6 1T'; modelProvider='Inclusion AI (OpenRouter)'; modelBadge='Free';
+  } else if(BOT_MODEL === 'openrouter/nemotron'){
+    modelName='Nemotron 3 Super 120B'; modelProvider='NVIDIA (OpenRouter)'; modelBadge='Free';
   } else {
     modelName=BOT_MODEL; modelProvider='Custom'; modelBadge='';
   }

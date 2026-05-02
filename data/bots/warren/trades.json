@@ -1,4 +1,23 @@
 {
   "bot_id": "warren",
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "JNJ",
+      "shares": 10,
+      "price": 227.2,
+      "total_value": 2272.0,
+      "reasoning": "JNJ at $227.20, down 1.16% today, offers a durable healthcare moat with steady earnings and dividend, fitting a value approach.",
+      "timestamp": "2026-05-02T11:24:48Z",
+      "market_outlook": "Current fear may create buying opportunities in quality defensives, with potential for steady returns as sentiment stabilizes.",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": -1.16,
+        "trigger_news": "Cautious optimism: Berkshire investors weigh future under new CEO Greg Abel"
+      }
+    }
+  ]
 }

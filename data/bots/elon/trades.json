@@ -1,4 +1,41 @@
 {
   "bot_id": "elon",
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "AAPL",
+      "shares": 12,
+      "price": 280.15,
+      "total_value": 3361.8,
+      "reasoning": "AAPL leading tech with +3.24% momentum today, strong upward move in fear territory suggests institutional accumulation",
+      "timestamp": "2026-05-02T11:34:42Z",
+      "market_outlook": "Fear reading (39) suggests cautious optimism - not extreme enough for full dip buying but enough to take selective positions in strong momentum names",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 3.24,
+        "trigger_news": "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "TSLA",
+      "shares": 8,
+      "price": 390.66,
+      "total_value": 3125.28,
+      "reasoning": "Tesla up +2.41% with EV momentum, my highest conviction play and the stock I know best",
+      "timestamp": "2026-05-02T11:34:42Z",
+      "market_outlook": "Fear reading (39) suggests cautious optimism - not extreme enough for full dip buying but enough to take selective positions in strong momentum names",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 2.41,
+        "trigger_news": "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era"
+      }
+    }
+  ]
 }

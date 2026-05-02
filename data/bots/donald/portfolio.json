@@ -2,8 +2,24 @@
   "bot_id": "donald",
   "display_name": "Donald",
   "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
+  "cash": 5840.53,
+  "positions": {
+    "LMT": {
+      "shares": 3,
+      "avg_cost": 512.66,
+      "current_price": 512.66
+    },
+    "XOM": {
+      "shares": 6,
+      "avg_cost": 152.79,
+      "current_price": 152.79
+    },
+    "NOC": {
+      "shares": 3,
+      "avg_cost": 568.25,
+      "current_price": 568.25
+    }
+  },
   "portfolio_history": [
     {
       "timestamp": "2026-04-22T00:00:00Z",
@@ -128,15 +144,60 @@
     {
       "timestamp": "2026-04-24T15:31:01Z",
       "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-02T11:25:26Z",
+      "value": 10000.0
     }
   ],
   "total_value": 10000.0,
   "total_return_pct": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
+  "today_date": "2026-05-02",
   "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:31:01Z",
-  "last_action": "Analysis unavailable"
+  "total_trades": 3,
+  "last_updated": "2026-05-02T11:25:26Z",
+  "last_action": "Fear reading of 39 presents buying opportunity on quality American defense and energy names",
+  "last_session": {
+    "at": "2026-05-02T11:25:26Z",
+    "fear_greed": 39,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "LHX",
+        -2.24
+      ],
+      [
+        "NOC",
+        -1.96
+      ],
+      [
+        "F",
+        -1.66
+      ],
+      [
+        "HAL",
+        -1.51
+      ],
+      [
+        "GM",
+        -1.46
+      ],
+      [
+        "CVX",
+        -1.39
+      ]
+    ],
+    "news_read": [
+      "Exxon Mobil CEO expects higher oil prices due to Iran war: \u2018The market hasn\u2019t seen the full impact\u2019",
+      "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era"
+    ],
+    "domain_extra": "",
+    "ai_analysis": "Noticed most defense contractors (LHX -2.2%, NOC -2.0%) and energy (HAL -1.5%, CVX -1.4%) down significantly on slight market fear - perfect Donald entry point. Exxon news on Iran war creating oil tailwinds makes energy even more attractive. Held back from RTX and other names to maintain cash reserve and stay within max 3 trades. Watching for continued weakness in defense to add more.",
+    "outlook": "Fear reading of 39 presents buying opportunity on quality American defense and energy names",
+    "trades_made": 3
+  }
 }

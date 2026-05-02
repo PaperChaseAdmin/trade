@@ -477,9 +477,13 @@ def main():
     print(f"{'='*55}")
 
     if not open_:
-        print("  Market is closed — skipping this run.")
-        print(f"{'='*55}\n")
-        return
+        force = os.environ.get("FORCE_RUN", "").lower() in ("1", "true", "yes")
+        if force:
+            print("  Market is CLOSED but FORCE_RUN=1 — proceeding anyway (TEST MODE).")
+        else:
+            print("  Market is closed — skipping this run.")
+            print(f"{'='*55}\n")
+            return
 
     # ── API key checks ────────────────────────────────────────────────────────
     has_gemini = bool(os.environ.get("GEMINI_API_KEY", ""))
