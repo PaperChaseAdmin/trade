@@ -89,7 +89,8 @@ No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
                     ],
                     "temperature": 0.75,
                     "max_tokens": 800,
-                    "response_format": {"type": "json_object"},
+                    # Nemotron supports json_object; MiniMax needs text mode instead
+                    "response_format": {"type": "text"},
                 },
                 timeout=60,
             )
