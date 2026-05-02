@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
 PaperChase Trading Bot Runner
-Runs AI paper trading bots during US market hours using Gemini 2.0 Flash.
+Runs AI paper trading bots during US market hours.
+Supports multiple AI models: Gemini 2.0 Flash, OpenRouter free models.
 """
 
 import os, json, time, requests, yfinance as yf
 from datetime import datetime, date
 import pytz
+import openrouter  # our OpenRouter client module
 from google import genai
 from google.genai import types as genai_types
 from bot_profiles import BOT_PROFILES
@@ -343,6 +345,7 @@ def update_leaderboard(results):
             "avatar": profile["avatar"], "bio": profile["bio"],
             "strategy": profile["strategy"], "risk_level": profile["risk_level"],
             "risk_bar": profile["risk_bar"], "color": profile["color"],
+            "model": profile.get("model", "gemini"),
             "total_value": val, "initial_capital": init,
             "total_return_pct":  round((val-init)/init*100, 2),
             "total_return_usd":  round(val-init, 2),
@@ -388,8 +391,17 @@ def run_bot(bot_id, prices, changes, market_data):
     vix_v    = idx.get("vix",   {}).get("value",     None) if isinstance(idx, dict) else None
 
     try:
-        print(f"    → Gemini query...")
-        dec, ctx = get_decision(bot_id, profile, pf, prices, changes, market_data)
+        model_name = profile.get("model", "gemini")
+        if model_name.startswith("openrouter/"):
+            or_model = model_name.split("/", 1)[1]
+            print(f"    \u2192 OpenRouter ({or_model})...")
+            dec, ctx = openrouter.get_decision(
+                bot_id, profile, pf, prices, changes, market_data,
+                model_name=or_model
+            )
+        else:
+            print(f"    \u2192 Gemini query...")
+            dec, ctx = get_decision(bot_id, profile, pf, prices, changes, market_data)
         outlook  = dec.get("market_outlook", "")
         analysis = dec.get("analysis", "")
         print(f"    → {outlook[:70]}")
@@ -469,13 +481,26 @@ def main():
         print(f"{'='*55}\n")
         return
 
-    # ── Gemini API key check ──────────────────────────────────────────────────
-    api_key = os.environ.get("GEMINI_API_KEY", "")
-    if not api_key:
-        print("  FATAL: GEMINI_API_KEY is not set. Aborting.")
+    # ── API key checks ────────────────────────────────────────────────────────
+    has_gemini = bool(os.environ.get("GEMINI_API_KEY", ""))
+    has_openrouter = bool(os.environ.get("OPENROUTER_API_KEY", ""))
+    
+    # Check which models are needed
+    needs_gemini = any(p.get("model", "gemini") == "gemini" for p in BOT_PROFILES.values())
+    needs_or = any(str(p.get("model", "")).startswith("openrouter/") for p in BOT_PROFILES.values())
+    
+    if needs_gemini and not has_gemini:
+        print("  FATAL: GEMINI_API_KEY is not set but some bots need it. Aborting.")
         print(f"{'='*55}\n")
         raise SystemExit(1)
-    print(f"  Gemini API key: set ({len(api_key)} chars)")
+    if needs_or and not has_openrouter:
+        print("  FATAL: OPENROUTER_API_KEY is not set but some bots need it. Aborting.")
+        print(f"{'='*55}\n")
+        raise SystemExit(1)
+    if has_gemini:
+        print(f"  Gemini API key: set ({len(os.environ['GEMINI_API_KEY'])} chars)")
+    if has_openrouter:
+        print(f"  OpenRouter API key: set ({len(os.environ['OPENROUTER_API_KEY'])} chars)")
 
     print("\n[1] Market data...")
     md = get_market_data()

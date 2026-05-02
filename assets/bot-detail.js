@@ -17,14 +17,27 @@ function renderSpecs(){
   const tickers=BOT_WATCHLIST.map(t=>
     `<a class="ticker-chip" href="https://finance.yahoo.com/quote/${t}" target="_blank" rel="noopener">${t}</a>`
   ).join('');
+  
+  // Determine model display
+  let modelName, modelProvider, modelBadge;
+  if(BOT_MODEL === 'gemini'){
+    modelName='Gemini 2.0 Flash'; modelProvider='Google DeepMind'; modelBadge='Free';
+  } else if(BOT_MODEL === 'openrouter/nemotron'){
+    modelName='Nemotron 3 Super 120B'; modelProvider='NVIDIA (OpenRouter)'; modelBadge='Free';
+  } else if(BOT_MODEL === 'openrouter/minimax'){
+    modelName='MiniMax M2.5'; modelProvider='MiniMax (OpenRouter)'; modelBadge='Free';
+  } else {
+    modelName=BOT_MODEL; modelProvider='Custom'; modelBadge='';
+  }
+  
   $('specs').innerHTML=`
     <div class="spec-card">
       <div class="spec-card-title">Bot Specifications</div>
       <div class="spec-grid">
         <div class="spec-item">
           <div class="spec-label">AI Engine</div>
-          <div class="spec-val">Gemini 2.0 Flash</div>
-          <div class="spec-sub">Google DeepMind</div>
+          <div class="spec-val">${modelName}</div>
+          <div class="spec-sub">${modelProvider} ${modelBadge ? '<span class="badge badge-free">'+modelBadge+'</span>' : ''}</div>
         </div>
         <div class="spec-item">
           <div class="spec-label">Market Data</div>

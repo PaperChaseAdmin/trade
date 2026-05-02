@@ -45,6 +45,7 @@ DETAIL_TMPL = """\
 const BOT_ID='{bot_id}',BOT_COLOR='{color}',BOT_NAME='{name}';
 const BOT_AVATAR='{avatar}',BOT_BIO='{bio}',BOT_STRATEGY='{strategy}';
 const BOT_RISK='{risk_level}',BOT_RISK_BAR={risk_bar};
+const BOT_MODEL='{model}';
 const BOT_WATCHLIST={watchlist};
 const BOT_MAX_POSITION={max_position_pct},BOT_MAX_TRADES={max_trades},BOT_MIN_CASH={min_cash};
 </script>
@@ -101,6 +102,7 @@ for bot_id, p in BOT_PROFILES.items():
             bot_id=bot_id, name=p["display_name"], color=p["color"],
             avatar=p["avatar"], bio=p["bio"], strategy=p["strategy"],
             risk_level=p["risk_level"], risk_bar=p["risk_bar"],
+            model=p.get("model", "gemini"),
             watchlist=json.dumps(p["watchlist"]),
             max_position_pct=p["max_position_pct"],
             max_trades=p["max_trades_per_session"],
