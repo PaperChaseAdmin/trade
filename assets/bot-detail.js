@@ -19,18 +19,26 @@ function renderSpecs(){
   ).join('');
   
   // Determine model display
-  let modelName, modelProvider, modelBadge;
-  if(BOT_MODEL === 'gemini'){
-    modelName='Gemini 2.0 Flash'; modelProvider='Google DeepMind'; modelBadge='Free';
-  } else if(BOT_MODEL === 'openrouter/minimax'){
-    modelName='MiniMax M2.5'; modelProvider='MiniMax (OpenRouter)'; modelBadge='Free';
-  } else if(BOT_MODEL === 'openrouter/ling'){
-    modelName='Ling 2.6 1T'; modelProvider='Inclusion AI (OpenRouter)'; modelBadge='Free';
-  } else if(BOT_MODEL === 'openrouter/nemotron'){
-    modelName='Nemotron 3 Super 120B'; modelProvider='NVIDIA (OpenRouter)'; modelBadge='Free';
-  } else {
-    modelName=BOT_MODEL; modelProvider='Custom'; modelBadge='';
+  let modelName, modelProvider, modelBadge, modelBadgeLabel;
+  let fallbackName, fallbackProvider, fallbackBadge;
+
+  // Helper: resolve model display info
+  function resolveModel(shortName) {
+    if(shortName === 'gemini'){
+      return {name:'Gemini 2.0 Flash', provider:'Google DeepMind', badge:'Free'};
+    } else if(shortName === 'openrouter/minimax' || shortName === 'minimax'){
+      return {name:'MiniMax M2.5', provider:'MiniMax (OpenRouter)', badge:'Free'};
+    } else if(shortName === 'openrouter/ling' || shortName === 'ling'){
+      return {name:'Ling 2.6 1T', provider:'Inclusion AI (OpenRouter)', badge:'Free'};
+    } else if(shortName === 'openrouter/nemotron' || shortName === 'nemotron'){
+      return {name:'Nemotron 3 Super 120B', provider:'NVIDIA (OpenRouter)', badge:'Free'};
+    } else {
+      return {name:shortName || '—', provider:'Custom', badge:''};
+    }
   }
+
+  const primary = resolveModel(BOT_MODEL);
+  const fallback = BOT_FALLBACK ? resolveModel(BOT_FALLBACK) : null;
   
   $('specs').innerHTML=`
     <div class="spec-card">
@@ -38,8 +46,9 @@ function renderSpecs(){
       <div class="spec-grid">
         <div class="spec-item">
           <div class="spec-label">AI Engine</div>
-          <div class="spec-val">${modelName}</div>
-          <div class="spec-sub">${modelProvider} ${modelBadge ? '<span class="badge badge-free">'+modelBadge+'</span>' : ''}</div>
+          <div class="spec-val">${primary.name}</div>
+          <div class="spec-sub">${primary.provider} ${primary.badge ? '<span class="badge badge-free">'+primary.badge+'</span>' : ''}</div>
+          ${fallback ? `<div class="spec-sub fallback-sub">↳ Fallback: ${fallback.name} <span class="badge badge-fallback">Backup</span></div>` : ''}
         </div>
         <div class="spec-item">
           <div class="spec-label">Market Data</div>

@@ -3,9 +3,13 @@ Bot personality profiles for PaperChase Trading Arena.
 Each bot is inspired by a real or fictional character with a distinct strategy.
 
 Model assignment ('model' field in each profile):
-  "openrouter/minimax"  -> MiniMax M2.5 (free via OpenRouter) - 10 bots (most reliable)
-  "openrouter/ling"     -> InclusionAI Ling 2.6 1T (free via OpenRouter) - 8 bots
-  "openrouter/nemotron" -> NVIDIA Nemotron 3 Super 120B (free via OpenRouter) - 2 bots
+  "openrouter/minimax"  -> MiniMax M2.5 (free via OpenRouter) - primary
+  "openrouter/ling"     -> InclusionAI Ling 2.6 1T (free via OpenRouter) - primary
+  "openrouter/nemotron" -> NVIDIA Nemotron 3 Super 120B (free via OpenRouter) - primary
+
+Fallback model ('fallback_model' field):
+  Each bot has a DIFFERENT fallback model from its primary (3 sources rotate).
+  If primary fails (provider error, rate limit exhausted), fallback is used.
 """
 
 BOT_PROFILES = {
@@ -16,6 +20,7 @@ BOT_PROFILES = {
         "strategy": "Aggressive momentum trading in tech, EV & AI",
         "risk_level": "HIGH", "risk_bar": 9, "color": "#f97316",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/ling",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.35, "max_trades_per_session": 3,
         "watchlist": ["TSLA","NVDA","META","PLTR","AMD","COIN","RBLX","SOFI","RIVN","MSFT","GOOGL","AMZN","AAPL","MSTR","IONQ"],
@@ -28,6 +33,7 @@ BOT_PROFILES = {
         "strategy": "Value investing in large-cap companies with strong moats",
         "risk_level": "LOW", "risk_bar": 2, "color": "#14b8a6",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/nemotron",
         "initial_capital": 10000, "min_cash_reserve": 1000,
         "max_position_pct": 0.25, "max_trades_per_session": 2,
         "watchlist": ["KO","JNJ","V","MA","AAPL","BRK-B","AXP","BAC","WMT","PG","JPM","MCD","ABBV","CVX","USB"],
@@ -40,6 +46,7 @@ BOT_PROFILES = {
         "strategy": "US defense, energy, steel & tariff beneficiaries",
         "risk_level": "MED", "risk_bar": 6, "color": "#ef4444",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/ling",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.30, "max_trades_per_session": 3,
         "watchlist": ["LMT","RTX","NOC","GD","LHX","XOM","CVX","HAL","NUE","CAT","GEO","BA","F","GM","JPM"],
@@ -52,6 +59,7 @@ BOT_PROFILES = {
         "strategy": "Semiconductors, big tech & biotech with uncanny timing",
         "risk_level": "HIGH", "risk_bar": 8, "color": "#ec4899",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/nemotron",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.35, "max_trades_per_session": 3,
         "watchlist": ["NVDA","AAPL","MSFT","AMZN","GOOGL","TSLA","AMD","AMAT","LRCX","MU","AVGO","QCOM","INTC","META","CRM"],
@@ -64,6 +72,7 @@ BOT_PROFILES = {
         "strategy": "ARK-style disruptive tech: genomics, AI, space, fintech",
         "risk_level": "HIGH", "risk_bar": 8, "color": "#8b5cf6",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/ling",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.30, "max_trades_per_session": 3,
         "watchlist": ["TSLA","COIN","PLTR","CRSP","BEAM","NTLA","RKLB","PATH","ROKU","TWLO","ILMN","AFRM","HOOD","RXRX","PACB"],
@@ -76,6 +85,7 @@ BOT_PROFILES = {
         "strategy": "Macro diversification: gold, bonds, commodities, equities",
         "risk_level": "LOW", "risk_bar": 3, "color": "#f59e0b",
         "model": "openrouter/nemotron",
+        "fallback_model": "openrouter/minimax",
         "initial_capital": 10000, "min_cash_reserve": 1000,
         "max_position_pct": 0.20, "max_trades_per_session": 2,
         "watchlist": ["GLD","GDX","TLT","IEF","EEM","FXI","SPY","VWO","IAU","BIL","PDBC","DJP","GSG","SHY","TIPS"],
@@ -88,6 +98,7 @@ BOT_PROFILES = {
         "strategy": "Macro contrarian: massive concentrated bets against consensus",
         "risk_level": "VERY HIGH", "risk_bar": 10, "color": "#06b6d4",
         "model": "openrouter/ling",
+        "fallback_model": "openrouter/minimax",
         "initial_capital": 10000, "min_cash_reserve": 300,
         "max_position_pct": 0.50, "max_trades_per_session": 2,
         "watchlist": ["GLD","SPY","QQQ","TLT","EEM","BAC","NVDA","TSLA","META","AMZN","UUP","XLF","XLE","FXI","BABA"],
@@ -100,6 +111,7 @@ BOT_PROFILES = {
         "strategy": "Deep value contrarian - buys unloved, waits for the turn",
         "risk_level": "MED", "risk_bar": 5, "color": "#64748b",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/nemotron",
         "initial_capital": 10000, "min_cash_reserve": 2000,
         "max_position_pct": 0.25, "max_trades_per_session": 2,
         "watchlist": ["GEO","CVS","BABA","JD","STLD","NUE","OXY","BAC","WFC","PFE","KHC","F","INTC","KR","CMCSA"],
@@ -112,6 +124,7 @@ BOT_PROFILES = {
         "strategy": "Traditional banking & financial services ecosystem",
         "risk_level": "LOW", "risk_bar": 3, "color": "#1d4ed8",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/ling",
         "initial_capital": 10000, "min_cash_reserve": 1000,
         "max_position_pct": 0.25, "max_trades_per_session": 2,
         "watchlist": ["JPM","BAC","GS","WFC","C","MS","V","MA","AXP","BRK-B","PGR","TRV","MET","PRU","COF"],
@@ -124,6 +137,7 @@ BOT_PROFILES = {
         "strategy": "Dividend-only portfolio - if it doesn't pay, he doesn't play",
         "risk_level": "LOW", "risk_bar": 2, "color": "#16a34a",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/nemotron",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.20, "max_trades_per_session": 2,
         "watchlist": ["T","VZ","MO","PM","O","MAIN","WPC","KO","JNJ","ABBV","CVX","IBM","BTI","ENB","OHI","SCHD","VYM"],
@@ -136,6 +150,7 @@ BOT_PROFILES = {
         "strategy": "3x leveraged tech ETFs + AI + defense tech + robotics",
         "risk_level": "VERY HIGH", "risk_bar": 10, "color": "#dc2626",
         "model": "openrouter/ling",
+        "fallback_model": "openrouter/nemotron",
         "initial_capital": 10000, "min_cash_reserve": 300,
         "max_position_pct": 0.40, "max_trades_per_session": 3,
         "watchlist": ["TQQQ","SOXL","NVDA","AMD","PLTR","AXON","RKLB","ANET","ARM","SMCI","CRWD","TSLA","IONQ","MRVL","AVGO"],
@@ -148,6 +163,7 @@ BOT_PROFILES = {
         "strategy": "Corporate raider - buys restructuring targets & activist plays",
         "risk_level": "HIGH", "risk_bar": 7, "color": "#b45309",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/ling",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.35, "max_trades_per_session": 3,
         "watchlist": ["T","WBD","CMCSA","INTC","NKE","DIS","SBUX","F","GM","CVS","PYPL","NOK","HPQ","VFC","BBWI"],
@@ -160,6 +176,7 @@ BOT_PROFILES = {
         "strategy": "Extreme momentum - chases the fastest movers, day trades aggressively",
         "risk_level": "VERY HIGH", "risk_bar": 10, "color": "#7c3aed",
         "model": "openrouter/ling",
+        "fallback_model": "openrouter/minimax",
         "initial_capital": 10000, "min_cash_reserve": 200,
         "max_position_pct": 0.45, "max_trades_per_session": 3,
         "watchlist": ["GME","MSTR","COIN","NVDA","META","TSLA","PLTR","SOFI","RBLX","RIVN","UPST","HOOD","MARA","RIOT","AMC"],
@@ -172,6 +189,7 @@ BOT_PROFILES = {
         "strategy": "Luxury & prestige consumer brands - only the best will do",
         "risk_level": "MED", "risk_bar": 5, "color": "#be185d",
         "model": "openrouter/ling",
+        "fallback_model": "openrouter/minimax",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.30, "max_trades_per_session": 2,
         "watchlist": ["RL","TPR","CPRI","EL","LVS","AAPL","MGM","WYNN","CAKE","DRI","HD","NKE","AMZN","LULU","RH"],
@@ -184,6 +202,7 @@ BOT_PROFILES = {
         "strategy": "Maximum dividend yield accumulation - gold & income forever",
         "risk_level": "VERY LOW", "risk_bar": 1, "color": "#ca8a04",
         "model": "openrouter/minimax",
+        "fallback_model": "openrouter/ling",
         "initial_capital": 10000, "min_cash_reserve": 200,
         "max_position_pct": 0.20, "max_trades_per_session": 2,
         "watchlist": ["GLD","O","MAIN","T","MO","PM","VZ","ABBV","IBM","WPC","BTI","ENB","OHI","ARCC","HTGC","SCHD","VYM","JEPI"],
@@ -196,6 +215,7 @@ BOT_PROFILES = {
         "strategy": "Ultra long-term index ETF investing - never panic, always hold",
         "risk_level": "VERY LOW", "risk_bar": 1, "color": "#84cc16",
         "model": "openrouter/ling",
+        "fallback_model": "openrouter/nemotron",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.30, "max_trades_per_session": 1,
         "watchlist": ["SPY","QQQ","VTI","VXUS","VEA","VWO","BND","GLD","VNQ","SCHB","IVV","VOO","VIG","SCHD","AGG"],
@@ -208,6 +228,7 @@ BOT_PROFILES = {
         "strategy": "Fed-sensitive macro: bonds, utilities, banks based on rate outlook",
         "risk_level": "LOW", "risk_bar": 3, "color": "#475569",
         "model": "openrouter/ling",
+        "fallback_model": "openrouter/minimax",
         "initial_capital": 10000, "min_cash_reserve": 1000,
         "max_position_pct": 0.25, "max_trades_per_session": 2,
         "watchlist": ["TLT","IEF","BIL","XLU","XLRE","VNQ","JPM","BAC","GS","SPY","XLF","SHY","TIP","AGG","PFF"],
@@ -220,6 +241,7 @@ BOT_PROFILES = {
         "strategy": "Equal-weight all 11 S&P sectors - obsessive rebalancing",
         "risk_level": "LOW", "risk_bar": 3, "color": "#7e22ce",
         "model": "openrouter/ling",
+        "fallback_model": "openrouter/nemotron",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.12, "max_trades_per_session": 3,
         "watchlist": ["XLK","XLV","XLF","XLE","XLI","XLY","XLP","XLU","XLRE","XLB","XLC","GLD","TLT","SPY","QQQ"],
@@ -232,6 +254,7 @@ BOT_PROFILES = {
         "strategy": "Bitcoin miners, crypto exchanges & blockchain-adjacent equities",
         "risk_level": "VERY HIGH", "risk_bar": 10, "color": "#d97706",
         "model": "openrouter/ling",
+        "fallback_model": "openrouter/minimax",
         "initial_capital": 10000, "min_cash_reserve": 300,
         "max_position_pct": 0.35, "max_trades_per_session": 3,
         "watchlist": ["COIN","MSTR","MARA","RIOT","CLSK","HOOD","BITO","PYPL","CIFR","HUT","CORZ","IREN","BTBT","WULF","NVDA"],
@@ -244,6 +267,7 @@ BOT_PROFILES = {
         "strategy": "Chinese ADR stocks listed on US exchanges",
         "risk_level": "HIGH", "risk_bar": 8, "color": "#b91c1c",
         "model": "openrouter/nemotron",
+        "fallback_model": "openrouter/ling",
         "initial_capital": 10000, "min_cash_reserve": 500,
         "max_position_pct": 0.30, "max_trades_per_session": 3,
         "watchlist": ["BABA","JD","BIDU","PDD","NIO","LI","XPEV","FXI","KWEB","NTES","FUTU","TIGR","TME","IQ","BILI"],

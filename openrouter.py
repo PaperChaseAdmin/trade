@@ -1,21 +1,31 @@
 """
 OpenRouter decision function for PaperChase trading bots.
-OpenAI-compatible API that routes to free models (Nemotron, MiniMax, etc.)
+OpenAI-compatible API that routes to free models (Nemotron, MiniMax, Ling).
+Includes per-bot fallback model support for resilience.
+
+If the primary model fails (provider error / rate limit / content=null),
+falls back to the bot's designated fallback model (a different source).
 """
-import os, json, time, requests
+
+import os, json, time, requests, re
 from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
+# Global fallback chain — used as last resort if primary AND per-bot fallback both fail
+GLOBAL_FALLBACK_CHAIN = ["minimax", "ling", "nemotron"]
 
-def get_decision(bot_id, profile, pf, prices, changes, market_data, model_name="nemotron-3-super-120b-a12b"):
+
+def get_decision(bot_id, profile, pf, prices, changes, market_data,
+                 model_name="minimax", fallback_model=None):
     """Returns (decision_dict, context_dict) using OpenRouter API.
     
     Uses profile.get('model') to determine which OpenRouter model to use.
+    Falls back to profile's fallback_model if primary fails.
+    If both fail, tries global fallback chain.
     """
     total = pf.get("total_value", calc_value(pf, prices))
     ret = (total - profile["initial_capital"]) / profile["initial_capital"] * 100
 
-    # Build context similar to Gemini version
     pos_display = {t: {"shares": p["shares"], "avg_cost": p["avg_cost"],
         "current": prices.get(t, p.get("current_price", p["avg_cost"])),
         "pnl": round((prices.get(t, p.get("current_price", p["avg_cost"])) - p["avg_cost"]) * p["shares"], 2)}
@@ -27,52 +37,32 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data, model_name="
     sp500 = idx.get("sp500", {}).get("change_24h", "N/A") if isinstance(idx, dict) else "N/A"
     vix = idx.get("vix", {}).get("value", "N/A") if isinstance(idx, dict) else "N/A"
 
-    # Build bot context
     ctx = _build_bot_context(bot_id, profile, prices, changes, market_data)
 
     avail = {t: {"price": prices[t], "chg_pct": changes.get(t, 0.0)}
              for t in profile["watchlist"] if t in prices}
 
-    movers_str = "  ".join(
-        f"{t} {'+' if c >= 0 else ''}{c:.1f}%"
-        for t, c in ctx["top_movers"]
-    ) or "minimal movement"
-
-    news_lines = "\n".join(f"  \u2022 {h}" for h in ctx["selected_news"]) or "  (no relevant headlines available)"
-
-    prompt = f"""You are {profile['display_name']}, a paper trader on PaperChase Trading Arena.
-
-PERSONALITY: {profile['prompt_persona']}
-
-PORTFOLIO: Cash ${pf['cash']:.2f} | Total ${total:.2f} | Return {ret:+.2f}%
-POSITIONS: {json.dumps(pos_display) if pos_display else "None \u2014 fully in cash"}
-
-YOUR WATCHLIST (price + today's move):
-{json.dumps(avail)}
-
-MARKET CONDITIONS:
-  Fear & Greed: {fg.get('value','N/A')} \u2014 {fg.get('label', 'N/A')}
-  S&P 500 today: {sp500}% | VIX: {vix}
-  Your watchlist top movers today: {movers_str}
-
-NEWS RELEVANT TO YOUR STRATEGY:
-{news_lines}
-{ctx['domain_extra']}
-
-RULES: Only BUY from your watchlist. Max {int(profile['max_position_pct']*100)}% per stock. Keep >=${profile['min_cash_reserve']} cash reserve. Max {profile['max_trades_per_session']} trades this session.
-
-Reply ONLY valid JSON:
-{{"trades":[{{"action":"BUY","ticker":"AAPL","shares":5,"reasoning":"one sentence citing specific data"}}],"market_outlook":"one sentence","analysis":"2-3 sentences: what specific data points you noticed, why you acted or held back, what you're watching next"}}
-No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
-
-    # Map model_name to OpenRouter model ID
-    or_model_id = _resolve_model_id(model_name)
+    prompt = _build_prompt(profile, pf, pos_display, avail, prices, changes, ctx, total, ret, sp500, vix, fg, market_data)
 
     api_key = os.environ.get("OPENROUTER_API_KEY", "")
     if not api_key:
         raise ValueError("OPENROUTER_API_KEY not set")
 
-    for attempt in range(3):
+    # Build model list: primary → per-bot fallback → global chain
+    base_primary = _resolve_base_name(model_name)
+    base_fallback = _resolve_base_name(fallback_model) if fallback_model else None
+    
+    models_to_try = [base_primary]
+    if base_fallback and base_fallback != base_primary:
+        models_to_try.append(base_fallback)
+    for m in GLOBAL_FALLBACK_CHAIN:
+        if m not in models_to_try:
+            models_to_try.append(m)
+
+    last_error = None
+    for attempt_model in models_to_try:
+        or_model_id = _resolve_model_id(attempt_model)
+        print(f"    → OpenRouter ({attempt_model})...")
         try:
             resp = requests.post(
                 "https://openrouter.ai/api/v1/chat/completions",
@@ -88,59 +78,114 @@ No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
                         {"role": "user", "content": prompt},
                     ],
                     "temperature": 0.75,
-                    "max_tokens": 1200,  # Higher for reasoning models like Nemotron
-                    # Nemotron supports json_object; MiniMax needs text mode instead
+                    "max_tokens": 1200,
                     "response_format": {"type": "text"},
                 },
-                timeout=60,
+                timeout=25,  # faster fail → faster fallback
             )
             data = resp.json()
             if "error" in data:
                 err = data["error"]
                 code = err.get("code", 0)
                 msg = err.get("message", str(err))
-                if code == 429 and attempt < 2:
-                    wait = 20 * (attempt + 1)
+                if code == 429:
+                    wait = 20
                     print(f"    Rate limited, waiting {wait}s...")
                     time.sleep(wait)
-                    continue
-                raise ValueError(f"OpenRouter API error: {msg}")
+                    # Single retry after rate limit
+                    resp = requests.post(
+                        "https://openrouter.ai/api/v1/chat/completions",
+                        headers={
+                            "Authorization": f"Bearer {api_key}",
+                            "Content-Type": "application/json",
+                            "HTTP-Referer": "https://paperchase.online",
+                        },
+                        json={
+                            "model": or_model_id,
+                            "messages": [
+                                {"role": "system", "content": "You are a stock market paper trader. Reply ONLY with valid JSON."},
+                                {"role": "user", "content": prompt},
+                            ],
+                            "temperature": 0.75,
+                            "max_tokens": 1200,
+                            "response_format": {"type": "text"},
+                        },
+                        timeout=25,
+                    )
+                    data = resp.json()
+                    if "error" in data:
+                        err = data["error"]
+                        msg = err.get("message", str(err))
+                        print(f"    Error on {attempt_model}, trying next model...")
+                        last_error = ValueError(f"OpenRouter API error: {msg}")
+                        break  # try next model
+                else:
+                    if "provider" in msg.lower():
+                        print(f"    Provider error on {attempt_model}, trying next model...")
+                        last_error = ValueError(f"OpenRouter provider error: {msg}")
+                        break  # try next model
+                    raise ValueError(f"OpenRouter API error: {msg}")
 
             content = data["choices"][0]["message"].get("content")
             if content is None:
-                # Some models return reasoning without content
-                # Try reasoning field or raise
                 reasoning = data["choices"][0]["message"].get("reasoning", "")
                 if reasoning:
-                    # Attempt to extract JSON from reasoning
-                    import re
                     json_match = re.search(r'\{.*\}', reasoning, re.DOTALL)
                     if json_match:
                         content = json_match.group()
                     else:
-                        raise ValueError(f"OpenRouter returned no content. Reasoning: {reasoning[:200]}")
+                        print(f"    No JSON in reasoning on {attempt_model}, trying next model...")
+                        last_error = ValueError(f"OpenRouter returned no content. Reasoning: {reasoning[:200]}")
+                        break
                 else:
-                    raise ValueError(f"OpenRouter returned no content. Full: {json.dumps(data['choices'][0]['message'])[:300]}")
+                    print(f"    No content from {attempt_model}, trying next model...")
+                    last_error = ValueError(f"OpenRouter returned no content.")
+                    break
+            
             result = json.loads(content)
             if not isinstance(result, dict):
-                # Try to find JSON object anywhere in the content
-                import re
                 json_match = re.search(r'\{.*\}', content, re.DOTALL)
                 if json_match:
                     result = json.loads(json_match.group())
                 else:
-                    raise ValueError(f"OpenRouter returned non-dict and no JSON found: {type(result)}")
+                    raise ValueError(f"OpenRouter returned non-dict: {type(result)}")
             return result, ctx
 
+        except requests.Timeout:
+            print(f"    Timeout on {attempt_model}, trying next model...")
+            last_error = TimeoutError(f"OpenRouter timeout on {attempt_model}")
+            continue
+        except json.JSONDecodeError as e:
+            print(f"    JSON parse error on {attempt_model}, trying next model...")
+            last_error = e
+            continue
         except Exception as e:
-            if attempt < 2:
-                wait = 5 * (attempt + 1)
-                print(f"    Retry {attempt+1} after error: {e}")
-                time.sleep(wait)
-            else:
-                raise
+            if "Provider" in str(e) or "provider" in str(e):
+                last_error = e
+                print(f"    Provider error on {attempt_model}, trying next model...")
+                break  # try next model
+            last_error = e
+            print(f"    Error on {attempt_model}: {e}")
+            break
 
-    raise RuntimeError("Failed to get decision from OpenRouter after 3 attempts")
+    # All models exhausted
+    if last_error:
+        raise last_error
+    raise RuntimeError("Failed to get decision from OpenRouter after all models exhausted")
+
+
+def _resolve_base_name(model_name):
+    """Convert 'minimax', 'nemotron', 'ling' or full model IDs to base name."""
+    if not model_name:
+        return None
+    m = str(model_name).lower()
+    if "minimax" in m:
+        return "minimax"
+    if "nemotron" in m:
+        return "nemotron"
+    if "ling" in m:
+        return "ling"
+    return model_name
 
 
 def _resolve_model_id(model_name):
@@ -155,10 +200,44 @@ def _resolve_model_id(model_name):
     result = mapping.get(model_name)
     if result:
         return result
-    # If not in mapping, assume it's already a full model ID
     if ":" in model_name or "/" in model_name:
         return model_name
     return f"{model_name}:free"
+
+
+def _build_prompt(profile, pf, pos_display, avail, prices, changes, ctx, total, ret, sp500, vix, fg, market_data):
+    """Build the trading prompt for the AI model."""
+    movers_str = "  ".join(
+        f"{t} {'+' if c >= 0 else ''}{c:.1f}%"
+        for t, c in ctx["top_movers"]
+    ) or "minimal movement"
+
+    news_lines = "\n".join(f"  • {h}" for h in ctx["selected_news"]) or "  (no relevant headlines available)"
+
+    return f"""You are {profile['display_name']}, a paper trader on PaperChase Trading Arena.
+
+PERSONALITY: {profile['prompt_persona']}
+
+PORTFOLIO: Cash ${pf['cash']:.2f} | Total ${total:.2f} | Return {ret:+.2f}%
+POSITIONS: {json.dumps(pos_display) if pos_display else "None — fully in cash"}
+
+YOUR WATCHLIST (price + today's move):
+{json.dumps(avail)}
+
+MARKET CONDITIONS:
+  Fear & Greed: {fg.get('value','N/A')} — {fg.get('label', 'N/A')}
+  S&P 500 today: {sp500}% | VIX: {vix}
+  Your watchlist top movers today: {movers_str}
+
+NEWS RELEVANT TO YOUR STRATEGY:
+{news_lines}
+{ctx['domain_extra']}
+
+RULES: Only BUY from your watchlist. Max {int(profile['max_position_pct']*100)}% per stock. Keep >=${profile['min_cash_reserve']} cash reserve. Max {profile['max_trades_per_session']} trades this session.
+
+Reply ONLY valid JSON:
+{{"trades":[{{"action":"BUY","ticker":"AAPL","shares":5,"reasoning":"one sentence citing specific data"}}],"market_outlook":"one sentence","analysis":"2-3 sentences: what specific data points you noticed, why you acted or held back, what you're watching next"}}
+No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
 
 
 def _build_bot_context(bot_id, profile, prices, changes, market_data):
@@ -188,7 +267,7 @@ def _build_bot_context(bot_id, profile, prices, changes, market_data):
 
     if bot_id in ("satoshi", "jordan"):
         cs = crypto.get("news_summary") or crypto.get("reddit_summary") or ""
-        if cs:
+        if isinstance(cs, str) and cs:
             extra_lines.append(f"CRYPTO SENTIMENT: {cs[:250]}")
 
     if bot_id == "xi":
@@ -201,13 +280,13 @@ def _build_bot_context(bot_id, profile, prices, changes, market_data):
             n_chg = idx.get("nasdaq", {}).get("change_24h", "N/A")
             d_chg = idx.get("dow", {}).get("change_24h", "N/A")
             vix_v = float(idx.get("vix", {}).get("value", 20) or 20)
-            vix_state = "ELEVATED \u2014 risk-off" if vix_v > 25 else "LOW \u2014 risk-on" if vix_v < 15 else "NORMAL"
+            vix_state = "ELEVATED — risk-off" if vix_v > 25 else "LOW — risk-on" if vix_v < 15 else "NORMAL"
             try:
                 extra_lines.append(f"MACRO: NASDAQ {float(n_chg):+.2f}%  DOW {float(d_chg):+.2f}%  VIX {vix_v:.1f} ({vix_state})")
             except (ValueError, TypeError):
                 pass
         mkt_reddit = stocks.get("reddit_summary") or ""
-        if mkt_reddit:
+        if isinstance(mkt_reddit, str) and mkt_reddit:
             extra_lines.append(f"MARKET REDDIT: {mkt_reddit[:200]}")
 
     if bot_id in ("warren", "michael", "kevin", "scrooge"):
@@ -215,11 +294,11 @@ def _build_bot_context(bot_id, profile, prices, changes, market_data):
         fg_v = fg.get("value", 50)
         fg_l = fg.get("label", "Neutral")
         meaning = (
-            "Oversold \u2014 potential value opportunity" if fg_v < 30 else
-            "Extreme greed \u2014 valuations stretched, be selective" if fg_v > 75 else
-            "Moderate sentiment \u2014 stick to fundamentals"
+            "Oversold — potential value opportunity" if fg_v < 30 else
+            "Extreme greed — valuations stretched, be selective" if fg_v > 75 else
+            "Moderate sentiment — stick to fundamentals"
         )
-        extra_lines.append(f"VALUE CONTEXT: Fear&Greed={fg_v} ({fg_l}) \u2014 {meaning}")
+        extra_lines.append(f"VALUE CONTEXT: Fear&Greed={fg_v} ({fg_l}) — {meaning}")
 
     return {
         "selected_news": selected_news,
