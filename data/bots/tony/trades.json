@@ -1,4 +1,112 @@
 {
-  "bot_id": "tony",
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "TQQQ",
+      "shares": 45,
+      "price": 65.31,
+      "total_value": 2938.95,
+      "reasoning": "Leveraged tech ETF up 2.77% today - the perfect vehicle for maximum exposure to the AI/tech revolution. Low VIX (16.99) means volatility is cheap, time to go big.",
+      "timestamp": "2026-05-02T16:35:20Z",
+      "market_outlook": "Fear index at 39 but VIX is a tame 16.99 - this is false fear, perfect conditions for bold tech bets to compound.",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 2.77,
+        "trigger_news": "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "SOXL",
+      "shares": 22,
+      "price": 130.33,
+      "total_value": 2867.26,
+      "reasoning": "Semiconductor leveraged ETF up 2.69% - AI chips are the new oil and SOXL gives 3x exposure to the semiconductor boom. This is infrastructure for the future.",
+      "timestamp": "2026-05-02T16:35:20Z",
+      "market_outlook": "Fear index at 39 but VIX is a tame 16.99 - this is false fear, perfect conditions for bold tech bets to compound.",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 2.69,
+        "trigger_news": "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "PLTR",
+      "shares": 12,
+      "price": 144.0799,
+      "total_value": 1728.96,
+      "reasoning": "Palantir up 3.57% - AI data analytics for defense and enterprise is bleeding edge tech. Government spending on AI won't slow down regardless of election cycles.",
+      "timestamp": "2026-05-02T16:35:20Z",
+      "market_outlook": "Fear index at 39 but VIX is a tame 16.99 - this is false fear, perfect conditions for bold tech bets to compound.",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 3.57,
+        "trigger_news": "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "TQQQ",
+      "shares": 12,
+      "price": 65.31,
+      "total_value": 783.72,
+      "reasoning": "TQQQ +2.77% with VIX at 16.99 and S&P +0.29% signals low-volatility tailwinds for leveraged Nasdaq exposure; deploying capital to concentrate on the highest-beta AI/tech amplifier on the list.",
+      "timestamp": "2026-05-03T01:27:15Z",
+      "market_outlook": "Neutral-to-bullish with low VIX and steady S&P gains favoring leveraged tech leaders while macro headlines create noise we can exploit.",
+      "signal_context": {
+        "fg_value": 47,
+        "fg_label": "Neutral",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 2.77,
+        "trigger_news": "'Godspeed my friend': Inside the final hours of Spirit Airlines"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "SOXL",
+      "shares": 7,
+      "price": 130.33,
+      "total_value": 912.31,
+      "reasoning": "SOXL +2.69% aligns with semis leadership (AMD +1.71%) and expanding AI capex; leveraged to capture margin expansion in the chip stack while NVDA consolidates.",
+      "timestamp": "2026-05-03T01:27:15Z",
+      "market_outlook": "Neutral-to-bullish with low VIX and steady S&P gains favoring leveraged tech leaders while macro headlines create noise we can exploit.",
+      "signal_context": {
+        "fg_value": 47,
+        "fg_label": "Neutral",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 2.69,
+        "trigger_news": "'Godspeed my friend': Inside the final hours of Spirit Airlines"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "PLTR",
+      "shares": 3,
+      "price": 144.0799,
+      "total_value": 432.24,
+      "reasoning": "PLTR +3.57% shows momentum and AI-driven government/enterprise adoption; adding to a concentrated AI data/software play with strong relative strength.",
+      "timestamp": "2026-05-03T01:27:15Z",
+      "market_outlook": "Neutral-to-bullish with low VIX and steady S&P gains favoring leveraged tech leaders while macro headlines create noise we can exploit.",
+      "signal_context": {
+        "fg_value": 47,
+        "fg_label": "Neutral",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 3.57,
+        "trigger_news": "'Godspeed my friend': Inside the final hours of Spirit Airlines"
+      }
+    }
+  ]
 }

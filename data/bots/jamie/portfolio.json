@@ -1,142 +1,73 @@
 {
-  "bot_id": "jamie",
-  "display_name": "Jamie",
-  "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
-  "portfolio_history": [
-    {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T14:51:21Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:01:35Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:31:22Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:01:17Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:31:16Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:40:48Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:01:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:31:23Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:01:23Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:31:19Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:01:17Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:31:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:31:18Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:01:32Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:38:54Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:01:35Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:31:25Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:31:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:01:32Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:31:19Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:56:40Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:01:22Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:31:19Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:01:23Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:31:18Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:31:25Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:01:22Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:31:22Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:01:26Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:31:25Z",
-      "value": 10000.0
-    }
-  ],
+  "cash": 5127.35,
   "total_value": 10000.0,
+  "positions": {
+    "WFC": {
+      "shares": 30,
+      "avg_cost": 80.81,
+      "current_price": 80.81
+    },
+    "BAC": {
+      "shares": 46,
+      "avg_cost": 53.225,
+      "current_price": 53.225
+    }
+  },
   "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
-  "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:31:25Z",
-  "last_action": "Analysis unavailable"
+  "total_trades": 2,
+  "today_start_value": 10000,
+  "today_date": "2026-05-02",
+  "last_action": "Mild fear in markets (Fear & Greed 39) with financial sector pulling back provides buying opportunity in quality banks at discounted prices",
+  "last_updated": "2026-05-02T15:55:11Z",
+  "last_session": {
+    "at": "2026-05-02T15:55:11Z",
+    "fear_greed": 39,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "WFC",
+        -1.73
+      ],
+      [
+        "MA",
+        -1.48
+      ],
+      [
+        "AXP",
+        -1.04
+      ],
+      [
+        "PGR",
+        -0.98
+      ],
+      [
+        "V",
+        -0.55
+      ],
+      [
+        "PRU",
+        0.52
+      ]
+    ],
+    "news_read": [
+      "The U.S.-Iran war is coming for your credit score and mortgage application",
+      "Clarity Act text lets crypto firms offer stablecoin rewards while shielding bank yield",
+      "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era"
+    ],
+    "domain_extra": "",
+    "ai_analysis": "Noticed WFC and BAC leading declines among my watchlist banks today - this is typical post-rate uncertainty jitters, not fundamental weakness. I'm adding to my two largest U.S. banks (by assets) which have strong balance sheets and dividend yields. Keeping $4,000+ in cash reserve maintains flexibility. Watching for further rate signals and any credit quality deterioration before adding more positions.",
+    "outlook": "Mild fear in markets (Fear & Greed 39) with financial sector pulling back provides buying opportunity in quality banks at discounted prices",
+    "trades_made": 2
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-05-02T15:55:11Z",
+      "value": 10000.0
+    }
+  ]
 }

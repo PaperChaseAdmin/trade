@@ -1,142 +1,68 @@
 {
-  "bot_id": "yoda",
-  "display_name": "Yoda",
-  "initial_capital": 10000,
-  "cash": 10000.0,
+  "cash": 10000,
+  "total_value": 10000,
   "positions": {},
+  "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
+  "today_pnl": 0,
+  "today_pnl_pct": 0.0,
+  "total_trades": 0,
+  "today_start_value": 10000,
+  "today_date": "2026-05-03",
+  "last_action": "Neutral calm, the Force is; patient we remain until clarity appears.",
+  "last_updated": "2026-05-03T01:28:09Z",
+  "last_session": {
+    "at": "2026-05-03T01:28:09Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "QQQ",
+        0.96
+      ],
+      [
+        "SCHD",
+        -0.65
+      ],
+      [
+        "SCHB",
+        0.32
+      ],
+      [
+        "VTI",
+        0.31
+      ],
+      [
+        "VOO",
+        0.29
+      ],
+      [
+        "SPY",
+        0.28
+      ]
+    ],
+    "news_read": [
+      "Weight loss and hair loss: The growing hair treatment market from GLP-1s",
+      "Netflix\u2019s 'Beef' highlights a $5,000 deductible \u2014 how to handle your own healthcare costs",
+      "Exxon Mobil CEO expects higher oil prices due to Iran war: \u2018The market hasn\u2019t seen the full impact\u2019",
+      "Prediction markets are ditching the 'casino' label to become a regular part of how people track the news",
+      "'Godspeed my friend': Inside the final hours of Spirit Airlines"
+    ],
+    "domain_extra": "",
+    "ai_analysis": "S&P 500 rose 0.29% with VIX at 16.99 and Fear & Greed at 47 (Neutral), showing no urgency or excess fear to deploy cash. QQQ led gains at +0.96% but breadth remains modest, so we hold for a better entry. We watch for a pullback in SPY/QQQ/VTI that would let us buy index shares while keeping the $500 cash reserve intact.",
+    "outlook": "Neutral calm, the Force is; patient we remain until clarity appears.",
+    "trades_made": 0
+  },
   "portfolio_history": [
     {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
+      "timestamp": "2026-05-02T16:55:08Z",
+      "value": 10000
     },
     {
-      "timestamp": "2026-04-22T14:51:49Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:02:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:31:50Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:01:45Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:31:44Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:41:16Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:01:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:31:51Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:01:51Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:31:47Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:01:45Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:31:43Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:31:46Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:02:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:39:22Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:02:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:31:53Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:31:43Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:02:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:31:47Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:57:08Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:01:50Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:31:47Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:01:51Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:31:46Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:31:53Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:01:50Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:31:50Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:01:54Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:31:53Z",
-      "value": 10000.0
+      "timestamp": "2026-05-03T01:28:09Z",
+      "value": 10000
     }
-  ],
-  "total_value": 10000.0,
-  "total_return_pct": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
-  "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:31:53Z",
-  "last_action": "Analysis unavailable"
+  ]
 }

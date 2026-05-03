@@ -1,142 +1,84 @@
 {
-  "bot_id": "tony",
-  "display_name": "Tony",
-  "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
-  "portfolio_history": [
-    {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T14:51:29Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:01:43Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:31:30Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:01:25Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:31:24Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:40:56Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:01:39Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:31:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:01:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:31:27Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:01:25Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:31:23Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:31:26Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:01:40Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:39:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:01:43Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:31:33Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:31:23Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:01:40Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:31:27Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:56:48Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:01:30Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:31:27Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:01:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:31:26Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:31:33Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:01:30Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:31:30Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:01:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:31:33Z",
-      "value": 10000.0
-    }
-  ],
+  "cash": 336.56,
   "total_value": 10000.0,
+  "positions": {
+    "TQQQ": {
+      "shares": 57,
+      "current_price": 65.31,
+      "avg_cost": 65.31
+    },
+    "SOXL": {
+      "shares": 29,
+      "current_price": 130.33,
+      "avg_cost": 130.33
+    },
+    "PLTR": {
+      "shares": 15,
+      "current_price": 144.0799,
+      "avg_cost": 144.0799
+    }
+  },
   "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
+  "total_trades": 6,
   "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:31:33Z",
-  "last_action": "Analysis unavailable"
+  "today_date": "2026-05-03",
+  "last_action": "Neutral-to-bullish with low VIX and steady S&P gains favoring leveraged tech leaders while macro headlines create noise we can exploit.",
+  "last_updated": "2026-05-03T01:27:15Z",
+  "last_session": {
+    "at": "2026-05-03T01:27:15Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "RKLB",
+        -4.48
+      ],
+      [
+        "PLTR",
+        3.57
+      ],
+      [
+        "TQQQ",
+        2.77
+      ],
+      [
+        "SOXL",
+        2.69
+      ],
+      [
+        "TSLA",
+        2.41
+      ],
+      [
+        "IONQ",
+        2.39
+      ]
+    ],
+    "news_read": [
+      "'Godspeed my friend': Inside the final hours of Spirit Airlines",
+      "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era",
+      "Weight loss and hair loss: The growing hair treatment market from GLP-1s",
+      "Spirit Airlines shut down. Here's what travelers need to know if they have tickets",
+      "The U.S.-Iran war is coming for your credit score and mortgage application"
+    ],
+    "domain_extra": "",
+    "ai_analysis": "Noticed TQQQ and SOXL leading the watchlist with >2.6% gains alongside PLTR\u2019s 3.6% pop, while VIX at 16.99 and S&P +0.29% reflect calm breadth ideal for concentrated, high-beta bets. Held back from beaten-down names like RKLB (-4.5%) and avoided overcrowded mega-caps; instead scaled into the best risk/reward levered vehicles and AI growth. Next, I\u2019m watching AMD, CRWD, and TSLA for follow-through to confirm the tech leadership leg higher.",
+    "outlook": "Neutral-to-bullish with low VIX and steady S&P gains favoring leveraged tech leaders while macro headlines create noise we can exploit.",
+    "trades_made": 3
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-05-02T16:35:20Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-03T01:27:15Z",
+      "value": 10000.0
+    }
+  ]
 }

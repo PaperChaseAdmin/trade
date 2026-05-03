@@ -1,159 +1,86 @@
 {
-  "bot_id": "nancy",
-  "display_name": "Nancy",
-  "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
-  "portfolio_history": [
-    {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T14:51:01Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:01:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:31:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:00:57Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:30:56Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:40:28Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:01:11Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:31:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:01:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:30:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:00:57Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:30:55Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:30:58Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:01:12Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:38:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:01:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:31:05Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:30:55Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:01:12Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:30:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:56:20Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:01:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:30:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:01:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:30:58Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:31:05Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:01:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:31:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:01:06Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:31:05Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-05-02T11:27:16Z",
-      "value": 10000.0
-    }
-  ],
+  "cash": 591.43,
   "total_value": 10000.0,
+  "positions": {
+    "INTC": {
+      "shares": 30,
+      "avg_cost": 99.67,
+      "current_price": 99.67
+    },
+    "MU": {
+      "shares": 6,
+      "avg_cost": 542.32,
+      "current_price": 542.32
+    },
+    "AMD": {
+      "shares": 8,
+      "avg_cost": 360.55,
+      "current_price": 360.55
+    },
+    "AAPL": {
+      "shares": 1,
+      "avg_cost": 280.15,
+      "current_price": 280.15
+    }
+  },
   "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-05-02",
+  "total_trades": 4,
   "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-05-02T11:27:16Z",
-  "last_action": "Analysis unavailable",
+  "today_date": "2026-05-03",
+  "last_action": "Semiconductors leading the rally with INTC +5.4% and MU +4.8% - perfect environment for tech exposure",
+  "last_updated": "2026-05-03T01:26:59Z",
   "last_session": {
-    "at": "2026-05-02T11:27:16Z",
-    "fear_greed": 39,
-    "fear_greed_label": "Fear",
+    "at": "2026-05-03T01:26:59Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
     "sp500_change": 0.29,
     "vix": 16.99,
-    "top_movers": [],
-    "news_read": [],
+    "top_movers": [
+      [
+        "INTC",
+        5.44
+      ],
+      [
+        "MU",
+        4.84
+      ],
+      [
+        "CRM",
+        4.13
+      ],
+      [
+        "AAPL",
+        3.24
+      ],
+      [
+        "TSLA",
+        2.41
+      ],
+      [
+        "AMD",
+        1.71
+      ]
+    ],
+    "news_read": [
+      "\u2018We\u2019re all worried the honey pot will run dry\u2019: Does the U.S. government borrow from my Social Security to fund federal programs?",
+      "'Godspeed my friend': Inside the final hours of Spirit Airlines"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
-  }
+    "ai_analysis": "Noticed INTC and MU ripping today (both in my portfolio) with semiconductor strength across the board; CRM also strong at +4.1% but AAPL fits Nancy's core holdings better. Limited to $371.58 usable cash after keeping $500 reserve, so taking a small position to establish AAPL exposure while maintaining conviction for larger moves ahead. Watching NVDA which is slightly down - might be opportunity.",
+    "outlook": "Semiconductors leading the rally with INTC +5.4% and MU +4.8% - perfect environment for tech exposure",
+    "trades_made": 1
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-05-02T15:50:00Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-03T01:26:59Z",
+      "value": 10000.0
+    }
+  ]
 }

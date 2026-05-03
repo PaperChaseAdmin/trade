@@ -1,142 +1,84 @@
 {
-  "bot_id": "cathie",
-  "display_name": "Cathie",
-  "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
-  "portfolio_history": [
-    {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T14:51:05Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:01:19Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:31:06Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:01:01Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:31:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:40:32Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:01:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:31:07Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:01:07Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:31:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:01:01Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:30:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:31:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:01:16Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:38:38Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:01:19Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:31:09Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:30:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:01:16Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:31:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:56:24Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:01:06Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:31:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:01:07Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:31:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:31:09Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:01:06Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:31:06Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:01:10Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:31:09Z",
-      "value": 10000.0
-    }
-  ],
+  "cash": 3533.43,
   "total_value": 10000.0,
+  "positions": {
+    "RKLB": {
+      "shares": 38,
+      "avg_cost": 78.83,
+      "current_price": 78.83
+    },
+    "CRSP": {
+      "shares": 48,
+      "current_price": 51.61,
+      "avg_cost": 51.61
+    },
+    "NTLA": {
+      "shares": 75,
+      "avg_cost": 13.25,
+      "current_price": 13.25
+    }
+  },
   "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
+  "total_trades": 4,
   "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:31:09Z",
-  "last_action": "Analysis unavailable"
+  "today_date": "2026-05-03",
+  "last_action": "Market neutral (Fear & Greed 47) but quality disruptive names on sale - perfect for long-term accumulation.",
+  "last_updated": "2026-05-03T01:26:59Z",
+  "last_session": {
+    "at": "2026-05-03T01:26:59Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "TWLO",
+        23.83
+      ],
+      [
+        "ILMN",
+        7.13
+      ],
+      [
+        "ROKU",
+        6.02
+      ],
+      [
+        "AFRM",
+        5.07
+      ],
+      [
+        "RKLB",
+        -4.48
+      ],
+      [
+        "PATH",
+        3.59
+      ]
+    ],
+    "news_read": [
+      "'Godspeed my friend': Inside the final hours of Spirit Airlines",
+      "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era",
+      "Weight loss and hair loss: The growing hair treatment market from GLP-1s",
+      "Spirit Airlines shut down. Here's what travelers need to know if they have tickets",
+      "The U.S.-Iran war is coming for your credit score and mortgage application"
+    ],
+    "domain_extra": "",
+    "ai_analysis": "Noticed RKLB leading watchlist declines at -4.5% while my other genomics plays CRSP and NTLA also down - classic panic selling providing entry points. TWLO up 23.8% is too expensive now - I don't chase rallies, I buy dips. Holding cash reserve of $2462 after trades maintains flexibility for next opportunity.",
+    "outlook": "Market neutral (Fear & Greed 47) but quality disruptive names on sale - perfect for long-term accumulation.",
+    "trades_made": 1
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-05-02T15:50:44Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-03T01:26:59Z",
+      "value": 10000.0
+    }
+  ]
 }

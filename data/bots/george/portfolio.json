@@ -1,142 +1,78 @@
 {
-  "bot_id": "george",
-  "display_name": "George",
-  "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
-  "portfolio_history": [
-    {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T14:51:13Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:01:27Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:31:14Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:01:09Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:31:08Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:40:40Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:01:23Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:31:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:01:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:31:11Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:01:09Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:31:07Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:31:10Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:01:24Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:38:46Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:01:27Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:31:17Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:31:07Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:01:24Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:31:11Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:56:32Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:01:14Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:31:11Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:01:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:31:10Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:31:17Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:01:14Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:31:14Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:01:18Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:31:17Z",
-      "value": 10000.0
-    }
-  ],
+  "cash": 378.9,
   "total_value": 10000.0,
+  "positions": {
+    "GLD": {
+      "shares": 11,
+      "avg_cost": 423.3,
+      "current_price": 423.3
+    },
+    "TLT": {
+      "shares": 58,
+      "avg_cost": 85.6,
+      "current_price": 85.6
+    }
+  },
   "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
-  "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:31:17Z",
-  "last_action": "Analysis unavailable"
+  "total_trades": 2,
+  "today_start_value": 10000,
+  "today_date": "2026-05-03",
+  "last_action": "Equities are vulnerable to a de-risking reversal as complacency meets geopolitical credit shocks, igniting a reflexivity-driven bid for gold and long Treasuries.",
+  "last_updated": "2026-05-03T01:27:04Z",
+  "last_session": {
+    "at": "2026-05-03T01:27:04Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "TSLA",
+        2.41
+      ],
+      [
+        "XLE",
+        -1.34
+      ],
+      [
+        "AMZN",
+        1.21
+      ],
+      [
+        "QQQ",
+        0.96
+      ],
+      [
+        "NVDA",
+        -0.56
+      ],
+      [
+        "META",
+        -0.52
+      ]
+    ],
+    "news_read": [
+      "'Godspeed my friend': Inside the final hours of Spirit Airlines",
+      "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era",
+      "Weight loss and hair loss: The growing hair treatment market from GLP-1s",
+      "The U.S.-Iran war is coming for your credit score and mortgage application"
+    ],
+    "domain_extra": "MACRO: NASDAQ +0.89%  DOW -0.31%  VIX 17.0 (NORMAL)",
+    "ai_analysis": "VIX at 16.99 and DOW -0.31% versus NASDAQ +0.89% show a fragile divergence, while the U.S.-Iran war headline directly threatens credit access and mortgage applications, a classic catalyst for systemic fear. I am buying GLD and TLT heavily to exploit the feedback loop of fear-driven reallocation, targeting a steeper risk-off cascade. Next, I will watch SPY and XLF for breakdown confirmation and QQQ for any melt-up exhaustion that would accelerate the rotation into safety.",
+    "outlook": "Equities are vulnerable to a de-risking reversal as complacency meets geopolitical credit shocks, igniting a reflexivity-driven bid for gold and long Treasuries.",
+    "trades_made": 2
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-05-02T15:53:45Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-05-03T01:27:04Z",
+      "value": 10000.0
+    }
+  ]
 }

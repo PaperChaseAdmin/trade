@@ -1,4 +1,40 @@
 {
-  "bot_id": "scrooge",
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "MO",
+      "shares": 26,
+      "price": 74.55,
+      "total_value": 1938.3,
+      "reasoning": "Altria yields ~8%, one of the highest in tobacco with strong cash flows and consistent dividend growth history; today up 2.6% showing strength",
+      "timestamp": "2026-05-02T16:39:04Z",
+      "market_outlook": "Fear dominates (39) but VIX is low (16.99) \u2014 excellent conditions to deploy cash into high-yield dividend machines while others are scared",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 2.62,
+        "trigger_news": "Bitcoin above $78,000 as Senate clears Clarity Act yield hurdle, S&P 500 sets new record"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "OHI",
+      "shares": 42,
+      "price": 46.98,
+      "total_value": 1973.16,
+      "reasoning": "Omega Healthcare yields ~8% as a healthcare REIT, defensive sector with reliable rental income; today flat at +0.02% presenting stable entry point",
+      "timestamp": "2026-05-02T16:39:04Z",
+      "market_outlook": "Fear dominates (39) but VIX is low (16.99) \u2014 excellent conditions to deploy cash into high-yield dividend machines while others are scared",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": 0.02,
+        "trigger_news": "Bitcoin above $78,000 as Senate clears Clarity Act yield hurdle, S&P 500 sets new record"
+      }
+    }
+  ]
 }

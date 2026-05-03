@@ -1,142 +1,83 @@
 {
-  "bot_id": "jordan",
-  "display_name": "Jordan",
-  "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
-  "portfolio_history": [
-    {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T14:51:37Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:01:51Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:31:38Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:01:33Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:31:32Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:41:04Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:01:47Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:31:39Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:01:39Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:31:35Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:01:33Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:31:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:31:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:01:48Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:39:10Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:01:51Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:31:41Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:31:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:01:48Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:31:35Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:56:56Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:01:38Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:31:35Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:01:39Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:31:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:31:41Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:01:38Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:31:38Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:01:42Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:31:41Z",
-      "value": 10000.0
-    }
-  ],
+  "cash": 349.18,
   "total_value": 10000.0,
+  "positions": {
+    "RIOT": {
+      "shares": 59,
+      "avg_cost": 18.5,
+      "current_price": 18.5
+    },
+    "MSTR": {
+      "shares": 23,
+      "avg_cost": 177.28,
+      "current_price": 177.28
+    },
+    "GME": {
+      "shares": 169,
+      "avg_cost": 26.52,
+      "current_price": 26.52
+    }
+  },
   "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
-  "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:31:41Z",
-  "last_action": "Analysis unavailable"
+  "total_trades": 3,
+  "today_start_value": 10000,
+  "today_date": "2026-05-03",
+  "last_action": "Neutral tape but volatility is coiling\u2014momentum names are waking up and ready to rip.",
+  "last_updated": "2026-05-03T01:28:06Z",
+  "last_session": {
+    "at": "2026-05-03T01:28:06Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "RBLX",
+        -18.33
+      ],
+      [
+        "RIVN",
+        -8.41
+      ],
+      [
+        "RIOT",
+        7.31
+      ],
+      [
+        "MSTR",
+        7.08
+      ],
+      [
+        "GME",
+        6.33
+      ],
+      [
+        "AMC",
+        -4.61
+      ]
+    ],
+    "news_read": [
+      "'Godspeed my friend': Inside the final hours of Spirit Airlines",
+      "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era",
+      "Weight loss and hair loss: The growing hair treatment market from GLP-1s",
+      "The U.S.-Iran war is coming for your credit score and mortgage application"
+    ],
+    "domain_extra": "",
+    "ai_analysis": "I targeted the three fastest movers on the watchlist (RIOT +7.31%, MSTR +7.08%, GME +6.33%) and loaded full risk capital while keeping $200 cash, ignoring weak hands and lagging tech. I\u2019m watching for volume spikes and breakouts above today\u2019s highs to add or flip quickly, and eyeing any meme/squeeze chatter for the next catalyst.",
+    "outlook": "Neutral tape but volatility is coiling\u2014momentum names are waking up and ready to rip.",
+    "trades_made": 3
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-05-02T16:36:39Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-05-03T01:28:06Z",
+      "value": 10000.0
+    }
+  ]
 }

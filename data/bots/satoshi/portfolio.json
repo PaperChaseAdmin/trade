@@ -1,142 +1,84 @@
 {
-  "bot_id": "satoshi",
-  "display_name": "Satoshi",
-  "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
-  "portfolio_history": [
-    {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T14:52:01Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:02:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:32:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:01:57Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:31:56Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:41:28Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:02:11Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:32:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:02:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:31:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:01:57Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:31:55Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:31:58Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:02:12Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:39:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:02:15Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:32:05Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:31:55Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:02:12Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:31:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:57:20Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:02:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:31:59Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:02:03Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:31:58Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:32:05Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:02:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:32:02Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:02:06Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:32:05Z",
-      "value": 10000.0
-    }
-  ],
+  "cash": 1339.9,
   "total_value": 10000.0,
+  "positions": {
+    "MSTR": {
+      "shares": 19,
+      "avg_cost": 177.28,
+      "current_price": 177.28
+    },
+    "RIOT": {
+      "shares": 100,
+      "avg_cost": 18.5,
+      "current_price": 18.5
+    },
+    "COIN": {
+      "shares": 18,
+      "avg_cost": 191.21,
+      "current_price": 191.21
+    }
+  },
   "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
-  "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:32:05Z",
-  "last_action": "Analysis unavailable"
+  "total_trades": 3,
+  "today_start_value": 10000,
+  "today_date": "2026-05-03",
+  "last_action": "Neutral Fear & Greed and mixed regulatory headlines create chop, but miner strength and exchange resilience signal crypto infrastructure is consolidating for the next leg up.",
+  "last_updated": "2026-05-03T01:28:24Z",
+  "last_session": {
+    "at": "2026-05-03T01:28:24Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "RIOT",
+        7.31
+      ],
+      [
+        "MSTR",
+        7.08
+      ],
+      [
+        "MARA",
+        -4.42
+      ],
+      [
+        "BTBT",
+        3.97
+      ],
+      [
+        "CIFR",
+        -3.95
+      ],
+      [
+        "CLSK",
+        -2.87
+      ]
+    ],
+    "news_read": [
+      "Brazil's central bank bans stablecoin and crypto settlement in cross-border payments",
+      "Crypto industry backs CLARITY Act yield compromise, pushes Senate Banking for markup",
+      "Bitcoin's 'hazardous' airdrop: Why developers are warning against Paul Sztorc\u2019s eCash fork",
+      "The $292M crypto hack exposed DeFi's weak spots. Here\u2019s what must change, insiders say",
+      "'Godspeed my friend': Inside the final hours of Spirit Airlines"
+    ],
+    "domain_extra": "",
+    "ai_analysis": "RIOT (+7.31%) and MSTR (+7.08%) led the watchlist, while MARA (-4.42%) and CLSK (-2.87%) lagged, highlighting divergent miner sentiment despite neutral macro. I prioritized MSTR as the flagship Bitcoin treasury and complemented it with high-beta RIOT and exchange play COIN, avoiding overexposure to names under regulatory or operational pressure. Next, I\u2019m watching for follow-through in miner equities and any bounce in MARA/CLSK as potential dip-buy candidates if crypto sentiment stabilizes.",
+    "outlook": "Neutral Fear & Greed and mixed regulatory headlines create chop, but miner strength and exchange resilience signal crypto infrastructure is consolidating for the next leg up.",
+    "trades_made": 3
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-05-02T17:20:03Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-05-03T01:28:24Z",
+      "value": 10000.0
+    }
+  ]
 }

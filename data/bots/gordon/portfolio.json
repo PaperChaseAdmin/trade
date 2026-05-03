@@ -1,142 +1,71 @@
 {
-  "bot_id": "gordon",
-  "display_name": "Gordon",
-  "initial_capital": 10000,
-  "cash": 10000.0,
-  "positions": {},
-  "portfolio_history": [
-    {
-      "timestamp": "2026-04-22T00:00:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T14:51:33Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:01:47Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T15:31:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:01:29Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:31:28Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T16:41:00Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:01:43Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T17:31:35Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:01:35Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T18:31:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:01:29Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-22T19:31:27Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T13:31:30Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:01:44Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T14:39:06Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:01:47Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T15:31:37Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T16:31:27Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:01:44Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:31:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T17:56:52Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:01:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T18:31:31Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:01:35Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-23T19:31:30Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T13:31:37Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:01:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T14:31:34Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:01:38Z",
-      "value": 10000.0
-    },
-    {
-      "timestamp": "2026-04-24T15:31:37Z",
-      "value": 10000.0
-    }
-  ],
+  "cash": 8969.1,
   "total_value": 10000.0,
+  "positions": {
+    "DIS": {
+      "shares": 10,
+      "avg_cost": 103.09,
+      "current_price": 103.09
+    }
+  },
   "total_return_pct": 0.0,
+  "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "today_date": "2026-04-24",
-  "today_start_value": 10000.0,
-  "total_trades": 0,
-  "last_updated": "2026-04-24T15:31:37Z",
-  "last_action": "Analysis unavailable"
+  "total_trades": 1,
+  "today_start_value": 10000,
+  "today_date": "2026-05-03",
+  "last_action": "Neutral market (Fear & Greed 47) with low VIX (16.99) - opportunistic time to load up on beaten-down quality names",
+  "last_updated": "2026-05-03T01:28:31Z",
+  "last_session": {
+    "at": "2026-05-03T01:28:31Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 0.29,
+    "vix": 16.99,
+    "top_movers": [
+      [
+        "INTC",
+        5.44
+      ],
+      [
+        "NOK",
+        3.02
+      ],
+      [
+        "F",
+        -1.66
+      ],
+      [
+        "GM",
+        -1.46
+      ],
+      [
+        "CVS",
+        -1.44
+      ],
+      [
+        "BBWI",
+        -1.18
+      ]
+    ],
+    "news_read": [
+      "Exxon Mobil CEO expects higher oil prices due to Iran war: \u2018The market hasn\u2019t seen the full impact\u2019",
+      "'Godspeed my friend': Inside the final hours of Spirit Airlines"
+    ],
+    "domain_extra": "",
+    "ai_analysis": "INTC gapped up 5.4% on AI news making it too late to chase; NKE and PYPL both attractive but DIS has the clearest activist catalyst with Iger's departure and streaming pivot. Holding cash for potential follow-up entries on NKE or PYPL if they dip further. Watching for any additional Disney executive departures that could signal deeper restructuring.",
+    "outlook": "Neutral market (Fear & Greed 47) with low VIX (16.99) - opportunistic time to load up on beaten-down quality names",
+    "trades_made": 1
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-05-02T16:36:37Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-05-03T01:28:31Z",
+      "value": 10000.0
+    }
+  ]
 }

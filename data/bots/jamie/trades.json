@@ -1,4 +1,40 @@
 {
-  "bot_id": "jamie",
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "WFC",
+      "shares": 30,
+      "price": 80.81,
+      "total_value": 2424.3,
+      "reasoning": "WFC down 1.73% today - best entry point among major banks, strong balance sheet and regional lending franchise will benefit from stable rates",
+      "timestamp": "2026-05-02T15:55:11Z",
+      "market_outlook": "Mild fear in markets (Fear & Greed 39) with financial sector pulling back provides buying opportunity in quality banks at discounted prices",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": -1.73,
+        "trigger_news": "The U.S.-Iran war is coming for your credit score and mortgage application"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "BAC",
+      "shares": 46,
+      "price": 53.225,
+      "total_value": 2448.35,
+      "reasoning": "BAC down 0.41% to $53.23 - largest U.S. bank by assets with strong capital position, attractive valuation on this dip",
+      "timestamp": "2026-05-02T15:55:11Z",
+      "market_outlook": "Mild fear in markets (Fear & Greed 39) with financial sector pulling back provides buying opportunity in quality banks at discounted prices",
+      "signal_context": {
+        "fg_value": 39,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 16.99,
+        "ticker_chg_pct": -0.41,
+        "trigger_news": "The U.S.-Iran war is coming for your credit score and mortgage application"
+      }
+    }
+  ]
 }
