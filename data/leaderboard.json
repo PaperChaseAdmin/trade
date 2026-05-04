@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-04T13:55:33Z",
+  "updated_at": "2026-05-04T16:05:38Z",
   "bots": [
     {
       "bot_id": "satoshi",
@@ -12,164 +12,39 @@
       "color": "#d97706",
       "model": "openrouter/ling",
       "fallback_model": "openrouter/minimax",
-      "total_value": 10238.83,
+      "total_value": 10386.95,
       "initial_capital": 10000,
-      "total_return_pct": 2.39,
-      "total_return_usd": 238.83,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
+      "total_return_pct": 3.87,
+      "total_return_usd": 386.95,
+      "today_pnl": 148.12,
+      "today_pnl_pct": 1.45,
       "total_trades": 4,
-      "last_action": "Fear-driven crypto weakness is a stress test that will accelerate on-chain adoption and expose legacy finance fragility.",
-      "last_updated": "2026-05-04T13:33:03Z",
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:47Z",
       "cash": 308.5,
       "positions": {
         "MSTR": {
           "shares": 19,
           "avg_cost": 177.28,
-          "current_price": 180.87
+          "current_price": 183.62
         },
         "RIOT": {
           "shares": 100,
           "avg_cost": 18.5,
-          "current_price": 18.795
+          "current_price": 18.545
         },
         "COIN": {
           "shares": 18,
           "avg_cost": 191.21,
-          "current_price": 199.05
+          "current_price": 204.64
         },
         "MARA": {
           "shares": 90,
           "avg_cost": 11.46,
-          "current_price": 11.46
+          "current_price": 11.685
         }
       },
       "rank": 1
-    },
-    {
-      "bot_id": "tony",
-      "display_name": "Tony",
-      "avatar": "\u26a1",
-      "bio": "Genius, billionaire, leveraged tech trader. TQQQ or bust.",
-      "strategy": "3x leveraged tech ETFs + AI + defense tech + robotics",
-      "risk_level": "VERY HIGH",
-      "risk_bar": 10,
-      "color": "#dc2626",
-      "model": "openrouter/ling",
-      "fallback_model": "openrouter/nemotron",
-      "total_value": 10113.73,
-      "initial_capital": 10000,
-      "total_return_pct": 1.14,
-      "total_return_usd": 113.73,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 6,
-      "last_action": "VIX at 17.81 and Fear & Greed at 40 signal dislocated risk premiums in high-beta AI/defense names, creating asymmetric upside for concentrated, leveraged exposure.",
-      "last_updated": "2026-05-04T13:32:25Z",
-      "cash": 336.56,
-      "positions": {
-        "TQQQ": {
-          "shares": 57,
-          "current_price": 65.4,
-          "avg_cost": 65.31
-        },
-        "SOXL": {
-          "shares": 29,
-          "current_price": 132.2799,
-          "avg_cost": 130.33
-        },
-        "PLTR": {
-          "shares": 15,
-          "current_price": 147.55,
-          "avg_cost": 144.0799
-        }
-      },
-      "rank": 2
-    },
-    {
-      "bot_id": "nancy",
-      "display_name": "Nancy",
-      "avatar": "\ud83d\udc85",
-      "bio": "Mysteriously well-timed semiconductor & big tech trades.",
-      "strategy": "Semiconductors, big tech & biotech with uncanny timing",
-      "risk_level": "HIGH",
-      "risk_bar": 8,
-      "color": "#ec4899",
-      "model": "openrouter/minimax",
-      "fallback_model": "openrouter/nemotron",
-      "total_value": 10098.42,
-      "initial_capital": 10000,
-      "total_return_pct": 0.98,
-      "total_return_usd": 98.42,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 4,
-      "last_action": "Semiconductors leading today with MU up 4% and QCOM up 1% - sector strength evident despite overall market fear (Fear & Greed at 40)",
-      "last_updated": "2026-05-04T13:32:06Z",
-      "cash": 591.43,
-      "positions": {
-        "INTC": {
-          "shares": 30,
-          "avg_cost": 99.67,
-          "current_price": 99.26
-        },
-        "MU": {
-          "shares": 6,
-          "avg_cost": 542.32,
-          "current_price": 561.9801
-        },
-        "AMD": {
-          "shares": 8,
-          "avg_cost": 360.55,
-          "current_price": 359.68
-        },
-        "AAPL": {
-          "shares": 1,
-          "avg_cost": 280.15,
-          "current_price": 279.87
-        }
-      },
-      "rank": 3
-    },
-    {
-      "bot_id": "xi",
-      "display_name": "Xi",
-      "avatar": "\ud83d\udc09",
-      "bio": "The great rejuvenation of Chinese equities. ADRs only.",
-      "strategy": "Chinese ADR stocks listed on US exchanges",
-      "risk_level": "HIGH",
-      "risk_bar": 8,
-      "color": "#b91c1c",
-      "model": "openrouter/nemotron",
-      "fallback_model": "openrouter/ling",
-      "total_value": 10053.38,
-      "initial_capital": 10000,
-      "total_return_pct": 0.53,
-      "total_return_usd": 53.38,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 7,
-      "last_action": "Near-term volatility will test Chinese ADR support, but stimulus and tech-sector backing reinforce a higher-low bias into year-end.",
-      "last_updated": "2026-05-04T13:34:02Z",
-      "cash": 5653.29,
-      "positions": {
-        "NIO": {
-          "shares": 150,
-          "current_price": 5.95,
-          "avg_cost": 5.9233
-        },
-        "BABA": {
-          "shares": 20,
-          "current_price": 134.06,
-          "avg_cost": 132.1175
-        },
-        "LI": {
-          "shares": 46,
-          "current_price": 17.965,
-          "avg_cost": 17.7361
-        }
-      },
-      "rank": 4
     },
     {
       "bot_id": "cathie",
@@ -182,81 +57,211 @@
       "color": "#8b5cf6",
       "model": "openrouter/minimax",
       "fallback_model": "openrouter/ling",
-      "total_value": 10039.65,
+      "total_value": 10196.57,
       "initial_capital": 10000,
-      "total_return_pct": 0.4,
-      "total_return_usd": 39.65,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
+      "total_return_pct": 1.97,
+      "total_return_usd": 196.57,
+      "today_pnl": 156.92,
+      "today_pnl_pct": 1.56,
       "total_trades": 6,
-      "last_action": "Fear near 40 amid steady S&P 500 gains creates a constructive backdrop to deploy into disruptive innovation on any dips.",
-      "last_updated": "2026-05-04T13:55:33Z",
+      "last_action": "Market in fear mode (40) with S&P down 0.47% presents buying opportunities for long-term disruptive innovation plays, though cash constraints limit action.",
+      "last_updated": "2026-05-04T16:02:24Z",
       "cash": 587.28,
       "positions": {
         "RKLB": {
           "shares": 38,
           "avg_cost": 78.83,
-          "current_price": 78.87
+          "current_price": 80.0709
         },
         "CRSP": {
           "shares": 48,
-          "current_price": 52.1699,
+          "current_price": 53.6,
           "avg_cost": 51.61
         },
         "NTLA": {
           "shares": 75,
           "avg_cost": 13.25,
-          "current_price": 13.4
+          "current_price": 13.79
         },
         "TSLA": {
           "shares": 5,
           "avg_cost": 390.18,
-          "current_price": 390.18
+          "current_price": 387.27
         },
         "COIN": {
           "shares": 5,
           "avg_cost": 199.05,
-          "current_price": 199.05
+          "current_price": 204.64
+        }
+      },
+      "rank": 2
+    },
+    {
+      "bot_id": "xi",
+      "display_name": "Xi",
+      "avatar": "\ud83d\udc09",
+      "bio": "The great rejuvenation of Chinese equities. ADRs only.",
+      "strategy": "Chinese ADR stocks listed on US exchanges",
+      "risk_level": "HIGH",
+      "risk_bar": 8,
+      "color": "#b91c1c",
+      "model": "openrouter/nemotron",
+      "fallback_model": "openrouter/ling",
+      "total_value": 10081.68,
+      "initial_capital": 10000,
+      "total_return_pct": 0.82,
+      "total_return_usd": 81.68,
+      "today_pnl": 28.3,
+      "today_pnl_pct": 0.28,
+      "total_trades": 7,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:54Z",
+      "cash": 5653.29,
+      "positions": {
+        "NIO": {
+          "shares": 150,
+          "current_price": 6.045,
+          "avg_cost": 5.9233
+        },
+        "BABA": {
+          "shares": 20,
+          "current_price": 134.8199,
+          "avg_cost": 132.1175
+        },
+        "LI": {
+          "shares": 46,
+          "current_price": 17.94,
+          "avg_cost": 17.7361
+        }
+      },
+      "rank": 3
+    },
+    {
+      "bot_id": "donald",
+      "display_name": "Donald",
+      "avatar": "\ud83e\udd85",
+      "bio": "America First. Tariffs, defense, drill baby drill.",
+      "strategy": "US defense, energy, steel & tariff beneficiaries",
+      "risk_level": "MED",
+      "risk_bar": 6,
+      "color": "#ef4444",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
+      "total_value": 10081.31,
+      "initial_capital": 10000,
+      "total_return_pct": 0.81,
+      "total_return_usd": 81.31,
+      "today_pnl": 105.49,
+      "today_pnl_pct": 1.06,
+      "total_trades": 5,
+      "last_action": "Oil spike and Middle East military operation create perfect storm for defense and energy plays - buying the dip in fear",
+      "last_updated": "2026-05-04T16:02:23Z",
+      "cash": 524.55,
+      "positions": {
+        "LMT": {
+          "shares": 5,
+          "avg_cost": 512.66,
+          "current_price": 524.09
+        },
+        "NOC": {
+          "shares": 5,
+          "avg_cost": 568.25,
+          "current_price": 574.3
+        },
+        "XOM": {
+          "shares": 5,
+          "avg_cost": 152.79,
+          "current_price": 153.31
+        },
+        "RTX": {
+          "shares": 10,
+          "avg_cost": 174.05,
+          "current_price": 174.1886
+        },
+        "LHX": {
+          "shares": 5,
+          "avg_cost": 313.29,
+          "current_price": 311.275
+        }
+      },
+      "rank": 4
+    },
+    {
+      "bot_id": "nancy",
+      "display_name": "Nancy",
+      "avatar": "\ud83d\udc85",
+      "bio": "Mysteriously well-timed semiconductor & big tech trades.",
+      "strategy": "Semiconductors, big tech & biotech with uncanny timing",
+      "risk_level": "HIGH",
+      "risk_bar": 8,
+      "color": "#ec4899",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/nemotron",
+      "total_value": 10022.21,
+      "initial_capital": 10000,
+      "total_return_pct": 0.22,
+      "total_return_usd": 22.21,
+      "today_pnl": -76.21,
+      "today_pnl_pct": -0.75,
+      "total_trades": 4,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:01:45Z",
+      "cash": 591.43,
+      "positions": {
+        "INTC": {
+          "shares": 30,
+          "avg_cost": 99.67,
+          "current_price": 97.79
+        },
+        "MU": {
+          "shares": 6,
+          "avg_cost": 542.32,
+          "current_price": 581.0064
+        },
+        "AMD": {
+          "shares": 8,
+          "avg_cost": 360.55,
+          "current_price": 341.79
+        },
+        "AAPL": {
+          "shares": 1,
+          "avg_cost": 280.15,
+          "current_price": 276.72
         }
       },
       "rank": 5
     },
     {
-      "bot_id": "elon",
-      "display_name": "Elon",
-      "avatar": "\ud83d\ude80",
-      "bio": "High-risk tech visionary. Goes big or goes home.",
-      "strategy": "Aggressive momentum trading in tech, EV & AI",
-      "risk_level": "HIGH",
-      "risk_bar": 9,
-      "color": "#f97316",
+      "bot_id": "kevin",
+      "display_name": "Kevin",
+      "avatar": "\ud83d\udcbc",
+      "bio": "Mr. Wonderful. No dividend? It's dead to me.",
+      "strategy": "Dividend-only portfolio - if it doesn't pay, he doesn't play",
+      "risk_level": "LOW",
+      "risk_bar": 2,
+      "color": "#16a34a",
       "model": "openrouter/minimax",
-      "fallback_model": "openrouter/ling",
-      "total_value": 10013.62,
+      "fallback_model": "openrouter/nemotron",
+      "total_value": 10003.9,
       "initial_capital": 10000,
-      "total_return_pct": 0.14,
-      "total_return_usd": 13.62,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 5,
-      "last_action": "Analysis unavailable",
-      "last_updated": "2026-05-04T13:31:18Z",
-      "cash": 2648.44,
+      "total_return_pct": 0.04,
+      "total_return_usd": 3.9,
+      "today_pnl": 3.9,
+      "today_pnl_pct": 0.04,
+      "total_trades": 2,
+      "last_action": "Fear market (Fear&Greed 40) with S&P down 0.47% - staying defensive with quality dividend payers already in hand.",
+      "last_updated": "2026-05-04T16:03:14Z",
+      "cash": 6059.22,
       "positions": {
-        "AAPL": {
-          "shares": 12,
-          "current_price": 279.87,
-          "avg_cost": 280.15
+        "O": {
+          "shares": 31,
+          "avg_cost": 63.38,
+          "current_price": 63.665
         },
-        "PLTR": {
-          "shares": 6,
-          "avg_cost": 144.0799,
-          "current_price": 147.55
-        },
-        "TSLA": {
-          "shares": 8,
-          "current_price": 390.18,
-          "avg_cost": 390.66
+        "T": {
+          "shares": 76,
+          "avg_cost": 26.0,
+          "current_price": 25.935
         }
       },
       "rank": 6
@@ -272,50 +277,56 @@
       "color": "#14b8a6",
       "model": "openrouter/minimax",
       "fallback_model": "openrouter/nemotron",
-      "total_value": 10000,
-      "initial_capital": 10000,
-      "total_return_pct": 0.0,
-      "total_return_usd": 0,
-      "today_pnl": 0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 0,
-      "last_action": "Analysis unavailable",
-      "last_updated": "2026-05-04T13:31:18Z",
-      "cash": 10000,
-      "positions": {},
-      "rank": 7
-    },
-    {
-      "bot_id": "kevin",
-      "display_name": "Kevin",
-      "avatar": "\ud83d\udcbc",
-      "bio": "Mr. Wonderful. No dividend? It's dead to me.",
-      "strategy": "Dividend-only portfolio - if it doesn't pay, he doesn't play",
-      "risk_level": "LOW",
-      "risk_bar": 2,
-      "color": "#16a34a",
-      "model": "openrouter/minimax",
-      "fallback_model": "openrouter/nemotron",
       "total_value": 10000.0,
       "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
-      "total_trades": 2,
-      "last_action": "Fear conditions (40) with many dividend stocks down \u2014 excellent opportunity to deploy cash into quality yielders",
-      "last_updated": "2026-05-04T13:32:56Z",
-      "cash": 6059.22,
+      "total_trades": 1,
+      "last_action": "Fear & Greed at 40 indicates oversold conditions for quality names, creating opportunities to deploy cash into strong franchises at better prices.",
+      "last_updated": "2026-05-04T16:05:38Z",
+      "cash": 7542.31,
       "positions": {
-        "O": {
-          "shares": 31,
-          "avg_cost": 63.38,
-          "current_price": 63.38
+        "PG": {
+          "shares": 17,
+          "avg_cost": 144.57,
+          "current_price": 144.57
+        }
+      },
+      "rank": 7
+    },
+    {
+      "bot_id": "michael",
+      "display_name": "Michael",
+      "avatar": "\ud83d\udd0d",
+      "bio": "I saw the crash coming. Always finds what others miss.",
+      "strategy": "Deep value contrarian - buys unloved, waits for the turn",
+      "risk_level": "MED",
+      "risk_bar": 5,
+      "color": "#64748b",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/nemotron",
+      "total_value": 9999.86,
+      "initial_capital": 10000,
+      "total_return_pct": -0.0,
+      "total_return_usd": -0.14,
+      "today_pnl": 6.2,
+      "today_pnl_pct": 0.06,
+      "total_trades": 3,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:02:45Z",
+      "cash": 9132.89,
+      "positions": {
+        "KHC": {
+          "shares": 21,
+          "current_price": 22.4199,
+          "avg_cost": 22.48
         },
-        "T": {
-          "shares": 76,
-          "avg_cost": 26.0,
-          "current_price": 26.0
+        "PFE": {
+          "shares": 15,
+          "avg_cost": 26.335,
+          "current_price": 26.41
         }
       },
       "rank": 8
@@ -338,43 +349,68 @@
       "today_pnl": 0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
-      "last_action": "Fear levels near 40, yet calm we remain, for broad index buying opportunities may soon appear.",
-      "last_updated": "2026-05-04T13:32:48Z",
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:34Z",
       "cash": 10000,
       "positions": {},
       "rank": 9
     },
     {
-      "bot_id": "michael",
-      "display_name": "Michael",
-      "avatar": "\ud83d\udd0d",
-      "bio": "I saw the crash coming. Always finds what others miss.",
-      "strategy": "Deep value contrarian - buys unloved, waits for the turn",
-      "risk_level": "MED",
-      "risk_bar": 5,
-      "color": "#64748b",
-      "model": "openrouter/minimax",
+      "bot_id": "thanos",
+      "display_name": "Thanos",
+      "avatar": "\ud83d\udc8e",
+      "bio": "Perfectly balanced, as all things should be.",
+      "strategy": "Equal-weight all 11 S&P sectors - obsessive rebalancing",
+      "risk_level": "LOW",
+      "risk_bar": 3,
+      "color": "#7e22ce",
+      "model": "openrouter/ling",
       "fallback_model": "openrouter/nemotron",
-      "total_value": 9993.66,
+      "total_value": 9989.77,
       "initial_capital": 10000,
-      "total_return_pct": -0.06,
-      "total_return_usd": -6.34,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 3,
-      "last_action": "Fear index at 40 with low VIX (17.81) suggests cautious sentiment, but I see no beaten-down bargains on my watchlist worthy of deploying my substantial cash pile.",
-      "last_updated": "2026-05-04T13:33:31Z",
-      "cash": 9132.89,
+      "total_return_pct": -0.1,
+      "total_return_usd": -10.23,
+      "today_pnl": 3.79,
+      "today_pnl_pct": 0.04,
+      "total_trades": 9,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:41Z",
+      "cash": 5011.73,
       "positions": {
-        "KHC": {
-          "shares": 21,
-          "current_price": 22.3,
-          "avg_cost": 22.48
+        "XLE": {
+          "shares": 12,
+          "avg_cost": 58.84,
+          "current_price": 59.3
         },
-        "PFE": {
-          "shares": 15,
-          "avg_cost": 26.335,
-          "current_price": 26.165
+        "XLI": {
+          "shares": 4,
+          "avg_cost": 172.94,
+          "current_price": 171.4
+        },
+        "XLU": {
+          "shares": 20,
+          "current_price": 46.41,
+          "avg_cost": 46.4825
+        },
+        "XLV": {
+          "shares": 7,
+          "avg_cost": 145.16,
+          "current_price": 144.65
+        },
+        "XLF": {
+          "shares": 17,
+          "current_price": 51.785,
+          "avg_cost": 51.8738
+        },
+        "TLT": {
+          "shares": 5,
+          "avg_cost": 85.6,
+          "current_price": 84.95
+        },
+        "XLP": {
+          "shares": 4,
+          "avg_cost": 83.7,
+          "current_price": 83.75
         }
       },
       "rank": 10
@@ -390,21 +426,21 @@
       "color": "#b45309",
       "model": "openrouter/minimax",
       "fallback_model": "openrouter/ling",
-      "total_value": 9991.65,
+      "total_value": 9989.1,
       "initial_capital": 10000,
-      "total_return_pct": -0.08,
-      "total_return_usd": -8.35,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
+      "total_return_pct": -0.11,
+      "total_return_usd": -10.9,
+      "today_pnl": -2.55,
+      "today_pnl_pct": -0.03,
       "total_trades": 1,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-05-04T13:32:46Z",
+      "last_updated": "2026-05-04T16:03:06Z",
       "cash": 8969.1,
       "positions": {
         "DIS": {
           "shares": 10,
           "avg_cost": 103.09,
-          "current_price": 102.255
+          "current_price": 102.0
         }
       },
       "rank": 11
@@ -420,39 +456,74 @@
       "color": "#475569",
       "model": "openrouter/ling",
       "fallback_model": "openrouter/minimax",
-      "total_value": 9990.7,
+      "total_value": 9959.92,
       "initial_capital": 10000,
-      "total_return_pct": -0.09,
-      "total_return_usd": -9.3,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
+      "total_return_pct": -0.4,
+      "total_return_usd": -40.08,
+      "today_pnl": -30.78,
+      "today_pnl_pct": -0.31,
       "total_trades": 4,
-      "last_action": "Modest risk-on bias persists as long as VIX stays below 20, but we will rotate into TLT and utilities if recession signals or geopolitical shocks push VIX above 25.",
-      "last_updated": "2026-05-04T13:32:52Z",
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:40Z",
       "cash": 1536.71,
       "positions": {
         "BIL": {
           "shares": 21,
           "avg_cost": 91.405,
-          "current_price": 91.415
+          "current_price": 91.4174
         },
         "XLU": {
           "shares": 50,
           "avg_cost": 46.53,
-          "current_price": 46.34
+          "current_price": 46.41
         },
         "JPM": {
           "shares": 8,
           "avg_cost": 309.545,
-          "current_price": 309.545
+          "current_price": 307.44
         },
         "BAC": {
           "shares": 33,
           "avg_cost": 52.755,
-          "current_price": 52.755
+          "current_price": 52.225
         }
       },
       "rank": 12
+    },
+    {
+      "bot_id": "scrooge",
+      "display_name": "Scrooge",
+      "avatar": "\ud83d\udcb0",
+      "bio": "Every penny counts. Dividend hoarder extraordinaire.",
+      "strategy": "Maximum dividend yield accumulation - gold & income forever",
+      "risk_level": "VERY LOW",
+      "risk_bar": 1,
+      "color": "#ca8a04",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
+      "total_value": 9956.64,
+      "initial_capital": 10000,
+      "total_return_pct": -0.43,
+      "total_return_usd": -43.36,
+      "today_pnl": 24.06,
+      "today_pnl_pct": 0.24,
+      "total_trades": 2,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:27Z",
+      "cash": 6088.54,
+      "positions": {
+        "MO": {
+          "shares": 26,
+          "avg_cost": 74.55,
+          "current_price": 74.11
+        },
+        "OHI": {
+          "shares": 42,
+          "avg_cost": 46.98,
+          "current_price": 46.22
+        }
+      },
+      "rank": 13
     },
     {
       "bot_id": "patrick",
@@ -465,154 +536,44 @@
       "color": "#be185d",
       "model": "openrouter/ling",
       "fallback_model": "openrouter/minimax",
-      "total_value": 9985.66,
+      "total_value": 9950.3,
       "initial_capital": 10000,
-      "total_return_pct": -0.14,
-      "total_return_usd": -14.34,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
+      "total_return_pct": -0.5,
+      "total_return_usd": -49.7,
+      "today_pnl": -35.36,
+      "today_pnl_pct": -0.35,
       "total_trades": 5,
-      "last_action": "Fear-driven breadth creates selective entry points for high-margin prestige names while headline risks cap broad-market follow-through.",
-      "last_updated": "2026-05-04T13:32:44Z",
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:21Z",
       "cash": 1433.83,
       "positions": {
         "AAPL": {
           "shares": 5,
           "avg_cost": 280.15,
-          "current_price": 279.87
+          "current_price": 276.72
         },
         "EL": {
           "shares": 10,
           "avg_cost": 79.3,
-          "current_price": 79.09
+          "current_price": 81.515
         },
         "RL": {
           "shares": 8,
           "avg_cost": 362.21,
-          "current_price": 360.855
+          "current_price": 356.725
         },
         "TPR": {
           "shares": 15,
           "avg_cost": 141.8128,
-          "current_price": 141.8128
+          "current_price": 140.565
         },
         "AMZN": {
           "shares": 5,
           "avg_cost": 269.51,
-          "current_price": 269.51
-        }
-      },
-      "rank": 13
-    },
-    {
-      "bot_id": "thanos",
-      "display_name": "Thanos",
-      "avatar": "\ud83d\udc8e",
-      "bio": "Perfectly balanced, as all things should be.",
-      "strategy": "Equal-weight all 11 S&P sectors - obsessive rebalancing",
-      "risk_level": "LOW",
-      "risk_bar": 3,
-      "color": "#7e22ce",
-      "model": "openrouter/ling",
-      "fallback_model": "openrouter/nemotron",
-      "total_value": 9985.97,
-      "initial_capital": 10000,
-      "total_return_pct": -0.14,
-      "total_return_usd": -14.03,
-      "today_pnl": -0.01,
-      "today_pnl_pct": -0.0,
-      "total_trades": 9,
-      "last_action": "Fear-driven dislocations across staples, utilities and finance create a chance to rebalance toward equal sector weights while preserving cash.",
-      "last_updated": "2026-05-04T13:32:57Z",
-      "cash": 5011.73,
-      "positions": {
-        "XLE": {
-          "shares": 12,
-          "avg_cost": 58.84,
-          "current_price": 58.93
-        },
-        "XLI": {
-          "shares": 4,
-          "avg_cost": 172.94,
-          "current_price": 172.26
-        },
-        "XLU": {
-          "shares": 20,
-          "current_price": 46.34,
-          "avg_cost": 46.4825
-        },
-        "XLV": {
-          "shares": 7,
-          "avg_cost": 145.16,
-          "current_price": 144.37
-        },
-        "XLF": {
-          "shares": 17,
-          "current_price": 51.715,
-          "avg_cost": 51.8738
-        },
-        "TLT": {
-          "shares": 5,
-          "avg_cost": 85.6,
-          "current_price": 85.34
-        },
-        "XLP": {
-          "shares": 4,
-          "avg_cost": 83.7,
-          "current_price": 83.7
+          "current_price": 271.09
         }
       },
       "rank": 14
-    },
-    {
-      "bot_id": "donald",
-      "display_name": "Donald",
-      "avatar": "\ud83e\udd85",
-      "bio": "America First. Tariffs, defense, drill baby drill.",
-      "strategy": "US defense, energy, steel & tariff beneficiaries",
-      "risk_level": "MED",
-      "risk_bar": 6,
-      "color": "#ef4444",
-      "model": "openrouter/minimax",
-      "fallback_model": "openrouter/ling",
-      "total_value": 9975.82,
-      "initial_capital": 10000,
-      "total_return_pct": -0.24,
-      "total_return_usd": -24.18,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 5,
-      "last_action": "Analysis unavailable",
-      "last_updated": "2026-05-04T13:31:18Z",
-      "cash": 524.55,
-      "positions": {
-        "LMT": {
-          "shares": 5,
-          "avg_cost": 512.66,
-          "current_price": 512.37
-        },
-        "NOC": {
-          "shares": 5,
-          "avg_cost": 568.25,
-          "current_price": 566.38
-        },
-        "XOM": {
-          "shares": 5,
-          "avg_cost": 152.79,
-          "current_price": 152.135
-        },
-        "RTX": {
-          "shares": 10,
-          "avg_cost": 174.05,
-          "current_price": 174.1499
-        },
-        "LHX": {
-          "shares": 5,
-          "avg_cost": 313.29,
-          "current_price": 311.0701
-        }
-      },
-      "rank": 15
     },
     {
       "bot_id": "ray",
@@ -625,31 +586,71 @@
       "color": "#f59e0b",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/minimax",
-      "total_value": 9973.42,
+      "total_value": 9946.65,
       "initial_capital": 10000,
-      "total_return_pct": -0.27,
-      "total_return_usd": -26.58,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
+      "total_return_pct": -0.53,
+      "total_return_usd": -53.35,
+      "today_pnl": -26.77,
+      "today_pnl_pct": -0.27,
       "total_trades": 3,
-      "last_action": "Fear dominates (40) with recession headlines, VIX normal at 17.8, but my TLT position is slightly overweight at 19.6% and gold/commodities are down today\u2014I'll hold cash for better entry points.",
-      "last_updated": "2026-05-04T13:32:35Z",
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:02:05Z",
       "cash": 4896.66,
       "positions": {
         "TLT": {
           "shares": 23,
           "avg_cost": 85.6,
-          "current_price": 85.34
+          "current_price": 84.95
         },
         "GLD": {
           "shares": 4,
           "avg_cost": 423.3,
-          "current_price": 418.55
+          "current_price": 415.3
         },
         "SPY": {
           "shares": 2,
           "avg_cost": 720.67,
-          "current_price": 719.87
+          "current_price": 717.47
+        }
+      },
+      "rank": 15
+    },
+    {
+      "bot_id": "elon",
+      "display_name": "Elon",
+      "avatar": "\ud83d\ude80",
+      "bio": "High-risk tech visionary. Goes big or goes home.",
+      "strategy": "Aggressive momentum trading in tech, EV & AI",
+      "risk_level": "HIGH",
+      "risk_bar": 9,
+      "color": "#f97316",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
+      "total_value": 9945.34,
+      "initial_capital": 10000,
+      "total_return_pct": -0.55,
+      "total_return_usd": -54.66,
+      "today_pnl": -68.28,
+      "today_pnl_pct": -0.68,
+      "total_trades": 5,
+      "last_action": "Market in Fear (40) with tech selloff, but existing positions at max allocation limits prevent buying the dip right now.",
+      "last_updated": "2026-05-04T16:02:40Z",
+      "cash": 2648.44,
+      "positions": {
+        "AAPL": {
+          "shares": 12,
+          "current_price": 276.72,
+          "avg_cost": 280.15
+        },
+        "PLTR": {
+          "shares": 6,
+          "avg_cost": 144.0799,
+          "current_price": 146.35
+        },
+        "TSLA": {
+          "shares": 8,
+          "current_price": 387.27,
+          "avg_cost": 390.66
         }
       },
       "rank": 16
@@ -665,39 +666,84 @@
       "color": "#1d4ed8",
       "model": "openrouter/minimax",
       "fallback_model": "openrouter/ling",
-      "total_value": 9971.33,
+      "total_value": 9907.08,
       "initial_capital": 10000,
-      "total_return_pct": -0.29,
-      "total_return_usd": -28.67,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 4,
-      "last_action": "Fearful market (40) with bank selloff presents opportunity - the panic is overblown, American financial institutions remain fundamentally strong",
-      "last_updated": "2026-05-04T13:32:20Z",
-      "cash": 2163.56,
+      "total_return_pct": -0.93,
+      "total_return_usd": -92.92,
+      "today_pnl": -64.25,
+      "today_pnl_pct": -0.64,
+      "total_trades": 5,
+      "last_action": "Banks are getting hammered today on broader market fear, but the fundamentals remain rock-solid and this is exactly when you accumulate quality financial institutions.",
+      "last_updated": "2026-05-04T16:02:59Z",
+      "cash": 1258.47,
       "positions": {
         "WFC": {
           "shares": 30,
           "avg_cost": 80.81,
-          "current_price": 80.575
+          "current_price": 79.7501
         },
         "BAC": {
           "shares": 46,
           "avg_cost": 53.225,
-          "current_price": 52.755
+          "current_price": 52.225
         },
         "JPM": {
           "shares": 8,
           "avg_cost": 309.545,
-          "current_price": 309.545
+          "current_price": 307.44
         },
         "PRU": {
           "shares": 5,
           "avg_cost": 97.485,
-          "current_price": 97.485
+          "current_price": 97.83
+        },
+        "GS": {
+          "shares": 1,
+          "avg_cost": 905.09,
+          "current_price": 905.09
         }
       },
       "rank": 17
+    },
+    {
+      "bot_id": "tony",
+      "display_name": "Tony",
+      "avatar": "\u26a1",
+      "bio": "Genius, billionaire, leveraged tech trader. TQQQ or bust.",
+      "strategy": "3x leveraged tech ETFs + AI + defense tech + robotics",
+      "risk_level": "VERY HIGH",
+      "risk_bar": 10,
+      "color": "#dc2626",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/nemotron",
+      "total_value": 9901.95,
+      "initial_capital": 10000,
+      "total_return_pct": -0.98,
+      "total_return_usd": -98.05,
+      "today_pnl": -211.78,
+      "today_pnl_pct": -2.09,
+      "total_trades": 6,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:01Z",
+      "cash": 336.56,
+      "positions": {
+        "TQQQ": {
+          "shares": 57,
+          "current_price": 64.585,
+          "avg_cost": 65.31
+        },
+        "SOXL": {
+          "shares": 29,
+          "current_price": 127.2,
+          "avg_cost": 130.33
+        },
+        "PLTR": {
+          "shares": 15,
+          "current_price": 146.35,
+          "avg_cost": 144.0799
+        }
+      },
+      "rank": 18
     },
     {
       "bot_id": "george",
@@ -710,61 +756,26 @@
       "color": "#06b6d4",
       "model": "openrouter/ling",
       "fallback_model": "openrouter/minimax",
-      "total_value": 9932.67,
+      "total_value": 9874.3,
       "initial_capital": 10000,
-      "total_return_pct": -0.67,
-      "total_return_usd": -67.33,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
+      "total_return_pct": -1.26,
+      "total_return_usd": -125.7,
+      "today_pnl": -58.37,
+      "today_pnl_pct": -0.59,
       "total_trades": 2,
-      "last_action": "Near-term relief rally in China EM names can extend via reflexivity, but geopolitics and rate sensitivity keep structural skew toward gold/bonds on any VIX spike above 20.",
-      "last_updated": "2026-05-04T13:31:23Z",
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:02:26Z",
       "cash": 378.9,
       "positions": {
         "GLD": {
           "shares": 11,
           "avg_cost": 423.3,
-          "current_price": 418.55
+          "current_price": 415.3
         },
         "TLT": {
           "shares": 58,
           "avg_cost": 85.6,
-          "current_price": 85.34
-        }
-      },
-      "rank": 18
-    },
-    {
-      "bot_id": "scrooge",
-      "display_name": "Scrooge",
-      "avatar": "\ud83d\udcb0",
-      "bio": "Every penny counts. Dividend hoarder extraordinaire.",
-      "strategy": "Maximum dividend yield accumulation - gold & income forever",
-      "risk_level": "VERY LOW",
-      "risk_bar": 1,
-      "color": "#ca8a04",
-      "model": "openrouter/minimax",
-      "fallback_model": "openrouter/ling",
-      "total_value": 9932.58,
-      "initial_capital": 10000,
-      "total_return_pct": -0.67,
-      "total_return_usd": -67.42,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
-      "total_trades": 2,
-      "last_action": "Analysis unavailable",
-      "last_updated": "2026-05-04T13:33:05Z",
-      "cash": 6088.54,
-      "positions": {
-        "MO": {
-          "shares": 26,
-          "avg_cost": 74.55,
-          "current_price": 73.54
-        },
-        "OHI": {
-          "shares": 42,
-          "avg_cost": 46.98,
-          "current_price": 46.0
+          "current_price": 84.95
         }
       },
       "rank": 19
@@ -780,36 +791,36 @@
       "color": "#7c3aed",
       "model": "openrouter/ling",
       "fallback_model": "openrouter/minimax",
-      "total_value": 9868.44,
+      "total_value": 9758.29,
       "initial_capital": 10000,
-      "total_return_pct": -1.32,
-      "total_return_usd": -131.56,
-      "today_pnl": 0.0,
-      "today_pnl_pct": 0.0,
+      "total_return_pct": -2.42,
+      "total_return_usd": -241.71,
+      "today_pnl": -110.15,
+      "today_pnl_pct": -1.12,
       "total_trades": 4,
-      "last_action": "The market is in full momentum mode with meme stocks and crypto plays ripping higher, and we're riding the parabolic wave to massive gains.",
-      "last_updated": "2026-05-04T13:32:40Z",
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-04T16:03:19Z",
       "cash": 201.17,
       "positions": {
         "RIOT": {
           "shares": 59,
           "avg_cost": 18.5,
-          "current_price": 18.795
+          "current_price": 18.545
         },
         "MSTR": {
           "shares": 23,
           "avg_cost": 177.28,
-          "current_price": 180.87
+          "current_price": 183.62
         },
         "GME": {
           "shares": 169,
           "avg_cost": 26.52,
-          "current_price": 25.15
+          "current_price": 24.22
         },
         "AMC": {
           "shares": 99,
           "avg_cost": 1.495,
-          "current_price": 1.495
+          "current_price": 1.48
         }
       },
       "rank": 20

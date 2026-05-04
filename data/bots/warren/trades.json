@@ -1,3 +1,22 @@
 {
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "PG",
+      "shares": 17,
+      "price": 144.57,
+      "total_value": 2457.69,
+      "reasoning": "Procter & Gamble, a consumer staples powerhouse with pricing power and strong moat, is down 1.81% today presenting a fair entry point for a quality business.",
+      "timestamp": "2026-05-04T16:05:38Z",
+      "market_outlook": "Fear & Greed at 40 indicates oversold conditions for quality names, creating opportunities to deploy cash into strong franchises at better prices.",
+      "signal_context": {
+        "fg_value": 40,
+        "fg_label": "Fear",
+        "sp500_chg": -0.47,
+        "vix": 18.42,
+        "ticker_chg_pct": -1.81,
+        "trigger_news": "UAE says it intercepted Iranian missiles for first time since ceasefire began"
+      }
+    }
+  ]
 }
