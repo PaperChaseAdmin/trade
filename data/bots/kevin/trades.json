@@ -1,3 +1,40 @@
 {
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "O",
+      "shares": 31,
+      "price": 63.38,
+      "total_value": 1964.78,
+      "reasoning": "REIT king with 5.2% yield, down 0.67% today \u2014 Fear market = opportunity to load up on reliable monthly dividend payer",
+      "timestamp": "2026-05-04T13:32:56Z",
+      "market_outlook": "Fear conditions (40) with many dividend stocks down \u2014 excellent opportunity to deploy cash into quality yielders",
+      "signal_context": {
+        "fg_value": 40,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 17.81,
+        "ticker_chg_pct": -0.67,
+        "trigger_news": "U.S. military denies Iran's claim it struck U.S. warship in Strait of Hormuz"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "T",
+      "shares": 76,
+      "price": 26.0,
+      "total_value": 1976.0,
+      "reasoning": "Classic Kevin play \u2014 6.7% yield, telecom giant, down 0.42% today, perfect for passive income machine",
+      "timestamp": "2026-05-04T13:32:56Z",
+      "market_outlook": "Fear conditions (40) with many dividend stocks down \u2014 excellent opportunity to deploy cash into quality yielders",
+      "signal_context": {
+        "fg_value": 40,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 17.81,
+        "ticker_chg_pct": -0.42,
+        "trigger_news": "U.S. military denies Iran's claim it struck U.S. warship in Strait of Hormuz"
+      }
+    }
+  ]
 }

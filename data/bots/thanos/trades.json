@@ -107,6 +107,60 @@
         "ticker_chg_pct": 0.36,
         "trigger_news": "Netflix\u2019s 'Beef' highlights a $5,000 deductible \u2014 how to handle your own healthcare costs"
       }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLF",
+      "shares": 5,
+      "price": 51.715,
+      "total_value": 258.58,
+      "reasoning": "XLF (-0.31%) is underweight in the portfolio and priced at $51.715, allowing a buy of 5 shares (~$258.58) to move closer to equal sector balance without exceeding 12%.",
+      "timestamp": "2026-05-04T13:32:57Z",
+      "market_outlook": "Fear-driven dislocations across staples, utilities and finance create a chance to rebalance toward equal sector weights while preserving cash.",
+      "signal_context": {
+        "fg_value": 40,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 17.81,
+        "ticker_chg_pct": -0.31,
+        "trigger_news": "U.S. military denies Iran's claim it struck U.S. warship in Strait of Hormuz"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLP",
+      "shares": 4,
+      "price": 83.7,
+      "total_value": 334.8,
+      "reasoning": "XLP (-0.6%) is missing from holdings and at $83.70, 4 shares (~$334.80) add defensive staples exposure to restore balance across all 11 S&P sectors.",
+      "timestamp": "2026-05-04T13:32:57Z",
+      "market_outlook": "Fear-driven dislocations across staples, utilities and finance create a chance to rebalance toward equal sector weights while preserving cash.",
+      "signal_context": {
+        "fg_value": 40,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 17.81,
+        "ticker_chg_pct": -0.56,
+        "trigger_news": "U.S. military denies Iran's claim it struck U.S. warship in Strait of Hormuz"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLU",
+      "shares": 5,
+      "price": 46.34,
+      "total_value": 231.7,
+      "reasoning": "XLU (-0.49%) is underweight; adding 5 shares at $46.34 (~$231.70) rebalances utilities toward equal weighting with other sectors.",
+      "timestamp": "2026-05-04T13:32:57Z",
+      "market_outlook": "Fear-driven dislocations across staples, utilities and finance create a chance to rebalance toward equal sector weights while preserving cash.",
+      "signal_context": {
+        "fg_value": 40,
+        "fg_label": "Fear",
+        "sp500_chg": 0.29,
+        "vix": 17.81,
+        "ticker_chg_pct": -0.49,
+        "trigger_news": "U.S. military denies Iran's claim it struck U.S. warship in Strait of Hormuz"
+      }
     }
   ]
 }
