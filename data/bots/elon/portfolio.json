@@ -1,74 +1,72 @@
 {
   "cash": 2648.44,
-  "total_value": 9991.55,
+  "total_value": 10007.2,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 282.805,
+      "current_price": 283.54,
       "avg_cost": 280.15
     },
     "PLTR": {
       "shares": 6,
       "avg_cost": 144.0799,
-      "current_price": 135.575
+      "current_price": 136.24
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 392.0,
+      "current_price": 392.355,
       "avg_cost": 390.66
     }
   },
-  "total_return_pct": -0.08,
+  "total_return_pct": 0.07,
   "total_return_usd": 0.0,
-  "today_pnl": 2.35,
-  "today_pnl_pct": 0.02,
+  "today_pnl": 18.0,
+  "today_pnl_pct": 0.18,
   "total_trades": 5,
   "today_start_value": 9989.2,
   "today_date": "2026-05-05",
-  "last_action": "Neutral Fear & Greed (50) with low VIX (17.39) suggests choppy consolidation - no compelling catalyst to force action today.",
-  "last_updated": "2026-05-05T17:32:31Z",
+  "last_action": "Neutral market (F&G 50) with low VIX and mixed tech action - holding steady rather than forcing trades.",
+  "last_updated": "2026-05-05T18:27:28Z",
   "last_session": {
-    "at": "2026-05-05T17:32:31Z",
+    "at": "2026-05-05T18:27:28Z",
     "fear_greed": 50,
     "fear_greed_label": "Neutral",
-    "sp500_change": 0.82,
-    "vix": 17.39,
+    "sp500_change": 0.87,
+    "vix": 17.24,
     "top_movers": [
       [
         "PLTR",
-        -7.11
+        -6.7
       ],
       [
         "RBLX",
-        -5.53
-      ],
-      [
-        "COIN",
-        -4.1
+        -6.01
       ],
       [
         "AMD",
-        3.94
+        4.59
       ],
       [
-        "AAPL",
-        2.15
+        "COIN",
+        -3.7
       ],
       [
         "IONQ",
-        1.97
+        3.14
+      ],
+      [
+        "AAPL",
+        2.41
       ]
     ],
     "news_read": [
       "Intel soars 14% on report of Apple chip talks, hits new all-time high",
       "Trump admin moves further into AI oversight, will test Google, Microsoft and xAI models",
-      "Here\u2019s how I turned my kids into \u2018thousandaires\u2019 managing their own money by their 18th birthdays",
-      "From bitcoin mining to the Hill: AIP\u2019s new fellow brings hands-on crypto experience to D.C.",
       "Microsoft Xbox CEO overhauls leadership amid sinking sales: 'We need to evolve how we work'"
     ],
     "domain_extra": "",
-    "ai_analysis": "PLTR's 7.1% dip caught my eye as a potential dip-buy setup, but at 50 (neutral) we're not at the extreme fear (<25) threshold that screams 'buy the dip' for my aggressive style. My positions are already concentrated with TSLA (31.4%) and AAPL (33.9%) near my 35% max - adding more capital to existing winners or the PLTR loser would overweight concentration. AMD +3.9% and IONQ +2.0% are rallying but chasing momentum in a neutral market isn't my play. Holding cash preserves optionality for the next fear spike or breakout.",
-    "outlook": "Neutral Fear & Greed (50) with low VIX (17.39) suggests choppy consolidation - no compelling catalyst to force action today.",
+    "ai_analysis": "AAPL is already at 34% portfolio weight (right at my 35% max) so can't add there despite strong 2.4% move. PLTR down 6.7% is tempting but it's already a losing position and I'd be doubling down on weakness - better to wait for stabilization. TSLA is my other big position at 31%. With $2,648 cash and needing $500 reserve, I only have $2,148 deployable but no clear high-conviction setup today. Watching AMD and IONQ for continued AI momentum but prefer to see more data before entering new positions.",
+    "outlook": "Neutral market (F&G 50) with low VIX and mixed tech action - holding steady rather than forcing trades.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -111,6 +109,10 @@
     {
       "timestamp": "2026-05-05T17:32:31Z",
       "value": 9991.55
+    },
+    {
+      "timestamp": "2026-05-05T18:27:28Z",
+      "value": 10007.2
     }
   ]
 }
