@@ -1,39 +1,74 @@
 {
-  "cash": 378.9,
-  "total_value": 9865.63,
+  "cash": 313.38,
+  "total_value": 9947.23,
   "positions": {
     "GLD": {
       "shares": 11,
       "avg_cost": 423.3,
-      "current_price": 414.67
+      "current_price": 419.98
     },
     "TLT": {
       "shares": 58,
       "avg_cost": 85.6,
-      "current_price": 84.92
+      "current_price": 85.32
+    },
+    "EEM": {
+      "shares": 1,
+      "avg_cost": 65.515,
+      "current_price": 65.515
     }
   },
-  "total_return_pct": -1.34,
+  "total_return_pct": -0.53,
   "total_return_usd": 0.0,
-  "today_pnl": -67.04,
-  "today_pnl_pct": -0.67,
-  "total_trades": 2,
-  "today_start_value": 9932.67,
-  "today_date": "2026-05-04",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-04T19:02:43Z",
+  "today_pnl": -0.01,
+  "today_pnl_pct": -0.0,
+  "total_trades": 3,
+  "today_start_value": 9947.24,
+  "today_date": "2026-05-05",
+  "last_action": "Neutral-to-risk-on with a fragile veneer: a dollar-weak, VIX-calm backdrop invites a reflexive chase into growth and EM, yet macro undercurrents (DOW -1.13%) leave markets prone to a sudden repricing ",
+  "last_updated": "2026-05-05T15:44:34Z",
   "last_session": {
-    "at": "2026-05-04T19:02:43Z",
-    "fear_greed": 40,
-    "fear_greed_label": "Fear",
-    "sp500_change": -0.46,
-    "vix": 18.42,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "at": "2026-05-05T15:44:34Z",
+    "fear_greed": 50,
+    "fear_greed_label": "Neutral",
+    "sp500_change": -0.41,
+    "vix": 17.51,
+    "top_movers": [
+      [
+        "EEM",
+        2.19
+      ],
+      [
+        "BAC",
+        1.89
+      ],
+      [
+        "AMZN",
+        1.45
+      ],
+      [
+        "QQQ",
+        1.28
+      ],
+      [
+        "GLD",
+        1.27
+      ],
+      [
+        "META",
+        -1.0
+      ]
+    ],
+    "news_read": [
+      "Ford\u2019s secret EV unit emerges from shadows, still bullish on new pickup amid market slowdown",
+      "Hegseth says 'the ceasefire is not over' after U.S., Iran exchange fire",
+      "Ferrari tops Wall Street's first-quarter expectations ahead of EV debut",
+      "Major health insurers show signs of recovery \u2013 but a key test looms"
+    ],
+    "domain_extra": "MACRO: NASDAQ -0.19%  DOW -1.13%  VIX 17.5 (NORMAL)",
+    "ai_analysis": "I noted TSLA\u2019s muted decline despite QQQ/AMZN strength and VIX at 17.5, signaling short covering potential; EEM\u2019s outsized gain plus dollar softness suggests capital is rotating into EM beta where momentum can become self-reinforcing. I acted to concentrate size where dislocation is widest while holding >$300 cash. Next I\u2019m watching whether SPY holds 723 and whether TLT/GLD hold bids to confirm if risk appetite sustains or if duration/gold reasserts as systemic hedge.",
+    "outlook": "Neutral-to-risk-on with a fragile veneer: a dollar-weak, VIX-calm backdrop invites a reflexive chase into growth and EM, yet macro undercurrents (DOW -1.13%) leave markets prone to a sudden repricing if sentiment cracks.",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -63,6 +98,10 @@
     {
       "timestamp": "2026-05-04T19:02:43Z",
       "value": 9865.63
+    },
+    {
+      "timestamp": "2026-05-05T15:44:34Z",
+      "value": 9947.23
     }
   ]
 }
