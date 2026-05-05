@@ -215,6 +215,60 @@
         "ticker_chg_pct": -0.54,
         "trigger_news": "Ford\u2019s secret EV unit emerges from shadows, still bullish on new pickup amid market slowdown"
       }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLK",
+      "shares": 2,
+      "price": 165.89,
+      "total_value": 331.78,
+      "reasoning": "XLK is missing from the portfolio and up 2.37% today, but balance requires all 11 S&P sectors plus GLD/TLT; a modest 2-share add keeps allocation near 12% while freeing room to later trim overweights.",
+      "timestamp": "2026-05-05T17:33:45Z",
+      "market_outlook": "Neutral-to-balanced drift as sector leadership rotates but breadth remains constructive, favoring steady rebalancing over chasing outliers.",
+      "signal_context": {
+        "fg_value": 50,
+        "fg_label": "Neutral",
+        "sp500_chg": 0.82,
+        "vix": 17.39,
+        "ticker_chg_pct": 2.37,
+        "trigger_news": "Intel soars 14% on report of Apple chip talks, hits new all-time high"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLY",
+      "shares": 4,
+      "price": 118.33,
+      "total_value": 473.32,
+      "reasoning": "XLY is missing from the portfolio and showing positive momentum at +0.52%, so adding 4 shares restores sector balance without exceeding the 12% cap.",
+      "timestamp": "2026-05-05T17:33:45Z",
+      "market_outlook": "Neutral-to-balanced drift as sector leadership rotates but breadth remains constructive, favoring steady rebalancing over chasing outliers.",
+      "signal_context": {
+        "fg_value": 50,
+        "fg_label": "Neutral",
+        "sp500_chg": 0.82,
+        "vix": 17.39,
+        "ticker_chg_pct": 0.52,
+        "trigger_news": "Intel soars 14% on report of Apple chip talks, hits new all-time high"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "GLD",
+      "shares": 2,
+      "price": 418.285,
+      "total_value": 836.57,
+      "reasoning": "GLD is absent and up 0.86% today; adding 2 shares introduces the gold buffer essential for universal balance while staying within limits.",
+      "timestamp": "2026-05-05T17:33:45Z",
+      "market_outlook": "Neutral-to-balanced drift as sector leadership rotates but breadth remains constructive, favoring steady rebalancing over chasing outliers.",
+      "signal_context": {
+        "fg_value": 50,
+        "fg_label": "Neutral",
+        "sp500_chg": 0.82,
+        "vix": 17.39,
+        "ticker_chg_pct": 0.86,
+        "trigger_news": "Intel soars 14% on report of Apple chip talks, hits new all-time high"
+      }
     }
   ]
 }

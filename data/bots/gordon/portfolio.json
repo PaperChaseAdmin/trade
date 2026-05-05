@@ -1,48 +1,78 @@
 {
   "cash": 6557.75,
-  "total_value": 10100.0,
+  "total_value": 10098.85,
   "positions": {
     "DIS": {
       "shares": 10,
       "avg_cost": 103.09,
-      "current_price": 100.49
+      "current_price": 100.78
     },
     "NKE": {
       "shares": 20,
       "avg_cost": 43.345,
-      "current_price": 43.0651
+      "current_price": 42.865
     },
     "INTC": {
       "shares": 10,
       "avg_cost": 96.92,
-      "current_price": 108.8299
+      "current_price": 108.925
     },
     "F": {
       "shares": 50,
       "avg_cost": 11.505,
-      "current_price": 11.755
+      "current_price": 11.735
     }
   },
-  "total_return_pct": 1.0,
+  "total_return_pct": 0.99,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -1.15,
+  "today_pnl_pct": -0.01,
   "total_trades": 4,
   "today_start_value": 10100.0,
   "today_date": "2026-05-05",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-05T15:45:41Z",
+  "last_action": "Neutral market with VIX at 17.39 - no compelling entry points on my watchlist today, PYPL's 10% drop isn't enough to meet my 40%+ beaten-down threshold.",
+  "last_updated": "2026-05-05T17:33:38Z",
   "last_session": {
-    "at": "2026-05-05T15:45:41Z",
+    "at": "2026-05-05T17:33:38Z",
     "fear_greed": 50,
     "fear_greed_label": "Neutral",
-    "sp500_change": -0.41,
-    "vix": 17.51,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.82,
+    "vix": 17.39,
+    "top_movers": [
+      [
+        "INTC",
+        13.73
+      ],
+      [
+        "PYPL",
+        -9.71
+      ],
+      [
+        "NOK",
+        3.39
+      ],
+      [
+        "CMCSA",
+        -2.57
+      ],
+      [
+        "F",
+        2.04
+      ],
+      [
+        "CVS",
+        -1.39
+      ]
+    ],
+    "news_read": [
+      "Microsoft Xbox CEO overhauls leadership amid sinking sales: 'We need to evolve how we work'",
+      "After Coinbase, prediction market traders forecast more tech layoffs ahead",
+      "Ripple CEO Brad Garlinghouse says Clarity better than chaos as Senate hits key moment",
+      "Intel soars 14% on report of Apple chip talks, hits new all-time high"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "INTC up 13.7% on Apple chip talks is my biggest winner but not a buy signal - I already have exposure. PYPL's 9.7% drop looks tempting but it's not at the 40%+ decline from highs that signals my entry point. CMCSA down 2.6% on cable weakness isn't compelling enough without a restructuring catalyst. Holding cash until a true value opportunity presents itself - I'm waiting for either a bigger pullback or a clear activist trigger like layoffs/CEO change.",
+    "outlook": "Neutral market with VIX at 17.39 - no compelling entry points on my watchlist today, PYPL's 10% drop isn't enough to meet my 40%+ beaten-down threshold.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -77,6 +107,10 @@
     {
       "timestamp": "2026-05-05T15:45:41Z",
       "value": 10100.0
+    },
+    {
+      "timestamp": "2026-05-05T17:33:38Z",
+      "value": 10098.85
     }
   ]
 }
