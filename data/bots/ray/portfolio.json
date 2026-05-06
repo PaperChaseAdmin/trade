@@ -1,48 +1,76 @@
 {
   "cash": 3912.06,
-  "total_value": 10059.22,
+  "total_value": 10061.76,
   "positions": {
     "TLT": {
       "shares": 23,
       "avg_cost": 85.6,
-      "current_price": 85.99
+      "current_price": 86.135
     },
     "GLD": {
       "shares": 4,
       "avg_cost": 423.3,
-      "current_price": 429.68
+      "current_price": 429.88
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 720.67,
-      "current_price": 730.71
+      "current_price": 731.79
     },
     "GSG": {
       "shares": 30,
       "avg_cost": 32.82,
-      "current_price": 32.975
+      "current_price": 32.85
     }
   },
-  "total_return_pct": 0.59,
+  "total_return_pct": 0.62,
   "total_return_usd": 0.0,
-  "today_pnl": 8.26,
-  "today_pnl_pct": 0.08,
+  "today_pnl": 10.8,
+  "today_pnl_pct": 0.11,
   "total_trades": 4,
   "today_start_value": 10050.96,
   "today_date": "2026-05-06",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-06T17:01:58Z",
+  "last_action": "Markets showing modest risk-on with equity indices up and VIX normal at 17.1, but fear sentiment persists at 46; holding current positions maintains balanced All Weather exposure.",
+  "last_updated": "2026-05-06T17:33:21Z",
   "last_session": {
-    "at": "2026-05-06T17:01:58Z",
+    "at": "2026-05-06T17:33:21Z",
     "fear_greed": 46,
     "fear_greed_label": "Fear",
-    "sp500_change": 1.08,
-    "vix": 17.23,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 1.12,
+    "vix": 17.14,
+    "top_movers": [
+      [
+        "TIPS",
+        -11.11
+      ],
+      [
+        "GDX",
+        6.79
+      ],
+      [
+        "GSG",
+        -3.98
+      ],
+      [
+        "PDBC",
+        -3.04
+      ],
+      [
+        "EEM",
+        2.82
+      ],
+      [
+        "IAU",
+        2.81
+      ]
+    ],
+    "news_read": [
+      "Crypto Long & Short: In quiet crypto markets, yield is the trade",
+      "AMD's Su explains what's behind massive forecast change as stock roars 15% on earnings"
+    ],
+    "domain_extra": "MACRO: NASDAQ +1.62%  DOW +0.98%  VIX 17.1 (NORMAL)",
+    "ai_analysis": "Noticed gold continuing its strength (GLD +2.78%, GDX +6.8%) while commodities weaken (GSG -4.0%) and TIPS plunge -11%, suggesting mixed inflation signals - not decisive enough to rebalance. Current allocation is well-distributed: TLT 19.7%, GLD 17.1%, SPY 14.5%, GSG 9.8%, cash 38.9%, leaving ample dry powder. Will watch for clearer macro signal on whether inflation or growth narrative wins out before deploying more capital.",
+    "outlook": "Markets showing modest risk-on with equity indices up and VIX normal at 17.1, but fear sentiment persists at 46; holding current positions maintains balanced All Weather exposure.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -121,6 +149,10 @@
     {
       "timestamp": "2026-05-06T17:01:58Z",
       "value": 10059.22
+    },
+    {
+      "timestamp": "2026-05-06T17:33:21Z",
+      "value": 10061.76
     }
   ]
 }
