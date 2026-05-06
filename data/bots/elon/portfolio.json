@@ -1,74 +1,79 @@
 {
-  "cash": 1825.7,
-  "total_value": 10038.14,
+  "cash": 849.58,
+  "total_value": 10017.77,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 286.17,
+      "current_price": 285.025,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 393.2004,
+      "current_price": 391.7401,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 8,
-      "current_price": 204.1,
+      "current_price": 204.7301,
       "avg_cost": 202.3338
+    },
+    "COIN": {
+      "shares": 5,
+      "avg_cost": 195.225,
+      "current_price": 195.225
     }
   },
-  "total_return_pct": 0.38,
+  "total_return_pct": 0.18,
   "total_return_usd": 0.0,
-  "today_pnl": 134.39,
-  "today_pnl_pct": 1.36,
-  "total_trades": 8,
+  "today_pnl": 114.02,
+  "today_pnl_pct": 1.15,
+  "total_trades": 9,
   "today_start_value": 9903.75,
   "today_date": "2026-05-06",
-  "last_action": "Bullish on tech with low VIX (17.21) and S&P +0.88%, Fear at 46 means there's still value to be had before greed takes over",
-  "last_updated": "2026-05-06T14:32:44Z",
+  "last_action": "Market showing healthy risk-on with S&P +1.14% and VIX low at 16.98, tech momentum strong with NVDA and AMD leading AI rally",
+  "last_updated": "2026-05-06T15:03:40Z",
   "last_session": {
-    "at": "2026-05-06T14:32:44Z",
+    "at": "2026-05-06T15:03:40Z",
     "fear_greed": 46,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.88,
-    "vix": 17.21,
+    "sp500_change": 1.14,
+    "vix": 16.98,
     "top_movers": [
       [
         "AMD",
-        14.12
-      ],
-      [
-        "NVDA",
-        3.94
+        14.94
       ],
       [
         "IONQ",
-        3.17
+        4.51
+      ],
+      [
+        "NVDA",
+        4.2
+      ],
+      [
+        "GOOGL",
+        2.51
       ],
       [
         "META",
-        1.5
+        2.1
       ],
       [
-        "MSTR",
-        -1.43
-      ],
-      [
-        "MSFT",
-        1.22
+        "COIN",
+        -1.34
       ]
     ],
     "news_read": [
+      "AMD's Su explains what's behind massive forecast change as stock roars 15% on earnings",
       "Nvidia, Corning partner on massive optical fiber deal that may be a game changer for AI",
       "Apple's R&D investments top 10% of sales as AI race creates 'sense of urgency'",
-      "NYSE tokenization partners warn synthetic stock tokens could mislead retail traders",
-      "OpenTrade raises $17 million to connect stablecoins to real-world assets",
-      "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+      "Nvidia\u2019s new deal with Corning validates one of the hottest AI trends out there",
+      "Trump says Iran will be bombed at a 'much higher level' if it doesn't agree to peace deal"
     ],
     "domain_extra": "",
-    "ai_analysis": "Noticed NVDA's strong momentum and AI-specific news catalyst while my position is undersized at only 3 shares; AMD's +14% is too late to chase but NVDA's move feels legitimate given the Corning partnership. Holding back on more aggressive bets because Fear & Greed isn't at extreme levels yet - want to preserve dry powder for true dip-buying opportunities. Next watching for any pullback in AI names or earnings surprises from my watchlist.",
-    "outlook": "Bullish on tech with low VIX (17.21) and S&P +0.88%, Fear at 46 means there's still value to be had before greed takes over",
+    "ai_analysis": "Noticed AMD up 15% is too late to chase, NVDA already in portfolio with solid 4.2% gain on Corning partnership news. COIN's small dip presents crypto exposure at better entry - keeping position small (5 shares = ~$976) to stay within 35% limit while maintaining $850 cash reserve. Watching AMD momentum and whether NVDA breakout continues.",
+    "outlook": "Market showing healthy risk-on with S&P +1.14% and VIX low at 16.98, tech momentum strong with NVDA and AMD leading AI rally",
     "trades_made": 1
   },
   "portfolio_history": [
@@ -131,6 +136,10 @@
     {
       "timestamp": "2026-05-06T14:32:44Z",
       "value": 10038.14
+    },
+    {
+      "timestamp": "2026-05-06T15:03:40Z",
+      "value": 10017.77
     }
   ]
 }

@@ -377,6 +377,42 @@
         "ticker_chg_pct": 0.55,
         "trigger_news": "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
       }
+    },
+    {
+      "action": "SELL",
+      "ticker": "XLI",
+      "shares": 2,
+      "price": 176.585,
+      "total_value": 353.17,
+      "reasoning": "Trim outperformer (+2.45% today, PNL +14.58) to fund underweight sectors and restore equal balance across all 11 S&P sectors plus GLD/TLT.",
+      "timestamp": "2026-05-06T15:03:53Z",
+      "market_outlook": "Near-term risk-on tilt persists, but geopolitical tension and Fear readings favor selective rebalancing into laggards while trimming winners to keep all sectors equally weighted.",
+      "signal_context": {
+        "fg_value": 46,
+        "fg_label": "Fear",
+        "sp500_chg": 1.14,
+        "vix": 16.98,
+        "ticker_chg_pct": 2.45,
+        "trigger_news": "Trump says Iran will be bombed at a 'much higher level' if it doesn't agree to peace deal"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLE",
+      "shares": 2,
+      "price": 57.235,
+      "total_value": 114.47,
+      "reasoning": "Add to laggard (-3.73% today, PNL -5.63) to rebalance energy exposure amid Middle East headlines and oversold condition.",
+      "timestamp": "2026-05-06T15:03:53Z",
+      "market_outlook": "Near-term risk-on tilt persists, but geopolitical tension and Fear readings favor selective rebalancing into laggards while trimming winners to keep all sectors equally weighted.",
+      "signal_context": {
+        "fg_value": 46,
+        "fg_label": "Fear",
+        "sp500_chg": 1.14,
+        "vix": 16.98,
+        "ticker_chg_pct": -3.73,
+        "trigger_news": "Trump says Iran will be bombed at a 'much higher level' if it doesn't agree to peace deal"
+      }
     }
   ]
 }
