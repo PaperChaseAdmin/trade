@@ -1,54 +1,89 @@
 {
-  "cash": 1206.14,
-  "total_value": 10138.77,
+  "cash": 1044.9,
+  "total_value": 10105.02,
   "positions": {
     "WFC": {
       "shares": 30,
       "avg_cost": 80.81,
-      "current_price": 81.24
+      "current_price": 80.82
     },
     "BAC": {
       "shares": 47,
-      "current_price": 54.08,
+      "current_price": 53.695,
       "avg_cost": 53.2059
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 309.545,
-      "current_price": 313.33
+      "current_price": 314.51
     },
     "PRU": {
       "shares": 5,
       "avg_cost": 97.485,
-      "current_price": 101.6875
+      "current_price": 100.17
     },
     "GS": {
       "shares": 1,
       "avg_cost": 905.09,
-      "current_price": 938.59
+      "current_price": 933.685
+    },
+    "MET": {
+      "shares": 2,
+      "avg_cost": 80.62,
+      "current_price": 80.62
     }
   },
-  "total_return_pct": 1.39,
+  "total_return_pct": 1.05,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
-  "total_trades": 6,
+  "today_pnl": -33.75,
+  "today_pnl_pct": -0.33,
+  "total_trades": 7,
   "today_start_value": 10138.77,
   "today_date": "2026-05-06",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-06T13:48:51Z",
+  "last_action": "Banks and financials are leading today's rally with rates appearing stable, supporting Jamie's view that American financial institutions remain strong despite market fear",
+  "last_updated": "2026-05-06T14:33:29Z",
   "last_session": {
-    "at": "2026-05-06T13:48:51Z",
+    "at": "2026-05-06T14:33:29Z",
     "fear_greed": 46,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.81,
-    "vix": 16.79,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.88,
+    "vix": 17.21,
+    "top_movers": [
+      [
+        "COF",
+        2.7
+      ],
+      [
+        "AXP",
+        2.44
+      ],
+      [
+        "MS",
+        1.84
+      ],
+      [
+        "JPM",
+        1.68
+      ],
+      [
+        "GS",
+        1.61
+      ],
+      [
+        "WFC",
+        1.18
+      ]
+    ],
+    "news_read": [
+      "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal",
+      "Uber and Disney are seeing the same remarkable dynamic in this economy. Both stocks are surging",
+      "Nvidia, Corning partner on massive optical fiber deal that may be a game changer for AI",
+      "Ken Griffin: Citadel expanding in Miami in response to NYC Mayor Mamdani's 'poor taste' tax video"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Noticed MET (Metlife) on watchlist at $80.62 down only 0.9% - good entry point for insurance exposure; COF and AXP are up too much today to chase. Holding all existing bank positions as they show solid gains (JPM +1.7%, GS +1.6%, BAC +1.1%). Will continue watching V and MA for better entry points to add payment network exposure.",
+    "outlook": "Banks and financials are leading today's rally with rates appearing stable, supporting Jamie's view that American financial institutions remain strong despite market fear",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -98,6 +133,10 @@
     {
       "timestamp": "2026-05-06T13:48:51Z",
       "value": 10138.77
+    },
+    {
+      "timestamp": "2026-05-06T14:33:29Z",
+      "value": 10105.02
     }
   ]
 }

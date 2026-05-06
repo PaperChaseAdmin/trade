@@ -323,6 +323,60 @@
         "ticker_chg_pct": 0.99,
         "trigger_news": "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
       }
+    },
+    {
+      "action": "SELL",
+      "ticker": "XLE",
+      "shares": 10,
+      "price": 57.13,
+      "total_value": 571.3,
+      "reasoning": "XLE is down 3.86% today and overweight relative to balance; trimming to reallocate into underperformers restores sector equilibrium.",
+      "timestamp": "2026-05-06T14:33:51Z",
+      "market_outlook": "Near-term risk-off tilt amid geopolitical noise keeps breadth narrow, but oversold sectors and sticky consumer/health resilience favor rebalancing over directional bets.",
+      "signal_context": {
+        "fg_value": 46,
+        "fg_label": "Fear",
+        "sp500_chg": 0.88,
+        "vix": 17.21,
+        "ticker_chg_pct": -3.86,
+        "trigger_news": "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLU",
+      "shares": 4,
+      "price": 45.98,
+      "total_value": 183.92,
+      "reasoning": "XLU is underweight and sitting at a modest 0.86% daily decline, offering a rebalancing entry to restore equal sector allocation.",
+      "timestamp": "2026-05-06T14:33:51Z",
+      "market_outlook": "Near-term risk-off tilt amid geopolitical noise keeps breadth narrow, but oversold sectors and sticky consumer/health resilience favor rebalancing over directional bets.",
+      "signal_context": {
+        "fg_value": 46,
+        "fg_label": "Fear",
+        "sp500_chg": 0.88,
+        "vix": 17.21,
+        "ticker_chg_pct": -0.86,
+        "trigger_news": "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLV",
+      "shares": 1,
+      "price": 146.11,
+      "total_value": 146.11,
+      "reasoning": "XLV is modestly underweight and stable (+0.55%), allowing a measured buy to balance defensive exposure without violating cash limits.",
+      "timestamp": "2026-05-06T14:33:51Z",
+      "market_outlook": "Near-term risk-off tilt amid geopolitical noise keeps breadth narrow, but oversold sectors and sticky consumer/health resilience favor rebalancing over directional bets.",
+      "signal_context": {
+        "fg_value": 46,
+        "fg_label": "Fear",
+        "sp500_chg": 0.88,
+        "vix": 17.21,
+        "ticker_chg_pct": 0.55,
+        "trigger_news": "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+      }
     }
   ]
 }
