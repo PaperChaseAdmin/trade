@@ -1,63 +1,92 @@
 {
   "cash": 517.76,
-  "total_value": 10219.01,
+  "total_value": 10258.0,
   "positions": {
     "DIS": {
       "shares": 10,
       "avg_cost": 103.09,
-      "current_price": 107.9599
+      "current_price": 107.94
     },
     "NKE": {
       "shares": 20,
       "avg_cost": 43.345,
-      "current_price": 43.545
+      "current_price": 43.76
     },
     "INTC": {
       "shares": 8,
       "avg_cost": 96.92,
-      "current_price": 111.01
+      "current_price": 112.7926
     },
     "F": {
       "shares": 50,
       "avg_cost": 11.505,
-      "current_price": 12.185
+      "current_price": 12.2327
     },
     "PYPL": {
       "shares": 20,
-      "current_price": 46.1275,
+      "current_price": 46.36,
       "avg_cost": 45.8903
     },
     "VFC": {
       "shares": 121,
       "avg_cost": 19.27,
-      "current_price": 19.225
+      "current_price": 19.31
     },
     "WBD": {
       "shares": 110,
       "avg_cost": 27.345,
-      "current_price": 27.315
+      "current_price": 27.345
     }
   },
-  "total_return_pct": 2.19,
+  "total_return_pct": 2.58,
   "total_return_usd": 0.0,
-  "today_pnl": -3.57,
-  "today_pnl_pct": -0.03,
+  "today_pnl": 35.42,
+  "today_pnl_pct": 0.35,
   "total_trades": 9,
   "today_start_value": 10222.58,
   "today_date": "2026-05-06",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-06T18:37:39Z",
+  "last_action": "Market showing strength (S&P +1.41%) but fear persists (F&G 46), limiting aggressive moves.",
+  "last_updated": "2026-05-06T19:37:25Z",
   "last_session": {
-    "at": "2026-05-06T18:37:39Z",
+    "at": "2026-05-06T19:37:25Z",
     "fear_greed": 46,
     "fear_greed_label": "Fear",
-    "sp500_change": 1.29,
-    "vix": 17.0,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 1.41,
+    "vix": 17.17,
+    "top_movers": [
+      [
+        "CVS",
+        7.76
+      ],
+      [
+        "DIS",
+        7.41
+      ],
+      [
+        "VFC",
+        5.4
+      ],
+      [
+        "F",
+        4.66
+      ],
+      [
+        "INTC",
+        4.35
+      ],
+      [
+        "BBWI",
+        4.24
+      ]
+    ],
+    "news_read": [
+      "Apollo CEO Rowan warns of market correction, slams \u2018egregious\u2019 practices at rival insurers",
+      "FanDuel CEO Amy Howe is out after five years at the sportsbook",
+      "Nvidia to invest up to $3.2 billion in Corning as part of massive optical fiber deal with 3 new factories focused on AI"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "My cash reserve sits at $517.76 - barely above the $500 minimum threshold - leaving only ~$17.76 for new purchases, making any meaningful position impossible. My existing activist targets are delivering: INTC up 4.3% today (+126.98 total), DIS up 7.4% (+48.50), VFC up 5.4%, and F up 4.7%. No reason to trim winners when the thesis (CEO changes, restructuring potential) remains intact. Watching CVS's 7.8% surge with interest - healthcare could be the next activist battleground if margins get squeezed.",
+    "outlook": "Market showing strength (S&P +1.41%) but fear persists (F&G 46), limiting aggressive moves.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -144,6 +173,10 @@
     {
       "timestamp": "2026-05-06T18:37:39Z",
       "value": 10219.01
+    },
+    {
+      "timestamp": "2026-05-06T19:37:25Z",
+      "value": 10258.0
     }
   ]
 }
