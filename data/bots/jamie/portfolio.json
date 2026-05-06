@@ -1,58 +1,87 @@
 {
   "cash": 1044.9,
-  "total_value": 10097.42,
+  "total_value": 10104.16,
   "positions": {
     "WFC": {
       "shares": 30,
       "avg_cost": 80.81,
-      "current_price": 80.64
+      "current_price": 80.71
     },
     "BAC": {
       "shares": 47,
-      "current_price": 53.6366,
+      "current_price": 53.56,
       "avg_cost": 53.2059
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 309.545,
-      "current_price": 314.68
+      "current_price": 315.18
     },
     "PRU": {
       "shares": 5,
       "avg_cost": 97.485,
-      "current_price": 99.71
+      "current_price": 100.11
     },
     "GS": {
       "shares": 1,
       "avg_cost": 905.09,
-      "current_price": 936.01
+      "current_price": 937.67
     },
     "MET": {
       "shares": 2,
       "avg_cost": 80.62,
-      "current_price": 80.1975
+      "current_price": 80.49
     }
   },
-  "total_return_pct": 0.97,
+  "total_return_pct": 1.04,
   "total_return_usd": 0.0,
-  "today_pnl": -41.35,
-  "today_pnl_pct": -0.41,
+  "today_pnl": -34.61,
+  "today_pnl_pct": -0.34,
   "total_trades": 7,
   "today_start_value": 10138.77,
   "today_date": "2026-05-06",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-06T17:32:15Z",
+  "last_action": "Markets showing healthy risk-on sentiment with S&P up 1.29% and VIX low at 17.0, but fear gauge still in fear territory at 46.",
+  "last_updated": "2026-05-06T18:36:05Z",
   "last_session": {
-    "at": "2026-05-06T17:32:15Z",
+    "at": "2026-05-06T18:36:05Z",
     "fear_greed": 46,
     "fear_greed_label": "Fear",
-    "sp500_change": 1.12,
-    "vix": 17.14,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 1.29,
+    "vix": 17.0,
+    "top_movers": [
+      [
+        "GS",
+        2.04
+      ],
+      [
+        "MS",
+        2.03
+      ],
+      [
+        "COF",
+        2.02
+      ],
+      [
+        "JPM",
+        1.87
+      ],
+      [
+        "AXP",
+        1.7
+      ],
+      [
+        "MA",
+        -1.14
+      ]
+    ],
+    "news_read": [
+      "Surging gas prices are hitting lower-income households harder, New York Fed study shows",
+      "Eric Trump takes shot at JPMorgan rethinking bitcoin after 'crapping' on asset",
+      "Nvidia to invest up to $3.2 billion in Corning as part of massive optical fiber deal with 3 new factories focused on AI"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "I noticed GS leading today with +2.0% and MS, COF also up strongly - my kind of stocks. However, I only have $44.90 of usable cash after maintaining the $1,000 reserve requirement, which isn't enough to buy even a single share of any watchlist item. My banking positions (BAC, JPM, GS, WFC) are all green today, so I'm content to hold and let them ride. I'm watching for a pullback in GS or MS to add more exposure to leading financial stocks.",
+    "outlook": "Markets showing healthy risk-on sentiment with S&P up 1.29% and VIX low at 17.0, but fear gauge still in fear territory at 46.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -131,6 +160,10 @@
     {
       "timestamp": "2026-05-06T17:32:15Z",
       "value": 10097.42
+    },
+    {
+      "timestamp": "2026-05-06T18:36:05Z",
+      "value": 10104.16
     }
   ]
 }
