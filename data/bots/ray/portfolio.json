@@ -1,43 +1,73 @@
 {
   "cash": 4896.66,
-  "total_value": 9985.78,
+  "total_value": 10050.96,
   "positions": {
     "TLT": {
       "shares": 23,
       "avg_cost": 85.6,
-      "current_price": 85.46
+      "current_price": 86.035
     },
     "GLD": {
       "shares": 4,
       "avg_cost": 423.3,
-      "current_price": 418.7199
+      "current_price": 429.8499
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 720.67,
-      "current_price": 724.33
+      "current_price": 728.05
     }
   },
-  "total_return_pct": -0.14,
+  "total_return_pct": 0.51,
   "total_return_usd": 0.0,
-  "today_pnl": 0.83,
-  "today_pnl_pct": 0.01,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 3,
-  "today_start_value": 9984.95,
-  "today_date": "2026-05-05",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-05T19:01:48Z",
+  "today_start_value": 10050.96,
+  "today_date": "2026-05-06",
+  "last_action": "Market showing mixed signals - equities up modestly (S&P +0.81%) but fear gauge at 46 with elevated gold prices (+2.77%) signaling defensive posture among investors",
+  "last_updated": "2026-05-06T13:32:59Z",
   "last_session": {
-    "at": "2026-05-05T19:01:48Z",
-    "fear_greed": 50,
-    "fear_greed_label": "Neutral",
-    "sp500_change": 0.92,
-    "vix": 17.29,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "at": "2026-05-06T13:32:59Z",
+    "fear_greed": 46,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.81,
+    "vix": 16.79,
+    "top_movers": [
+      [
+        "GDX",
+        5.83
+      ],
+      [
+        "GSG",
+        -3.38
+      ],
+      [
+        "IAU",
+        2.78
+      ],
+      [
+        "GLD",
+        2.77
+      ],
+      [
+        "PDBC",
+        -2.56
+      ],
+      [
+        "EEM",
+        2.03
+      ]
+    ],
+    "news_read": [
+      "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal",
+      "Uber and Disney are seeing the same remarkable dynamic in this economy. Both stocks are surging",
+      "Nvidia, Corning partner on massive optical fiber deal that may be a game changer for AI",
+      "Private payrolls rose by 109,000 in April, topping expectations, ADP says"
+    ],
+    "domain_extra": "MACRO: NASDAQ +1.03%  DOW +0.73%  VIX 16.8 (NORMAL)",
+    "ai_analysis": "Noticed gold and gold miners (GDX +5.83%) surging on inflation/geopolitical fears while commodities (GSG -3.38%) slipping - this divergence suggests uncertainty about economic outlook. Current TLT position at 19.8% is below the 20% cap, so adding 1 share brings it to 20.7% which is acceptable for a tactical increase. Holding cash at $4,810.63 maintains the $1,000 reserve requirement. Will continue monitoring VIX and gold prices for further rebalancing signals.",
+    "outlook": "Market showing mixed signals - equities up modestly (S&P +0.81%) but fear gauge at 46 with elevated gold prices (+2.77%) signaling defensive posture among investors",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -88,6 +118,10 @@
     {
       "timestamp": "2026-05-05T19:01:48Z",
       "value": 9985.78
+    },
+    {
+      "timestamp": "2026-05-06T13:32:59Z",
+      "value": 10050.96
     }
   ]
 }

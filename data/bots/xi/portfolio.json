@@ -1,54 +1,84 @@
 {
-  "cash": 1042.43,
-  "total_value": 10022.5,
+  "cash": 508.16,
+  "total_value": 10210.3,
   "positions": {
     "NIO": {
       "shares": 295,
-      "current_price": 5.945,
+      "current_price": 5.69,
       "avg_cost": 5.9487
     },
     "BABA": {
       "shares": 22,
-      "current_price": 133.1,
+      "current_price": 137.145,
       "avg_cost": 132.2559
     },
     "LI": {
-      "shares": 83,
-      "current_price": 17.812,
-      "avg_cost": 17.7803
+      "shares": 90,
+      "current_price": 17.31,
+      "avg_cost": 17.7437
     },
     "TME": {
       "shares": 60,
       "avg_cost": 9.26,
-      "current_price": 9.18
+      "current_price": 9.28
     },
     "BIDU": {
-      "shares": 18,
-      "avg_cost": 125.65,
-      "current_price": 126.05
+      "shares": 21,
+      "current_price": 137.7,
+      "avg_cost": 127.3714
     }
   },
-  "total_return_pct": 0.22,
+  "total_return_pct": 2.1,
   "total_return_usd": 0.0,
-  "today_pnl": -29.88,
-  "today_pnl_pct": -0.3,
-  "total_trades": 13,
-  "today_start_value": 10052.38,
-  "today_date": "2026-05-05",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-05T19:03:21Z",
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
+  "total_trades": 15,
+  "today_start_value": 10210.3,
+  "today_date": "2026-05-06",
+  "last_action": "Near-term noise from geopolitics and VIX at 16.79 is overshadowed by resilient Chinese PMI/retail data and policy support, favoring selective tech and EV exposure.",
+  "last_updated": "2026-05-06T13:33:25Z",
   "last_session": {
-    "at": "2026-05-05T19:03:21Z",
-    "fear_greed": 50,
-    "fear_greed_label": "Neutral",
-    "sp500_change": 0.92,
-    "vix": 17.29,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-05-06T13:33:25Z",
+    "fear_greed": 46,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.81,
+    "vix": 16.79,
+    "top_movers": [
+      [
+        "BIDU",
+        7.04
+      ],
+      [
+        "BABA",
+        3.89
+      ],
+      [
+        "FUTU",
+        3.56
+      ],
+      [
+        "NIO",
+        -3.39
+      ],
+      [
+        "LI",
+        -2.7
+      ],
+      [
+        "TIGR",
+        2.14
+      ]
+    ],
+    "news_read": [
+      "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal",
+      "Uber and Disney are seeing the same remarkable dynamic in this economy. Both stocks are surging",
+      "Nvidia, Corning partner on massive optical fiber deal that may be a game changer for AI",
+      "Private payrolls rose by 109,000 in April, topping expectations, ADP says"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "I noted BIDU\u2019s outsized gain (+7.04%) and TME/FUTU strength as signs of improving sentiment in Chinese internet, while NIO/LI weakness is tactical entry opportunities, not fundamental breaks. With Fear & Greed at 46 and US data steady, I acted on quality names where ADR flows discount short-term headlines, and I\u2019m watching tomorrow\u2019s Chinese property and stimulus headlines for further conviction.",
+    "outlook": "Near-term noise from geopolitics and VIX at 16.79 is overshadowed by resilient Chinese PMI/retail data and policy support, favoring selective tech and EV exposure.",
+    "trades_made": 2
   },
   "portfolio_history": [
     {
@@ -98,6 +128,10 @@
     {
       "timestamp": "2026-05-05T19:03:21Z",
       "value": 10022.5
+    },
+    {
+      "timestamp": "2026-05-06T13:33:25Z",
+      "value": 10210.3
     }
   ]
 }

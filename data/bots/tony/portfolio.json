@@ -1,44 +1,80 @@
 {
-  "cash": 336.56,
-  "total_value": 10466.73,
+  "cash": 304.57,
+  "total_value": 10790.32,
   "positions": {
     "TQQQ": {
       "shares": 57,
-      "current_price": 67.6501,
+      "current_price": 69.14,
       "avg_cost": 65.31
     },
     "SOXL": {
       "shares": 29,
-      "current_price": 146.34,
+      "current_price": 155.964,
       "avg_cost": 130.33
     },
     "PLTR": {
       "shares": 15,
-      "current_price": 135.35,
+      "current_price": 132.655,
       "avg_cost": 144.0799
+    },
+    "SMCI": {
+      "shares": 1,
+      "avg_cost": 31.99,
+      "current_price": 31.99
     }
   },
-  "total_return_pct": 4.67,
+  "total_return_pct": 7.9,
   "total_return_usd": 0.0,
-  "today_pnl": 32.82,
-  "today_pnl_pct": 0.31,
-  "total_trades": 6,
-  "today_start_value": 10433.91,
-  "today_date": "2026-05-05",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-05T19:02:12Z",
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
+  "total_trades": 7,
+  "today_start_value": 10790.32,
+  "today_date": "2026-05-06",
+  "last_action": "Fear at 46 is a flashing 'buy the dip' signal for leveraged AI semiconductors while macro defense tension keeps volatility cheap.",
+  "last_updated": "2026-05-06T13:32:07Z",
   "last_session": {
-    "at": "2026-05-05T19:02:12Z",
-    "fear_greed": 50,
-    "fear_greed_label": "Neutral",
-    "sp500_change": 0.92,
-    "vix": 17.29,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-05-06T13:32:07Z",
+    "fear_greed": 46,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.81,
+    "vix": 16.79,
+    "top_movers": [
+      [
+        "SMCI",
+        15.98
+      ],
+      [
+        "AMD",
+        14.56
+      ],
+      [
+        "ARM",
+        10.34
+      ],
+      [
+        "ANET",
+        -9.56
+      ],
+      [
+        "SOXL",
+        8.11
+      ],
+      [
+        "PLTR",
+        -2.86
+      ]
+    ],
+    "news_read": [
+      "Nvidia, Corning partner on massive optical fiber deal that may be a game changer for AI",
+      "AMD's stock soars 20% as data center growth pushes revenue and guidance past estimates",
+      "Apple's R&D investments top 10% of sales as AI race creates 'sense of urgency'",
+      "Why is AMD\u2019s stock up so much? \u2018The world has changed.\u2019",
+      "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "I noticed AMD\u2019s revenue beat and guidance reset the bar for data-center growth, SMCI\u2019s 16% gap on $31 prints massive short-covering fuel, and ARM\u2019s 10% pop aligns with Apple\u2019s R&D surge into on-device AI. I acted because these are concentrated, cutting-edge inflections that match my TQQQ/SOXL risk profile, while holding back on PLTR/ANET drawdowns and staying above the $300 cash reserve. Next I\u2019m watching Nvidia/Corning fiber catalyst, SOXL momentum, and any Iran headlines that could spike defense/comm volatility.",
+    "outlook": "Fear at 46 is a flashing 'buy the dip' signal for leveraged AI semiconductors while macro defense tension keeps volatility cheap.",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -88,6 +124,10 @@
     {
       "timestamp": "2026-05-05T19:02:12Z",
       "value": 10466.73
+    },
+    {
+      "timestamp": "2026-05-06T13:32:07Z",
+      "value": 10790.32
     }
   ]
 }

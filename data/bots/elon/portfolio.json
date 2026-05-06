@@ -1,44 +1,74 @@
 {
-  "cash": 2648.44,
-  "total_value": 9998.12,
+  "cash": 2846.2,
+  "total_value": 9903.75,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 283.77,
+      "current_price": 281.675,
       "avg_cost": 280.15
-    },
-    "PLTR": {
-      "shares": 6,
-      "avg_cost": 144.0799,
-      "current_price": 135.35
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 391.5425,
+      "current_price": 384.91,
       "avg_cost": 390.66
+    },
+    "NVDA": {
+      "shares": 3,
+      "avg_cost": 199.39,
+      "current_price": 199.39
     }
   },
-  "total_return_pct": -0.02,
+  "total_return_pct": -0.96,
   "total_return_usd": 0.0,
-  "today_pnl": 8.92,
-  "today_pnl_pct": 0.09,
-  "total_trades": 5,
-  "today_start_value": 9989.2,
-  "today_date": "2026-05-05",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-05T19:01:28Z",
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
+  "total_trades": 7,
+  "today_start_value": 9903.75,
+  "today_date": "2026-05-06",
+  "last_action": "Fear at 46 (not extreme) + low VIX + S&P up = opportunistic environment to buy AI leaders on any pullback",
+  "last_updated": "2026-05-06T13:32:02Z",
   "last_session": {
-    "at": "2026-05-05T19:01:28Z",
-    "fear_greed": 50,
-    "fear_greed_label": "Neutral",
-    "sp500_change": 0.92,
-    "vix": 17.29,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-05-06T13:32:02Z",
+    "fear_greed": 46,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.81,
+    "vix": 16.79,
+    "top_movers": [
+      [
+        "AMD",
+        14.56
+      ],
+      [
+        "PLTR",
+        -2.86
+      ],
+      [
+        "MSTR",
+        -2.04
+      ],
+      [
+        "IONQ",
+        1.97
+      ],
+      [
+        "COIN",
+        -1.85
+      ],
+      [
+        "GOOGL",
+        1.57
+      ]
+    ],
+    "news_read": [
+      "Nvidia, Corning partner on massive optical fiber deal that may be a game changer for AI",
+      "Apple's R&D investments top 10% of sales as AI race creates 'sense of urgency'",
+      "OpenTrade raises $17 million to connect stablecoins to real-world assets",
+      "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "PLTR is a 5% drag on portfolio and falling faster than market (-2.86% vs +0.81% S&P), so cutting losses and rotating to NVDA which has actual news catalyst. AAPL and TSLA are holding relatively well, keeping them. Watching AMD's +14.6% move - if it pulls back tomorrow that could be a re-entry point for the next momentum play.",
+    "outlook": "Fear at 46 (not extreme) + low VIX + S&P up = opportunistic environment to buy AI leaders on any pullback",
+    "trades_made": 2
   },
   "portfolio_history": [
     {
@@ -92,6 +122,10 @@
     {
       "timestamp": "2026-05-05T19:01:28Z",
       "value": 9998.12
+    },
+    {
+      "timestamp": "2026-05-06T13:32:02Z",
+      "value": 9903.75
     }
   ]
 }

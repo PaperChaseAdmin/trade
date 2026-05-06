@@ -269,6 +269,60 @@
         "ticker_chg_pct": 0.86,
         "trigger_news": "Intel soars 14% on report of Apple chip talks, hits new all-time high"
       }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLE",
+      "shares": 2,
+      "price": 57.45,
+      "total_value": 114.9,
+      "reasoning": "XLE is down 3.33% today and lags the portfolio; buying 2 shares restores sector balance while respecting the 12% cap and $500 cash reserve.",
+      "timestamp": "2026-05-06T13:32:40Z",
+      "market_outlook": "Near-term risk-off tilt favors defensive rebalancing into lagging sectors as fear persists and energy/rates divergences normalize.",
+      "signal_context": {
+        "fg_value": 46,
+        "fg_label": "Fear",
+        "sp500_chg": 0.81,
+        "vix": 16.79,
+        "ticker_chg_pct": -3.33,
+        "trigger_news": "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLU",
+      "shares": 2,
+      "price": 46.24,
+      "total_value": 92.48,
+      "reasoning": "XLU is slightly negative (-0.25%) and underweighted versus peers; adding 2 shares rebalances utilities without exceeding limits.",
+      "timestamp": "2026-05-06T13:32:40Z",
+      "market_outlook": "Near-term risk-off tilt favors defensive rebalancing into lagging sectors as fear persists and energy/rates divergences normalize.",
+      "signal_context": {
+        "fg_value": 46,
+        "fg_label": "Fear",
+        "sp500_chg": 0.81,
+        "vix": 16.79,
+        "ticker_chg_pct": -0.25,
+        "trigger_news": "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLF",
+      "shares": 2,
+      "price": 52.13,
+      "total_value": 104.26,
+      "reasoning": "XLF is up 0.99% but remains below target weight relative to recent strength; 2 shares improve sector parity while staying within rules.",
+      "timestamp": "2026-05-06T13:32:40Z",
+      "market_outlook": "Near-term risk-off tilt favors defensive rebalancing into lagging sectors as fear persists and energy/rates divergences normalize.",
+      "signal_context": {
+        "fg_value": 46,
+        "fg_label": "Fear",
+        "sp500_chg": 0.81,
+        "vix": 16.79,
+        "ticker_chg_pct": 0.99,
+        "trigger_news": "Trump says Iran will be bombed 'at much higher level' if they don't agree to peace deal"
+      }
     }
   ]
 }
