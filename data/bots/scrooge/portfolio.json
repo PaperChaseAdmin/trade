@@ -1,53 +1,83 @@
 {
   "cash": 4239.88,
-  "total_value": 9803.12,
+  "total_value": 9804.72,
   "positions": {
     "MO": {
       "shares": 26,
       "avg_cost": 74.55,
-      "current_price": 69.45
+      "current_price": 69.3916
     },
     "OHI": {
       "shares": 42,
       "avg_cost": 46.98,
-      "current_price": 45.86
+      "current_price": 45.77
     },
     "O": {
       "shares": 9,
       "avg_cost": 63.416,
-      "current_price": 62.14
+      "current_price": 62.35
     },
     "MAIN": {
       "shares": 14,
-      "current_price": 56.5261,
+      "current_price": 56.87,
       "avg_cost": 56.1775
     },
     "T": {
       "shares": 19,
       "avg_cost": 25.865,
-      "current_price": 25.305
+      "current_price": 25.315
     }
   },
-  "total_return_pct": -1.97,
+  "total_return_pct": -1.95,
   "total_return_usd": 0.0,
-  "today_pnl": -13.92,
-  "today_pnl_pct": -0.14,
+  "today_pnl": -12.32,
+  "today_pnl_pct": -0.13,
   "total_trades": 6,
   "today_start_value": 9817.04,
   "today_date": "2026-05-07",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-07T15:03:39Z",
+  "last_action": "Neutral market (Fear&Greed 47) with slight S&P gain - no compelling high-yield bargains today, prices are either flat or down modestly.",
+  "last_updated": "2026-05-07T15:39:47Z",
   "last_session": {
-    "at": "2026-05-07T15:03:39Z",
+    "at": "2026-05-07T15:39:47Z",
     "fear_greed": 47,
     "fear_greed_label": "Neutral",
-    "sp500_change": 0.15,
-    "vix": 17.16,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.18,
+    "vix": 17.2,
+    "top_movers": [
+      [
+        "O",
+        -2.61
+      ],
+      [
+        "IBM",
+        2.21
+      ],
+      [
+        "BTI",
+        -1.58
+      ],
+      [
+        "MO",
+        -1.09
+      ],
+      [
+        "ABBV",
+        -1.03
+      ],
+      [
+        "GLD",
+        1.01
+      ]
+    ],
+    "news_read": [
+      "McDonald's CEO says consumer spending could be 'getting a little bit worse'",
+      "Paul Tudor Jones says AI bull market has 'another year or two to run'",
+      "Boeing CEO Kelly Ortberg set to join Trump on China visit next week",
+      "Used car prices fall for first time this year as gas prices spike, EV interest rises"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=47 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "Scanning my watchlist for 4%+ yielders: O is down 2.6% but I already own it and it's below my average cost - not adding more to single positions. MAIN is my best performer today (+$9.69) and pays ~6% yield - solid BDC but already at my position size. T and VZ both have 6.5% yields but T is down and I already have a position. GLD is up 1% - my treasure reserve is shining but at $435 it's not a buy signal. No trades today - will wait for bigger dips in quality dividend payers to deploy my $4,239 cash pile.",
+    "outlook": "Neutral market (Fear&Greed 47) with slight S&P gain - no compelling high-yield bargains today, prices are either flat or down modestly.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -146,6 +176,10 @@
     {
       "timestamp": "2026-05-07T15:03:39Z",
       "value": 9803.12
+    },
+    {
+      "timestamp": "2026-05-07T15:39:47Z",
+      "value": 9804.72
     }
   ]
 }
