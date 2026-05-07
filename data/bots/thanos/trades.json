@@ -449,6 +449,42 @@
         "ticker_chg_pct": -2.47,
         "trigger_news": "Whirlpool says Iran war causing 'recession-level industry decline.' The shares are down 20%"
       }
+    },
+    {
+      "action": "SELL",
+      "ticker": "XLK",
+      "shares": 2,
+      "price": 171.54,
+      "total_value": 343.08,
+      "reasoning": "Reduce outperforming tech (XLK +0.87% today, PnL +$11.30) to rebalance toward underweight sectors.",
+      "timestamp": "2026-05-07T15:03:28Z",
+      "market_outlook": "Neutral drift with sector dispersion; balance must be restored across cyclical and defensive exposures.",
+      "signal_context": {
+        "fg_value": 47,
+        "fg_label": "Neutral",
+        "sp500_chg": 0.15,
+        "vix": 17.16,
+        "ticker_chg_pct": 0.87,
+        "trigger_news": "McDonald's CEO says consumer spending could be 'getting a little bit worse'"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLE",
+      "shares": 2,
+      "price": 55.36,
+      "total_value": 110.72,
+      "reasoning": "Add to laggard energy (XLE -2.93% today, PnL -$17.19) to restore sector balance.",
+      "timestamp": "2026-05-07T15:03:28Z",
+      "market_outlook": "Neutral drift with sector dispersion; balance must be restored across cyclical and defensive exposures.",
+      "signal_context": {
+        "fg_value": 47,
+        "fg_label": "Neutral",
+        "sp500_chg": 0.15,
+        "vix": 17.16,
+        "ticker_chg_pct": -2.93,
+        "trigger_news": "McDonald's CEO says consumer spending could be 'getting a little bit worse'"
+      }
     }
   ]
 }
