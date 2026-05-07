@@ -413,6 +413,42 @@
         "ticker_chg_pct": -3.73,
         "trigger_news": "Trump says Iran will be bombed at a 'much higher level' if it doesn't agree to peace deal"
       }
+    },
+    {
+      "action": "SELL",
+      "ticker": "XLY",
+      "shares": 4,
+      "price": 120.88,
+      "total_value": 483.52,
+      "reasoning": "XLY (+0.9% today, +10.20 PnL) is outperforming and must be trimmed to rebalance toward laggards while preserving cash.",
+      "timestamp": "2026-05-07T13:34:15Z",
+      "market_outlook": "Neutral drift with low VIX favors rebalancing into beaten-down sectors rather than chasing strength.",
+      "signal_context": {
+        "fg_value": 47,
+        "fg_label": "Neutral",
+        "sp500_chg": 1.46,
+        "vix": 17.34,
+        "ticker_chg_pct": 0.89,
+        "trigger_news": "Whirlpool says Iran war causing 'recession-level industry decline.' The shares are down 20%"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLE",
+      "shares": 1,
+      "price": 55.67,
+      "total_value": 55.67,
+      "reasoning": "XLE (-2.47% today, -15.02 PnL) is the weakest sector ETF on the list; adding 1 share restores balance at minimal cost.",
+      "timestamp": "2026-05-07T13:34:15Z",
+      "market_outlook": "Neutral drift with low VIX favors rebalancing into beaten-down sectors rather than chasing strength.",
+      "signal_context": {
+        "fg_value": 47,
+        "fg_label": "Neutral",
+        "sp500_chg": 1.46,
+        "vix": 17.34,
+        "ticker_chg_pct": -2.47,
+        "trigger_news": "Whirlpool says Iran war causing 'recession-level industry decline.' The shares are down 20%"
+      }
     }
   ]
 }

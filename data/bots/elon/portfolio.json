@@ -1,79 +1,79 @@
 {
   "cash": 643.04,
-  "total_value": 10142.18,
+  "total_value": 10219.81,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 287.62,
+      "current_price": 288.62,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 400.03,
+      "current_price": 408.7999,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 9,
-      "current_price": 207.39,
+      "current_price": 208.175,
       "avg_cost": 202.8012
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 195.225,
-      "current_price": 196.19
+      "current_price": 193.8714
     }
   },
-  "total_return_pct": 1.42,
+  "total_return_pct": 2.2,
   "total_return_usd": 0.0,
-  "today_pnl": 238.43,
-  "today_pnl_pct": 2.41,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 10,
-  "today_start_value": 9903.75,
-  "today_date": "2026-05-06",
-  "last_action": "Market in mild fear (46) with low VIX (17.17) and tech momentum (NVDA +5.5%, TSLA +2.7%) suggests holding positions rather than adding given my portfolio is already 90% tech/semiconductor heavy.",
-  "last_updated": "2026-05-06T19:36:32Z",
+  "today_start_value": 10219.81,
+  "today_date": "2026-05-07",
+  "last_action": "Neutral market with low VIX (17.34) and S&P up 1.46% - not enough extreme fear to be aggressive, but AI momentum from Paul Tudor Jones keeps me interested in tech.",
+  "last_updated": "2026-05-07T13:59:45Z",
   "last_session": {
-    "at": "2026-05-06T19:36:32Z",
-    "fear_greed": 46,
-    "fear_greed_label": "Fear",
-    "sp500_change": 1.41,
-    "vix": 17.17,
+    "at": "2026-05-07T13:59:45Z",
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 1.46,
+    "vix": 17.34,
     "top_movers": [
       [
-        "AMD",
-        18.04
-      ],
-      [
         "IONQ",
-        10.15
-      ],
-      [
-        "NVDA",
-        5.53
+        -4.62
       ],
       [
         "TSLA",
-        2.71
+        2.57
+      ],
+      [
+        "MSTR",
+        -2.25
       ],
       [
         "PLTR",
-        -2.1
+        2.03
       ],
       [
-        "SOFI",
-        1.9
+        "MSFT",
+        1.91
+      ],
+      [
+        "COIN",
+        -1.87
       ]
     ],
     "news_read": [
-      "Nvidia to invest up to $3.2 billion in Corning as part of massive optical fiber deal with 3 new factories focused on AI",
-      "AMD's Su explains what's behind massive forecast change as stock roars 17% on earnings",
-      "Elon Musk's Terafab chip factory in Texas could cost up to $119 billion, filing shows",
-      "Anthropic, SpaceX announce compute deal that includes space development",
-      "Apollo CEO Rowan warns of market correction, slams \u2018egregious\u2019 practices at rival insurers"
+      "Paul Tudor Jones says AI bull market has 'another year or two to run'",
+      "Oil prices fall below $100 as U.S.-Iran tensions keep traders focused on Strait of Hormuz risks",
+      "Anthropic CEO says 80-fold growth in first quarter explains 'difficulties with compute'",
+      "How the U.S. military and Maersk got a ship to pass through the Strait of Hormuz",
+      "Whirlpool says Iran war causing 'recession-level industry decline.' The shares are down 20%"
     ],
     "domain_extra": "",
-    "ai_analysis": "My portfolio is already concentrated in tech (NVDA, TSLA, AAPL, COIN) which are all showing gains today - adding more tech exposure would increase concentration risk beyond my comfort zone. NVDA's $3.2B Corning investment is bullish but the stock already ran 5.5% today and I'm at my target weight. AMD's 18% move is too late to chase. With Fear & Greed at 46 (not extreme fear), there's no clear dip-buying signal, and I prefer to stay disciplined with my cash reserve ($643) for a better setup.",
-    "outlook": "Market in mild fear (46) with low VIX (17.17) and tech momentum (NVDA +5.5%, TSLA +2.7%) suggests holding positions rather than adding given my portfolio is already 90% tech/semiconductor heavy.",
+    "ai_analysis": "My portfolio is heavily concentrated with AAPL at 34.1% and TSLA at 32.2% - both near my 35% max, so I cannot add to winners. COIN is my only small loss position (-$6.77) but at -1.87% today it's not extreme enough fear to double down. With only $143.04 usable cash after keeping $500 reserve, I lack meaningful buying power anyway. Watching PLTR (Palantir) - strong momentum stock with AI exposure that could be a good next deployment target if it pulls back or if I trim a winner.",
+    "outlook": "Neutral market with low VIX (17.34) and S&P up 1.46% - not enough extreme fear to be aggressive, but AI momentum from Paul Tudor Jones keeps me interested in tech.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -168,6 +168,10 @@
     {
       "timestamp": "2026-05-06T19:36:32Z",
       "value": 10142.18
+    },
+    {
+      "timestamp": "2026-05-07T13:59:45Z",
+      "value": 10219.81
     }
   ]
 }
