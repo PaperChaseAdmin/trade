@@ -1,53 +1,84 @@
 {
   "cash": 505.75,
-  "total_value": 10238.11,
+  "total_value": 10197.7,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 288.195,
+      "current_price": 287.3299,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 406.4294,
+      "current_price": 404.0951,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 9,
-      "current_price": 213.23,
+      "current_price": 212.4199,
       "avg_cost": 202.8012
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 195.225,
-      "current_price": 193.18
+      "current_price": 192.545
     },
     "PLTR": {
       "shares": 1,
       "avg_cost": 137.295,
-      "current_price": 137.61
+      "current_price": 136.73
     }
   },
-  "total_return_pct": 2.38,
+  "total_return_pct": 1.98,
   "total_return_usd": 0.0,
-  "today_pnl": 18.3,
-  "today_pnl_pct": 0.18,
+  "today_pnl": -22.11,
+  "today_pnl_pct": -0.22,
   "total_trades": 11,
   "today_start_value": 10219.81,
   "today_date": "2026-05-07",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-07T18:31:26Z",
+  "last_action": "Neutral market (F&G 47) with slight S&P dip (-0.57%) and low VIX (17.06) - not enough fear to be aggressive, not enough clarity to add positions.",
+  "last_updated": "2026-05-07T19:10:07Z",
   "last_session": {
-    "at": "2026-05-07T18:31:26Z",
+    "at": "2026-05-07T19:10:07Z",
     "fear_greed": 47,
     "fear_greed_label": "Neutral",
-    "sp500_change": -0.33,
-    "vix": 17.23,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.57,
+    "vix": 17.06,
+    "top_movers": [
+      [
+        "IONQ",
+        -10.84
+      ],
+      [
+        "MSTR",
+        -4.2
+      ],
+      [
+        "AMD",
+        -3.56
+      ],
+      [
+        "COIN",
+        -2.77
+      ],
+      [
+        "SOFI",
+        -2.55
+      ],
+      [
+        "PLTR",
+        2.23
+      ]
+    ],
+    "news_read": [
+      "OpenAI trial: Mother of Musk's children says he offered Altman a Tesla board seat",
+      "Options traders love this under-the-radar AI play",
+      "Paul Tudor Jones says U.S. is late to regulating AI: 'We should have already done it'",
+      "Shake Shack shares crater 30% after burger chain reports operating loss",
+      "Here's what to expect from Friday's release of the April jobs report"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Cash reserve is only $505.75 (barely above the $500 minimum), constraining any buying power. AAPL position is already at 33.7% of portfolio - at the 35% max limit. TSLA at 31.6% is also near capacity. While PLTR showed strength today (+2.23%), the position is too small to matter and adding more would require selling other winners. COIN and PLTR small losses aren't big enough to cut - better to hold winners (TSLA, NVDA, AAPL) that are printing. Watching for a bigger dip to deploy cash.",
+    "outlook": "Neutral market (F&G 47) with slight S&P dip (-0.57%) and low VIX (17.06) - not enough fear to be aggressive, not enough clarity to add positions.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -174,6 +205,10 @@
     {
       "timestamp": "2026-05-07T18:31:26Z",
       "value": 10238.11
+    },
+    {
+      "timestamp": "2026-05-07T19:10:07Z",
+      "value": 10197.7
     }
   ]
 }
