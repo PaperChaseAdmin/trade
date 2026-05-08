@@ -1,58 +1,88 @@
 {
   "cash": 501.15,
-  "total_value": 10053.6,
+  "total_value": 10827.09,
   "positions": {
     "RKLB": {
       "shares": 38,
       "avg_cost": 78.83,
-      "current_price": 78.2897
+      "current_price": 94.95
     },
     "CRSP": {
       "shares": 48,
-      "current_price": 51.91,
+      "current_price": 52.7125,
       "avg_cost": 51.61
     },
     "NTLA": {
       "shares": 75,
       "avg_cost": 13.25,
-      "current_price": 13.52
+      "current_price": 13.86
     },
     "TSLA": {
       "shares": 5,
       "avg_cost": 390.18,
-      "current_price": 404.0951
+      "current_price": 427.93
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 199.05,
-      "current_price": 192.545
+      "current_price": 184.31
     },
     "RXRX": {
       "shares": 27,
       "avg_cost": 3.19,
-      "current_price": 3.28
+      "current_price": 3.22
     }
   },
-  "total_return_pct": 0.54,
+  "total_return_pct": 8.27,
   "total_return_usd": 0.0,
-  "today_pnl": -380.22,
-  "today_pnl_pct": -3.64,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 7,
-  "today_start_value": 10433.82,
-  "today_date": "2026-05-07",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-07T19:01:27Z",
+  "today_start_value": 10827.09,
+  "today_date": "2026-05-08",
+  "last_action": "Fear index at 38 presents buying opportunities but cash reserves of $501.15 are too tight to deploy given the $500 minimum requirement.",
+  "last_updated": "2026-05-08T14:02:17Z",
   "last_session": {
-    "at": "2026-05-07T19:01:27Z",
-    "fear_greed": 47,
-    "fear_greed_label": "Neutral",
-    "sp500_change": -0.57,
-    "vix": 17.06,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-05-08T14:02:17Z",
+    "fear_greed": 38,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.62,
+    "vix": 16.97,
+    "top_movers": [
+      [
+        "RKLB",
+        21.04
+      ],
+      [
+        "PACB",
+        -16.75
+      ],
+      [
+        "PATH",
+        -4.67
+      ],
+      [
+        "COIN",
+        -4.52
+      ],
+      [
+        "TSLA",
+        3.84
+      ],
+      [
+        "ILMN",
+        -2.42
+      ]
+    ],
+    "news_read": [
+      "Trump's $1 million 'Gold Card' fails to catch on among the world's wealthy",
+      "I\u2019m giving $10,000 to my stepchildren. My wife warned me against gifts of equal value for my nephews. Is that fair?",
+      "CoinDesk 20 performance update: NEAR Protocol (NEAR) gains 6.3%, leading index higher",
+      "U.S. payrolls increased 115,000 in April, more than expected; unemployment at 4.3%"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "RKLB surged 21% today - a testament to the space innovation thesis, though already have a solid position. PACB dropped 16.75% which would typically be a 'sale' opportunity for genomic disruption, but cannot deploy capital. COIN down 4.5% is concerning but I never sell on bad news - crypto adoption thesis remains intact. Watching ILMN (down 2.4%) and PLTR (down 1.8%) closely for potential positions when cash becomes available through future deposits or position sizing adjustments.",
+    "outlook": "Fear index at 38 presents buying opportunities but cash reserves of $501.15 are too tight to deploy given the $500 minimum requirement.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -179,6 +209,10 @@
     {
       "timestamp": "2026-05-07T19:01:27Z",
       "value": 10053.6
+    },
+    {
+      "timestamp": "2026-05-08T14:02:17Z",
+      "value": 10827.09
     }
   ]
 }
