@@ -1,53 +1,81 @@
 {
   "cash": 524.97,
-  "total_value": 10074.85,
+  "total_value": 10064.25,
   "positions": {
     "O": {
       "shares": 31,
       "avg_cost": 63.38,
-      "current_price": 62.41
+      "current_price": 62.245
     },
     "T": {
       "shares": 76,
       "avg_cost": 26.0,
-      "current_price": 24.83
+      "current_price": 24.825
     },
     "VZ": {
       "shares": 42,
       "avg_cost": 47.435,
-      "current_price": 47.285
+      "current_price": 47.215
     },
     "OHI": {
       "shares": 41,
       "avg_cost": 45.83,
-      "current_price": 47.225
+      "current_price": 47.2051
     },
     "PM": {
       "shares": 10,
       "avg_cost": 166.2951,
-      "current_price": 180.59
+      "current_price": 180.455
     }
   },
-  "total_return_pct": 0.75,
+  "total_return_pct": 0.64,
   "total_return_usd": 0.0,
-  "today_pnl": -22.98,
-  "today_pnl_pct": -0.23,
+  "today_pnl": -33.58,
+  "today_pnl_pct": -0.33,
   "total_trades": 5,
   "today_start_value": 10097.83,
   "today_date": "2026-05-11",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-11T17:02:05Z",
+  "last_action": "Neutral market (Fear & Greed 48) with limited opportunities - cash reserve of $524.97 is too small to make meaningful trades after keeping the required $500 minimum.",
+  "last_updated": "2026-05-11T18:03:56Z",
   "last_session": {
-    "at": "2026-05-11T17:02:05Z",
+    "at": "2026-05-11T18:03:56Z",
     "fear_greed": 48,
     "fear_greed_label": "Neutral",
-    "sp500_change": 0.24,
-    "vix": 18.0,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.36,
+    "vix": 18.08,
+    "top_movers": [
+      [
+        "PM",
+        5.54
+      ],
+      [
+        "BTI",
+        3.33
+      ],
+      [
+        "MAIN",
+        -3.15
+      ],
+      [
+        "IBM",
+        -2.79
+      ],
+      [
+        "ENB",
+        1.91
+      ],
+      [
+        "CVX",
+        1.71
+      ]
+    ],
+    "news_read": [
+      "Banking groups escalate fight over stablecoin yield ahead of Senate vote",
+      "Trump says Iran ceasefire is 'on life support' after rejecting Tehran's counterproposal"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=48 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "PM is up +5.5% today and showing strong momentum - would be a buy if I had more cash, but at current prices ($180.455) I can only afford 0.13 shares. T and VZ are both down slightly but still within my existing positions - no need to add more to losing positions. BTI up +3.3% is attractive but same cash constraint applies. Holding steady and waiting for a better entry point or more capital to work with.",
+    "outlook": "Neutral market (Fear & Greed 48) with limited opportunities - cash reserve of $524.97 is too small to make meaningful trades after keeping the required $500 minimum.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -202,6 +230,10 @@
     {
       "timestamp": "2026-05-11T17:02:05Z",
       "value": 10074.85
+    },
+    {
+      "timestamp": "2026-05-11T18:03:56Z",
+      "value": 10064.25
     }
   ]
 }

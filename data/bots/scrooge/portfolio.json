@@ -1,6 +1,6 @@
 {
   "cash": 2794.55,
-  "total_value": 9732.22,
+  "total_value": 9728.31,
   "positions": {
     "MO": {
       "shares": 26,
@@ -10,44 +10,72 @@
     "OHI": {
       "shares": 42,
       "avg_cost": 46.98,
-      "current_price": 47.225
+      "current_price": 47.2051
     },
     "O": {
       "shares": 9,
       "avg_cost": 63.416,
-      "current_price": 62.41
+      "current_price": 62.245
     },
     "MAIN": {
       "shares": 36,
-      "current_price": 52.36,
+      "current_price": 52.32,
       "avg_cost": 54.9879
     },
     "T": {
       "shares": 29,
-      "current_price": 24.83,
+      "current_price": 24.825,
       "avg_cost": 25.6443
     }
   },
-  "total_return_pct": -2.68,
+  "total_return_pct": -2.72,
   "total_return_usd": 0.0,
-  "today_pnl": -38.4,
-  "today_pnl_pct": -0.39,
+  "today_pnl": -42.31,
+  "today_pnl_pct": -0.43,
   "total_trades": 9,
   "today_start_value": 9770.62,
   "today_date": "2026-05-11",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-11T17:02:26Z",
+  "last_action": "Neutral market with slight upside - no compelling high-yield opportunities at attractive valuations today, better to preserve cash for better entry points.",
+  "last_updated": "2026-05-11T18:04:52Z",
   "last_session": {
-    "at": "2026-05-11T17:02:26Z",
+    "at": "2026-05-11T18:04:52Z",
     "fear_greed": 48,
     "fear_greed_label": "Neutral",
-    "sp500_change": 0.24,
-    "vix": 18.0,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.36,
+    "vix": 18.08,
+    "top_movers": [
+      [
+        "PM",
+        5.54
+      ],
+      [
+        "BTI",
+        3.33
+      ],
+      [
+        "MAIN",
+        -3.15
+      ],
+      [
+        "IBM",
+        -2.79
+      ],
+      [
+        "ENB",
+        1.91
+      ],
+      [
+        "T",
+        -1.35
+      ]
+    ],
+    "news_read": [
+      "Banking groups escalate fight over stablecoin yield ahead of Senate vote",
+      "Trump says Iran ceasefire is 'on life support' after rejecting Tehran's counterproposal"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=48 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "Portfolio is down -2.68% with most positions underwater. MAIN dropped -3.15% today but still not at a compelling entry point. PM and BTI both up nicely (5.5% and 3.3%) so buying now would be chasing. With only $2794.55 cash and max 2 trades allowed, need to be selective - no high-yield stock on my watchlist is offering a significant discount today. Will continue monitoring ABBV (4%+ yield), ENB (MLP with ~6% yield), and SCHD for potential DRIP opportunities when valuations improve.",
+    "outlook": "Neutral market with slight upside - no compelling high-yield opportunities at attractive valuations today, better to preserve cash for better entry points.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -206,6 +234,10 @@
     {
       "timestamp": "2026-05-11T17:02:26Z",
       "value": 9732.22
+    },
+    {
+      "timestamp": "2026-05-11T18:04:52Z",
+      "value": 9728.31
     }
   ]
 }
