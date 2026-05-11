@@ -1,82 +1,84 @@
 {
   "cash": 505.75,
-  "total_value": 10464.71,
+  "total_value": 10456.74,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 292.132,
+      "current_price": 291.83,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 427.65,
+      "current_price": 417.1199,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 9,
-      "current_price": 215.255,
+      "current_price": 217.455,
       "avg_cost": 202.8012
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 195.225,
-      "current_price": 191.92
+      "current_price": 204.065
     },
     "PLTR": {
       "shares": 1,
       "avg_cost": 137.295,
-      "current_price": 135.28
+      "current_price": 134.65
     }
   },
-  "total_return_pct": 4.65,
+  "total_return_pct": 4.57,
   "total_return_usd": 0.0,
-  "today_pnl": 3.2,
-  "today_pnl_pct": 0.03,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 11,
-  "today_start_value": 10461.51,
-  "today_date": "2026-05-08",
-  "last_action": "Fear at 38 and low VIX (17.24) suggests cautious sentiment - not extreme enough for aggressive buying but not bullish either.",
-  "last_updated": "2026-05-08T17:08:42Z",
+  "today_start_value": 10456.74,
+  "today_date": "2026-05-11",
+  "last_action": "Neutral market (F&G 48, VIX 18.27) with tech mixed - TSLA and PLTR down, NVDA and COIN up slightly, so staying put makes sense.",
+  "last_updated": "2026-05-11T14:37:12Z",
   "last_session": {
-    "at": "2026-05-08T17:08:42Z",
-    "fear_greed": 38,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.77,
-    "vix": 17.24,
+    "at": "2026-05-11T14:37:12Z",
+    "fear_greed": 48,
+    "fear_greed_label": "Neutral",
+    "sp500_change": 0.22,
+    "vix": 18.27,
     "top_movers": [
       [
-        "AMD",
-        8.19
-      ],
-      [
-        "RBLX",
-        -5.02
-      ],
-      [
-        "TSLA",
-        3.86
-      ],
-      [
         "IONQ",
-        -3.17
+        11.88
       ],
       [
         "SOFI",
-        -2.55
+        2.83
       ],
       [
-        "NVDA",
-        1.77
+        "TSLA",
+        -2.62
+      ],
+      [
+        "PLTR",
+        -2.26
+      ],
+      [
+        "GOOGL",
+        -2.1
+      ],
+      [
+        "META",
+        -1.36
       ]
     ],
     "news_read": [
-      "Trump's $1 million 'Gold Card' fails to catch on among the world's wealthy",
-      "CoinDesk 20 performance update: NEAR Protocol (NEAR) gains 6.3%, leading index higher",
-      "U.S. payrolls jump more than expected, but the report had several red flags for the economy"
+      "Cerebras bumps up IPO range as it looks to raise up to $4.8 billion",
+      "Micron shares are rising again despite weak overall market. Why memory chip rally seems unstoppable",
+      "Circle raises $222 million from BlackRock, Apollo and others in Arc token presale valued at $3 billion",
+      "High gas prices are hurting restaurant sales \u2014 but not all chains",
+      "Brent oil tops $103 after Trump dismisses Iran\u2019s peace proposal response"
     ],
     "domain_extra": "",
-    "ai_analysis": "My portfolio is already heavily concentrated in tech (AAPL 33.4%, TSLA 32.6%, NVDA 18.5%) leaving only $505.75 cash - barely above the $500 minimum reserve. AMD's +8.2% move is attractive but with limited cash and near-max position sizes on my winners, the risk/reward doesn't justify forcing a trade. Holding steady and watching for better entry points on my existing positions.",
-    "outlook": "Fear at 38 and low VIX (17.24) suggests cautious sentiment - not extreme enough for aggressive buying but not bullish either.",
+    "ai_analysis": "Portfolio is 95.2% invested with only $505.75 cash left - barely enough to make meaningful trades. My largest positions (AAPL at 33.5% and TSLA at 31.9%) are dangerously close to the 35% max, so I can't add to either despite both being profitable. IONQ's 11.9% spike is tempting but not on my watchlist. With tech mixed today and no extreme Fear or Greed signal, I'll hold winners and wait for better entry points.",
+    "outlook": "Neutral market (F&G 48, VIX 18.27) with tech mixed - TSLA and PLTR down, NVDA and COIN up slightly, so staying put makes sense.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -223,6 +225,10 @@
     {
       "timestamp": "2026-05-08T17:08:42Z",
       "value": 10464.71
+    },
+    {
+      "timestamp": "2026-05-11T14:37:12Z",
+      "value": 10456.74
     }
   ]
 }
