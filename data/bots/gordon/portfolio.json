@@ -1,68 +1,98 @@
 {
   "cash": 504.86,
-  "total_value": 10016.21,
+  "total_value": 10027.32,
   "positions": {
     "DIS": {
       "shares": 10,
       "avg_cost": 103.09,
-      "current_price": 105.7899
+      "current_price": 105.95
     },
     "NKE": {
       "shares": 20,
       "avg_cost": 43.345,
-      "current_price": 42.485
+      "current_price": 42.41
     },
     "INTC": {
       "shares": 8,
       "avg_cost": 96.92,
-      "current_price": 117.6131
+      "current_price": 118.9975
     },
     "F": {
       "shares": 50,
       "avg_cost": 11.505,
-      "current_price": 11.965
+      "current_price": 11.975
     },
     "PYPL": {
       "shares": 20,
-      "current_price": 45.555,
+      "current_price": 45.5701,
       "avg_cost": 45.8903
     },
     "VFC": {
       "shares": 121,
       "avg_cost": 19.27,
-      "current_price": 17.76
+      "current_price": 17.725
     },
     "WBD": {
       "shares": 110,
       "avg_cost": 27.345,
-      "current_price": 27.195
+      "current_price": 27.225
     },
     "NOK": {
       "shares": 1,
       "avg_cost": 12.8999,
-      "current_price": 13.085
+      "current_price": 13.155
     }
   },
-  "total_return_pct": 0.16,
+  "total_return_pct": 0.27,
   "total_return_usd": 0.0,
-  "today_pnl": -22.68,
-  "today_pnl_pct": -0.23,
+  "today_pnl": -11.57,
+  "today_pnl_pct": -0.12,
   "total_trades": 10,
   "today_start_value": 10038.89,
   "today_date": "2026-05-12",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-12T19:02:05Z",
+  "last_action": "Neutral market (Fear & Greed 49, S&P -0.32%) with no actionable trades - cash reserve of $504.86 only allows $4.86 in purchases, insufficient for any watchlist stock.",
+  "last_updated": "2026-05-12T19:34:06Z",
   "last_session": {
-    "at": "2026-05-12T19:02:05Z",
+    "at": "2026-05-12T19:34:06Z",
     "fear_greed": 49,
     "fear_greed_label": "Neutral",
-    "sp500_change": -0.44,
-    "vix": 18.13,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.32,
+    "vix": 18.08,
+    "top_movers": [
+      [
+        "INTC",
+        -8.04
+      ],
+      [
+        "NOK",
+        -5.47
+      ],
+      [
+        "CVS",
+        3.03
+      ],
+      [
+        "HPQ",
+        -2.65
+      ],
+      [
+        "GM",
+        1.82
+      ],
+      [
+        "T",
+        1.81
+      ]
+    ],
+    "news_read": [
+      "It's not just Iran and oil raising inflation. Prices also are reaccelerating in these other areas",
+      "The stock market isn't ignoring Iran. It's rising for these three very real reasons",
+      "Trump says Makary is out as FDA commissioner, following industry and White House backlash",
+      "Trump doesn't need Congress to restart Iran strikes: Hegseth"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "INTC dropping 8% is notable given my large unrealized gain (+$176.62), but I cannot add due to cash constraints. VFC continues bleeding (-1.2%, now down -$186.94 total) - a potential activist target but I'm already overexposed. NOK down 5.5% looks tempting as a fallen telecom, but at $13.16/share I can only afford 0.37 shares with available capital. Holding steady and preserving liquidity until meaningful capital becomes available.",
+    "outlook": "Neutral market (Fear & Greed 49, S&P -0.32%) with no actionable trades - cash reserve of $504.86 only allows $4.86 in purchases, insufficient for any watchlist stock.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -269,6 +299,10 @@
     {
       "timestamp": "2026-05-12T19:02:05Z",
       "value": 10016.21
+    },
+    {
+      "timestamp": "2026-05-12T19:34:06Z",
+      "value": 10027.32
     }
   ]
 }
