@@ -1,64 +1,97 @@
 {
-  "cash": 2346.15,
-  "total_value": 9838.02,
+  "cash": 420.55,
+  "total_value": 9850.32,
   "positions": {
     "MO": {
       "shares": 26,
       "avg_cost": 74.55,
-      "current_price": 70.4
+      "current_price": 70.53
     },
     "OHI": {
       "shares": 42,
       "avg_cost": 46.98,
-      "current_price": 47.4455
+      "current_price": 47.52
     },
     "O": {
       "shares": 9,
       "avg_cost": 63.416,
-      "current_price": 62.585
+      "current_price": 62.66
     },
     "MAIN": {
       "shares": 36,
-      "current_price": 53.02,
+      "current_price": 53.15,
       "avg_cost": 54.9879
     },
     "T": {
       "shares": 29,
-      "current_price": 25.295,
+      "current_price": 25.325,
       "avg_cost": 25.6443
     },
     "BTI": {
       "shares": 4,
       "avg_cost": 60.155,
-      "current_price": 63.61
+      "current_price": 63.625
     },
     "ABBV": {
       "shares": 1,
       "avg_cost": 207.775,
-      "current_price": 208.78
+      "current_price": 208.285
+    },
+    "VZ": {
+      "shares": 40,
+      "avg_cost": 48.14,
+      "current_price": 48.14
     }
   },
-  "total_return_pct": -1.62,
+  "total_return_pct": -1.5,
   "total_return_usd": 0.0,
-  "today_pnl": 58.02,
-  "today_pnl_pct": 0.59,
-  "total_trades": 11,
+  "today_pnl": 70.32,
+  "today_pnl_pct": 0.72,
+  "total_trades": 12,
   "today_start_value": 9780.0,
   "today_date": "2026-05-12",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-12T18:33:07Z",
+  "last_action": "Neutral market (Fear&Greed 49, VIX 18.13) with slight S&P decline - ideal conditions to add quality dividend holdings",
+  "last_updated": "2026-05-12T19:05:08Z",
   "last_session": {
-    "at": "2026-05-12T18:33:07Z",
+    "at": "2026-05-12T19:05:08Z",
     "fear_greed": 49,
     "fear_greed_label": "Neutral",
-    "sp500_change": -0.4,
-    "vix": 18.2,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "sp500_change": -0.44,
+    "vix": 18.13,
+    "top_movers": [
+      [
+        "BTI",
+        5.28
+      ],
+      [
+        "PM",
+        4.22
+      ],
+      [
+        "MO",
+        2.8
+      ],
+      [
+        "ABBV",
+        2.72
+      ],
+      [
+        "VZ",
+        1.93
+      ],
+      [
+        "T",
+        1.83
+      ]
+    ],
+    "news_read": [
+      "Stablecoin yield infrastructure project raises $13.5M in round led by Sky Ecosystem",
+      "It's not just Iran and oil raising inflation. Prices also are reaccelerating in these other areas"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=49 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "I noticed BTI and PM leading today (+5.3% and +4.2%) but they're already extended; MAIN and O are both down on the day despite strong 1.63% move in MAIN - I'll add to my existing MAIN position on weakness rather than chase run-ups. VZ at $48.14 with 6.66% yield is too good to pass up - it's a classic Scrooge holding: stable telecom cash flows, high yield, and it pays monthly. Holding $2346 cash gives me dry powder but I'm keeping adequate reserves while deploying into quality.",
+    "outlook": "Neutral market (Fear&Greed 49, VIX 18.13) with slight S&P decline - ideal conditions to add quality dividend holdings",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -260,6 +293,10 @@
     {
       "timestamp": "2026-05-12T18:33:07Z",
       "value": 9838.02
+    },
+    {
+      "timestamp": "2026-05-12T19:05:08Z",
+      "value": 9850.32
     }
   ]
 }
