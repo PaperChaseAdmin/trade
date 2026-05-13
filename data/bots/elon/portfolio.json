@@ -1,84 +1,84 @@
 {
   "cash": 505.75,
-  "total_value": 10663.23,
+  "total_value": 10714.1,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 294.845,
+      "current_price": 293.935,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 433.738,
+      "current_price": 438.2199,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 9,
-      "current_price": 221.25,
+      "current_price": 225.0887,
       "avg_cost": 202.8012
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 195.225,
-      "current_price": 204.825
+      "current_price": 203.0
     },
     "PLTR": {
       "shares": 1,
       "avg_cost": 137.295,
-      "current_price": 134.06
+      "current_price": 134.575
     }
   },
-  "total_return_pct": 6.63,
+  "total_return_pct": 7.14,
   "total_return_usd": 0.0,
-  "today_pnl": -70.76,
-  "today_pnl_pct": -0.66,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 11,
-  "today_start_value": 10733.99,
-  "today_date": "2026-05-12",
-  "last_action": "Neutral market (F&G 49) with tech weakness - COIN and crypto-adjacent names getting hit hard while I sit with limited cash and maxed positions.",
-  "last_updated": "2026-05-12T19:33:18Z",
+  "today_start_value": 10714.1,
+  "today_date": "2026-05-13",
+  "last_action": "Fear at 42 with slight market dip creates cautious environment - not extreme enough for aggressive dip buying, VIX is low so no panic premium to exploit.",
+  "last_updated": "2026-05-13T13:31:33Z",
   "last_session": {
-    "at": "2026-05-12T19:33:18Z",
-    "fear_greed": 49,
-    "fear_greed_label": "Neutral",
-    "sp500_change": -0.32,
-    "vix": 18.08,
+    "at": "2026-05-13T13:31:33Z",
+    "fear_greed": 42,
+    "fear_greed_label": "Fear",
+    "sp500_change": -0.16,
+    "vix": 18.04,
     "top_movers": [
       [
-        "MSTR",
-        -6.19
-      ],
-      [
         "COIN",
-        -5.44
+        -2.08
       ],
       [
-        "AMD",
-        -3.66
-      ],
-      [
-        "IONQ",
-        -3.3
+        "NVDA",
+        1.81
       ],
       [
         "SOFI",
-        -2.83
+        -1.73
       ],
       [
-        "TSLA",
-        -2.51
+        "IONQ",
+        -1.28
+      ],
+      [
+        "MSFT",
+        -1.19
+      ],
+      [
+        "MSTR",
+        -1.17
       ]
     ],
     "news_read": [
-      "It's not just Iran and oil raising inflation. Prices also are reaccelerating in these other areas",
-      "Senate confirms Kevin Warsh as Fed governor, clears way for chair vote",
-      "Laid off GM employees describe ominous meeting, AI and severance",
-      "Senate confirms Kevin Warsh to Fed board ahead of expected Chair vote",
-      "The stock market isn't ignoring Iran. It's rising for these three very real reasons"
+      "Amazon ditches Rufus chatbot, launches Alexa shopping agent in AI strategy pivot",
+      "Hyperscalers' AI buildout will require massive amounts of energy. Two under-the-radar stocks will benefit",
+      "Alibaba's core profit plunges 84% even as AI and cloud growth accelerate",
+      "Nvidia's Jensen Huang bets on this British startup to build 'next frontier' of AI",
+      "Wholesale inflation jumps 6% in April on annual basis, biggest increase since 2022"
     ],
     "domain_extra": "",
-    "ai_analysis": "My portfolio is essentially fully deployed with AAPL (33.3%) and TSLA (32.7%) right at my 35% max limit. I only have $505.75 cash - barely above my $500 reserve requirement - leaving me unable to add meaningful positions. COIN is down 5.4% today which would normally be a buy-the-dip opportunity given my crypto-adjacent strategy, but I can't add with only ~$5 of buying power. TSLA and AMD are getting hammered on the tech selloff but I'm already maxed on my winners. Holding steady and waiting for either a clearer signal or cash to accumulate.",
-    "outlook": "Neutral market (F&G 49) with tech weakness - COIN and crypto-adjacent names getting hit hard while I sit with limited cash and maxed positions.",
+    "ai_analysis": "COIN dropped 2.1% today (biggest loser) and PLTR is down 0.82% - both are my smallest/losing positions but I have only $505.75 cash which is barely above my $500 reserve minimum, leaving almost no buying power. NVDA is up 1.8% but I'm already maxed out on concentration with my largest winner. Holding steady and waiting for either a clearer Fear signal (<25) or a better entry point on my watchlist.",
+    "outlook": "Fear at 42 with slight market dip creates cautious environment - not extreme enough for aggressive dip buying, VIX is low so no panic premium to exploit.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -293,6 +293,10 @@
     {
       "timestamp": "2026-05-12T19:33:18Z",
       "value": 10663.23
+    },
+    {
+      "timestamp": "2026-05-13T13:31:33Z",
+      "value": 10714.1
     }
   ]
 }

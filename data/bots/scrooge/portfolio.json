@@ -1,11 +1,11 @@
 {
   "cash": 420.55,
-  "total_value": 9838.49,
+  "total_value": 9787.48,
   "positions": {
     "MO": {
       "shares": 26,
       "avg_cost": 74.55,
-      "current_price": 70.33
+      "current_price": 70.295
     },
     "OHI": {
       "shares": 42,
@@ -15,82 +15,82 @@
     "O": {
       "shares": 9,
       "avg_cost": 63.416,
-      "current_price": 62.565
+      "current_price": 62.1
     },
     "MAIN": {
       "shares": 36,
-      "current_price": 53.065,
+      "current_price": 52.1295,
       "avg_cost": 54.9879
     },
     "T": {
       "shares": 29,
-      "current_price": 25.325,
+      "current_price": 25.24,
       "avg_cost": 25.6443
     },
     "BTI": {
       "shares": 4,
       "avg_cost": 60.155,
-      "current_price": 63.55
+      "current_price": 64.408
     },
     "ABBV": {
       "shares": 1,
       "avg_cost": 207.775,
-      "current_price": 207.63
+      "current_price": 206.6235
     },
     "VZ": {
       "shares": 40,
       "avg_cost": 48.14,
-      "current_price": 48.075
+      "current_price": 47.77
     }
   },
-  "total_return_pct": -1.62,
+  "total_return_pct": -2.13,
   "total_return_usd": 0.0,
-  "today_pnl": 58.49,
-  "today_pnl_pct": 0.6,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 12,
-  "today_start_value": 9780.0,
-  "today_date": "2026-05-12",
-  "last_action": "Neutral market (Fear&Greed 49, S&P -0.32%) offers no compelling high-yield entry points with limited cash and my positions already well-stocked with dividend payers.",
-  "last_updated": "2026-05-12T19:34:45Z",
+  "today_start_value": 9787.48,
+  "today_date": "2026-05-13",
+  "last_action": "Fear dominates (42) with the S&P slightly down - not the time to deploy cash into new positions when my existing dividend payers like MAIN and MO are already at attractive entry points.",
+  "last_updated": "2026-05-13T13:32:49Z",
   "last_session": {
-    "at": "2026-05-12T19:34:45Z",
-    "fear_greed": 49,
-    "fear_greed_label": "Neutral",
-    "sp500_change": -0.32,
-    "vix": 18.08,
+    "at": "2026-05-13T13:32:49Z",
+    "fear_greed": 42,
+    "fear_greed_label": "Fear",
+    "sp500_change": -0.16,
+    "vix": 18.04,
     "top_movers": [
       [
+        "MAIN",
+        -1.49
+      ],
+      [
         "BTI",
-        5.15
-      ],
-      [
-        "PM",
-        3.75
-      ],
-      [
-        "MO",
-        2.49
-      ],
-      [
-        "ABBV",
-        2.38
-      ],
-      [
-        "T",
-        1.81
+        1.21
       ],
       [
         "IBM",
-        -1.81
+        -1.01
+      ],
+      [
+        "O",
+        -0.7
+      ],
+      [
+        "ENB",
+        0.61
+      ],
+      [
+        "ABBV",
+        -0.59
       ]
     ],
     "news_read": [
-      "Stablecoin yield infrastructure project raises $13.5M in round led by Sky Ecosystem",
-      "It's not just Iran and oil raising inflation. Prices also are reaccelerating in these other areas"
+      "The 2020 signal returns: Why the copper-to-gold breakout could point to bitcoin breakout",
+      "Wholesale inflation jumps 6% in April on annual basis, biggest increase since 2022"
     ],
-    "domain_extra": "VALUE CONTEXT: Fear&Greed=49 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "My cash of $420.55 is too thin to add meaningful positions while maintaining the $200 reserve - BTI surged 5.15% but I already own it and it's small. PM and IBM don't meet my 4%+ yield threshold, and all my current positions (MO, T, VZ, O, MAIN) are long-term DRIP holdings I'm never selling regardless of short-term dips. The portfolio is fully invested in income-generating assets as Scrooge prefers - waiting for dividend payments to reinvest rather than chasing today's small moves.",
-    "outlook": "Neutral market (Fear&Greed 49, S&P -0.32%) offers no compelling high-yield entry points with limited cash and my positions already well-stocked with dividend payers.",
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=42 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "My cash reserves sit at $420.55 - barely above my $200 minimum, so new purchases would be limited anyway. MAIN dropped 1.5% today and I'm already holding 36 shares at an average cost of $54.99 vs current $52.13 - a perfect opportunity to add if I had more dry powder, but I'll wait. BTI popped 1.2% but I'm only holding 4 shares and it's already up today. No sense chasing. I'll hold steady and reinvest dividends when they hit my account - that's the Scrooge way.",
+    "outlook": "Fear dominates (42) with the S&P slightly down - not the time to deploy cash into new positions when my existing dividend payers like MAIN and MO are already at attractive entry points.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -301,6 +301,10 @@
     {
       "timestamp": "2026-05-12T19:34:45Z",
       "value": 9838.49
+    },
+    {
+      "timestamp": "2026-05-13T13:32:49Z",
+      "value": 9787.48
     }
   ]
 }
