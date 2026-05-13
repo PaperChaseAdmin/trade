@@ -1,38 +1,66 @@
 {
   "cash": 6159.31,
-  "total_value": 10071.33,
+  "total_value": 10067.57,
   "positions": {
     "PG": {
       "shares": 17,
       "avg_cost": 144.57,
-      "current_price": 143.21
+      "current_price": 142.64
     },
     "AAPL": {
       "shares": 5,
       "avg_cost": 276.6,
-      "current_price": 295.49
+      "current_price": 296.675
     }
   },
-  "total_return_pct": 0.71,
+  "total_return_pct": 0.68,
   "total_return_usd": 0.0,
-  "today_pnl": 7.77,
-  "today_pnl_pct": 0.08,
+  "today_pnl": 4.01,
+  "today_pnl_pct": 0.04,
   "total_trades": 2,
   "today_start_value": 10063.56,
   "today_date": "2026-05-13",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-13T14:31:50Z",
+  "last_action": "Fear-driven market (F&G 42) with modest moves; quality names like JNJ and V showing interesting divergence today.",
+  "last_updated": "2026-05-13T15:29:09Z",
   "last_session": {
-    "at": "2026-05-13T14:31:50Z",
+    "at": "2026-05-13T15:29:09Z",
     "fear_greed": 42,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.05,
-    "vix": 18.12,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.11,
+    "vix": 18.04,
+    "top_movers": [
+      [
+        "V",
+        -1.9
+      ],
+      [
+        "USB",
+        -1.71
+      ],
+      [
+        "AXP",
+        -1.67
+      ],
+      [
+        "MA",
+        -1.4
+      ],
+      [
+        "ABBV",
+        -1.3
+      ],
+      [
+        "JNJ",
+        1.25
+      ]
+    ],
+    "news_read": [
+      "Anduril doubles valuation to over $60 billion as defense tech funding boom continues",
+      "Wholesale inflation jumps 6% in April on annual basis, biggest increase since 2022"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=42 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "AAPL is attractive at current price with strong moat and consistent earnings, but at 14.7% portfolio weight I'm comfortable holding my 5 shares rather than adding. PG at 24% is already at my max allocation. JNJ's 1.25% gain today is interesting for a defensive healthcare giant, but not enough of a pullback to justify new position. V's 1.9% dip brings it closer to fair value but I'll continue monitoring. Cash reserves of 61% give me plenty of dry powder for the right opportunity - patience is a virtue for value investors.",
+    "outlook": "Fear-driven market (F&G 42) with modest moves; quality names like JNJ and V showing interesting divergence today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -255,6 +283,10 @@
     {
       "timestamp": "2026-05-13T14:31:50Z",
       "value": 10071.33
+    },
+    {
+      "timestamp": "2026-05-13T15:29:09Z",
+      "value": 10067.57
     }
   ]
 }
