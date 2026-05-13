@@ -1,48 +1,76 @@
 {
   "cash": 591.43,
-  "total_value": 12875.36,
+  "total_value": 12887.74,
   "positions": {
     "INTC": {
       "shares": 30,
       "avg_cost": 99.67,
-      "current_price": 121.365
+      "current_price": 121.49
     },
     "MU": {
       "shares": 6,
       "avg_cost": 542.32,
-      "current_price": 792.8801
+      "current_price": 792.96
     },
     "AMD": {
       "shares": 8,
       "avg_cost": 360.55,
-      "current_price": 448.42
+      "current_price": 449.31
     },
     "AAPL": {
       "shares": 1,
       "avg_cost": 280.15,
-      "current_price": 298.34
+      "current_price": 299.37
     }
   },
-  "total_return_pct": 28.75,
+  "total_return_pct": 28.88,
   "total_return_usd": 0.0,
-  "today_pnl": -240.72,
-  "today_pnl_pct": -1.84,
+  "today_pnl": -228.34,
+  "today_pnl_pct": -1.74,
   "total_trades": 4,
   "today_start_value": 13116.08,
   "today_date": "2026-05-13",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-13T16:31:25Z",
+  "last_action": "Semiconductor strength across the board (MU +3.5%, QCOM +3.1%, NVDA +2.8%) suggests the sector is breaking out and fear in the broader market (F&G 42) creates opportunity",
+  "last_updated": "2026-05-13T17:02:20Z",
   "last_session": {
-    "at": "2026-05-13T16:31:25Z",
+    "at": "2026-05-13T17:02:20Z",
     "fear_greed": 42,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.36,
+    "sp500_change": 0.49,
     "vix": 18.06,
-    "top_movers": [],
-    "news_read": [],
+    "top_movers": [
+      [
+        "GOOGL",
+        3.65
+      ],
+      [
+        "TSLA",
+        3.59
+      ],
+      [
+        "MU",
+        3.54
+      ],
+      [
+        "QCOM",
+        3.09
+      ],
+      [
+        "CRM",
+        -3.08
+      ],
+      [
+        "NVDA",
+        2.81
+      ]
+    ],
+    "news_read": [
+      "Anduril doubles valuation to over $60 billion as defense tech funding boom continues",
+      "Trump arrives in Beijing with CEOs ahead of Xi meetings"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "I noticed my semiconductor positions (MU, AMD, INTC) are all green today with MU leading at +3.5%, confirming my thesis that chip stocks are the place to be. With only $591 cash I can't size as aggressively as I'd like but I'm building NVDA exposure - my favorite name. The defense tech Anduril news reinforces my view that tech hardware is where the money flows right now. Next I'm watching for any pullback to add more NVDA or look at AMAT/LRCX on semiconductor equipment weakness.",
+    "outlook": "Semiconductor strength across the board (MU +3.5%, QCOM +3.1%, NVDA +2.8%) suggests the sector is breaking out and fear in the broader market (F&G 42) creates opportunity",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -281,6 +309,10 @@
     {
       "timestamp": "2026-05-13T16:31:25Z",
       "value": 12875.36
+    },
+    {
+      "timestamp": "2026-05-13T17:02:20Z",
+      "value": 12887.74
     }
   ]
 }
