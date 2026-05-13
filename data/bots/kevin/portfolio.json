@@ -1,53 +1,81 @@
 {
   "cash": 524.97,
-  "total_value": 10169.39,
+  "total_value": 10180.11,
   "positions": {
     "O": {
       "shares": 31,
       "avg_cost": 63.38,
-      "current_price": 61.625
+      "current_price": 61.615
     },
     "T": {
       "shares": 76,
       "avg_cost": 26.0,
-      "current_price": 25.065
+      "current_price": 25.085
     },
     "VZ": {
       "shares": 42,
       "avg_cost": 47.435,
-      "current_price": 47.465
+      "current_price": 47.605
     },
     "OHI": {
       "shares": 41,
       "avg_cost": 45.83,
-      "current_price": 47.67
+      "current_price": 47.76
     },
     "PM": {
       "shares": 10,
       "avg_cost": 166.2951,
-      "current_price": 188.11
+      "current_price": 188.105
     }
   },
-  "total_return_pct": 1.69,
+  "total_return_pct": 1.8,
   "total_return_usd": 0.0,
-  "today_pnl": -28.15,
-  "today_pnl_pct": -0.28,
+  "today_pnl": -17.43,
+  "today_pnl_pct": -0.17,
   "total_trades": 5,
   "today_start_value": 10197.54,
   "today_date": "2026-05-13",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-13T17:32:25Z",
+  "last_action": "Fear dominates (42) with limited upside signals; preserving capital is prudent until better entry points emerge.",
+  "last_updated": "2026-05-13T18:02:51Z",
   "last_session": {
-    "at": "2026-05-13T17:32:25Z",
+    "at": "2026-05-13T18:02:51Z",
     "fear_greed": 42,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.61,
-    "vix": 17.97,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.63,
+    "vix": 17.95,
+    "top_movers": [
+      [
+        "IBM",
+        -2.63
+      ],
+      [
+        "JNJ",
+        2.4
+      ],
+      [
+        "BTI",
+        2.28
+      ],
+      [
+        "MAIN",
+        -2.22
+      ],
+      [
+        "MO",
+        1.65
+      ],
+      [
+        "O",
+        -1.46
+      ]
+    ],
+    "news_read": [
+      "Telecom giant KDDI to acquire 14.9% stake in Coincheck Group in $65 million deal",
+      "Trump arrives in Beijing with CEOs ahead of Xi meetings"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=42 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "Cash reserve is only $24.97 above the $500 minimum (total $524.97), making meaningful position sizing impossible - even 1 share of most watchlist stocks would violate the 20% max per stock rule or leave insufficient reserves. JNJ up 2.4% and BTI up 2.28% are attractive dividend payers, but prices are too high to add sensibly with this cash constraint. Holding steady with existing dividend positions (OHI +$79, PM +$218) and waiting for a pullback in quality dividend payers like O, T, or MAIN to deploy additional capital.",
+    "outlook": "Fear dominates (42) with limited upside signals; preserving capital is prudent until better entry points emerge.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -290,6 +318,10 @@
     {
       "timestamp": "2026-05-13T17:32:25Z",
       "value": 10169.39
+    },
+    {
+      "timestamp": "2026-05-13T18:02:51Z",
+      "value": 10180.11
     }
   ]
 }
