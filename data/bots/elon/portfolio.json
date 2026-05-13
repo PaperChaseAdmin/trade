@@ -1,53 +1,84 @@
 {
   "cash": 505.75,
-  "total_value": 10867.08,
+  "total_value": 10837.65,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 299.68,
+      "current_price": 299.02,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 447.37,
+      "current_price": 444.9562,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 9,
-      "current_price": 226.96,
+      "current_price": 226.64,
       "avg_cost": 202.8012
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 195.225,
-      "current_price": 202.69
+      "current_price": 202.84
     },
     "PLTR": {
       "shares": 1,
       "avg_cost": 137.295,
-      "current_price": 130.12
+      "current_price": 130.05
     }
   },
-  "total_return_pct": 8.67,
+  "total_return_pct": 8.38,
   "total_return_usd": 0.0,
-  "today_pnl": 152.98,
-  "today_pnl_pct": 1.43,
+  "today_pnl": 123.55,
+  "today_pnl_pct": 1.15,
   "total_trades": 11,
   "today_start_value": 10714.1,
   "today_date": "2026-05-13",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-13T18:31:17Z",
+  "last_action": "Fear index at 42 signals caution but not extreme enough to go aggressive; low VIX (17.84) and strong tech momentum (TSLA +2.7%, NVDA +2.65%) suggest staying the course with winners.",
+  "last_updated": "2026-05-13T19:33:46Z",
   "last_session": {
-    "at": "2026-05-13T18:31:17Z",
+    "at": "2026-05-13T19:33:46Z",
     "fear_greed": 42,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.79,
-    "vix": 17.83,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.74,
+    "vix": 17.84,
+    "top_movers": [
+      [
+        "PLTR",
+        -4.37
+      ],
+      [
+        "GOOGL",
+        4.11
+      ],
+      [
+        "RIVN",
+        3.69
+      ],
+      [
+        "SOFI",
+        -3.22
+      ],
+      [
+        "MSTR",
+        -3.09
+      ],
+      [
+        "TSLA",
+        2.69
+      ]
+    ],
+    "news_read": [
+      "Kevin Warsh wins Senate confirmation as the next Federal Reserve chair",
+      "Altman details Musk's OpenAI fallout, says nonprofit was 'left for dead'",
+      "AI-driven cyberattacks will start to be the 'new norm' in months, Palo Alto warns",
+      "5 tests Kevin Warsh will face as Fed chair",
+      "Trump arrives in Beijing with CEOs ahead of Xi meetings"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Portfolio is nearly fully deployed with only $505.75 cash (minimum reserve), leaving no buying power for new positions despite attractive moves in GOOGL (+4.1%) and RIVN (+3.7%). TSLA and NVDA showing strong momentum but already at 33% and 19% allocation respectively - would need to trim winners to add more. PLTR down 4.4% is concerning but position is too small to matter. Holding all positions and watching for profit-taking opportunities to redeploy into stronger movers next session.",
+    "outlook": "Fear index at 42 signals caution but not extreme enough to go aggressive; low VIX (17.84) and strong tech momentum (TSLA +2.7%, NVDA +2.65%) suggest staying the course with winners.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -306,6 +337,10 @@
     {
       "timestamp": "2026-05-13T18:31:17Z",
       "value": 10867.08
+    },
+    {
+      "timestamp": "2026-05-13T19:33:46Z",
+      "value": 10837.65
     }
   ]
 }

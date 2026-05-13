@@ -1,48 +1,78 @@
 {
   "cash": 591.43,
-  "total_value": 12994.08,
+  "total_value": 12927.28,
   "positions": {
     "INTC": {
       "shares": 30,
       "avg_cost": 99.67,
-      "current_price": 122.05
+      "current_price": 120.565
     },
     "MU": {
       "shares": 6,
       "avg_cost": 542.32,
-      "current_price": 806.325
+      "current_price": 805.34
     },
     "AMD": {
       "shares": 8,
       "avg_cost": 360.55,
-      "current_price": 450.44
+      "current_price": 448.48
     },
     "AAPL": {
       "shares": 1,
       "avg_cost": 280.15,
-      "current_price": 299.68
+      "current_price": 299.02
     }
   },
-  "total_return_pct": 29.94,
+  "total_return_pct": 29.27,
   "total_return_usd": 0.0,
-  "today_pnl": -122.0,
-  "today_pnl_pct": -0.93,
+  "today_pnl": -188.8,
+  "today_pnl_pct": -1.44,
   "total_trades": 4,
   "today_start_value": 13116.08,
   "today_date": "2026-05-13",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-13T18:31:17Z",
+  "last_action": "Semiconductor momentum is strong with MU up 5.1% and NVDA up 2.6%, but my cash reserves are too depleted to add positions after recent gains.",
+  "last_updated": "2026-05-13T19:33:46Z",
   "last_session": {
-    "at": "2026-05-13T18:31:17Z",
+    "at": "2026-05-13T19:33:46Z",
     "fear_greed": 42,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.79,
-    "vix": 17.83,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.74,
+    "vix": 17.84,
+    "top_movers": [
+      [
+        "MU",
+        5.07
+      ],
+      [
+        "GOOGL",
+        4.11
+      ],
+      [
+        "CRM",
+        -3.05
+      ],
+      [
+        "LRCX",
+        2.75
+      ],
+      [
+        "TSLA",
+        2.69
+      ],
+      [
+        "NVDA",
+        2.65
+      ]
+    ],
+    "news_read": [
+      "Kevin Warsh wins Senate confirmation as the next Federal Reserve chair",
+      "Trump arrives in Beijing with CEOs ahead of Xi meetings",
+      "Wholesale inflation jumps 6% in April on annual basis, biggest increase since 2022",
+      "Altman details Musk's OpenAI fallout, says nonprofit was 'left for dead'"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "MU's 5.07% surge today confirms my thesis on memory semiconductors - it's my biggest winner on the watchlist and I already have a solid position. LRCX also moving well at +2.8% as semiconductor equipment plays catch up. However, with only $591.43 cash and needing to maintain a $500 reserve, I cannot add to my winning semiconductor positions despite the perfect setup. My existing holdings in MU, AMD, INTC and AAPL are all green today which is the right foundation. Next session I'll look to deploy fresh capital into NVDA or AMAT if the semiconductor momentum continues.",
+    "outlook": "Semiconductor momentum is strong with MU up 5.1% and NVDA up 2.6%, but my cash reserves are too depleted to add positions after recent gains.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -297,6 +327,10 @@
     {
       "timestamp": "2026-05-13T18:31:17Z",
       "value": 12994.08
+    },
+    {
+      "timestamp": "2026-05-13T19:33:46Z",
+      "value": 12927.28
     }
   ]
 }
