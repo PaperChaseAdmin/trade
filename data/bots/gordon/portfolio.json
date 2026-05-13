@@ -1,6 +1,6 @@
 {
   "cash": 504.86,
-  "total_value": 10046.75,
+  "total_value": 10040.12,
   "positions": {
     "DIS": {
       "shares": 10,
@@ -10,27 +10,27 @@
     "NKE": {
       "shares": 20,
       "avg_cost": 43.345,
-      "current_price": 42.275
+      "current_price": 42.175
     },
     "INTC": {
       "shares": 8,
       "avg_cost": 96.92,
-      "current_price": 121.49
+      "current_price": 122.38
     },
     "F": {
       "shares": 50,
       "avg_cost": 11.505,
-      "current_price": 13.56
+      "current_price": 13.59
     },
     "PYPL": {
       "shares": 20,
-      "current_price": 45.245,
+      "current_price": 45.125,
       "avg_cost": 45.8903
     },
     "VFC": {
       "shares": 121,
       "avg_cost": 19.27,
-      "current_price": 17.32
+      "current_price": 17.23
     },
     "WBD": {
       "shares": 110,
@@ -40,29 +40,57 @@
     "NOK": {
       "shares": 1,
       "avg_cost": 12.8999,
-      "current_price": 14.445
+      "current_price": 14.485
     }
   },
-  "total_return_pct": 0.47,
+  "total_return_pct": 0.4,
   "total_return_usd": 0.0,
-  "today_pnl": 54.74,
-  "today_pnl_pct": 0.55,
+  "today_pnl": 48.11,
+  "today_pnl_pct": 0.48,
   "total_trades": 10,
   "today_start_value": 9992.01,
   "today_date": "2026-05-13",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-13T17:02:19Z",
+  "last_action": "Fear dominates (42) with wholesale inflation at 6% - not the environment to deploy my limited cash when F and NOK have already surged 13% and 10% respectively today.",
+  "last_updated": "2026-05-13T17:33:06Z",
   "last_session": {
-    "at": "2026-05-13T17:02:19Z",
+    "at": "2026-05-13T17:33:06Z",
     "fear_greed": 42,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.49,
-    "vix": 18.06,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.61,
+    "vix": 17.97,
+    "top_movers": [
+      [
+        "F",
+        13.34
+      ],
+      [
+        "NOK",
+        10.02
+      ],
+      [
+        "BBWI",
+        -3.22
+      ],
+      [
+        "CVS",
+        2.13
+      ],
+      [
+        "VFC",
+        -2.13
+      ],
+      [
+        "DIS",
+        -1.9
+      ]
+    ],
+    "news_read": [
+      "Trump arrives in Beijing with CEOs ahead of Xi meetings",
+      "Wholesale inflation jumps 6% in April on annual basis, biggest increase since 2022"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "My cash reserve is only $4.86 above the $500 minimum - too tight to add meaningful positions. F ran 13.3% today (I already own 50 shares at $11.505) so chasing would be foolish. INTC is my biggest winner at +$203 but I already have exposure. VFC continues bleeding (-2.1% today, -$246 total loss) - a potential activist target but I'll wait for a better entry. Watching SBUX at $106 (down 0.5%) - iconic brand with new CEO speculation potential, but need cash to play. No action today.",
+    "outlook": "Fear dominates (42) with wholesale inflation at 6% - not the environment to deploy my limited cash when F and NOK have already surged 13% and 10% respectively today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -305,6 +333,10 @@
     {
       "timestamp": "2026-05-13T17:02:19Z",
       "value": 10046.75
+    },
+    {
+      "timestamp": "2026-05-13T17:33:06Z",
+      "value": 10040.12
     }
   ]
 }
