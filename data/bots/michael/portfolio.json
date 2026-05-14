@@ -1,69 +1,104 @@
 {
-  "cash": 3457.15,
-  "total_value": 10439.52,
+  "cash": 2139.95,
+  "total_value": 10443.16,
   "positions": {
     "KHC": {
       "shares": 21,
-      "current_price": 23.545,
+      "current_price": 23.46,
       "avg_cost": 22.48
     },
     "PFE": {
       "shares": 15,
       "avg_cost": 26.335,
-      "current_price": 25.815
+      "current_price": 25.825
     },
     "INTC": {
       "shares": 10,
       "avg_cost": 96.92,
-      "current_price": 115.6
+      "current_price": 116.54
     },
     "F": {
       "shares": 25,
       "avg_cost": 11.505,
-      "current_price": 14.55
+      "current_price": 14.563
     },
     "OXY": {
       "shares": 30,
-      "current_price": 57.0399,
+      "current_price": 57.07,
       "avg_cost": 56.61
     },
     "GEO": {
       "shares": 30,
       "avg_cost": 18.545,
-      "current_price": 23.34
+      "current_price": 23.31
     },
     "BABA": {
       "shares": 10,
-      "current_price": 142.8601,
+      "current_price": 142.45,
       "avg_cost": 137.4875
     },
     "WFC": {
       "shares": 10,
       "avg_cost": 78.94,
-      "current_price": 74.095
+      "current_price": 74.06
+    },
+    "JD": {
+      "shares": 40,
+      "avg_cost": 32.93,
+      "current_price": 32.93
     }
   },
-  "total_return_pct": 4.4,
+  "total_return_pct": 4.43,
   "total_return_usd": 0.0,
-  "today_pnl": 91.04,
-  "today_pnl_pct": 0.88,
-  "total_trades": 11,
+  "today_pnl": 94.68,
+  "today_pnl_pct": 0.91,
+  "total_trades": 12,
   "today_start_value": 10348.48,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T16:02:05Z",
+  "last_action": "Fear index at 34 with low VIX (17.85) creates opportunity for patient value investors to deploy cash into quality names the market is ignoring",
+  "last_updated": "2026-05-14T16:34:45Z",
   "last_session": {
-    "at": "2026-05-14T16:02:05Z",
+    "at": "2026-05-14T16:34:45Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.87,
-    "vix": 17.9,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "sp500_change": 0.92,
+    "vix": 17.85,
+    "top_movers": [
+      [
+        "F",
+        7.26
+      ],
+      [
+        "INTC",
+        -3.04
+      ],
+      [
+        "GEO",
+        2.74
+      ],
+      [
+        "JD",
+        -2.46
+      ],
+      [
+        "BABA",
+        -2.31
+      ],
+      [
+        "CMCSA",
+        1.62
+      ]
+    ],
+    "news_read": [
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'",
+      "China will work behind the scenes to help reopen the Strait of Hormuz, Bessent says",
+      "Cisco CEO says tech is entering a 'networking supercycle' as stock pops 14% on strong AI demand",
+      "Bessent sees 'substantial disinflation' ahead as Warsh takes over the Fed"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=34 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "Noticed JD and BABA both down significantly on China geopolitical concerns - these represent the kind of unloved, oversold situations I look for. With F up 7.3% today showing momentum in my existing positions, I'm comfortable adding to a beaten-down Chinese name at these levels. JD's e-commerce platform is a real business with real assets, not hype. Watching for further weakness in Chinese ADRs as potential additional buying opportunity.",
+    "outlook": "Fear index at 34 with low VIX (17.85) creates opportunity for patient value investors to deploy cash into quality names the market is ignoring",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -341,6 +376,10 @@
     {
       "timestamp": "2026-05-14T16:02:05Z",
       "value": 10439.52
+    },
+    {
+      "timestamp": "2026-05-14T16:34:45Z",
+      "value": 10443.16
     }
   ]
 }

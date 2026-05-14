@@ -1,38 +1,66 @@
 {
   "cash": 6159.31,
-  "total_value": 10098.42,
+  "total_value": 10090.52,
   "positions": {
     "PG": {
       "shares": 17,
       "avg_cost": 144.57,
-      "current_price": 143.765
+      "current_price": 143.48
     },
     "AAPL": {
       "shares": 5,
       "avg_cost": 276.6,
-      "current_price": 299.02
+      "current_price": 298.41
     }
   },
-  "total_return_pct": 0.98,
+  "total_return_pct": 0.91,
   "total_return_usd": 0.0,
-  "today_pnl": 22.57,
-  "today_pnl_pct": 0.22,
+  "today_pnl": 14.67,
+  "today_pnl_pct": 0.15,
   "total_trades": 2,
   "today_start_value": 10075.85,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T16:01:44Z",
+  "last_action": "Market showing mild optimism (S&P +0.92%) with low volatility (VIX 17.85) but Fear index at 34 suggests cautious sentiment \u2014 not compelling enough to deploy capital into quality names at current price",
+  "last_updated": "2026-05-14T16:32:08Z",
   "last_session": {
-    "at": "2026-05-14T16:01:44Z",
+    "at": "2026-05-14T16:32:08Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.87,
-    "vix": 17.9,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.92,
+    "vix": 17.85,
+    "top_movers": [
+      [
+        "USB",
+        1.64
+      ],
+      [
+        "ABBV",
+        1.13
+      ],
+      [
+        "AXP",
+        1.07
+      ],
+      [
+        "PG",
+        0.86
+      ],
+      [
+        "BRK-B",
+        -0.74
+      ],
+      [
+        "KO",
+        0.65
+      ]
+    ],
+    "news_read": [
+      "LIVE: Senate Banking Committee holds key hearing to advance Clarity Act",
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=34 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "Reviewed watchlist thoroughly \u2014 no ticker presents a clear margin of safety today; AAPL trading at 298 vs my cost basis 277 is not a new entry point, PG slightly down but fundamentals unchanged, and other quality names like JNJ, KO, BRK-B show minimal movement. Holding steady with 61% cash allows me to pounce when Mr. Market offers a genuine bargain. Watching ABBV's 1.1% move and USB's 1.6% rally \u2014 will revisit if meaningful pullbacks occur.",
+    "outlook": "Market showing mild optimism (S&P +0.92%) with low volatility (VIX 17.85) but Fear index at 34 suggests cautious sentiment \u2014 not compelling enough to deploy capital into quality names at current prices.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -315,6 +343,10 @@
     {
       "timestamp": "2026-05-14T16:01:44Z",
       "value": 10098.42
+    },
+    {
+      "timestamp": "2026-05-14T16:32:08Z",
+      "value": 10090.52
     }
   ]
 }

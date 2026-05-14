@@ -1,48 +1,76 @@
 {
   "cash": 2926.53,
-  "total_value": 10100.77,
+  "total_value": 10094.3,
   "positions": {
     "TLT": {
       "shares": 23,
       "avg_cost": 85.6,
-      "current_price": 85.33
+      "current_price": 85.285
     },
     "GLD": {
       "shares": 4,
       "avg_cost": 423.3,
-      "current_price": 429.97
+      "current_price": 429.3722
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 720.67,
-      "current_price": 749.375
+      "current_price": 748.15
     },
     "GSG": {
       "shares": 59,
-      "current_price": 33.78,
+      "current_price": 33.77,
       "avg_cost": 33.392
     }
   },
-  "total_return_pct": 1.01,
+  "total_return_pct": 0.94,
   "total_return_usd": 0.0,
-  "today_pnl": 14.39,
-  "today_pnl_pct": 0.14,
+  "today_pnl": 7.92,
+  "today_pnl_pct": 0.08,
   "total_trades": 7,
   "today_start_value": 10086.38,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T16:03:20Z",
+  "last_action": "Holding steady as fear dominates (34) and commodities slide while maintaining balanced All Weather allocation across gold, bonds, equities, and commodities.",
+  "last_updated": "2026-05-14T16:32:48Z",
   "last_session": {
-    "at": "2026-05-14T16:03:20Z",
+    "at": "2026-05-14T16:32:48Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.87,
-    "vix": 17.9,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.92,
+    "vix": 17.85,
+    "top_movers": [
+      [
+        "TIPS",
+        -33.33
+      ],
+      [
+        "FXI",
+        -2.57
+      ],
+      [
+        "GDX",
+        -2.02
+      ],
+      [
+        "DJP",
+        -1.4
+      ],
+      [
+        "PDBC",
+        -1.12
+      ],
+      [
+        "GSG",
+        -1.05
+      ]
+    ],
+    "news_read": [
+      "Bessent sees 'substantial disinflation' ahead as Warsh takes over the Fed",
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'"
+    ],
+    "domain_extra": "MACRO: NASDAQ +1.06%  DOW +0.96%  VIX 17.9 (NORMAL)",
+    "ai_analysis": "Current allocation is well-balanced: TLT 19.4%, GLD 17.0%, SPY 14.8%, GSG 19.7%, Cash 29% - all within my 20% max per position rule. With GSG and GDX down significantly today (-1.1% and -2.0%), commodities are correcting but not at a compelling entry point yet. The Fed's disinflation outlook supports bonds, while China-Taiwan tensions warrant caution on emerging markets. Watching for either a deeper commodity pullback to add or a bond opportunity if recession fears intensify.",
+    "outlook": "Holding steady as fear dominates (34) and commodities slide while maintaining balanced All Weather allocation across gold, bonds, equities, and commodities.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -321,6 +349,10 @@
     {
       "timestamp": "2026-05-14T16:03:20Z",
       "value": 10100.77
+    },
+    {
+      "timestamp": "2026-05-14T16:32:48Z",
+      "value": 10094.3
     }
   ]
 }
