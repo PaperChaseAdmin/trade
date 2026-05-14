@@ -1,72 +1,72 @@
 {
   "cash": 505.75,
-  "total_value": 10865.01,
+  "total_value": 10826.54,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 299.5901,
+      "current_price": 297.26,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 445.81,
+      "current_price": 444.905,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 9,
-      "current_price": 229.585,
+      "current_price": 231.4199,
       "avg_cost": 202.8012
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 195.225,
-      "current_price": 200.09
+      "current_price": 196.06
     },
     "PLTR": {
       "shares": 1,
       "avg_cost": 137.295,
-      "current_price": 130.985
+      "current_price": 131.355
     }
   },
-  "total_return_pct": 8.65,
+  "total_return_pct": 8.27,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -38.47,
+  "today_pnl_pct": -0.35,
   "total_trades": 11,
   "today_start_value": 10865.01,
   "today_date": "2026-05-14",
-  "last_action": "Fear market (34) with low VIX (17.88) suggests opportunity but I'm already maxed out on top positions with minimal cash.",
-  "last_updated": "2026-05-14T13:31:53Z",
+  "last_action": "Fear at 34 is close to buy-the-dip territory but I'm already maxed out on my top performers and have minimal cash at $505.75, so I'm holding tight.",
+  "last_updated": "2026-05-14T14:22:19Z",
   "last_session": {
-    "at": "2026-05-14T13:31:53Z",
+    "at": "2026-05-14T14:22:19Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.58,
-    "vix": 17.88,
+    "sp500_change": 0.45,
+    "vix": 17.9,
     "top_movers": [
       [
-        "AMD",
-        -1.86
-      ],
-      [
         "NVDA",
-        1.81
-      ],
-      [
-        "SOFI",
-        1.21
+        2.67
       ],
       [
         "COIN",
-        -1.09
+        -2.63
       ],
       [
-        "IONQ",
-        -1.05
+        "MSTR",
+        -1.4
+      ],
+      [
+        "GOOGL",
+        -1.22
       ],
       [
         "PLTR",
-        1.04
+        0.95
+      ],
+      [
+        "IONQ",
+        -0.88
       ]
     ],
     "news_read": [
@@ -77,8 +77,8 @@
       "Xi tells Musk, Tim Cook and other CEOs on Trump's trip: China will 'open wider'"
     ],
     "domain_extra": "",
-    "ai_analysis": "My AAPL (33.2%) and TSLA (32.9%) positions are both approaching the 35% limit, and with only $505.75 cash (barely above the $500 reserve requirement), I have no meaningful buying power. NVDA is up 1.8% today with strong momentum but I'm already at 19% there. AMD down 1.9% looks tempting as a dip in the AI space but I can't add new positions with these constraints. Will wait for either a winner to take profits or for cash to build before making moves.",
-    "outlook": "Fear market (34) with low VIX (17.88) suggests opportunity but I'm already maxed out on top positions with minimal cash.",
+    "ai_analysis": "NVDA is ripping +2.67% today but I'm already at my 35% limit on it ($2,082.77 position). My cash is dangerously low at just $505.75 which limits any moves. COIN is down -2.63% but I already have a small position and it's barely profitable. The AI news is mixed - US leadership sounds bullish but Chinese chip competition is a longer-term headwind for NVDA. Watching for opportunities to trim winners and redeploy if we get a bigger dip.",
+    "outlook": "Fear at 34 is close to buy-the-dip territory but I'm already maxed out on my top performers and have minimal cash at $505.75, so I'm holding tight.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -345,6 +345,10 @@
     {
       "timestamp": "2026-05-14T13:31:53Z",
       "value": 10865.01
+    },
+    {
+      "timestamp": "2026-05-14T14:22:19Z",
+      "value": 10826.54
     }
   ]
 }
