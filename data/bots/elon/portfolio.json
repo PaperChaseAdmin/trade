@@ -1,53 +1,84 @@
 {
   "cash": 505.75,
-  "total_value": 11019.44,
+  "total_value": 11018.94,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 298.41,
+      "current_price": 297.92,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 448.9981,
+      "current_price": 447.67,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 9,
-      "current_price": 234.85,
+      "current_price": 235.64,
       "avg_cost": 202.8012
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 195.225,
-      "current_price": 218.7601
+      "current_price": 220.55
     },
     "PLTR": {
       "shares": 1,
       "avg_cost": 137.295,
-      "current_price": 133.3309
+      "current_price": 133.285
     }
   },
   "total_return_pct": 10.19,
   "total_return_usd": 0.0,
-  "today_pnl": 154.43,
+  "today_pnl": 153.93,
   "today_pnl_pct": 1.42,
   "total_trades": 11,
   "today_start_value": 10865.01,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T16:31:27Z",
+  "last_action": "Fear at 34 with low VIX (17.69) signals cautious optimism - not extreme enough to go aggressive, but the market is calm and tech momentum is strong.",
+  "last_updated": "2026-05-14T17:02:31Z",
   "last_session": {
-    "at": "2026-05-14T16:31:27Z",
+    "at": "2026-05-14T17:02:31Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.92,
-    "vix": 17.85,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.75,
+    "vix": 17.69,
+    "top_movers": [
+      [
+        "COIN",
+        9.07
+      ],
+      [
+        "MSTR",
+        7.67
+      ],
+      [
+        "NVDA",
+        4.34
+      ],
+      [
+        "IONQ",
+        3.67
+      ],
+      [
+        "RIVN",
+        2.8
+      ],
+      [
+        "RBLX",
+        2.79
+      ]
+    ],
+    "news_read": [
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'",
+      "China will work behind the scenes to help reopen the Strait of Hormuz, Bessent says",
+      "Musk lawyer apologizes to OpenAI jury for CEO's China trip during closing arguments",
+      "Cisco CEO says tech is entering a 'networking supercycle' as stock pops 15% on strong AI demand",
+      "China will order 200 Boeing jets, Trump tells Fox News"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "COIN +9.1% and NVDA +4.3% are ripping but I'm already maxed on concentration (TSLA 32.5%, AAPL 32.4%, NVDA 19.2%) and have barely $505 cash above reserve - no room to add. Cisco's networking supercycle news validates my tech-heavy thesis but I'll wait for pullbacks rather than chase. Watching for any dip in NVDA or COIN to redeploy.",
+    "outlook": "Fear at 34 with low VIX (17.69) signals cautious optimism - not extreme enough to go aggressive, but the market is calm and tech momentum is strong.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -334,6 +365,10 @@
     {
       "timestamp": "2026-05-14T16:31:27Z",
       "value": 11019.44
+    },
+    {
+      "timestamp": "2026-05-14T17:02:31Z",
+      "value": 11018.94
     }
   ]
 }
