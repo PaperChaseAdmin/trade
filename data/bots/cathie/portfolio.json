@@ -1,58 +1,89 @@
 {
   "cash": 501.15,
-  "total_value": 12268.78,
+  "total_value": 12093.66,
   "positions": {
     "RKLB": {
       "shares": 38,
       "avg_cost": 78.83,
-      "current_price": 126.71
+      "current_price": 122.97
     },
     "CRSP": {
       "shares": 48,
-      "current_price": 53.13,
+      "current_price": 52.94,
       "avg_cost": 51.61
     },
     "NTLA": {
       "shares": 75,
       "avg_cost": 13.25,
-      "current_price": 14.4
+      "current_price": 14.19
     },
     "TSLA": {
       "shares": 5,
       "avg_cost": 390.18,
-      "current_price": 444.9562
+      "current_price": 445.81
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 199.05,
-      "current_price": 202.84
+      "current_price": 200.09
     },
     "RXRX": {
       "shares": 27,
       "avg_cost": 3.19,
-      "current_price": 3.0901
+      "current_price": 3.14
     }
   },
-  "total_return_pct": 22.69,
+  "total_return_pct": 20.94,
   "total_return_usd": 0.0,
-  "today_pnl": 198.63,
-  "today_pnl_pct": 1.65,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 7,
-  "today_start_value": 12070.15,
-  "today_date": "2026-05-13",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-13T19:31:36Z",
+  "today_start_value": 12093.66,
+  "today_date": "2026-05-14",
+  "last_action": "Market in slight fear (34) with low VIX (17.88) presents potential opportunities, but I lack meaningful buying power with only $1.15 available after maintaining the $500 cash reserve.",
+  "last_updated": "2026-05-14T13:32:55Z",
   "last_session": {
-    "at": "2026-05-13T19:31:36Z",
-    "fear_greed": 42,
+    "at": "2026-05-14T13:32:55Z",
+    "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.74,
-    "vix": 17.84,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.58,
+    "vix": 17.88,
+    "top_movers": [
+      [
+        "RXRX",
+        3.93
+      ],
+      [
+        "ILMN",
+        2.23
+      ],
+      [
+        "ROKU",
+        1.46
+      ],
+      [
+        "AFRM",
+        1.12
+      ],
+      [
+        "COIN",
+        -1.09
+      ],
+      [
+        "PLTR",
+        1.04
+      ]
+    ],
+    "news_read": [
+      "U.S. can hold AI talks with China because \u2018we are in the lead,\u2019 Bessent tells CNBC as nations plan safety protocol",
+      "Chinese companies are ramping up homegrown AI chips, even if Nvidia is coming back",
+      "Turnkey raises $12.5 million in round backed by Circle Ventures and Sequoia Capital",
+      "Stablecoin-powered neobank Fasset raises $51 million to expand across emerging markets",
+      "Xi tells Musk, Tim Cook and other CEOs on Trump's trip: China will 'open wider'"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "My cash position of $501.15 limits me to just $1.15 in tradable funds after respecting the $500 reserve rule - essentially no capacity to add to positions. RXRX showed strength today (+3.93%) and ILMN surged (+2.23%), both genomics plays that fit my thesis. With fear in the market, normally I'd be buying more of my existing positions (TSLA, RKLB, CRSP, NTLA) as they go on 'sale,' but the math doesn't work. I'm holding all positions as the long-term thesis remains intact: space commercialization (RKLB), gene editing (CRSP/NTLA), and autonomous vehicles (TSLA) will compound over 5+ years regardless of short-term noise.",
+    "outlook": "Market in slight fear (34) with low VIX (17.88) presents potential opportunities, but I lack meaningful buying power with only $1.15 available after maintaining the $500 cash reserve.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -311,6 +342,10 @@
     {
       "timestamp": "2026-05-13T19:31:36Z",
       "value": 12268.78
+    },
+    {
+      "timestamp": "2026-05-14T13:32:55Z",
+      "value": 12093.66
     }
   ]
 }

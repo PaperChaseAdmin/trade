@@ -1,84 +1,84 @@
 {
   "cash": 505.75,
-  "total_value": 10837.65,
+  "total_value": 10865.01,
   "positions": {
     "AAPL": {
       "shares": 12,
-      "current_price": 299.02,
+      "current_price": 299.5901,
       "avg_cost": 280.15
     },
     "TSLA": {
       "shares": 8,
-      "current_price": 444.9562,
+      "current_price": 445.81,
       "avg_cost": 390.66
     },
     "NVDA": {
       "shares": 9,
-      "current_price": 226.64,
+      "current_price": 229.585,
       "avg_cost": 202.8012
     },
     "COIN": {
       "shares": 5,
       "avg_cost": 195.225,
-      "current_price": 202.84
+      "current_price": 200.09
     },
     "PLTR": {
       "shares": 1,
       "avg_cost": 137.295,
-      "current_price": 130.05
+      "current_price": 130.985
     }
   },
-  "total_return_pct": 8.38,
+  "total_return_pct": 8.65,
   "total_return_usd": 0.0,
-  "today_pnl": 123.55,
-  "today_pnl_pct": 1.15,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 11,
-  "today_start_value": 10714.1,
-  "today_date": "2026-05-13",
-  "last_action": "Fear index at 42 signals caution but not extreme enough to go aggressive; low VIX (17.84) and strong tech momentum (TSLA +2.7%, NVDA +2.65%) suggest staying the course with winners.",
-  "last_updated": "2026-05-13T19:33:46Z",
+  "today_start_value": 10865.01,
+  "today_date": "2026-05-14",
+  "last_action": "Fear market (34) with low VIX (17.88) suggests opportunity but I'm already maxed out on top positions with minimal cash.",
+  "last_updated": "2026-05-14T13:31:53Z",
   "last_session": {
-    "at": "2026-05-13T19:33:46Z",
-    "fear_greed": 42,
+    "at": "2026-05-14T13:31:53Z",
+    "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.74,
-    "vix": 17.84,
+    "sp500_change": 0.58,
+    "vix": 17.88,
     "top_movers": [
       [
-        "PLTR",
-        -4.37
+        "AMD",
+        -1.86
       ],
       [
-        "GOOGL",
-        4.11
-      ],
-      [
-        "RIVN",
-        3.69
+        "NVDA",
+        1.81
       ],
       [
         "SOFI",
-        -3.22
+        1.21
       ],
       [
-        "MSTR",
-        -3.09
+        "COIN",
+        -1.09
       ],
       [
-        "TSLA",
-        2.69
+        "IONQ",
+        -1.05
+      ],
+      [
+        "PLTR",
+        1.04
       ]
     ],
     "news_read": [
-      "Kevin Warsh wins Senate confirmation as the next Federal Reserve chair",
-      "Altman details Musk's OpenAI fallout, says nonprofit was 'left for dead'",
-      "AI-driven cyberattacks will start to be the 'new norm' in months, Palo Alto warns",
-      "5 tests Kevin Warsh will face as Fed chair",
-      "Trump arrives in Beijing with CEOs ahead of Xi meetings"
+      "U.S. can hold AI talks with China because \u2018we are in the lead,\u2019 Bessent tells CNBC as nations plan safety protocol",
+      "Chinese companies are ramping up homegrown AI chips, even if Nvidia is coming back",
+      "Turnkey raises $12.5 million in round backed by Circle Ventures and Sequoia Capital",
+      "Stablecoin-powered neobank Fasset raises $51 million to expand across emerging markets",
+      "Xi tells Musk, Tim Cook and other CEOs on Trump's trip: China will 'open wider'"
     ],
     "domain_extra": "",
-    "ai_analysis": "Portfolio is nearly fully deployed with only $505.75 cash (minimum reserve), leaving no buying power for new positions despite attractive moves in GOOGL (+4.1%) and RIVN (+3.7%). TSLA and NVDA showing strong momentum but already at 33% and 19% allocation respectively - would need to trim winners to add more. PLTR down 4.4% is concerning but position is too small to matter. Holding all positions and watching for profit-taking opportunities to redeploy into stronger movers next session.",
-    "outlook": "Fear index at 42 signals caution but not extreme enough to go aggressive; low VIX (17.84) and strong tech momentum (TSLA +2.7%, NVDA +2.65%) suggest staying the course with winners.",
+    "ai_analysis": "My AAPL (33.2%) and TSLA (32.9%) positions are both approaching the 35% limit, and with only $505.75 cash (barely above the $500 reserve requirement), I have no meaningful buying power. NVDA is up 1.8% today with strong momentum but I'm already at 19% there. AMD down 1.9% looks tempting as a dip in the AI space but I can't add new positions with these constraints. Will wait for either a winner to take profits or for cash to build before making moves.",
+    "outlook": "Fear market (34) with low VIX (17.88) suggests opportunity but I'm already maxed out on top positions with minimal cash.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -341,6 +341,10 @@
     {
       "timestamp": "2026-05-13T19:33:46Z",
       "value": 10837.65
+    },
+    {
+      "timestamp": "2026-05-14T13:31:53Z",
+      "value": 10865.01
     }
   ]
 }

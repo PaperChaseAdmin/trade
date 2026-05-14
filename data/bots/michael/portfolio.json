@@ -1,68 +1,98 @@
 {
   "cash": 3457.15,
-  "total_value": 10449.29,
+  "total_value": 10348.48,
   "positions": {
     "KHC": {
       "shares": 21,
-      "current_price": 23.245,
+      "current_price": 23.525,
       "avg_cost": 22.48
     },
     "PFE": {
       "shares": 15,
       "avg_cost": 26.335,
-      "current_price": 25.955
+      "current_price": 26.02
     },
     "INTC": {
       "shares": 10,
       "avg_cost": 96.92,
-      "current_price": 120.565
+      "current_price": 113.935
     },
     "F": {
       "shares": 25,
       "avg_cost": 11.505,
-      "current_price": 13.8907
+      "current_price": 13.91
     },
     "OXY": {
       "shares": 30,
-      "current_price": 56.165,
+      "current_price": 55.98,
       "avg_cost": 56.61
     },
     "GEO": {
       "shares": 30,
       "avg_cost": 18.545,
-      "current_price": 22.6
+      "current_price": 23.11
     },
     "BABA": {
       "shares": 10,
-      "current_price": 146.45,
+      "current_price": 140.52,
       "avg_cost": 137.4875
     },
     "WFC": {
       "shares": 10,
       "avg_cost": 78.94,
-      "current_price": 73.43
+      "current_price": 74.2009
     }
   },
-  "total_return_pct": 4.49,
+  "total_return_pct": 3.48,
   "total_return_usd": 0.0,
-  "today_pnl": 185.55,
-  "today_pnl_pct": 1.81,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 11,
-  "today_start_value": 10263.74,
-  "today_date": "2026-05-13",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-13T19:31:57Z",
+  "today_start_value": 10348.48,
+  "today_date": "2026-05-14",
+  "last_action": "Fear at 34 creates potential opportunities but valuations aren't compelling enough yet - will wait for clearer signals",
+  "last_updated": "2026-05-14T13:32:42Z",
   "last_session": {
-    "at": "2026-05-13T19:31:57Z",
-    "fear_greed": 42,
+    "at": "2026-05-14T13:32:42Z",
+    "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.74,
-    "vix": 17.84,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.58,
+    "vix": 17.88,
+    "top_movers": [
+      [
+        "INTC",
+        -5.33
+      ],
+      [
+        "BABA",
+        -3.91
+      ],
+      [
+        "F",
+        2.84
+      ],
+      [
+        "GEO",
+        1.7
+      ],
+      [
+        "KHC",
+        1.38
+      ],
+      [
+        "WFC",
+        0.93
+      ]
+    ],
+    "news_read": [
+      "Xi tells Musk, Tim Cook and other CEOs on Trump's trip: China will 'open wider'",
+      "Xi asks Trump if U.S. and China can avoid 'Thucydides Trap' at high-stakes summit",
+      "Trump-Xi summit could hinge on these two crucial tech flashpoints",
+      "Versant stock jumps 10% after company's Q1 report shows bright spots in licensing, platforms"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=34 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "INTC dropping 5.3% and BABA 3.9% are interesting as a contrarian, but INTC is already up 17% from my cost basis and BABA is barely profitable. CVS at 97.9 (down 0.37%) catches my eye - healthcare play with real assets trading near round number, but need to research fundamentals before committing. My cash position of 33% is appropriate for this fearful environment; better to have dry powder than force a trade. Steel names (STLD, NUE) down slightly but not at levels that scream value. Holding pattern - will dig into CVS fundamentals before next session.",
+    "outlook": "Fear at 34 creates potential opportunities but valuations aren't compelling enough yet - will wait for clearer signals",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -321,6 +351,10 @@
     {
       "timestamp": "2026-05-13T19:31:57Z",
       "value": 10449.29
+    },
+    {
+      "timestamp": "2026-05-14T13:32:42Z",
+      "value": 10348.48
     }
   ]
 }
