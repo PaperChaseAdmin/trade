@@ -1,58 +1,87 @@
 {
   "cash": 1044.9,
-  "total_value": 9619.08,
+  "total_value": 9640.9,
   "positions": {
     "WFC": {
       "shares": 30,
       "avg_cost": 80.81,
-      "current_price": 73.32
+      "current_price": 73.4
     },
     "BAC": {
       "shares": 47,
-      "current_price": 49.765,
+      "current_price": 50.015,
       "avg_cost": 53.2059
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 309.545,
-      "current_price": 299.61
+      "current_price": 300.25
     },
     "PRU": {
       "shares": 5,
       "avg_cost": 97.485,
-      "current_price": 102.995
+      "current_price": 103.39
     },
     "GS": {
       "shares": 1,
       "avg_cost": 905.09,
-      "current_price": 965.65
+      "current_price": 965.85
     },
     "MET": {
       "shares": 2,
       "avg_cost": 80.62,
-      "current_price": 79.06
+      "current_price": 79.25
     }
   },
-  "total_return_pct": -3.81,
+  "total_return_pct": -3.59,
   "total_return_usd": 0.0,
-  "today_pnl": -75.57,
-  "today_pnl_pct": -0.78,
+  "today_pnl": -53.75,
+  "today_pnl_pct": -0.55,
   "total_trades": 7,
   "today_start_value": 9694.65,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T17:02:35Z",
+  "last_action": "With minimal cash reserves ($44.90 usable) and the market showing slight strength (S&P +0.72%, VIX at 17.64), I'll hold my positions and wait for a better entry point.",
+  "last_updated": "2026-05-14T17:21:20Z",
   "last_session": {
-    "at": "2026-05-14T17:02:35Z",
+    "at": "2026-05-14T17:21:20Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.75,
-    "vix": 17.69,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.72,
+    "vix": 17.64,
+    "top_movers": [
+      [
+        "COF",
+        2.3
+      ],
+      [
+        "MET",
+        1.5
+      ],
+      [
+        "PGR",
+        1.36
+      ],
+      [
+        "AXP",
+        1.15
+      ],
+      [
+        "GS",
+        1.12
+      ],
+      [
+        "TRV",
+        1.01
+      ]
+    ],
+    "news_read": [
+      "Bessent sees 'substantial disinflation' ahead as Warsh takes over the Fed",
+      "LIVE: Senate Banking Committee advances Clarity Act to full Senate floor",
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "I'm constrained by the $1000 cash reserve rule, leaving only $44.90 to trade with - insufficient for meaningful positions. The Fear & Greed index at 34 indicates market fear, which historically could be a buying opportunity for a banker like me who believes in sector fundamentals. Top movers today are bank-related (COF +2.3%, MET +1.5%, GS +1.1%), confirming my thesis that financial institutions are performing. I'm watching for a pullback or additional cash to add to my bank positions, particularly WFC and BAC which are down the most in my portfolio.",
+    "outlook": "With minimal cash reserves ($44.90 usable) and the market showing slight strength (S&P +0.72%, VIX at 17.64), I'll hold my positions and wait for a better entry point.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -335,6 +364,10 @@
     {
       "timestamp": "2026-05-14T17:02:35Z",
       "value": 9619.08
+    },
+    {
+      "timestamp": "2026-05-14T17:21:20Z",
+      "value": 9640.9
     }
   ]
 }
