@@ -1,58 +1,89 @@
 {
   "cash": 1044.9,
-  "total_value": 9697.0,
+  "total_value": 9705.51,
   "positions": {
     "WFC": {
       "shares": 30,
       "avg_cost": 80.81,
-      "current_price": 74.24
+      "current_price": 74.21
     },
     "BAC": {
       "shares": 47,
-      "current_price": 50.25,
+      "current_price": 50.355,
       "avg_cost": 53.2059
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 309.545,
-      "current_price": 302.73
+      "current_price": 302.54
     },
     "PRU": {
       "shares": 5,
       "avg_cost": 97.485,
-      "current_price": 103.49
+      "current_price": 103.78
     },
     "GS": {
       "shares": 1,
       "avg_cost": 905.09,
-      "current_price": 965.75
+      "current_price": 969.545
     },
     "MET": {
       "shares": 2,
       "avg_cost": 80.62,
-      "current_price": 79.055
+      "current_price": 79.43
     }
   },
-  "total_return_pct": -3.03,
+  "total_return_pct": -2.94,
   "total_return_usd": 0.0,
-  "today_pnl": 2.35,
-  "today_pnl_pct": 0.02,
+  "today_pnl": 10.86,
+  "today_pnl_pct": 0.11,
   "total_trades": 7,
   "today_start_value": 9694.65,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T14:03:14Z",
+  "last_action": "Markets showing modest strength with S&P up 0.71% and VIX low at 18.05, but fear sentiment (34) keeps me cautious despite positive bank momentum.",
+  "last_updated": "2026-05-14T15:03:08Z",
   "last_session": {
-    "at": "2026-05-14T14:03:14Z",
+    "at": "2026-05-14T15:03:08Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.45,
-    "vix": 17.9,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.71,
+    "vix": 18.05,
+    "top_movers": [
+      [
+        "COF",
+        2.38
+      ],
+      [
+        "MET",
+        1.75
+      ],
+      [
+        "GS",
+        1.48
+      ],
+      [
+        "PRU",
+        1.37
+      ],
+      [
+        "BAC",
+        1.04
+      ],
+      [
+        "WFC",
+        0.99
+      ]
+    ],
+    "news_read": [
+      "Bessent sees 'substantial disinflation' ahead as Warsh takes over the Fed",
+      "We\u2019re in our 40s. Our mortgage is nearly paid off \u2014 how should we invest our extra $1,500 a month?",
+      "LIVE: Senate Banking Committee holds key hearing to advance Clarity Act",
+      "Stablecoin-powered neobank Fasset raises $51 million to expand across emerging markets",
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "My bank stocks (BAC +1.04%, WFC +0.99%, GS +1.48%) are all moving higher today on the disinflation news, which is constructive for the sector. However, I have only $44.90 above my $1000 cash reserve after holding, making meaningful new positions impossible. I'm holding my existing bank and insurance positions which are showing solid gains today - GS up $64 and PRU up $31. The Senate Banking Committee hearing on the Clarity Act bears watching as it could impact regulatory clarity for financial institutions.",
+    "outlook": "Markets showing modest strength with S&P up 0.71% and VIX low at 18.05, but fear sentiment (34) keeps me cautious despite positive bank momentum.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -315,6 +346,10 @@
     {
       "timestamp": "2026-05-14T14:03:14Z",
       "value": 9697.0
+    },
+    {
+      "timestamp": "2026-05-14T15:03:08Z",
+      "value": 9705.51
     }
   ]
 }

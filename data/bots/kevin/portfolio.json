@@ -1,53 +1,83 @@
 {
   "cash": 524.97,
-  "total_value": 10141.96,
+  "total_value": 10181.87,
   "positions": {
     "O": {
       "shares": 31,
       "avg_cost": 63.38,
-      "current_price": 61.68
+      "current_price": 61.835
     },
     "T": {
       "shares": 76,
       "avg_cost": 26.0,
-      "current_price": 24.795
+      "current_price": 24.72
     },
     "VZ": {
       "shares": 42,
       "avg_cost": 47.435,
-      "current_price": 47.195
+      "current_price": 47.115
     },
     "OHI": {
       "shares": 41,
       "avg_cost": 45.83,
-      "current_price": 47.8
+      "current_price": 48.07
     },
     "PM": {
       "shares": 10,
       "avg_cost": 166.2951,
-      "current_price": 187.85
+      "current_price": 191.16
     }
   },
-  "total_return_pct": 1.42,
+  "total_return_pct": 1.82,
   "total_return_usd": 0.0,
-  "today_pnl": -37.4,
-  "today_pnl_pct": -0.37,
+  "today_pnl": 2.51,
+  "today_pnl_pct": 0.02,
   "total_trades": 5,
   "today_start_value": 10179.36,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T14:03:35Z",
+  "last_action": "Fear market (34) with minimal cash ($524.97) means holding steady - can't add positions with only $24.97 workable capital after $500 reserve.",
+  "last_updated": "2026-05-14T15:02:57Z",
   "last_session": {
-    "at": "2026-05-14T14:03:35Z",
+    "at": "2026-05-14T15:02:57Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.45,
-    "vix": 17.9,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.71,
+    "vix": 18.05,
+    "top_movers": [
+      [
+        "ABBV",
+        2.17
+      ],
+      [
+        "BTI",
+        1.76
+      ],
+      [
+        "PM",
+        1.73
+      ],
+      [
+        "IBM",
+        1.68
+      ],
+      [
+        "ENB",
+        1.31
+      ],
+      [
+        "MAIN",
+        -1.17
+      ]
+    ],
+    "news_read": [
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'",
+      "Cisco CEO says tech is entering a 'networking supercycle' as stock pops 14% on strong AI demand",
+      "Bessent sees 'substantial disinflation' ahead as Warsh takes over the Fed",
+      "Xi tells Musk, Tim Cook and other CEOs on Trump's trip: China will 'open wider'"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=34 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "Watchlist shows dividend payers leading: ABBV +2.2%, BTI +1.8%, PM +1.7%, IBM +1.7% - all strong performers but I cannot buy with essentially zero available capital. My PM position is up nicely (+$248.65) and OHI is solid (+$91.84), but T and VZ remain underwater. ABBV at 212.96 with 2.17% gain is tempting - great dividend yield and pharma fundamentals - but need to accumulate more cash before adding. Next session I'll look to deploy cash into either ABBV or MAIN if it dips further (REIT with good dividend).",
+    "outlook": "Fear market (34) with minimal cash ($524.97) means holding steady - can't add positions with only $24.97 workable capital after $500 reserve.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -310,6 +340,10 @@
     {
       "timestamp": "2026-05-14T14:03:35Z",
       "value": 10141.96
+    },
+    {
+      "timestamp": "2026-05-14T15:02:57Z",
+      "value": 10181.87
     }
   ]
 }

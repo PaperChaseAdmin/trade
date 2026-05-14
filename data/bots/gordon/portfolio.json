@@ -1,68 +1,98 @@
 {
   "cash": 504.86,
-  "total_value": 10090.38,
+  "total_value": 10095.27,
   "positions": {
     "DIS": {
       "shares": 10,
       "avg_cost": 103.09,
-      "current_price": 105.585
+      "current_price": 105.76
     },
     "NKE": {
       "shares": 20,
       "avg_cost": 43.345,
-      "current_price": 42.405
+      "current_price": 42.395
     },
     "INTC": {
       "shares": 8,
       "avg_cost": 96.92,
-      "current_price": 116.41
+      "current_price": 116.3
     },
     "F": {
       "shares": 50,
       "avg_cost": 11.505,
-      "current_price": 14.6099
+      "current_price": 14.645
     },
     "PYPL": {
       "shares": 20,
-      "current_price": 44.81,
+      "current_price": 45.305,
       "avg_cost": 45.8903
     },
     "VFC": {
       "shares": 121,
       "avg_cost": 19.27,
-      "current_price": 17.485
+      "current_price": 17.465
     },
     "WBD": {
       "shares": 110,
       "avg_cost": 27.345,
-      "current_price": 27.21
+      "current_price": 27.165
     },
     "NOK": {
       "shares": 1,
       "avg_cost": 12.8999,
-      "current_price": 14.805
+      "current_price": 14.75
     }
   },
-  "total_return_pct": 0.9,
+  "total_return_pct": 0.95,
   "total_return_usd": 0.0,
-  "today_pnl": 13.85,
-  "today_pnl_pct": 0.14,
+  "today_pnl": 18.74,
+  "today_pnl_pct": 0.19,
   "total_trades": 10,
   "today_start_value": 10076.53,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T14:04:03Z",
+  "last_action": "With Fear at 34 and VIX at 18.05, the market shows cautious sentiment but my $4.86 above minimum reserve is too thin to add positions.",
+  "last_updated": "2026-05-14T15:03:08Z",
   "last_session": {
-    "at": "2026-05-14T14:04:03Z",
+    "at": "2026-05-14T15:03:08Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.45,
-    "vix": 17.9,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.71,
+    "vix": 18.05,
+    "top_movers": [
+      [
+        "F",
+        8.0
+      ],
+      [
+        "INTC",
+        -3.34
+      ],
+      [
+        "GM",
+        3.3
+      ],
+      [
+        "SBUX",
+        2.15
+      ],
+      [
+        "VFC",
+        1.96
+      ],
+      [
+        "CMCSA",
+        1.74
+      ]
+    ],
+    "news_read": [
+      "Cisco CEO says tech is entering a 'networking supercycle' as stock pops 14% on strong AI demand",
+      "Xi tells Musk, Tim Cook and other CEOs on Trump's trip: China will 'open wider'",
+      "Venezuela embarks on $150 billion restructuring of debt amid political turmoil",
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "My cash buffer is nearly depleted at $504.86 against the $500 minimum - I have virtually no buying power left after building positions in DIS, INTC, F, VFC, WBD and others. F is up 8% today which validates my activist thesis on beaten-down auto stocks, but I'm already maxed out. INTC dropped 3.3% which could be an entry signal but I already hold 8 shares at $96.92. Watching for any of my positions to trigger restructuring news that could unlock value - that's when I'll need dry powder.",
+    "outlook": "With Fear at 34 and VIX at 18.05, the market shows cautious sentiment but my $4.86 above minimum reserve is too thin to add positions.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -329,6 +359,10 @@
     {
       "timestamp": "2026-05-14T14:04:03Z",
       "value": 10090.38
+    },
+    {
+      "timestamp": "2026-05-14T15:03:08Z",
+      "value": 10095.27
     }
   ]
 }
