@@ -1,73 +1,103 @@
 {
   "cash": 2139.95,
-  "total_value": 10418.14,
+  "total_value": 10410.79,
   "positions": {
     "KHC": {
       "shares": 21,
-      "current_price": 23.44,
+      "current_price": 23.385,
       "avg_cost": 22.48
     },
     "PFE": {
       "shares": 15,
       "avg_cost": 26.335,
-      "current_price": 25.8364
+      "current_price": 25.785
     },
     "INTC": {
       "shares": 10,
       "avg_cost": 96.92,
-      "current_price": 114.93
+      "current_price": 115.0
     },
     "F": {
       "shares": 25,
       "avg_cost": 11.505,
-      "current_price": 14.505
+      "current_price": 14.435
     },
     "OXY": {
       "shares": 30,
-      "current_price": 57.23,
+      "current_price": 57.16,
       "avg_cost": 56.61
     },
     "GEO": {
       "shares": 30,
       "avg_cost": 18.545,
-      "current_price": 23.1242
+      "current_price": 23.03
     },
     "BABA": {
       "shares": 10,
-      "current_price": 142.065,
+      "current_price": 142.2401,
       "avg_cost": 137.4875
     },
     "WFC": {
       "shares": 10,
       "avg_cost": 78.94,
-      "current_price": 73.4
+      "current_price": 73.46
     },
     "JD": {
       "shares": 40,
       "avg_cost": 32.93,
-      "current_price": 33.03
+      "current_price": 32.985
     }
   },
-  "total_return_pct": 4.18,
+  "total_return_pct": 4.11,
   "total_return_usd": 0.0,
-  "today_pnl": 69.66,
-  "today_pnl_pct": 0.67,
+  "today_pnl": 62.31,
+  "today_pnl_pct": 0.6,
   "total_trades": 12,
   "today_start_value": 10348.48,
   "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T17:20:41Z",
+  "last_action": "Fear index at 34 suggests opportunity, but today's movers (F up 6.3%, INTC down 4.4%) don't present clear contrarian value vs. my existing positions.",
+  "last_updated": "2026-05-14T17:33:01Z",
   "last_session": {
-    "at": "2026-05-14T17:20:41Z",
+    "at": "2026-05-14T17:33:01Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.72,
-    "vix": 17.64,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.56,
+    "vix": 17.56,
+    "top_movers": [
+      [
+        "F",
+        6.34
+      ],
+      [
+        "INTC",
+        -4.39
+      ],
+      [
+        "BABA",
+        -2.42
+      ],
+      [
+        "JD",
+        -2.34
+      ],
+      [
+        "OXY",
+        1.74
+      ],
+      [
+        "GEO",
+        1.68
+      ]
+    ],
+    "news_read": [
+      "Cerebras almost doubles in Nasdaq debut, topping $100 billion market cap after blockbuster IPO",
+      "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in 'great jeopardy'",
+      "China will order 200 Boeing jets, Trump tells Fox News",
+      "Crypto industry scores win as Clarity Act regulation bill clears Senate hurdle"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=34 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "Reviewed watchlist thoroughly - F is up 6.3% today so not a dip to buy, INTC down 4.4% but I'm already up $180 on that position and it's grown large. My cash position of $2,139.95 is exactly at my 20% target and I need to preserve the $2,000 reserve. BABA and JD are down but I already have positions and they're not significantly undervalued from here. The contrarian play would be adding to beaten-down names, but I don't see clear undervaluation today - will stay patient and wait for better entries.",
+    "outlook": "Fear index at 34 suggests opportunity, but today's movers (F up 6.3%, INTC down 4.4%) don't present clear contrarian value vs. my existing positions.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -358,6 +388,10 @@
     {
       "timestamp": "2026-05-14T17:20:41Z",
       "value": 10418.14
+    },
+    {
+      "timestamp": "2026-05-14T17:33:01Z",
+      "value": 10410.79
     }
   ]
 }
