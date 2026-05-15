@@ -1,38 +1,68 @@
 {
   "cash": 5266.18,
-  "total_value": 10091.96,
+  "total_value": 10074.87,
   "positions": {
     "PG": {
       "shares": 17,
       "avg_cost": 144.57,
-      "current_price": 143.175
+      "current_price": 142.45
     },
     "AAPL": {
       "shares": 8,
-      "current_price": 298.975,
+      "current_price": 298.38,
       "avg_cost": 284.5163
     }
   },
-  "total_return_pct": 0.92,
+  "total_return_pct": 0.75,
   "total_return_usd": 0.0,
-  "today_pnl": 16.11,
-  "today_pnl_pct": 0.16,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 3,
-  "today_start_value": 10075.85,
-  "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T19:18:38Z",
+  "today_start_value": 10074.87,
+  "today_date": "2026-05-15",
+  "last_action": "Market down 1% with fear prevailing (43) creates potential opportunity, but my quality positions in PG and AAPL are well-balanced and I'm maintaining strong cash reserves for better entry points.",
+  "last_updated": "2026-05-15T14:02:23Z",
   "last_session": {
-    "at": "2026-05-14T19:18:38Z",
-    "fear_greed": 34,
+    "at": "2026-05-15T14:02:23Z",
+    "fear_greed": 43,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.84,
-    "vix": 17.26,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -1.0,
+    "vix": 18.64,
+    "top_movers": [
+      [
+        "MA",
+        2.28
+      ],
+      [
+        "V",
+        1.96
+      ],
+      [
+        "CVX",
+        1.69
+      ],
+      [
+        "ABBV",
+        1.0
+      ],
+      [
+        "KO",
+        0.97
+      ],
+      [
+        "MCD",
+        0.85
+      ]
+    ],
+    "news_read": [
+      "Trump told Xi \u2018I don't talk about\u2019 whether U.S. would defend Taiwan from China",
+      "Starbucks to lay off 300 U.S. employees, shutter some regional support offices",
+      "30-year Treasury yield tops 5.1%, highest in nearly a year",
+      "Detroit automakers have cut more than 20,000 U.S. salaried jobs as AI threat looms"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=43 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "No compelling buy opportunity today - MA and V are up over 2% so not at fair prices, while other quality names like KO and JNJ show minimal movement. My AAPL position is up nicely (+$111) and PG is slightly underwater (-$36) but both represent quality businesses I won't panic-sell. The 30-year Treasury at 5.1% is concerning for equity valuations and the auto sector layoffs signal economic headwinds. I'm holding my positions and waiting for better risk/reward setups.",
+    "outlook": "Market down 1% with fear prevailing (43) creates potential opportunity, but my quality positions in PG and AAPL are well-balanced and I'm maintaining strong cash reserves for better entry points.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -343,6 +373,10 @@
     {
       "timestamp": "2026-05-14T19:18:38Z",
       "value": 10091.96
+    },
+    {
+      "timestamp": "2026-05-15T14:02:23Z",
+      "value": 10074.87
     }
   ]
 }

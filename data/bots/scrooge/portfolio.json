@@ -1,69 +1,97 @@
 {
-  "cash": 317.74,
-  "total_value": 9779.9,
+  "cash": 252.48,
+  "total_value": 9772.14,
   "positions": {
     "MO": {
       "shares": 26,
       "avg_cost": 74.55,
-      "current_price": 72.12
+      "current_price": 72.54
     },
     "OHI": {
       "shares": 42,
       "avg_cost": 46.98,
-      "current_price": 47.85
+      "current_price": 47.755
     },
     "O": {
       "shares": 9,
       "avg_cost": 63.416,
-      "current_price": 62.135
+      "current_price": 61.43
     },
     "MAIN": {
       "shares": 38,
-      "current_price": 51.06,
+      "current_price": 50.535,
       "avg_cost": 54.7994
     },
     "T": {
       "shares": 29,
-      "current_price": 24.775,
+      "current_price": 24.825,
       "avg_cost": 25.6443
     },
     "BTI": {
-      "shares": 4,
-      "avg_cost": 60.155,
-      "current_price": 66.825
+      "shares": 5,
+      "current_price": 65.26,
+      "avg_cost": 61.176
     },
     "ABBV": {
       "shares": 1,
       "avg_cost": 207.775,
-      "current_price": 211.065
+      "current_price": 212.775
     },
     "VZ": {
       "shares": 40,
       "avg_cost": 48.14,
-      "current_price": 47.025
+      "current_price": 47.3927
     }
   },
-  "total_return_pct": -2.2,
+  "total_return_pct": -2.28,
   "total_return_usd": 0.0,
-  "today_pnl": -37.31,
-  "today_pnl_pct": -0.38,
-  "total_trades": 14,
-  "today_start_value": 9817.21,
-  "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T19:19:19Z",
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
+  "total_trades": 15,
+  "today_start_value": 9772.14,
+  "today_date": "2026-05-15",
+  "last_action": "Fear dominates (43) with market down 1% - perfect conditions for a value investor to scoop up quality dividend stocks at discounts",
+  "last_updated": "2026-05-15T14:03:46Z",
   "last_session": {
-    "at": "2026-05-14T19:19:19Z",
-    "fear_greed": 34,
+    "at": "2026-05-15T14:03:46Z",
+    "fear_greed": 43,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.84,
-    "vix": 17.26,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "sp500_change": -1.0,
+    "vix": 18.64,
+    "top_movers": [
+      [
+        "GLD",
+        -2.72
+      ],
+      [
+        "ENB",
+        -2.33
+      ],
+      [
+        "BTI",
+        -2.17
+      ],
+      [
+        "ABBV",
+        1.0
+      ],
+      [
+        "WPC",
+        -0.92
+      ],
+      [
+        "O",
+        -0.82
+      ]
+    ],
+    "news_read": [
+      "30-year Treasury yield tops 5.1%, highest in nearly a year",
+      "Trump told Xi \u2018I don't talk about\u2019 whether U.S. would defend Taiwan from China"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=43 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "I noticed GLD dropped 2.7% and BTI fell 2.2% - both are excellent opportunities for a dividend hoarder. Treasury yields at 5.1% make fixed-income alternatives more competitive, but quality dividend stocks like BTI still offer superior yields. I'm holding my other positions because none have cut dividends - MAIN, O, T, MO and VZ are all still paying and I'll never sell a dividend payer. Watching ABBV which is up 1% - might add more pharma exposure if it dips.",
+    "outlook": "Fear dominates (43) with market down 1% - perfect conditions for a value investor to scoop up quality dividend stocks at discounts",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -369,6 +397,10 @@
     {
       "timestamp": "2026-05-14T19:19:19Z",
       "value": 9779.9
+    },
+    {
+      "timestamp": "2026-05-15T14:03:46Z",
+      "value": 9772.14
     }
   ]
 }

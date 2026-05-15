@@ -1,48 +1,78 @@
 {
   "cash": 2926.53,
-  "total_value": 10094.47,
+  "total_value": 10003.85,
   "positions": {
     "TLT": {
       "shares": 23,
       "avg_cost": 85.6,
-      "current_price": 85.0699
+      "current_price": 83.76
     },
     "GLD": {
       "shares": 4,
       "avg_cost": 423.3,
-      "current_price": 428.4145
+      "current_price": 415.79
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 720.67,
-      "current_price": 748.49
+      "current_price": 739.64
     },
     "GSG": {
       "shares": 59,
-      "current_price": 33.91,
+      "current_price": 34.0407,
       "avg_cost": 33.392
     }
   },
-  "total_return_pct": 0.94,
+  "total_return_pct": 0.04,
   "total_return_usd": 0.0,
-  "today_pnl": 8.09,
-  "today_pnl_pct": 0.08,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 7,
-  "today_start_value": 10086.38,
-  "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T19:19:50Z",
+  "today_start_value": 10003.85,
+  "today_date": "2026-05-15",
+  "last_action": "Risk-off environment with fear at 43, 30-year Treasury at 5.1%, and broad market selloff; holding steady on diversified positions.",
+  "last_updated": "2026-05-15T14:04:03Z",
   "last_session": {
-    "at": "2026-05-14T19:19:50Z",
-    "fear_greed": 34,
+    "at": "2026-05-15T14:04:03Z",
+    "fear_greed": 43,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.84,
-    "vix": 17.26,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -1.0,
+    "vix": 18.64,
+    "top_movers": [
+      [
+        "GDX",
+        -6.58
+      ],
+      [
+        "EEM",
+        -3.71
+      ],
+      [
+        "GLD",
+        -2.72
+      ],
+      [
+        "VWO",
+        -2.7
+      ],
+      [
+        "IAU",
+        -2.67
+      ],
+      [
+        "FXI",
+        -2.39
+      ]
+    ],
+    "news_read": [
+      "30-year Treasury yield tops 5.1%, highest in nearly a year",
+      "Powell\u2019s legacy as Fed chair is fighting inflation and Trump. He may lose the battle against both.",
+      "Strategy to repurchase $1.5 billion of 2029 convertible bonds using cash or bitcoin sales",
+      "Trump told Xi \u2018I don't talk about\u2019 whether U.S. would defend Taiwan from China"
+    ],
+    "domain_extra": "MACRO: NASDAQ -1.40%  DOW -0.82%  VIX 18.6 (NORMAL)",
+    "ai_analysis": "The portfolio is well-balanced with ~29% cash, and all four positions (TLT 19%, GSG 20%, GLD 16%, SPY 15%) are within the 20% max allocation rule. Today's selloff in gold (GLD -2.7%) and commodities (GSG +0.27%) is concerning but not alarming enough to add risk. The 30-year Treasury yield at 5.1% makes bonds more attractive, but TLT is already at the 20% ceiling. With VIX at 18.6 (normal range) and max 2 trades available, I'm preserving dry powder for better entry points rather than chasing falling knives.",
+    "outlook": "Risk-off environment with fear at 43, 30-year Treasury at 5.1%, and broad market selloff; holding steady on diversified positions.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -349,6 +379,10 @@
     {
       "timestamp": "2026-05-14T19:19:50Z",
       "value": 10094.47
+    },
+    {
+      "timestamp": "2026-05-15T14:04:03Z",
+      "value": 10003.85
     }
   ]
 }

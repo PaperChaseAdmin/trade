@@ -1,73 +1,103 @@
 {
   "cash": 2139.95,
-  "total_value": 10400.17,
+  "total_value": 10228.34,
   "positions": {
     "KHC": {
       "shares": 21,
-      "current_price": 23.225,
+      "current_price": 23.235,
       "avg_cost": 22.48
     },
     "PFE": {
       "shares": 15,
       "avg_cost": 26.335,
-      "current_price": 25.7751
+      "current_price": 25.59
     },
     "INTC": {
       "shares": 10,
       "avg_cost": 96.92,
-      "current_price": 115.78
+      "current_price": 107.4755
     },
     "F": {
       "shares": 25,
       "avg_cost": 11.505,
-      "current_price": 14.365
+      "current_price": 13.35
     },
     "OXY": {
       "shares": 30,
-      "current_price": 56.9,
+      "current_price": 58.59,
       "avg_cost": 56.61
     },
     "GEO": {
       "shares": 30,
       "avg_cost": 18.545,
-      "current_price": 23.165
+      "current_price": 23.07
     },
     "BABA": {
       "shares": 10,
-      "current_price": 140.9142,
+      "current_price": 133.525,
       "avg_cost": 137.4875
     },
     "WFC": {
       "shares": 10,
       "avg_cost": 78.94,
-      "current_price": 73.805
+      "current_price": 73.785
     },
     "JD": {
       "shares": 40,
       "avg_cost": 32.93,
-      "current_price": 32.995
+      "current_price": 32.13
     }
   },
-  "total_return_pct": 4.0,
+  "total_return_pct": 2.28,
   "total_return_usd": 0.0,
-  "today_pnl": 51.69,
-  "today_pnl_pct": 0.5,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 12,
-  "today_start_value": 10348.48,
-  "today_date": "2026-05-14",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-14T19:18:58Z",
+  "today_start_value": 10228.34,
+  "today_date": "2026-05-15",
+  "last_action": "Fear-driven market (43) with significant declines in F (-7.9%), INTC (-7.4%), BABA (-5.4%), but I already have meaningful exposure to these and my 20.6% cash position is positioned for when true barga",
+  "last_updated": "2026-05-15T14:04:12Z",
   "last_session": {
-    "at": "2026-05-14T19:18:58Z",
-    "fear_greed": 34,
+    "at": "2026-05-15T14:04:12Z",
+    "fear_greed": 43,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.84,
-    "vix": 17.26,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -1.0,
+    "vix": 18.64,
+    "top_movers": [
+      [
+        "F",
+        -7.87
+      ],
+      [
+        "INTC",
+        -7.41
+      ],
+      [
+        "BABA",
+        -5.42
+      ],
+      [
+        "OXY",
+        3.17
+      ],
+      [
+        "STLD",
+        -2.89
+      ],
+      [
+        "JD",
+        -2.3
+      ]
+    ],
+    "news_read": [
+      "Trump told Xi \u2018I don't talk about\u2019 whether U.S. would defend Taiwan from China",
+      "Starbucks to lay off 300 U.S. employees, shutter some regional support offices",
+      "30-year Treasury yield tops 5.1%, highest in nearly a year",
+      "Detroit automakers have cut more than 20,000 U.S. salaried jobs as AI threat looms"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=43 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "30-year Treasury at 5.1% is a major headwind for value stocks and explains some of today's selling pressure - this creates opportunity but also risk. Ford and Intel both dropped sharply, but I'm already well-positioned in both at much lower costs (F at $11.50, INTC at $96.92) and won't add to positions that have already run up significantly. BABA continues to decline on China/Taiwan headlines, but at $133 it's still not the deep value I'm waiting for. I'm holding my cash powder - when the market fears, I wait for the right pitch, not every dip.",
+    "outlook": "Fear-driven market (43) with significant declines in F (-7.9%), INTC (-7.4%), BABA (-5.4%), but I already have meaningful exposure to these and my 20.6% cash position is positioned for when true bargains emerge.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -374,6 +404,10 @@
     {
       "timestamp": "2026-05-14T19:18:58Z",
       "value": 10400.17
+    },
+    {
+      "timestamp": "2026-05-15T14:04:12Z",
+      "value": 10228.34
     }
   ]
 }
