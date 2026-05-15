@@ -1,49 +1,85 @@
 {
-  "cash": 2926.53,
-  "total_value": 10020.72,
+  "cash": 2011.13,
+  "total_value": 10022.84,
   "positions": {
     "TLT": {
       "shares": 23,
       "avg_cost": 85.6,
-      "current_price": 83.74
+      "current_price": 83.6199
     },
     "GLD": {
       "shares": 4,
       "avg_cost": 423.3,
-      "current_price": 418.14
+      "current_price": 418.24
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 720.67,
-      "current_price": 741.56
+      "current_price": 741.0
     },
     "GSG": {
       "shares": 59,
-      "current_price": 34.11,
+      "current_price": 34.205,
       "avg_cost": 33.392
+    },
+    "BIL": {
+      "shares": 10,
+      "avg_cost": 91.5399,
+      "current_price": 91.5399
     }
   },
-  "total_return_pct": 0.21,
+  "total_return_pct": 0.23,
   "total_return_usd": 0.0,
-  "today_pnl": 16.87,
-  "today_pnl_pct": 0.17,
-  "total_trades": 7,
+  "today_pnl": 18.99,
+  "today_pnl_pct": 0.19,
+  "total_trades": 8,
   "today_start_value": 10003.85,
   "today_date": "2026-05-15",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-15T17:10:31Z",
+  "last_action": "Risk-off environment intensifying as inflation fears drive bond yields higher, pushing equities and gold lower while short-term Treasury yields become attractive.",
+  "last_updated": "2026-05-15T19:46:51Z",
   "last_session": {
-    "at": "2026-05-15T17:10:31Z",
+    "at": "2026-05-15T19:46:51Z",
     "fear_greed": 43,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.96,
-    "vix": 18.05,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "sp500_change": -0.88,
+    "vix": 18.1,
+    "top_movers": [
+      [
+        "GDX",
+        -6.45
+      ],
+      [
+        "EEM",
+        -3.22
+      ],
+      [
+        "FXI",
+        -2.59
+      ],
+      [
+        "VWO",
+        -2.38
+      ],
+      [
+        "IAU",
+        -2.1
+      ],
+      [
+        "GLD",
+        -2.09
+      ]
+    ],
+    "news_read": [
+      "Traders now see next Fed interest rate move as a hike following inflation surge",
+      "30-year Treasury yield tops 5.1%, highest in nearly a year",
+      "Saudi Arabia is tokenizing its multi-trillion dollar economy to protect its wealth from global shocks",
+      "Bitcoin tumbles below $79,000 as rising bond yields, inflation worries rattle markets",
+      "How China and U.S. eased the Middle East oil shock and kept prices from spiking even higher"
+    ],
+    "domain_extra": "MACRO: NASDAQ -1.02%  DOW -0.93%  VIX 18.1 (NORMAL)",
+    "ai_analysis": "Noticed TLT at 19.2% is close to 20% limit and falling with rising yields, while GDX/GLD down significantly on inflation fears\u2014classic panic selling in gold. With Fed now likely hiking instead of cutting, my All Weather approach suggests holding more short-term bonds (BIL) for stability while others panic-sell. Keeping cash reserve well above $1000 at $1926.53 after trade. Watching whether gold drops further to add more GLD or if equities stabilize for SPY rebalancing.",
+    "outlook": "Risk-off environment intensifying as inflation fears drive bond yields higher, pushing equities and gold lower while short-term Treasury yields become attractive.",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -365,6 +401,10 @@
     {
       "timestamp": "2026-05-15T17:10:31Z",
       "value": 10020.72
+    },
+    {
+      "timestamp": "2026-05-15T19:46:51Z",
+      "value": 10022.84
     }
   ]
 }
