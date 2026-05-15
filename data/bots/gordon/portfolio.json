@@ -1,68 +1,98 @@
 {
   "cash": 504.86,
-  "total_value": 9902.29,
+  "total_value": 9894.36,
   "positions": {
     "DIS": {
       "shares": 10,
       "avg_cost": 103.09,
-      "current_price": 103.92
+      "current_price": 103.5796
     },
     "NKE": {
       "shares": 20,
       "avg_cost": 43.345,
-      "current_price": 42.415
+      "current_price": 42.37
     },
     "INTC": {
       "shares": 8,
       "avg_cost": 96.92,
-      "current_price": 108.42
+      "current_price": 108.71
     },
     "F": {
       "shares": 50,
       "avg_cost": 11.505,
-      "current_price": 13.415
+      "current_price": 13.48
     },
     "PYPL": {
       "shares": 20,
-      "current_price": 44.92,
+      "current_price": 44.86,
       "avg_cost": 45.8903
     },
     "VFC": {
       "shares": 121,
       "avg_cost": 19.27,
-      "current_price": 17.21
+      "current_price": 17.18
     },
     "WBD": {
       "shares": 110,
       "avg_cost": 27.345,
-      "current_price": 27.065
+      "current_price": 27.025
     },
     "NOK": {
       "shares": 1,
       "avg_cost": 12.8999,
-      "current_price": 13.8595
+      "current_price": 13.895
     }
   },
-  "total_return_pct": -0.98,
+  "total_return_pct": -1.06,
   "total_return_usd": 0.0,
-  "today_pnl": 9.51,
-  "today_pnl_pct": 0.1,
+  "today_pnl": 1.58,
+  "today_pnl_pct": 0.02,
   "total_trades": 10,
   "today_start_value": 9892.78,
   "today_date": "2026-05-15",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-15T15:19:17Z",
+  "last_action": "Fear dominates (43) with S&P down 0.86% and 30-year yields hitting 5.1% - too risky to deploy my meager $504 cash into a market breaking down.",
+  "last_updated": "2026-05-15T15:33:10Z",
   "last_session": {
-    "at": "2026-05-15T15:19:17Z",
+    "at": "2026-05-15T15:33:10Z",
     "fear_greed": 43,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.9,
-    "vix": 18.34,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.86,
+    "vix": 18.38,
+    "top_movers": [
+      [
+        "F",
+        -6.87
+      ],
+      [
+        "INTC",
+        -6.13
+      ],
+      [
+        "NOK",
+        -3.91
+      ],
+      [
+        "BBWI",
+        -3.09
+      ],
+      [
+        "GM",
+        -2.69
+      ],
+      [
+        "DIS",
+        -1.73
+      ]
+    ],
+    "news_read": [
+      "How China and U.S. eased the Middle East oil shock and kept prices from spiking even higher",
+      "Trump told Xi \u2018I don't talk about\u2019 whether U.S. would defend Taiwan from China",
+      "30-year Treasury yield tops 5.1%, highest in nearly a year",
+      "Inflation rate projected to hit 6% in the second quarter, top economic forecasters say"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "INTC down 6.13% and F down 6.87% are tempting given my existing positions are already green (+$94 and +$99 respectively), but my cash buffer is barely above the $500 minimum and market breadth is terrible today with 6 of my watchlist stocks down over 2%. VFC continues bleeding (-0.58% today, now -$252.89 loss) - I'm watching for a bottoming pattern before adding. The 6% inflation projection and 5.1% 30-year yield signal this rally is fragile - will wait for better setup.",
+    "outlook": "Fear dominates (43) with S&P down 0.86% and 30-year yields hitting 5.1% - too risky to deploy my meager $504 cash into a market breaking down.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -377,6 +407,10 @@
     {
       "timestamp": "2026-05-15T15:19:17Z",
       "value": 9902.29
+    },
+    {
+      "timestamp": "2026-05-15T15:33:10Z",
+      "value": 9894.36
     }
   ]
 }

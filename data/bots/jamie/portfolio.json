@@ -1,77 +1,77 @@
 {
   "cash": 1044.9,
-  "total_value": 9586.33,
+  "total_value": 9575.22,
   "positions": {
     "WFC": {
       "shares": 30,
       "avg_cost": 80.81,
-      "current_price": 73.4
+      "current_price": 73.27
     },
     "BAC": {
       "shares": 47,
-      "current_price": 49.6761,
+      "current_price": 49.595,
       "avg_cost": 53.2059
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 309.545,
-      "current_price": 298.22
+      "current_price": 297.86
     },
     "PRU": {
       "shares": 5,
       "avg_cost": 97.485,
-      "current_price": 101.55
+      "current_price": 101.17
     },
     "GS": {
       "shares": 1,
       "avg_cost": 905.09,
-      "current_price": 953.38
+      "current_price": 955.02
     },
     "MET": {
       "shares": 2,
       "avg_cost": 80.62,
-      "current_price": 78.88
+      "current_price": 78.75
     }
   },
-  "total_return_pct": -4.14,
+  "total_return_pct": -4.25,
   "total_return_usd": 0.0,
-  "today_pnl": -26.99,
-  "today_pnl_pct": -0.28,
+  "today_pnl": -38.1,
+  "today_pnl_pct": -0.4,
   "total_trades": 7,
   "today_start_value": 9613.32,
   "today_date": "2026-05-15",
-  "last_action": "Markets in fear mode with S&P down 0.9% and limited cash prevents adding to quality financial positions at attractive valuations.",
-  "last_updated": "2026-05-15T15:17:43Z",
+  "last_action": "With the Fear & Greed index at 43 (Fear) and only $44.90 of spendable cash after maintaining the $1000 reserve, I cannot make meaningful purchases in this environment.",
+  "last_updated": "2026-05-15T15:32:24Z",
   "last_session": {
-    "at": "2026-05-15T15:17:43Z",
+    "at": "2026-05-15T15:32:24Z",
     "fear_greed": 43,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.9,
-    "vix": 18.34,
+    "sp500_change": -0.86,
+    "vix": 18.38,
     "top_movers": [
       [
+        "PRU",
+        -1.97
+      ],
+      [
         "PGR",
-        2.29
+        1.86
       ],
       [
         "MA",
-        1.63
+        1.56
       ],
       [
         "GS",
-        -1.61
-      ],
-      [
-        "PRU",
-        -1.6
+        -1.45
       ],
       [
         "V",
-        1.37
+        1.32
       ],
       [
         "C",
-        -0.85
+        -0.97
       ]
     ],
     "news_read": [
@@ -79,8 +79,8 @@
       "How China and U.S. eased the Middle East oil shock and kept prices from spiking even higher"
     ],
     "domain_extra": "",
-    "ai_analysis": "My cash position of $1044.90 is barely above the $1000 reserve requirement, leaving only $44.90 for trading - insufficient to purchase any meaningful shares from my watchlist. While payment networks V and MA are up today and I remain bullish on banks, insurance, and payment networks, I cannot deploy capital. The Fed chair uncertainty (Warsh tests) and Middle East oil situation could create volatility. I'm watching for either a bounce to raise cash or a further pullback to deploy capital more aggressively when available.",
-    "outlook": "Markets in fear mode with S&P down 0.9% and limited cash prevents adding to quality financial positions at attractive valuations.",
+    "ai_analysis": "My $1044.90 cash position limits me to just $44.90 in spendable capital after the required reserve - not enough to buy a single share of any watchlist stock where the cheapest is C at $123.63. The banking sector continues under pressure with GS down 1.45% and my WFC/BAC/JPM positions showing significant unrealized losses. However, payment networks V (+1.32%) and MA (+1.56%) are showing strength today, which aligns with my preference for stable payment infrastructure. I'm holding my positions and waiting for either a clearer market signal or a pullback in quality names to deploy capital.",
+    "outlook": "With the Fear & Greed index at 43 (Fear) and only $44.90 of spendable cash after maintaining the $1000 reserve, I cannot make meaningful purchases in this environment.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -391,6 +391,10 @@
     {
       "timestamp": "2026-05-15T15:17:43Z",
       "value": 9586.33
+    },
+    {
+      "timestamp": "2026-05-15T15:32:24Z",
+      "value": 9575.22
     }
   ]
 }
