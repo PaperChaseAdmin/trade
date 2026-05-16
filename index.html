@@ -81,16 +81,16 @@ let mainChart = null, riskChart = null, _cdTimer = null;
 
 function startCountdown() {
   clearInterval(_cdTimer);
-  const now = new Date();
-  const day = now.getUTCDay();
-  const hour = now.getUTCHours();
-  const min = now.getUTCMinutes();
-  
   const el = document.getElementById('countdown-wrap');
   if (!el) return;
   
   function nextMarketOpen() {
+    const now = new Date();
+    const day = now.getUTCDay();
+    const hour = now.getUTCHours();
+    const min = now.getUTCMinutes();
     const next = new Date(now);
+    
     if (day === 0 || day === 6 || (day === 5 && hour >= 21)) {
       const daysUntilMonday = day === 0 ? 1 : day === 6 ? 2 : (8 - day);
       next.setDate(next.getDate() + daysUntilMonday);
@@ -116,10 +116,13 @@ function startCountdown() {
     const m = Math.floor((diff % 3600000) / 60000);
     const s = Math.floor((diff % 60000) / 1000);
     
-    if (day >= 1 && day <= 5 && hour >= 13 && hour < 21) {
-      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + (h>0?h+'h ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+    if (h >= 24) {
+      // More than 24h = market closed, show days
+      const d = Math.floor(h / 24);
+      el.innerHTML = '<span class="countdown-lbl">Market Opens</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h</span>';
     } else {
-      el.innerHTML = '<span class="countdown-lbl">Market Opens</span><span class="countdown-num">' + (h>0?h+'d ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + 
+        (h>0?h+'h ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
     }
   }
   tick();

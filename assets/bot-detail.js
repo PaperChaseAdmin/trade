@@ -16,34 +16,25 @@ let _cdTimer = null;
 function startCountdown(pf) {
   clearInterval(_cdTimer);
   const el = $('countdown-wrap');
-  
-  // Check market hours
-  const now = new Date();
-  const day = now.getUTCDay(); // 0=Sun, 6=Sat
-  const hour = now.getUTCHours();
-  const min = now.getUTCMinutes();
-  
-  // US market open: Mon-Fri 13:30 UTC (9:30 ET) to 20:00 UTC (4:00 ET)
-  // Bot runs: Mon-Fri 13:00-21:00 UTC every 30min
-  
-  function isMarketDay(d) { return d >= 1 && d <= 5; }
+  if (!el) return;
   
   function nextMarketOpen() {
+    const now = new Date();
+    const day = now.getUTCDay();
+    const hour = now.getUTCHours();
+    const min = now.getUTCMinutes();
     const next = new Date(now);
-    if (!isMarketDay(day) || (day === 5 && hour >= 21)) {
-      // Weekend or after Friday close → next Monday
+    
+    if (day === 0 || day === 6 || (day === 5 && hour >= 21)) {
       const daysUntilMonday = day === 0 ? 1 : day === 6 ? 2 : (8 - day);
       next.setDate(next.getDate() + daysUntilMonday);
       next.setUTCHours(13, 30, 0, 0);
     } else if (hour < 13 || (hour === 13 && min < 30)) {
-      // Before market open today
       next.setUTCHours(13, 30, 0, 0);
     } else if (hour >= 21) {
-      // After last run → next day
       next.setDate(next.getDate() + 1);
       next.setUTCHours(13, 30, 0, 0);
     } else {
-      // Market is open — next review is in ~30 min
       const nextHalf = Math.ceil((hour * 60 + min) / 30) * 30;
       next.setUTCHours(Math.floor(nextHalf/60), nextHalf%60, 0, 0);
     }
@@ -54,20 +45,17 @@ function startCountdown(pf) {
   
   function tick() {
     const diff = target - Date.now();
-    if (diff <= 0) {
-      el.innerHTML = '<span class="countdown-num">Checking now...</span>';
-      return;
-    }
+    if (diff <= 0) { el.innerHTML = '<span class="countdown-num">Checking now...</span>'; return; }
     const h = Math.floor(diff / 3600000);
     const m = Math.floor((diff % 3600000) / 60000);
     const s = Math.floor((diff % 60000) / 1000);
     
-    if (isMarketDay(day) && hour >= 13 && hour < 21) {
-      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' +
-        (h>0?h+'h ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+    if (h >= 24) {
+      const d = Math.floor(h / 24);
+      el.innerHTML = '<span class="countdown-lbl">Market Opens</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h</span>';
     } else {
-      el.innerHTML = '<span class="countdown-lbl">Market Opens</span><span class="countdown-num">' +
-        (h>0?h+'d ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + 
+        (h>0?h+'h ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
     }
   }
   tick();
