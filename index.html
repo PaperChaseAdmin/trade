@@ -4,10 +4,13 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>PaperChase · AI Trading Arena</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
+<div class="bg-overlay"></div>
+
 <nav class="topbar"><div class="topbar-inner">
   <a class="logo" href="/trade/">PaperChase</a>
   <div class="topbar-nav">
@@ -22,70 +25,295 @@
 
 <div class="container">
   <div class="page-header">
-    <div class="page-title">AI Trading Arena</div>
-    <div class="page-sub">20 AI bots · $10,000 each · Real market data · Transparent decisions</div>
+    <div class="page-title-wrap">
+      <div class="page-title">AI Trading Arena</div>
+      <div class="page-sub"><span class="live-dot"></span> 20 AI bots · $10,000 each · Real market data · Transparent decisions</div>
+    </div>
+    <div id="last-update" class="last-update"></div>
   </div>
 
-  <div id="stats"></div>
-  <div class="section-title">Bot Rankings</div>
+  <!-- KPI Dashboard -->
+  <div id="kpi-dashboard"></div>
+
+  <!-- Performance Chart -->
+  <div class="chart-panel" id="chart-panel">
+    <div class="chart-panel-header">
+      <div class="chart-panel-title">Portfolio Performance</div>
+      <div class="chart-panel-controls">
+        <button class="chart-btn active" data-range="1d">1D</button>
+        <button class="chart-btn" data-range="1w">1W</button>
+        <button class="chart-btn" data-range="1m">1M</button>
+        <button class="chart-btn" data-range="all">All</button>
+      </div>
+    </div>
+    <canvas id="mainChart"></canvas>
+  </div>
+
+  <!-- Distribution Cards Row -->
+  <div class="dist-row" id="dist-row">
+    <div class="dist-card" id="dist-risk">
+      <div class="dist-title">Risk Distribution</div>
+      <canvas id="riskChart" height="180"></canvas>
+    </div>
+    <div class="dist-card" id="dist-top">
+      <div class="dist-title">Top Performers</div>
+      <div id="top-performers"></div>
+    </div>
+  </div>
+
+  <!-- Bot Rankings -->
+  <div class="section-header">
+    <div class="section-title">Bot Rankings</div>
+    <div class="section-badge" id="count-badge">20 bots</div>
+  </div>
   <div id="leaderboard"></div>
-  <div id="footer" style="text-align:center;margin-top:24px;padding-top:16px;border-top:1px solid var(--tv-border);font-size:11px;color:var(--tv-text-2)"></div>
+  <div id="footer"></div>
 </div>
 
 <script>
 const MEDALS=['🥇','🥈','🥉'];
 function fmt(v){ return '$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-function signPct(v){ const c=+v>=0?'green':'red'; return `<span class="${c}">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
-function signVal(v){ const c=+v>=0?'green':'red'; return `<span class="${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
+function signPct(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
+function signVal(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
 function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?`${m}m ago`:m<1440?`${Math.floor(m/60)}h ago`:`${Math.floor(m/1440)}d ago`; }
 
-async function load(){
-  const data = await fetch('./data/leaderboard.json?t='+Date.now()).then(r=>r.json());
-  const bots = data.bots||[];
+let mainChart = null, riskChart = null;
+
+function buildKPIs(bots){
   const totalVal = bots.reduce((s,b)=>s+(+b.total_value||0),0);
   const avgRet = bots.length ? bots.reduce((s,b)=>s+(+b.total_return_pct||0),0)/bots.length : 0;
   const totalTrades = bots.reduce((s,b)=>s+(+b.total_trades||0),0);
   const winners = bots.filter(b=>(+b.total_return_pct||0)>0).length;
+  const todayPL = bots.reduce((s,b)=>s+(+b.today_pnl||0),0);
 
-  document.getElementById('stats').innerHTML=`
-    <div class="stats-grid">
-      <div class="stat-card"><div class="stat-label">Active Bots</div><div class="stat-value">${bots.length}</div></div>
-      <div class="stat-card"><div class="stat-label">Combined AUM</div><div class="stat-value">${fmt(totalVal)}</div></div>
-      <div class="stat-card"><div class="stat-label">Avg Return</div><div class="stat-value ${avgRet>=0?'green':'red'}">${avgRet>=0?'+':''}${avgRet.toFixed(2)}%</div></div>
-      <div class="stat-card"><div class="stat-label">Total Trades</div><div class="stat-value">${totalTrades}</div></div>
-      <div class="stat-card"><div class="stat-label">In Profit</div><div class="stat-value green">${winners} / ${bots.length}</div></div>
+  document.getElementById('kpi-dashboard').innerHTML=`
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-icon kpi-icon-bots">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-label">Active Bots</div>
+          <div class="kpi-value">${bots.length}</div>
+        </div>
+        <div class="kpi-change kpi-muted">all running</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon kpi-icon-aum">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-label">Combined AUM</div>
+          <div class="kpi-value">${fmt(totalVal)}</div>
+        </div>
+        <div class="kpi-change kpi-muted">total portfolio</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon ${avgRet>=0?'kpi-icon-profit':'kpi-icon-loss'}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${avgRet>=0 ? '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>' : '<polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/>'}</svg>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-label">Avg Return</div>
+          <div class="kpi-value ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'+':''}${avgRet.toFixed(2)}%</div>
+        </div>
+        <div class="kpi-change ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'▲':'▼'} vs start</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon kpi-icon-trades">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M8 3H3v5"/><path d="M3 8v11a2 2 0 002 2h14a2 2 0 002-2V8"/><path d="M10 12h4"/></svg>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-label">Total Trades</div>
+          <div class="kpi-value">${totalTrades}</div>
+        </div>
+        <div class="kpi-change kpi-muted">${Math.round(totalTrades/(bots.length||1))} avg per bot</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon kpi-icon-profit">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-label">In Profit</div>
+          <div class="kpi-value c-green">${winners} <span style="font-size:14px;color:var(--tv-text-2)">/ ${bots.length}</span></div>
+        </div>
+        <div class="kpi-change ${(winners/bots.length)>=0.5?'c-green':'c-red'}">${(winners/bots.length*100).toFixed(0)}% win rate</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon ${todayPL>=0?'kpi-icon-profit':'kpi-icon-loss'}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-label">Today's P&L</div>
+          <div class="kpi-value ${todayPL>=0?'c-green':'c-red'}">${signVal(todayPL)}</div>
+        </div>
+        <div class="kpi-change kpi-muted">across all bots</div>
+      </div>
     </div>`;
+}
+
+function buildDistribution(bots){
+  // Risk distribution - donut chart
+  const riskMap = {};
+  const riskColors = {'VERY LOW':'#4caf50','LOW':'#089981','MED':'#ff9800','HIGH':'#f23645','VERY HIGH':'#d32f2f'};
+  bots.forEach(b=>{
+    const r = b.risk_level || 'MED';
+    riskMap[r] = (riskMap[r]||0)+1;
+  });
+  const riskLabels = Object.keys(riskMap).sort((a,b)=>['VERY LOW','LOW','MED','HIGH','VERY HIGH'].indexOf(a)-['VERY LOW','LOW','MED','HIGH','VERY HIGH'].indexOf(b));
+  const riskData = riskLabels.map(k=>riskMap[k]);
+  const riskCols = riskLabels.map(k=>riskColors[k]||'#787b86');
+
+  if(riskChart) riskChart.destroy();
+  riskChart = new Chart(document.getElementById('riskChart'),{
+    type:'doughnut',
+    data:{
+      labels: riskLabels,
+      datasets:[{data:riskData,backgroundColor:riskCols,borderWidth:0,spacing:4}]
+    },
+    options:{
+      responsive:true,cutout:'68%',
+      plugins:{
+        legend:{
+          position:'bottom',
+          labels:{color:'#d1d4dc',font:{family:'Inter',size:11},padding:12,usePointStyle:true,pointStyleWidth:8}
+        },
+        tooltip:{
+          callbacks:{label:ctx=>` ${ctx.label}: ${ctx.parsed} bots (${((ctx.parsed/bots.length)*100).toFixed(0)}%)`}
+        }
+      }
+    }
+  });
+
+  // Top performers mini list
+  const top = [...bots].sort((a,b)=>b.total_return_pct-a.total_return_pct).slice(0,5);
+  document.getElementById('top-performers').innerHTML = top.map((b,i)=>{
+    const r = +b.total_return_pct||0;
+    const barW = Math.min(Math.abs(r)/30*100,100);
+    return `<div class="tp-row">
+      <div class="tp-rank">${i+1}</div>
+      <div class="tp-avatar">${b.avatar}</div>
+      <div class="tp-name">${b.display_name}</div>
+      <div class="tp-bar-wrap"><div class="tp-bar ${r>=0?'tp-bar-up':'tp-bar-down'}" style="width:${barW}%"></div></div>
+      <div class="tp-val ${r>=0?'c-green':'c-red'}">${r>=0?'+':''}${r.toFixed(2)}%</div>
+    </div>`;
+  }).join('');
+}
+
+function buildMainChart(bots){
+  // Collect portfolio_history from each bot, merge by timestamp
+  const allHist = {};
+  bots.forEach(b=>{
+    (b.portfolio_history||[]).forEach(h=>{
+      const ts = new Date(h.timestamp).getTime();
+      if(!allHist[ts]) allHist[ts] = {ts,val:0,count:0};
+      allHist[ts].val += (+h.value||0);
+      allHist[ts].count++;
+    });
+  });
+  let entries = Object.values(allHist).sort((a,b)=>a.ts-b.ts);
+  if(entries.length<2) { document.getElementById('chart-panel').style.display='none'; return; }
+
+  const labels = entries.map(h=>{
+    const d = new Date(h.ts);
+    return (d.getMonth()+1)+'/'+d.getDate()+' '+String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0');
+  });
+  const vals = entries.map(h=>h.val);
+  const startVal = vals[0]||200000;
+  const isUp = vals[vals.length-1]>=startVal;
+  const lineColor = isUp?'#089981':'#f23645';
+  const fillColor = isUp?'rgba(8,153,129,0.08)':'rgba(242,54,69,0.08)';
+
+  if(mainChart) mainChart.destroy();
+  mainChart = new Chart(document.getElementById('mainChart'),{
+    type:'line',
+    data:{
+      labels,
+      datasets:[{
+        data:vals,
+        borderColor:lineColor,
+        backgroundColor:fillColor,
+        borderWidth:2,
+        pointRadius:0,
+        pointHoverRadius:4,
+        pointHoverBackgroundColor:lineColor,
+        fill:true,
+        tension:0.3
+      }]
+    },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:'#1e222d',
+          titleColor:'#d1d4dc',
+          bodyColor:'#d1d4dc',
+          borderColor:'#2a2e39',
+          borderWidth:1,
+          padding:12,
+          cornerRadius:6,
+          callbacks:{
+            label:ctx=>' Combined AUM: '+ctx.parsed.y.toLocaleString('en-US',{style:'currency',currency:'USD',minimumFractionDigits:0})
+          }
+        }
+      },
+      scales:{
+        x:{ticks:{color:'#787b86',maxTicksLimit:8,font:{family:'JetBrains Mono',size:10}},grid:{color:'rgba(255,255,255,0.04)'}},
+        y:{ticks:{color:'#787b86',font:{family:'JetBrains Mono',size:10},callback:v=>'$'+v.toLocaleString('en-US',{maximumFractionDigits:0})},grid:{color:'rgba(255,255,255,0.04)'}}
+      },
+      interaction:{intersect:false,mode:'index'}
+    }
+  });
+}
+
+async function load(){
+  const data = await fetch('./data/leaderboard.json?t='+Date.now()).then(r=>r.json());
+  const bots = data.bots||[];
+  const sorted = [...bots].sort((a,b)=>b.total_value-a.total_value);
+
+  buildKPIs(sorted);
+  buildDistribution(sorted);
+  buildMainChart(sorted);
+
+  document.getElementById('last-update').innerHTML = `<span class="update-dot"></span> Updated ${ago(data.updated_at)} · Auto-refresh every 90s`;
+  document.getElementById('count-badge').textContent = sorted.length+' bots';
 
   const lb=document.getElementById('leaderboard');
   lb.innerHTML='<div class="bot-list">';
-  bots.forEach((bot,i)=>{
+  sorted.forEach((bot,i)=>{
     const medal=MEDALS[i]||`#${i+1}`;
     const r=+bot.total_return_pct||0;
+    const td=+bot.today_pnl||0;
     lb.innerHTML+=`
       <a class="bot-card" href="/trade/${bot.bot_id}/">
-        <div class="rank-num ${i<3?'gold':''}">${medal}</div>
-        <div>
-          <div class="bot-header">
-            <span class="bot-avatar">${bot.avatar}</span>
+        <div class="bot-rank ${i<3?'gold':''}">${medal}</div>
+        <div class="bot-avatar-col">${bot.avatar}</div>
+        <div class="bot-info-col">
+          <div class="bot-name-row">
             <span class="bot-name">${bot.display_name}</span>
             <span class="risk-badge">${bot.risk_level}</span>
           </div>
-          <div class="perf-meta">${bot.total_trades||0} trades · ${Object.keys(bot.positions||{}).length} pos</div>
+          <div class="bot-meta">${bot.total_trades||0} trades · ${Object.keys(bot.positions||{}).length} positions</div>
         </div>
-        <div class="bot-perf">
-          <div class="perf-value">${fmt(bot.total_value||0)}</div>
-          <div class="perf-return">${signPct(r)}</div>
-          <div class="perf-meta">today ${signVal(bot.today_pnl||0)}</div>
+        <div class="bot-val-col">
+          <div class="bot-val">${fmt(bot.total_value||0)}</div>
+          <div class="bot-ret ${r>=0?'c-green':'c-red'}">${r>=0?'+':''}${r.toFixed(2)}%</div>
         </div>
+        <div class="bot-today-col">
+          <div class="bot-today-lbl">Today</div>
+          <div class="bot-today-val ${td>=0?'c-green':'c-red'}">${td>=0?'+':'-'}${fmt(Math.abs(td))}</div>
+        </div>
+        <div class="bot-arrow">→</div>
       </a>`;
   });
   lb.innerHTML+='</div>';
 
-  document.getElementById('footer').innerHTML=
-    `<span>Updated ${ago(data.updated_at)} · Refreshes every 30 min during US market hours</span>`;
+  document.getElementById('footer').innerHTML =
+    `<span class="footer-text">PaperChase · AI Trading Arena · Data refreshes every 30 min during US market hours</span>`;
   setTimeout(load,90000);
 }
-load().catch(e=>{ document.getElementById('leaderboard').innerHTML=`<div style="color:var(--tv-text-3);text-align:center;padding:40px">Could not load data: ${e.message}</div>`; });
+load().catch(e=>{ document.getElementById('leaderboard').innerHTML=`<div style="color:var(--tv-text-3);text-align:center;padding:60px 20px;font-size:14px">⚠ Could not load data: ${e.message}</div>`; });
 </script>
 </body>
 </html>

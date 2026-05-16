@@ -6,8 +6,8 @@ let chart = null;
 
 const $ = id => document.getElementById(id);
 function fmt(v){ return '$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-function sign(v){ const c=+v>=0?'profit':'loss'; return `<span class="${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
-function signPct(v){ const c=+v>=0?'profit':'loss'; return `<span class="${c}">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
+function sign(v){ const c=+v>=0?'profit':'loss'; return '<span class="'+c+'">'+(+v>=0?'+':'-')+fmt(Math.abs(+v))+'</span>'; }
+function signPct(v){ const c=+v>=0?'profit':'loss'; return '<span class="'+c+'">'+(+v>=0?'+':'')+(+v).toFixed(2)+'%</span>'; }
 function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?`${m}m ago`:m<1440?`${Math.floor(m/60)}h ago`:`${Math.floor(m/1440)}d ago`; }
 function fmtTs(ts){ const d=new Date(ts); return d.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false})+' UTC'; }
 
@@ -15,113 +15,86 @@ function renderSpecs(){
   if(typeof BOT_WATCHLIST==='undefined') return;
   const pct=(BOT_MAX_POSITION*100).toFixed(0);
   const tickers=BOT_WATCHLIST.map(t=>
-    `<a class="ticker-chip" href="https://finance.yahoo.com/quote/${t}" target="_blank" rel="noopener">${t}</a>`
+    '<a class="ticker-chip" href="https://finance.yahoo.com/quote/'+t+'" target="_blank" rel="noopener">'+t+'</a>'
   ).join('');
   
-  // Determine model display
-  let modelName, modelProvider, modelBadge, modelBadgeLabel;
-  let fallbackName, fallbackProvider, fallbackBadge;
-
-  // Helper: resolve model display info
   function resolveModel(shortName) {
-    if(shortName === 'gemini'){
-      return {name:'Gemini 2.0 Flash', provider:'Google DeepMind', badge:'Free'};
-    } else if(shortName === 'openrouter/minimax' || shortName === 'minimax'){
-      return {name:'MiniMax M2.5', provider:'MiniMax (OpenRouter)', badge:'Free'};
-    } else if(shortName === 'openrouter/ling' || shortName === 'ling'){
-      return {name:'Ling 2.6 1T', provider:'Inclusion AI (OpenRouter)', badge:'Free'};
-    } else if(shortName === 'openrouter/nemotron' || shortName === 'nemotron'){
-      return {name:'Nemotron 3 Super 120B', provider:'NVIDIA (OpenRouter)', badge:'Free'};
-    } else {
-      return {name:shortName || '—', provider:'Custom', badge:''};
-    }
+    if(shortName === 'gemini') return {name:'Gemini 2.0 Flash', provider:'Google DeepMind', badge:'Free'};
+    if(shortName === 'openrouter/minimax' || shortName === 'minimax') return {name:'MiniMax M2.5', provider:'MiniMax (OpenRouter)', badge:'Free'};
+    if(shortName === 'openrouter/ling' || shortName === 'ling') return {name:'Ling 2.6 1T', provider:'Inclusion AI (OpenRouter)', badge:'Free'};
+    if(shortName === 'openrouter/nemotron' || shortName === 'nemotron') return {name:'Nemotron 3 Super 120B', provider:'NVIDIA (OpenRouter)', badge:'Free'};
+    return {name:shortName || '\u2014', provider:'Custom', badge:''};
   }
 
   const primary = resolveModel(BOT_MODEL);
   const fallback = BOT_FALLBACK ? resolveModel(BOT_FALLBACK) : null;
   
-  $('specs').innerHTML=`
-    <div class="spec-card">
-      <div class="spec-card-title">Bot Specifications</div>
-      <div class="spec-grid">
-        <div class="spec-item">
-          <div class="spec-label">AI Engine</div>
-          <div class="spec-val">${primary.name}</div>
-          <div class="spec-sub">${primary.provider} ${primary.badge ? '<span class="badge badge-free">'+primary.badge+'</span>' : ''}</div>
-          ${fallback ? `<div class="spec-sub fallback-sub">↳ Fallback: ${fallback.name} <span class="badge badge-fallback">Backup</span></div>` : ''}
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Market Data</div>
-          <div class="spec-val">Yahoo Finance</div>
-          <div class="spec-sub">~15 min delayed</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Update Frequency</div>
-          <div class="spec-val">Every 30 min</div>
-          <div class="spec-sub">During market hours</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Active Hours</div>
-          <div class="spec-val">Mon–Fri</div>
-          <div class="spec-sub">09:00–17:00 ET</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Max Position Size</div>
-          <div class="spec-val">${pct}%</div>
-          <div class="spec-sub">of portfolio per stock</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Max Trades / Session</div>
-          <div class="spec-val">${BOT_MAX_TRADES}</div>
-          <div class="spec-sub">per 30-min run</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Min Cash Reserve</div>
-          <div class="spec-val">${fmt(BOT_MIN_CASH)}</div>
-          <div class="spec-sub">always kept liquid</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Starting Capital</div>
-          <div class="spec-val">$10,000</div>
-          <div class="spec-sub">paper money</div>
-        </div>
-      </div>
-      <div class="spec-label" style="margin:20px 0 10px">Watchlist — ${BOT_WATCHLIST.length} tickers monitored each session</div>
-      <div class="ticker-list">${tickers}</div>
-    </div>`;
+  $('specs').innerHTML=
+    '<div class="spec-card">'+
+      '<div class="spec-card-title">Bot Specifications</div>'+
+      '<div class="spec-grid">'+
+        '<div class="spec-item">'+
+          '<div class="spec-label">AI Engine</div>'+
+          '<div class="spec-val">'+primary.name+'</div>'+
+          '<div class="spec-sub">'+primary.provider+' '+(primary.badge?'<span class="badge badge-free">'+primary.badge+'</span>':'')+'</div>'+
+          (fallback?'<div class="spec-sub fallback-sub">\u21b3 Fallback: '+fallback.name+' <span class="badge badge-fallback">Backup</span></div>':'')+
+        '</div>'+
+        '<div class="spec-item">'+
+          '<div class="spec-label">Market Data</div>'+
+          '<div class="spec-val">Yahoo Finance</div>'+
+          '<div class="spec-sub">~15 min delayed</div>'+
+        '</div>'+
+        '<div class="spec-item">'+
+          '<div class="spec-label">Update Frequency</div>'+
+          '<div class="spec-val">Every 30 min</div>'+
+          '<div class="spec-sub">During market hours</div>'+
+        '</div>'+
+        '<div class="spec-item">'+
+          '<div class="spec-label">Active Hours</div>'+
+          '<div class="spec-val">Mon\u2013Fri</div>'+
+          '<div class="spec-sub">09:00\u201317:00 ET</div>'+
+        '</div>'+
+        '<div class="spec-item">'+
+          '<div class="spec-label">Max Position Size</div>'+
+          '<div class="spec-val">'+pct+'%</div>'+
+          '<div class="spec-sub">of portfolio per stock</div>'+
+        '</div>'+
+        '<div class="spec-item">'+
+          '<div class="spec-label">Max Trades / Session</div>'+
+          '<div class="spec-val">'+BOT_MAX_TRADES+'</div>'+
+          '<div class="spec-sub">per 30-min run</div>'+
+        '</div>'+
+        '<div class="spec-item">'+
+          '<div class="spec-label">Min Cash Reserve</div>'+
+          '<div class="spec-val">'+fmt(BOT_MIN_CASH)+'</div>'+
+          '<div class="spec-sub">always kept liquid</div>'+
+        '</div>'+
+        '<div class="spec-item">'+
+          '<div class="spec-label">Starting Capital</div>'+
+          '<div class="spec-val">$10,000</div>'+
+          '<div class="spec-sub">paper money</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="spec-label" style="margin:20px 0 10px">Watchlist \u2014 '+BOT_WATCHLIST.length+' tickers monitored each session</div>'+
+      '<div class="ticker-list">'+tickers+'</div>'+
+    '</div>';
 }
 
 function renderFollowGuide(){
-  $('follow').innerHTML=`
-    <div class="follow-card">
-      <div class="spec-card-title">How to Follow This Bot</div>
-      <div class="follow-steps">
-        <div class="follow-step">
-          <span class="follow-num">1</span>
-          <span>Scroll down to <strong>Recent Trades</strong> — the bot's latest signals appear here. The page auto-refreshes every 90 seconds.</span>
-        </div>
-        <div class="follow-step">
-          <span class="follow-num">2</span>
-          <span>When you see a <span class="badge badge-buy">BUY</span>, consider opening a position at market price in your broker for the same ticker.</span>
-        </div>
-        <div class="follow-step">
-          <span class="follow-num">3</span>
-          <span>When you see a <span class="badge badge-sell">SELL</span>, consider closing or trimming your position in that ticker.</span>
-        </div>
-        <div class="follow-step">
-          <span class="follow-num">4</span>
-          <span>Read the <strong>Reasoning</strong> column — the AI explains its logic for every trade so you can judge whether it aligns with your own view.</span>
-        </div>
-        <div class="follow-step">
-          <span class="follow-num">5</span>
-          <span>Check <a href="/trade/${BOT_ID}/records/" style="color:var(--accent)">Full Trade Records →</a> for the complete history, win rate, and total volume.</span>
-        </div>
-      </div>
-      <div class="follow-warning">
-        ⚠ This bot trades with <strong>simulated paper money only</strong>. Past performance does not guarantee future results.
-        Nothing on this page is financial advice. Always do your own due diligence before trading real money.
-      </div>
-    </div>`;
+  $('follow').innerHTML=
+    '<div class="follow-card">'+
+      '<div class="spec-card-title">How to Follow This Bot</div>'+
+      '<div class="follow-steps">'+
+        '<div class="follow-step"><span class="follow-num">1</span><span>Scroll down to <strong>Recent Trades</strong> \u2014 the bot\'s latest signals appear here. The page auto-refreshes every 90 seconds.</span></div>'+
+        '<div class="follow-step"><span class="follow-num">2</span><span>When you see a <span class="badge badge-buy">BUY</span>, consider opening a position at market price in your broker for the same ticker.</span></div>'+
+        '<div class="follow-step"><span class="follow-num">3</span><span>When you see a <span class="badge badge-sell">SELL</span>, consider closing or trimming your position in that ticker.</span></div>'+
+        '<div class="follow-step"><span class="follow-num">4</span><span>Read the <strong>Reasoning</strong> column \u2014 the AI explains its logic for every trade so you can judge whether it aligns with your own view.</span></div>'+
+        '<div class="follow-step"><span class="follow-num">5</span><span>Check <a href="/trade/'+BOT_ID+'/records/" style="color:var(--tv-blue)">Full Trade Records \u2192</a> for the complete history, win rate, and total volume.</span></div>'+
+      '</div>'+
+      '<div class="follow-warning">'+
+        '\u26a0 This bot trades with <strong>simulated paper money only</strong>. Past performance does not guarantee future results. Nothing on this page is financial advice. Always do your own due diligence before trading real money.'+
+      '</div>'+
+    '</div>';
 }
 
 async function load(){
@@ -144,36 +117,36 @@ async function load(){
 
 function renderHero(pf){
   const ret=+pf.total_return_pct||0;
-  $('hero').innerHTML=`
-    <div class="bot-hero" style="--bot-color:${BOT_COLOR}">
-      <div class="hero-row">
-        <div class="hero-icon">${BOT_AVATAR}</div>
-        <div class="hero-meta">
-          <div class="hero-name">${BOT_NAME}</div>
-          <div class="hero-bio">${BOT_BIO}</div>
-          <div class="hero-strategy">${BOT_STRATEGY}</div>
-          <div class="risk-meter" style="margin-top:8px">
-            <div class="risk-track"><div class="risk-fill" style="width:${BOT_RISK_BAR*10}%;background:${BOT_COLOR}"></div></div>
-            <span class="risk-text">${BOT_RISK} RISK</span>
-          </div>
-        </div>
-      </div>
-      <div class="metrics-row">
-        <div class="metric"><div class="metric-lbl">Portfolio</div><div class="metric-val">${fmt(pf.total_value||0)}</div></div>
-        <div class="metric"><div class="metric-lbl">Return</div><div class="metric-val ${ret>=0?'profit':'loss'}">${ret>=0?'+':''}${ret.toFixed(2)}%</div></div>
-        <div class="metric"><div class="metric-lbl">P&amp;L</div><div class="metric-val">${sign((pf.total_value||0)-10000)}</div></div>
-        <div class="metric"><div class="metric-lbl">Today</div><div class="metric-val">${sign(pf.today_pnl||0)}</div></div>
-        <div class="metric"><div class="metric-lbl">Cash</div><div class="metric-val">${fmt(pf.cash||0)}</div></div>
-        <div class="metric"><div class="metric-lbl">Positions</div><div class="metric-val">${Object.keys(pf.positions||{}).length}</div></div>
-        <div class="metric"><div class="metric-lbl">Trades</div><div class="metric-val">${pf.total_trades||0}</div></div>
-        <div class="metric"><div class="metric-lbl">Updated</div><div class="metric-val" style="font-size:12px"><span class="live"></span>${ago(pf.last_updated)}</div></div>
-      </div>
-    </div>`;
+  $('hero').innerHTML=
+    '<div class="bot-hero" style="--bot-color:'+BOT_COLOR+'">'+
+      '<div class="hero-row">'+
+        '<div class="hero-icon">'+BOT_AVATAR+'</div>'+
+        '<div class="hero-meta">'+
+          '<div class="hero-name">'+BOT_NAME+'</div>'+
+          '<div class="hero-bio">'+BOT_BIO+'</div>'+
+          '<div class="hero-strategy">'+BOT_STRATEGY+'</div>'+
+          '<div class="risk-meter" style="margin-top:8px">'+
+            '<div class="risk-track"><div class="risk-fill" style="width:'+(BOT_RISK_BAR*10)+'%;background:'+BOT_COLOR+'"></div></div>'+
+            '<span class="risk-text">'+BOT_RISK+' RISK</span>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="metrics-row">'+
+        '<div class="metric"><div class="metric-lbl">Portfolio</div><div class="metric-val">'+fmt(pf.total_value||0)+'</div></div>'+
+        '<div class="metric"><div class="metric-lbl">Return</div><div class="metric-val '+(ret>=0?'profit':'loss')+'">'+(ret>=0?'+':'')+ret.toFixed(2)+'%</div></div>'+
+        '<div class="metric"><div class="metric-lbl">P&amp;L</div><div class="metric-val">'+sign((pf.total_value||0)-10000)+'</div></div>'+
+        '<div class="metric"><div class="metric-lbl">Today</div><div class="metric-val">'+sign(pf.today_pnl||0)+'</div></div>'+
+        '<div class="metric"><div class="metric-lbl">Cash</div><div class="metric-val">'+fmt(pf.cash||0)+'</div></div>'+
+        '<div class="metric"><div class="metric-lbl">Positions</div><div class="metric-val">'+Object.keys(pf.positions||{}).length+'</div></div>'+
+        '<div class="metric"><div class="metric-lbl">Trades</div><div class="metric-val">'+(pf.total_trades||0)+'</div></div>'+
+        '<div class="metric"><div class="metric-lbl">Updated</div><div class="metric-val" style="font-size:12px"><span class="live"></span>'+ago(pf.last_updated)+'</div></div>'+
+      '</div>'+
+    '</div>';
 }
 
 function renderOutlook(pf){
   if(!pf.last_action||pf.last_action.startsWith('Init')) return;
-  $('outlook').innerHTML=`<div class="outlook" style="--bot-color:${BOT_COLOR}"><div class="outlook-lbl">Latest Thinking</div>${pf.last_action}</div>`;
+  $('outlook').innerHTML='<div class="outlook" style="--bot-color:'+BOT_COLOR+'"><div class="outlook-lbl">Latest Thinking</div>'+pf.last_action+'</div>';
 }
 
 function renderLastSession(pf){
@@ -181,140 +154,178 @@ function renderLastSession(pf){
   const el=$('last-session');
   if(!s||!s.at){ el.innerHTML=''; return; }
 
-  // Market condition chips
   const fg=s.fear_greed;
   const fgLabel=s.fear_greed_label||'';
   const fgClass=fg!=null?(fg<30?'fear':fg>70?'greed':''):'';
   const sp=s.sp500_change;
-  const spStr=sp!=null?`${sp>=0?'+':''}${Number(sp).toFixed(2)}%`:'N/A';
+  const spStr=sp!=null?(sp>=0?'+':'')+Number(sp).toFixed(2)+'%':'N/A';
   const spClass=sp!=null?(sp>=0?'up':'down'):'';
   const vixVal=s.vix!=null?Number(s.vix).toFixed(1):'N/A';
 
-  const chips=[
-    `<span class="chip ${fgClass}">Fear&amp;Greed: ${fg??'N/A'} ${fgLabel?`(${fgLabel})`:''}</span>`,
-    `<span class="chip ${spClass}">S&amp;P 500: ${spStr}</span>`,
-    `<span class="chip">VIX: ${vixVal}</span>`,
-  ].join('');
+  const chips=
+    '<span class="chip '+(fgClass||'')+'">Fear&amp;Greed: '+(fg??'N/A')+(fgLabel?' ('+fgLabel+')':'')+'</span>'+
+    '<span class="chip '+(spClass||'')+'">S&amp;P 500: '+spStr+'</span>'+
+    '<span class="chip">VIX: '+vixVal+'</span>';
 
-  // Watchlist movers
-  const movers=(s.top_movers||[]).map(([t,c])=>{
+  const movers=(s.top_movers||[]).map(function(a){
+    const t=a[0],c=a[1];
     const cls=Math.abs(c)<0.1?'flat':c>0?'up':'down';
-    return `<span class="mover-chip ${cls}">${t} ${c>=0?'+':''}${Number(c).toFixed(1)}%</span>`;
+    return '<span class="mover-chip '+cls+'">'+t+' '+(c>=0?'+':'')+Number(c).toFixed(1)+'%</span>';
   }).join('');
 
-  // News
-  const newsItems=(s.news_read||[]).map(h=>`<li>${h}</li>`).join('');
+  const newsItems=(s.news_read||[]).map(function(h){ return '<li>'+h+'</li>'; }).join('');
 
-  // Domain extra
-  const extra=s.domain_extra?`<div class="session-block"><div class="session-block-lbl">Domain Context</div><div class="domain-extra">${s.domain_extra}</div></div>`:'';
+  const extra=s.domain_extra?'<div class="session-block"><div class="session-block-lbl">Domain Context</div><div class="domain-extra">'+s.domain_extra+'</div></div>':'';
 
-  // AI reasoning
-  const reasoning=s.ai_analysis?`<div class="session-block"><div class="session-block-lbl">AI Reasoning</div><div class="ai-reasoning" style="--bot-color:${BOT_COLOR}">${s.ai_analysis}</div></div>`:'';
+  const reasoning=s.ai_analysis?'<div class="session-block"><div class="session-block-lbl">AI Reasoning</div><div class="ai-reasoning" style="--bot-color:'+BOT_COLOR+'">'+s.ai_analysis+'</div></div>':'';
 
-  // Decision badge
   const n=s.trades_made||0;
   const badgeClass=n>0?'traded':'';
-  const badgeText=n>0?`${n} trade${n>1?'s':''} executed`:'No trades — held position';
+  const badgeText=n>0?n+' trade'+(n>1?'s':'')+' executed':'No trades \u2014 held position';
 
   const sessionAt=new Date(s.at);
   const timeStr=sessionAt.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' '+
     sessionAt.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false})+' UTC';
 
-  el.innerHTML=`
-  <div class="session-card" style="--bot-color:${BOT_COLOR}">
-    <div class="session-header">
-      <span class="session-title">🔍 Last Session Analysis</span>
-      <span class="session-time">${timeStr}</span>
-    </div>
+  el.innerHTML=
+  '<div class="session-card" style="--bot-color:'+BOT_COLOR+'">'+
+    '<div class="session-header">'+
+      '<span class="session-title">\ud83d\udd0d Last Session Analysis</span>'+
+      '<span class="session-time">'+timeStr+'</span>'+
+    '</div>'+
 
-    <div class="session-block">
-      <div class="session-block-lbl">Market Conditions Observed</div>
-      <div class="condition-chips">${chips}</div>
-      ${movers?`<div class="movers-row" style="margin-top:6px">${movers}</div>`:''}
-    </div>
+    '<div class="session-block">'+
+      '<div class="session-block-lbl">Market Conditions Observed</div>'+
+      '<div class="condition-chips">'+chips+'</div>'+
+      (movers?'<div class="movers-row" style="margin-top:6px">'+movers+'</div>':'')+
+    '</div>'+
 
-    ${newsItems?`<div class="session-block">
-      <div class="session-block-lbl">News Analyzed (filtered to this bot's domain)</div>
-      <ul class="session-news">${newsItems}</ul>
-    </div>`:''}
+    (newsItems?'<div class="session-block">'+
+      '<div class="session-block-lbl">News Analyzed (filtered to this bot\'s domain)</div>'+
+      '<ul class="session-news">'+newsItems+'</ul>'+
+    '</div>':'')+
 
-    ${extra}
-    ${reasoning}
+    extra+
+    reasoning+
 
-    <div class="session-footer">
-      <span class="decision-badge ${badgeClass}">${badgeText}</span>
-    </div>
-  </div>`;
+    '<div class="session-footer">'+
+      '<span class="decision-badge '+(badgeClass||'')+'">'+badgeText+'</span>'+
+    '</div>'+
+  '</div>';
 }
 
 function renderChart(pf){
   const hist=(pf.portfolio_history||[]).slice(-120);
-  if(hist.length<2){ $('chart-wrap').innerHTML='<div class="empty">No trading history yet</div>'; return; }
-  const labels=hist.map(h=>{ const d=new Date(h.timestamp); return (d.getMonth()+1)+'/'+d.getDate()+' '+String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0'); });
-  const vals=hist.map(h=>h.value);
+  if(hist.length<2){ document.querySelector('.chart-wrap canvas').style.display='none'; return; }
+  const labels=hist.map(function(h){ const d=new Date(h.timestamp); return (d.getMonth()+1)+'/'+d.getDate()+' '+String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0'); });
+  const vals=hist.map(function(h){ return h.value; });
   const isUp=vals[vals.length-1]>=10000;
-  const color=isUp?'#3fb950':'#f85149';
+  const color=isUp?'#089981':'#f23645';
   if(chart) chart.destroy();
-  chart=new Chart($('chart'),{type:'line',data:{labels,datasets:[{data:vals,borderColor:color,backgroundColor:color.replace(')',',0.06)').replace('rgb','rgba'),borderWidth:2,pointRadius:0,fill:true,tension:0.3}]},
-    options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' $'+ctx.parsed.y.toLocaleString('en-US',{minimumFractionDigits:2})}}},
-    scales:{x:{ticks:{color:'#8b949e',maxTicksLimit:8,font:{family:'JetBrains Mono',size:10}},grid:{color:'rgba(255,255,255,.04)'}},
-            y:{ticks:{color:'#8b949e',font:{family:'JetBrains Mono',size:10},callback:v=>'$'+v.toLocaleString('en-US',{maximumFractionDigits:0})},grid:{color:'rgba(255,255,255,.04)'}}}}});
+  const canvas=$('chart');
+  chart=new Chart(canvas,{
+    type:'line',
+    data:{
+      labels:labels,
+      datasets:[{
+        data:vals,
+        borderColor:color,
+        backgroundColor:color.replace(')',',0.06)').replace('rgb','rgba'),
+        borderWidth:2,
+        pointRadius:0,
+        pointHoverRadius:4,
+        pointHoverBackgroundColor:color,
+        fill:true,
+        tension:0.3
+      }]
+    },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:'#1e222d',
+          titleColor:'#d1d4dc',
+          bodyColor:'#d1d4dc',
+          borderColor:'#2a2e39',
+          borderWidth:1,
+          padding:12,
+          cornerRadius:6,
+          callbacks:{
+            label:function(ctx){ return ' $'+ctx.parsed.y.toLocaleString('en-US',{minimumFractionDigits:2}); }
+          }
+        }
+      },
+      scales:{
+        x:{
+          ticks:{color:'#787b86',maxTicksLimit:8,font:{family:'JetBrains Mono',size:10}},
+          grid:{color:'rgba(255,255,255,0.04)'}
+        },
+        y:{
+          ticks:{color:'#787b86',font:{family:'JetBrains Mono',size:10},callback:function(v){ return '$'+v.toLocaleString('en-US',{maximumFractionDigits:0}); }},
+          grid:{color:'rgba(255,255,255,0.04)'}
+        }
+      },
+      interaction:{intersect:false,mode:'index'}
+    }
+  });
 }
 
 function renderPositions(pf){
   const pos=pf.positions||{};
   const el=$('positions');
-  if(!Object.keys(pos).length){ el.innerHTML='<div class="empty">No open positions — all cash</div>'; return; }
+  if(!Object.keys(pos).length){ el.innerHTML='<div class="empty">No open positions \u2014 all cash</div>'; return; }
   let rows='';
-  for(const [t,p] of Object.entries(pos)){
+  for(const t in pos){
+    const p=pos[t];
     const cur=p.current_price||p.avg_cost;
     const pnl=(cur-p.avg_cost)*p.shares;
     const pct=(cur-p.avg_cost)/p.avg_cost*100;
-    rows+=`<tr><td class="mono" style="font-weight:600">${t}</td><td class="mono">${p.shares}</td><td class="mono">${fmt(p.avg_cost)}</td><td class="mono">${fmt(cur)}</td><td class="mono">${fmt(p.shares*cur)}</td><td class="mono ${pnl>=0?'profit':'loss'}">${pnl>=0?'+':'-'}${fmt(Math.abs(pnl))} <span style="font-size:11px">(${pct>=0?'+':''}${pct.toFixed(2)}%)</span></td></tr>`;
+    rows+='<tr><td class="mono" style="font-weight:600">'+t+'</td><td class="mono">'+p.shares+'</td><td class="mono">'+fmt(p.avg_cost)+'</td><td class="mono">'+fmt(cur)+'</td><td class="mono">'+fmt(p.shares*cur)+'</td><td class="mono '+(pnl>=0?'profit':'loss')+'">'+(pnl>=0?'+':'-')+fmt(Math.abs(pnl))+' <span style="font-size:11px">('+(pct>=0?'+':'')+pct.toFixed(2)+'%)</span></td></tr>';
   }
-  el.innerHTML=`<div class="table-wrap"><table><thead><tr><th>Ticker</th><th>Shares</th><th>Avg Cost</th><th>Current</th><th>Mkt Value</th><th>Unrealised P&L</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  el.innerHTML='<div class="table-wrap"><table><thead><tr><th>Ticker</th><th>Shares</th><th>Avg Cost</th><th>Current</th><th>Mkt Value</th><th>Unrealised P&amp;L</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
 }
 
 function renderTrades(trades){
   const el=$('trades');
   const recent=[...trades].reverse().slice(0,10);
-  if(!recent.length){ el.innerHTML='<div class="empty">No trades yet — bot activates when US market opens</div>'; return; }
+  if(!recent.length){ el.innerHTML='<div class="empty">No trades yet \u2014 bot activates when US market opens</div>'; return; }
   let rows='';
-  recent.forEach(t=>{
+  recent.forEach(function(t){
     const badge=t.action==='BUY'?'<span class="badge badge-buy">BUY</span>':'<span class="badge badge-sell">SELL</span>';
-    // Build signal context line
     let ctxHtml='';
     const sc=t.signal_context;
     if(sc){
       const parts=[];
       if(sc.ticker_chg_pct!=null){
         const cls=sc.ticker_chg_pct>0?'ctx-up':'ctx-down';
-        parts.push(`<span class="ctx-item ${cls}">${t.ticker}: ${sc.ticker_chg_pct>=0?'+':''}${Number(sc.ticker_chg_pct).toFixed(1)}%</span>`);
+        parts.push('<span class="ctx-item '+cls+'">'+t.ticker+': '+(sc.ticker_chg_pct>=0?'+':'')+Number(sc.ticker_chg_pct).toFixed(1)+'%</span>');
       }
-      if(sc.fg_value!=null) parts.push(`<span class="ctx-item">F&amp;G: ${sc.fg_value} ${sc.fg_label?`(${sc.fg_label})`:''}</span>`);
+      if(sc.fg_value!=null) parts.push('<span class="ctx-item">F&amp;G: '+sc.fg_value+(sc.fg_label?' ('+sc.fg_label+')':'')+'</span>');
       if(sc.sp500_chg!=null){
         const cls=sc.sp500_chg>=0?'ctx-up':'ctx-down';
-        parts.push(`<span class="ctx-item ${cls}">S&amp;P: ${sc.sp500_chg>=0?'+':''}${Number(sc.sp500_chg).toFixed(1)}%</span>`);
+        parts.push('<span class="ctx-item '+cls+'">S&amp;P: '+(sc.sp500_chg>=0?'+':'')+Number(sc.sp500_chg).toFixed(1)+'%</span>');
       }
-      if(sc.vix!=null) parts.push(`<span class="ctx-item">VIX: ${Number(sc.vix).toFixed(1)}</span>`);
-      if(parts.length) ctxHtml=`<div class="signal-ctx">${parts.join('')}</div>`;
+      if(sc.vix!=null) parts.push('<span class="ctx-item">VIX: '+Number(sc.vix).toFixed(1)+'</span>');
+      if(parts.length) ctxHtml='<div class="signal-ctx">'+parts.join('')+'</div>';
     }
-    const reasonCell=`<div style="color:var(--text-2);font-size:12px;line-height:1.5;max-width:260px">${t.reasoning||'—'}</div>${ctxHtml}`;
-    rows+=`<tr>
-      <td class="mono" style="color:var(--text-2);white-space:nowrap">${fmtTs(t.timestamp)}</td>
-      <td>${badge}</td>
-      <td class="mono" style="font-weight:600">${t.ticker}</td>
-      <td class="mono">${t.shares}</td>
-      <td class="mono">${fmt(t.price)}</td>
-      <td class="mono">${fmt(t.total_value)}</td>
-      <td>${reasonCell}</td>
-    </tr>`;
+    const reasonCell='<div style="color:var(--tv-text-2);font-size:12px;line-height:1.5;max-width:260px">'+(t.reasoning||'\u2014')+'</div>'+ctxHtml;
+    rows+='<tr>'+
+      '<td class="mono" style="color:var(--tv-text-2);white-space:nowrap">'+fmtTs(t.timestamp)+'</td>'+
+      '<td>'+badge+'</td>'+
+      '<td class="mono" style="font-weight:600">'+t.ticker+'</td>'+
+      '<td class="mono">'+t.shares+'</td>'+
+      '<td class="mono">'+fmt(t.price)+'</td>'+
+      '<td class="mono">'+fmt(t.total_value)+'</td>'+
+      '<td>'+reasonCell+'</td>'+
+    '</tr>';
   });
-  el.innerHTML=`<div class="table-wrap"><table><thead><tr><th>Time (UTC)</th><th>Action</th><th>Ticker</th><th>Shares</th><th>Price</th><th>Total</th><th>Reasoning &amp; Signal</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  el.innerHTML='<div class="table-wrap"><table><thead><tr><th>Time (UTC)</th><th>Action</th><th>Ticker</th><th>Shares</th><th>Price</th><th>Total</th><th>Reasoning &amp; Signal</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
-  document.title=`${BOT_NAME} · PaperChase Trading Arena`;
+document.addEventListener('DOMContentLoaded',function(){
+  document.title=BOT_NAME+' \u00b7 PaperChase Trading Arena';
   $('app').style.display='none';
-  load().catch(e=>{ $('loading').textContent='Error: '+e.message; });
+  load().catch(function(e){ $('loading').textContent='Error: '+e.message; });
 });
