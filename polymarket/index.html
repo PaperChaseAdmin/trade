@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Polymarket Scanner · PaperChase</title>
+<meta name="description" content="AI-powered Polymarket prediction market scanner. Find high-confidence bets with AI analysis and historical accuracy tracking."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://paperchase.online/trade/polymarket/"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W3V49QCMT0');
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --tv-bg: #0a0b0f; --tv-surface: #131722; --tv-surface-2: #1e222d; --tv-surface-3: #2a2e39;
+  --tv-border: #2a2e39; --tv-border-2: #363a45;
+  --tv-text: #d1d4dc; --tv-text-2: #787b86; --tv-text-3: #50535c;
+  --tv-green: #089981; --tv-red: #f23645; --tv-yellow: #ff9800; --tv-blue: #2962ff;
+  --tv-font: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --tv-mono: 'JetBrains Mono','Fira Code',monospace;
+  --tv-radius: 6px; --tv-radius-sm: 4px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+.bg-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,11,15,0.88),rgba(10,11,15,0.93),rgba(10,11,15,0.97)),url('https://images.pexels.com/photos/16594725/pexels-photo-16594725.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920') center/cover no-repeat fixed}
+.wrap{position:relative;z-index:1}
+
+.topbar{background:rgba(19,23,34,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--tv-border);position:sticky;top:0;z-index:100}
+.topbar-inner{max-width:1400px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:4px;height:52px}
+.logo{font-size:15px;font-weight:800;color:var(--tv-text);text-decoration:none;display:flex;align-items:center;gap:10px;margin-right:20px}
+.logo::before{content:'';width:20px;height:20px;background:linear-gradient(135deg,var(--tv-blue),#7c4dff);border-radius:5px;display:inline-block}
+.topbar-nav{display:flex;align-items:center;gap:0}
+.nav-section{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--tv-text-3);padding:0 10px;margin-right:4px}
+.nav-link{font-size:13px;font-weight:500;color:var(--tv-text-2);text-decoration:none;padding:6px 12px;border-radius:var(--tv-radius-sm);transition:all .15s}
+.nav-link:hover,.nav-link.active{background:var(--tv-surface-2);color:var(--tv-text)}
+.nav-spacer{width:1px;height:20px;background:var(--tv-border-2);margin:0 10px}
+
+.container{max-width:1400px;margin:0 auto;padding:0 20px 60px}
+
+.page-header{padding:28px 0 20px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.page-title{font-size:24px;font-weight:700;color:var(--tv-text)}
+.page-sub{font-size:13px;color:var(--tv-text-2)}
+.header-meta{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--tv-text-2)}
+.refresh-btn{font-size:12px;font-weight:500;padding:5px 14px;border-radius:var(--tv-radius-sm);border:1px solid var(--tv-border-2);color:var(--tv-text-2);background:var(--tv-surface);cursor:pointer;transition:all .15s;font-family:var(--tv-font)}
+.refresh-btn:hover{border-color:var(--tv-blue);color:var(--tv-blue)}
+.live{display:inline-block;width:7px;height:7px;background:var(--tv-green);border-radius:50%;animation:blink 2s infinite;margin-right:5px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* Filters */
+.filter-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.filter-btn{font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid var(--tv-border);background:var(--tv-surface);color:var(--tv-text-2);cursor:pointer;transition:all .15s;font-family:var(--tv-font)}
+.filter-btn:hover{background:var(--tv-surface-2)}
+.filter-btn.active{background:var(--tv-blue);color:#fff;border-color:var(--tv-blue)}
+.filter-count{font-size:11px;color:var(--tv-text-3);margin-left:auto}
+
+/* Stats bar */
+.stats-bar{display:flex;gap:1px;background:var(--tv-border);border-radius:var(--tv-radius);overflow:hidden;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.stat-item{background:var(--tv-surface);padding:12px 16px;flex:1;text-align:center}
+.stat-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tv-text-2);margin-bottom:4px}
+.stat-val{font-size:18px;font-weight:700;font-family:var(--tv-mono);color:var(--tv-text)}
+
+/* Market Card */
+.market-grid{display:flex;flex-direction:column;gap:1px;background:var(--tv-border);border-radius:var(--tv-radius);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.market-card{background:var(--tv-surface);padding:14px 16px;cursor:pointer;transition:background .1s}
+.market-card:hover{background:var(--tv-surface-2)}
+.market-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
+.market-card-question{font-size:14px;font-weight:600;color:var(--tv-text);flex:1;line-height:1.4}
+.market-card-badge{font-size:9px;font-weight:600;padding:2px 7px;border-radius:3px;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.badge-yes{background:rgba(8,153,129,.15);color:var(--tv-green);border:1px solid rgba(8,153,129,.2)}
+.badge-review{background:rgba(255,152,0,.15);color:var(--tv-yellow);border:1px solid rgba(255,152,0,.2)}
+.badge-no{background:rgba(242,54,69,.15);color:var(--tv-red);border:1px solid rgba(242,54,69,.2)}
+.badge-tag{font-size:9px;padding:1px 5px;border-radius:2px;background:var(--tv-surface-3);color:var(--tv-text-3);border:1px solid var(--tv-border-2);text-transform:uppercase}
+
+.market-card-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.meta-item{font-size:11px;color:var(--tv-text-2)}
+.meta-item strong{color:var(--tv-text);font-family:var(--tv-mono);font-weight:600}
+
+.prob-bar-wrap{height:4px;background:var(--tv-surface-3);border-radius:2px;overflow:hidden;margin-bottom:6px}
+.prob-bar-fill{height:100%;border-radius:2px;transition:width .5s}
+
+.market-card-ai{background:var(--tv-surface-2);border:1px solid var(--tv-border);border-radius:var(--tv-radius-sm);padding:8px 10px;margin-top:6px;font-size:12px;line-height:1.5;color:var(--tv-text-2);display:none}
+.market-card-ai.open{display:block}
+.ai-outlook{font-weight:600;margin-right:4px}
+.ai-conf{font-size:10px;color:var(--tv-text-3)}
+
+/* Loading */
+.loading{padding:60px;text-align:center;color:var(--tv-text-2);font-size:14px}
+.spinner{width:24px;height:24px;border:2px solid var(--tv-border);border-top-color:var(--tv-blue);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 10px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media(max-width:640px){
+  .stats-bar{flex-wrap:wrap}
+  .stat-item{min-width:33%}
+}
+</style>
+</head>
+<body>
+<div class="bg-overlay"></div>
+<div class="wrap">
+
+<nav class="topbar"><div class="topbar-inner">
+  <a class="logo" href="/trade/">PaperChase</a>
+  <div class="topbar-nav">
+    <span class="nav-section">Trading</span>
+    <a class="nav-link" href="/trade/">Leaderboard</a>
+    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
+    <a class="nav-link active" href="/trade/polymarket/">Polymarket</a>
+    <div class="nav-spacer"></div>
+    <span class="nav-section">Info</span>
+    <a class="nav-link" href="/">About</a>
+  </div>
+</div></nav>
+
+<div class="container">
+
+  <div class="page-header">
+    <div>
+      <div class="page-title">🎲 Polymarket Scanner</div>
+      <div class="page-sub">AI-powered prediction market analysis · High-confidence bet finder</div>
+    </div>
+    <div class="header-meta">
+      <span class="live"></span><span id="lastUpdated">Loading...</span>
+      <button class="refresh-btn" onclick="loadData()">⟳ Refresh</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-bar" id="statsBar"></div>
+
+  <!-- Filters -->
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" data-filter="recommended" onclick="setFilter('recommended',this)">✅ Recommended</button>
+    <button class="filter-btn" data-filter="review" onclick="setFilter('review',this)">⚠️ Review</button>
+    <button class="filter-btn" data-filter="politics" onclick="setFilter('politics',this)">Politics</button>
+    <button class="filter-btn" data-filter="crypto" onclick="setFilter('crypto',this)">Crypto</button>
+    <button class="filter-btn" data-filter="finance" onclick="setFilter('finance',this)">Finance</button>
+    <button class="filter-btn" data-filter="news" onclick="setFilter('news',this)">News</button>
+    <span class="filter-count" id="countLabel">0 markets</span>
+  </div>
+
+  <!-- Market List -->
+  <div id="marketList"><div class="loading"><div class="spinner"></div>Scanning Polymarket...</div></div>
+
+</div>
+
+<script>
+let allMarkets = [];
+let currentFilter = 'all';
+
+function fmt(v) {
+  if (v == null) return '—';
+  if (v >= 1e6) return '$'+(v/1e6).toFixed(1)+'M';
+  if (v >= 1e3) return '$'+(v/1e3).toFixed(1)+'K';
+  return '$'+v.toFixed(0);
+}
+
+function ago(ts) {
+  if (!ts) return '';
+  const m = Math.floor((Date.now()-new Date(ts))/60000);
+  return m<1?'just now':m<60?m+'m ago':Math.floor(m/60)+'h ago';
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMarkets();
+}
+
+function renderMarkets() {
+  let filtered = allMarkets;
+  if (currentFilter === 'recommended') {
+    filtered = allMarkets.filter(m => m.heuristic && m.heuristic.score >= 15);
+  } else if (currentFilter === 'review') {
+    filtered = allMarkets.filter(m => m.heuristic && m.heuristic.score < 15 && m.heuristic.score >= 5);
+  } else if (currentFilter !== 'all') {
+    filtered = allMarkets.filter(m => m.tag === currentFilter);
+  }
+  
+  document.getElementById('countLabel').textContent = filtered.length + ' markets';
+  
+  if (!filtered.length) {
+    document.getElementById('marketList').innerHTML = '<div class="loading" style="padding:40px">No markets found for this filter</div>';
+    return;
+  }
+  
+  let html = '<div class="market-grid">';
+  filtered.forEach((m,i) => {
+    const h = m.heuristic || {};
+    const ai = m.ai || {};
+    const pct = (m.yes_price*100).toFixed(1);
+    const badge = h.score >= 15 ? 'badge-yes' : h.score >= 5 ? 'badge-review' : 'badge-no';
+    const badgeText = h.score >= 15 ? '✅ Yes' : h.score >= 5 ? '⚠️ Review' : '❌ No';
+    const barColor = m.yes_price >= 0.9 ? '#089981' : m.yes_price >= 0.7 ? '#ff9800' : '#f23645';
+    const endDate = m.end_date ? new Date(m.end_date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : 'N/A';
+    
+    const aiHtml = ai.ai_analysis ? 
+      '<div class="market-card-ai open">' +
+        '<span class="ai-outlook" style="color:' + (ai.ai_outlook==='yes'?'var(--tv-green)':'var(--tv-red)') + '">' + (ai.ai_outlook||'neutral').toUpperCase() + '</span>' +
+        '<span class="ai-conf">(' + (ai.ai_confidence||0) + '% confidence)</span> — ' +
+        (ai.ai_analysis||'') +
+      '</div>' : '';
+    
+    html += '<div class="market-card" onclick="toggleAI(this)">' +
+      '<div class="market-card-header">' +
+        '<div class="market-card-question">' + m.question + '</div>' +
+        '<span class="market-card-badge ' + badge + '">' + badgeText + '</span>' +
+      '</div>' +
+      '<div class="market-card-meta">' +
+        '<span class="meta-item">Yes: <strong class="' + (m.yes_price>=0.9?'c-green':m.yes_price>=0.7?'c-yellow':'') + '">' + pct + '%</strong></span>' +
+        '<span class="meta-item">Ends: <strong>' + endDate + '</strong></span>' +
+        '<span class="meta-item">Vol: <strong>' + fmt(m.volume) + '</strong></span>' +
+        '<span class="badge-tag">' + (m.tag||'') + '</span>' +
+        (m.heuristic && m.heuristic.reasons ? '<span class="meta-item" style="color:var(--tv-text-3);font-size:10px">' + m.heuristic.reasons + '</span>' : '') +
+      '</div>' +
+      '<div class="prob-bar-wrap"><div class="prob-bar-fill" style="width:' + pct + '%;background:' + barColor + '"></div></div>' +
+      aiHtml +
+    '</div>';
+  });
+  html += '</div>';
+  
+  document.getElementById('marketList').innerHTML = html;
+}
+
+function toggleAI(el) {
+  const aiEl = el.querySelector('.market-card-ai');
+  if (aiEl) aiEl.classList.toggle('open');
+}
+
+async function loadData() {
+  try {
+    const resp = await fetch('/trade/data/polymarket/scan_results.json?t='+Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    allMarkets = data.markets || [];
+    
+    document.getElementById('lastUpdated').textContent = 'Updated ' + ago(data.updated_at);
+    
+    // Stats
+    const total = allMarkets.length;
+    const recommended = allMarkets.filter(m => m.heuristic && m.heuristic.score >= 15).length;
+    const avgYes = total ? (allMarkets.reduce((s,m) => s+m.yes_price, 0)/total*100).toFixed(1) : 0;
+    const totalVol = allMarkets.reduce((s,m) => s+(m.volume||0), 0);
+    
+    document.getElementById('statsBar').innerHTML =
+      '<div class="stat-item"><div class="stat-lbl">Markets</div><div class="stat-val">' + total + '</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">Recommended</div><div class="stat-val" style="color:var(--tv-green)">' + recommended + '</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">Avg Yes%</div><div class="stat-val">' + avgYes + '%</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">Total Volume</div><div class="stat-val">' + fmt(totalVol) + '</div></div>';
+    
+    renderMarkets();
+  } catch(e) {
+    document.getElementById('marketList').innerHTML = '<div class="loading" style="color:var(--tv-red)">⚠ Could not load: ' + e.message + '<br><small>Run python3 polymarket/scanner.py to generate data</small></div>';
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>
