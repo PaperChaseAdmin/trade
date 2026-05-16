@@ -19,7 +19,7 @@ DETAIL_TMPL = """\
   <div class="topbar-nav">
     <span class="nav-section">Trading</span>
     <a class="nav-link" href="/trade/">Leaderboard</a>
-    <a class="nav-link" href="/trade/sentinel/">Market Sentinel</a>
+    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
     <div class="nav-spacer"></div>
     <span class="nav-section">Info</span>
     <a class="nav-link" href="/">About</a>
@@ -74,7 +74,7 @@ RECORDS_TMPL = """\
   <div class="topbar-nav">
     <span class="nav-section">Trading</span>
     <a class="nav-link" href="/trade/">Leaderboard</a>
-    <a class="nav-link" href="/trade/sentinel/">Market Sentinel</a>
+    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
     <div class="nav-spacer"></div>
     <span class="nav-section">Info</span>
     <a class="nav-link" href="/">About</a>
