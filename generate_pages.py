@@ -8,7 +8,18 @@ DETAIL_TMPL = """\
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>{name} · PaperChase Trading Arena</title>
+<title>{name} · AI Trading Bot · PaperChase</title>
+<meta name="description" content="Watch {name}, an AI-powered trading bot with a {strategy} strategy. Real portfolio, live trades, transparent AI decisions on PaperChase."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://paperchase.online/trade/{bot_id}/"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', 'G-W3V49QCMT0');
+</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -65,7 +76,18 @@ RECORDS_TMPL = """\
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>{name} Records · PaperChase</title>
+<title>{name} Trade Records · PaperChase</title>
+<meta name="description" content="Complete trade history for {name} AI trading bot on PaperChase. View all past trades, win rate, and performance."/>
+<meta name="robots" content="noindex, follow"/>
+<link rel="canonical" href="https://paperchase.online/trade/{bot_id}/records/"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', 'G-W3V49QCMT0');
+</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
 </head>
@@ -82,7 +104,7 @@ RECORDS_TMPL = """\
   </div>
 </div></nav>
 <div class="container">
-  <a class="back-link" href="/trade/{bot_id}/">← {avatar} {name}</a>
+  <a class="back-link" href=\"/trade/{bot_id}/\">← {avatar} {name}</a>
   <div class="page-header">
     <div style="font-size:20px;font-weight:600;color:var(--tv-text)">{avatar} {name} — Trade Records</div>
     <div class="page-sub">Complete history · All times UTC</div>
