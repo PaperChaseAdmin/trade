@@ -292,6 +292,120 @@ body {
   color: var(--tv-text-3); font-size: 13px; 
 }
 
+/* ── Countdown Wrap (top right of hero) ── */
+.countdown-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.countdown-lbl {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--tv-text-3);
+}
+.countdown-num {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--tv-mono);
+  color: var(--tv-text);
+  white-space: nowrap;
+}
+
+/* ── Prices Bar (ticker chips above session) ── */
+.prices-bar {
+  background: var(--tv-surface);
+  border: 1px solid var(--tv-border);
+  border-radius: var(--tv-radius);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.prices-bar-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--tv-text-2);
+  margin-bottom: 8px;
+}
+.prices-bar-sub {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--tv-text-3);
+  font-size: 10px;
+}
+.prices-bar-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.price-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: var(--tv-surface-2);
+  border: 1px solid var(--tv-border-2);
+  border-radius: var(--tv-radius-sm);
+}
+.price-chip-sym {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--tv-mono);
+  color: var(--tv-text);
+}
+.price-chip-val {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--tv-mono);
+  color: var(--tv-text);
+}
+.price-chip-chg {
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--tv-mono);
+}
+
+/* ── Expandable Position Rows ── */
+.pos-expand td {
+  padding: 0 !important;
+  background: var(--tv-surface-2);
+}
+.pos-expand:hover td {
+  background: var(--tv-surface-2) !important;
+}
+.pos-detail {
+  padding: 14px 16px 14px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pos-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.pos-detail-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--tv-text-3);
+  min-width: 90px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.pos-detail-val {
+  font-size: 12px;
+  color: var(--tv-text);
+  font-family: var(--tv-mono);
+}
+
 /* ════════════════════════════════════════
    BOT DETAIL PAGE STYLES
    ════════════════════════════════════════ */

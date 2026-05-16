@@ -29,7 +29,7 @@
       <div class="page-title">AI Trading Arena</div>
       <div class="page-sub"><span class="live-dot"></span> 20 AI bots · $10,000 each · Real market data · Transparent decisions</div>
     </div>
-    <div id="last-update" class="last-update"></div>
+    <div id="countdown-wrap" class="countdown-wrap" style="margin-left:auto;flex-shrink:0"></div>
   </div>
 
   <!-- KPI Dashboard -->
@@ -77,7 +77,54 @@ function signPct(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">$
 function signVal(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
 function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?`${m}m ago`:m<1440?`${Math.floor(m/60)}h ago`:`${Math.floor(m/1440)}d ago`; }
 
-let mainChart = null, riskChart = null;
+let mainChart = null, riskChart = null, _cdTimer = null;
+
+function startCountdown() {
+  clearInterval(_cdTimer);
+  const now = new Date();
+  const day = now.getUTCDay();
+  const hour = now.getUTCHours();
+  const min = now.getUTCMinutes();
+  
+  const el = document.getElementById('countdown-wrap');
+  if (!el) return;
+  
+  function nextMarketOpen() {
+    const next = new Date(now);
+    if (day === 0 || day === 6 || (day === 5 && hour >= 21)) {
+      const daysUntilMonday = day === 0 ? 1 : day === 6 ? 2 : (8 - day);
+      next.setDate(next.getDate() + daysUntilMonday);
+      next.setUTCHours(13, 30, 0, 0);
+    } else if (hour < 13 || (hour === 13 && min < 30)) {
+      next.setUTCHours(13, 30, 0, 0);
+    } else if (hour >= 21) {
+      next.setDate(next.getDate() + 1);
+      next.setUTCHours(13, 30, 0, 0);
+    } else {
+      const nextHalf = Math.ceil((hour * 60 + min) / 30) * 30;
+      next.setUTCHours(Math.floor(nextHalf/60), nextHalf%60, 0, 0);
+    }
+    return next;
+  }
+  
+  const target = nextMarketOpen();
+  
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) { el.innerHTML = '<span class="countdown-num">Checking now...</span>'; return; }
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    
+    if (day >= 1 && day <= 5 && hour >= 13 && hour < 21) {
+      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + (h>0?h+'h ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+    } else {
+      el.innerHTML = '<span class="countdown-lbl">Market Opens</span><span class="countdown-num">' + (h>0?h+'d ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+    }
+  }
+  tick();
+  _cdTimer = setInterval(tick, 1000);
+}
 
 function buildKPIs(bots){
   const totalVal = bots.reduce((s,b)=>s+(+b.total_value||0),0);
@@ -276,8 +323,11 @@ async function load(){
   buildDistribution(sorted);
   buildMainChart(sorted);
 
-  document.getElementById('last-update').innerHTML = `<span class="update-dot"></span> Updated ${ago(data.updated_at)} · Auto-refresh every 90s`;
+  document.getElementById('last-update').innerHTML = '<span class="update-dot"></span> Updated '+ago(data.updated_at)+' · Auto-refresh every 90s';
   document.getElementById('count-badge').textContent = sorted.length+' bots';
+
+  // Countdown timer
+  startCountdown();
 
   const lb=document.getElementById('leaderboard');
   lb.innerHTML='<div class="bot-list">';

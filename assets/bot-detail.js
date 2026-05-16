@@ -1,82 +1,219 @@
-/* Bot detail page — shared logic. Requires BOT_ID and BOT_COLOR globals. */
+/* Bot detail page — v2 with real-time prices, clickable positions, countdown */
 'use strict';
 
 const BASE = `/trade/data/bots/${BOT_ID}/`;
 let chart = null;
+let expandedRow = null;
 
 const $ = id => document.getElementById(id);
 function fmt(v){ return '$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
 function sign(v){ const c=+v>=0?'profit':'loss'; return '<span class="'+c+'">'+(+v>=0?'+':'-')+fmt(Math.abs(+v))+'</span>'; }
-function signPct(v){ const c=+v>=0?'profit':'loss'; return '<span class="'+c+'">'+(+v>=0?'+':'')+(+v).toFixed(2)+'%</span>'; }
 function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?`${m}m ago`:m<1440?`${Math.floor(m/60)}h ago`:`${Math.floor(m/1440)}d ago`; }
 function fmtTs(ts){ const d=new Date(ts); return d.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false})+' UTC'; }
 
-function renderSpecs(){
-  if(typeof BOT_WATCHLIST==='undefined') return;
-  const pct=(BOT_MAX_POSITION*100).toFixed(0);
-  const tickers=BOT_WATCHLIST.map(t=>
-    '<a class="ticker-chip" href="https://finance.yahoo.com/quote/'+t+'" target="_blank" rel="noopener">'+t+'</a>'
-  ).join('');
+// ── Countdown to next review or market open ──
+let _cdTimer = null;
+function startCountdown(pf) {
+  clearInterval(_cdTimer);
+  const el = $('countdown-wrap');
   
-  function resolveModel(shortName) {
-    if(shortName === 'gemini') return {name:'Gemini 2.0 Flash', provider:'Google DeepMind', badge:'Free'};
-    if(shortName === 'openrouter/minimax' || shortName === 'minimax') return {name:'MiniMax M2.5', provider:'MiniMax (OpenRouter)', badge:'Free'};
-    if(shortName === 'openrouter/ling' || shortName === 'ling') return {name:'Ling 2.6 1T', provider:'Inclusion AI (OpenRouter)', badge:'Free'};
-    if(shortName === 'openrouter/nemotron' || shortName === 'nemotron') return {name:'Nemotron 3 Super 120B', provider:'NVIDIA (OpenRouter)', badge:'Free'};
-    return {name:shortName || '\u2014', provider:'Custom', badge:''};
+  // Check market hours
+  const now = new Date();
+  const day = now.getUTCDay(); // 0=Sun, 6=Sat
+  const hour = now.getUTCHours();
+  const min = now.getUTCMinutes();
+  
+  // US market open: Mon-Fri 13:30 UTC (9:30 ET) to 20:00 UTC (4:00 ET)
+  // Bot runs: Mon-Fri 13:00-21:00 UTC every 30min
+  
+  function isMarketDay(d) { return d >= 1 && d <= 5; }
+  
+  function nextMarketOpen() {
+    const next = new Date(now);
+    if (!isMarketDay(day) || (day === 5 && hour >= 21)) {
+      // Weekend or after Friday close → next Monday
+      const daysUntilMonday = day === 0 ? 1 : day === 6 ? 2 : (8 - day);
+      next.setDate(next.getDate() + daysUntilMonday);
+      next.setUTCHours(13, 30, 0, 0);
+    } else if (hour < 13 || (hour === 13 && min < 30)) {
+      // Before market open today
+      next.setUTCHours(13, 30, 0, 0);
+    } else if (hour >= 21) {
+      // After last run → next day
+      next.setDate(next.getDate() + 1);
+      next.setUTCHours(13, 30, 0, 0);
+    } else {
+      // Market is open — next review is in ~30 min
+      const nextHalf = Math.ceil((hour * 60 + min) / 30) * 30;
+      next.setUTCHours(Math.floor(nextHalf/60), nextHalf%60, 0, 0);
+    }
+    return next;
   }
-
-  const primary = resolveModel(BOT_MODEL);
-  const fallback = BOT_FALLBACK ? resolveModel(BOT_FALLBACK) : null;
   
-  $('specs').innerHTML=
-    '<div class="spec-card">'+
-      '<div class="spec-card-title">Bot Specifications</div>'+
-      '<div class="spec-grid">'+
-        '<div class="spec-item">'+
-          '<div class="spec-label">AI Engine</div>'+
-          '<div class="spec-val">'+primary.name+'</div>'+
-          '<div class="spec-sub">'+primary.provider+' '+(primary.badge?'<span class="badge badge-free">'+primary.badge+'</span>':'')+'</div>'+
-          (fallback?'<div class="spec-sub fallback-sub">\u21b3 Fallback: '+fallback.name+' <span class="badge badge-fallback">Backup</span></div>':'')+
-        '</div>'+
-        '<div class="spec-item">'+
-          '<div class="spec-label">Market Data</div>'+
-          '<div class="spec-val">Yahoo Finance</div>'+
-          '<div class="spec-sub">~15 min delayed</div>'+
-        '</div>'+
-        '<div class="spec-item">'+
-          '<div class="spec-label">Update Frequency</div>'+
-          '<div class="spec-val">Every 30 min</div>'+
-          '<div class="spec-sub">During market hours</div>'+
-        '</div>'+
-        '<div class="spec-item">'+
-          '<div class="spec-label">Active Hours</div>'+
-          '<div class="spec-val">Mon\u2013Fri</div>'+
-          '<div class="spec-sub">09:00\u201317:00 ET</div>'+
-        '</div>'+
-        '<div class="spec-item">'+
-          '<div class="spec-label">Max Position Size</div>'+
-          '<div class="spec-val">'+pct+'%</div>'+
-          '<div class="spec-sub">of portfolio per stock</div>'+
-        '</div>'+
-        '<div class="spec-item">'+
-          '<div class="spec-label">Max Trades / Session</div>'+
-          '<div class="spec-val">'+BOT_MAX_TRADES+'</div>'+
-          '<div class="spec-sub">per 30-min run</div>'+
-        '</div>'+
-        '<div class="spec-item">'+
-          '<div class="spec-label">Min Cash Reserve</div>'+
-          '<div class="spec-val">'+fmt(BOT_MIN_CASH)+'</div>'+
-          '<div class="spec-sub">always kept liquid</div>'+
-        '</div>'+
-        '<div class="spec-item">'+
-          '<div class="spec-label">Starting Capital</div>'+
-          '<div class="spec-val">$10,000</div>'+
-          '<div class="spec-sub">paper money</div>'+
-        '</div>'+
-      '</div>'+
-      '<div class="spec-label" style="margin:20px 0 10px">Watchlist \u2014 '+BOT_WATCHLIST.length+' tickers monitored each session</div>'+
-      '<div class="ticker-list">'+tickers+'</div>'+
+  const target = nextMarketOpen();
+  
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      el.innerHTML = '<span class="countdown-num">Checking now...</span>';
+      return;
+    }
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    
+    if (isMarketDay(day) && hour >= 13 && hour < 21) {
+      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' +
+        (h>0?h+'h ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+    } else {
+      el.innerHTML = '<span class="countdown-lbl">Market Opens</span><span class="countdown-num">' +
+        (h>0?h+'d ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+    }
+  }
+  tick();
+  _cdTimer = setInterval(tick, 1000);
+}
+
+// ── Current Prices Bar (ticker prices above last session) ──
+function renderPricesBar(pf) {
+  const pos = pf.positions || {};
+  const keys = Object.keys(pos);
+  if (!keys.length) { $('prices-bar').innerHTML = ''; return; }
+  
+  let html = '<div class="prices-bar"><div class="prices-bar-title">Current Positions <span class="prices-bar-sub">live prices</span></div><div class="prices-bar-items">';
+  keys.forEach(t => {
+    const p = pos[t];
+    const cur = p.current_price || p.avg_cost;
+    const chg = ((cur - p.avg_cost) / p.avg_cost * 100);
+    html += '<div class="price-chip">' +
+      '<span class="price-chip-sym">' + t + '</span>' +
+      '<span class="price-chip-val">' + fmt(cur) + '</span>' +
+      '<span class="price-chip-chg ' + (chg>=0?'profit':'loss') + '">' + (chg>=0?'+':'') + chg.toFixed(2) + '%</span>' +
+    '</div>';
+  });
+  html += '</div></div>';
+  $('prices-bar').innerHTML = html;
+}
+
+// ── Clickable Position Rows ──
+function renderPositions(pf){
+  const pos = pf.positions || {};
+  const el = $('positions');
+  if (!Object.keys(pos).length) { el.innerHTML='<div class="empty">No open positions \u2014 all cash</div>'; return; }
+  
+  // Get trade history for this bot to find entry details
+  // We'll store it as a map ticker->latest trade
+  fetch(BASE+'trades.json?t='+Date.now()).then(r=>r.json()).then(tr => {
+    const tradeMap = {};
+    (tr.trades||[]).forEach(t => {
+      if (t.action === 'BUY' && !tradeMap[t.ticker]) tradeMap[t.ticker] = t;
+    });
+    // Override with most recent buy for each ticker
+    (tr.trades||[]).forEach(t => {
+      if (t.action === 'BUY') tradeMap[t.ticker] = t;
+    });
+    
+    let rows = '';
+    for(const t in pos) {
+      const p = pos[t];
+      const cur = p.current_price || p.avg_cost;
+      const pnl = (cur - p.avg_cost) * p.shares;
+      const pct = (cur - p.avg_cost) / p.avg_cost * 100;
+      const entry = tradeMap[t];
+      
+      rows += '<tr class="pos-row" onclick="toggleExpand(\'' + t + '\',this)" style="cursor:pointer">' +
+        '<td class="mono" style="font-weight:600">' + t + '</td>' +
+        '<td class="mono">' + p.shares + '</td>' +
+        '<td class="mono">' + fmt(p.avg_cost) + '</td>' +
+        '<td class="mono">' + fmt(cur) + '</td>' +
+        '<td class="mono">' + fmt(p.shares*cur) + '</td>' +
+        '<td class="mono ' + (pnl>=0?'profit':'loss') + '">' + (pnl>=0?'+':'-') + fmt(Math.abs(pnl)) + 
+        ' <span style="font-size:11px">(' + (pct>=0?'+':'') + pct.toFixed(2) + '%)</span></td>' +
+        '<td class="mono" style="color:var(--tv-text-3);font-size:10px">\u25bc</td>' +
+      '</tr>' +
+      '<tr class="pos-expand" id="expand-' + t + '" style="display:none">' +
+        '<td colspan="7">' +
+          '<div class="pos-detail">' +
+            (entry ? 
+              '<div class="pos-detail-row"><span class="pos-detail-lbl">Entry Time</span><span class="pos-detail-val">' + fmtTs(entry.timestamp) + '</span></div>' +
+              '<div class="pos-detail-row"><span class="pos-detail-lbl">Entry Price</span><span class="pos-detail-val">' + fmt(entry.price) + '</span></div>' +
+              '<div class="pos-detail-row"><span class="pos-detail-lbl">Shares</span><span class="pos-detail-val">' + entry.shares + '</span></div>' +
+              '<div class="pos-detail-row"><span class="pos-detail-lbl">Total Cost</span><span class="pos-detail-val">' + fmt(entry.total_value) + '</span></div>' +
+              (entry.reasoning ? '<div class="pos-detail-row" style="flex-direction:column;gap:4px"><span class="pos-detail-lbl">Signal</span><span class="pos-detail-val" style="font-size:11px;line-height:1.5;max-width:500px">' + entry.reasoning + '</span></div>' : '') +
+              (entry.signal_context ? '<div class="pos-detail-row"><span class="pos-detail-lbl">Market Context</span><span class="pos-detail-val" style="display:flex;flex-wrap:wrap;gap:3px">' + 
+                (entry.signal_context.ticker_chg_pct != null ? '<span class="ctx-item ' + (entry.signal_context.ticker_chg_pct>=0?'ctx-up':'ctx-down') + '">' + t + ': ' + (entry.signal_context.ticker_chg_pct>=0?'+':'') + Number(entry.signal_context.ticker_chg_pct).toFixed(1) + '%</span>' : '') +
+                (entry.signal_context.fg_value != null ? '<span class="ctx-item">F&G: ' + entry.signal_context.fg_value + (entry.signal_context.fg_label?' ('+entry.signal_context.fg_label+')':'') + '</span>' : '') +
+                (entry.signal_context.sp500_chg != null ? '<span class="ctx-item ' + (entry.signal_context.sp500_chg>=0?'ctx-up':'ctx-down') + '">S&P: ' + (entry.signal_context.sp500_chg>=0?'+':'') + Number(entry.signal_context.sp500_chg).toFixed(1) + '%</span>' : '') +
+                (entry.signal_context.vix != null ? '<span class="ctx-item">VIX: ' + Number(entry.signal_context.vix).toFixed(1) + '</span>' : '') +
+              '</span></div>' : '')
+            : '<div class="pos-detail-row"><span class="pos-detail-val" style="color:var(--tv-text-3)">Entry details not available</span></div>'
+            ) +
+          '</div>' +
+        '</td>' +
+      '</tr>';
+    }
+    el.innerHTML = '<div class="table-wrap"><table><thead><tr><th>Ticker</th><th>Shares</th><th>Avg Cost</th><th>Current</th><th>Mkt Value</th><th>Unrealised P&amp;L</th><th style="width:30px"></th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+  });
+}
+
+function toggleExpand(ticker, row) {
+  const expandRow = document.getElementById('expand-' + ticker);
+  if (!expandRow) return;
+  const isVisible = expandRow.style.display !== 'none';
+  
+  // Close all others
+  document.querySelectorAll('.pos-expand').forEach(el => el.style.display = 'none');
+  
+  if (!isVisible) {
+    expandRow.style.display = 'table-row';
+  }
+}
+
+function renderSpecs() {
+  if (typeof BOT_WATCHLIST === 'undefined') return;
+  const pct = (BOT_MAX_POSITION * 100).toFixed(0);
+  const tickers = BOT_WATCHLIST.map(t =>
+    '<a class="ticker-chip" href="https://finance.yahoo.com/quote/' + t + '" target="_blank" rel="noopener">' + t + '</a>'
+  ).join('');
+
+  // SIMPLIFIED: No AI Engine or Market Data sections
+  $('specs').innerHTML =
+    '<div class="spec-card">' +
+      '<div class="spec-card-title">Bot Specifications</div>' +
+      '<div class="spec-grid">' +
+        '<div class="spec-item">' +
+          '<div class="spec-label">Update Frequency</div>' +
+          '<div class="spec-val">Every 30 min</div>' +
+          '<div class="spec-sub">During market hours</div>' +
+        '</div>' +
+        '<div class="spec-item">' +
+          '<div class="spec-label">Active Hours</div>' +
+          '<div class="spec-val">Mon\u2013Fri</div>' +
+          '<div class="spec-sub">09:00\u201317:00 ET</div>' +
+        '</div>' +
+        '<div class="spec-item">' +
+          '<div class="spec-label">Max Position Size</div>' +
+          '<div class="spec-val">' + pct + '%</div>' +
+          '<div class="spec-sub">of portfolio per stock</div>' +
+        '</div>' +
+        '<div class="spec-item">' +
+          '<div class="spec-label">Max Trades / Session</div>' +
+          '<div class="spec-val">' + BOT_MAX_TRADES + '</div>' +
+          '<div class="spec-sub">per 30-min run</div>' +
+        '</div>' +
+        '<div class="spec-item">' +
+          '<div class="spec-label">Min Cash Reserve</div>' +
+          '<div class="spec-val">' + fmt(BOT_MIN_CASH) + '</div>' +
+          '<div class="spec-sub">always kept liquid</div>' +
+        '</div>' +
+        '<div class="spec-item">' +
+          '<div class="spec-label">Starting Capital</div>' +
+          '<div class="spec-val">$10,000</div>' +
+          '<div class="spec-sub">paper money</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="spec-label" style="margin:20px 0 10px">Watchlist \u2014 ' + BOT_WATCHLIST.length + ' tickers monitored each session</div>' +
+      '<div class="ticker-list">' + tickers + '</div>' +
     '</div>';
 }
 
@@ -102,13 +239,31 @@ async function load(){
     fetch(BASE+'portfolio.json?t='+Date.now()).then(r=>r.json()),
     fetch(BASE+'trades.json?t='+Date.now()).then(r=>r.json())
   ]);
+  
+  // Marketplace data for current prices
+  try {
+    const mp = await fetch('https://paperchase.online/market-sentinel/data/market_data.json?t='+Date.now()).then(r=>r.json());
+    const stocks = mp.stocks || {};
+    const sp = stocks.prices || [];
+    // Enrich positions with current market prices
+    if (pf.positions) {
+      sp.forEach(s => {
+        if (pf.positions[s.symbol]) {
+          pf.positions[s.symbol].current_price = s.price_usd;
+        }
+      });
+    }
+  } catch(e) {}
+  
   renderHero(pf);
   renderOutlook(pf);
+  renderPricesBar(pf);
   renderLastSession(pf);
+  startCountdown(pf);
+  renderPositions(pf);
   renderSpecs();
   renderFollowGuide();
   renderChart(pf);
-  renderPositions(pf);
   renderTrades(tr.trades||[]);
   $('loading').style.display='none';
   $('app').style.display='block';
@@ -130,6 +285,7 @@ function renderHero(pf){
             '<span class="risk-text">'+BOT_RISK+' RISK</span>'+
           '</div>'+
         '</div>'+
+        '<div id="countdown-wrap" class="countdown-wrap"></div>'+
       '</div>'+
       '<div class="metrics-row">'+
         '<div class="metric"><div class="metric-lbl">Portfolio</div><div class="metric-val">'+fmt(pf.total_value||0)+'</div></div>'+
@@ -167,12 +323,6 @@ function renderLastSession(pf){
     '<span class="chip '+(spClass||'')+'">S&amp;P 500: '+spStr+'</span>'+
     '<span class="chip">VIX: '+vixVal+'</span>';
 
-  const movers=(s.top_movers||[]).map(function(a){
-    const t=a[0],c=a[1];
-    const cls=Math.abs(c)<0.1?'flat':c>0?'up':'down';
-    return '<span class="mover-chip '+cls+'">'+t+' '+(c>=0?'+':'')+Number(c).toFixed(1)+'%</span>';
-  }).join('');
-
   const newsItems=(s.news_read||[]).map(function(h){ return '<li>'+h+'</li>'; }).join('');
 
   const extra=s.domain_extra?'<div class="session-block"><div class="session-block-lbl">Domain Context</div><div class="domain-extra">'+s.domain_extra+'</div></div>':'';
@@ -197,7 +347,6 @@ function renderLastSession(pf){
     '<div class="session-block">'+
       '<div class="session-block-lbl">Market Conditions Observed</div>'+
       '<div class="condition-chips">'+chips+'</div>'+
-      (movers?'<div class="movers-row" style="margin-top:6px">'+movers+'</div>':'')+
     '</div>'+
 
     (newsItems?'<div class="session-block">'+
@@ -270,21 +419,6 @@ function renderChart(pf){
       interaction:{intersect:false,mode:'index'}
     }
   });
-}
-
-function renderPositions(pf){
-  const pos=pf.positions||{};
-  const el=$('positions');
-  if(!Object.keys(pos).length){ el.innerHTML='<div class="empty">No open positions \u2014 all cash</div>'; return; }
-  let rows='';
-  for(const t in pos){
-    const p=pos[t];
-    const cur=p.current_price||p.avg_cost;
-    const pnl=(cur-p.avg_cost)*p.shares;
-    const pct=(cur-p.avg_cost)/p.avg_cost*100;
-    rows+='<tr><td class="mono" style="font-weight:600">'+t+'</td><td class="mono">'+p.shares+'</td><td class="mono">'+fmt(p.avg_cost)+'</td><td class="mono">'+fmt(cur)+'</td><td class="mono">'+fmt(p.shares*cur)+'</td><td class="mono '+(pnl>=0?'profit':'loss')+'">'+(pnl>=0?'+':'-')+fmt(Math.abs(pnl))+' <span style="font-size:11px">('+(pct>=0?'+':'')+pct.toFixed(2)+'%)</span></td></tr>';
-  }
-  el.innerHTML='<div class="table-wrap"><table><thead><tr><th>Ticker</th><th>Shares</th><th>Avg Cost</th><th>Current</th><th>Mkt Value</th><th>Unrealised P&amp;L</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
 }
 
 function renderTrades(trades){
