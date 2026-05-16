@@ -323,9 +323,8 @@ async function load(){
   buildDistribution(sorted);
   buildMainChart(sorted);
 
-  document.getElementById('last-update').innerHTML = '<span class="update-dot"></span> Updated '+ago(data.updated_at)+' · Auto-refresh every 90s';
   document.getElementById('count-badge').textContent = sorted.length+' bots';
-
+  
   // Countdown timer
   startCountdown();
 
