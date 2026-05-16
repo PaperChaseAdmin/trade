@@ -8,7 +8,7 @@ from datetime import datetime
 
 GAMMA_API = "https://gamma-api.polymarket.com"
 OPENROUTER_KEY = os.environ.get("OPENROUTER_API_KEY", "")
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data", "polymarket")
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "polymarket")
 
 TAGS = ["politics", "crypto", "finance", "news", "science"]
 
