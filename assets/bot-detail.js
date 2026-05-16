@@ -52,10 +52,11 @@ function startCountdown(pf) {
     
     if (h >= 24) {
       const d = Math.floor(h / 24);
-      el.innerHTML = '<span class="countdown-lbl">Market Opens</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h</span>';
+      el.innerHTML = '<span class="countdown-lbl">Market Opens</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h ' + m + 'm</span>';
+    } else if (h >= 1) {
+      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + h + 'h ' + m + 'm ' + s + 's</span>';
     } else {
-      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + 
-        (h>0?h+'h ':'') + m + ':' + String(s).padStart(2,'0') + '</span>';
+      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + m + 'm ' + s + 's</span>';
     }
   }
   tick();
