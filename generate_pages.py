@@ -125,7 +125,7 @@ for bot_id, p in BOT_PROFILES.items():
     count += 1
 
 # Copy sentinel page
-shutil.copy("sentinel.html", "sentinel/index.html")
-print(f"✅ Sentinell page generated")
+# shutil.copy("sentinel.html", "sentinel/index.html")
+# print(f"✅ Sentinell page generated")
 
 print(f"\n{count} bots × 2 pages = {count*2} HTML files + sentinel.html generated.")
