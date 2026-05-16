@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Market Sentinel · PaperChase</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+<link rel="stylesheet" href="/trade/assets/style.css"/>
+</head>
+<body>
+<nav class="topbar"><div class="topbar-inner">
+  <a class="logo" href="/trade/">PaperChase</a>
+  <div class="topbar-nav">
+    <span class="nav-section">Trading</span>
+    <a class="nav-link" href="/trade/">Leaderboard</a>
+    <a class="nav-link active" href="/trade/sentinel/">Market Sentinel</a>
+    <div class="nav-spacer"></div>
+    <span class="nav-section">Info</span>
+    <a class="nav-link" href="/">About</a>
+  </div>
+</div></nav>
+
+<div class="container">
+  <div class="page-header">
+    <div class="page-title">Market Sentinel</div>
+    <div class="page-sub">Real-time market data · Fear & Greed · Index performance · Reddit sentiment</div>
+  </div>
+
+  <div id="market-stats" class="stats-grid" style="margin-bottom:12px"></div>
+  <div class="section-title">Market Overview</div>
+  <div id="indices" class="stats-grid" style="grid-template-columns:repeat(4,1fr)"></div>
+  <div class="section-title">Market Sentinel Data</div>
+  <div id="sentinel"></div>
+  <div class="section-title">Fear & Greed History</div>
+  <div id="fng-chart" class="chart-wrap"><canvas id="fng-canvas"></canvas></div>
+  <div style="margin-top:20px;text-align:center;font-size:11px;color:var(--tv-text-2)" id="footer"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+function fmt(v){ return '$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?`${m}m ago`:m<1440?`${Math.floor(m/60)}h ago`:`${Math.floor(m/1440)}d ago`; }
+
+async function load(){
+  const data = await fetch('/trade/data/market_sentinel.json?t='+Date.now()).then(r=>r.json());
+  
+  const fng = data.fear_greed||{};
+  const fnghi = fng.history||[];
+  const lastFng = fnghi.length ? fnghi[fnghi.length-1] : {value:50,classification:'Neutral'};
+  const spx = data.sp500||{};
+  const vix = data.vix||{};
+  const dxy = data.dxy||{};
+
+  document.getElementById('market-stats').innerHTML=`
+    <div class="stat-card"><div class="stat-label">Fear & Greed</div><div class="stat-value ${lastFng.value>=50?'green':'red'}">${lastFng.value||'—'}</div><div class="stat-sub">${lastFng.classification||'—'} · ${fnghi.length} data points</div></div>
+    <div class="stat-card"><div class="stat-label">S&P 500</div><div class="stat-value">${spx.price?fmt(spx.price):'—'}</div><div class="stat-sub">${spx.change_pct?`<span class="${+spx.change_pct>=0?'green':'red'}">${+spx.change_pct>=0?'+':''}${spx.change_pct.toFixed(2)}%</span>`:'—'}</div></div>
+    <div class="stat-card"><div class="stat-label">VIX</div><div class="stat-value">${vix.price||'—'}</div></div>
+    <div class="stat-card"><div class="stat-label">DXY</div><div class="stat-value">${dxy.price||'—'}</div></div>
+  `;
+  
+  // Indices
+  const indices = data.indices||{};
+  const idxHtml = Object.entries(indices).slice(0,4).map(([k,v])=>`
+    <div class="stat-card"><div class="stat-label">${k}</div><div class="stat-value">${v.price?fmt(v.price):'—'}</div><div class="stat-sub">${v.change_pct?`<span class="${+v.change_pct>=0?'green':'red'}">${+v.change_pct>=0?'+':''}${v.change_pct.toFixed(2)}%</span>`:'—'}</div></div>
+  `).join('');
+  document.getElementById('indices').innerHTML = idxHtml || '<div class="stat-card"><div class="stat-label">No index data</div></div>';
+
+  // Sentinel grid
+  const stocks = data.stocks||{};
+  const news = stocks.news||[];
+  const reddit = stocks.reddit_summary||'';
+  document.getElementById('sentinel').innerHTML=`
+    <div class="sentinel-grid">
+      <div class="sentinel-card">
+        <h3>Top Stories</h3>
+        ${news.slice(0,6).map(n=>`<div class="sentinel-item"><span class="sentinel-label">${n.title||n}</span></div>`).join('')||'<div class="sentinel-item"><span class="sentinel-label">No recent news</span></div>'}
+      </div>
+      <div class="sentinel-card">
+        <h3>Reddit Sentiment</h3>
+        <div style="font-size:12px;color:var(--tv-text);line-height:1.6">${typeof reddit==='string'?reddit.substring(0,1000):'No data'}</div>
+      </div>
+    </div>`;
+
+  document.getElementById('footer').innerHTML=`Updated ${ago(data.updated_at)} · Data refreshes every 30 min`;
+
+  // Fear & Greed chart
+  if(fnghi.length>2){
+    const ctx=document.getElementById('fng-canvas').getContext('2d');
+    new Chart(ctx,{
+      type:'line',
+      data:{
+        labels:fnghi.map(d=>d.date||''),
+        datasets:[{
+          label:'Fear & Greed',
+          data:fnghi.map(d=>d.value),
+          borderColor:'#2962ff',
+          backgroundColor:'rgba(41,98,255,.1)',
+          fill:true,
+          tension:.3,
+          pointRadius:2,
+        }]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        plugins:{legend:{display:false}},
+        scales:{
+          x:{grid:{color:'#2a2e39'},ticks:{color:'#787b86',maxTicksLimit:10}},
+          y:{grid:{color:'#2a2e39'},min:0,max:100,ticks:{color:'#787b86',callback:v=>{if(v===0)return'Extreme Fear';if(v===25)return'Fear';if(v===50)return'Neutral';if(v===75)return'Greed';if(v===100)return'Extreme Greed';return''}}}
+        }
+      }
+    });
+  }
+  setTimeout(load,120000);
+}
+load().catch(e=>{ document.getElementById('sentinel').innerHTML=`<div style="color:var(--tv-text-3);text-align:center;padding:40px">Could not load data: ${e.message}</div>`; });
+</script>
+</body>
+</html>

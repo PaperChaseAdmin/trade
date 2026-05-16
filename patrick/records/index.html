@@ -4,29 +4,33 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Patrick Records · PaperChase</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
 </head>
 <body>
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">Paper<span>Chase</span></a>
+  <a class="logo" href="/trade/">PaperChase</a>
   <div class="topbar-nav">
+    <span class="nav-section">Trading</span>
     <a class="nav-link" href="/trade/">Leaderboard</a>
-    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/trade/sentinel/">Market Sentinel</a>
+    <div class="nav-spacer"></div>
+    <span class="nav-section">Info</span>
+    <a class="nav-link" href="/">About</a>
   </div>
 </div></nav>
 <div class="container">
-  <a class="back-link" href="/trade/patrick/">← <span id="bot-avatar"></span> <span id="bot-name"></span></a>
+  <a class="back-link" href="/trade/patrick/">← 🔪 Patrick</a>
   <div class="page-header">
-    <div class="page-title" style="color:#be185d">🔪 Patrick — Trade Records</div>
+    <div style="font-size:20px;font-weight:600;color:var(--tv-text)">🔪 Patrick — Trade Records</div>
     <div class="page-sub">Complete history · All times UTC</div>
   </div>
-  <div id="stats"></div>
-  <div class="filters">
-    <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
-    <button class="filter-btn" onclick="setFilter('BUY',this)">Buys</button>
-    <button class="filter-btn" onclick="setFilter('SELL',this)">Sells</button>
-    <span class="filter-count" id="count"></span>
+  <div id="stats" class="stats-grid" style="grid-template-columns:repeat(4,1fr)"></div>
+  <div style="display:flex;gap:8px;margin-bottom:12px">
+    <button class="nav-link active" onclick="setFilter('all',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface);color:var(--tv-text)">All</button>
+    <button class="nav-link" onclick="setFilter('BUY',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface)">Buys</button>
+    <button class="nav-link" onclick="setFilter('SELL',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface)">Sells</button>
+    <span style="font-size:11px;color:var(--tv-text-2);margin-left:auto" id="count"></span>
   </div>
   <div id="records"></div>
 </div>

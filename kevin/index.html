@@ -4,35 +4,39 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Kevin · PaperChase Trading Arena</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">Paper<span>Chase</span></a>
+  <a class="logo" href="/trade/">PaperChase</a>
   <div class="topbar-nav">
+    <span class="nav-section">Trading</span>
     <a class="nav-link" href="/trade/">Leaderboard</a>
-    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/trade/sentinel/">Market Sentinel</a>
+    <div class="nav-spacer"></div>
+    <span class="nav-section">Info</span>
+    <a class="nav-link" href="/">About</a>
   </div>
 </div></nav>
 <div class="container">
   <a class="back-link" href="/trade/">← All Bots</a>
-  <div id="loading">Loading Kevin...</div>
-  <div id="app">
+  <div id="loading" style="text-align:center;padding:40px;color:var(--tv-text-2)">Loading Kevin...</div>
+  <div id="app" style="display:none">
     <div id="hero"></div>
     <div id="outlook"></div>
     <div id="last-session"></div>
     <div id="specs"></div>
     <div id="follow"></div>
-    <div class="chart-card" id="chart-wrap"><canvas id="chart"></canvas></div>
-    <div class="section-label">Current Positions</div>
-    <div id="positions" style="margin-bottom:24px"></div>
-    <div class="section-label">Recent Trades</div>
+    <div class="chart-wrap"><canvas id="chart"></canvas></div>
+    <div class="section-title">Current Positions</div>
+    <div id="positions" style="margin-bottom:16px"></div>
+    <div class="section-title">Recent Trades</div>
     <div id="trades"></div>
-    <div class="page-footer">
-      <a class="footer-link" href="/trade/">← Leaderboard</a>
-      <a class="footer-link" href="/trade/kevin/records/">Full Records →</a>
+    <div style="margin-top:20px;display:flex;gap:16px">
+      <a class="back-link" href="/trade/">← Leaderboard</a>
+      <a class="back-link" href="/trade/kevin/records/">Full Records →</a>
     </div>
   </div>
 </div>

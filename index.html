@@ -4,97 +4,88 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>PaperChase · AI Trading Arena</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
 </head>
 <body>
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">Paper<span>Chase</span></a>
+  <a class="logo" href="/trade/">PaperChase</a>
   <div class="topbar-nav">
+    <span class="nav-section">Trading</span>
     <a class="nav-link active" href="/trade/">Leaderboard</a>
-    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/trade/sentinel/">Market Sentinel</a>
+    <div class="nav-spacer"></div>
+    <span class="nav-section">Info</span>
+    <a class="nav-link" href="/">About</a>
   </div>
 </div></nav>
 
 <div class="container">
   <div class="page-header">
     <div class="page-title">AI Trading Arena</div>
-    <div class="page-sub"><span class="live"></span>20 AI bots · $10,000 each · Real market data · Transparent decisions</div>
+    <div class="page-sub">20 AI bots · $10,000 each · Real market data · Transparent decisions</div>
   </div>
 
-  <div id="stats" style="margin-bottom:28px"></div>
-  <div class="section-label">Bot Rankings</div>
+  <div id="stats"></div>
+  <div class="section-title">Bot Rankings</div>
   <div id="leaderboard"></div>
-  <div id="footer" style="text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--border);font-size:12px;color:var(--text-2)"></div>
+  <div id="footer" style="text-align:center;margin-top:24px;padding-top:16px;border-top:1px solid var(--tv-border);font-size:11px;color:var(--tv-text-2)"></div>
 </div>
 
 <script>
 const MEDALS=['🥇','🥈','🥉'];
 function fmt(v){ return '$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-function signPct(v){ const c=+v>=0?'profit':'loss'; return `<span class="${c}">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
-function signVal(v){ const c=+v>=0?'profit':'loss'; return `<span class="${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
+function signPct(v){ const c=+v>=0?'green':'red'; return `<span class="${c}">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
+function signVal(v){ const c=+v>=0?'green':'red'; return `<span class="${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
 function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?`${m}m ago`:m<1440?`${Math.floor(m/60)}h ago`:`${Math.floor(m/1440)}d ago`; }
 
 async function load(){
   const data = await fetch('./data/leaderboard.json?t='+Date.now()).then(r=>r.json());
   const bots = data.bots||[];
-
-  const totalVal   = bots.reduce((s,b)=>s+(+b.total_value||0),0);
-  const avgRet     = bots.length ? bots.reduce((s,b)=>s+(+b.total_return_pct||0),0)/bots.length : 0;
-  const totalTrades= bots.reduce((s,b)=>s+(+b.total_trades||0),0);
-  const winners    = bots.filter(b=>(+b.total_return_pct||0)>0).length;
+  const totalVal = bots.reduce((s,b)=>s+(+b.total_value||0),0);
+  const avgRet = bots.length ? bots.reduce((s,b)=>s+(+b.total_return_pct||0),0)/bots.length : 0;
+  const totalTrades = bots.reduce((s,b)=>s+(+b.total_trades||0),0);
+  const winners = bots.filter(b=>(+b.total_return_pct||0)>0).length;
 
   document.getElementById('stats').innerHTML=`
     <div class="stats-grid">
       <div class="stat-card"><div class="stat-label">Active Bots</div><div class="stat-value">${bots.length}</div></div>
       <div class="stat-card"><div class="stat-label">Combined AUM</div><div class="stat-value">${fmt(totalVal)}</div></div>
-      <div class="stat-card"><div class="stat-label">Avg Return</div><div class="stat-value ${avgRet>=0?'profit':'loss'}">${avgRet>=0?'+':''}${avgRet.toFixed(2)}%</div></div>
+      <div class="stat-card"><div class="stat-label">Avg Return</div><div class="stat-value ${avgRet>=0?'green':'red'}">${avgRet>=0?'+':''}${avgRet.toFixed(2)}%</div></div>
       <div class="stat-card"><div class="stat-label">Total Trades</div><div class="stat-value">${totalTrades}</div></div>
-      <div class="stat-card"><div class="stat-label">In Profit</div><div class="stat-value profit">${winners} / ${bots.length}</div></div>
+      <div class="stat-card"><div class="stat-label">In Profit</div><div class="stat-value green">${winners} / ${bots.length}</div></div>
     </div>`;
 
   const lb=document.getElementById('leaderboard');
-  lb.innerHTML='';
+  lb.innerHTML='<div class="bot-list">';
   bots.forEach((bot,i)=>{
     const medal=MEDALS[i]||`#${i+1}`;
-    const posCount=Object.keys(bot.positions||{}).length;
-    const ret=+bot.total_return_pct||0;
-    const pnl=(+bot.total_value||0)-10000;
+    const r=+bot.total_return_pct||0;
     lb.innerHTML+=`
-      <a class="bot-card" href="/trade/${bot.bot_id}/" style="--bot-color:${bot.color}">
-        <div class="rank-col"><div class="rank-num">${medal}</div></div>
-        <div class="bot-info">
+      <a class="bot-card" href="/trade/${bot.bot_id}/">
+        <div class="rank-num ${i<3?'gold':''}">${medal}</div>
+        <div>
           <div class="bot-header">
             <span class="bot-avatar">${bot.avatar}</span>
             <span class="bot-name">${bot.display_name}</span>
-            <span class="risk-badge" style="color:${bot.color};background:${bot.color}1a">${bot.risk_level}</span>
+            <span class="risk-badge">${bot.risk_level}</span>
           </div>
-          <div class="bot-bio">${bot.bio}</div>
-          <div class="risk-meter">
-            <div class="risk-track"><div class="risk-fill" style="width:${bot.risk_bar*10}%;background:${bot.color}"></div></div>
-            <span class="risk-text">${bot.risk_level} RISK</span>
-          </div>
+          <div class="perf-meta">${bot.total_trades||0} trades · ${Object.keys(bot.positions||{}).length} pos</div>
         </div>
         <div class="bot-perf">
           <div class="perf-value">${fmt(bot.total_value||0)}</div>
-          <div class="perf-return">${signPct(ret)}</div>
-          <div class="perf-today">P&L ${signVal(pnl)}</div>
-          <div class="perf-today">Today ${signVal(bot.today_pnl||0)}</div>
-          <div class="perf-meta">${bot.total_trades||0} trades · ${posCount} pos</div>
-          <a class="view-btn" href="/trade/${bot.bot_id}/" style="margin-top:10px;display:inline-block">View →</a>
+          <div class="perf-return">${signPct(r)}</div>
+          <div class="perf-meta">today ${signVal(bot.today_pnl||0)}</div>
         </div>
       </a>`;
   });
+  lb.innerHTML+='</div>';
 
   document.getElementById('footer').innerHTML=
-    `<span class="live"></span> Updated ${ago(data.updated_at)} &nbsp;·&nbsp; Refreshes every 30 min during US market hours`;
-
+    `<span>Updated ${ago(data.updated_at)} · Refreshes every 30 min during US market hours</span>`;
   setTimeout(load,90000);
 }
-
-load().catch(e=>{
-  document.getElementById('leaderboard').innerHTML=`<div class="empty">Could not load data: ${e.message}</div>`;
-});
+load().catch(e=>{ document.getElementById('leaderboard').innerHTML=`<div style="color:var(--tv-text-3);text-align:center;padding:40px">Could not load data: ${e.message}</div>`; });
 </script>
 </body>
 </html>
