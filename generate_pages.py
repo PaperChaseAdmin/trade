@@ -31,6 +31,7 @@ DETAIL_TMPL = """\
   <div id="app" style="display:none">
     <div id="hero"></div>
     <div id="outlook"></div>
+    <div id="prices-bar"></div>
     <div id="last-session"></div>
     <div id="specs"></div>
     <div id="follow"></div>
