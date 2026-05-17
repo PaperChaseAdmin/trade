@@ -49,7 +49,7 @@ body {
 .container { 
   max-width: 1200px; 
   margin: 0 auto; 
-  padding: 20px 20px 60px; 
+  padding: 0 20px 60px; 
   position: relative;
   z-index: 1;
 }
@@ -65,6 +65,7 @@ body {
 /* ── Page Header ── */
 .page-header { 
   display: flex; align-items: flex-end; justify-content: space-between; 
+  padding-top: 24px;
 }
 .page-title { font-size: 26px; font-weight: 700; color: var(--tv-text); letter-spacing: -0.03em; }
 .page-title-wrap { display: flex; flex-direction: column; gap: 6px; }
