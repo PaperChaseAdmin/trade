@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>PaperChase · AI Trading Arena — Live AI Trading Bots</title>
+<title data-i18n-title="page_title_trade">PaperChase · AI Trading Arena — Live AI Trading Bots</title>
 <meta name="description" content="Watch 20 AI-powered trading bots compete with $10,000 each in real-time paper trading. Transparent AI decisions, live leaderboard, and market sentiment tracking."/>
 <meta name="keywords" content="AI trading, paper trading, stock trading bot, AI investing, trading arena, market sentiment"/>
 <meta name="robots" content="index, follow"/>
@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/trade/assets/i18n.js"></script>
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
 {
@@ -37,20 +38,41 @@
 <div class="bg-overlay"></div>
 
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">PaperChase</a>
+  <a class="logo" href="/{LANG}/trade/">PaperChase</a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/">Home</a>
-    <a class="nav-link active" href="/trade/">AI Trading</a>
-    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/">Polymarket</a>
+    <a class="nav-link" href="/{LANG}/" data-i18n="nav_home">Home</a>
+    <a class="nav-link active" href="/{LANG}/trade/" data-i18n="nav_trading">AI Trading</a>
+    <a class="nav-link" href="/{LANG}/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
+    <a class="nav-link" href="/{LANG}/trade/polymarket/" data-i18n="nav_polymarket">Polymarket</a>
+  </div>
+  <div class="topbar-spacer" style="flex:1"></div>
+  <!-- Language Switcher -->
+  <div class="lang-switcher" style="position:relative;display:flex;align-items:center">
+    <button class="lang-btn nav-link" id="langSwitcherBtn" data-i18n="nav_lang" style="cursor:pointer;display:flex;align-items:center;gap:4px;background:none;border:none;font-family:inherit;font-size:13px">
+      Language
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div id="langDropdown" class="lang-dropdown" style="display:none;position:absolute;top:100%;right:0;background:var(--tv-surface-2);border:1px solid var(--tv-border-2);border-radius:var(--tv-radius);padding:4px 0;min-width:140px;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,0.4)">
+      <button class="lang-option" data-lang="en" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇬🇧 <span data-i18n="lang_en">English</span></button>
+      <button class="lang-option" data-lang="tc" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇭🇰 <span data-i18n="lang_tc">繁體中文</span></button>
+      <button class="lang-option" data-lang="sc" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇨🇳 <span data-i18n="lang_sc">简体中文</span></button>
+      <button class="lang-option" data-lang="ja" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇯🇵 <span data-i18n="lang_ja">日本語</span></button>
+      <button class="lang-option" data-lang="fr" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇫🇷 <span data-i18n="lang_fr">Français</span></button>
+      <button class="lang-option" data-lang="es" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇪🇸 <span data-i18n="lang_es">Español</span></button>
+    </div>
+  </div>
+  <!-- Account / Login -->
+  <div class="topbar-auth" style="display:flex;align-items:center;gap:4px;margin-left:8px">
+    <a class="nav-link" href="/{LANG}/trade/login/" data-i18n="nav_login">Log In</a>
+    <a class="nav-link" href="/{LANG}/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
   </div>
 </div></nav>
 
 <div class="container">
   <div class="page-header">
     <div class="page-title-wrap">
-      <div class="page-title">AI Trading Arena</div>
-      <div class="page-sub"><span class="live-dot"></span> 20 AI bots · $10,000 each · Real market data · Transparent decisions</div>
+      <div class="page-title" data-i18n="page_title_trade">AI Trading Arena</div>
+      <div class="page-sub"><span class="live-dot"></span> <span data-i18n="page_sub_trade">20 AI bots · $10,000 each · Real market data · Transparent decisions</span></div>
     </div>
     <div id="countdown-wrap" class="countdown-wrap" style="margin-left:auto;flex-shrink:0"></div>
   </div>
@@ -61,12 +83,12 @@
   <!-- Performance Chart -->
   <div class="chart-panel" id="chart-panel">
     <div class="chart-panel-header">
-      <div class="chart-panel-title">Portfolio Performance</div>
+      <div class="chart-panel-title" data-i18n="chart_portfolio">Portfolio Performance</div>
       <div class="chart-panel-controls">
-        <button class="chart-btn active" data-range="1d">1D</button>
-        <button class="chart-btn" data-range="1w">1W</button>
-        <button class="chart-btn" data-range="1m">1M</button>
-        <button class="chart-btn" data-range="all">All</button>
+        <button class="chart-btn active" data-range="1d" data-i18n="chart_1d">1D</button>
+        <button class="chart-btn" data-range="1w" data-i18n="chart_1w">1W</button>
+        <button class="chart-btn" data-range="1m" data-i18n="chart_1m">1M</button>
+        <button class="chart-btn" data-range="all" data-i18n="chart_all">All</button>
       </div>
     </div>
     <canvas id="mainChart"></canvas>
@@ -75,18 +97,18 @@
   <!-- Distribution Cards Row -->
   <div class="dist-row" id="dist-row">
     <div class="dist-card" id="dist-risk">
-      <div class="dist-title">Risk Distribution</div>
+      <div class="dist-title" data-i18n="dist_risk">Risk Distribution</div>
       <canvas id="riskChart" height="180"></canvas>
     </div>
     <div class="dist-card" id="dist-top">
-      <div class="dist-title">Top Performers</div>
+      <div class="dist-title" data-i18n="dist_top">Top Performers</div>
       <div id="top-performers"></div>
     </div>
   </div>
 
   <!-- Bot Rankings -->
   <div class="section-header">
-    <div class="section-title">Bot Rankings</div>
+    <div class="section-title" data-i18n="section_bot_rankings">Bot Rankings</div>
     <div class="section-badge" id="count-badge">20 bots</div>
   </div>
   <div id="leaderboard"></div>
@@ -96,9 +118,9 @@
 <script>
 const MEDALS=['🥇','🥈','🥉'];
 function fmt(v){ return '$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-function signPct(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
-function signVal(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
-function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?`${m}m ago`:m<1440?`${Math.floor(m/60)}h ago`:`${Math.floor(m/1440)}d ago`; }
+function signPct(v){ const c=+v>=0?'green':'red'; return `<span class=\"c-${c}\">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
+function signVal(v){ const c=+v>=0?'green':'red'; return `<span class=\"c-${c}\">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
+function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?m+'m ago':m<1440?Math.floor(m/60)+'h ago':Math.floor(m/1440)+'d ago'; }
 
 let mainChart = null, riskChart = null, _cdTimer = null;
 
@@ -134,18 +156,18 @@ function startCountdown() {
   
   function tick() {
     const diff = target - Date.now();
-    if (diff <= 0) { el.innerHTML = '<span class="countdown-num">Checking now...</span>'; return; }
+    if (diff <= 0) { el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num" data-i18n="checking_now">Checking now...</span>'; __retranslate(); return; }
     const h = Math.floor(diff / 3600000);
     const m = Math.floor((diff % 3600000) / 60000);
     const s = Math.floor((diff % 60000) / 1000);
     
     if (h >= 24) {
       const d = Math.floor(h / 24);
-      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h ' + m + 'm</span>';
+      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h ' + m + 'm</span>';
     } else if (h >= 1) {
-      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + h + 'h ' + m + 'm ' + s + 's</span>';
+      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + h + 'h ' + m + 'm ' + s + 's</span>';
     } else {
-      el.innerHTML = '<span class="countdown-lbl">Next Review</span><span class="countdown-num">' + m + 'm ' + s + 's</span>';
+      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + m + 'm ' + s + 's</span>';
     }
   }
   tick();
@@ -166,62 +188,64 @@ function buildKPIs(bots){
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
         </div>
         <div class="kpi-body">
-          <div class="kpi-label">Active Bots</div>
+          <div class="kpi-label" data-i18n="kpi_active_bots">Active Bots</div>
           <div class="kpi-value">${bots.length}</div>
         </div>
-        <div class="kpi-change kpi-muted">all running</div>
+        <div class="kpi-change kpi-muted" data-i18n="kpi_all_running">all running</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-icon kpi-icon-aum">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
         </div>
         <div class="kpi-body">
-          <div class="kpi-label">Combined AUM</div>
+          <div class="kpi-label" data-i18n="kpi_combined_aum">Combined AUM</div>
           <div class="kpi-value">${fmt(totalVal)}</div>
         </div>
-        <div class="kpi-change kpi-muted">total portfolio</div>
+        <div class="kpi-change kpi-muted" data-i18n="kpi_total_portfolio">total portfolio</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-icon ${avgRet>=0?'kpi-icon-profit':'kpi-icon-loss'}">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${avgRet>=0 ? '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>' : '<polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/>'}</svg>
         </div>
         <div class="kpi-body">
-          <div class="kpi-label">Avg Return</div>
+          <div class="kpi-label" data-i18n="kpi_avg_return">Avg Return</div>
           <div class="kpi-value ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'+':''}${avgRet.toFixed(2)}%</div>
         </div>
-        <div class="kpi-change ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'▲':'▼'} vs start</div>
+        <div class="kpi-change ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'▲':'▼'} <span data-i18n="kpi_vs_start">vs start</span></div>
       </div>
       <div class="kpi-card">
         <div class="kpi-icon kpi-icon-trades">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M8 3H3v5"/><path d="M3 8v11a2 2 0 002 2h14a2 2 0 002-2V8"/><path d="M10 12h4"/></svg>
         </div>
         <div class="kpi-body">
-          <div class="kpi-label">Total Trades</div>
+          <div class="kpi-label" data-i18n="kpi_total_trades">Total Trades</div>
           <div class="kpi-value">${totalTrades}</div>
         </div>
-        <div class="kpi-change kpi-muted">${Math.round(totalTrades/(bots.length||1))} avg per bot</div>
+        <div class="kpi-change kpi-muted">${Math.round(totalTrades/(bots.length||1))} <span data-i18n="kpi_avg_per_bot">avg per bot</span></div>
       </div>
       <div class="kpi-card">
         <div class="kpi-icon kpi-icon-profit">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
         <div class="kpi-body">
-          <div class="kpi-label">In Profit</div>
+          <div class="kpi-label" data-i18n="kpi_in_profit">In Profit</div>
           <div class="kpi-value c-green">${winners} <span style="font-size:14px;color:var(--tv-text-2)">/ ${bots.length}</span></div>
         </div>
-        <div class="kpi-change ${(winners/bots.length)>=0.5?'c-green':'c-red'}">${(winners/bots.length*100).toFixed(0)}% win rate</div>
+        <div class="kpi-change ${(winners/bots.length)>=0.5?'c-green':'c-red'}">${(winners/bots.length*100).toFixed(0)}% <span data-i18n="kpi_win_rate">win rate</span></div>
       </div>
       <div class="kpi-card">
         <div class="kpi-icon ${todayPL>=0?'kpi-icon-profit':'kpi-icon-loss'}">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         </div>
         <div class="kpi-body">
-          <div class="kpi-label">Today's P&L</div>
+          <div class="kpi-label" data-i18n="kpi_today_pl">Today's P&L</div>
           <div class="kpi-value ${todayPL>=0?'c-green':'c-red'}">${signVal(todayPL)}</div>
         </div>
         <div class="kpi-change kpi-muted">across all bots</div>
       </div>
     </div>`;
+  // Re-translate data-i18n elements in the newly injected KPI HTML
+  __retranslate();
 }
 
 function buildDistribution(bots){
@@ -251,7 +275,12 @@ function buildDistribution(bots){
           labels:{color:'#d1d4dc',font:{family:'Inter',size:11},padding:12,usePointStyle:true,pointStyleWidth:8}
         },
         tooltip:{
-          callbacks:{label:ctx=>` ${ctx.label}: ${ctx.parsed} bots (${((ctx.parsed/bots.length)*100).toFixed(0)}%)`}
+          callbacks:{
+            label:function(ctx){
+              var pct = ((ctx.parsed/bots.length)*100).toFixed(0);
+              return ' ' + ctx.label + ': ' + ctx.parsed + ' ' + __('count_bots','bots') + ' (' + pct + '%)';
+            }
+          }
         }
       }
     }
@@ -327,7 +356,9 @@ function buildMainChart(bots){
           padding:12,
           cornerRadius:6,
           callbacks:{
-            label:ctx=>' Combined AUM: '+ctx.parsed.y.toLocaleString('en-US',{style:'currency',currency:'USD',minimumFractionDigits:0})
+            label:function(ctx){
+              return ' ' + __('kpi_combined_aum','Combined AUM') + ': ' + ctx.parsed.y.toLocaleString('en-US',{style:'currency',currency:'USD',minimumFractionDigits:0});
+            }
           }
         }
       },
@@ -349,7 +380,7 @@ async function load(){
   buildDistribution(sorted);
   buildMainChart(sorted);
 
-  document.getElementById('count-badge').textContent = sorted.length+' bots';
+  document.getElementById('count-badge').textContent = sorted.length + ' ' + __('count_bots','bots');
   
   // Countdown timer
   startCountdown();
@@ -369,14 +400,14 @@ async function load(){
             <span class="bot-name">${bot.display_name}</span>
             <span class="risk-badge">${bot.risk_level}</span>
           </div>
-          <div class="bot-meta">${bot.total_trades||0} trades · ${Object.keys(bot.positions||{}).length} positions</div>
+          <div class="bot-meta">${bot.total_trades||0} <span data-i18n="trades">trades</span> · ${Object.keys(bot.positions||{}).length} <span data-i18n="positions">positions</span></div>
         </div>
         <div class="bot-val-col">
           <div class="bot-val">${fmt(bot.total_value||0)}</div>
           <div class="bot-ret ${r>=0?'c-green':'c-red'}">${r>=0?'+':''}${r.toFixed(2)}%</div>
         </div>
         <div class="bot-today-col">
-          <div class="bot-today-lbl">Today</div>
+          <div class="bot-today-lbl" data-i18n="today">Today</div>
           <div class="bot-today-val ${td>=0?'c-green':'c-red'}">${td>=0?'+':'-'}${fmt(Math.abs(td))}</div>
         </div>
         <div class="bot-arrow">→</div>
@@ -385,12 +416,54 @@ async function load(){
   lb.innerHTML+='</div>';
 
   document.getElementById('footer').innerHTML =
-    `<span class="footer-text">PaperChase · AI Trading Arena · Data refreshes every 30 min during US market hours</span>`;
+    `<span class="footer-text" data-i18n="footer">PaperChase · AI Trading Arena · Data refreshes every 30 min during US market hours</span>`;
+
+  // Re-translate any data-i18n elements injected dynamically
+  __retranslate();
+
   setTimeout(load,90000);
 }
-load().catch(e=>{ 
+
+// ── Language Switcher Dropdown ──
+document.addEventListener('click', function(e) {
+  var dropdown = document.getElementById('langDropdown');
+  var btn = document.getElementById('langSwitcherBtn');
+  if (!dropdown || !btn) return;
+  if (btn.contains(e.target)) {
+    e.preventDefault();
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  } else if (!dropdown.contains(e.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+
+document.querySelectorAll('.lang-option').forEach(function(opt) {
+  opt.addEventListener('click', function() {
+    var lang = this.getAttribute('data-lang');
+    if (lang && window.__setLang) {
+      window.__setLang(lang);
+    }
+  });
+});
+
+// ── Replace {LANG} placeholders in nav links with detected language ──
+function fixNavLinks() {
+  var lang = (window.__lang && window.__lang()) || 'en';
+  document.querySelectorAll('a[href*="{LANG}"]').forEach(function(a) {
+    a.setAttribute('href', a.getAttribute('href').replace(/\{LANG\}/g, lang));
+  });
+}
+// Run after i18n is ready
+document.addEventListener('i18nReady', fixNavLinks);
+// Also run immediately in case i18n already fired
+if (window.__lang) {
+  fixNavLinks();
+}
+
+// ── Kick off data load ──
+load().catch(function(e){ 
   console.error('load() failed:', e.message, e.stack);
-  document.getElementById('leaderboard').innerHTML=`<div style="color:var(--tv-text-3);text-align:center;padding:60px 20px;font-size:14px">⚠ ${e.message}</div>`; 
+  document.getElementById('leaderboard').innerHTML='<div style="color:var(--tv-text-3);text-align:center;padding:60px 20px;font-size:14px">⚠ ' + __('error_loading','Something went wrong. Please try again.') + '</div>'; 
 });
 </script>
 </body>

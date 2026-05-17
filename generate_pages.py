@@ -23,20 +23,39 @@ DETAIL_TMPL = """\
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/trade/assets/i18n.js"></script>
+<script src="/trade/assets/supabase-client.js"></script>
 </head>
 <body>
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">PaperChase</a>
+  <a class="logo" href="/{LANG}/trade/">PaperChase</a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/">Home</a>
-    <a class="nav-link" href="/trade/">AI Trading</a>
-    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/">Polymarket</a>
+    <a class="nav-link" href="/{LANG}/" data-i18n="nav.home">Home</a>
+    <a class="nav-link" href="/{LANG}/trade/" data-i18n="nav.ai_trading">AI Trading</a>
+    <a class="nav-link" href="/{LANG}/market-sentinel/" data-i18n="nav.market_sentinel">Market Sentinel</a>
+    <a class="nav-link" href="/{LANG}/trade/polymarket/" data-i18n="nav.polymarket">Polymarket</a>
+    <a class="nav-link" href="/login" data-i18n="nav.login">Login</a>
+    <a class="nav-link" href="/register" data-i18n="nav.register">Register</a>
+  </div>
+  <div class="lang-switcher">
+    <select id="lang-select" onchange="switchLang(this.value)">
+      <option value="en">EN</option>
+      <option value="ja">JA</option>
+      <option value="ko">KO</option>
+      <option value="zh">ZH</option>
+      <option value="es">ES</option>
+      <option value="fr">FR</option>
+    </select>
   </div>
 </div></nav>
 <div class="container">
-  <a class="back-link" href="/trade/">← All Bots</a>
-  <div id="loading" style="text-align:center;padding:40px;color:var(--tv-text-2)">Loading {name}...</div>
+  <a class="back-link" href="/{LANG}/trade/" data-i18n="nav.all_bots">← All Bots</a>
+  <div class="favourite-bar" style="display:flex;justify-content:flex-end;align-items:center;padding:8px 0">
+    <button id="favBtn" class="fav-btn" onclick="toggleFavourite()" style="background:none;border:1px solid var(--tv-border-2,#363a45);border-radius:var(--tv-radius-sm,4px);padding:6px 12px;cursor:pointer;font-size:13px;color:var(--tv-text-2,#787b86);display:none">
+      <span id="favIcon">☆</span> <span id="favLabel" data-i18n="favourite_add">Add to Favourites</span>
+    </button>
+  </div>
+  <div id="loading" style="text-align:center;padding:40px;color:var(--tv-text-2)" data-i18n="loading.bot">Loading {name}...</div>
   <div id="app" style="display:none">
     <div id="hero"></div>
     <div id="outlook"></div>
@@ -45,13 +64,13 @@ DETAIL_TMPL = """\
     <div id="specs"></div>
     <div id="follow"></div>
     <div class="chart-wrap"><canvas id="chart"></canvas></div>
-    <div class="section-title">Current Positions</div>
+    <div class="section-title" data-i18n="detail.current_positions">Current Positions</div>
     <div id="positions" style="margin-bottom:16px"></div>
-    <div class="section-title">Recent Trades</div>
+    <div class="section-title" data-i18n="detail.recent_trades">Recent Trades</div>
     <div id="trades"></div>
     <div style="margin-top:20px;display:flex;gap:16px">
-      <a class="back-link" href="/trade/">← Leaderboard</a>
-      <a class="back-link" href="/trade/{bot_id}/records/">Full Records →</a>
+      <a class="back-link" href="/{LANG}/trade/" data-i18n="nav.leaderboard">← Leaderboard</a>
+      <a class="back-link" href="/{LANG}/trade/{bot_id}/records/" data-i18n="nav.full_records">Full Records →</a>
     </div>
   </div>
 </div>
@@ -65,6 +84,33 @@ const BOT_WATCHLIST={watchlist};
 const BOT_MAX_POSITION={max_position_pct},BOT_MAX_TRADES={max_trades},BOT_MIN_CASH={min_cash};
 </script>
 <script src="/trade/assets/bot-detail.js"></script>
+<script>
+// ── Favourite Toggle ──
+async function checkFavStatus() {{
+  if (!window.PaperChaseAuth) return;
+  var session = await PaperChaseAuth.getSession();
+  var btn = document.getElementById('favBtn');
+  if (!btn) return;
+  if (!session) {{ btn.style.display = 'none'; return; }}
+  btn.style.display = '';
+  var isFav = await PaperChaseAuth.isFavourite(BOT_ID);
+  document.getElementById('favIcon').textContent = isFav ? '★' : '☆';
+  document.getElementById('favLabel').textContent = isFav ? 'Remove from Favourites' : 'Add to Favourites';
+}}
+async function toggleFavourite() {{
+  if (!window.PaperChaseAuth) return;
+  var session = await PaperChaseAuth.getSession();
+  if (!session) {{ alert('Please log in to add favourites.'); return; }}
+  var isFav = await PaperChaseAuth.isFavourite(BOT_ID);
+  if (isFav) {{
+    await PaperChaseAuth.removeFavourite(BOT_ID);
+  }} else {{
+    await PaperChaseAuth.addFavourite(BOT_ID, BOT_NAME, BOT_AVATAR);
+  }}
+  checkFavStatus();
+}}
+checkFavStatus();
+</script>
 </body></html>
 """
 
@@ -88,28 +134,41 @@ RECORDS_TMPL = """\
 </script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
+<script src="/trade/assets/i18n.js"></script>
 </head>
 <body>
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">PaperChase</a>
+  <a class="logo" href="/{LANG}/trade/">PaperChase</a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/">Home</a>
-    <a class="nav-link" href="/trade/">AI Trading</a>
-    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/">Polymarket</a>
+    <a class="nav-link" href="/{LANG}/" data-i18n="nav.home">Home</a>
+    <a class="nav-link" href="/{LANG}/trade/" data-i18n="nav.ai_trading">AI Trading</a>
+    <a class="nav-link" href="/{LANG}/market-sentinel/" data-i18n="nav.market_sentinel">Market Sentinel</a>
+    <a class="nav-link" href="/{LANG}/trade/polymarket/" data-i18n="nav.polymarket">Polymarket</a>
+    <a class="nav-link" href="/login" data-i18n="nav.login">Login</a>
+    <a class="nav-link" href="/register" data-i18n="nav.register">Register</a>
+  </div>
+  <div class="lang-switcher">
+    <select id="lang-select" onchange="switchLang(this.value)">
+      <option value="en">EN</option>
+      <option value="ja">JA</option>
+      <option value="ko">KO</option>
+      <option value="zh">ZH</option>
+      <option value="es">ES</option>
+      <option value="fr">FR</option>
+    </select>
   </div>
 </div></nav>
 <div class="container">
-  <a class="back-link" href=\"/trade/{bot_id}/\">← {avatar} {name}</a>
+  <a class="back-link" href="/{LANG}/trade/{bot_id}/" data-i18n="records.back_to_bot">← {avatar} {name}</a>
   <div class="page-header">
-    <div style="font-size:20px;font-weight:600;color:var(--tv-text)">{avatar} {name} — Trade Records</div>
-    <div class="page-sub">Complete history · All times UTC</div>
+    <div style="font-size:20px;font-weight:600;color:var(--tv-text)" data-i18n="records.title">{avatar} {name} — Trade Records</div>
+    <div class="page-sub" data-i18n="records.subtitle">Complete history · All times UTC</div>
   </div>
   <div id="stats" class="stats-grid" style="grid-template-columns:repeat(4,1fr)"></div>
   <div style="display:flex;gap:8px;margin-bottom:12px">
-    <button class="nav-link active" onclick="setFilter('all',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface);color:var(--tv-text)">All</button>
-    <button class="nav-link" onclick="setFilter('BUY',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface)">Buys</button>
-    <button class="nav-link" onclick="setFilter('SELL',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface)">Sells</button>
+    <button class="nav-link active" onclick="setFilter('all',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface);color:var(--tv-text)" data-i18n="records.filter_all">All</button>
+    <button class="nav-link" onclick="setFilter('BUY',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface)" data-i18n="records.filter_buys">Buys</button>
+    <button class="nav-link" onclick="setFilter('SELL',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface)" data-i18n="records.filter_sells">Sells</button>
     <span style="font-size:11px;color:var(--tv-text-2);margin-left:auto" id="count"></span>
   </div>
   <div id="records"></div>
@@ -134,12 +193,14 @@ for bot_id, p in BOT_PROFILES.items():
             watchlist=json.dumps(p["watchlist"]),
             max_position_pct=p["max_position_pct"],
             max_trades=p["max_trades_per_session"],
-            min_cash=p["min_cash_reserve"]
+            min_cash=p["min_cash_reserve"],
+            LANG="{LANG}"
         ))
     os.makedirs(f"{bot_id}/records", exist_ok=True)
     with open(f"{bot_id}/records/index.html", "w", encoding="utf-8") as f:
         f.write(RECORDS_TMPL.format(
-            bot_id=bot_id, name=p["display_name"], color=p["color"], avatar=p["avatar"]
+            bot_id=bot_id, name=p["display_name"], color=p["color"], avatar=p["avatar"],
+            LANG="{LANG}"
         ))
     count += 1
 

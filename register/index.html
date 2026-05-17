@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title data-i18n-title="page_title_register">Register | PaperChase</title>
+<meta name="description" content="Create a PaperChase account to track your favourite AI trading bots and personalise your experience."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://paperchase.online/trade/register/"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W3V49QCMT0');
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="/trade/assets/style.css"/>
+<script src="/trade/assets/i18n.js"></script>
+<script src="/trade/assets/supabase-client.js"></script>
+<style>
+:root {
+  --tv-bg: #0a0b0f; --tv-surface: #131722; --tv-surface-2: #1e222d; --tv-surface-3: #2a2e39;
+  --tv-border: #2a2e39; --tv-border-2: #363a45;
+  --tv-text: #d1d4dc; --tv-text-2: #787b86; --tv-text-3: #50535c;
+  --tv-green: #089981; --tv-red: #f23645; --tv-yellow: #ff9800; --tv-blue: #2962ff;
+  --tv-font: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --tv-mono: 'JetBrains Mono','Fira Code',monospace;
+  --tv-radius: 6px; --tv-radius-sm: 4px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+.bg-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,11,15,0.88),rgba(10,11,15,0.93),rgba(10,11,15,0.97)),url('https://images.pexels.com/photos/16594725/pexels-photo-16594725.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920') center/cover no-repeat fixed}
+.wrap{position:relative;z-index:1}
+
+.topbar{background:rgba(19,23,34,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--tv-border);position:sticky;top:0;z-index:100}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:4px;height:52px}
+.logo{font-size:15px;font-weight:800;color:var(--tv-text);text-decoration:none;display:flex;align-items:center;gap:10px;margin-right:20px}
+.topbar-nav{display:flex;align-items:center;gap:0}
+.nav-link{font-size:13px;font-weight:500;color:var(--tv-text-2);text-decoration:none;padding:6px 12px;border-radius:var(--tv-radius-sm);transition:all .15s}
+.nav-link:hover,.nav-link.active{background:var(--tv-surface-2);color:var(--tv-text)}
+
+.auth-container{max-width:420px;margin:60px auto;padding:0 20px}
+.auth-card{background:var(--tv-surface);border:1px solid var(--tv-border);border-radius:var(--tv-radius);padding:32px}
+.auth-title{font-size:22px;font-weight:700;color:var(--tv-text);margin-bottom:4px}
+.auth-subtitle{font-size:13px;color:var(--tv-text-2);margin-bottom:24px}
+.auth-field{margin-bottom:16px}
+.auth-field label{display:block;font-size:12px;font-weight:600;color:var(--tv-text-2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+.auth-field input{width:100%;padding:10px 12px;border-radius:var(--tv-radius-sm);border:1px solid var(--tv-border);background:var(--tv-surface-2);color:var(--tv-text);font-size:14px;font-family:var(--tv-font);outline:none;transition:border-color .15s}
+.auth-field input:focus{border-color:var(--tv-blue)}
+.auth-btn{width:100%;padding:10px;border-radius:var(--tv-radius-sm);border:none;background:var(--tv-blue);color:#fff;font-size:14px;font-weight:600;font-family:var(--tv-font);cursor:pointer;transition:background .15s}
+.auth-btn:hover{background:#1e4bd2}
+.auth-links{text-align:center;margin-top:16px;font-size:13px;color:var(--tv-text-2)}
+.auth-links a{color:var(--tv-blue);text-decoration:none}
+.auth-links a:hover{text-decoration:underline}
+.auth-error{background:rgba(242,54,69,.12);border:1px solid rgba(242,54,69,.25);color:var(--tv-red);padding:10px 14px;border-radius:var(--tv-radius-sm);margin-bottom:16px;font-size:13px;display:none}
+.password-hint{font-size:11px;color:var(--tv-text-3);margin-top:4px}
+
+@media(max-width:600px){
+  .auth-card{padding:20px}
+  .auth-container{margin:30px auto}
+  .topbar-inner{padding:0 10px}
+  .nav-link{font-size:11px;padding:4px 6px}
+}
+</style>
+</head>
+<body>
+<div class="bg-overlay"></div>
+<div class="wrap">
+
+<nav class="topbar"><div class="topbar-inner">
+  <a class="logo" href="/{LANG}/trade/">PaperChase</a>
+  <div class="topbar-nav">
+    <a class="nav-link" href="/{LANG}/" data-i18n="nav_home">Home</a>
+    <a class="nav-link" href="/{LANG}/trade/" data-i18n="nav_trading">AI Trading</a>
+    <a class="nav-link" href="/{LANG}/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
+    <a class="nav-link" href="/{LANG}/trade/polymarket/" data-i18n="nav_polymarket">Polymarket</a>
+  </div>
+  <div class="topbar-spacer" style="flex:1"></div>
+  <!-- Language Switcher -->
+  <div class="lang-switcher" style="position:relative;display:flex;align-items:center">
+    <button class="lang-btn nav-link" id="langSwitcherBtn" data-i18n="nav_lang" style="cursor:pointer;display:flex;align-items:center;gap:4px;background:none;border:none;font-family:inherit;font-size:13px">
+      Language
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div id="langDropdown" class="lang-dropdown" style="display:none;position:absolute;top:100%;right:0;background:var(--tv-surface-2);border:1px solid var(--tv-border-2);border-radius:var(--tv-radius);padding:4px 0;min-width:140px;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,0.4)">
+      <button class="lang-option" data-lang="en" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇬🇧 <span data-i18n="lang_en">English</span></button>
+      <button class="lang-option" data-lang="tc" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇭🇰 <span data-i18n="lang_tc">繁體中文</span></button>
+      <button class="lang-option" data-lang="sc" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇨🇳 <span data-i18n="lang_sc">简体中文</span></button>
+      <button class="lang-option" data-lang="ja" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇯🇵 <span data-i18n="lang_ja">日本語</span></button>
+      <button class="lang-option" data-lang="fr" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇫🇷 <span data-i18n="lang_fr">Français</span></button>
+      <button class="lang-option" data-lang="es" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇪🇸 <span data-i18n="lang_es">Español</span></button>
+    </div>
+  </div>
+  <!-- Account / Login -->
+  <div class="topbar-auth" style="display:flex;align-items:center;gap:4px;margin-left:8px">
+    <a class="nav-link" href="/{LANG}/trade/login/" data-i18n="nav_login">Log In</a>
+    <a class="nav-link active" href="/{LANG}/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
+  </div>
+</div></nav>
+
+<div class="auth-container">
+  <div class="auth-card">
+    <div class="auth-title" data-i18n="register_title">Create Account</div>
+    <div class="auth-subtitle" data-i18n="register_subtitle">Join PaperChase and track your favourite bots</div>
+    <div class="auth-error" id="registerError"></div>
+    <form id="registerForm" onsubmit="return handleRegister(event)">
+      <div class="auth-field">
+        <label for="registerName" data-i18n="register_name">Display Name</label>
+        <input type="text" id="registerName" name="display_name" placeholder="e.g. CryptoFan42" required/>
+      </div>
+      <div class="auth-field">
+        <label for="registerEmail" data-i18n="register_email">Email</label>
+        <input type="email" id="registerEmail" name="email" placeholder="you@example.com" required/>
+      </div>
+      <div class="auth-field">
+        <label for="registerPassword" data-i18n="register_password">Password</label>
+        <input type="password" id="registerPassword" name="password" placeholder="Min. 8 characters" required minlength="8"/>
+        <div class="password-hint" data-i18n="register_password_hint">At least 8 characters</div>
+      </div>
+      <button type="submit" class="auth-btn" data-i18n="register_btn">Create Account</button>
+    </form>
+    <div class="auth-links">
+      <span data-i18n="register_have_account">Already have an account?</span>
+      <a href="/{LANG}/trade/login/" data-i18n="register_login_link">Sign In</a>
+    </div>
+  </div>
+</div>
+
+<script>
+async function handleRegister(e) {
+  e.preventDefault();
+  var name = document.getElementById('registerName').value;
+  var email = document.getElementById('registerEmail').value;
+  var password = document.getElementById('registerPassword').value;
+  var errEl = document.getElementById('registerError');
+  
+  if (!name || !email || !password) {
+    errEl.textContent = 'Please fill in all fields.';
+    errEl.style.display = 'block';
+    return false;
+  }
+  
+  if (password.length < 8) {
+    errEl.textContent = 'Password must be at least 8 characters.';
+    errEl.style.display = 'block';
+    return false;
+  }
+  
+  errEl.style.display = 'none';
+  
+  if (!window.PaperChaseAuth) {
+    errEl.textContent = 'Auth system not ready. Please try again.';
+    errEl.style.display = 'block';
+    return false;
+  }
+  
+  var result = await PaperChaseAuth.signUp(email, password, name);
+  if (result.error) {
+    errEl.textContent = result.error.message || 'Registration failed. Please try again.';
+    errEl.style.display = 'block';
+    return false;
+  }
+  
+  // Success — redirect to account
+  window.location.href = '/account/';
+  return false;
+}
+
+// ── Language Switcher Dropdown ──
+document.addEventListener('click', function(e) {
+  var dropdown = document.getElementById('langDropdown');
+  var btn = document.getElementById('langSwitcherBtn');
+  if (!dropdown || !btn) return;
+  if (btn.contains(e.target)) {
+    e.preventDefault();
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  } else if (!dropdown.contains(e.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+
+document.querySelectorAll('.lang-option').forEach(function(opt) {
+  opt.addEventListener('click', function() {
+    var lang = this.getAttribute('data-lang');
+    if (lang && window.__setLang) {
+      window.__setLang(lang);
+    }
+  });
+});
+
+// ── Replace {LANG} placeholders in nav links with detected language ──
+function fixNavLinks() {
+  var lang = (window.__lang && window.__lang()) || 'en';
+  document.querySelectorAll('a[href*="{LANG}"]').forEach(function(a) {
+    a.setAttribute('href', a.getAttribute('href').replace(/\{LANG\}/g, lang));
+  });
+}
+document.addEventListener('i18nReady', fixNavLinks);
+if (window.__lang) {
+  fixNavLinks();
+}
+</script>
+</body>
+</html>

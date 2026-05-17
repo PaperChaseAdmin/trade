@@ -18,20 +18,39 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/trade/assets/i18n.js"></script>
+<script src="/trade/assets/supabase-client.js"></script>
 </head>
 <body>
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">PaperChase</a>
+  <a class="logo" href="/{LANG}/trade/">PaperChase</a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/">Home</a>
-    <a class="nav-link" href="/trade/">AI Trading</a>
-    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/">Polymarket</a>
+    <a class="nav-link" href="/{LANG}/" data-i18n="nav.home">Home</a>
+    <a class="nav-link" href="/{LANG}/trade/" data-i18n="nav.ai_trading">AI Trading</a>
+    <a class="nav-link" href="/{LANG}/market-sentinel/" data-i18n="nav.market_sentinel">Market Sentinel</a>
+    <a class="nav-link" href="/{LANG}/trade/polymarket/" data-i18n="nav.polymarket">Polymarket</a>
+    <a class="nav-link" href="/login" data-i18n="nav.login">Login</a>
+    <a class="nav-link" href="/register" data-i18n="nav.register">Register</a>
+  </div>
+  <div class="lang-switcher">
+    <select id="lang-select" onchange="switchLang(this.value)">
+      <option value="en">EN</option>
+      <option value="ja">JA</option>
+      <option value="ko">KO</option>
+      <option value="zh">ZH</option>
+      <option value="es">ES</option>
+      <option value="fr">FR</option>
+    </select>
   </div>
 </div></nav>
 <div class="container">
-  <a class="back-link" href="/trade/">← All Bots</a>
-  <div id="loading" style="text-align:center;padding:40px;color:var(--tv-text-2)">Loading Jamie...</div>
+  <a class="back-link" href="/{LANG}/trade/" data-i18n="nav.all_bots">← All Bots</a>
+  <div class="favourite-bar" style="display:flex;justify-content:flex-end;align-items:center;padding:8px 0">
+    <button id="favBtn" class="fav-btn" onclick="toggleFavourite()" style="background:none;border:1px solid var(--tv-border-2,#363a45);border-radius:var(--tv-radius-sm,4px);padding:6px 12px;cursor:pointer;font-size:13px;color:var(--tv-text-2,#787b86);display:none">
+      <span id="favIcon">☆</span> <span id="favLabel" data-i18n="favourite_add">Add to Favourites</span>
+    </button>
+  </div>
+  <div id="loading" style="text-align:center;padding:40px;color:var(--tv-text-2)" data-i18n="loading.bot">Loading Jamie...</div>
   <div id="app" style="display:none">
     <div id="hero"></div>
     <div id="outlook"></div>
@@ -40,13 +59,13 @@
     <div id="specs"></div>
     <div id="follow"></div>
     <div class="chart-wrap"><canvas id="chart"></canvas></div>
-    <div class="section-title">Current Positions</div>
+    <div class="section-title" data-i18n="detail.current_positions">Current Positions</div>
     <div id="positions" style="margin-bottom:16px"></div>
-    <div class="section-title">Recent Trades</div>
+    <div class="section-title" data-i18n="detail.recent_trades">Recent Trades</div>
     <div id="trades"></div>
     <div style="margin-top:20px;display:flex;gap:16px">
-      <a class="back-link" href="/trade/">← Leaderboard</a>
-      <a class="back-link" href="/trade/jamie/records/">Full Records →</a>
+      <a class="back-link" href="/{LANG}/trade/" data-i18n="nav.leaderboard">← Leaderboard</a>
+      <a class="back-link" href="/{LANG}/trade/jamie/records/" data-i18n="nav.full_records">Full Records →</a>
     </div>
   </div>
 </div>
@@ -60,4 +79,31 @@ const BOT_WATCHLIST=["JPM", "BAC", "GS", "WFC", "C", "MS", "V", "MA", "AXP", "BR
 const BOT_MAX_POSITION=0.25,BOT_MAX_TRADES=2,BOT_MIN_CASH=1000;
 </script>
 <script src="/trade/assets/bot-detail.js"></script>
+<script>
+// ── Favourite Toggle ──
+async function checkFavStatus() {
+  if (!window.PaperChaseAuth) return;
+  var session = await PaperChaseAuth.getSession();
+  var btn = document.getElementById('favBtn');
+  if (!btn) return;
+  if (!session) { btn.style.display = 'none'; return; }
+  btn.style.display = '';
+  var isFav = await PaperChaseAuth.isFavourite(BOT_ID);
+  document.getElementById('favIcon').textContent = isFav ? '★' : '☆';
+  document.getElementById('favLabel').textContent = isFav ? 'Remove from Favourites' : 'Add to Favourites';
+}
+async function toggleFavourite() {
+  if (!window.PaperChaseAuth) return;
+  var session = await PaperChaseAuth.getSession();
+  if (!session) { alert('Please log in to add favourites.'); return; }
+  var isFav = await PaperChaseAuth.isFavourite(BOT_ID);
+  if (isFav) {
+    await PaperChaseAuth.removeFavourite(BOT_ID);
+  } else {
+    await PaperChaseAuth.addFavourite(BOT_ID, BOT_NAME, BOT_AVATAR);
+  }
+  checkFavStatus();
+}
+checkFavStatus();
+</script>
 </body></html>

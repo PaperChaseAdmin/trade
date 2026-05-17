@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Polymarket Scanner · PaperChase</title>
+<title data-i18n-title="page_title_polymarket">Polymarket Scanner · PaperChase</title>
 <meta name="description" content="AI-powered Polymarket prediction market scanner. Find high-confidence bets with AI analysis and historical accuracy tracking."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://paperchase.online/trade/polymarket/"/>
@@ -17,6 +17,7 @@
 </script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/trade/assets/i18n.js"></script>
 <style>
 :root {
   --tv-bg: #0a0b0f; --tv-surface: #131722; --tv-surface-2: #1e222d; --tv-surface-3: #2a2e39;
@@ -108,12 +109,33 @@ body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);fon
 <div class="wrap">
 
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">PaperChase</a>
+  <a class="logo" href="/{LANG}/trade/">PaperChase</a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/">Home</a>
-    <a class="nav-link" href="/trade/">AI Trading</a>
-    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
-    <a class="nav-link active" href="/trade/polymarket/">Polymarket</a>
+    <a class="nav-link" href="/{LANG}/" data-i18n="nav_home">Home</a>
+    <a class="nav-link" href="/{LANG}/trade/" data-i18n="nav_trading">AI Trading</a>
+    <a class="nav-link" href="/{LANG}/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
+    <a class="nav-link active" href="/{LANG}/trade/polymarket/" data-i18n="nav_polymarket">Polymarket</a>
+  </div>
+  <div class="topbar-spacer" style="flex:1"></div>
+  <!-- Language Switcher -->
+  <div class="lang-switcher" style="position:relative;display:flex;align-items:center">
+    <button class="lang-btn nav-link" id="langSwitcherBtn" data-i18n="nav_lang" style="cursor:pointer;display:flex;align-items:center;gap:4px;background:none;border:none;font-family:inherit;font-size:13px">
+      Language
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div id="langDropdown" class="lang-dropdown" style="display:none;position:absolute;top:100%;right:0;background:var(--tv-surface-2);border:1px solid var(--tv-border-2);border-radius:var(--tv-radius);padding:4px 0;min-width:140px;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,0.4)">
+      <button class="lang-option" data-lang="en" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇬🇧 <span data-i18n="lang_en">English</span></button>
+      <button class="lang-option" data-lang="tc" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇭🇰 <span data-i18n="lang_tc">繁體中文</span></button>
+      <button class="lang-option" data-lang="sc" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇨🇳 <span data-i18n="lang_sc">简体中文</span></button>
+      <button class="lang-option" data-lang="ja" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇯🇵 <span data-i18n="lang_ja">日本語</span></button>
+      <button class="lang-option" data-lang="fr" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇫🇷 <span data-i18n="lang_fr">Français</span></button>
+      <button class="lang-option" data-lang="es" style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;color:var(--tv-text);font:inherit;font-size:13px;cursor:pointer;text-align:left;transition:background .15s">🇪🇸 <span data-i18n="lang_es">Español</span></button>
+    </div>
+  </div>
+  <!-- Account / Login -->
+  <div class="topbar-auth" style="display:flex;align-items:center;gap:4px;margin-left:8px">
+    <a class="nav-link" href="/{LANG}/trade/login/" data-i18n="nav_login">Log In</a>
+    <a class="nav-link" href="/{LANG}/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
   </div>
 </div></nav>
 
@@ -121,12 +143,12 @@ body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);fon
 
   <div class="page-header">
     <div>
-      <div class="page-title">Polymarket Scanner</div>
-      <div class="page-sub">AI-powered prediction market analysis · High-confidence bet finder</div>
+      <div class="page-title" data-i18n="page_title_polymarket">Polymarket Scanner</div>
+      <div class="page-sub" data-i18n="page_sub_polymarket">AI-powered prediction market analysis · High-confidence bet finder</div>
     </div>
     <div class="header-meta">
       <span class="live"></span><span id="lastUpdated">Loading...</span>
-      <button class="refresh-btn" onclick="loadData()">⟳ Refresh</button>
+      <button class="refresh-btn" onclick="loadData()"><span data-i18n="refresh">⟳ Refresh</span></button>
     </div>
   </div>
 
@@ -135,18 +157,18 @@ body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);fon
 
   <!-- Filters -->
   <div class="filter-bar" id="filterBar">
-    <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All</button>
-    <button class="filter-btn" data-filter="recommended" onclick="setFilter('recommended',this)">✅ Recommended</button>
-    <button class="filter-btn" data-filter="review" onclick="setFilter('review',this)">⚠️ Review</button>
-    <button class="filter-btn" data-filter="politics" onclick="setFilter('politics',this)">Politics</button>
-    <button class="filter-btn" data-filter="crypto" onclick="setFilter('crypto',this)">Crypto</button>
-    <button class="filter-btn" data-filter="finance" onclick="setFilter('finance',this)">Finance</button>
-    <button class="filter-btn" data-filter="news" onclick="setFilter('news',this)">News</button>
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)" data-i18n="filter_all">All</button>
+    <button class="filter-btn" data-filter="recommended" onclick="setFilter('recommended',this)" data-i18n="filter_recommended">✅ Recommended</button>
+    <button class="filter-btn" data-filter="review" onclick="setFilter('review',this)" data-i18n="filter_review">⚠️ Review</button>
+    <button class="filter-btn" data-filter="politics" onclick="setFilter('politics',this)" data-i18n="filter_politics">Politics</button>
+    <button class="filter-btn" data-filter="crypto" onclick="setFilter('crypto',this)" data-i18n="filter_crypto">Crypto</button>
+    <button class="filter-btn" data-filter="finance" onclick="setFilter('finance',this)" data-i18n="filter_finance">Finance</button>
+    <button class="filter-btn" data-filter="news" onclick="setFilter('news',this)" data-i18n="filter_news">News</button>
     <span class="filter-count" id="countLabel">0 markets</span>
   </div>
 
   <!-- Market List -->
-  <div id="marketList"><div class="loading"><div class="spinner"></div>Scanning Polymarket...</div></div>
+  <div id="marketList"><div class="loading"><div class="spinner"></div><span data-i18n="scanning_polymarket">Scanning Polymarket...</span></div></div>
 
 </div>
 
@@ -164,7 +186,7 @@ function fmt(v) {
 function ago(ts) {
   if (!ts) return '';
   const m = Math.floor((Date.now()-new Date(ts))/60000);
-  return m<1?'just now':m<60?m+'m ago':Math.floor(m/60)+'h ago';
+  return m<1 ? __('just_now','just now') : m<60 ? m + __('min_ago','m ago') : Math.floor(m/60) + __('hour_ago','h ago');
 }
 
 function setFilter(f, btn) {
@@ -184,10 +206,10 @@ function renderMarkets() {
     filtered = allMarkets.filter(m => m.tag === currentFilter);
   }
   
-  document.getElementById('countLabel').textContent = filtered.length + ' markets';
+  document.getElementById('countLabel').textContent = filtered.length + ' ' + __('count_markets','markets');
   
   if (!filtered.length) {
-    document.getElementById('marketList').innerHTML = '<div class="loading" style="padding:40px">No markets found for this filter</div>';
+    document.getElementById('marketList').innerHTML = '<div class="loading" style="padding:40px">' + __('no_markets_filter','No markets found for this filter') + '</div>';
     return;
   }
   
@@ -204,7 +226,7 @@ function renderMarkets() {
     const aiHtml = ai.ai_analysis ? 
       '<div class="market-card-ai open">' +
         '<span class="ai-outlook" style="color:' + (ai.ai_outlook==='yes'?'var(--tv-green)':'var(--tv-red)') + '">' + (ai.ai_outlook||'neutral').toUpperCase() + '</span>' +
-        '<span class="ai-conf">(' + (ai.ai_confidence||0) + '% confidence)</span> — ' +
+        '<span class="ai-conf">(' + (ai.ai_confidence||0) + '% ' + __('ai_confidence','confidence') + ')</span> — ' +
         (ai.ai_analysis||'') +
       '</div>' : '';
     
@@ -214,9 +236,9 @@ function renderMarkets() {
         '<span class="market-card-badge ' + badge + '">' + badgeText + '</span>' +
       '</div>' +
       '<div class="market-card-meta">' +
-        '<span class="meta-item">Yes: <strong class="' + (m.yes_price>=0.9?'c-green':m.yes_price>=0.7?'c-yellow':'') + '">' + pct + '%</strong></span>' +
-        '<span class="meta-item">Ends: <strong>' + endDate + '</strong></span>' +
-        '<span class="meta-item">Vol: <strong>' + fmt(m.volume) + '</strong></span>' +
+        '<span class="meta-item">' + __('meta_yes','Yes') + ': <strong class="' + (m.yes_price>=0.9?'c-green':m.yes_price>=0.7?'c-yellow':'') + '">' + pct + '%</strong></span>' +
+        '<span class="meta-item">' + __('meta_ends','Ends') + ': <strong>' + endDate + '</strong></span>' +
+        '<span class="meta-item">' + __('meta_vol','Vol') + ': <strong>' + fmt(m.volume) + '</strong></span>' +
         '<span class="badge-tag">' + (m.tag||'') + '</span>' +
         (m.heuristic && m.heuristic.reasons ? '<span class="meta-item" style="color:var(--tv-text-3);font-size:10px">' + m.heuristic.reasons + '</span>' : '') +
       '</div>' +
@@ -241,7 +263,7 @@ async function loadData() {
     const data = await resp.json();
     allMarkets = data.markets || [];
     
-    document.getElementById('lastUpdated').textContent = 'Updated ' + ago(data.updated_at);
+    document.getElementById('lastUpdated').textContent = __('updated','Updated') + ' ' + ago(data.updated_at);
     
     // Stats
     const total = allMarkets.length;
@@ -250,18 +272,54 @@ async function loadData() {
     const totalVol = allMarkets.reduce((s,m) => s+(m.volume||0), 0);
     
     document.getElementById('statsBar').innerHTML =
-      '<div class="stat-item"><div class="stat-lbl">Markets</div><div class="stat-val">' + total + '</div></div>' +
-      '<div class="stat-item"><div class="stat-lbl">Recommended</div><div class="stat-val" style="color:var(--tv-green)">' + recommended + '</div></div>' +
-      '<div class="stat-item"><div class="stat-lbl">Avg Yes%</div><div class="stat-val">' + avgYes + '%</div></div>' +
-      '<div class="stat-item"><div class="stat-lbl">Total Volume</div><div class="stat-val">' + fmt(totalVol) + '</div></div>';
+      '<div class="stat-item"><div class="stat-lbl">' + __('stat_markets','Markets') + '</div><div class="stat-val">' + total + '</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">' + __('stat_recommended','Recommended') + '</div><div class="stat-val" style="color:var(--tv-green)">' + recommended + '</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">' + __('stat_avg_yes','Avg Yes%') + '</div><div class="stat-val">' + avgYes + '%</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">' + __('stat_total_volume','Total Volume') + '</div><div class="stat-val">' + fmt(totalVol) + '</div></div>';
     
     renderMarkets();
   } catch(e) {
-    document.getElementById('marketList').innerHTML = '<div class="loading" style="color:var(--tv-red)">⚠ Could not load: ' + e.message + '<br><small>Run python3 polymarket/scanner.py to generate data</small></div>';
+    document.getElementById('marketList').innerHTML = '<div class="loading" style="color:var(--tv-red)">⚠ ' + __('error_could_not_load','Could not load') + ': ' + e.message + '<br><small>' + __('error_run_scanner','Run python3 polymarket/scanner.py to generate data') + '</small></div>';
   }
 }
 
 loadData();
+
+// ── Language Switcher Dropdown ──
+document.addEventListener('click', function(e) {
+  var dropdown = document.getElementById('langDropdown');
+  var btn = document.getElementById('langSwitcherBtn');
+  if (!dropdown || !btn) return;
+  if (btn.contains(e.target)) {
+    e.preventDefault();
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  } else if (!dropdown.contains(e.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+
+document.querySelectorAll('.lang-option').forEach(function(opt) {
+  opt.addEventListener('click', function() {
+    var lang = this.getAttribute('data-lang');
+    if (lang && window.__setLang) {
+      window.__setLang(lang);
+    }
+  });
+});
+
+// ── Replace {LANG} placeholders in nav links with detected language ──
+function fixNavLinks() {
+  var lang = (window.__lang && window.__lang()) || 'en';
+  document.querySelectorAll('a[href*="{LANG}"]').forEach(function(a) {
+    a.setAttribute('href', a.getAttribute('href').replace(/\{LANG\}/g, lang));
+  });
+}
+// Run after i18n is ready
+document.addEventListener('i18nReady', fixNavLinks);
+// Also run immediately in case i18n already fired
+if (window.__lang) {
+  fixNavLinks();
+}
 </script>
 </body>
 </html>
