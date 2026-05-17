@@ -1,12 +1,9 @@
 /**
  * PaperChase i18n Loader
  * -----------------------------------------------
- * Detects language from URL prefix, loads JSON
- * translation files, provides __() function,
- * auto-translates [data-i18n] elements on the DOM,
- * and persists preference in localStorage.
+ * Detects language from localStorage > browser > default.
+ * No URL path prefix detection — URLs stay clean (/trade/).
  *
- * URL structure: paperchase.online/{lang}/trade/...
  * Supported langs: en, tc (繁體中文), sc (简体中文),
  *                  ja (日本語), fr (Français), es (Español)
  *
@@ -37,7 +34,7 @@
   var CURRENT_LANG    = DEFAULT_LANG;
 
   // ---------------------------------------------------------------------------
-  // Language detection (priority: URL param > URL path prefix > localStorage > browser > default)
+  // Language detection (priority: URL param > localStorage > browser > default)
   // ---------------------------------------------------------------------------
   function detectLanguage() {
     var lang;
@@ -48,19 +45,13 @@
       return match[1].toLowerCase();
     }
 
-    // 2. URL path prefix: paperchase.online/{lang}/...
-    var pathParts = window.location.pathname.split('/').filter(Boolean);
-    if (pathParts.length > 0 && SUPPORTED_LANGS.indexOf(pathParts[0]) !== -1) {
-      return pathParts[0];
-    }
-
-    // 3. localStorage preference
+    // 2. localStorage preference
     lang = localStorage.getItem(STORAGE_KEY);
     if (lang && SUPPORTED_LANGS.indexOf(lang) !== -1) {
       return lang;
     }
 
-    // 4. Browser language (navigator.language returns e.g. "en-US", "zh-TW", "zh-CN", "ja", "fr", "es")
+    // 3. Browser language (navigator.language returns e.g. "en-US", "zh-TW", "zh-CN", "ja", "fr", "es")
     lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
     if (lang.indexOf('zh-tw') !== -1 || lang.indexOf('zh-hk') !== -1) return 'tc';
     if (lang.indexOf('zh-cn') !== -1 || lang.indexOf('zh-sg') !== -1) return 'sc';
@@ -69,7 +60,7 @@
     if (lang.indexOf('fr') !== -1)  return 'fr';
     if (lang.indexOf('es') !== -1)  return 'es';
 
-    // 5. Fallback
+    // 4. Fallback
     return DEFAULT_LANG;
   }
 
@@ -361,19 +352,6 @@
   function init() {
     var detectedLang = detectLanguage();
 
-    // If URL has a language prefix different from current, rewrite URL
-    // (this handles direct access without prefix — we keep the current URL
-    //  structure; language prefix is optional for English as default).
-    if (detectedLang !== DEFAULT_LANG) {
-      var pathParts = window.location.pathname.split('/').filter(Boolean);
-      if (pathParts.length === 0 || SUPPORTED_LANGS.indexOf(pathParts[0]) === -1) {
-        // No language prefix in URL — prepend it
-        // Note: we do NOT redirect silently; the site structure supports
-        // both /trade/... and /en/trade/... — we just set the lang.
-        // Actual URL rewriting is opt-in via redirectToPrefixed() below.
-      }
-    }
-
     CURRENT_LANG = detectedLang;
 
     // Persist to localStorage
@@ -423,7 +401,7 @@
   // ---------------------------------------------------------------------------
   /**
    * Switch to a different language.
-   * Saves preference and reloads the page with the new language URL prefix.
+   * Saves preference and reloads the page (without changing the URL path).
    *
    * @param {string} lang - One of 'en', 'tc', 'sc', 'ja', 'fr', 'es'
    */
@@ -435,25 +413,9 @@
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) { /* ignore */ }
 
-    // Redirect to language-prefixed URL
-    var pathParts = window.location.pathname.split('/').filter(Boolean);
-
-    // If first part is already a language prefix, replace it
-    if (pathParts.length > 0 && SUPPORTED_LANGS.indexOf(pathParts[0]) !== -1) {
-      pathParts[0] = lang;
-    } else {
-      // Prepend the language prefix
-      pathParts.unshift(lang);
-    }
-
-    var newPath = '/' + pathParts.join('/');
-    // Preserve query string and hash
-    var newUrl = newPath + window.location.search + window.location.hash;
-
-    // If switching to English default, optionally strip the prefix
-    // (We keep it for consistency; the site treats /en/ the same as /)
-
-    window.location.href = newUrl;
+    // Reload the page at the same URL — i18n.js will pick up the new language
+    // from localStorage on next load
+    window.location.reload();
   };
 
 })();

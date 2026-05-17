@@ -208,8 +208,7 @@ async function loadAccount() {
     favContainer.style.display = 'none';
     favGrid.style.display = '';
     favGrid.innerHTML = favs.map(function(f) {
-      var lang = (window.__lang && window.__lang()) || 'en';
-      return '<a class="fav-card" href="/' + lang + '/trade/' + f.bot_id + '/">' +
+      return '<a class="fav-card" href="/trade/' + f.bot_id + '/">' +
         '<span class="fav-card-avatar">' + (f.bot_avatar || '🤖') + '</span>' +
         '<span class="fav-card-info">' +
           '<span class="fav-card-name">' + (f.bot_name || f.bot_id) + '</span>' +

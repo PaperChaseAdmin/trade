@@ -28,12 +28,12 @@ DETAIL_TMPL = """\
 </head>
 <body>
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/{LANG}/trade/">PaperChase</a>
+  <a class="logo" href="/trade/">PaperChase</a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/{LANG}/" data-i18n="nav.home">Home</a>
-    <a class="nav-link" href="/{LANG}/trade/" data-i18n="nav.ai_trading">AI Trading</a>
-    <a class="nav-link" href="/{LANG}/market-sentinel/" data-i18n="nav.market_sentinel">Market Sentinel</a>
-    <a class="nav-link" href="/{LANG}/trade/polymarket/" data-i18n="nav.polymarket">Polymarket</a>
+    <a class="nav-link" href="/" data-i18n="nav.home">Home</a>
+    <a class="nav-link" href="/trade/" data-i18n="nav.ai_trading">AI Trading</a>
+    <a class="nav-link" href="/market-sentinel/" data-i18n="nav.market_sentinel">Market Sentinel</a>
+    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav.polymarket">Polymarket</a>
     <a class="nav-link" href="/login" data-i18n="nav.login">Login</a>
     <a class="nav-link" href="/register" data-i18n="nav.register">Register</a>
   </div>
@@ -49,7 +49,7 @@ DETAIL_TMPL = """\
   </div>
 </div></nav>
 <div class="container">
-  <a class="back-link" href="/{LANG}/trade/" data-i18n="nav.all_bots">← All Bots</a>
+  <a class="back-link" href="/trade/" data-i18n="nav.all_bots">← All Bots</a>
   <div class="favourite-bar" style="display:flex;justify-content:flex-end;align-items:center;padding:8px 0">
     <button id="favBtn" class="fav-btn" onclick="toggleFavourite()" style="background:none;border:1px solid var(--tv-border-2,#363a45);border-radius:var(--tv-radius-sm,4px);padding:6px 12px;cursor:pointer;font-size:13px;color:var(--tv-text-2,#787b86);display:none">
       <span id="favIcon">☆</span> <span id="favLabel" data-i18n="favourite_add">Add to Favourites</span>
@@ -69,8 +69,8 @@ DETAIL_TMPL = """\
     <div class="section-title" data-i18n="detail.recent_trades">Recent Trades</div>
     <div id="trades"></div>
     <div style="margin-top:20px;display:flex;gap:16px">
-      <a class="back-link" href="/{LANG}/trade/" data-i18n="nav.leaderboard">← Leaderboard</a>
-      <a class="back-link" href="/{LANG}/trade/{bot_id}/records/" data-i18n="nav.full_records">Full Records →</a>
+      <a class="back-link" href="/trade/" data-i18n="nav.leaderboard">← Leaderboard</a>
+      <a class="back-link" href="/trade/{bot_id}/records/" data-i18n="nav.full_records">Full Records →</a>
     </div>
   </div>
 </div>
@@ -138,12 +138,12 @@ RECORDS_TMPL = """\
 </head>
 <body>
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/{LANG}/trade/">PaperChase</a>
+  <a class="logo" href="/trade/">PaperChase</a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/{LANG}/" data-i18n="nav.home">Home</a>
-    <a class="nav-link" href="/{LANG}/trade/" data-i18n="nav.ai_trading">AI Trading</a>
-    <a class="nav-link" href="/{LANG}/market-sentinel/" data-i18n="nav.market_sentinel">Market Sentinel</a>
-    <a class="nav-link" href="/{LANG}/trade/polymarket/" data-i18n="nav.polymarket">Polymarket</a>
+    <a class="nav-link" href="/" data-i18n="nav.home">Home</a>
+    <a class="nav-link" href="/trade/" data-i18n="nav.ai_trading">AI Trading</a>
+    <a class="nav-link" href="/market-sentinel/" data-i18n="nav.market_sentinel">Market Sentinel</a>
+    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav.polymarket">Polymarket</a>
     <a class="nav-link" href="/login" data-i18n="nav.login">Login</a>
     <a class="nav-link" href="/register" data-i18n="nav.register">Register</a>
   </div>
@@ -159,7 +159,7 @@ RECORDS_TMPL = """\
   </div>
 </div></nav>
 <div class="container">
-  <a class="back-link" href="/{LANG}/trade/{bot_id}/" data-i18n="records.back_to_bot">← {avatar} {name}</a>
+  <a class="back-link" href="/trade/{bot_id}/" data-i18n="records.back_to_bot">← {avatar} {name}</a>
   <div class="page-header">
     <div style="font-size:20px;font-weight:600;color:var(--tv-text)" data-i18n="records.title">{avatar} {name} — Trade Records</div>
     <div class="page-sub" data-i18n="records.subtitle">Complete history · All times UTC</div>
@@ -194,13 +194,11 @@ for bot_id, p in BOT_PROFILES.items():
             max_position_pct=p["max_position_pct"],
             max_trades=p["max_trades_per_session"],
             min_cash=p["min_cash_reserve"],
-            LANG="{LANG}"
         ))
     os.makedirs(f"{bot_id}/records", exist_ok=True)
     with open(f"{bot_id}/records/index.html", "w", encoding="utf-8") as f:
         f.write(RECORDS_TMPL.format(
             bot_id=bot_id, name=p["display_name"], color=p["color"], avatar=p["avatar"],
-            LANG="{LANG}"
         ))
     count += 1
 
