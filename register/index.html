@@ -95,8 +95,8 @@ body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);fon
   </div>
   <!-- Account / Login -->
   <div class="topbar-auth" style="display:flex;align-items:center;gap:4px;margin-left:8px">
-    <a class="nav-link" href="/{LANG}/trade/login/" data-i18n="nav_login">Log In</a>
-    <a class="nav-link active" href="/{LANG}/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
+    <a class="nav-link" href="/trade/login/" data-i18n="nav_login">Log In</a>
+    <a class="nav-link active" href="/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
   </div>
 </div></nav>
 
@@ -123,7 +123,7 @@ body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);fon
     </form>
     <div class="auth-links">
       <span data-i18n="register_have_account">Already have an account?</span>
-      <a href="/{LANG}/trade/login/" data-i18n="register_login_link">Sign In</a>
+      <a href="/trade/login/" data-i18n="register_login_link">Sign In</a>
     </div>
   </div>
 </div>
@@ -190,17 +190,7 @@ document.querySelectorAll('.lang-option').forEach(function(opt) {
   });
 });
 
-// ── Replace {LANG} placeholders in nav links with detected language ──
-function fixNavLinks() {
-  var lang = (window.__lang && window.__lang()) || 'en';
-  document.querySelectorAll('a[href*="{LANG}"]').forEach(function(a) {
-    a.setAttribute('href', a.getAttribute('href').replace(/\{LANG\}/g, lang));
-  });
-}
-document.addEventListener('i18nReady', fixNavLinks);
-if (window.__lang) {
-  fixNavLinks();
-}
+// ── {LANG} nav link fix removed — all hrefs are now root-relative ──
 </script>
 </body>
 </html>
