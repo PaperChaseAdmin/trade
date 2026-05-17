@@ -15,72 +15,76 @@
   gtag('js', new Date());
   gtag('config', 'G-W3V49QCMT0');
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
 <link rel="stylesheet" href="/trade/assets/style.css"/>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="/trade/assets/i18n.js"></script>
 <script src="/trade/assets/supabase-client.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+  const BOT_ID='tony',BOT_COLOR='#dc2626',BOT_NAME='Tony';
+  const BOT_AVATAR='⚡',BOT_BIO='Genius, billionaire, leveraged tech trader. TQQQ or bust.',BOT_STRATEGY='3x leveraged tech ETFs + AI + defense tech + robotics';
+  const BOT_RISK='VERY HIGH',BOT_RISK_BAR=VERY HIGHBAR;
+  const BOT_MODEL='openrouter/ling',BOT_FALLBACK='openrouter/nemotron';
+  const BOT_WATCHLIST=['TQQQ', 'SOXL', 'NVDA', 'AMD', 'PLTR', 'AXON', 'RKLB', 'ANET', 'ARM', 'SMCI', 'CRWD', 'TSLA', 'IONQ', 'MRVL', 'AVGO'];
+  const BOT_MAX_POSITION=0.4,BOT_MAX_TRADES=3,BOT_MIN_CASH=300;
+</script>
 </head>
 <body>
+<div class="bg-overlay"></div>
+
 <nav class="topbar"><div class="topbar-inner">
   <a class="logo" href="/trade/">PaperChase</a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/" data-i18n="nav.home">Home</a>
-    <a class="nav-link" href="/trade/" data-i18n="nav.ai_trading">AI Trading</a>
-    <a class="nav-link" href="/market-sentinel/" data-i18n="nav.market_sentinel">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav.polymarket">Polymarket</a>
-    <a class="nav-link" href="/login" data-i18n="nav.login">Login</a>
-    <a class="nav-link" href="/register" data-i18n="nav.register">Register</a>
+    <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
+    <a class="nav-link active" href="/trade/" data-i18n="nav_trading">AI Trading</a>
+    <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
+    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Polymarket</a>
   </div>
-  <div class="lang-switcher">
-    <select id="lang-select" onchange="switchLang(this.value)">
-      <option value="en">EN</option>
-      <option value="ja">JA</option>
-      <option value="ko">KO</option>
-      <option value="zh">ZH</option>
-      <option value="es">ES</option>
-      <option value="fr">FR</option>
-    </select>
+  <div style="flex:1"></div>
+  <div class="lang-switcher" style="position:relative">
+    <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'" style="background:var(--tv-surface-2);border:1px solid var(--tv-border-2);border-radius:var(--tv-radius-sm);padding:4px 10px;cursor:pointer;font-size:12px;color:var(--tv-text-2);font-family:var(--tv-font)">🌐 <span data-i18n="nav_lang">Language</span> ▾</button>
+    <div style="display:none;position:absolute;top:100%;right:0;background:var(--tv-surface);border:1px solid var(--tv-border);border-radius:var(--tv-radius-sm);min-width:150px;z-index:200;margin-top:4px;overflow:hidden">
+      <div onclick="localStorage.setItem('pap_tfav_lang','en');location.reload()" style="padding:8px 12px;cursor:pointer;font-size:13px;color:var(--tv-text);transition:background.1s" onmouseover="this.style.background='var(--tv-surface-2)'" onmouseout="this.style.background='transparent'">🇬🇧 <span data-i18n="lang_en">English</span></div>
+      <div onclick="localStorage.setItem('pap_tfav_lang','tc');location.reload()" style="padding:8px 12px;cursor:pointer;font-size:13px;color:var(--tv-text);transition:background.1s" onmouseover="this.style.background='var(--tv-surface-2)'" onmouseout="this.style.background='transparent'">🇭🇰 <span data-i18n="lang_tc">繁體中文</span></div>
+      <div onclick="localStorage.setItem('pap_tfav_lang','sc');location.reload()" style="padding:8px 12px;cursor:pointer;font-size:13px;color:var(--tv-text);transition:background.1s" onmouseover="this.style.background='var(--tv-surface-2)'" onmouseout="this.style.background='transparent'">🇨🇳 <span data-i18n="lang_sc">简体中文</span></div>
+      <div onclick="localStorage.setItem('pap_tfav_lang','ja');location.reload()" style="padding:8px 12px;cursor:pointer;font-size:13px;color:var(--tv-text);transition:background.1s" onmouseover="this.style.background='var(--tv-surface-2)'" onmouseout="this.style.background='transparent'">🇯🇵 <span data-i18n="lang_ja">日本語</span></div>
+      <div onclick="localStorage.setItem('pap_tfav_lang','fr');location.reload()" style="padding:8px 12px;cursor:pointer;font-size:13px;color:var(--tv-text);transition:background.1s" onmouseover="this.style.background='var(--tv-surface-2)'" onmouseout="this.style.background='transparent'">🇫🇷 <span data-i18n="lang_fr">Français</span></div>
+      <div onclick="localStorage.setItem('pap_tfav_lang','es');location.reload()" style="padding:8px 12px;cursor:pointer;font-size:13px;color:var(--tv-text);transition:background.1s" onmouseover="this.style.background='var(--tv-surface-2)'" onmouseout="this.style.background='transparent'">🇪🇸 <span data-i18n="lang_es">Español</span></div>
+    </div>
   </div>
+  <a class="nav-link" href="/trade/login/" data-i18n="nav_login" id="nav-login">Log In</a>
+  <a class="nav-link" href="/trade/register/" data-i18n="nav_register" id="nav-register">Register</a>
+  <a class="nav-link" href="/trade/account/" data-i18n="nav_account" id="nav-account" style="display:none">Account</a>
+  <a class="nav-link" href="#" onclick="if(window.PaperChaseAuth)PaperChaseAuth.signOut()" data-i18n="nav_logout" id="nav-logout" style="display:none">Log Out</a>
 </div></nav>
+<script>
+function switchLang(lang) {
+  if (window.__setLang) window.__setLang(lang);
+}
+</script>
 <div class="container">
-  <a class="back-link" href="/trade/" data-i18n="nav.all_bots">← All Bots</a>
+  <a class="back-link" href="/trade/" data-i18n="nav_all_bots">← All Bots</a>
   <div class="favourite-bar" style="display:flex;justify-content:flex-end;align-items:center;padding:8px 0">
     <button id="favBtn" class="fav-btn" onclick="toggleFavourite()" style="background:none;border:1px solid var(--tv-border-2,#363a45);border-radius:var(--tv-radius-sm,4px);padding:6px 12px;cursor:pointer;font-size:13px;color:var(--tv-text-2,#787b86);display:none">
-      <span id="favIcon">☆</span> <span id="favLabel" data-i18n="favourite_add">Add to Favourites</span>
+      <span id="favIcon">&#9734;</span> <span id="favLabel" data-i18n="favourite_add">Add to Favourites</span>
     </button>
   </div>
-  <div id="loading" style="text-align:center;padding:40px;color:var(--tv-text-2)" data-i18n="loading.bot">Loading Tony...</div>
+  <div id="loading" style="text-align:center;padding:40px;color:var(--tv-text-2)" data-i18n="loading_bot">Loading Tony...</div>
   <div id="app" style="display:none">
     <div id="hero"></div>
     <div id="outlook"></div>
     <div id="prices-bar"></div>
     <div id="last-session"></div>
     <div id="specs"></div>
-    <div id="follow"></div>
-    <div class="chart-wrap"><canvas id="chart"></canvas></div>
-    <div class="section-title" data-i18n="detail.current_positions">Current Positions</div>
-    <div id="positions" style="margin-bottom:16px"></div>
-    <div class="section-title" data-i18n="detail.recent_trades">Recent Trades</div>
-    <div id="trades"></div>
-    <div style="margin-top:20px;display:flex;gap:16px">
-      <a class="back-link" href="/trade/" data-i18n="nav.leaderboard">← Leaderboard</a>
-      <a class="back-link" href="/trade/tony/records/" data-i18n="nav.full_records">Full Records →</a>
-    </div>
+    <div id="session-chart"></div>
+    <div id="positions-section"></div>
+    <div id="trades-section"></div>
   </div>
+  <a href="/trade/tony/records/" class="nav-link" style="display:inline-block;margin-top:12px" data-i18n="nav_full_records">&#128196; Full Trade Records</a>
 </div>
-<script>
-const BOT_ID='tony',BOT_COLOR='#dc2626',BOT_NAME='Tony';
-const BOT_AVATAR='⚡',BOT_BIO='Genius, billionaire, leveraged tech trader. TQQQ or bust.',BOT_STRATEGY='3x leveraged tech ETFs + AI + defense tech + robotics';
-const BOT_RISK='VERY HIGH',BOT_RISK_BAR=10;
-const BOT_MODEL='openrouter/ling';
-const BOT_FALLBACK='openrouter/nemotron';
-const BOT_WATCHLIST=["TQQQ", "SOXL", "NVDA", "AMD", "PLTR", "AXON", "RKLB", "ANET", "ARM", "SMCI", "CRWD", "TSLA", "IONQ", "MRVL", "AVGO"];
-const BOT_MAX_POSITION=0.4,BOT_MAX_TRADES=3,BOT_MIN_CASH=300;
-</script>
+
 <script src="/trade/assets/bot-detail.js"></script>
 <script>
-// ── Favourite Toggle ──
 async function checkFavStatus() {
   if (!window.PaperChaseAuth) return;
   var session = await PaperChaseAuth.getSession();
@@ -105,5 +109,10 @@ async function toggleFavourite() {
   checkFavStatus();
 }
 checkFavStatus();
+</script>
+<script>
+document.addEventListener('i18nReady', function () {
+  if (window.__retranslate) window.__retranslate();
+});
 </script>
 </body></html>
