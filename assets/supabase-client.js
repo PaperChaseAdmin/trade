@@ -5,8 +5,8 @@
 // 3. Run SQL below in Supabase SQL Editor to create tables
 // 4. Fill in SUPABASE_URL and SUPABASE_ANON_KEY below
 
-const SUPABASE_URL = '';  // ← FILL THIS: https://xxxxx.supabase.co
-const SUPABASE_ANON_KEY = '';  // ← FILL THIS: eyJhbGciOiJIUzI1NiIs...
+const SUPABASE_URL = 'https://ksityddelwdtvawjsmyj.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtzaXR5ZGRlbHdkdHZhd2pzbXlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5OTY3NzQsImV4cCI6MjA5NDU3Mjc3NH0.RZMARTP09EeOnKpfS2MwG0IcBcdupIQxDtmCkESM40M';
 
 // --- SQL to run in Supabase SQL Editor ---
 /*
