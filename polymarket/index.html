@@ -44,14 +44,16 @@ body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);fon
 
 .container{max-width:1400px;margin:0 auto;padding:0 20px 60px}
 
-.page-header{padding:28px 0 20px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.page-title{font-size:24px;font-weight:700;color:var(--tv-text)}
-.page-sub{font-size:13px;color:var(--tv-text-2)}
-.header-meta{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--tv-text-2)}
-.refresh-btn{font-size:12px;font-weight:500;padding:5px 14px;border-radius:var(--tv-radius-sm);border:1px solid var(--tv-border-2);color:var(--tv-text-2);background:var(--tv-surface);cursor:pointer;transition:all .15s;font-family:var(--tv-font)}
-.refresh-btn:hover{border-color:var(--tv-blue);color:var(--tv-blue)}
+.page-header{padding:28px 0 20px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.page-title{font-size:26px;font-weight:700;color:var(--tv-text);letter-spacing:-0.03em}
+.page-title-wrap{display:flex;flex-direction:column;gap:6px}
+.page-sub{font-size:13px;color:var(--tv-text-2);display:flex;align-items:center;gap:6px}
 .live{display:inline-block;width:7px;height:7px;background:var(--tv-green);border-radius:50%;animation:blink 2s infinite;margin-right:5px}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+.countdown-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:2px;margin-left:auto;flex-shrink:0}
+.countdown-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tv-text-3)}
+.countdown-num{font-size:16px;font-weight:700;font-family:var(--tv-mono);color:var(--tv-text);white-space:nowrap}
 
 /* Filters */
 .filter-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
@@ -142,14 +144,11 @@ body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);fon
 <div class="container">
 
   <div class="page-header">
-    <div>
+    <div class="page-title-wrap">
       <div class="page-title" data-i18n="page_title_polymarket">Polymarket Scanner</div>
       <div class="page-sub" data-i18n="page_sub_polymarket">AI-powered prediction market analysis · High-confidence bet finder</div>
     </div>
-    <div class="header-meta">
-      <span class="live"></span><span id="lastUpdated">Loading...</span>
-      <button class="refresh-btn" onclick="loadData()"><span data-i18n="refresh">⟳ Refresh</span></button>
-    </div>
+    <div id="countdown-wrap" class="countdown-wrap" style="margin-left:auto;flex-shrink:0"></div>
   </div>
 
   <!-- Stats -->
@@ -263,7 +262,7 @@ async function loadData() {
     const data = await resp.json();
     allMarkets = data.markets || [];
     
-    document.getElementById('lastUpdated').textContent = __('updated','Updated') + ' ' + ago(data.updated_at);
+    document.getElementById('lastUpdated') && (document.getElementById('lastUpdated').textContent = __('updated','Updated') + ' ' + ago(data.updated_at));
     
     // Stats
     const total = allMarkets.length;
