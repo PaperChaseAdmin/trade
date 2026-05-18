@@ -1,5 +1,60 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "MSTR",
+      "shares": 20,
+      "price": 165.135,
+      "total_value": 3302.7,
+      "reasoning": "MSTR down 6.84% - the ultimate Bitcoin treasury company, buying the dip in fear (F&G 28) as test of faith",
+      "timestamp": "2026-05-18T17:52:18Z",
+      "market_outlook": "Crypto sector getting hammered (F&G at 28 Fear) but adoption news (Galaxy BitLicense, Stripe DeFi) confirms long-term thesis - buying the dip heavily",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.25,
+        "vix": 18.39,
+        "ticker_chg_pct": -6.84,
+        "trigger_news": "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "MARA",
+      "shares": 80,
+      "price": 11.975,
+      "total_value": 958.0,
+      "reasoning": "MARA down 3.62% - major Bitcoin miner at attractive entry, Ex-OpenAI's Aschenbrenner betting on miners signals sector opportunity",
+      "timestamp": "2026-05-18T17:52:18Z",
+      "market_outlook": "Crypto sector getting hammered (F&G at 28 Fear) but adoption news (Galaxy BitLicense, Stripe DeFi) confirms long-term thesis - buying the dip heavily",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.25,
+        "vix": 18.39,
+        "ticker_chg_pct": -3.62,
+        "trigger_news": "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "COIN",
+      "shares": 18,
+      "price": 186.49,
+      "total_value": 3356.82,
+      "reasoning": "COIN down 4.61% - leading crypto exchange, Galaxy's BitLicense approval shows institutional crypto momentum despite today's selloff",
+      "timestamp": "2026-05-18T17:52:18Z",
+      "market_outlook": "Crypto sector getting hammered (F&G at 28 Fear) but adoption news (Galaxy BitLicense, Stripe DeFi) confirms long-term thesis - buying the dip heavily",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.25,
+        "vix": 18.39,
+        "ticker_chg_pct": -4.61,
+        "trigger_news": "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

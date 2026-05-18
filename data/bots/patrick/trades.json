@@ -1,5 +1,42 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "TPR",
+      "shares": 22,
+      "price": 132.315,
+      "total_value": 2910.93,
+      "reasoning": "Tapestry (Coach) up 2.32% today showing strength in luxury sector with premium margins and strong brand prestige",
+      "timestamp": "2026-05-18T17:46:13Z",
+      "market_outlook": "Fearful market conditions (28) present opportunity to acquire prestige brands at reasonable valuations before the inevitable luxury goods rebound",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.25,
+        "vix": 18.39,
+        "ticker_chg_pct": 2.32,
+        "trigger_news": "Kevin Warsh to be sworn in as Federal Reserve chair on Friday"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "CPRI",
+      "shares": 20,
+      "price": 17.47,
+      "total_value": 349.4,
+      "reasoning": "Capri Holdings (Versace) up 1.19% - owning the\u771f\u6b63 luxury with exceptional brand heritage and aspirational value",
+      "timestamp": "2026-05-18T17:46:13Z",
+      "market_outlook": "Fearful market conditions (28) present opportunity to acquire prestige brands at reasonable valuations before the inevitable luxury goods rebound",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.25,
+        "vix": 18.39,
+        "ticker_chg_pct": 1.19,
+        "trigger_news": "Kevin Warsh to be sworn in as Federal Reserve chair on Friday"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

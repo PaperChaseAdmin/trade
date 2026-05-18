@@ -269,6 +269,60 @@
         "ticker_chg_pct": -2.07,
         "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
       }
+    },
+    {
+      "action": "SELL",
+      "ticker": "XLK",
+      "shares": 2,
+      "price": 173.38,
+      "total_value": 346.76,
+      "reasoning": "XLK is overweight at 8.66% vs target ~7.3% and dropped -1.63% today - trimming for balance",
+      "timestamp": "2026-05-18T17:52:13Z",
+      "market_outlook": "Fear index at 28 indicates excessive fear; tech selling (XLK -1.63%) presents rebalancing opportunity to buy underweight sectors.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.25,
+        "vix": 18.39,
+        "ticker_chg_pct": -1.63,
+        "trigger_news": "ServiceNow\u2019s stock heads for best day in a year\u00a0\u2014 flashing a green light for the software sector"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLE",
+      "shares": 2,
+      "price": 60.39,
+      "total_value": 120.78,
+      "reasoning": "XLE is severely underweight at 1.81% and outperformed +1.58% today - adding to restore balance",
+      "timestamp": "2026-05-18T17:52:13Z",
+      "market_outlook": "Fear index at 28 indicates excessive fear; tech selling (XLK -1.63%) presents rebalancing opportunity to buy underweight sectors.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.25,
+        "vix": 18.39,
+        "ticker_chg_pct": 1.58,
+        "trigger_news": "ServiceNow\u2019s stock heads for best day in a year\u00a0\u2014 flashing a green light for the software sector"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLRE",
+      "shares": 2,
+      "price": 43.6,
+      "total_value": 87.2,
+      "reasoning": "XLRE is critically underweight at 1.74% and rose +0.83% - increasing exposure for sector balance",
+      "timestamp": "2026-05-18T17:52:13Z",
+      "market_outlook": "Fear index at 28 indicates excessive fear; tech selling (XLK -1.63%) presents rebalancing opportunity to buy underweight sectors.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.25,
+        "vix": 18.39,
+        "ticker_chg_pct": 0.83,
+        "trigger_news": "ServiceNow\u2019s stock heads for best day in a year\u00a0\u2014 flashing a green light for the software sector"
+      }
     }
   ],
   "total_trades": 0,

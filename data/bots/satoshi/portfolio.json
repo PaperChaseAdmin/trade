@@ -1,28 +1,75 @@
 {
-  "cash": 10000.0,
+  "cash": 2382.48,
   "total_value": 10000.0,
-  "positions": {},
+  "positions": {
+    "MSTR": {
+      "shares": 20,
+      "avg_cost": 165.135,
+      "current_price": 165.135
+    },
+    "MARA": {
+      "shares": 80,
+      "avg_cost": 11.975,
+      "current_price": 11.975
+    },
+    "COIN": {
+      "shares": 18,
+      "avg_cost": 186.49,
+      "current_price": 186.49
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "total_trades": 0,
+  "total_trades": 3,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T17:12:16Z",
+  "last_action": "Crypto sector getting hammered (F&G at 28 Fear) but adoption news (Galaxy BitLicense, Stripe DeFi) confirms long-term thesis - buying the dip heavily",
+  "last_updated": "2026-05-18T17:52:18Z",
   "last_session": {
-    "at": "2026-05-18T17:12:16Z",
+    "at": "2026-05-18T17:52:18Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.47,
-    "vix": 18.56,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.25,
+    "vix": 18.39,
+    "top_movers": [
+      [
+        "CIFR",
+        -9.7
+      ],
+      [
+        "BTBT",
+        -7.34
+      ],
+      [
+        "MSTR",
+        -6.84
+      ],
+      [
+        "IREN",
+        -6.59
+      ],
+      [
+        "WULF",
+        -6.21
+      ],
+      [
+        "HUT",
+        -5.78
+      ]
+    ],
+    "news_read": [
+      "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit",
+      "Mike Novogratz\u2019s Galaxy receives New York BitLicense for institutional crypto push",
+      "Stripe-backed Tempo taps $7.5 billion DeFi lender Morpho to expand beyond payments",
+      "Ex-OpenAI's Leopold Aschenbrenner bets big on crypto miners for his $13.6 billion AI play",
+      "Kevin Warsh to be sworn in as Federal Reserve chair on Friday"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Noticed heavy red across all crypto plays (MSTR -6.8%, CIFR -9.7%, BTBT -7.3%) creating generational entry points; despite traditional market fear, I'm going ALL IN on quality names as Satoshi would - when crypto crashes, true believers accumulate. Watching Bitcoin's next move and F&G index for rebalancing signals.",
+    "outlook": "Crypto sector getting hammered (F&G at 28 Fear) but adoption news (Galaxy BitLicense, Stripe DeFi) confirms long-term thesis - buying the dip heavily",
+    "trades_made": 3
   },
   "portfolio_history": [
     {
@@ -51,6 +98,10 @@
     },
     {
       "timestamp": "2026-05-18T17:12:16Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T17:52:18Z",
       "value": 10000.0
     }
   ]

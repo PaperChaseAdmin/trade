@@ -1,33 +1,63 @@
 {
   "cash": 6072.91,
-  "total_value": 10003.76,
+  "total_value": 10002.95,
   "positions": {
     "TLT": {
       "shares": 47,
       "avg_cost": 83.555,
-      "current_price": 83.635
+      "current_price": 83.6179
     }
   },
-  "total_return_pct": 0.04,
+  "total_return_pct": 0.03,
   "total_return_usd": 0.0,
-  "today_pnl": 3.76,
-  "today_pnl_pct": 0.04,
+  "today_pnl": 2.95,
+  "today_pnl_pct": 0.03,
   "total_trades": 1,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T17:06:08Z",
+  "last_action": "Fear at 28 signals capitulation in risk assets while financials and energy hold up - classic late-cycle rotation that warrants patience rather than new bets",
+  "last_updated": "2026-05-18T17:36:15Z",
   "last_session": {
-    "at": "2026-05-18T17:06:08Z",
+    "at": "2026-05-18T17:36:15Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.47,
-    "vix": 18.56,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -0.25,
+    "vix": 18.39,
+    "top_movers": [
+      [
+        "TSLA",
+        -2.96
+      ],
+      [
+        "BAC",
+        2.0
+      ],
+      [
+        "NVDA",
+        -1.7
+      ],
+      [
+        "XLE",
+        1.58
+      ],
+      [
+        "XLF",
+        1.09
+      ],
+      [
+        "QQQ",
+        -0.77
+      ]
+    ],
+    "news_read": [
+      "Kevin Warsh to be sworn in as Federal Reserve chair on Friday",
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company",
+      "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit",
+      "Warren Buffett teased to CNBC a \u2018tiny purchase\u2019 in March. Berkshire filing may have revealed it"
+    ],
+    "domain_extra": "MACRO: NASDAQ -0.68%  DOW +0.14%  VIX 18.4 (NORMAL)",
+    "ai_analysis": "The Fear & Greed at 28 is notable but I'm seeing sector rotation (XLF +1.1%, XLE +1.6%) rather than broad panic - not the systemic dislocation I need for a George-sized bet. Tech (QQQ -0.77%, NVDA -1.7%, TSLA -2.96%) is getting crushed but this feels like mean reversion within a bull market, not the breakdown I prey on. Kevin Warsh as Fed chair could be meaningful for rates/TLT but I'm only slightly underwater on my existing position. Holding TLT and cash - waiting for clearer signal.",
+    "outlook": "Fear at 28 signals capitulation in risk assets while financials and energy hold up - classic late-cycle rotation that warrants patience rather than new bets",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -58,6 +88,10 @@
     {
       "timestamp": "2026-05-18T17:06:08Z",
       "value": 10003.76
+    },
+    {
+      "timestamp": "2026-05-18T17:36:15Z",
+      "value": 10002.95
     }
   ]
 }

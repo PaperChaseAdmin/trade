@@ -1,33 +1,61 @@
 {
   "cash": 7636.56,
-  "total_value": 10000.8,
+  "total_value": 10004.24,
   "positions": {
     "AAPL": {
       "shares": 8,
       "avg_cost": 295.43,
-      "current_price": 295.53
+      "current_price": 295.96
     }
   },
-  "total_return_pct": 0.01,
+  "total_return_pct": 0.04,
   "total_return_usd": 0.0,
-  "today_pnl": 0.8,
-  "today_pnl_pct": 0.01,
+  "today_pnl": 4.24,
+  "today_pnl_pct": 0.04,
   "total_trades": 1,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T17:03:02Z",
+  "last_action": "Fear index at 28 indicates oversold conditions, but no watchlist stocks have reached my threshold for a 'fair price' entry today.",
+  "last_updated": "2026-05-18T17:31:58Z",
   "last_session": {
-    "at": "2026-05-18T17:03:02Z",
+    "at": "2026-05-18T17:31:58Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.47,
-    "vix": 18.56,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -0.25,
+    "vix": 18.39,
+    "top_movers": [
+      [
+        "MCD",
+        2.06
+      ],
+      [
+        "CVX",
+        2.05
+      ],
+      [
+        "BAC",
+        2.0
+      ],
+      [
+        "V",
+        1.61
+      ],
+      [
+        "MA",
+        1.55
+      ],
+      [
+        "AAPL",
+        -1.4
+      ]
+    ],
+    "news_read": [
+      "Warren Buffett teased to CNBC a \u2018tiny purchase\u2019 in March. Berkshire filing may have revealed it",
+      "Kevin Warsh to be sworn in as Federal Reserve chair on Friday"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=28 (Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "AAPL is already near my 25% max allocation at 23.7% of portfolio, so adding more there would violate position sizing rules. While quality names like V, MA, and BAC showed strength today, they are moving higher, not presenting value pullbacks. Kevin Warsh as Fed chair could bring policy shifts - prefer to observe before deploying cash. Holding steady with significant cash reserves ($7,636.56) maintains optionality for genuine value opportunities.",
+    "outlook": "Fear index at 28 indicates oversold conditions, but no watchlist stocks have reached my threshold for a 'fair price' entry today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -58,6 +86,10 @@
     {
       "timestamp": "2026-05-18T17:03:02Z",
       "value": 10000.8
+    },
+    {
+      "timestamp": "2026-05-18T17:31:58Z",
+      "value": 10004.24
     }
   ]
 }

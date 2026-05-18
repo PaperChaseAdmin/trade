@@ -1,44 +1,80 @@
 {
-  "cash": 1133.41,
-  "total_value": 9954.43,
+  "cash": 510.57,
+  "total_value": 9986.58,
   "positions": {
     "TSLA": {
       "shares": 7,
       "avg_cost": 408.21,
-      "current_price": 410.66
+      "current_price": 409.805
     },
     "COIN": {
       "shares": 16,
       "avg_cost": 185.6124,
-      "current_price": 186.08
+      "current_price": 186.49
     },
     "NTLA": {
       "shares": 241,
-      "current_price": 12.32,
+      "current_price": 12.451,
       "avg_cost": 12.6113
+    },
+    "BEAM": {
+      "shares": 23,
+      "avg_cost": 27.08,
+      "current_price": 27.08
     }
   },
-  "total_return_pct": -0.46,
+  "total_return_pct": -0.13,
   "total_return_usd": 0.0,
-  "today_pnl": -45.57,
-  "today_pnl_pct": -0.46,
-  "total_trades": 4,
+  "today_pnl": -13.42,
+  "today_pnl_pct": -0.13,
+  "total_trades": 5,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T17:04:34Z",
+  "last_action": "Fear & Greed at 28 signals panic selling - perfect environment for innovation investors to deploy capital into high-conviction names",
+  "last_updated": "2026-05-18T17:53:52Z",
   "last_session": {
-    "at": "2026-05-18T17:04:34Z",
+    "at": "2026-05-18T17:53:52Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.47,
-    "vix": 18.56,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.25,
+    "vix": 18.39,
+    "top_movers": [
+      [
+        "NTLA",
+        -8.89
+      ],
+      [
+        "COIN",
+        -4.61
+      ],
+      [
+        "PATH",
+        3.55
+      ],
+      [
+        "AFRM",
+        -3.35
+      ],
+      [
+        "BEAM",
+        -3.04
+      ],
+      [
+        "TSLA",
+        -2.96
+      ]
+    ],
+    "news_read": [
+      "Kevin Warsh to be sworn in as Federal Reserve chair on Friday",
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company",
+      "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers",
+      "I inherited a house. My CPA says I should sell within a year to avoid capital gains. Is he right?",
+      "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Noticed NTLA's 8.89% plunge is largest mover on my watchlist - this is genomic disruption at a discount, not a thesis failure. BEAM also pulled back on broader market weakness despite no company-specific news. Holding TSLA and COIN as both are down but still within reasonable ranges - will add more on further weakness. Watching for CRSP to break out from today's green close as another genomics exposure opportunity.",
+    "outlook": "Fear & Greed at 28 signals panic selling - perfect environment for innovation investors to deploy capital into high-conviction names",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -68,6 +104,10 @@
     {
       "timestamp": "2026-05-18T17:04:34Z",
       "value": 9954.43
+    },
+    {
+      "timestamp": "2026-05-18T17:53:52Z",
+      "value": 9986.58
     }
   ]
 }

@@ -1,26 +1,26 @@
 {
   "cash": 1862.62,
-  "total_value": 10014.69,
+  "total_value": 10019.75,
   "positions": {
     "BTI": {
       "shares": 29,
       "avg_cost": 66.275,
-      "current_price": 66.18
+      "current_price": 66.27
     },
     "OHI": {
       "shares": 40,
       "avg_cost": 47.59,
-      "current_price": 48.01
+      "current_price": 48.06
     },
     "MAIN": {
       "shares": 20,
       "avg_cost": 50.63,
-      "current_price": 51.12
+      "current_price": 51.175
     },
     "ARCC": {
       "shares": 50,
       "avg_cost": 18.895,
-      "current_price": 18.865
+      "current_price": 18.79
     },
     "T": {
       "shares": 50,
@@ -30,29 +30,59 @@
     "ENB": {
       "shares": 20,
       "avg_cost": 56.3352,
-      "current_price": 56.14
+      "current_price": 56.295
     }
   },
-  "total_return_pct": 0.15,
+  "total_return_pct": 0.2,
   "total_return_usd": 0.0,
-  "today_pnl": 14.69,
-  "today_pnl_pct": 0.15,
+  "today_pnl": 19.75,
+  "today_pnl_pct": 0.2,
   "total_trades": 6,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T17:09:17Z",
+  "last_action": "Fear market (28) presents potential value, but insufficient cash to make meaningful yield-focused purchases without violating reserve requirements.",
+  "last_updated": "2026-05-18T17:46:53Z",
   "last_session": {
-    "at": "2026-05-18T17:09:17Z",
+    "at": "2026-05-18T17:46:53Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.47,
-    "vix": 18.56,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -0.25,
+    "vix": 18.39,
+    "top_movers": [
+      [
+        "T",
+        1.89
+      ],
+      [
+        "BTI",
+        1.76
+      ],
+      [
+        "ENB",
+        1.75
+      ],
+      [
+        "WPC",
+        1.52
+      ],
+      [
+        "OHI",
+        1.52
+      ],
+      [
+        "MAIN",
+        1.44
+      ]
+    ],
+    "news_read": [
+      "Kevin Warsh to be sworn in as Federal Reserve chair on Friday",
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company",
+      "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit",
+      "Warren Buffett teased to CNBC a \u2018tiny purchase\u2019 in March. Berkshire filing may have revealed it"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=28 (Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "Scrooge sees his dividend payers (T +1.9%, BTI +1.8%, ENB +1.8%) moving up today - music to his ears! However, with only $1,862.62 cash and needing $200 minimum reserve, maximum buy power is ~$1,662. Most quality dividend stocks on watchlist (MO $73.40, PM $191.18, VZ $46.81) would consume too much capital. Best candidate was O around $61.57 but even that leaves minimal room. Holding all positions - none have cut dividends, so no sell triggers. Will continue hoarding cash for next opportunity when market fear subsides.",
+    "outlook": "Fear market (28) presents potential value, but insufficient cash to make meaningful yield-focused purchases without violating reserve requirements.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -83,6 +113,10 @@
     {
       "timestamp": "2026-05-18T17:09:17Z",
       "value": 10014.69
+    },
+    {
+      "timestamp": "2026-05-18T17:46:53Z",
+      "value": 10019.75
     }
   ]
 }
