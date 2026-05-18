@@ -1,5 +1,24 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "AAPL",
+      "shares": 8,
+      "price": 295.43,
+      "total_value": 2363.44,
+      "reasoning": "AAPL down 1.6% in fearful market (F&G 28), creating value opportunity for quality business with strong moat and consistent earnings at discounted price",
+      "timestamp": "2026-05-18T15:34:45Z",
+      "market_outlook": "Fear-driven market (F&G 28) presenting selective value opportunities in quality names, though rising Treasury yields and potential Fed rate hikes warrant caution",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": -1.59,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

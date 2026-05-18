@@ -1,5 +1,24 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "TLT",
+      "shares": 47,
+      "price": 83.555,
+      "total_value": 3927.09,
+      "reasoning": "10-year yield at yearly high signals bond vigilantes winning; with Fed forced to raise rates and tech reflexivity turning negative, TLT offers asymmetric upside as safe haven with 50% position capacity",
+      "timestamp": "2026-05-18T15:35:47Z",
+      "market_outlook": "Fear at 28, tech in collapse mode (TSLA -3.3%, NVDA -1.5%), and bond yields breaking higher create the systemic risk environment where TLT thrives as the flight-to-safety asset.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": -0.13,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

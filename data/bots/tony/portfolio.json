@@ -1,28 +1,75 @@
 {
-  "cash": 10000.0,
-  "total_value": 10000.0,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 1180.67,
+  "total_value": 9999.99,
+  "positions": {
+    "TQQQ": {
+      "shares": 47,
+      "avg_cost": 73.2265,
+      "current_price": 73.2265
+    },
+    "SOXL": {
+      "shares": 23,
+      "avg_cost": 150.88,
+      "current_price": 150.88
+    },
+    "RKLB": {
+      "shares": 15,
+      "avg_cost": 127.1625,
+      "current_price": 127.1625
+    }
+  },
+  "total_return_pct": -0.0,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
-  "total_trades": 0,
+  "today_pnl": -0.01,
+  "today_pnl_pct": -0.0,
+  "total_trades": 3,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T14:32:03Z",
+  "last_action": "Market fear (28) combined with tech bloodbath creates the perfect storm for leveraged entry points - when everyone else panics, Tony Stark buys suits.",
+  "last_updated": "2026-05-18T15:42:23Z",
   "last_session": {
-    "at": "2026-05-18T14:32:03Z",
+    "at": "2026-05-18T15:42:23Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.25,
-    "vix": 18.58,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.35,
+    "vix": 18.64,
+    "top_movers": [
+      [
+        "SOXL",
+        -7.92
+      ],
+      [
+        "IONQ",
+        -6.99
+      ],
+      [
+        "MRVL",
+        -4.29
+      ],
+      [
+        "SMCI",
+        -3.67
+      ],
+      [
+        "TSLA",
+        -3.28
+      ],
+      [
+        "TQQQ",
+        -2.83
+      ]
+    ],
+    "news_read": [
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company",
+      "Trump drops $10 billion lawsuit against IRS",
+      "The Fed will have to raise interest rates in July to appease 'bond vigilantes,' Yardeni says",
+      "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers",
+      "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "I noticed SOXL and TQQQ getting hammered alongside semiconductor names (MRVL -4.3%, SMCI -3.7%) which signals panic selling rather than fundamentals - these are exactly the moments that separate winners from the diversified herd. The 10-year yield spike and Fed rate concerns are creating short-term pain but AI infrastructure demand is undeniable, making this a strategic accumulation zone. Watching for continued weakness in SOXL to add more and tracking AXON for defense tech exposure next session.",
+    "outlook": "Market fear (28) combined with tech bloodbath creates the perfect storm for leveraged entry points - when everyone else panics, Tony Stark buys suits.",
+    "trades_made": 3
   },
   "portfolio_history": [
     {
@@ -40,6 +87,10 @@
     {
       "timestamp": "2026-05-18T14:32:03Z",
       "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T15:42:23Z",
+      "value": 9999.99
     }
   ]
 }

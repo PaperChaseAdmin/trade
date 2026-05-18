@@ -1,5 +1,60 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "TSLA",
+      "shares": 7,
+      "price": 408.21,
+      "total_value": 2857.47,
+      "reasoning": "TSLA down 3.28% to $408.21 - buying the dip on my highest conviction play, still undervalued vs my $2,000 price target for the autonomous future thesis",
+      "timestamp": "2026-05-18T15:35:15Z",
+      "market_outlook": "Fear index at 28 means quality disruptive stocks are on sale - exactly when I load up for the long term",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": -3.28,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "COIN",
+      "shares": 16,
+      "price": 185.6124,
+      "total_value": 2969.8,
+      "reasoning": "COIN down 4.8% to $185.61 - crypto infrastructure disruption on sale, this is the gateway to Bitcoin reaching $500k",
+      "timestamp": "2026-05-18T15:35:15Z",
+      "market_outlook": "Fear index at 28 means quality disruptive stocks are on sale - exactly when I load up for the long term",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": -4.8,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "NTLA",
+      "shares": 237,
+      "price": 12.615,
+      "total_value": 2989.76,
+      "reasoning": "NTLA down 7.5% to $12.62 - gene editing at a massive discount, CRISPR technology will transform medicine over the next decade",
+      "timestamp": "2026-05-18T15:35:15Z",
+      "market_outlook": "Fear index at 28 means quality disruptive stocks are on sale - exactly when I load up for the long term",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": -7.5,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

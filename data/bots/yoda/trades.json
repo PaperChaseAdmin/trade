@@ -1,5 +1,24 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "SPY",
+      "shares": 4,
+      "price": 735.73,
+      "total_value": 2942.92,
+      "reasoning": "SPY down 0.47% today with Fear & Greed at 28, presenting a buying opportunity per Yoda's principle.",
+      "timestamp": "2026-05-18T15:42:48Z",
+      "market_outlook": "Market fear suggests further upside as indices rebound from oversold levels.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": -0.47,
+        "trigger_news": "Live markets: Bitcoin gives up all of May's gains, slipping below $77,000"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

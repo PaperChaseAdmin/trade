@@ -1,5 +1,60 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "TQQQ",
+      "shares": 47,
+      "price": 73.2265,
+      "total_value": 3441.65,
+      "reasoning": "Triple-leveraged tech ETF down 2.83% in a fearful market (Fear & Greed 28) - Jarvis algorithm says buy the dip on bleeding-edge tech exposure",
+      "timestamp": "2026-05-18T15:42:23Z",
+      "market_outlook": "Market fear (28) combined with tech bloodbath creates the perfect storm for leveraged entry points - when everyone else panics, Tony Stark buys suits.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": -2.83,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "SOXL",
+      "shares": 23,
+      "price": 150.88,
+      "total_value": 3470.24,
+      "reasoning": "Triple semiconductor ETF crushed 7.92% today - semiconductor plays are the backbone of AI infrastructure and this is a generational buying opportunity",
+      "timestamp": "2026-05-18T15:42:23Z",
+      "market_outlook": "Market fear (28) combined with tech bloodbath creates the perfect storm for leveraged entry points - when everyone else panics, Tony Stark buys suits.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": -7.92,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "RKLB",
+      "shares": 15,
+      "price": 127.1625,
+      "total_value": 1907.44,
+      "reasoning": "Rocket lab up 2.04% on pure space tech momentum - next-gen orbital delivery is exactly the kind of cutting-edge play that moves portfolios",
+      "timestamp": "2026-05-18T15:42:23Z",
+      "market_outlook": "Market fear (28) combined with tech bloodbath creates the perfect storm for leveraged entry points - when everyone else panics, Tony Stark buys suits.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.35,
+        "vix": 18.64,
+        "ticker_chg_pct": 2.04,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

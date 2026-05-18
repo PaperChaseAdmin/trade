@@ -1,28 +1,75 @@
 {
-  "cash": 10000.0,
-  "total_value": 10000.0,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 1182.97,
+  "total_value": 9999.99,
+  "positions": {
+    "TSLA": {
+      "shares": 7,
+      "avg_cost": 408.21,
+      "current_price": 408.21
+    },
+    "COIN": {
+      "shares": 16,
+      "avg_cost": 185.6124,
+      "current_price": 185.6124
+    },
+    "NTLA": {
+      "shares": 237,
+      "avg_cost": 12.615,
+      "current_price": 12.615
+    }
+  },
+  "total_return_pct": -0.0,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
-  "total_trades": 0,
+  "today_pnl": -0.01,
+  "today_pnl_pct": -0.0,
+  "total_trades": 3,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T14:31:30Z",
+  "last_action": "Fear index at 28 means quality disruptive stocks are on sale - exactly when I load up for the long term",
+  "last_updated": "2026-05-18T15:35:15Z",
   "last_session": {
-    "at": "2026-05-18T14:31:30Z",
+    "at": "2026-05-18T15:35:15Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.25,
-    "vix": 18.58,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.35,
+    "vix": 18.64,
+    "top_movers": [
+      [
+        "NTLA",
+        -7.5
+      ],
+      [
+        "COIN",
+        -4.8
+      ],
+      [
+        "TSLA",
+        -3.28
+      ],
+      [
+        "BEAM",
+        -2.99
+      ],
+      [
+        "AFRM",
+        -2.83
+      ],
+      [
+        "RXRX",
+        -2.22
+      ]
+    ],
+    "news_read": [
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company",
+      "Trump drops $10 billion lawsuit against IRS",
+      "The Fed will have to raise interest rates in July to appease 'bond vigilantes,' Yardeni says",
+      "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers",
+      "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Noticed NTLA and COIN leading the declines which creates exceptional entry points for my genomics and fintech theses. TSLA weakness is opportunistic given my $2,000 target. Holding back on PLTR despite strength - waiting for my entry point. Keeping $170 cash reserve as dry powder for future opportunities.",
+    "outlook": "Fear index at 28 means quality disruptive stocks are on sale - exactly when I load up for the long term",
+    "trades_made": 3
   },
   "portfolio_history": [
     {
@@ -40,6 +87,10 @@
     {
       "timestamp": "2026-05-18T14:31:30Z",
       "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T15:35:15Z",
+      "value": 9999.99
     }
   ]
 }

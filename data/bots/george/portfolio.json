@@ -1,28 +1,64 @@
 {
-  "cash": 10000.0,
+  "cash": 6072.91,
   "total_value": 10000.0,
-  "positions": {},
+  "positions": {
+    "TLT": {
+      "shares": 47,
+      "avg_cost": 83.555,
+      "current_price": 83.555
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "total_trades": 0,
+  "total_trades": 1,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T14:31:30Z",
+  "last_action": "Fear at 28, tech in collapse mode (TSLA -3.3%, NVDA -1.5%), and bond yields breaking higher create the systemic risk environment where TLT thrives as the flight-to-safety asset.",
+  "last_updated": "2026-05-18T15:35:47Z",
   "last_session": {
-    "at": "2026-05-18T14:31:30Z",
+    "at": "2026-05-18T15:35:47Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.25,
-    "vix": 18.58,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "sp500_change": -0.35,
+    "vix": 18.64,
+    "top_movers": [
+      [
+        "TSLA",
+        -3.28
+      ],
+      [
+        "NVDA",
+        -1.52
+      ],
+      [
+        "BAC",
+        1.41
+      ],
+      [
+        "XLE",
+        1.38
+      ],
+      [
+        "META",
+        -0.91
+      ],
+      [
+        "QQQ",
+        -0.87
+      ]
+    ],
+    "news_read": [
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company",
+      "Trump drops $10 billion lawsuit against IRS",
+      "The Fed will have to raise interest rates in July to appease 'bond vigilantes,' Yardeni says",
+      "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+    ],
+    "domain_extra": "MACRO: NASDAQ -0.67%  DOW -0.13%  VIX 18.6 (NORMAL)",
+    "ai_analysis": "Key observation: even gold (GLD -0.12%) is under pressure while bonds are getting crushed - this indicates forced selling rather than true risk-off into hard assets. The 10-year yield touching yearly highs combined with Fed's July rate hike consensus creates a classic bond market dislocation. I'm not buying the dip in tech because the reflexivity now works against them - earnings expectations will get revised down. Next I'm watching whether TLT can hold this level or if yields spike further, which would signal even bigger systemic stress coming.",
+    "outlook": "Fear at 28, tech in collapse mode (TSLA -3.3%, NVDA -1.5%), and bond yields breaking higher create the systemic risk environment where TLT thrives as the flight-to-safety asset.",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -39,6 +75,10 @@
     },
     {
       "timestamp": "2026-05-18T14:31:30Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T15:35:47Z",
       "value": 10000.0
     }
   ]
