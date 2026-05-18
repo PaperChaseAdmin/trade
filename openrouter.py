@@ -81,7 +81,7 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                     "max_tokens": 1200,
                     "response_format": {"type": "text"},
                 },
-                timeout=25,  # faster fail → faster fallback
+                timeout=45,  # more patience → less fallback churn
             )
             data = resp.json()
             if "error" in data:
@@ -89,7 +89,7 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                 code = err.get("code", 0)
                 msg = err.get("message", str(err))
                 if code == 429:
-                    wait = 20
+                    wait = 45  # longer backoff
                     print(f"    Rate limited, waiting {wait}s...")
                     time.sleep(wait)
                     # Single retry after rate limit
@@ -110,21 +110,20 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                             "max_tokens": 1200,
                             "response_format": {"type": "text"},
                         },
-                        timeout=25,
+                        timeout=45,
                     )
                     data = resp.json()
                     if "error" in data:
                         err = data["error"]
                         msg = err.get("message", str(err))
-                        print(f"    Error on {attempt_model}, trying next model...")
+                        print(f"    Error on {attempt_model} after retry, trying next model...")
                         last_error = ValueError(f"OpenRouter API error: {msg}")
-                        break  # try next model
+                        continue  # try next model
                 else:
-                    if "provider" in msg.lower():
-                        print(f"    Provider error on {attempt_model}, trying next model...")
-                        last_error = ValueError(f"OpenRouter provider error: {msg}")
-                        break  # try next model
-                    raise ValueError(f"OpenRouter API error: {msg}")
+                    # All errors (provider, etc.) → try next model instead of raising
+                    print(f"    Error on {attempt_model}: {msg[:100]}, trying next model...")
+                    last_error = ValueError(f"OpenRouter error: {msg[:200]}")
+                    continue  # try next model
 
             content = data["choices"][0]["message"].get("content")
             if content is None:
@@ -136,11 +135,11 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                     else:
                         print(f"    No JSON in reasoning on {attempt_model}, trying next model...")
                         last_error = ValueError(f"OpenRouter returned no content. Reasoning: {reasoning[:200]}")
-                        break
+                        continue  # try next model
                 else:
                     print(f"    No content from {attempt_model}, trying next model...")
                     last_error = ValueError(f"OpenRouter returned no content.")
-                    break
+                    continue  # try next model
             
             result = json.loads(content)
             if not isinstance(result, dict):
@@ -160,13 +159,10 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
             last_error = e
             continue
         except Exception as e:
-            if "Provider" in str(e) or "provider" in str(e):
-                last_error = e
-                print(f"    Provider error on {attempt_model}, trying next model...")
-                break  # try next model
+            # All errors → try next model (never re-raise, exhaust the chain)
+            print(f"    Exception on {attempt_model}: {e}, trying next model...")
             last_error = e
-            print(f"    Error on {attempt_model}: {e}")
-            break
+            continue  # try next model
 
     # All models exhausted
     if last_error:

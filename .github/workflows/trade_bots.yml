@@ -3,6 +3,8 @@ name: Run Trading Bots
 on:
   schedule:
     # Every 30 min, Mon–Fri, 13:00–21:00 UTC (covers EDT 9:00am–5:00pm & EST 8:00am–4:00pm)
+    # NOTE: GitHub disables scheduled workflows after 60 days of repo inactivity.
+    # Any push to this file reactivates the schedule.
     - cron: '0,30 13-21 * * 1-5'
   workflow_dispatch:  # manual trigger & cron-job.org
 
@@ -35,11 +37,14 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python bot_runner.py
 
-      - name: Commit updated data
+      - name: Regenerate bot detail pages
+        run: python generate_pages.py
+
+      - name: Commit updated data + pages
         run: |
           git config user.name  "trading-bots[bot]"
           git config user.email "trading-bots[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ elon/ warren/ donald/ nancy/ cathie/ ray/ george/ michael/ jamie/ kevin/ tony/ gordon/ jordan/ patrick/ scrooge/ yoda/ jerome/ thanos/ satoshi/ xi/
           git diff --staged --quiet || git commit -m "trade: $(date -u '+%Y-%m-%d %H:%M UTC')"
           git pull --rebase origin main
           git push
