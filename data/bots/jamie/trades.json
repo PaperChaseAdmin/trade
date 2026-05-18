@@ -1,5 +1,42 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "BAC",
+      "shares": 49,
+      "price": 50.545,
+      "total_value": 2476.7,
+      "reasoning": "BAC up 1.62% today and is the largest bank by assets - rising Treasury yields (highest in a year) create favorable environment for net interest margin growth",
+      "timestamp": "2026-05-18T14:03:03Z",
+      "market_outlook": "Bullish on banks as 10-year Treasury yield at yearly high signals favorable rate environment for financial institutions.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": 1.62,
+        "trigger_news": "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "JPM",
+      "shares": 8,
+      "price": 300.69,
+      "total_value": 2405.52,
+      "reasoning": "JPM up 1% and is America's premier bank with strong balance sheet - fundamentals remain solid despite market fear (Fear & Greed at 28)",
+      "timestamp": "2026-05-18T14:03:03Z",
+      "market_outlook": "Bullish on banks as 10-year Treasury yield at yearly high signals favorable rate environment for financial institutions.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": 0.98,
+        "trigger_news": "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

@@ -1,28 +1,74 @@
 {
-  "cash": 10000.0,
+  "cash": 1014.49,
   "total_value": 10000.0,
-  "positions": {},
+  "positions": {
+    "LI": {
+      "shares": 180,
+      "avg_cost": 16.655,
+      "current_price": 16.655
+    },
+    "NIO": {
+      "shares": 505,
+      "avg_cost": 5.93,
+      "current_price": 5.93
+    },
+    "XPEV": {
+      "shares": 199,
+      "avg_cost": 15.04,
+      "current_price": 15.04
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "total_trades": 0,
+  "total_trades": 3,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T13:33:13Z",
+  "last_action": "Despite current fear, Chinese ADRs are positioned for a rebound on anticipated stimulus and sustained long-term demand.",
+  "last_updated": "2026-05-18T14:03:07Z",
   "last_session": {
-    "at": "2026-05-18T13:33:13Z",
+    "at": "2026-05-18T14:03:07Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -1.24,
-    "vix": 18.48,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.08,
+    "vix": 18.69,
+    "top_movers": [
+      [
+        "LI",
+        -10.02
+      ],
+      [
+        "TME",
+        6.73
+      ],
+      [
+        "XPEV",
+        -3.75
+      ],
+      [
+        "IQ",
+        -3.45
+      ],
+      [
+        "NIO",
+        -2.79
+      ],
+      [
+        "BABA",
+        1.61
+      ]
+    ],
+    "news_read": [
+      "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers",
+      "Trump drops $10 billion lawsuit against IRS",
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company",
+      "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Today's watchlist showed LI down 10%, NIO down 2.8%, and XPEV down 3.8%, while the Fear & Greed index sits at 28 indicating extreme fear. These declines align with Xi's approach of treating regulatory or market dips as temporary and using them to accumulate core Chinese champions. Going forward, I will monitor Chinese PMI, retail sales data, and any stimulus or tech support announcements for further buying signals.",
+    "outlook": "Despite current fear, Chinese ADRs are positioned for a rebound on anticipated stimulus and sustained long-term demand.",
+    "trades_made": 3
   },
   "portfolio_history": [
     {
@@ -31,6 +77,10 @@
     },
     {
       "timestamp": "2026-05-18T13:33:13Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T14:03:07Z",
       "value": 10000.0
     }
   ]

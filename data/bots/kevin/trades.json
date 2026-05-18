@@ -1,5 +1,42 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "O",
+      "shares": 32,
+      "price": 61.6626,
+      "total_value": 1973.2,
+      "reasoning": "O pays a 5.2% yield, is a rock-solid REIT with 25+ years of consecutive dividend increases, and pulled back today offering value in a fearful market (Fear&Greed=28)",
+      "timestamp": "2026-05-18T14:02:17Z",
+      "market_outlook": "Fear-driven market (28) presents buying opportunities for quality dividend payers - these are exactly the times Mr. Wonderful loads up on cash-flowing assets",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": 0.88,
+        "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "VZ",
+      "shares": 43,
+      "price": 46.05,
+      "total_value": 1980.15,
+      "reasoning": "VZ offers a 6.7% dividend yield with a reasonable 50% payout ratio, telecom infrastructure is essential, and the -0.65% dip today makes it attractive for a passive income machine",
+      "timestamp": "2026-05-18T14:02:17Z",
+      "market_outlook": "Fear-driven market (28) presents buying opportunities for quality dividend payers - these are exactly the times Mr. Wonderful loads up on cash-flowing assets",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": -0.65,
+        "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

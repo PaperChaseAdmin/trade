@@ -35,6 +35,42 @@
         "ticker_chg_pct": 0.55,
         "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
       }
+    },
+    {
+      "action": "BUY",
+      "ticker": "MAIN",
+      "shares": 20,
+      "price": 50.63,
+      "total_value": 1012.6,
+      "reasoning": "Main Street Capital yields ~6.1% and has paid dividends for 25 years straight - steady cash flow in fear market",
+      "timestamp": "2026-05-18T14:04:01Z",
+      "market_outlook": "Fear index at 28 with oversold conditions presents opportunity to deploy cash into high-quality dividend payers at attractive valuations",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": 0.36,
+        "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "ARCC",
+      "shares": 50,
+      "price": 18.895,
+      "total_value": 944.75,
+      "reasoning": "Ares Capital yields ~8.1% as a BDC, excellent credit metrics, buying more on market fear",
+      "timestamp": "2026-05-18T14:04:01Z",
+      "market_outlook": "Fear index at 28 with oversold conditions presents opportunity to deploy cash into high-quality dividend payers at attractive valuations",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": -0.03,
+        "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+      }
     }
   ],
   "total_trades": 0,

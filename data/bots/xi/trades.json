@@ -1,5 +1,60 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "LI",
+      "shares": 180,
+      "price": 16.655,
+      "total_value": 2997.9,
+      "reasoning": "LI fell 10% today, offering a dip to accumulate per belief in temporary regulatory setbacks.",
+      "timestamp": "2026-05-18T14:03:07Z",
+      "market_outlook": "Despite current fear, Chinese ADRs are positioned for a rebound on anticipated stimulus and sustained long-term demand.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": -10.02,
+        "trigger_news": "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "NIO",
+      "shares": 505,
+      "price": 5.93,
+      "total_value": 2994.65,
+      "reasoning": "NIO declined 2.8% amid market fear, presenting a buying opportunity for long-term China EV growth.",
+      "timestamp": "2026-05-18T14:03:07Z",
+      "market_outlook": "Despite current fear, Chinese ADRs are positioned for a rebound on anticipated stimulus and sustained long-term demand.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": -2.79,
+        "trigger_news": "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XPEV",
+      "shares": 199,
+      "price": 15.04,
+      "total_value": 2992.96,
+      "reasoning": "XPEV dropped 3.8% today, aligning with the strategy to use tech sector dips to build positions.",
+      "timestamp": "2026-05-18T14:03:07Z",
+      "market_outlook": "Despite current fear, Chinese ADRs are positioned for a rebound on anticipated stimulus and sustained long-term demand.",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.08,
+        "vix": 18.69,
+        "ticker_chg_pct": -3.75,
+        "trigger_news": "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,
