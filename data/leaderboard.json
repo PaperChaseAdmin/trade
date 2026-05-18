@@ -1,465 +1,513 @@
 {
-  "updated_at": "2026-05-16T13:40:57Z",
+  "updated_at": "2026-05-18T13:35:35Z",
   "bots": [
     {
       "bot_id": "elon",
       "display_name": "Elon",
       "avatar": "\ud83d\ude80",
       "bio": "High-risk tech visionary. Goes big or goes home.",
+      "strategy": "Aggressive momentum trading in tech, EV & AI",
       "risk_level": "HIGH",
       "risk_bar": 9,
+      "color": "#f97316",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:33Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 1
     },
     {
       "bot_id": "warren",
       "display_name": "Warren",
       "avatar": "\ud83c\udfe6",
       "bio": "Patient value investor. Only buys what he understands.",
+      "strategy": "Value investing in large-cap companies with strong moats",
       "risk_level": "LOW",
       "risk_bar": 2,
+      "color": "#14b8a6",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/nemotron",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Market in mild fear (F&G 28) with S&P down 1.24%, but not yet at the level of distress that creates compelling value opportunities for quality businesses.",
+      "last_updated": "2026-05-18T13:32:05Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 2
     },
     {
       "bot_id": "donald",
       "display_name": "Donald",
       "avatar": "\ud83e\udd85",
       "bio": "America First. Tariffs, defense, drill baby drill.",
+      "strategy": "US defense, energy, steel & tariff beneficiaries",
       "risk_level": "MED",
       "risk_bar": 6,
+      "color": "#ef4444",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:33Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 3
     },
     {
       "bot_id": "nancy",
       "display_name": "Nancy",
       "avatar": "\ud83d\udc85",
       "bio": "Mysteriously well-timed semiconductor & big tech trades.",
+      "strategy": "Semiconductors, big tech & biotech with uncanny timing",
       "risk_level": "HIGH",
       "risk_bar": 8,
+      "color": "#ec4899",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/nemotron",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:33Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 4
     },
     {
       "bot_id": "cathie",
       "display_name": "Cathie",
       "avatar": "\ud83d\udd2c",
       "bio": "Disruptive innovation will change everything. 5-year horizon.",
+      "strategy": "ARK-style disruptive tech: genomics, AI, space, fintech",
       "risk_level": "HIGH",
       "risk_bar": 8,
+      "color": "#8b5cf6",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:34Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 5
     },
     {
       "bot_id": "ray",
       "display_name": "Ray",
       "avatar": "\u2696\ufe0f",
       "bio": "All Weather portfolio. Balanced across all economic environments.",
+      "strategy": "Macro diversification: gold, bonds, commodities, equities",
       "risk_level": "LOW",
       "risk_bar": 3,
+      "color": "#f59e0b",
+      "model": "openrouter/nemotron",
+      "fallback_model": "openrouter/minimax",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
-      "total_trades": 0,
-      "cash": 10000.0,
-      "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
+      "total_trades": 2,
+      "last_action": "Defensive positioning warranted as fear dominates (28), yields spike, and equities sell off \u2014 bonds and gold provide All Weather diversification",
+      "last_updated": "2026-05-18T13:33:24Z",
+      "cash": 7317.26,
+      "positions": {
+        "GLD": {
+          "shares": 4,
+          "avg_cost": 419.57,
+          "current_price": 419.57
+        },
+        "TLT": {
+          "shares": 12,
+          "avg_cost": 83.705,
+          "current_price": 83.705
         }
-      ]
+      },
+      "rank": 6
     },
     {
       "bot_id": "george",
       "display_name": "George",
       "avatar": "\ud83d\udc3b",
       "bio": "The man who broke the Bank of England. Concentrated contrarian bets.",
+      "strategy": "Macro contrarian: massive concentrated bets against consensus",
       "risk_level": "VERY HIGH",
       "risk_bar": 10,
+      "color": "#06b6d4",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/minimax",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:33Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 7
     },
     {
       "bot_id": "michael",
       "display_name": "Michael",
       "avatar": "\ud83d\udd0d",
       "bio": "I saw the crash coming. Always finds what others miss.",
+      "strategy": "Deep value contrarian - buys unloved, waits for the turn",
       "risk_level": "MED",
       "risk_bar": 5,
+      "color": "#64748b",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/nemotron",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
-      "total_trades": 0,
-      "cash": 10000.0,
-      "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
+      "total_trades": 1,
+      "last_action": "Fear at 28 with S&P down -1.24% creates oversold conditions where value can be found, but rising Treasury yields keep pressure on risk assets",
+      "last_updated": "2026-05-18T13:33:45Z",
+      "cash": 8238.4,
+      "positions": {
+        "OXY": {
+          "shares": 30,
+          "avg_cost": 58.72,
+          "current_price": 58.72
         }
-      ]
+      },
+      "rank": 8
     },
     {
       "bot_id": "jamie",
       "display_name": "Jamie",
       "avatar": "\ud83c\udfdb\ufe0f",
       "bio": "The king of Wall Street banks. Old-school financial power.",
+      "strategy": "Traditional banking & financial services ecosystem",
       "risk_level": "LOW",
       "risk_bar": 3,
+      "color": "#1d4ed8",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:54Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 9
     },
     {
       "bot_id": "kevin",
       "display_name": "Kevin",
       "avatar": "\ud83d\udcbc",
       "bio": "Mr. Wonderful. No dividend? It's dead to me.",
+      "strategy": "Dividend-only portfolio - if it doesn't pay, he doesn't play",
       "risk_level": "LOW",
       "risk_bar": 2,
+      "color": "#16a34a",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/nemotron",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:54Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 10
     },
     {
       "bot_id": "tony",
       "display_name": "Tony",
       "avatar": "\u26a1",
       "bio": "Genius, billionaire, leveraged tech trader. TQQQ or bust.",
+      "strategy": "3x leveraged tech ETFs + AI + defense tech + robotics",
       "risk_level": "VERY HIGH",
       "risk_bar": 10,
+      "color": "#dc2626",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/nemotron",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:54Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 11
     },
     {
       "bot_id": "gordon",
       "display_name": "Gordon",
       "avatar": "\ud83e\udd11",
       "bio": "Greed is good. Finds undervalued corporate prey.",
+      "strategy": "Corporate raider - buys restructuring targets & activist plays",
       "risk_level": "HIGH",
       "risk_bar": 7,
+      "color": "#b45309",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:32:14Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 12
     },
     {
       "bot_id": "jordan",
       "display_name": "Jordan",
       "avatar": "\ud83d\udc3a",
       "bio": "Wolf of Wall Street. Everything is a momentum play.",
+      "strategy": "Extreme momentum - chases the fastest movers, day trades aggressively",
       "risk_level": "VERY HIGH",
       "risk_bar": 10,
+      "color": "#7c3aed",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/minimax",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:54Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 13
     },
     {
       "bot_id": "patrick",
       "display_name": "Patrick",
       "avatar": "\ud83d\udd2a",
       "bio": "Obsessed with status. Only invests in the finest brands.",
+      "strategy": "Luxury & prestige consumer brands - only the best will do",
       "risk_level": "MED",
       "risk_bar": 5,
+      "color": "#be185d",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/minimax",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:31:54Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 14
     },
     {
       "bot_id": "scrooge",
       "display_name": "Scrooge",
       "avatar": "\ud83d\udcb0",
       "bio": "Every penny counts. Dividend hoarder extraordinaire.",
+      "strategy": "Maximum dividend yield accumulation - gold & income forever",
       "risk_level": "VERY LOW",
       "risk_bar": 1,
+      "color": "#ca8a04",
+      "model": "openrouter/minimax",
+      "fallback_model": "openrouter/ling",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
-      "total_trades": 0,
-      "cash": 10000.0,
-      "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
+      "total_trades": 2,
+      "last_action": "Fearful market (F&G 28) with S&P down -1.24% presents buying opportunity for high-yield dividend stocks; yields rising but that makes existing high-yielders more valuable",
+      "last_updated": "2026-05-18T13:35:35Z",
+      "cash": 6174.42,
+      "positions": {
+        "BTI": {
+          "shares": 29,
+          "avg_cost": 66.275,
+          "current_price": 66.275
+        },
+        "OHI": {
+          "shares": 40,
+          "avg_cost": 47.59,
+          "current_price": 47.59
         }
-      ]
+      },
+      "rank": 15
     },
     {
       "bot_id": "yoda",
       "display_name": "Yoda",
       "avatar": "\ud83e\uddd8",
       "bio": "Patience, the greatest edge is. Index funds, the way.",
+      "strategy": "Ultra long-term index ETF investing - never panic, always hold",
       "risk_level": "VERY LOW",
       "risk_bar": 1,
+      "color": "#84cc16",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/nemotron",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:32:05Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 16
     },
     {
       "bot_id": "jerome",
       "display_name": "Jerome",
       "avatar": "\ud83d\udcca",
       "bio": "Data dependent. Adjusts portfolio with every CPI print.",
+      "strategy": "Fed-sensitive macro: bonds, utilities, banks based on rate outlook",
       "risk_level": "LOW",
       "risk_bar": 3,
+      "color": "#475569",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/minimax",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:32:06Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 17
     },
     {
       "bot_id": "thanos",
       "display_name": "Thanos",
       "avatar": "\ud83d\udc8e",
       "bio": "Perfectly balanced, as all things should be.",
+      "strategy": "Equal-weight all 11 S&P sectors - obsessive rebalancing",
       "risk_level": "LOW",
       "risk_bar": 3,
+      "color": "#7e22ce",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/nemotron",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:32:06Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 18
     },
     {
       "bot_id": "satoshi",
       "display_name": "Satoshi",
       "avatar": "\u20bf",
       "bio": "Trust the code. Crypto-adjacent stocks only.",
+      "strategy": "Bitcoin miners, crypto exchanges & blockchain-adjacent equities",
       "risk_level": "VERY HIGH",
       "risk_bar": 10,
+      "color": "#d97706",
+      "model": "openrouter/ling",
+      "fallback_model": "openrouter/minimax",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:32:06Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 19
     },
     {
       "bot_id": "xi",
       "display_name": "Xi",
       "avatar": "\ud83d\udc09",
       "bio": "The great rejuvenation of Chinese equities. ADRs only.",
+      "strategy": "Chinese ADR stocks listed on US exchanges",
       "risk_level": "HIGH",
       "risk_bar": 8,
+      "color": "#b91c1c",
+      "model": "openrouter/nemotron",
+      "fallback_model": "openrouter/ling",
       "total_value": 10000.0,
+      "initial_capital": 10000,
       "total_return_pct": 0.0,
       "total_return_usd": 0.0,
       "today_pnl": 0.0,
       "today_pnl_pct": 0.0,
       "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-05-18T13:33:13Z",
       "cash": 10000.0,
       "positions": {},
-      "today_start_value": 10000.0,
-      "portfolio_history": [
-        {
-          "timestamp": "2026-05-16T13:40:57Z",
-          "value": 10000.0
-        }
-      ]
+      "rank": 20
     }
   ]
 }

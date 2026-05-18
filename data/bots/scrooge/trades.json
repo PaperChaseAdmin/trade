@@ -1,5 +1,42 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "BTI",
+      "shares": 29,
+      "price": 66.275,
+      "total_value": 1921.98,
+      "reasoning": "British American Tobacco yields ~8.5%, one of the highest yields on my watchlist; market fear creating opportunity as it rallied +1.9% today on oversold conditions",
+      "timestamp": "2026-05-18T13:35:35Z",
+      "market_outlook": "Fearful market (F&G 28) with S&P down -1.24% presents buying opportunity for high-yield dividend stocks; yields rising but that makes existing high-yielders more valuable",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -1.24,
+        "vix": 18.48,
+        "ticker_chg_pct": 1.86,
+        "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "OHI",
+      "shares": 40,
+      "price": 47.59,
+      "total_value": 1903.6,
+      "reasoning": "Omega Healthcare yields ~8% as healthcare REIT; stable income property plays, down only 0.55% providing entry point in fearful market (Fear&Greed=28)",
+      "timestamp": "2026-05-18T13:35:35Z",
+      "market_outlook": "Fearful market (F&G 28) with S&P down -1.24% presents buying opportunity for high-yield dividend stocks; yields rising but that makes existing high-yielders more valuable",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -1.24,
+        "vix": 18.48,
+        "ticker_chg_pct": 0.55,
+        "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

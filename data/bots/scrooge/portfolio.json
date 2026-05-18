@@ -1,32 +1,76 @@
 {
-  "cash": 10000.0,
+  "cash": 6174.42,
   "total_value": 10000.0,
-  "positions": {},
+  "positions": {
+    "BTI": {
+      "shares": 29,
+      "avg_cost": 66.275,
+      "current_price": 66.275
+    },
+    "OHI": {
+      "shares": 40,
+      "avg_cost": 47.59,
+      "current_price": 47.59
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "total_trades": 0,
+  "total_trades": 2,
   "today_start_value": 10000.0,
-  "today_date": "2026-05-16",
-  "last_action": "Ready to trade \u2014 market opens Monday",
-  "last_updated": "2026-05-16T13:40:57Z",
+  "today_date": "2026-05-18",
+  "last_action": "Fearful market (F&G 28) with S&P down -1.24% presents buying opportunity for high-yield dividend stocks; yields rising but that makes existing high-yielders more valuable",
+  "last_updated": "2026-05-18T13:35:35Z",
   "last_session": {
-    "at": "2026-05-16T13:40:57Z",
-    "fear_greed": null,
-    "fear_greed_label": "",
-    "sp500_change": null,
-    "vix": null,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Ready to trade \u2014 market opens Monday",
-    "trades_made": 0
+    "at": "2026-05-18T13:35:35Z",
+    "fear_greed": 28,
+    "fear_greed_label": "Fear",
+    "sp500_change": -1.24,
+    "vix": 18.48,
+    "top_movers": [
+      [
+        "BTI",
+        1.86
+      ],
+      [
+        "PM",
+        -1.2
+      ],
+      [
+        "GLD",
+        0.59
+      ],
+      [
+        "O",
+        0.56
+      ],
+      [
+        "OHI",
+        0.55
+      ],
+      [
+        "HTGC",
+        -0.42
+      ]
+    ],
+    "news_read": [
+      "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record",
+      "This chart shows why AI will eventually mean lower bond yields",
+      "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=28 (Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "Noticed 10-year Treasury yield at yearly high which typically pressures dividend stocks lower, creating opportunity; BTI and OHI both offer 8%+ yields - exactly the income plays Scrooge craves. Holding GLD as reserve but not buying more today since equities are oversold and yields are attractive. Will reinvest dividends via DRIP when received. Staying fully invested rather than holding cash since Fear=28 suggests value opportunity.",
+    "outlook": "Fearful market (F&G 28) with S&P down -1.24% presents buying opportunity for high-yield dividend stocks; yields rising but that makes existing high-yielders more valuable",
+    "trades_made": 2
   },
   "portfolio_history": [
     {
       "timestamp": "2026-05-16T13:40:57Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T13:35:35Z",
       "value": 10000.0
     }
   ]

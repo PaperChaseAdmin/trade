@@ -1,5 +1,42 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "GLD",
+      "shares": 4,
+      "price": 419.57,
+      "total_value": 1678.28,
+      "reasoning": "Gold up 0.59% amid rising yields and market fear; All Weather portfolio needs inflation hedge with recession signals present",
+      "timestamp": "2026-05-18T13:33:24Z",
+      "market_outlook": "Defensive positioning warranted as fear dominates (28), yields spike, and equities sell off \u2014 bonds and gold provide All Weather diversification",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -1.24,
+        "vix": 18.48,
+        "ticker_chg_pct": 0.59,
+        "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "TLT",
+      "shares": 12,
+      "price": 83.705,
+      "total_value": 1004.46,
+      "reasoning": "Long Treasuries for recession protection despite near-term yield pressure; flight to safety typically follows equity weakness",
+      "timestamp": "2026-05-18T13:33:24Z",
+      "market_outlook": "Defensive positioning warranted as fear dominates (28), yields spike, and equities sell off \u2014 bonds and gold provide All Weather diversification",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -1.24,
+        "vix": 18.48,
+        "ticker_chg_pct": 0.06,
+        "trigger_news": "10-year Treasury yield touches highest in a year, Japan's 30-year yield rises to a record"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

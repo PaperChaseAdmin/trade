@@ -1,5 +1,24 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "OXY",
+      "shares": 30,
+      "price": 58.72,
+      "total_value": 1761.6,
+      "reasoning": "OXY down -1.5% today with oil prices under pressure and yields rising; energy company with real assets (oil reserves), trading at depressed valuations in fear environment; contrarian play in unloved sector",
+      "timestamp": "2026-05-18T13:33:45Z",
+      "market_outlook": "Fear at 28 with S&P down -1.24% creates oversold conditions where value can be found, but rising Treasury yields keep pressure on risk assets",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -1.24,
+        "vix": 18.48,
+        "ticker_chg_pct": -1.52,
+        "trigger_news": "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,
