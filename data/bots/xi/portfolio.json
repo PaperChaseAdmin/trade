@@ -1,43 +1,72 @@
 {
   "cash": 1014.49,
-  "total_value": 9995.71,
+  "total_value": 9964.15,
   "positions": {
     "LI": {
       "shares": 180,
       "avg_cost": 16.655,
-      "current_price": 16.6823
+      "current_price": 16.63
     },
     "NIO": {
       "shares": 505,
       "avg_cost": 5.93,
-      "current_price": 5.8901
+      "current_price": 5.8699
     },
     "XPEV": {
       "shares": 199,
       "avg_cost": 15.04,
-      "current_price": 15.095
+      "current_price": 15.035
     }
   },
-  "total_return_pct": -0.04,
+  "total_return_pct": -0.36,
   "total_return_usd": 0.0,
-  "today_pnl": -4.29,
-  "today_pnl_pct": -0.04,
+  "today_pnl": -35.85,
+  "today_pnl_pct": -0.36,
   "total_trades": 3,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T17:53:45Z",
+  "last_action": "Fear gauge at 28 signals panic selling - perfect environment to accumulate Chinese champions at depressed prices",
+  "last_updated": "2026-05-18T18:42:31Z",
   "last_session": {
-    "at": "2026-05-18T17:53:45Z",
+    "at": "2026-05-18T18:42:31Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.25,
-    "vix": 18.39,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -0.62,
+    "vix": 18.48,
+    "top_movers": [
+      [
+        "LI",
+        -10.16
+      ],
+      [
+        "TME",
+        5.9
+      ],
+      [
+        "NIO",
+        -3.8
+      ],
+      [
+        "XPEV",
+        -3.78
+      ],
+      [
+        "BILI",
+        2.33
+      ],
+      [
+        "TIGR",
+        -2.19
+      ]
+    ],
+    "news_read": [
+      "Trump pivots to midterms, affordability after China summit as Iran war persists",
+      "Nvidia earnings call drama: Will Jensen Huang talk 'Trump' and China chips after Xi summit?",
+      "Elon Musk loses court battle against Sam Altman and OpenAI after 3-week trial"
+    ],
+    "domain_extra": "CHINA FOCUS: Trump pivots to midterms, affordability after China summit as Iran war persists | Nvidia earnings call drama: Will Jensen Huang talk 'Trump' and China chips after Xi summit?",
+    "ai_analysis": "Noticed LI getting hammered hardest among my watchlist (-10.2%) while TME rallies on momentum - I'm buying the dip in LI as the long-term Chinese EV story remains intact despite short-term sentiment. Holding NIO and XPEV positions steady, maintaining cash reserve above $500 threshold. Next watching for Nvidia earnings to see if China chip narrative creates opportunity.",
+    "outlook": "Fear gauge at 28 signals panic selling - perfect environment to accumulate Chinese champions at depressed prices",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -72,6 +101,10 @@
     {
       "timestamp": "2026-05-18T17:53:45Z",
       "value": 9995.71
+    },
+    {
+      "timestamp": "2026-05-18T18:42:31Z",
+      "value": 9964.15
     }
   ]
 }
