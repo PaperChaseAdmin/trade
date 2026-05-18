@@ -1,52 +1,57 @@
 {
-  "cash": 6538.3,
-  "total_value": 10000.0,
+  "cash": 5497.9,
+  "total_value": 10049.17,
   "positions": {
     "INTC": {
       "shares": 33,
       "avg_cost": 104.9,
-      "current_price": 104.9
+      "current_price": 106.39
+    },
+    "DIS": {
+      "shares": 10,
+      "avg_cost": 104.0401,
+      "current_price": 104.0401
     }
   },
-  "total_return_pct": 0.0,
+  "total_return_pct": 0.49,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
-  "total_trades": 1,
+  "today_pnl": 49.17,
+  "today_pnl_pct": 0.49,
+  "total_trades": 2,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Fear market (28) with S&P down 0.17% - perfect environment to buy beaten-down blue chips when others are panicking",
-  "last_updated": "2026-05-18T16:39:08Z",
+  "last_action": "Fear index at 28 (extreme fear) creates opportunity to buy quality brands at distressed prices while others panic sell",
+  "last_updated": "2026-05-18T17:07:46Z",
   "last_session": {
-    "at": "2026-05-18T16:39:08Z",
+    "at": "2026-05-18T17:07:46Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.17,
-    "vix": 18.69,
+    "sp500_change": -0.47,
+    "vix": 18.56,
     "top_movers": [
       [
         "BBWI",
-        -4.01
+        -3.74
       ],
       [
         "INTC",
-        -3.38
-      ],
-      [
-        "NOK",
-        -2.76
-      ],
-      [
-        "VFC",
-        2.37
+        -2.31
       ],
       [
         "T",
-        2.14
+        1.85
       ],
       [
         "CMCSA",
-        2.05
+        1.8
+      ],
+      [
+        "NOK",
+        -1.71
+      ],
+      [
+        "VFC",
+        1.71
       ]
     ],
     "news_read": [
@@ -55,8 +60,8 @@
       "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit"
     ],
     "domain_extra": "",
-    "ai_analysis": "INTC dropped 3.38% making it today's biggest loser on my watchlist - that's my entry signal. Intel has lost significant ground to AMD, their manufacturing has struggled, and a new CEO means change is coming. This is exactly the type of fallen giant with strong IP that activists love to break up or restructure. BBWI also caught my eye down 4%, but Intel has more scale and upside potential if they spin off manufacturing. Holding cash for now - will add more on further weakness.",
-    "outlook": "Fear market (28) with S&P down 0.17% - perfect environment to buy beaten-down blue chips when others are panicking",
+    "ai_analysis": "Notice INTC down 2.3% but holding as turnaround play with new CEO coming; BBWI down 3.7% but lacks the brand power for activist interest. Disney has $200B+ enterprise value with parks/streaming/film assets that could fetch premium in breakup. Watching for further weakness in NKE as next activist target - inventory issues and CEO transition create pressure for board changes.",
+    "outlook": "Fear index at 28 (extreme fear) creates opportunity to buy quality brands at distressed prices while others panic sell",
     "trades_made": 1
   },
   "portfolio_history": [
@@ -83,6 +88,10 @@
     {
       "timestamp": "2026-05-18T16:39:08Z",
       "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T17:07:46Z",
+      "value": 10049.17
     }
   ]
 }
