@@ -1,5 +1,24 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "INTC",
+      "shares": 33,
+      "price": 104.9,
+      "total_value": 3461.7,
+      "reasoning": "Intel down 3.38% today in fearful market (28), new CEO incoming signals potential restructuring, fallen chip giant with strong brand ripe for activist interest - classic Gekko play",
+      "timestamp": "2026-05-18T16:39:08Z",
+      "market_outlook": "Fear market (28) with S&P down 0.17% - perfect environment to buy beaten-down blue chips when others are panicking",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": -0.17,
+        "vix": 18.69,
+        "ticker_chg_pct": -3.38,
+        "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,

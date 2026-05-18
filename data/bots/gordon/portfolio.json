@@ -1,28 +1,63 @@
 {
-  "cash": 10000.0,
+  "cash": 6538.3,
   "total_value": 10000.0,
-  "positions": {},
+  "positions": {
+    "INTC": {
+      "shares": 33,
+      "avg_cost": 104.9,
+      "current_price": 104.9
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "total_trades": 0,
+  "total_trades": 1,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T15:39:14Z",
+  "last_action": "Fear market (28) with S&P down 0.17% - perfect environment to buy beaten-down blue chips when others are panicking",
+  "last_updated": "2026-05-18T16:39:08Z",
   "last_session": {
-    "at": "2026-05-18T15:39:14Z",
+    "at": "2026-05-18T16:39:08Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.35,
-    "vix": 18.64,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.17,
+    "vix": 18.69,
+    "top_movers": [
+      [
+        "BBWI",
+        -4.01
+      ],
+      [
+        "INTC",
+        -3.38
+      ],
+      [
+        "NOK",
+        -2.76
+      ],
+      [
+        "VFC",
+        2.37
+      ],
+      [
+        "T",
+        2.14
+      ],
+      [
+        "CMCSA",
+        2.05
+      ]
+    ],
+    "news_read": [
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company",
+      "Judge blocks evidence from Luigi Mangione backpack in UnitedHealthcare CEO murder case",
+      "U.S. creates $1.7B 'lawfare' fund in exchange for Trump dropping $10B IRS suit"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "INTC dropped 3.38% making it today's biggest loser on my watchlist - that's my entry signal. Intel has lost significant ground to AMD, their manufacturing has struggled, and a new CEO means change is coming. This is exactly the type of fallen giant with strong IP that activists love to break up or restructure. BBWI also caught my eye down 4%, but Intel has more scale and upside potential if they spin off manufacturing. Holding cash for now - will add more on further weakness.",
+    "outlook": "Fear market (28) with S&P down 0.17% - perfect environment to buy beaten-down blue chips when others are panicking",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -43,6 +78,10 @@
     },
     {
       "timestamp": "2026-05-18T15:39:14Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T16:39:08Z",
       "value": 10000.0
     }
   ]
