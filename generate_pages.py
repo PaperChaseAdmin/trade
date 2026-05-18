@@ -230,7 +230,7 @@ for bot_id, p in BOT_PROFILES.items():
     }
     
     html = DETAIL_TMPL
-    for k, v in replacements.items():
+    for k, v in sorted(replacements.items(), key=lambda x: -len(x[0])):
         html = html.replace(k, v)
     
     with open(f"{bot_id}/index.html", "w", encoding="utf-8") as f:
@@ -245,7 +245,7 @@ for bot_id, p in BOT_PROFILES.items():
         'BOTCOLOR': p["color"],
         'BOTAVATAR': p["avatar"],
     }
-    for k, v in rec_replacements.items():
+    for k, v in sorted(rec_replacements.items(), key=lambda x: -len(x[0])):
         rec_html = rec_html.replace(k, v)
     
     with open(f"{bot_id}/records/index.html", "w", encoding="utf-8") as f:
