@@ -1,28 +1,68 @@
 {
-  "cash": 10000.0,
+  "cash": 3762.49,
   "total_value": 10000.0,
-  "positions": {},
+  "positions": {
+    "NVDA": {
+      "shares": 15,
+      "avg_cost": 222.55,
+      "current_price": 222.55
+    },
+    "INTC": {
+      "shares": 27,
+      "avg_cost": 107.38,
+      "current_price": 107.38
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
   "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
-  "total_trades": 0,
+  "total_trades": 2,
   "today_start_value": 10000.0,
   "today_date": "2026-05-18",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-18T14:01:30Z",
+  "last_action": "Fear market (28) presenting buying opportunity in semiconductors which are uniformly down today - love accumulating quality names at discounts",
+  "last_updated": "2026-05-18T14:32:56Z",
   "last_session": {
-    "at": "2026-05-18T14:01:30Z",
+    "at": "2026-05-18T14:32:56Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.08,
-    "vix": 18.69,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.25,
+    "vix": 18.58,
+    "top_movers": [
+      [
+        "AMAT",
+        -5.38
+      ],
+      [
+        "CRM",
+        3.85
+      ],
+      [
+        "QCOM",
+        -2.45
+      ],
+      [
+        "GOOGL",
+        2.37
+      ],
+      [
+        "MU",
+        -2.36
+      ],
+      [
+        "LRCX",
+        -2.32
+      ]
+    ],
+    "news_read": [
+      "Trump says he should've asked for 'more' of Intel when negotiating stake with CEO",
+      "Lululemon takes battle with Chip Wilson public, calls founder 'misguided' and 'outdated'",
+      "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Noticed semiconductors (AMAT -5.4%, QCOM -2.5%, MU -2.4%, LRCX -2.3%) taking heavy hits across the board while broader market is slightly positive - classic fear-driven overreaction in semis. INTC has rare positive news catalyst with Trump comments, NVDA my forever stock. Holding $3,500 reserve for additional opportunities if market dips further.",
+    "outlook": "Fear market (28) presenting buying opportunity in semiconductors which are uniformly down today - love accumulating quality names at discounts",
+    "trades_made": 2
   },
   "portfolio_history": [
     {
@@ -35,6 +75,10 @@
     },
     {
       "timestamp": "2026-05-18T14:01:30Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-05-18T14:32:56Z",
       "value": 10000.0
     }
   ]

@@ -1,5 +1,42 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "NVDA",
+      "shares": 15,
+      "price": 222.55,
+      "total_value": 3338.25,
+      "reasoning": "NVDA down 1.14% in fear market (28) - semiconductor leader at attractive entry, my highest conviction name",
+      "timestamp": "2026-05-18T14:32:56Z",
+      "market_outlook": "Fear market (28) presenting buying opportunity in semiconductors which are uniformly down today - love accumulating quality names at discounts",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.25,
+        "vix": 18.58,
+        "ticker_chg_pct": -1.14,
+        "trigger_news": "Trump says he should've asked for 'more' of Intel when negotiating stake with CEO"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "INTC",
+      "shares": 27,
+      "price": 107.38,
+      "total_value": 2899.26,
+      "reasoning": "Trump said he should've asked for 'more' of Intel in his stake negotiation - positive political visibility for INTC at support levels",
+      "timestamp": "2026-05-18T14:32:56Z",
+      "market_outlook": "Fear market (28) presenting buying opportunity in semiconductors which are uniformly down today - love accumulating quality names at discounts",
+      "signal_context": {
+        "fg_value": 28,
+        "fg_label": "Fear",
+        "sp500_chg": 0.25,
+        "vix": 18.58,
+        "ticker_chg_pct": -1.05,
+        "trigger_news": "Trump says he should've asked for 'more' of Intel when negotiating stake with CEO"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,
