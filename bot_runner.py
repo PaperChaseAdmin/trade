@@ -11,6 +11,7 @@ from datetime import datetime, date
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import pytz
 import openrouter  # our OpenRouter client module
+import zhipu       # Zhipu GLM-4-Flash — ultimate free fallback
 from google import genai
 from google.genai import types as genai_types
 from bot_profiles import BOT_PROFILES
@@ -423,10 +424,18 @@ def run_bot(bot_id, prices, changes, market_data):
             fallback_raw = profile.get("fallback_model", "")
             fallback = fallback_raw.split("/", 1)[1] if fallback_raw.startswith("openrouter/") else (fallback_raw or None)
             print(f"    → OpenRouter ({or_model}) [fallback: {fallback or 'global chain'}]")
-            dec, ctx = openrouter.get_decision(
-                bot_id, profile, pf, prices, changes, market_data,
-                model_name=or_model, fallback_model=fallback
-            )
+            try:
+                dec, ctx = openrouter.get_decision(
+                    bot_id, profile, pf, prices, changes, market_data,
+                    model_name=or_model, fallback_model=fallback
+                )
+            except Exception as or_err:
+                # OpenRouter exhausted all models — try Zhipu as ultimate fallback
+                print(f"    OpenRouter failed ({or_err}), → Zhipu GLM-4-Flash fallback...")
+                dec, ctx = zhipu.get_decision(
+                    bot_id, profile, pf, prices, changes, market_data
+                )
+                print(f"    Zhipu fallback OK!")
         else:
             print(f"    → Gemini query...")
             dec, ctx = get_gemini_decision(bot_id, profile, pf, prices, changes, market_data)
