@@ -12,7 +12,7 @@ from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
 # Global fallback chain — used as last resort if primary AND per-bot fallback both fail
-GLOBAL_FALLBACK_CHAIN = ["minimax", "ling", "nemotron"]
+GLOBAL_FALLBACK_CHAIN = ["nemotron", "minimax", "ling"]
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
