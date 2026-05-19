@@ -53,6 +53,42 @@
         "ticker_chg_pct": -1.65,
         "trigger_news": "Home Depot says core shopper is resilient in the face of higher gas prices, sales rise 5%"
       }
+    },
+    {
+      "action": "BUY",
+      "ticker": "COF",
+      "shares": 10,
+      "price": 183.14,
+      "total_value": 1831.4,
+      "reasoning": "Capital One down 2.2% today but 30-year Treasury at 5.19% creates favorable rate environment for banks; extreme fear (25) presents opportunity",
+      "timestamp": "2026-05-19T16:37:42Z",
+      "market_outlook": "Extreme fear (25) combined with 30-year Treasury at 5.19% creates classic bank buying opportunity - higher rates mean better lending spreads.",
+      "signal_context": {
+        "fg_value": 25,
+        "fg_label": "Extreme Fear",
+        "sp500_chg": -0.63,
+        "vix": 18.01,
+        "ticker_chg_pct": -2.2,
+        "trigger_news": "30-year Treasury yield tops 5.19%, highest since before the financial crisis"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "C",
+      "shares": 3,
+      "price": 120.69,
+      "total_value": 362.07,
+      "reasoning": "Citigroup down 1.4% with strong balance sheet; high rates benefit net interest margins; buying on weakness",
+      "timestamp": "2026-05-19T16:37:42Z",
+      "market_outlook": "Extreme fear (25) combined with 30-year Treasury at 5.19% creates classic bank buying opportunity - higher rates mean better lending spreads.",
+      "signal_context": {
+        "fg_value": 25,
+        "fg_label": "Extreme Fear",
+        "sp500_chg": -0.63,
+        "vix": 18.01,
+        "ticker_chg_pct": -1.4,
+        "trigger_news": "30-year Treasury yield tops 5.19%, highest since before the financial crisis"
+      }
     }
   ],
   "total_trades": 0,

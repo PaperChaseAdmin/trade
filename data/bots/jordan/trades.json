@@ -17,6 +17,42 @@
         "ticker_chg_pct": 10.21,
         "trigger_news": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg\u2019s company"
       }
+    },
+    {
+      "action": "SELL",
+      "ticker": "RBLX",
+      "shares": 95,
+      "price": 44.28,
+      "total_value": 4206.6,
+      "reasoning": "Cutting losses on RBLX - down 5.83% today and dragging portfolio. Need to free capital for better opportunity.",
+      "timestamp": "2026-05-19T16:40:51Z",
+      "market_outlook": "Extreme fear (25) and everything red except AMC - selling the dip and buying the tiny green candle in a bloodbath.",
+      "signal_context": {
+        "fg_value": 25,
+        "fg_label": "Extreme Fear",
+        "sp500_chg": -0.63,
+        "vix": 18.01,
+        "ticker_chg_pct": -5.83,
+        "trigger_news": "30-year Treasury yield tops 5.19%, highest since before the financial crisis"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "AMC",
+      "shares": 1793,
+      "price": 1.383,
+      "total_value": 2479.72,
+      "reasoning": "AMC is the ONLY green stock on watchlist at +1.83% in a sea of red - chasing the relative strength in extreme fear market (25). Max position size per rules.",
+      "timestamp": "2026-05-19T16:40:51Z",
+      "market_outlook": "Extreme fear (25) and everything red except AMC - selling the dip and buying the tiny green candle in a bloodbath.",
+      "signal_context": {
+        "fg_value": 25,
+        "fg_label": "Extreme Fear",
+        "sp500_chg": -0.63,
+        "vix": 18.01,
+        "ticker_chg_pct": 1.83,
+        "trigger_news": "30-year Treasury yield tops 5.19%, highest since before the financial crisis"
+      }
     }
   ],
   "total_trades": 0,
