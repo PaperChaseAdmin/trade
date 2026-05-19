@@ -1,43 +1,71 @@
 {
   "cash": 5209.08,
-  "total_value": 9960.69,
+  "total_value": 9957.07,
   "positions": {
     "GLD": {
       "shares": 4,
       "avg_cost": 419.57,
-      "current_price": 412.62
+      "current_price": 412.0199
     },
     "TLT": {
       "shares": 17,
-      "current_price": 82.955,
+      "current_price": 83.03,
       "avg_cost": 83.5374
     },
     "IAU": {
       "shares": 20,
       "avg_cost": 84.6252,
-      "current_price": 84.545
+      "current_price": 84.42
     }
   },
-  "total_return_pct": -0.39,
+  "total_return_pct": -0.43,
   "total_return_usd": 0.0,
-  "today_pnl": -0.85,
-  "today_pnl_pct": -0.01,
+  "today_pnl": -4.47,
+  "today_pnl_pct": -0.04,
   "total_trades": 4,
   "today_start_value": 9961.54,
   "today_date": "2026-05-19",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-19T18:39:07Z",
+  "last_action": "Extreme fear (25) and 30-year Treasury at 5.19% signal potential opportunity, but portfolio constraints prevent action today.",
+  "last_updated": "2026-05-19T19:35:42Z",
   "last_session": {
-    "at": "2026-05-19T18:39:07Z",
+    "at": "2026-05-19T19:35:42Z",
     "fear_greed": 25,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": -0.36,
-    "vix": 17.9,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -0.42,
+    "vix": 18.01,
+    "top_movers": [
+      [
+        "TIPS",
+        -16.67
+      ],
+      [
+        "GDX",
+        -3.84
+      ],
+      [
+        "IAU",
+        -1.57
+      ],
+      [
+        "GLD",
+        -1.54
+      ],
+      [
+        "GSG",
+        1.12
+      ],
+      [
+        "VWO",
+        -0.99
+      ]
+    ],
+    "news_read": [
+      "30-year Treasury yield tops 5.19%, highest since before the financial crisis",
+      "Mortgage rates surge to highest level since July"
+    ],
+    "domain_extra": "MACRO: NASDAQ -0.57%  DOW -0.38%  VIX 18.0 (NORMAL)",
+    "ai_analysis": "My portfolio is heavily concentrated in gold (GLD + IAU = ~$4,300 of ~$9,960 total, over 40%) which violates my 20% max position rule, yet I lack sufficient cash ($5,209) to meaningfully rebalance while maintaining the $1,000 reserve requirement. The 5.19% 30-year Treasury yield is historically attractive for recession protection via TLT/IEF, but I cannot add to bonds without first trimming gold positions. TIPS' 16.7% collapse reflects rising real yields - a sign inflation expectations are crumbling which could support bonds. I'll hold today and wait for a green day to trim gold and redeploy into bonds or commodities.",
+    "outlook": "Extreme fear (25) and 30-year Treasury at 5.19% signal potential opportunity, but portfolio constraints prevent action today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -104,6 +132,10 @@
     {
       "timestamp": "2026-05-19T18:39:07Z",
       "value": 9960.69
+    },
+    {
+      "timestamp": "2026-05-19T19:35:42Z",
+      "value": 9957.07
     }
   ]
 }
