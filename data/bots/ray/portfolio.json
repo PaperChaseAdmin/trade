@@ -1,44 +1,72 @@
 {
-  "cash": 5624.76,
-  "total_value": 9975.88,
+  "cash": 5209.08,
+  "total_value": 9973.69,
   "positions": {
     "GLD": {
       "shares": 4,
       "avg_cost": 419.57,
-      "current_price": 414.0501
+      "current_price": 413.8283
     },
     "TLT": {
-      "shares": 12,
-      "avg_cost": 83.705,
-      "current_price": 83.135
+      "shares": 17,
+      "current_price": 83.135,
+      "avg_cost": 83.5374
     },
     "IAU": {
       "shares": 20,
       "avg_cost": 84.6252,
-      "current_price": 84.865
+      "current_price": 84.8
     }
   },
-  "total_return_pct": -0.24,
+  "total_return_pct": -0.26,
   "total_return_usd": 0.0,
-  "today_pnl": 14.34,
-  "today_pnl_pct": 0.14,
-  "total_trades": 3,
+  "today_pnl": 12.15,
+  "today_pnl_pct": 0.12,
+  "total_trades": 4,
   "today_start_value": 9961.54,
   "today_date": "2026-05-19",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-19T16:35:31Z",
+  "last_action": "Extreme fear and elevated treasury yields suggest maintaining defensive positioning with bonds while gold weakness presents accumulation opportunity for future rebalancing",
+  "last_updated": "2026-05-19T17:34:59Z",
   "last_session": {
-    "at": "2026-05-19T16:35:31Z",
+    "at": "2026-05-19T17:34:59Z",
     "fear_greed": 25,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": -0.63,
-    "vix": 18.01,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "sp500_change": -0.16,
+    "vix": 17.81,
+    "top_movers": [
+      [
+        "TIPS",
+        -16.67
+      ],
+      [
+        "GDX",
+        -2.57
+      ],
+      [
+        "IAU",
+        -1.12
+      ],
+      [
+        "GLD",
+        -1.09
+      ],
+      [
+        "GSG",
+        0.93
+      ],
+      [
+        "DJP",
+        0.63
+      ]
+    ],
+    "news_read": [
+      "30-year Treasury yield tops 5.19%, highest since before the financial crisis",
+      "Trump says it's not a 'war.' Insurers with money on the line say it is"
+    ],
+    "domain_extra": "MACRO: NASDAQ -0.24%  DOW -0.21%  VIX 17.8 (NORMAL)",
+    "ai_analysis": "Noticed 30-year Treasury yield at 5.19% signals bond prices are attractive for recession protection - TLT trading below my average cost despite being a core holding. TIPS crashing -16.7% is unusual but not actionable since I hold no position. With portfolio down -0.24% and gold positions underwater, adding to bonds provides balance to the All Weather approach. Will monitor gold prices for potential rebalancing opportunity in next session.",
+    "outlook": "Extreme fear and elevated treasury yields suggest maintaining defensive positioning with bonds while gold weakness presents accumulation opportunity for future rebalancing",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -96,6 +124,10 @@
     {
       "timestamp": "2026-05-19T16:35:31Z",
       "value": 9975.88
+    },
+    {
+      "timestamp": "2026-05-19T17:34:59Z",
+      "value": 9973.69
     }
   ]
 }
