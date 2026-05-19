@@ -1,38 +1,68 @@
 {
   "cash": 6739.67,
-  "total_value": 9970.65,
+  "total_value": 9971.52,
   "positions": {
     "TPR": {
       "shares": 22,
       "avg_cost": 132.315,
-      "current_price": 130.69
+      "current_price": 131.175
     },
     "CPRI": {
       "shares": 20,
       "avg_cost": 17.47,
-      "current_price": 17.79
+      "current_price": 17.3
     }
   },
-  "total_return_pct": -0.29,
+  "total_return_pct": -0.28,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 0.87,
+  "today_pnl_pct": 0.01,
   "total_trades": 2,
   "today_start_value": 9970.65,
   "today_date": "2026-05-19",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-19T13:40:59Z",
+  "last_action": "Extreme fear (25) and a declining S&P 500 suggest preserving capital is wiser than adding positions, even with premium names like AAPL showing relative strength.",
+  "last_updated": "2026-05-19T14:09:01Z",
   "last_session": {
-    "at": "2026-05-19T13:40:59Z",
+    "at": "2026-05-19T14:09:01Z",
     "fear_greed": 25,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": -0.07,
-    "vix": 17.79,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.51,
+    "vix": 18.15,
+    "top_movers": [
+      [
+        "RH",
+        -3.25
+      ],
+      [
+        "EL",
+        -2.75
+      ],
+      [
+        "AMZN",
+        -1.81
+      ],
+      [
+        "CAKE",
+        -1.59
+      ],
+      [
+        "HD",
+        -1.39
+      ],
+      [
+        "CPRI",
+        -1.37
+      ]
+    ],
+    "news_read": [
+      "Bessent urges G7 to help U.S. attack Iran's finances",
+      "Treasury yields rise with 30-year rate touching levels not seen since 2023",
+      "The AI economy is rewriting the American Dream \u2014 and blue-collar workers are poised to win",
+      "Home Depot says core shopper is resilient in the face of higher gas prices, sales rise 5%"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "My TPR and CPRI positions are both underwater, and the broader market is down 0.51% with luxury/travel names like RH (-3.25%), EL (-2.75%), and AMZN (-1.81%) leading declines. While AAPL's 0.24% gain and RL's 0.23% uptick show relative strength, I refuse to chase in a fearful market\u2014I'd rather wait for better entry points on my prestige brands. I'm holding my $6,739.67 cash as optionality for when sentiment turns.",
+    "outlook": "Extreme fear (25) and a declining S&P 500 suggest preserving capital is wiser than adding positions, even with premium names like AAPL showing relative strength.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -75,6 +105,10 @@
     {
       "timestamp": "2026-05-19T13:40:59Z",
       "value": 9970.65
+    },
+    {
+      "timestamp": "2026-05-19T14:09:01Z",
+      "value": 9971.52
     }
   ]
 }
