@@ -1,94 +1,122 @@
 {
-  "cash": 4634.54,
-  "total_value": 10008.46,
+  "cash": 4369.99,
+  "total_value": 9998.77,
   "positions": {
     "XLK": {
       "shares": 3,
-      "current_price": 174.89,
+      "current_price": 174.12,
       "avg_cost": 173.052
     },
     "XLV": {
       "shares": 4,
       "avg_cost": 144.82,
-      "current_price": 147.27
+      "current_price": 147.45
     },
     "XLF": {
       "shares": 4,
       "avg_cost": 51.49,
-      "current_price": 51.51
+      "current_price": 51.405
     },
     "XLE": {
       "shares": 5,
-      "current_price": 61.08,
+      "current_price": 61.3033,
       "avg_cost": 60.312
     },
     "XLI": {
       "shares": 4,
       "avg_cost": 169.79,
-      "current_price": 170.13
+      "current_price": 169.36
     },
     "XLY": {
       "shares": 4,
       "avg_cost": 116.4198,
-      "current_price": 115.15
+      "current_price": 115.185
     },
     "XLP": {
       "shares": 4,
       "avg_cost": 85.3399,
-      "current_price": 86.055
+      "current_price": 85.935
     },
     "XLU": {
-      "shares": 4,
-      "avg_cost": 43.665,
-      "current_price": 44.36
+      "shares": 8,
+      "current_price": 44.205,
+      "avg_cost": 43.935
     },
     "XLRE": {
-      "shares": 6,
-      "current_price": 43.915,
-      "avg_cost": 43.5333
+      "shares": 8,
+      "current_price": 43.865,
+      "avg_cost": 43.6162
     },
     "XLB": {
       "shares": 4,
       "avg_cost": 50.2597,
-      "current_price": 49.355
+      "current_price": 49.235
     },
     "XLC": {
       "shares": 4,
       "avg_cost": 117.54,
-      "current_price": 116.21
+      "current_price": 116.0
     },
     "GLD": {
       "shares": 2,
       "avg_cost": 416.5151,
-      "current_price": 413.8283
+      "current_price": 412.62
     },
     "TLT": {
       "shares": 4,
       "avg_cost": 83.555,
-      "current_price": 83.135
+      "current_price": 82.955
     }
   },
-  "total_return_pct": 0.08,
+  "total_return_pct": -0.01,
   "total_return_usd": 0.0,
-  "today_pnl": 23.79,
-  "today_pnl_pct": 0.24,
-  "total_trades": 18,
+  "today_pnl": 14.1,
+  "today_pnl_pct": 0.14,
+  "total_trades": 20,
   "today_start_value": 9984.67,
   "today_date": "2026-05-19",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-19T17:42:52Z",
+  "last_action": "Extreme fear (25) and elevated VIX (17.9) suggest volatility ahead; 30-year Treasury yield at 5.19% makes bonds increasingly attractive for balance",
+  "last_updated": "2026-05-19T18:46:03Z",
   "last_session": {
-    "at": "2026-05-19T17:42:52Z",
+    "at": "2026-05-19T18:46:03Z",
     "fear_greed": 25,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": -0.16,
-    "vix": 17.81,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.36,
+    "vix": 17.9,
+    "top_movers": [
+      [
+        "XLB",
+        -1.94
+      ],
+      [
+        "GLD",
+        -1.39
+      ],
+      [
+        "XLV",
+        1.2
+      ],
+      [
+        "XLE",
+        1.2
+      ],
+      [
+        "XLY",
+        -0.97
+      ],
+      [
+        "XLC",
+        -0.82
+      ]
+    ],
+    "news_read": [
+      "21Shares says Hyperliquid ETF demand shows appetite for 24/7 trading",
+      "30-year Treasury yield tops 5.19%, highest since before the financial crisis"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Portfolio is severely unbalanced: XLK/XLI/XLV are overweight at 15.9% combined while XLU/XLRE/XLF/XLB are underweight at 8.4% combined. Today's biggest losers (XLB -1.9%, GLD -1.4%) present buying opportunities for rebalancing. Holding cash reserve of $3,871.40 maintains sufficient liquidity. Will continue rebalancing in future sessions to achieve perfect 11-sector equality.",
+    "outlook": "Extreme fear (25) and elevated VIX (17.9) suggest volatility ahead; 30-year Treasury yield at 5.19% makes bonds increasingly attractive for balance",
+    "trades_made": 2
   },
   "portfolio_history": [
     {
@@ -150,6 +178,10 @@
     {
       "timestamp": "2026-05-19T17:42:52Z",
       "value": 10008.46
+    },
+    {
+      "timestamp": "2026-05-19T18:46:03Z",
+      "value": 9998.77
     }
   ]
 }
