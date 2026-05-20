@@ -1,58 +1,89 @@
 {
   "cash": 306.13,
-  "total_value": 10587.6,
+  "total_value": 10578.4,
   "positions": {
     "TQQQ": {
       "shares": 47,
       "avg_cost": 73.2265,
-      "current_price": 75.375
+      "current_price": 75.54
     },
     "SOXL": {
       "shares": 23,
       "avg_cost": 150.88,
-      "current_price": 168.85
+      "current_price": 168.6932
     },
     "RKLB": {
       "shares": 15,
       "avg_cost": 127.1625,
-      "current_price": 132.38
+      "current_price": 131.325
     },
     "PLTR": {
       "shares": 3,
       "avg_cost": 136.92,
-      "current_price": 135.715
+      "current_price": 136.13
     },
     "AXON": {
       "shares": 1,
       "avg_cost": 400.505,
-      "current_price": 395.2
+      "current_price": 396.8
     },
     "SMCI": {
       "shares": 2,
       "avg_cost": 31.64,
-      "current_price": 33.625
+      "current_price": 33.44
     }
   },
-  "total_return_pct": 5.88,
+  "total_return_pct": 5.78,
   "total_return_usd": 0.0,
-  "today_pnl": 269.07,
-  "today_pnl_pct": 2.61,
+  "today_pnl": 259.87,
+  "today_pnl_pct": 2.52,
   "total_trades": 6,
   "today_start_value": 10318.53,
   "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T16:43:17Z",
+  "last_action": "Fear index at 27 (extreme fear) with VIX at 17.88 and S&P up 0.8% creates a classic Jarvis buying signal, but my cash reserve of $306.13 limits me to just $6.13 in spendable capital - not enough for a",
+  "last_updated": "2026-05-20T17:08:22Z",
   "last_session": {
-    "at": "2026-05-20T16:43:17Z",
+    "at": "2026-05-20T17:08:22Z",
     "fear_greed": 27,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.73,
-    "vix": 17.78,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.8,
+    "vix": 17.88,
+    "top_movers": [
+      [
+        "ARM",
+        13.92
+      ],
+      [
+        "SOXL",
+        11.26
+      ],
+      [
+        "SMCI",
+        9.49
+      ],
+      [
+        "AMD",
+        7.36
+      ],
+      [
+        "IONQ",
+        7.02
+      ],
+      [
+        "MRVL",
+        4.23
+      ]
+    ],
+    "news_read": [
+      "Wendy's taps former Potbelly CEO to lead struggling burger chain",
+      "Here's how Nvidia has traded each of the last 16 quarters",
+      "Something very unusual is happening with Nvidia options",
+      "Bezos brushes off concerns of an AI bubble: 'You shouldn't worry about it'",
+      "U.S. crude oil falls below $100 per barrel after Trump says Iran talks in final stages"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The tech sector is on fire today with ARM +13.9%, SOXL +11.3%, SMCI +9.5%, and AMD +7.4% - exactly the kind of bleeding edge momentum I live for. My existing leveraged positions in TQQQ and SOXL are already capturing these gains beautifully. With only $6.13 available after maintaining the $300 reserve requirement, I can't add to any position - even a single share of SMCI would blow my budget. I'm holding my concentrated tech bets and waiting for either a larger cash position or a dip to deploy capital into ARM (quantum/AI play up 14%) or IONQ (quantum computing up 7%).",
+    "outlook": "Fear index at 27 (extreme fear) with VIX at 17.88 and S&P up 0.8% creates a classic Jarvis buying signal, but my cash reserve of $306.13 limits me to just $6.13 in spendable capital - not enough for any position on my watchlist where the cheapest stock (SMCI) trades at $33.44.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -147,6 +178,10 @@
     {
       "timestamp": "2026-05-20T16:43:17Z",
       "value": 10587.6
+    },
+    {
+      "timestamp": "2026-05-20T17:08:22Z",
+      "value": 10578.4
     }
   ]
 }
