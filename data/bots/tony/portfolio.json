@@ -1,85 +1,88 @@
 {
-  "cash": 369.41,
-  "total_value": 10070.91,
+  "cash": 306.13,
+  "total_value": 10318.53,
   "positions": {
     "TQQQ": {
       "shares": 47,
       "avg_cost": 73.2265,
-      "current_price": 73.295
+      "current_price": 74.32
     },
     "SOXL": {
       "shares": 23,
       "avg_cost": 150.88,
-      "current_price": 154.3001
+      "current_price": 162.465
     },
     "RKLB": {
       "shares": 15,
       "avg_cost": 127.1625,
-      "current_price": 127.43
+      "current_price": 128.48
     },
     "PLTR": {
       "shares": 3,
       "avg_cost": 136.92,
-      "current_price": 135.2299
+      "current_price": 134.255
     },
     "AXON": {
       "shares": 1,
       "avg_cost": 400.505,
-      "current_price": 390.59
+      "current_price": 389.425
+    },
+    "SMCI": {
+      "shares": 2,
+      "avg_cost": 31.64,
+      "current_price": 31.64
     }
   },
-  "total_return_pct": 0.71,
+  "total_return_pct": 3.19,
   "total_return_usd": 0.0,
-  "today_pnl": 303.89,
-  "today_pnl_pct": 3.11,
-  "total_trades": 5,
-  "today_start_value": 9767.02,
-  "today_date": "2026-05-19",
-  "last_action": "Extreme fear (25) in a slightly down market (-0.42% S&P) with low VIX (18.01) creates a classic Jarvis buying signal, but my cash reserve of $369.41 is already at the minimum threshold, leaving zero a",
-  "last_updated": "2026-05-19T19:41:01Z",
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
+  "total_trades": 6,
+  "today_start_value": 10318.53,
+  "today_date": "2026-05-20",
+  "last_action": "Fear is high but leveraged tech is rallying, signaling AI-driven upside ahead.",
+  "last_updated": "2026-05-20T13:36:51Z",
   "last_session": {
-    "at": "2026-05-19T19:41:01Z",
-    "fear_greed": 25,
-    "fear_greed_label": "Extreme Fear",
-    "sp500_change": -0.42,
-    "vix": 18.01,
+    "at": "2026-05-20T13:36:51Z",
+    "fear_greed": 27,
+    "fear_greed_label": "Fear",
+    "sp500_change": -0.67,
+    "vix": 17.98,
     "top_movers": [
       [
+        "SOXL",
+        7.64
+      ],
+      [
         "MRVL",
-        4.82
+        6.55
+      ],
+      [
+        "AMD",
+        4.25
       ],
       [
         "ARM",
-        4.47
+        4.04
       ],
       [
-        "RKLB",
-        -2.81
+        "SMCI",
+        3.42
       ],
       [
-        "AVGO",
-        -2.49
-      ],
-      [
-        "AXON",
-        -2.12
-      ],
-      [
-        "SOXL",
-        1.65
+        "TQQQ",
+        2.11
       ]
     ],
     "news_read": [
-      "Google debuts new AI models, personal AI agents in effort to keep pace with OpenAI and Anthropic",
-      "Anthropic hires OpenAI co-founder Andrej Karpathy, former Tesla AI leader",
-      "Pentagon taps Shield AI for low-cost drone program as Iran war accelerates demand for cheap drones",
-      "The AI economy is rewriting the American Dream \u2014 and blue-collar workers are poised to win",
-      "30-year Treasury yield tops 5.19%, highest since before the financial crisis"
+      "Jeff Bezos brushes off concerns of an AI bubble: 'You shouldn't worry about it'",
+      "Lowe's beats Wall Street expectations against 'challenging' housing backdrop",
+      "Jeff Bezos says bottom half of earners should pay zero in income taxes"
     ],
     "domain_extra": "",
-    "ai_analysis": "The math is brutal \u2014 with $369.41 cash and a $300 minimum reserve, I can only deploy $69.41, which can't buy a single share of anything on my watchlist (SMCI at $30.67 would require 3 shares = $92). MRVL +4.8% and ARM +4.5% are screaming buy signals in AI semis, SOXL is up 1.65% showing semiconductor strength, and RKLB's 2.8% dip is tempting for my space play \u2014 but you can't swing a cat with pocket change. Next session I need to free up capital by trimming a position or waiting for a bigger dip to add to existing winners.",
-    "outlook": "Extreme fear (25) in a slightly down market (-0.42% S&P) with low VIX (18.01) creates a classic Jarvis buying signal, but my cash reserve of $369.41 is already at the minimum threshold, leaving zero actionable buying power for any watchlist stock.",
-    "trades_made": 0
+    "ai_analysis": "SOXL (+7.6%) and MRVL (+6.5%) show semiconductor strength, while TQQQ (+2.1%) confirms NASDAQ momentum; cash limits aggressive leveraged buys, so SMCI provides a low\u2011cost AI infrastructure play. Will monitor for further AI chip news and any dip to add more leveraged ETFs or semiconductor stocks.",
+    "outlook": "Fear is high but leveraged tech is rallying, signaling AI-driven upside ahead.",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -149,6 +152,10 @@
     {
       "timestamp": "2026-05-19T19:41:01Z",
       "value": 10070.91
+    },
+    {
+      "timestamp": "2026-05-20T13:36:51Z",
+      "value": 10318.53
     }
   ]
 }
