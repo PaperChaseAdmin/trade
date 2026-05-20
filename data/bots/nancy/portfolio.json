@@ -1,43 +1,73 @@
 {
   "cash": 548.49,
-  "total_value": 10452.68,
+  "total_value": 10423.73,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 221.5
+      "current_price": 222.07
     },
     "INTC": {
       "shares": 31,
-      "current_price": 118.51,
+      "current_price": 118.93,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 726.97
+      "current_price": 714.34
     }
   },
-  "total_return_pct": 4.53,
+  "total_return_pct": 4.24,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -28.95,
+  "today_pnl_pct": -0.28,
   "total_trades": 4,
   "today_start_value": 10452.68,
   "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T13:33:52Z",
+  "last_action": "Semiconductor momentum remains strong with INTC leading gains, suggesting continued upside despite broader market fear.",
+  "last_updated": "2026-05-20T14:03:02Z",
   "last_session": {
-    "at": "2026-05-20T13:33:52Z",
+    "at": "2026-05-20T14:03:02Z",
     "fear_greed": 27,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.67,
-    "vix": 17.98,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.4,
+    "vix": 18.09,
+    "top_movers": [
+      [
+        "INTC",
+        7.98
+      ],
+      [
+        "AMD",
+        5.25
+      ],
+      [
+        "LRCX",
+        3.82
+      ],
+      [
+        "AMAT",
+        3.14
+      ],
+      [
+        "MU",
+        2.27
+      ],
+      [
+        "CRM",
+        -1.76
+      ]
+    ],
+    "news_read": [
+      "Jeff Bezos says bottom half of earners should pay zero in income taxes",
+      "Iran threatens to extend conflict \u2018beyond the region\u2019 if U.S. and Israel resume attacks",
+      "Target beats Wall Street estimates, hikes sales outlook as shoppers start to return",
+      "Breakthrough agreement in housing bill gives investors wins"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Watchlist shows INTC up 8%, AMD up 5.2%, and other chip stocks rising, aligning with Nancy's instinct to buy on semiconductor news. However cash is only $548.49, and maintaining a $500 reserve leaves less than $50 for new purchases, insufficient to buy even a single share of any watchlist stock at current prices. Therefore no trades are executed this session, while we monitor for any pullback or news that could create a cheaper entry point.",
+    "outlook": "Semiconductor momentum remains strong with INTC leading gains, suggesting continued upside despite broader market fear.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -112,6 +142,10 @@
     {
       "timestamp": "2026-05-20T13:33:52Z",
       "value": 10452.68
+    },
+    {
+      "timestamp": "2026-05-20T14:03:02Z",
+      "value": 10423.73
     }
   ]
 }
