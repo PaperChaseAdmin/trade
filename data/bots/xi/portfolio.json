@@ -1,53 +1,83 @@
 {
   "cash": 503.97,
-  "total_value": 9675.52,
+  "total_value": 9704.42,
   "positions": {
     "LI": {
       "shares": 180,
       "avg_cost": 16.655,
-      "current_price": 15.985
+      "current_price": 16.05
     },
     "NIO": {
       "shares": 506,
-      "current_price": 5.575,
+      "current_price": 5.585,
       "avg_cost": 5.9293
     },
     "XPEV": {
       "shares": 199,
       "avg_cost": 15.04,
-      "current_price": 14.935
+      "current_price": 14.995
     },
     "BABA": {
       "shares": 3,
       "avg_cost": 135.84,
-      "current_price": 134.46
+      "current_price": 134.575
     },
     "JD": {
       "shares": 3,
       "avg_cost": 32.47,
-      "current_price": 32.62
+      "current_price": 32.57
     }
   },
-  "total_return_pct": -3.24,
+  "total_return_pct": -2.96,
   "total_return_usd": 0.0,
-  "today_pnl": -43.0,
-  "today_pnl_pct": -0.44,
+  "today_pnl": -14.1,
+  "today_pnl_pct": -0.15,
   "total_trades": 6,
   "today_start_value": 9718.52,
   "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T18:11:52Z",
+  "last_action": "Market in fear mode (27) with Chinese ADRs under pressure today, but S&P showing resilience - staying patient with existing positions.",
+  "last_updated": "2026-05-20T18:51:57Z",
   "last_session": {
-    "at": "2026-05-20T18:11:52Z",
+    "at": "2026-05-20T18:51:57Z",
     "fear_greed": 27,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.89,
-    "vix": 17.57,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.92,
+    "vix": 17.46,
+    "top_movers": [
+      [
+        "BILI",
+        -8.07
+      ],
+      [
+        "NIO",
+        -2.74
+      ],
+      [
+        "NTES",
+        2.05
+      ],
+      [
+        "BIDU",
+        -1.83
+      ],
+      [
+        "TIGR",
+        1.12
+      ],
+      [
+        "BABA",
+        -0.8
+      ]
+    ],
+    "news_read": [
+      "U.S. crude oil falls below $100 per barrel after Trump says Iran talks in final stages",
+      "Fed officials see rate hike ahead if inflation stays elevated, minutes show",
+      "OpenAI to confidentially file for IPO as soon as Friday: Source",
+      "House approves breakthrough housing bill in a win for investors"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "My cash reserve is $503.97, barely above the $500 minimum, leaving only $3.97 for trading - insufficient for any meaningful position. Several watchlist stocks are down (NIO -2.7%, BIDU -1.8%, BABA -0.8%) which would normally be accumulation opportunities, but I cannot deploy capital. All my Chinese EV positions (LI, NIO, XPEV) are showing losses but I'm holding - these are national champions and the regulatory crackdown is temporary. Watching for next session when I can add to dips with fresh capital from cash.",
+    "outlook": "Market in fear mode (27) with Chinese ADRs under pressure today, but S&P showing resilience - staying patient with existing positions.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -154,6 +184,10 @@
     {
       "timestamp": "2026-05-20T18:11:52Z",
       "value": 9675.52
+    },
+    {
+      "timestamp": "2026-05-20T18:51:57Z",
+      "value": 9704.42
     }
   ]
 }
