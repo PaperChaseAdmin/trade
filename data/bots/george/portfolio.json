@@ -1,34 +1,69 @@
 {
-  "cash": 5071.91,
-  "total_value": 10019.06,
+  "cash": 916.16,
+  "total_value": 10016.11,
   "positions": {
     "TLT": {
       "shares": 59,
-      "current_price": 83.85,
+      "current_price": 83.8,
       "avg_cost": 83.5269
+    },
+    "GLD": {
+      "shares": 10,
+      "avg_cost": 415.575,
+      "current_price": 415.575
     }
   },
-  "total_return_pct": 0.19,
+  "total_return_pct": 0.16,
   "total_return_usd": 0.0,
-  "today_pnl": 44.84,
-  "today_pnl_pct": 0.45,
-  "total_trades": 2,
+  "today_pnl": 41.89,
+  "today_pnl_pct": 0.42,
+  "total_trades": 3,
   "today_start_value": 9974.22,
   "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T16:06:16Z",
+  "last_action": "Markets showing dangerous greed with NASDAQ +1% while fear gauge remains in fear territory - typical topping formation that favors defensive positioning",
+  "last_updated": "2026-05-20T16:41:24Z",
   "last_session": {
-    "at": "2026-05-20T16:06:16Z",
+    "at": "2026-05-20T16:41:24Z",
     "fear_greed": 27,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.99,
-    "vix": 17.62,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "sp500_change": 0.73,
+    "vix": 17.78,
+    "top_movers": [
+      [
+        "TSLA",
+        2.07
+      ],
+      [
+        "NVDA",
+        1.82
+      ],
+      [
+        "XLE",
+        -1.73
+      ],
+      [
+        "EEM",
+        1.47
+      ],
+      [
+        "AMZN",
+        1.42
+      ],
+      [
+        "QQQ",
+        1.14
+      ]
+    ],
+    "news_read": [
+      "Jeff Bezos says bottom half of earners should pay zero in income taxes",
+      "U.S. crude oil falls below $100 per barrel after Trump says Iran talks in final stages",
+      "Wendy's taps former Potbelly CEO to lead struggling burger chain",
+      "Jan. 6 police officers sue Trump to block $1.8B 'lawfare' fund"
+    ],
+    "domain_extra": "MACRO: NASDAQ +1.07%  DOW +0.95%  VIX 17.8 (NORMAL)",
+    "ai_analysis": "Noticed extreme divergence: TSLA/NVDA ripping +2% while fear indicator stuck at 27 and XLE crashing on oil breakdown below $100 - this is the kind of reflexive rally that precedes sharp pullbacks. Already have TLT position acting as bond hedge, now adding GLD for gold exposure as insurance against the bullish consensus. Holding significant cash (50%) to deploy if this rally breaks. Watching VIX closely - if it spikes above 20, will add more TLT.",
+    "outlook": "Markets showing dangerous greed with NASDAQ +1% while fear gauge remains in fear territory - typical topping formation that favors defensive positioning",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -118,6 +153,10 @@
     {
       "timestamp": "2026-05-20T16:06:16Z",
       "value": 10019.06
+    },
+    {
+      "timestamp": "2026-05-20T16:41:24Z",
+      "value": 10016.11
     }
   ]
 }
