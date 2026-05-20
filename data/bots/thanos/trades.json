@@ -449,6 +449,42 @@
         "ticker_chg_pct": 0.1,
         "trigger_news": "Jeff Bezos says bottom half of earners should pay zero in income taxes"
       }
+    },
+    {
+      "action": "SELL",
+      "ticker": "XLE",
+      "shares": 2,
+      "price": 60.185,
+      "total_value": 120.37,
+      "reasoning": "XLE is overweight at 6.0% vs target 9% and underperforming today at -1.82%",
+      "timestamp": "2026-05-20T17:42:43Z",
+      "market_outlook": "Fear index at 27 (extreme fear) with low VIX suggests potential opportunity; slight market rally today provides backdrop for rebalancing.",
+      "signal_context": {
+        "fg_value": 27,
+        "fg_label": "Fear",
+        "sp500_chg": 0.85,
+        "vix": 17.72,
+        "ticker_chg_pct": -1.82,
+        "trigger_news": "Why Trump's bitcoin ETF plans likely collapsed before getting off the ground"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLK",
+      "shares": 2,
+      "price": 176.43,
+      "total_value": 352.86,
+      "reasoning": "XLK is severely underweight at 3.5% vs target 9% despite being a core sector holding",
+      "timestamp": "2026-05-20T17:42:43Z",
+      "market_outlook": "Fear index at 27 (extreme fear) with low VIX suggests potential opportunity; slight market rally today provides backdrop for rebalancing.",
+      "signal_context": {
+        "fg_value": 27,
+        "fg_label": "Fear",
+        "sp500_chg": 0.85,
+        "vix": 17.72,
+        "ticker_chg_pct": 1.82,
+        "trigger_news": "Why Trump's bitcoin ETF plans likely collapsed before getting off the ground"
+      }
     }
   ],
   "total_trades": 0,

@@ -1,43 +1,73 @@
 {
   "cash": 5209.08,
-  "total_value": 10004.75,
+  "total_value": 10005.62,
   "positions": {
     "GLD": {
       "shares": 4,
       "avg_cost": 419.57,
-      "current_price": 416.145
+      "current_price": 416.27
     },
     "TLT": {
       "shares": 17,
-      "current_price": 83.835,
+      "current_price": 83.845,
       "avg_cost": 83.5374
     },
     "IAU": {
       "shares": 20,
       "avg_cost": 84.6252,
-      "current_price": 85.295
+      "current_price": 85.305
     }
   },
-  "total_return_pct": 0.05,
+  "total_return_pct": 0.06,
   "total_return_usd": 0.0,
-  "today_pnl": 44.94,
-  "today_pnl_pct": 0.45,
+  "today_pnl": 45.81,
+  "today_pnl_pct": 0.46,
   "total_trades": 4,
   "today_start_value": 9959.81,
   "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T17:04:26Z",
+  "last_action": "Markets showing mixed signals with tech strength (NASDAQ +1.23%) but commodity weakness (GSG -3.5%, oil below $100) while fear dominates (Fear & Greed 27); staying defensive with current allocation.",
+  "last_updated": "2026-05-20T17:34:59Z",
   "last_session": {
-    "at": "2026-05-20T17:04:26Z",
+    "at": "2026-05-20T17:34:59Z",
     "fear_greed": 27,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.8,
-    "vix": 17.88,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.85,
+    "vix": 17.72,
+    "top_movers": [
+      [
+        "GSG",
+        -3.54
+      ],
+      [
+        "GDX",
+        3.24
+      ],
+      [
+        "PDBC",
+        -2.76
+      ],
+      [
+        "DJP",
+        -2.49
+      ],
+      [
+        "EEM",
+        1.65
+      ],
+      [
+        "VWO",
+        1.27
+      ]
+    ],
+    "news_read": [
+      "U.S. crude oil falls below $100 per barrel after Trump says Iran talks in final stages",
+      "OpenAI to confidentially file for IPO as soon as Friday: Source",
+      "Airbnb adds hotels, car rentals. Chesky says app can become an 'Amazon for services'",
+      "Crypto companies are trying to leave the hype cycle for a more disciplined phase, earnings show"
+    ],
+    "domain_extra": "MACRO: NASDAQ +1.23%  DOW +1.07%  VIX 17.7 (NORMAL)",
+    "ai_analysis": "My portfolio is already well-positioned for the current environment: gold (GLD + IAU ~36% combined) provides inflation hedge, TLT bonds offer recession protection, and 52% cash provides dry powder. GLD and IAU are near my 20% max per position so I cannot add more without rebalancing. The commodity weakness (GSG -3.5%, PDBC -2.8%) is notable but I'm already at target allocation. Watching VIX at 17.7 (normal) and will look for rebalancing opportunities if gold rallies further or bonds weaken.",
+    "outlook": "Markets showing mixed signals with tech strength (NASDAQ +1.23%) but commodity weakness (GSG -3.5%, oil below $100) while fear dominates (Fear & Greed 27); staying defensive with current allocation.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -136,6 +166,10 @@
     {
       "timestamp": "2026-05-20T17:04:26Z",
       "value": 10004.75
+    },
+    {
+      "timestamp": "2026-05-20T17:34:59Z",
+      "value": 10005.62
     }
   ]
 }

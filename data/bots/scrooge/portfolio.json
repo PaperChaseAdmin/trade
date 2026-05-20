@@ -1,36 +1,36 @@
 {
   "cash": 206.08,
-  "total_value": 10087.13,
+  "total_value": 10068.75,
   "positions": {
     "BTI": {
       "shares": 29,
       "avg_cost": 66.275,
-      "current_price": 65.73
+      "current_price": 65.575
     },
     "OHI": {
       "shares": 40,
       "avg_cost": 47.59,
-      "current_price": 48.96
+      "current_price": 48.9
     },
     "MAIN": {
       "shares": 20,
       "avg_cost": 50.63,
-      "current_price": 51.48
+      "current_price": 51.1834
     },
     "ARCC": {
       "shares": 50,
       "avg_cost": 18.895,
-      "current_price": 18.7429
+      "current_price": 18.74
     },
     "T": {
       "shares": 50,
       "avg_cost": 24.5551,
-      "current_price": 24.969
+      "current_price": 24.8951
     },
     "ENB": {
       "shares": 20,
       "avg_cost": 56.3352,
-      "current_price": 57.12
+      "current_price": 57.04
     },
     "O": {
       "shares": 26,
@@ -40,29 +40,57 @@
     "VZ": {
       "shares": 1,
       "avg_cost": 47.6602,
-      "current_price": 47.665
+      "current_price": 47.555
     }
   },
-  "total_return_pct": 0.87,
+  "total_return_pct": 0.69,
   "total_return_usd": 0.0,
-  "today_pnl": 39.44,
-  "today_pnl_pct": 0.39,
+  "today_pnl": 21.06,
+  "today_pnl_pct": 0.21,
   "total_trades": 8,
   "today_start_value": 10047.69,
   "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T17:09:54Z",
+  "last_action": "Fear-driven market (27) presents potential value, but with only $206.08 cash and most positions already established, patience serves better than forced trades.",
+  "last_updated": "2026-05-20T17:40:08Z",
   "last_session": {
-    "at": "2026-05-20T17:09:54Z",
+    "at": "2026-05-20T17:40:08Z",
     "fear_greed": 27,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.8,
-    "vix": 17.88,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.85,
+    "vix": 17.72,
+    "top_movers": [
+      [
+        "PM",
+        -2.78
+      ],
+      [
+        "HTGC",
+        2.16
+      ],
+      [
+        "MAIN",
+        1.29
+      ],
+      [
+        "GLD",
+        1.16
+      ],
+      [
+        "ARCC",
+        0.83
+      ],
+      [
+        "BTI",
+        -0.71
+      ]
+    ],
+    "news_read": [
+      "Jeff Bezos says bottom half of earners should pay zero in income taxes",
+      "U.S. crude oil falls below $100 per barrel after Trump says Iran talks in final stages"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=27 (Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "With only $206.08 cash available (below my $200 reserve threshold when accounting for transaction costs), I cannot make meaningful purchases even though several high-yielders like O, MAIN, and T are attractive. PM dropped 2.8% today - a tobacco dividend king at a discount - but I lack the capital. My DRIP religion requires accumulating shares over time through dividend reinvestment, not desperate small buys. GLD my treasure reserve is up 1.2% - the golden goose grows stronger as fear grips the market. I'll wait for dividend payments to reinvest and grow my positions methodically.",
+    "outlook": "Fear-driven market (27) presents potential value, but with only $206.08 cash and most positions already established, patience serves better than forced trades.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -161,6 +189,10 @@
     {
       "timestamp": "2026-05-20T17:09:54Z",
       "value": 10087.13
+    },
+    {
+      "timestamp": "2026-05-20T17:40:08Z",
+      "value": 10068.75
     }
   ]
 }

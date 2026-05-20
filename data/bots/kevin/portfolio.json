@@ -1,6 +1,6 @@
 {
   "cash": 506.69,
-  "total_value": 10151.78,
+  "total_value": 10140.49,
   "positions": {
     "O": {
       "shares": 32,
@@ -10,49 +10,77 @@
     "VZ": {
       "shares": 43,
       "avg_cost": 46.05,
-      "current_price": 47.665
+      "current_price": 47.555
     },
     "BTI": {
       "shares": 9,
       "avg_cost": 66.142,
-      "current_price": 65.73
+      "current_price": 65.575
     },
     "T": {
       "shares": 81,
       "avg_cost": 24.505,
-      "current_price": 24.969
+      "current_price": 24.8951
     },
     "WPC": {
       "shares": 27,
       "avg_cost": 73.94,
-      "current_price": 74.7851
+      "current_price": 74.86
     },
     "OHI": {
       "shares": 20,
       "avg_cost": 48.17,
-      "current_price": 48.96
+      "current_price": 48.9
     }
   },
-  "total_return_pct": 1.52,
+  "total_return_pct": 1.4,
   "total_return_usd": 0.0,
-  "today_pnl": 11.08,
-  "today_pnl_pct": 0.11,
+  "today_pnl": -0.21,
+  "today_pnl_pct": -0.0,
   "total_trades": 6,
   "today_start_value": 10140.7,
   "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T17:07:32Z",
+  "last_action": "Fear market (27) presents value opportunities in dividend payers, but with only $6.69 of spendable cash after maintaining the $500 reserve, I cannot make any meaningful purchases today.",
+  "last_updated": "2026-05-20T17:37:21Z",
   "last_session": {
-    "at": "2026-05-20T17:07:32Z",
+    "at": "2026-05-20T17:37:21Z",
     "fear_greed": 27,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.8,
-    "vix": 17.88,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.85,
+    "vix": 17.72,
+    "top_movers": [
+      [
+        "PM",
+        -2.78
+      ],
+      [
+        "CVX",
+        -1.84
+      ],
+      [
+        "MAIN",
+        1.29
+      ],
+      [
+        "BTI",
+        -0.71
+      ],
+      [
+        "VYM",
+        0.54
+      ],
+      [
+        "MO",
+        -0.53
+      ]
+    ],
+    "news_read": [
+      "Jeff Bezos says bottom half of earners should pay zero in income taxes",
+      "U.S. crude oil falls below $100 per barrel after Trump says Iran talks in final stages"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=27 (Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "Looking at my watchlist, several dividend payers are down - PM -2.78%, CVX -1.84%, ABBV -0.51%, MO -0.53% - all attractive for my passive income machine. However, with $506.69 cash and a $500 minimum reserve requirement, I have just $6.69 to deploy, which can't buy even a single share of any stock on my list. I'm holding my existing positions in O, VZ, T, WPC, BTI, and OHI which are all showing positive PnL. Next session I'll look to add to my dividend collection once I have more capital to work with.",
+    "outlook": "Fear market (27) presents value opportunities in dividend payers, but with only $6.69 of spendable cash after maintaining the $500 reserve, I cannot make any meaningful purchases today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -151,6 +179,10 @@
     {
       "timestamp": "2026-05-20T17:07:32Z",
       "value": 10151.78
+    },
+    {
+      "timestamp": "2026-05-20T17:37:21Z",
+      "value": 10140.49
     }
   ]
 }
