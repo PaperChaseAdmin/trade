@@ -1,68 +1,96 @@
 {
   "cash": 206.08,
-  "total_value": 10079.67,
+  "total_value": 10072.94,
   "positions": {
     "BTI": {
       "shares": 29,
       "avg_cost": 66.275,
-      "current_price": 65.38
+      "current_price": 65.29
     },
     "OHI": {
       "shares": 40,
       "avg_cost": 47.59,
-      "current_price": 48.97
+      "current_price": 48.85
     },
     "MAIN": {
       "shares": 20,
       "avg_cost": 50.63,
-      "current_price": 51.28
+      "current_price": 51.27
     },
     "ARCC": {
       "shares": 50,
       "avg_cost": 18.895,
-      "current_price": 18.725
+      "current_price": 18.738
     },
     "T": {
       "shares": 50,
       "avg_cost": 24.5551,
-      "current_price": 24.965
+      "current_price": 24.885
     },
     "ENB": {
       "shares": 20,
       "avg_cost": 56.3352,
-      "current_price": 57.105
+      "current_price": 57.4
     },
     "O": {
       "shares": 26,
       "avg_cost": 61.88,
-      "current_price": 62.26
+      "current_price": 62.205
     },
     "VZ": {
       "shares": 1,
       "avg_cost": 47.6602,
-      "current_price": 47.805
+      "current_price": 47.57
     }
   },
-  "total_return_pct": 0.8,
+  "total_return_pct": 0.73,
   "total_return_usd": 0.0,
-  "today_pnl": 31.98,
-  "today_pnl_pct": 0.32,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 8,
-  "today_start_value": 10047.69,
-  "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T19:38:50Z",
+  "today_start_value": 10072.94,
+  "today_date": "2026-05-21",
+  "last_action": "Fear & Greed at 29 signals an oversold market that could bounce, but dividend\u2011focused opportunities remain limited until cash builds.",
+  "last_updated": "2026-05-21T13:38:28Z",
   "last_session": {
-    "at": "2026-05-20T19:38:50Z",
-    "fear_greed": 27,
+    "at": "2026-05-21T13:38:28Z",
+    "fear_greed": 29,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.97,
-    "vix": 17.45,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 1.08,
+    "vix": 17.67,
+    "top_movers": [
+      [
+        "IBM",
+        3.24
+      ],
+      [
+        "GLD",
+        -1.12
+      ],
+      [
+        "ABBV",
+        -1.1
+      ],
+      [
+        "ENB",
+        0.61
+      ],
+      [
+        "VZ",
+        -0.53
+      ],
+      [
+        "JEPI",
+        -0.43
+      ]
+    ],
+    "news_read": [
+      "Why a \u2018meaningful\u2019 selloff for stocks is needed to bring down bond yields",
+      "Oil prices jump more than 3% after Iran supreme leader says uranium must remain in country"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=29 (Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "Cash is only $206.08, leaving just $6.08 above the $200 reserve, insufficient to purchase a full share of any watchlist stock (lowest priced is ARCC at $18.74). Today's movers show IBM up 3.2% and ENB up 0.6%, while GLD fell 1.1%; none of the high\u2011yield candidates (O, MAIN, T, VZ, ENB, OHI, ARCC, MO, BTI, HTGC) are affordable at current prices. I will hold existing positions, reinvest any incoming dividends, and wait for a price dip or additional cash before adding to my dividend\u2011centric hoard.",
+    "outlook": "Fear & Greed at 29 signals an oversold market that could bounce, but dividend\u2011focused opportunities remain limited until cash builds.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -181,6 +209,10 @@
     {
       "timestamp": "2026-05-20T19:38:50Z",
       "value": 10079.67
+    },
+    {
+      "timestamp": "2026-05-21T13:38:28Z",
+      "value": 10072.94
     }
   ]
 }

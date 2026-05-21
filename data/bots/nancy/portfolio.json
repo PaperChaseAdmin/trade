@@ -1,43 +1,71 @@
 {
   "cash": 548.49,
-  "total_value": 10475.82,
+  "total_value": 10482.99,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 222.6304
+      "current_price": 221.86
     },
     "INTC": {
       "shares": 31,
-      "current_price": 118.41,
+      "current_price": 117.235,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 729.29
+      "current_price": 743.08
     }
   },
-  "total_return_pct": 4.76,
+  "total_return_pct": 4.83,
   "total_return_usd": 0.0,
-  "today_pnl": 23.14,
-  "today_pnl_pct": 0.22,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 4,
-  "today_start_value": 10452.68,
-  "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T19:34:14Z",
+  "today_start_value": 10482.99,
+  "today_date": "2026-05-21",
+  "last_action": "Market remains fearful with low Fear & Greed index, but semiconductor news could spark short-term rebounds.",
+  "last_updated": "2026-05-21T13:32:47Z",
   "last_session": {
-    "at": "2026-05-20T19:34:14Z",
-    "fear_greed": 27,
+    "at": "2026-05-21T13:32:47Z",
+    "fear_greed": 29,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.97,
-    "vix": 17.45,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 1.08,
+    "vix": 17.67,
+    "top_movers": [
+      [
+        "CRM",
+        -3.4
+      ],
+      [
+        "INTC",
+        -1.25
+      ],
+      [
+        "GOOGL",
+        -1.15
+      ],
+      [
+        "MU",
+        0.99
+      ],
+      [
+        "META",
+        -0.97
+      ],
+      [
+        "AMZN",
+        -0.94
+      ]
+    ],
+    "news_read": [
+      "Nvidia says it has \u2018largely conceded\u2019 China\u2019s AI chip market to Huawei",
+      "Oil prices jump more than 3% after Iran supreme leader says uranium must remain in country"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Cash reserve is $548.49, requiring at least $500 to be kept, leaving only $48.49 available\u2014insufficient to purchase a full share of any watchlist stock priced above $100. Nancy's instinct to buy on semiconductor news is tempered by liquidity constraints, so she will hold current positions and monitor for price dips that enable affordable entry.",
+    "outlook": "Market remains fearful with low Fear & Greed index, but semiconductor news could spark short-term rebounds.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -156,6 +184,10 @@
     {
       "timestamp": "2026-05-20T19:34:14Z",
       "value": 10475.82
+    },
+    {
+      "timestamp": "2026-05-21T13:32:47Z",
+      "value": 10482.99
     }
   ]
 }

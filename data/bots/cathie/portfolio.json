@@ -1,53 +1,84 @@
 {
   "cash": 500.22,
-  "total_value": 10122.51,
+  "total_value": 9985.66,
   "positions": {
     "TSLA": {
       "shares": 7,
       "avg_cost": 408.21,
-      "current_price": 413.21
+      "current_price": 422.48
     },
     "COIN": {
       "shares": 16,
       "avg_cost": 185.6124,
-      "current_price": 193.49
+      "current_price": 188.6999
     },
     "NTLA": {
       "shares": 241,
-      "current_price": 12.435,
+      "current_price": 11.94,
       "avg_cost": 12.6113
     },
     "BEAM": {
       "shares": 23,
       "avg_cost": 27.08,
-      "current_price": 27.24
+      "current_price": 26.99
     },
     "PACB": {
       "shares": 9,
       "avg_cost": 1.15,
-      "current_price": 1.18
+      "current_price": 1.175
     }
   },
-  "total_return_pct": 1.23,
+  "total_return_pct": -0.14,
   "total_return_usd": 0.0,
-  "today_pnl": 190.77,
-  "today_pnl_pct": 1.92,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 9931.74,
-  "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T19:34:14Z",
+  "today_start_value": 9985.66,
+  "today_date": "2026-05-21",
+  "last_action": "Despite short-term fear, disruptive innovation trends remain intact and long-term upside persists.",
+  "last_updated": "2026-05-21T13:33:39Z",
   "last_session": {
-    "at": "2026-05-20T19:34:14Z",
-    "fear_greed": 27,
+    "at": "2026-05-21T13:33:39Z",
+    "fear_greed": 29,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.97,
-    "vix": 17.45,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 1.08,
+    "vix": 17.67,
+    "top_movers": [
+      [
+        "RKLB",
+        -6.62
+      ],
+      [
+        "BEAM",
+        -3.54
+      ],
+      [
+        "NTLA",
+        -2.77
+      ],
+      [
+        "PATH",
+        -2.69
+      ],
+      [
+        "CRSP",
+        -2.42
+      ],
+      [
+        "RXRX",
+        -2.03
+      ]
+    ],
+    "news_read": [
+      "Oil prices jump more than 3% after Iran supreme leader says uranium must remain in country",
+      "Retail investors get direct access to SpaceX IPO through major brokerage platforms",
+      "Nvidia says it has \u2018largely conceded\u2019 China\u2019s AI chip market to Huawei",
+      "Iran reviews U.S. peace proposal as Trump says he\u2019s willing to wait 'a few days'",
+      "Quantum stocks soar as U.S. reportedly plans $2 billion \u2018award\u2019 and taking equity stakes"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index at 29 indicates extreme fear, with several watchlist stocks down sharply (RKLB -6.6%, BEAM -3.5%, NTLA -2.8%). Cash is just above the $500 reserve at $500.22, leaving insufficient capital to buy any shares without violating the reserve rule. I will wait for either a cash inflow from position gains or further price declines to add to my high-conviction holdings like TSLA, COIN, and the genomics names.",
+    "outlook": "Despite short-term fear, disruptive innovation trends remain intact and long-term upside persists.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -166,6 +197,10 @@
     {
       "timestamp": "2026-05-20T19:34:14Z",
       "value": 10122.51
+    },
+    {
+      "timestamp": "2026-05-21T13:33:39Z",
+      "value": 9985.66
     }
   ]
 }

@@ -1,53 +1,81 @@
 {
   "cash": 1068.29,
-  "total_value": 10195.52,
+  "total_value": 10165.4,
   "positions": {
     "BAC": {
       "shares": 49,
       "avg_cost": 50.545,
-      "current_price": 51.305
+      "current_price": 50.83
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 300.69,
-      "current_price": 302.4999
+      "current_price": 300.61
     },
     "GS": {
       "shares": 2,
       "avg_cost": 928.01,
-      "current_price": 979.65
+      "current_price": 985.275
     },
     "COF": {
       "shares": 10,
       "avg_cost": 183.14,
-      "current_price": 185.905
+      "current_price": 186.0
     },
     "C": {
       "shares": 3,
       "avg_cost": 120.69,
-      "current_price": 124.98
+      "current_price": 123.67
     }
   },
-  "total_return_pct": 1.96,
+  "total_return_pct": 1.65,
   "total_return_usd": 0.0,
-  "today_pnl": 188.2,
-  "today_pnl_pct": 1.88,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 5,
-  "today_start_value": 10007.32,
-  "today_date": "2026-05-20",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-20T19:35:46Z",
+  "today_start_value": 10165.4,
+  "today_date": "2026-05-21",
+  "last_action": "Despite current fear, rising interest rates should bolster bank earnings, suggesting a cautious upside for financials.",
+  "last_updated": "2026-05-21T13:35:47Z",
   "last_session": {
-    "at": "2026-05-20T19:35:46Z",
-    "fear_greed": 27,
+    "at": "2026-05-21T13:35:47Z",
+    "fear_greed": 29,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.97,
-    "vix": 17.45,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 1.08,
+    "vix": 17.67,
+    "top_movers": [
+      [
+        "C",
+        -0.92
+      ],
+      [
+        "COF",
+        -0.66
+      ],
+      [
+        "GS",
+        0.55
+      ],
+      [
+        "BAC",
+        -0.49
+      ],
+      [
+        "TRV",
+        -0.49
+      ],
+      [
+        "WFC",
+        -0.46
+      ]
+    ],
+    "news_read": [
+      "Stablecoins retain the edge over tokenized money market funds, JPMorgan says",
+      "Oil prices jump more than 3% after Iran supreme leader says uranium must remain in country"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "I noted BAC's -0.49% decline today, the lowest price among watchlist banks, and the Fear & Greed index at 29 indicating oversold conditions. With cash above the $1,000 reserve, I could afford one share to add to my bank exposure without breaching risk limits. Going forward, I'll monitor Fed rate cues and any further pullbacks in JPM or WFC for additional opportunistic buys.",
+    "outlook": "Despite current fear, rising interest rates should bolster bank earnings, suggesting a cautious upside for financials.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -166,6 +194,10 @@
     {
       "timestamp": "2026-05-20T19:35:46Z",
       "value": 10195.52
+    },
+    {
+      "timestamp": "2026-05-21T13:35:47Z",
+      "value": 10165.4
     }
   ]
 }
