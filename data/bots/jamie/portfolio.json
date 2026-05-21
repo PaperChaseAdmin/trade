@@ -1,53 +1,82 @@
 {
   "cash": 1068.29,
-  "total_value": 10112.77,
+  "total_value": 10177.32,
   "positions": {
     "BAC": {
       "shares": 49,
       "avg_cost": 50.545,
-      "current_price": 50.795
+      "current_price": 51.1598
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 300.69,
-      "current_price": 301.14
+      "current_price": 302.34
     },
     "GS": {
       "shares": 2,
       "avg_cost": 928.01,
-      "current_price": 973.615
+      "current_price": 981.48
     },
     "COF": {
       "shares": 10,
       "avg_cost": 183.14,
-      "current_price": 182.89
+      "current_price": 184.69
     },
     "C": {
       "shares": 3,
       "avg_cost": 120.69,
-      "current_price": 123.425
+      "current_price": 124.54
     }
   },
-  "total_return_pct": 1.13,
+  "total_return_pct": 1.77,
   "total_return_usd": 0.0,
-  "today_pnl": -52.63,
-  "today_pnl_pct": -0.52,
+  "today_pnl": 11.92,
+  "today_pnl_pct": 0.12,
   "total_trades": 5,
   "today_start_value": 10165.4,
   "today_date": "2026-05-21",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-21T17:05:57Z",
+  "last_action": "Markets showing mild fear (29) but S&P slightly up with low VIX suggests underlying stability; holding steady with bank positions.",
+  "last_updated": "2026-05-21T17:36:06Z",
   "last_session": {
-    "at": "2026-05-21T17:05:57Z",
+    "at": "2026-05-21T17:36:06Z",
     "fear_greed": 29,
     "fear_greed_label": "Fear",
-    "sp500_change": -0.43,
-    "vix": 17.21,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.11,
+    "vix": 17.08,
+    "top_movers": [
+      [
+        "MET",
+        1.44
+      ],
+      [
+        "COF",
+        -1.3
+      ],
+      [
+        "PRU",
+        0.98
+      ],
+      [
+        "PGR",
+        -0.65
+      ],
+      [
+        "MS",
+        0.53
+      ],
+      [
+        "MA",
+        0.46
+      ]
+    ],
+    "news_read": [
+      "More states are offering caregiver tax credits for families \u2014 but they only offset a fraction of expenses",
+      "MoonPay expands into tokenized assets and DeFi markets with new platform for banks",
+      "Trump postpones AI executive order signing: 'I didn't like certain aspects'"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "With only $68.29 usable cash after maintaining the $1000 reserve requirement, no watchlist stocks are affordable at current prices (MET $83.70, PRU $104.24, MS $198.79). My bank-heavy portfolio (BAC, JPM, GS, C, COF) is well-positioned for any rate environment. The insurance names on watchlist (MET +1.4%, PRU +1.0%) are interesting but too expensive to add to given cash constraints. Watching for pullbacks in payment networks V/MA or further weakness in regional banks like WFC.",
+    "outlook": "Markets showing mild fear (29) but S&P slightly up with low VIX suggests underlying stability; holding steady with bank positions.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -198,6 +227,10 @@
     {
       "timestamp": "2026-05-21T17:05:57Z",
       "value": 10112.77
+    },
+    {
+      "timestamp": "2026-05-21T17:36:06Z",
+      "value": 10177.32
     }
   ]
 }
