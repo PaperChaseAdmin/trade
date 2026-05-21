@@ -71,6 +71,24 @@
         "ticker_chg_pct": -0.47,
         "trigger_news": "30-year Treasury yield tops 5.19%, highest since before the financial crisis"
       }
+    },
+    {
+      "action": "BUY",
+      "ticker": "TLT",
+      "shares": 6,
+      "price": 83.8,
+      "total_value": 502.8,
+      "reasoning": "Fear index at 29 indicates elevated market fear; adding to bond position (currently 14.3%, target ~20%) aligns with All Weather recession hedging strategy",
+      "timestamp": "2026-05-21T17:04:06Z",
+      "market_outlook": "With Fear at 29, VIX normal at 17.2, and equities selling off slightly, bonds offer defensive positioning in an uncertain macro environment.",
+      "signal_context": {
+        "fg_value": 29,
+        "fg_label": "Fear",
+        "sp500_chg": -0.43,
+        "vix": 17.21,
+        "ticker_chg_pct": -0.14,
+        "trigger_news": "Trump postpones AI executive order signing: 'I didn't like certain aspects'"
+      }
     }
   ],
   "total_trades": 0,
