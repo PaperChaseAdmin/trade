@@ -1,62 +1,62 @@
 {
   "cash": 548.49,
-  "total_value": 10482.99,
+  "total_value": 10582.6,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 221.86
+      "current_price": 223.185
     },
     "INTC": {
       "shares": 31,
-      "current_price": 117.235,
+      "current_price": 117.2883,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 743.08
+      "current_price": 762.6
     }
   },
-  "total_return_pct": 4.83,
+  "total_return_pct": 5.83,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 99.61,
+  "today_pnl_pct": 0.95,
   "total_trades": 4,
   "today_start_value": 10482.99,
   "today_date": "2026-05-21",
-  "last_action": "Market remains fearful with low Fear & Greed index, but semiconductor news could spark short-term rebounds.",
-  "last_updated": "2026-05-21T13:32:47Z",
+  "last_action": "Market remains fearful with semiconductor stocks showing mixed momentum, but limited cash prevents new positions.",
+  "last_updated": "2026-05-21T14:02:47Z",
   "last_session": {
-    "at": "2026-05-21T13:32:47Z",
+    "at": "2026-05-21T14:02:47Z",
     "fear_greed": 29,
     "fear_greed_label": "Fear",
-    "sp500_change": 1.08,
-    "vix": 17.67,
+    "sp500_change": -0.49,
+    "vix": 17.68,
     "top_movers": [
       [
-        "CRM",
-        -3.4
-      ],
-      [
-        "INTC",
-        -1.25
-      ],
-      [
-        "GOOGL",
-        -1.15
-      ],
-      [
         "MU",
-        0.99
+        4.15
+      ],
+      [
+        "CRM",
+        -3.5
+      ],
+      [
+        "QCOM",
+        2.9
+      ],
+      [
+        "LRCX",
+        2.03
       ],
       [
         "META",
-        -0.97
+        -1.61
       ],
       [
-        "AMZN",
-        -0.94
+        "INTC",
+        -1.49
       ]
     ],
     "news_read": [
@@ -64,8 +64,8 @@
       "Oil prices jump more than 3% after Iran supreme leader says uranium must remain in country"
     ],
     "domain_extra": "",
-    "ai_analysis": "Cash reserve is $548.49, requiring at least $500 to be kept, leaving only $48.49 available\u2014insufficient to purchase a full share of any watchlist stock priced above $100. Nancy's instinct to buy on semiconductor news is tempered by liquidity constraints, so she will hold current positions and monitor for price dips that enable affordable entry.",
-    "outlook": "Market remains fearful with low Fear & Greed index, but semiconductor news could spark short-term rebounds.",
+    "ai_analysis": "MU leads watchlist with +4.15% gain, QCOM +2.9% and LRCX +2.03% show strength, while NVDA's concession of China AI chip market to Huawei weighs on sentiment. Fear & Greed at 29 and S&P down -0.49% reflect risk-off environment. With only $48.49 available after maintaining the $500 cash reserve, no full share can be purchased, so we hold current positions and watch for further cash inflows or price dips.",
+    "outlook": "Market remains fearful with semiconductor stocks showing mixed momentum, but limited cash prevents new positions.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -188,6 +188,10 @@
     {
       "timestamp": "2026-05-21T13:32:47Z",
       "value": 10482.99
+    },
+    {
+      "timestamp": "2026-05-21T14:02:47Z",
+      "value": 10582.6
     }
   ]
 }
