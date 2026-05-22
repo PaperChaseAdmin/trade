@@ -1,53 +1,84 @@
 {
   "cash": 500.22,
-  "total_value": 10157.31,
+  "total_value": 10232.08,
   "positions": {
     "TSLA": {
       "shares": 7,
       "avg_cost": 408.21,
-      "current_price": 418.4699
+      "current_price": 423.9744
     },
     "COIN": {
       "shares": 16,
       "avg_cost": 185.6124,
-      "current_price": 193.98
+      "current_price": 193.93
     },
     "NTLA": {
       "shares": 241,
-      "current_price": 12.36,
+      "current_price": 12.48,
       "avg_cost": 12.6113
     },
     "BEAM": {
       "shares": 23,
       "avg_cost": 27.08,
-      "current_price": 27.57
+      "current_price": 27.92
     },
     "PACB": {
       "shares": 9,
       "avg_cost": 1.15,
-      "current_price": 1.25
+      "current_price": 1.2575
     }
   },
-  "total_return_pct": 1.57,
+  "total_return_pct": 2.32,
   "total_return_usd": 0.0,
-  "today_pnl": 171.65,
-  "today_pnl_pct": 1.72,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 9985.66,
-  "today_date": "2026-05-21",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-21T19:32:33Z",
+  "today_start_value": 10232.08,
+  "today_date": "2026-05-22",
+  "last_action": "Market remains fearful with low cash buffer, but disruptive innovation stocks show mixed momentum, suggesting a cautious stance.",
+  "last_updated": "2026-05-22T13:32:24Z",
   "last_session": {
-    "at": "2026-05-21T19:32:33Z",
-    "fear_greed": 29,
+    "at": "2026-05-22T13:32:24Z",
+    "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.15,
-    "vix": 16.99,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.17,
+    "vix": 16.68,
+    "top_movers": [
+      [
+        "RKLB",
+        6.75
+      ],
+      [
+        "PATH",
+        2.84
+      ],
+      [
+        "AFRM",
+        2.34
+      ],
+      [
+        "TWLO",
+        1.75
+      ],
+      [
+        "NTLA",
+        1.7
+      ],
+      [
+        "TSLA",
+        1.53
+      ]
+    ],
+    "news_read": [
+      "Trump said he'd 'remember' companies that didn't apply for tariff refunds. Many of them are anyway",
+      "U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls",
+      "Microsoft\u2019s GitHub was positioned to win the AI coding race. Outages got in the way",
+      "Oversight Chairman Comer launches congressional probe into insider trading on Kalshi, Polymarket",
+      "Iran war leaves U.S. gas prices at highest levels in nearly four years ahead of Memorial Day"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Fear & Greed index at 28 indicates extreme fear, yet RKLB surged +6.8% and PATH +2.8% on positive news, while TSLA modestly up +1.5%. With only $0.22 of excess cash above the $500 reserve, any purchase would breach the cash constraint, so I refrained from buying. I will watch for a pullback in high-conviction names like TSLA or COIN to deploy capital once cash buffer improves.",
+    "outlook": "Market remains fearful with low cash buffer, but disruptive innovation stocks show mixed momentum, suggesting a cautious stance.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -222,6 +253,10 @@
     {
       "timestamp": "2026-05-21T19:32:33Z",
       "value": 10157.31
+    },
+    {
+      "timestamp": "2026-05-22T13:32:24Z",
+      "value": 10232.08
     }
   ]
 }
