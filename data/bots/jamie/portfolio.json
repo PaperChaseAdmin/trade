@@ -1,53 +1,83 @@
 {
   "cash": 1068.29,
-  "total_value": 10303.98,
+  "total_value": 10288.52,
   "positions": {
     "BAC": {
       "shares": 49,
       "avg_cost": 50.545,
-      "current_price": 52.0
+      "current_price": 51.805
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 300.69,
-      "current_price": 305.74
+      "current_price": 304.635
     },
     "GS": {
       "shares": 2,
       "avg_cost": 928.01,
-      "current_price": 997.835
+      "current_price": 997.94
     },
     "COF": {
       "shares": 10,
       "avg_cost": 183.14,
-      "current_price": 187.05
+      "current_price": 187.33
     },
     "C": {
       "shares": 3,
       "avg_cost": 120.69,
-      "current_price": 125.2
+      "current_price": 125.175
     }
   },
-  "total_return_pct": 3.04,
+  "total_return_pct": 2.89,
   "total_return_usd": 0.0,
-  "today_pnl": -5.67,
-  "today_pnl_pct": -0.05,
+  "today_pnl": -21.13,
+  "today_pnl_pct": -0.2,
   "total_trades": 5,
   "today_start_value": 10309.65,
   "today_date": "2026-05-22",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-22T14:04:15Z",
+  "last_action": "Despite today's modest S&P gain, persistent fear and inflation worries suggest caution, but bank fundamentals remain supportive if rates stay steady.",
+  "last_updated": "2026-05-22T14:33:41Z",
   "last_session": {
-    "at": "2026-05-22T14:04:15Z",
+    "at": "2026-05-22T14:33:41Z",
     "fear_greed": 28,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.57,
-    "vix": 16.8,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.37,
+    "vix": 16.89,
+    "top_movers": [
+      [
+        "GS",
+        0.99
+      ],
+      [
+        "MET",
+        0.76
+      ],
+      [
+        "MS",
+        0.69
+      ],
+      [
+        "BRK-B",
+        0.68
+      ],
+      [
+        "BAC",
+        0.57
+      ],
+      [
+        "JPM",
+        0.56
+      ]
+    ],
+    "news_read": [
+      "Consumer sentiment hits fresh record low in May as Iran war fuels inflation worries",
+      "Trump defends DOJ fund after Senate Republicans push back",
+      "Iran war leaves U.S. gas prices at highest levels in nearly four years ahead of Memorial Day",
+      "Trump said he'd 'remember' companies that didn't apply for tariff refunds. Many of them are anyway"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index is at 28 (Fear) and VIX sits at 16.89, while the S&P 500 rose only 0.37% today. Top movers on the watchlist were GS +1.0%, MET +0.8%, MS +0.7%, BRK-B +0.6%, BAC +0.6%, and JPM +0.6%, reflecting mixed bank sentiment amid Iran\u2011war inflation worries and record\u2011low consumer sentiment. With $1068.29 cash, I must keep at least $1000 reserve, leaving only $68.29 for purchases; no watchlist stock trades below that price per share, so I cannot buy without breaching the cash rule and will wait for a deeper dip or more cash before adding to bank positions.",
+    "outlook": "Despite today's modest S&P gain, persistent fear and inflation worries suggest caution, but bank fundamentals remain supportive if rates stay steady.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -230,6 +260,10 @@
     {
       "timestamp": "2026-05-22T14:04:15Z",
       "value": 10303.98
+    },
+    {
+      "timestamp": "2026-05-22T14:33:41Z",
+      "value": 10288.52
     }
   ]
 }
