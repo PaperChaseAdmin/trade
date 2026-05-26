@@ -1,49 +1,85 @@
 {
-  "cash": 2443.8,
-  "total_value": 10100.9,
+  "cash": 2519.31,
+  "total_value": 10076.96,
   "positions": {
     "TSLA": {
       "shares": 8,
       "avg_cost": 408.21,
-      "current_price": 430.79
+      "current_price": 430.32
     },
     "NVDA": {
       "shares": 8,
       "avg_cost": 221.42,
-      "current_price": 216.3
+      "current_price": 215.46
     },
     "PLTR": {
       "shares": 10,
       "avg_cost": 135.54,
-      "current_price": 136.51
+      "current_price": 134.87
     },
     "COIN": {
-      "shares": 6,
+      "shares": 3,
       "avg_cost": 193.96,
-      "current_price": 185.88
+      "current_price": 186.37
+    },
+    "SOFI": {
+      "shares": 30,
+      "avg_cost": 16.12,
+      "current_price": 16.12
     }
   },
-  "total_return_pct": 1.01,
+  "total_return_pct": 0.77,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
-  "total_trades": 4,
+  "today_pnl": -23.94,
+  "today_pnl_pct": -0.24,
+  "total_trades": 6,
   "today_start_value": 10100.9,
   "today_date": "2026-05-26",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-26T13:33:00Z",
+  "last_action": "Fear index at 34 signals cautious opportunity - not extreme fear yet but enough to add to quality tech on dips while VIX remains low at 16.91",
+  "last_updated": "2026-05-26T14:04:39Z",
   "last_session": {
-    "at": "2026-05-26T13:33:00Z",
+    "at": "2026-05-26T14:04:39Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.37,
-    "vix": 16.78,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.7,
+    "vix": 16.91,
+    "top_movers": [
+      [
+        "AMD",
+        5.66
+      ],
+      [
+        "RBLX",
+        -4.63
+      ],
+      [
+        "SOFI",
+        3.26
+      ],
+      [
+        "IONQ",
+        -2.64
+      ],
+      [
+        "MSTR",
+        2.6
+      ],
+      [
+        "RIVN",
+        2.4
+      ]
+    ],
+    "news_read": [
+      "BP shares fall after board removes chairman Albert Manifold over 'serious\u2019 conduct concerns",
+      "\u2018The market has spoken\u2019: Ferrari shares fall after carmaker unveils first fully electric vehicle",
+      "Russia tells Marco Rubio U.S. citizens should leave Kyiv ahead of 'systematic' strikes on Ukrainian capital",
+      "Investors \u2018afraid\u2019 to take position on oil, data chiefs say as tankers face potential Hormuz fees",
+      "U.S. conducts 'self-defense strikes' in Iran as Trump pushes for peace deal"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Noticed AMD ripping +5.66% but too late to chase; COIN has been a drag so cutting half position to redeploy. SOFI fits my fintech/disruption theme and showing relative strength today. Keeping $500+ reserve and staying under 35% per stock. Watching if Fear drops below 25 for more aggressive dip buying.",
+    "outlook": "Fear index at 34 signals cautious opportunity - not extreme fear yet but enough to add to quality tech on dips while VIX remains low at 16.91",
+    "trades_made": 2
   },
   "portfolio_history": [
     {
@@ -253,6 +289,10 @@
     {
       "timestamp": "2026-05-26T13:33:00Z",
       "value": 10100.9
+    },
+    {
+      "timestamp": "2026-05-26T14:04:39Z",
+      "value": 10076.96
     }
   ]
 }
