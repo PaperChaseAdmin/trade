@@ -1,38 +1,68 @@
 {
   "cash": 502.34,
-  "total_value": 10067.68,
+  "total_value": 10059.74,
   "positions": {
     "TLT": {
       "shares": 59,
-      "current_price": 85.02,
+      "current_price": 84.975,
       "avg_cost": 83.5269
     },
     "GLD": {
       "shares": 11,
-      "current_price": 413.56,
+      "current_price": 413.08,
       "avg_cost": 415.4155
     }
   },
-  "total_return_pct": 0.68,
+  "total_return_pct": 0.6,
   "total_return_usd": 0.0,
-  "today_pnl": -40.84,
-  "today_pnl_pct": -0.4,
+  "today_pnl": -48.78,
+  "today_pnl_pct": -0.48,
   "total_trades": 4,
   "today_start_value": 10108.52,
   "today_date": "2026-05-26",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-26T17:05:32Z",
+  "last_action": "Market showing classic divergence - low VIX (17.1) but Fear & Greed at 34 with narrow tech-led rally while bonds hold gains, suggesting smart money positioning for trouble ahead.",
+  "last_updated": "2026-05-26T17:35:23Z",
   "last_session": {
-    "at": "2026-05-26T17:05:32Z",
+    "at": "2026-05-26T17:35:23Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.47,
-    "vix": 16.98,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.46,
+    "vix": 17.12,
+    "top_movers": [
+      [
+        "EEM",
+        3.33
+      ],
+      [
+        "XLE",
+        -1.89
+      ],
+      [
+        "AMZN",
+        -1.54
+      ],
+      [
+        "TSLA",
+        1.48
+      ],
+      [
+        "QQQ",
+        1.4
+      ],
+      [
+        "NVDA",
+        -0.82
+      ]
+    ],
+    "news_read": [
+      "Micron hits $1 trillion market cap for the first time as stock surges 18%",
+      "Trump to host Cabinet meeting at Camp David on Wednesday as Iran talks continue",
+      "American Airlines picks SpaceX's Starlink for in-flight Wi-Fi on more than 500 planes",
+      "Judges block Alabama redistricting maps that would dilute Black vote in midterms"
+    ],
+    "domain_extra": "MACRO: NASDAQ +0.89%  DOW -0.31%  VIX 17.1 (NORMAL)",
+    "ai_analysis": "EEM's 3.3% surge and QQQ's 1.4% gain mask weakness in DOW (-0.31%), XLE (-1.89%), and AMZN (-1.54%) - this is thin breadth typical of false breakouts. My TLT position is profitable and GLD provides systemic hedge; with only $502 cash I lack ammunition for a George-sized bet until I see clearer signal. Watching UUP closely - dollar weakness could trigger the gold/bond rally I've been positioning for. Will add heavily to either TLT or GLD on any meaningful pullback.",
+    "outlook": "Market showing classic divergence - low VIX (17.1) but Fear & Greed at 34 with narrow tech-led rally while bonds hold gains, suggesting smart money positioning for trouble ahead.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -271,6 +301,10 @@
     {
       "timestamp": "2026-05-26T17:05:32Z",
       "value": 10067.68
+    },
+    {
+      "timestamp": "2026-05-26T17:35:23Z",
+      "value": 10059.74
     }
   ]
 }
