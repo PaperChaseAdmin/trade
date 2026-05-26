@@ -1,43 +1,73 @@
 {
   "cash": 4706.28,
-  "total_value": 10006.02,
+  "total_value": 9999.6,
   "positions": {
     "GLD": {
       "shares": 4,
       "avg_cost": 419.57,
-      "current_price": 413.08
+      "current_price": 412.27
     },
     "TLT": {
       "shares": 23,
-      "current_price": 84.975,
+      "current_price": 84.98,
       "avg_cost": 83.6059
     },
     "IAU": {
       "shares": 20,
       "avg_cost": 84.6252,
-      "current_price": 84.65
+      "current_price": 84.485
     }
   },
-  "total_return_pct": 0.06,
+  "total_return_pct": -0.0,
   "total_return_usd": 0.0,
-  "today_pnl": -28.49,
-  "today_pnl_pct": -0.28,
+  "today_pnl": -34.91,
+  "today_pnl_pct": -0.35,
   "total_trades": 5,
   "today_start_value": 10034.51,
   "today_date": "2026-05-26",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-26T17:34:04Z",
+  "last_action": "Market in Fear (34) with normal VIX (17.1) and slight S&P gain; no compelling entry points given current allocations and All Weather positioning.",
+  "last_updated": "2026-05-26T18:04:06Z",
   "last_session": {
-    "at": "2026-05-26T17:34:04Z",
+    "at": "2026-05-26T18:04:06Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.46,
-    "vix": 17.12,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.45,
+    "vix": 17.1,
+    "top_movers": [
+      [
+        "TIPS",
+        25.0
+      ],
+      [
+        "GDX",
+        3.66
+      ],
+      [
+        "EEM",
+        3.42
+      ],
+      [
+        "VWO",
+        1.89
+      ],
+      [
+        "GSG",
+        -1.86
+      ],
+      [
+        "PDBC",
+        -1.37
+      ]
+    ],
+    "news_read": [
+      "Micron hits $1 trillion market cap for the first time as stock surges 18%",
+      "Trump to host Cabinet meeting at Camp David on Wednesday as Iran talks continue",
+      "American Airlines picks SpaceX's Starlink for in-flight Wi-Fi on more than 500 planes",
+      "Cornyn and Paxton go head-to-head in Texas Republican Senate primary after Trump endorsement"
+    ],
+    "domain_extra": "MACRO: NASDAQ +0.89%  DOW -0.39%  VIX 17.1 (NORMAL)",
+    "ai_analysis": "My three positions (GLD 16.5%, TLT 19.5%, IAU 16.9%) are already well-balanced across gold and bonds for inflation/recession protection, and adding more would exceed the 20% limit on TLT. TIPS jumped 25% but the price appears erroneous at 0.0005, making it untradeable. Emerging markets (EEM +3.4%, VWO +1.9%) are attractive but would require selling existing positions to stay within limits. Holding cash (47%) provides dry powder for when economic cycle shifts become clearer.",
+    "outlook": "Market in Fear (34) with normal VIX (17.1) and slight S&P gain; no compelling entry points given current allocations and All Weather positioning.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -280,6 +310,10 @@
     {
       "timestamp": "2026-05-26T17:34:04Z",
       "value": 10006.02
+    },
+    {
+      "timestamp": "2026-05-26T18:04:06Z",
+      "value": 9999.6
     }
   ]
 }
