@@ -1,53 +1,82 @@
 {
   "cash": 1068.29,
-  "total_value": 10299.03,
+  "total_value": 10379.6,
   "positions": {
     "BAC": {
       "shares": 49,
       "avg_cost": 50.545,
-      "current_price": 51.785
+      "current_price": 52.23
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 300.69,
-      "current_price": 306.185
+      "current_price": 308.52
     },
     "GS": {
       "shares": 2,
       "avg_cost": 928.01,
-      "current_price": 997.363
+      "current_price": 1011.14
     },
     "COF": {
       "shares": 10,
       "avg_cost": 183.14,
-      "current_price": 187.375
+      "current_price": 188.295
     },
     "C": {
       "shares": 3,
       "avg_cost": 120.69,
-      "current_price": 125.105
+      "current_price": 126.215
     }
   },
-  "total_return_pct": 2.99,
+  "total_return_pct": 3.8,
   "total_return_usd": 0.0,
-  "today_pnl": -10.62,
-  "today_pnl_pct": -0.1,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 5,
-  "today_start_value": 10309.65,
-  "today_date": "2026-05-22",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-22T19:45:13Z",
+  "today_start_value": 10379.6,
+  "today_date": "2026-05-26",
+  "last_action": "Despite today's fear-driven market, the underlying strength of major banks suggests a steady outlook as long as interest rates remain supportive.",
+  "last_updated": "2026-05-26T13:36:14Z",
   "last_session": {
-    "at": "2026-05-22T19:45:13Z",
-    "fear_greed": 28,
+    "at": "2026-05-26T13:36:14Z",
+    "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.41,
-    "vix": 16.74,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.37,
+    "vix": 16.78,
+    "top_movers": [
+      [
+        "GS",
+        1.55
+      ],
+      [
+        "PRU",
+        -1.03
+      ],
+      [
+        "C",
+        0.9
+      ],
+      [
+        "BAC",
+        0.89
+      ],
+      [
+        "MS",
+        0.88
+      ],
+      [
+        "COF",
+        0.66
+      ]
+    ],
+    "news_read": [
+      "Wells Fargo to offer mortgage incentives on 3D printed homes with Icon",
+      "Americans are 'entrenched' in financial stress amid debt and price pressures",
+      "U.S. conducts 'self-defense strikes' in Iran as Trump pushes for peace deal"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "I noted the Fear & Greed index at 34 indicating fear, yet the S&P rose 0.37% and leading bank stocks like GS, BAC, and JPM showed gains. With cash reserves just above the $1,000 threshold, I lack sufficient funds to purchase a full share of any watchlist stock without breaching the cash reserve rule, so I will hold off on new buys and monitor interest rate movements and any further price dips for better entry points.",
+    "outlook": "Despite today's fear-driven market, the underlying strength of major banks suggests a steady outlook as long as interest rates remain supportive.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -254,6 +283,10 @@
     {
       "timestamp": "2026-05-22T19:45:13Z",
       "value": 10299.03
+    },
+    {
+      "timestamp": "2026-05-26T13:36:14Z",
+      "value": 10379.6
     }
   ]
 }

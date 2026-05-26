@@ -1,43 +1,73 @@
 {
   "cash": 548.49,
-  "total_value": 10535.56,
+  "total_value": 10881.46,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 215.47
+      "current_price": 216.3
     },
     "INTC": {
       "shares": 31,
-      "current_price": 119.7,
+      "current_price": 122.57,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 761.08
+      "current_price": 822.2
     }
   },
-  "total_return_pct": 5.36,
+  "total_return_pct": 8.81,
   "total_return_usd": 0.0,
-  "today_pnl": -39.37,
-  "today_pnl_pct": -0.37,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 4,
-  "today_start_value": 10574.93,
-  "today_date": "2026-05-22",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-22T19:44:27Z",
+  "today_start_value": 10881.46,
+  "today_date": "2026-05-26",
+  "last_action": "Semiconductor momentum remains strong despite overall market fear, presenting selective buying opportunities once cash allows.",
+  "last_updated": "2026-05-26T13:32:30Z",
   "last_session": {
-    "at": "2026-05-22T19:44:27Z",
-    "fear_greed": 28,
+    "at": "2026-05-26T13:32:30Z",
+    "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.41,
-    "vix": 16.74,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.37,
+    "vix": 16.78,
+    "top_movers": [
+      [
+        "MU",
+        9.41
+      ],
+      [
+        "AMD",
+        3.84
+      ],
+      [
+        "AMAT",
+        3.17
+      ],
+      [
+        "LRCX",
+        3.08
+      ],
+      [
+        "INTC",
+        2.25
+      ],
+      [
+        "TSLA",
+        1.19
+      ]
+    ],
+    "news_read": [
+      "U.S. conducts 'self-defense strikes' in Iran as Trump pushes for peace deal",
+      "Dropbox CEO Drew Houston to step down after 19 years at helm of cloud storage pioneer",
+      "BP shares fall after board removes chairman Albert Manifold over 'serious\u2019 conduct concerns",
+      "\u2018The market has spoken\u2019: Ferrari shares fall after carmaker unveils first fully electric vehicle"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "MU led the watchlist with a 9.4% gain, followed by AMD, AMAT and LRCX all above 3%, while INTC added 2.2%; however, with only $548.49 cash and a $500 reserve requirement, no full shares can be purchased without breaching cash limits, so we hold off and watch for a pullback or additional funds to deploy into these high\u2011conviction tech names.",
+    "outlook": "Semiconductor momentum remains strong despite overall market fear, presenting selective buying opportunities once cash allows.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -244,6 +274,10 @@
     {
       "timestamp": "2026-05-22T19:44:27Z",
       "value": 10535.56
+    },
+    {
+      "timestamp": "2026-05-26T13:32:30Z",
+      "value": 10881.46
     }
   ]
 }
