@@ -1,68 +1,98 @@
 {
   "cash": 206.08,
-  "total_value": 10021.34,
+  "total_value": 10042.49,
   "positions": {
     "BTI": {
       "shares": 29,
       "avg_cost": 66.275,
-      "current_price": 64.7
+      "current_price": 64.85
     },
     "OHI": {
       "shares": 40,
       "avg_cost": 47.59,
-      "current_price": 48.19
+      "current_price": 48.315
     },
     "MAIN": {
       "shares": 20,
       "avg_cost": 50.63,
-      "current_price": 51.0071
+      "current_price": 51.16
     },
     "ARCC": {
       "shares": 50,
       "avg_cost": 18.895,
-      "current_price": 18.7951
+      "current_price": 18.8
     },
     "T": {
       "shares": 50,
       "avg_cost": 24.5551,
-      "current_price": 24.99
+      "current_price": 25.07
     },
     "ENB": {
       "shares": 20,
       "avg_cost": 56.3352,
-      "current_price": 57.0
+      "current_price": 56.905
     },
     "O": {
       "shares": 26,
       "avg_cost": 61.88,
-      "current_price": 62.07
+      "current_price": 62.31
     },
     "VZ": {
       "shares": 1,
       "avg_cost": 47.6602,
-      "current_price": 48.14
+      "current_price": 48.3
     }
   },
-  "total_return_pct": 0.21,
+  "total_return_pct": 0.42,
   "total_return_usd": 0.0,
-  "today_pnl": -30.55,
-  "today_pnl_pct": -0.3,
+  "today_pnl": -9.4,
+  "today_pnl_pct": -0.09,
   "total_trades": 8,
   "today_start_value": 10051.89,
   "today_date": "2026-05-26",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-26T15:38:39Z",
+  "last_action": "Fearful market (34) with low VIX (16.8) suggests caution - no compelling high-yield opportunities at attractive entry points today.",
+  "last_updated": "2026-05-26T16:09:53Z",
   "last_session": {
-    "at": "2026-05-26T15:38:39Z",
+    "at": "2026-05-26T16:09:53Z",
     "fear_greed": 34,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.62,
-    "vix": 16.81,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.46,
+    "vix": 16.8,
+    "top_movers": [
+      [
+        "MAIN",
+        3.1
+      ],
+      [
+        "PM",
+        -2.76
+      ],
+      [
+        "HTGC",
+        2.09
+      ],
+      [
+        "MO",
+        -2.02
+      ],
+      [
+        "ENB",
+        -1.96
+      ],
+      [
+        "IBM",
+        -1.58
+      ]
+    ],
+    "news_read": [
+      "Micron hits $1 trillion market cap for the first time as stock surges 18%",
+      "Trump to host Cabinet meeting at Camp David on Wednesday as Iran talks continue",
+      "American Airlines picks SpaceX's Starlink for in-flight Wi-Fi on more than 500 planes",
+      "Judges block Alabama districts that would dilute Black vote in 2026 congressional elections"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=34 (Fear) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "My cash reserve of $206.08 is too low to make meaningful purchases while maintaining the required $200 minimum. MAIN jumped +3.1% today making it less attractive for new buying. HTGC shows strong momentum (+2.1%) with a stellar 9.66% yield, but I need to accumulate more cash before adding positions. I'm holding all existing dividend payers as none have cut dividends - BTI, OHI, MAIN, ARCC, T, ENB, O, and VZ all continue paying. Will wait for either a pullback in a quality dividend stock or build cash position through upcoming dividend reinvestments.",
+    "outlook": "Fearful market (34) with low VIX (16.8) suggests caution - no compelling high-yield opportunities at attractive entry points today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -289,6 +319,10 @@
     {
       "timestamp": "2026-05-26T15:38:39Z",
       "value": 10021.34
+    },
+    {
+      "timestamp": "2026-05-26T16:09:53Z",
+      "value": 10042.49
     }
   ]
 }
