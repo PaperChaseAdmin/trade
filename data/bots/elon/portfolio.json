@@ -1,54 +1,90 @@
 {
-  "cash": 2519.31,
-  "total_value": 10084.75,
+  "cash": 1783.81,
+  "total_value": 10089.02,
   "positions": {
     "TSLA": {
       "shares": 8,
       "avg_cost": 408.21,
-      "current_price": 437.6
+      "current_price": 441.5
     },
     "NVDA": {
       "shares": 8,
       "avg_cost": 221.42,
-      "current_price": 210.0474
+      "current_price": 208.855
     },
     "PLTR": {
       "shares": 10,
       "avg_cost": 135.54,
-      "current_price": 135.39
+      "current_price": 134.12
     },
     "COIN": {
       "shares": 3,
       "avg_cost": 193.96,
-      "current_price": 177.96
+      "current_price": 177.64
     },
     "SOFI": {
       "shares": 30,
       "avg_cost": 16.12,
-      "current_price": 16.5493
+      "current_price": 16.425
+    },
+    "RIVN": {
+      "shares": 50,
+      "avg_cost": 14.71,
+      "current_price": 14.71
     }
   },
-  "total_return_pct": 0.85,
+  "total_return_pct": 0.89,
   "total_return_usd": 0.0,
-  "today_pnl": -21.43,
-  "today_pnl_pct": -0.21,
-  "total_trades": 6,
+  "today_pnl": -17.16,
+  "today_pnl_pct": -0.17,
+  "total_trades": 7,
   "today_start_value": 10106.18,
   "today_date": "2026-05-27",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-27T14:32:59Z",
+  "last_action": "Extreme Fear reading of 25 signals aggressive buying opportunity - stocks on sale, VIX low at 16.91 suggests panic isn't widespread yet",
+  "last_updated": "2026-05-27T15:03:26Z",
   "last_session": {
-    "at": "2026-05-27T14:32:59Z",
+    "at": "2026-05-27T15:03:26Z",
     "fear_greed": 25,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.07,
-    "vix": 16.87,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.0,
+    "vix": 16.91,
+    "top_movers": [
+      [
+        "MSTR",
+        -2.94
+      ],
+      [
+        "IONQ",
+        -2.87
+      ],
+      [
+        "NVDA",
+        -2.82
+      ],
+      [
+        "SOFI",
+        2.72
+      ],
+      [
+        "AMD",
+        -2.63
+      ],
+      [
+        "RIVN",
+        2.17
+      ]
+    ],
+    "news_read": [
+      "Amazon starts selling its AI shopping technology to other retailers",
+      "Your AI agent can now trade for you on Robinhood. And buy stuff with your credit card too",
+      "Lululemon settles proxy battle with founder Chip Wilson, agrees to two board nominees",
+      "The AI capital-spending boom looks historic. Eleven other booms suggest a bust is inevitable.",
+      "U.S. oil falls below $90 on report Iran agreement would restore Hormuz traffic in one month"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Noticed RIVN up 2.2% while other EV/tech plays are bleeding - this is the kind of momentum I want to capture in a fear market. My TSLA is near max position size so adding RIVN gives EV exposure without overconcentration. NVDA and COIN are underwater but not large enough losses to warrant cutting yet - I'll monitor them. Keeping $1,784 cash reserve for next move if this dip continues.",
+    "outlook": "Extreme Fear reading of 25 signals aggressive buying opportunity - stocks on sale, VIX low at 16.91 suggests panic isn't widespread yet",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -318,6 +354,10 @@
     {
       "timestamp": "2026-05-27T14:32:59Z",
       "value": 10084.75
+    },
+    {
+      "timestamp": "2026-05-27T15:03:26Z",
+      "value": 10089.02
     }
   ]
 }
