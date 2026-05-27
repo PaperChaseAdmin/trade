@@ -1,26 +1,26 @@
 {
   "cash": 509.85,
-  "total_value": 9993.19,
+  "total_value": 9929.52,
   "positions": {
     "RTX": {
       "shares": 5,
       "avg_cost": 173.42,
-      "current_price": 178.555
+      "current_price": 178.025
     },
     "HAL": {
       "shares": 20,
       "avg_cost": 42.83,
-      "current_price": 41.355
+      "current_price": 40.13
     },
     "NUE": {
       "shares": 10,
-      "current_price": 239.96,
+      "current_price": 240.21,
       "avg_cost": 224.3625
     },
     "LHX": {
       "shares": 4,
       "avg_cost": 308.92,
-      "current_price": 312.35
+      "current_price": 311.385
     },
     "CVX": {
       "shares": 10,
@@ -30,34 +30,63 @@
     "XOM": {
       "shares": 8,
       "avg_cost": 160.55,
-      "current_price": 150.04
+      "current_price": 147.19
     },
     "LMT": {
       "shares": 2,
       "avg_cost": 526.0,
-      "current_price": 532.9
+      "current_price": 526.715
     }
   },
-  "total_return_pct": -0.07,
+  "total_return_pct": -0.7,
   "total_return_usd": 0.0,
-  "today_pnl": -11.58,
-  "today_pnl_pct": -0.12,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 8,
-  "today_start_value": 10004.77,
-  "today_date": "2026-05-26",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-26T19:32:43Z",
+  "today_start_value": 9929.52,
+  "today_date": "2026-05-27",
+  "last_action": "Extreme fear and falling oil prices suggest near\u2011term pressure, but America\u2011first fundamentals (defense spending, energy deregulation) support a longer\u2011term rebound.",
+  "last_updated": "2026-05-27T13:31:51Z",
   "last_session": {
-    "at": "2026-05-26T19:32:43Z",
-    "fear_greed": 34,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.52,
-    "vix": 17.01,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-05-27T13:31:51Z",
+    "fear_greed": 25,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.61,
+    "vix": 16.81,
+    "top_movers": [
+      [
+        "HAL",
+        -2.4
+      ],
+      [
+        "GM",
+        2.2
+      ],
+      [
+        "XOM",
+        -1.75
+      ],
+      [
+        "F",
+        1.57
+      ],
+      [
+        "LMT",
+        -1.03
+      ],
+      [
+        "BA",
+        0.99
+      ]
+    ],
+    "news_read": [
+      "U.S. oil falls below $90 on report Iran agreement would restore Hormuz traffic in one month",
+      "Why America is losing the AI productivity war to 3.5 million Chinese STEM graduates",
+      "Republicans stare down inflation abyss with midterms fast approaching"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index at 25 indicates extreme fear, with HAL down 2.4% and XOM down 1.8% on Iran\u2011related oil news, while autos (F, GM) show strength. My cash reserve is just above the $500 minimum, leaving insufficient room to buy any watchlist share without breaching the reserve rule, so I stay sidelined. I will watch for a dip in defense or steel names (e.g., RTX, NUE) that allows a small, compliant purchase while keeping cash \u2265$500.",
+    "outlook": "Extreme fear and falling oil prices suggest near\u2011term pressure, but America\u2011first fundamentals (defense spending, energy deregulation) support a longer\u2011term rebound.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -316,6 +345,10 @@
     {
       "timestamp": "2026-05-26T19:32:43Z",
       "value": 9993.19
+    },
+    {
+      "timestamp": "2026-05-27T13:31:51Z",
+      "value": 9929.52
     }
   ]
 }

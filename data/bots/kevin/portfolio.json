@@ -1,58 +1,86 @@
 {
   "cash": 506.69,
-  "total_value": 10192.55,
+  "total_value": 10164.13,
   "positions": {
     "O": {
       "shares": 32,
       "avg_cost": 61.6626,
-      "current_price": 62.445
+      "current_price": 62.28
     },
     "VZ": {
       "shares": 43,
       "avg_cost": 46.05,
-      "current_price": 48.51
+      "current_price": 48.585
     },
     "BTI": {
       "shares": 9,
       "avg_cost": 66.142,
-      "current_price": 64.95
+      "current_price": 64.4
     },
     "T": {
       "shares": 81,
       "avg_cost": 24.505,
-      "current_price": 25.065
+      "current_price": 24.96
     },
     "WPC": {
       "shares": 27,
       "avg_cost": 73.94,
-      "current_price": 74.71
+      "current_price": 74.48
     },
     "OHI": {
       "shares": 20,
       "avg_cost": 48.17,
-      "current_price": 48.485
+      "current_price": 48.15
     }
   },
-  "total_return_pct": 1.93,
+  "total_return_pct": 1.64,
   "total_return_usd": 0.0,
-  "today_pnl": 1.46,
-  "today_pnl_pct": 0.01,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 10191.09,
-  "today_date": "2026-05-26",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-26T19:37:00Z",
+  "today_start_value": 10164.13,
+  "today_date": "2026-05-27",
+  "last_action": "Extreme fear indicates oversold conditions that could create value in dividend stocks, but cash limits immediate action.",
+  "last_updated": "2026-05-27T13:35:48Z",
   "last_session": {
-    "at": "2026-05-26T19:37:00Z",
-    "fear_greed": 34,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.52,
-    "vix": 17.01,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "at": "2026-05-27T13:35:48Z",
+    "fear_greed": 25,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.61,
+    "vix": 16.81,
+    "top_movers": [
+      [
+        "IBM",
+        1.41
+      ],
+      [
+        "ENB",
+        -0.93
+      ],
+      [
+        "BTI",
+        -0.83
+      ],
+      [
+        "PM",
+        0.8
+      ],
+      [
+        "OHI",
+        -0.73
+      ],
+      [
+        "KO",
+        0.67
+      ]
+    ],
+    "news_read": [
+      "Kraken unveils Bitcoin Vault, expanding yield push for BTC holders",
+      "U.S. oil falls below $90 on report Iran agreement would restore Hormuz traffic in one month"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=25 (Extreme Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "The Fear & Greed index at 25 shows extreme fear, suggesting oversold opportunities in high-yield names like PM (up 0.8%) and IBM (up 1.4%). However, with only $506.69 cash and a required $500 reserve, just $6.69 is available\u2014insufficient to purchase a meaningful share of any watchlist stock. We'll remain on the sidelines, monitoring for a deeper pullback that permits a larger, dividend\u2011focused entry while preserving our cash buffer.",
+    "outlook": "Extreme fear indicates oversold conditions that could create value in dividend stocks, but cash limits immediate action.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -311,6 +339,10 @@
     {
       "timestamp": "2026-05-26T19:37:00Z",
       "value": 10192.55
+    },
+    {
+      "timestamp": "2026-05-27T13:35:48Z",
+      "value": 10164.13
     }
   ]
 }
