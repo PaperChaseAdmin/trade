@@ -1,77 +1,77 @@
 {
   "cash": 506.69,
-  "total_value": 10116.1,
+  "total_value": 10141.69,
   "positions": {
     "O": {
       "shares": 32,
       "avg_cost": 61.6626,
-      "current_price": 61.89
+      "current_price": 62.255
     },
     "VZ": {
       "shares": 43,
       "avg_cost": 46.05,
-      "current_price": 48.26
+      "current_price": 48.3
     },
     "BTI": {
       "shares": 9,
       "avg_cost": 66.142,
-      "current_price": 63.85
+      "current_price": 63.3
     },
     "T": {
       "shares": 81,
       "avg_cost": 24.505,
-      "current_price": 24.96
+      "current_price": 25.065
     },
     "WPC": {
       "shares": 27,
       "avg_cost": 73.94,
-      "current_price": 74.22
+      "current_price": 74.51
     },
     "OHI": {
       "shares": 20,
       "avg_cost": 48.17,
-      "current_price": 47.67
+      "current_price": 47.71
     }
   },
-  "total_return_pct": 1.16,
+  "total_return_pct": 1.42,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 25.59,
+  "today_pnl_pct": 0.25,
   "total_trades": 6,
   "today_start_value": 10116.1,
   "today_date": "2026-05-28",
-  "last_action": "Extreme fear has created oversold conditions in dividend stocks, offering potential value but we must preserve cash reserves.",
-  "last_updated": "2026-05-28T13:34:26Z",
+  "last_action": "Extreme fear creates oversold conditions that could present buying opportunities for dividend payers once cash is available.",
+  "last_updated": "2026-05-28T14:04:26Z",
   "last_session": {
-    "at": "2026-05-28T13:34:26Z",
+    "at": "2026-05-28T14:04:26Z",
     "fear_greed": 22,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.02,
-    "vix": 16.43,
+    "sp500_change": -0.08,
+    "vix": 16.5,
     "top_movers": [
       [
         "IBM",
-        1.76
+        3.98
+      ],
+      [
+        "BTI",
+        -1.11
+      ],
+      [
+        "KO",
+        -0.96
       ],
       [
         "CVX",
-        1.07
+        0.84
       ],
       [
-        "ABBV",
-        0.67
+        "T",
+        0.72
       ],
       [
-        "ENB",
-        0.46
-      ],
-      [
-        "MO",
-        0.39
-      ],
-      [
-        "O",
-        -0.34
+        "MAIN",
+        0.6
       ]
     ],
     "news_read": [
@@ -81,8 +81,8 @@
       "Snowflake rockets 36% on earnings beat and plan to spend $6 billion on Amazon cloud"
     ],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=22 (Extreme Fear) \u2014 Oversold \u2014 potential value opportunity",
-    "ai_analysis": "The Fear & Greed index at 22 signals extreme fear, and the S&P 500 is flat while VIX is modest at 16.43. Several high-yield watchlist names like IBM (+1.8%), CVX (+1.1%) and ABBV (+0.7%) are up today, yet O, WPC and MO are slightly down, indicating mixed momentum. With only $506.69 cash and a $500 reserve requirement, any purchase would breach the cash floor, so we remain on the sidelines awaiting deeper pullbacks or additional capital.",
-    "outlook": "Extreme fear has created oversold conditions in dividend stocks, offering potential value but we must preserve cash reserves.",
+    "ai_analysis": "The Fear & Greed index at 22 signals extreme fear and potential oversold stocks; IBM led today's gainers (+4%) while BTI, KO slipped. With only $6.69 available after maintaining a $500 cash reserve, no full share can be purchased from the watchlist, so we remain on hold, watching for a cash inflow or price dip that allows a dividend-focused entry.",
+    "outlook": "Extreme fear creates oversold conditions that could present buying opportunities for dividend payers once cash is available.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -397,6 +397,10 @@
     {
       "timestamp": "2026-05-28T13:34:26Z",
       "value": 10116.1
+    },
+    {
+      "timestamp": "2026-05-28T14:04:26Z",
+      "value": 10141.69
     }
   ]
 }
