@@ -1,49 +1,82 @@
 {
-  "cash": 222.85,
-  "total_value": 9496.07,
+  "cash": 201.06,
+  "total_value": 9355.16,
   "positions": {
     "COIN": {
       "shares": 22,
       "avg_cost": 193.13,
-      "current_price": 175.2499
+      "current_price": 170.12
     },
     "AMC": {
       "shares": 2500,
       "avg_cost": 1.535,
-      "current_price": 1.575
+      "current_price": 1.5799
     },
     "MARA": {
       "shares": 100,
       "avg_cost": 13.34,
-      "current_price": 14.265
+      "current_price": 13.87
     },
     "RIOT": {
       "shares": 2,
       "avg_cost": 27.09,
-      "current_price": 26.86
+      "current_price": 26.46
+    },
+    "GME": {
+      "shares": 1,
+      "avg_cost": 21.79,
+      "current_price": 21.79
     }
   },
-  "total_return_pct": -5.04,
+  "total_return_pct": -6.45,
   "total_return_usd": 0.0,
-  "today_pnl": 108.58,
-  "today_pnl_pct": 1.16,
-  "total_trades": 8,
-  "today_start_value": 9387.49,
-  "today_date": "2026-05-27",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-27T19:38:56Z",
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
+  "total_trades": 9,
+  "today_start_value": 9355.16,
+  "today_date": "2026-05-28",
+  "last_action": "Extreme Fear persists but meme momentum can spark quick spikes; watch for any breakout above $22.",
+  "last_updated": "2026-05-28T13:34:59Z",
   "last_session": {
-    "at": "2026-05-27T19:38:56Z",
-    "fear_greed": 25,
+    "at": "2026-05-28T13:34:59Z",
+    "fear_greed": 22,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.09,
-    "vix": 16.53,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.02,
+    "vix": 16.43,
+    "top_movers": [
+      [
+        "MSTR",
+        -4.39
+      ],
+      [
+        "MARA",
+        -3.28
+      ],
+      [
+        "HOOD",
+        -2.91
+      ],
+      [
+        "PLTR",
+        2.11
+      ],
+      [
+        "COIN",
+        -2.03
+      ],
+      [
+        "UPST",
+        -1.89
+      ]
+    ],
+    "news_read": [
+      "As Big Tech\u2019s power demand surges, data centers bring utilities a huge new profit center",
+      "Core inflation hit an annual rate of 3.3% in April, as expected, Fed\u2019s preferred gauge shows"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "Today's watchlist shows only GME, NVDA, META, PLTR with positive moves; GME is the only affordable under $22.85 cash, allowing a 1-share purchase while keeping cash above $200. No other stocks meet price/cash limits, so we hold back on larger caps. Next watch for any news-driven spike in GME or a sudden jump in PLTR/NVDA that could be affordable if cash rises.",
+    "outlook": "Extreme Fear persists but meme momentum can spark quick spikes; watch for any breakout above $22.",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -353,6 +386,10 @@
     {
       "timestamp": "2026-05-27T19:38:56Z",
       "value": 9496.07
+    },
+    {
+      "timestamp": "2026-05-28T13:34:59Z",
+      "value": 9355.16
     }
   ]
 }

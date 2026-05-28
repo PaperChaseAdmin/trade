@@ -1,11 +1,11 @@
 {
   "cash": 206.08,
-  "total_value": 9979.02,
+  "total_value": 9964.13,
   "positions": {
     "BTI": {
       "shares": 29,
       "avg_cost": 66.275,
-      "current_price": 64.1
+      "current_price": 63.85
     },
     "OHI": {
       "shares": 40,
@@ -15,7 +15,7 @@
     "MAIN": {
       "shares": 20,
       "avg_cost": 50.63,
-      "current_price": 51.21
+      "current_price": 51.1
     },
     "ARCC": {
       "shares": 50,
@@ -25,44 +25,74 @@
     "T": {
       "shares": 50,
       "avg_cost": 24.5551,
-      "current_price": 24.94
+      "current_price": 24.96
     },
     "ENB": {
       "shares": 20,
       "avg_cost": 56.3352,
-      "current_price": 56.3
+      "current_price": 56.41
     },
     "O": {
       "shares": 26,
       "avg_cost": 61.88,
-      "current_price": 62.2125
+      "current_price": 61.89
     },
     "VZ": {
       "shares": 1,
       "avg_cost": 47.6602,
-      "current_price": 48.515
+      "current_price": 48.26
     }
   },
-  "total_return_pct": -0.21,
+  "total_return_pct": -0.36,
   "total_return_usd": 0.0,
-  "today_pnl": -30.71,
-  "today_pnl_pct": -0.31,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 8,
-  "today_start_value": 10009.73,
-  "today_date": "2026-05-27",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-27T19:38:57Z",
+  "today_start_value": 9964.13,
+  "today_date": "2026-05-28",
+  "last_action": "Extreme fear and steady inflation make high\u2011yield dividend stocks attractive, but cash limits restrict new purchases today.",
+  "last_updated": "2026-05-28T13:35:05Z",
   "last_session": {
-    "at": "2026-05-27T19:38:57Z",
-    "fear_greed": 25,
+    "at": "2026-05-28T13:35:05Z",
+    "fear_greed": 22,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.09,
-    "vix": 16.53,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.02,
+    "vix": 16.43,
+    "top_movers": [
+      [
+        "IBM",
+        1.76
+      ],
+      [
+        "ABBV",
+        0.67
+      ],
+      [
+        "GLD",
+        -0.5
+      ],
+      [
+        "ENB",
+        0.46
+      ],
+      [
+        "MO",
+        0.39
+      ],
+      [
+        "O",
+        -0.34
+      ]
+    ],
+    "news_read": [
+      "Core inflation hit an annual rate of 3.3% in April, as expected, Fed\u2019s preferred gauge shows",
+      "Oil prices jump 2% after Iran says it targeted U.S. airbase following fresh American strikes",
+      "Ro Khanna is taking his economic message on the road. Will it lead to the White House?",
+      "Snowflake rockets 36% on earnings beat and plan to spend $6 billion on Amazon cloud"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=22 (Extreme Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "The Fear & Greed index at 22 signals extreme fear, while core inflation held at 3.3% YoY, keeping income\u2011focused investors cautious. Watchlist leaders IBM (+1.8%) and ABBV (+0.7%) show modest strength, whereas GLD (-0.5%) slipped; however, with only $206 cash and a $200 reserve requirement, any purchase would fall below the threshold, so we hold existing dividend positions and monitor for dividend cuts or further fear\u2011driven dips to deploy cash.",
+    "outlook": "Extreme fear and steady inflation make high\u2011yield dividend stocks attractive, but cash limits restrict new purchases today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -373,6 +403,10 @@
     {
       "timestamp": "2026-05-27T19:38:57Z",
       "value": 9979.02
+    },
+    {
+      "timestamp": "2026-05-28T13:35:05Z",
+      "value": 9964.13
     }
   ]
 }

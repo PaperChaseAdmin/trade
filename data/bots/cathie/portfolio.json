@@ -1,53 +1,84 @@
 {
   "cash": 500.22,
-  "total_value": 10416.3,
+  "total_value": 10326.61,
   "positions": {
     "TSLA": {
       "shares": 7,
       "avg_cost": 408.21,
-      "current_price": 439.85
+      "current_price": 439.7487
     },
     "COIN": {
       "shares": 16,
       "avg_cost": 185.6124,
-      "current_price": 175.2499
+      "current_price": 170.12
     },
     "NTLA": {
       "shares": 241,
-      "current_price": 13.605,
+      "current_price": 13.64,
       "avg_cost": 12.6113
     },
     "BEAM": {
       "shares": 23,
       "avg_cost": 27.08,
-      "current_price": 32.29
+      "current_price": 31.625
     },
     "PACB": {
       "shares": 9,
       "avg_cost": 1.15,
-      "current_price": 1.295
+      "current_price": 1.29
     }
   },
-  "total_return_pct": 4.16,
+  "total_return_pct": 3.27,
   "total_return_usd": 0.0,
-  "today_pnl": 261.5,
-  "today_pnl_pct": 2.58,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 10154.8,
-  "today_date": "2026-05-27",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-27T19:34:23Z",
+  "today_start_value": 10326.61,
+  "today_date": "2026-05-28",
+  "last_action": "Extreme fear presents a buying opportunity for disruptive innovation stocks with strong long\u2011term fundamentals.",
+  "last_updated": "2026-05-28T13:32:35Z",
   "last_session": {
-    "at": "2026-05-27T19:34:23Z",
-    "fear_greed": 25,
+    "at": "2026-05-28T13:32:35Z",
+    "fear_greed": 22,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.09,
-    "vix": 16.53,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.02,
+    "vix": 16.43,
+    "top_movers": [
+      [
+        "TWLO",
+        3.54
+      ],
+      [
+        "HOOD",
+        -2.91
+      ],
+      [
+        "RKLB",
+        -2.7
+      ],
+      [
+        "PACB",
+        2.38
+      ],
+      [
+        "PLTR",
+        2.11
+      ],
+      [
+        "PATH",
+        2.06
+      ]
+    ],
+    "news_read": [
+      "Oil prices jump 2% after Iran says it targeted U.S. airbase following fresh American strikes",
+      "Kohl's stock spikes more than 15% as slumping retailer says sales trends are improving",
+      "More workers are raiding their 401(k)s as average balances fall, Fidelity says",
+      "Standard Chartered backs $4,000 ether as retail piles into the sub-$2,000 drop",
+      "Core inflation hit an annual rate of 3.3% in April, as expected, Fed\u2019s preferred gauge shows"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index at 22 signals extreme fear, while the S&P 500 is flat (+0.02%) and VIX is moderate at 16.43, indicating market stress but not panic. Top watchlist movers show strength in TWLO (+3.5%) and PACB (+2.4%), with several genomics and AI names holding steady or slightly up. With only $0.22 of spendable cash above the $500 reserve, I cannot initiate any new positions without violating the cash rule, so I will wait for additional cash or a price dip that allows a smaller investment.",
+    "outlook": "Extreme fear presents a buying opportunity for disruptive innovation stocks with strong long\u2011term fundamentals.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -358,6 +389,10 @@
     {
       "timestamp": "2026-05-27T19:34:23Z",
       "value": 10416.3
+    },
+    {
+      "timestamp": "2026-05-28T13:32:35Z",
+      "value": 10326.61
     }
   ]
 }
