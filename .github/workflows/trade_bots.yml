@@ -4,7 +4,8 @@ on:
   schedule:
     # Every 30 min, Mon–Fri, 13:00–21:00 UTC (covers EDT 9:00am–5:00pm & EST 8:00am–4:00pm)
     # NOTE: GitHub disables scheduled workflows after 60 days of repo inactivity.
-    # Any push to this file reactivates the schedule.
+    # ANY push to ANY file on the default branch reactivates the schedule.
+    # Last reactivation: 2026-05-29 (manual push by hermes)
     - cron: '0,30 13-21 * * 1-5'
   workflow_dispatch:  # manual trigger & cron-job.org
 
