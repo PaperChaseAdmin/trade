@@ -65,27 +65,6 @@
   <!-- KPI Dashboard -->
   <div id="kpi-dashboard"></div>
 
-  <!-- 3-Panel Dashboard Grid -->
-  <div class="dashboard-grid" id="dashboard-grid">
-    <!-- Market Sentinel Panel -->
-    <div class="dashboard-panel" id="panel-sentinel">
-      <div class="dashboard-panel-title" data-i18n="panel_market_signal">Market Signal</div>
-      <div id="panel-sentinel-body"><div class="panel-loading" data-i18n="loading">Loading...</div></div>
-    </div>
-
-    <!-- Polymarket Deals Panel -->
-    <div class="dashboard-panel" id="panel-polymarket">
-      <div class="dashboard-panel-title" data-i18n="panel_hot_deals">Hot Deals</div>
-      <div id="panel-polymarket-body"><div class="panel-loading" data-i18n="loading">Loading...</div></div>
-    </div>
-
-    <!-- Trading Arena Top Bots Panel -->
-    <div class="dashboard-panel" id="panel-leaders">
-      <div class="dashboard-panel-title" data-i18n="panel_top_bots">Top Bots</div>
-      <div id="panel-leaders-body"><div class="panel-loading" data-i18n="loading">Loading...</div></div>
-    </div>
-  </div>
-
   <!-- Performance Chart -->
   <div class="chart-panel" id="chart-panel">
     <div class="chart-panel-header">
@@ -180,109 +159,11 @@ function startCountdown() {
   _cdTimer = setInterval(tick, 1000);
 }
 
-// ── Dashboard: Market Sentinel Panel ──
-function buildMarketSentinelPanel() {
-  const el = document.getElementById('panel-sentinel-body');
-  fetch('https://paperchase.online/market-sentinel/data/market_data.json?t='+Date.now())
-    .then(r=>r.json())
-    .then(data=>{
-      const idx = (data.stocks||{}).indices || {};
-      const sp = idx.sp500||{}; const nq = idx.nasdaq||{};
-      const dj = idx.dow||{}; const vx = idx.vix||{};
-      
-      // Generate simple signals based on index trends
-      const signals = [];
-      if (sp.change_24h) signals.push({name:'S&P 500', val:+sp.change_24h});
-      if (nq.change_24h) signals.push({name:'NASDAQ', val:+nq.change_24h});
-      if (dj.change_24h) signals.push({name:'Dow', val:+dj.change_24h});
-      
-      const upCount = signals.filter(s=>s.val>=0).length;
-      const totalSig = signals.length;
-      const overallSignal = totalSig > 0 ? (upCount > totalSig/2 ? 'bullish' : upCount < totalSig/2 ? 'bearish' : 'neutral') : 'neutral';
-      
-      el.innerHTML = `
-        <div class="signal-card">
-          <div class="signal-label" data-i18n="next_day_signal">Next Session Signal</div>
-          <div class="signal-direction ${overallSignal === 'bullish' ? 'up' : overallSignal === 'bearish' ? 'down' : ''}">
-            ${overallSignal === 'bullish' ? '▲ Bullish' : overallSignal === 'bearish' ? '▼ Bearish' : '— Neutral'}
-          </div>
-          <div class="accuracy-stats">
-            <div class="accuracy-stat"><span class="accuracy-stat-val">${sp.value||'—'}</span><span class="accuracy-stat-label">S&P 500</span></div>
-            <div class="accuracy-stat"><span class="accuracy-stat-val ${nq.change_24h>=0?'c-green':'c-red'}">${nq.change_24h||'—'}%</span><span class="accuracy-stat-label">NASDAQ</span></div>
-            <div class="accuracy-stat"><span class="accuracy-stat-val ${dj.change_24h>=0?'c-green':'c-red'}">${dj.change_24h||'—'}%</span><span class="accuracy-stat-label">Dow</span></div>
-            <div class="accuracy-stat"><span class="accuracy-stat-val">${vx.value||'—'}</span><span class="accuracy-stat-label">VIX</span></div>
-          </div>
-        </div>
-        <div class="signal-card" style="margin-top:10px">
-          <div class="signal-label" data-i18n="prediction_history">Signal Accuracy</div>
-          <div class="accuracy-stats" style="margin:10px 0 4px">
-            <div class="accuracy-stat"><span class="accuracy-stat-val">${totalSig>0?upCount+'/'+totalSig:'—'}</span><span class="accuracy-stat-label" data-i18n="positive_signals">positive today</span></div>
-            <div class="accuracy-stat"><span class="accuracy-stat-val">${vx.value<25?'Low':'Normal'}</span><span class="accuracy-stat-label">VIX</span></div>
-          </div>
-        </div>`;
-      __retranslate();
-    })
-    .catch(()=>{
-      el.innerHTML = '<div class="panel-error" data-i18n="error_loading">⚠ Unable to load market data</div>';
-      __retranslate();
-    });
-}
 
-// ── Dashboard: Polymarket Hot Deals Panel ──
-function buildPolymarketPanel() {
-  const el = document.getElementById('panel-polymarket-body');
-  fetch('./data/polymarket/scan_results.json?t='+Date.now())
-    .then(r=>r.json())
-    .then(data=>{
-      const markets = data.markets || data || [];
-      // Filter: recommended deals, sorted by volume_24h
-      const deals = markets
-        .filter(m=>m.heuristic && m.heuristic.recommend)
-        .sort((a,b)=>(b.volume_24h||0)-(a.volume_24h||0))
-        .slice(0,5);
-      
-      if (!deals.length) {
-        el.innerHTML = '<div class="panel-empty" data-i18n="no_deals">No hot deals right now</div>';
-        __retranslate();
-        return;
-      }
-      
-      el.innerHTML = '<div class="poly-list">' + deals.map(m=>{
-        const yesPct = ((m.yes_price||0)*100).toFixed(0);
-        const vol = m.volume_24h ? '$'+(m.volume_24h/1000).toFixed(1)+'K' : '';
-        const end = m.end_date ? new Date(m.end_date).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
-        const title = (m.question||m.event_title||'').substring(0,55);
-        return `<div class="poly-card">
-          <div class="poly-title">${title}${(m.question||'').length>55?'…':''}</div>
-          <div class="poly-meta">
-            <span class="poly-odds">${yesPct}% Yes</span>
-            ${vol ? `<span class="poly-volume">${vol}</span>` : ''}
-            ${end ? `<span class="poly-expiry">${end}</span>` : ''}
-          </div>
-        </div>`;
-      }).join('') + '</div>';
-      __retranslate();
-    })
-    .catch(()=>{
-      el.innerHTML = '<div class="panel-empty" data-i18n="no_deals">No hot deals right now</div>';
-      __retranslate();
-    });
-}
 
-// ── Dashboard: Top Bots Panel ──
-function buildTopBotsPanel(bots){
-  const el = document.getElementById('panel-leaders-body');
-  const top = [...bots].sort((a,b)=>b.total_value-a.total_value).slice(0,5);
-  const medalColors = ['#FFD700','#C0C0C0','#CD7F32'];
-  el.innerHTML = '<div class="panel-leader-list">' + top.map((b,i)=>{
-    const r = +b.total_return_pct||0;
-    return `<div class="panel-leader-row">
-      <div class="panel-leader-rank" style="color:${i<3?medalColors[i]:'var(--tv-text-2)'}">${i<3 ? ['🥇','🥈','🥉'][i] : '#'+(i+1)}</div>
-      <div class="panel-leader-name"><span>${b.avatar}</span> ${b.display_name}</div>
-      <div class="panel-leader-pnl ${r>=0?'profit':'loss'}">${r>=0?'+':''}${r.toFixed(2)}%</div>
-    </div>`;
-  }).join('') + '</div>';
-}
+
+
+
 
 function buildKPIs(bots){
   const totalVal = bots.reduce((s,b)=>s+(+b.total_value||0),0);
@@ -485,13 +366,10 @@ async function load(){
   buildKPIs(sorted);
   buildDistribution(sorted);
   buildMainChart(sorted);
-  buildTopBotsPanel(sorted);
 
   document.getElementById('count-badge').textContent = sorted.length + ' ' + __('count_bots','bots');
   
   startCountdown();
-  buildMarketSentinelPanel();
-  buildPolymarketPanel();
 
   const lb=document.getElementById('leaderboard');
   lb.innerHTML='<div class="bot-list">';
