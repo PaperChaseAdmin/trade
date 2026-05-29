@@ -1,58 +1,89 @@
 {
   "cash": 306.13,
-  "total_value": 12603.98,
+  "total_value": 12622.63,
   "positions": {
     "TQQQ": {
       "shares": 47,
       "avg_cost": 73.2265,
-      "current_price": 83.82
+      "current_price": 84.5
     },
     "SOXL": {
       "shares": 23,
       "avg_cost": 150.88,
-      "current_price": 225.52
+      "current_price": 230.49
     },
     "RKLB": {
       "shares": 15,
       "avg_cost": 127.1625,
-      "current_price": 147.605
+      "current_price": 138.55
     },
     "PLTR": {
       "shares": 3,
       "avg_cost": 136.92,
-      "current_price": 142.89
+      "current_price": 147.8997
     },
     "AXON": {
       "shares": 1,
       "avg_cost": 400.505,
-      "current_price": 444.915
+      "current_price": 433.02
     },
     "SMCI": {
       "shares": 2,
       "avg_cost": 31.64,
-      "current_price": 41.845
+      "current_price": 44.38
     }
   },
-  "total_return_pct": 26.04,
+  "total_return_pct": 26.23,
   "total_return_usd": 0.0,
-  "today_pnl": 285.39,
-  "today_pnl_pct": 2.32,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 12318.59,
-  "today_date": "2026-05-28",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-28T19:38:52Z",
+  "today_start_value": 12622.63,
+  "today_date": "2026-05-29",
+  "last_action": "Extreme fear and a modest VIX point to a potential short\u2011term rebound in leveraged tech exposure.",
+  "last_updated": "2026-05-29T13:34:43Z",
   "last_session": {
-    "at": "2026-05-28T19:38:52Z",
-    "fear_greed": 22,
+    "at": "2026-05-29T13:34:43Z",
+    "fear_greed": 23,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.61,
-    "vix": 15.64,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.58,
+    "vix": 15.7,
+    "top_movers": [
+      [
+        "SMCI",
+        7.87
+      ],
+      [
+        "RKLB",
+        -6.96
+      ],
+      [
+        "PLTR",
+        2.9
+      ],
+      [
+        "SOXL",
+        2.35
+      ],
+      [
+        "AXON",
+        -2.12
+      ],
+      [
+        "IONQ",
+        -1.84
+      ]
+    ],
+    "news_read": [
+      "Nvidia is investing billions into this emerging technology that could change the AI industry",
+      "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike",
+      "Dan Ives: Anthropic\u2019s growth is 'just the tip of the sphere' for AI rally",
+      "Infighting, court battles could put long-hyped air taxi breakthrough in jeopardy",
+      "Michael Dell courted Trump early. His company has reaped rewards"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index sits at 23 (Extreme Fear) while VIX is 15.7, signaling heightened anxiety but not panic volatility. SMCI led the watchlist with a +7.9% gain on strong momentum, whereas RKLB dropped -7% amid air\u2011taxi doubts. With only $6 of usable cash after preserving a $300 reserve, no additional BUY orders can be executed this session.",
+    "outlook": "Extreme fear and a modest VIX point to a potential short\u2011term rebound in leveraged tech exposure.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -419,6 +450,10 @@
     {
       "timestamp": "2026-05-28T19:38:52Z",
       "value": 12603.98
+    },
+    {
+      "timestamp": "2026-05-29T13:34:43Z",
+      "value": 12622.63
     }
   ]
 }

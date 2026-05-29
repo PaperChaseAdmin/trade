@@ -1,26 +1,26 @@
 {
   "cash": 506.69,
-  "total_value": 10069.36,
+  "total_value": 10045.12,
   "positions": {
     "O": {
       "shares": 32,
       "avg_cost": 61.6626,
-      "current_price": 61.735
+      "current_price": 61.4301
     },
     "VZ": {
       "shares": 43,
       "avg_cost": 46.05,
-      "current_price": 48.03
+      "current_price": 48.0
     },
     "BTI": {
       "shares": 9,
       "avg_cost": 66.142,
-      "current_price": 62.905
+      "current_price": 61.98
     },
     "T": {
       "shares": 81,
       "avg_cost": 24.505,
-      "current_price": 24.875
+      "current_price": 24.815
     },
     "WPC": {
       "shares": 27,
@@ -30,29 +30,59 @@
     "OHI": {
       "shares": 20,
       "avg_cost": 48.17,
-      "current_price": 46.8855
+      "current_price": 46.885
     }
   },
-  "total_return_pct": 0.69,
+  "total_return_pct": 0.45,
   "total_return_usd": 0.0,
-  "today_pnl": -46.74,
-  "today_pnl_pct": -0.46,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 10116.1,
-  "today_date": "2026-05-28",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-28T19:38:49Z",
+  "today_start_value": 10045.12,
+  "today_date": "2026-05-29",
+  "last_action": "Extreme fear (F&G 23) presents a potential value entry point for dividend payers, but current cash constraints limit immediate buying.",
+  "last_updated": "2026-05-29T13:34:50Z",
   "last_session": {
-    "at": "2026-05-28T19:38:49Z",
-    "fear_greed": 22,
+    "at": "2026-05-29T13:34:50Z",
+    "fear_greed": 23,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.61,
-    "vix": 15.64,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.58,
+    "vix": 15.7,
+    "top_movers": [
+      [
+        "IBM",
+        4.8
+      ],
+      [
+        "BTI",
+        -1.56
+      ],
+      [
+        "MO",
+        -1.21
+      ],
+      [
+        "PM",
+        -1.13
+      ],
+      [
+        "O",
+        -0.47
+      ],
+      [
+        "ABBV",
+        0.44
+      ]
+    ],
+    "news_read": [
+      "Michael Dell courted Trump early. His company has reaped rewards",
+      "SpaceX skeptics have added reason for concern after Musk comments diverge from IPO filing",
+      "Nvidia is investing billions into this emerging technology that could change the AI industry",
+      "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=23 (Extreme Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "With $506.69 cash and a $500 reserve requirement, only $6.69 is available for new purchases, insufficient to buy a full share of any watchlist stock (lowest price T at $24.815). The watchlist shows IBM up 4.8% today, while O, WPC, and MO are modestly down; all are dividend payers, but without sufficient capital I must hold cash and watch for a price dip or additional funds before deploying.",
+    "outlook": "Extreme fear (F&G 23) presents a potential value entry point for dividend payers, but current cash constraints limit immediate buying.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -419,6 +449,10 @@
     {
       "timestamp": "2026-05-28T19:38:49Z",
       "value": 10069.36
+    },
+    {
+      "timestamp": "2026-05-29T13:34:50Z",
+      "value": 10045.12
     }
   ]
 }

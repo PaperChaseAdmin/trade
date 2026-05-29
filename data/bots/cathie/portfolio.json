@@ -1,53 +1,84 @@
 {
   "cash": 500.22,
-  "total_value": 10659.23,
+  "total_value": 10516.03,
   "positions": {
     "TSLA": {
       "shares": 7,
       "avg_cost": 408.21,
-      "current_price": 443.5
+      "current_price": 439.9614
     },
     "COIN": {
       "shares": 16,
       "avg_cost": 185.6124,
-      "current_price": 182.3
+      "current_price": 179.58
     },
     "NTLA": {
       "shares": 241,
-      "current_price": 13.9491,
+      "current_price": 13.69,
       "avg_cost": 12.6113
     },
     "BEAM": {
       "shares": 23,
       "avg_cost": 27.08,
-      "current_price": 33.165
+      "current_price": 32.625
     },
     "PACB": {
       "shares": 9,
       "avg_cost": 1.15,
-      "current_price": 1.465
+      "current_price": 1.46
     }
   },
-  "total_return_pct": 6.59,
+  "total_return_pct": 5.16,
   "total_return_usd": 0.0,
-  "today_pnl": 332.62,
-  "today_pnl_pct": 3.22,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 10326.61,
-  "today_date": "2026-05-28",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-28T19:37:20Z",
+  "today_start_value": 10516.03,
+  "today_date": "2026-05-29",
+  "last_action": "Extreme Fear presents a buying opportunity for disruptive innovation stocks, but cash constraints limit immediate action.",
+  "last_updated": "2026-05-29T13:32:37Z",
   "last_session": {
-    "at": "2026-05-28T19:37:20Z",
-    "fear_greed": 22,
+    "at": "2026-05-29T13:32:37Z",
+    "fear_greed": 23,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.61,
-    "vix": 15.64,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.58,
+    "vix": 15.7,
+    "top_movers": [
+      [
+        "PATH",
+        -8.03
+      ],
+      [
+        "RKLB",
+        -6.96
+      ],
+      [
+        "PLTR",
+        2.9
+      ],
+      [
+        "COIN",
+        -1.57
+      ],
+      [
+        "AFRM",
+        1.25
+      ],
+      [
+        "PACB",
+        -1.02
+      ]
+    ],
+    "news_read": [
+      "SpaceX skeptics have added reason for concern after Musk comments diverge from IPO filing",
+      "Nvidia is investing billions into this emerging technology that could change the AI industry",
+      "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike",
+      "Dan Ives: Anthropic\u2019s growth is 'just the tip of the sphere' for AI rally",
+      "Michael Dell courted Trump early. His company has reaped rewards"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index at 23 indicates extreme fear, and top watchlist movers show deep declines in PATH (-8.0%) and RKLB (-7.0%), aligning with Cathie's 'going on sale' mindset. However, with only $500.22 cash and a requirement to keep at least $500 reserve, there is insufficient excess capital to purchase even a single share of any watchlist stock without breaching the cash rule. Next, I will monitor for any cash inflows from position gains or market dips that free up liquidity for adding to high-conviction names like TSLA, COIN, or genomics names.",
+    "outlook": "Extreme Fear presents a buying opportunity for disruptive innovation stocks, but cash constraints limit immediate action.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -414,6 +445,10 @@
     {
       "timestamp": "2026-05-28T19:37:20Z",
       "value": 10659.23
+    },
+    {
+      "timestamp": "2026-05-29T13:32:37Z",
+      "value": 10516.03
     }
   ]
 }

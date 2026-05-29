@@ -1,53 +1,83 @@
 {
   "cash": 503.97,
-  "total_value": 9845.14,
+  "total_value": 9664.94,
   "positions": {
     "LI": {
       "shares": 180,
       "avg_cost": 16.655,
-      "current_price": 15.515
+      "current_price": 15.075
     },
     "NIO": {
       "shares": 506,
-      "current_price": 5.565,
+      "current_price": 5.38,
       "avg_cost": 5.9293
     },
     "XPEV": {
       "shares": 199,
       "avg_cost": 15.04,
-      "current_price": 16.415
+      "current_price": 16.41
     },
     "BABA": {
       "shares": 3,
       "avg_cost": 135.84,
-      "current_price": 126.155
+      "current_price": 124.41
     },
     "JD": {
       "shares": 3,
       "avg_cost": 32.47,
-      "current_price": 29.1778
+      "current_price": 28.79
     }
   },
-  "total_return_pct": -1.55,
+  "total_return_pct": -3.35,
   "total_return_usd": 0.0,
-  "today_pnl": -51.99,
-  "today_pnl_pct": -0.53,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 9897.13,
-  "today_date": "2026-05-28",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-28T19:41:14Z",
+  "today_start_value": 9664.94,
+  "today_date": "2026-05-29",
+  "last_action": "Despite extreme fear, Chinese ADRs show mixed signals with BIDU up and NIO/LI down, suggesting selective opportunities once cash reserves allow.",
+  "last_updated": "2026-05-29T13:37:38Z",
   "last_session": {
-    "at": "2026-05-28T19:41:14Z",
-    "fear_greed": 22,
+    "at": "2026-05-29T13:37:38Z",
+    "fear_greed": 23,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.61,
-    "vix": 15.64,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.58,
+    "vix": 15.7,
+    "top_movers": [
+      [
+        "NIO",
+        -3.04
+      ],
+      [
+        "LI",
+        -2.46
+      ],
+      [
+        "FUTU",
+        -1.65
+      ],
+      [
+        "JD",
+        -1.51
+      ],
+      [
+        "BABA",
+        -1.43
+      ],
+      [
+        "BIDU",
+        1.17
+      ]
+    ],
+    "news_read": [
+      "Michael Dell courted Trump early. His company has reaped rewards",
+      "SpaceX skeptics have added reason for concern after Musk comments diverge from IPO filing",
+      "Nvidia is investing billions into this emerging technology that could change the AI industry",
+      "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The watchlist shows NIO -3.04% and LI -2.46% dragging the portfolio, while BIDU +1.17% and PDD +0.12% indicate relative strength. Cash is just above the $500 reserve at $503.97, leaving only $3.97 for new purchases, insufficient to buy any full share of the watchlist stocks. I will wait for either a cash inflow from position closures or a market dip that lowers entry prices before deploying capital.",
+    "outlook": "Despite extreme fear, Chinese ADRs show mixed signals with BIDU up and NIO/LI down, suggesting selective opportunities once cash reserves allow.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -414,6 +444,10 @@
     {
       "timestamp": "2026-05-28T19:41:14Z",
       "value": 9845.14
+    },
+    {
+      "timestamp": "2026-05-29T13:37:38Z",
+      "value": 9664.94
     }
   ]
 }
