@@ -50,7 +50,7 @@ DETAIL_TMPL = """\
     <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
     <a class="nav-link active" href="/trade/" data-i18n="nav_trading">Trading Arena</a>
     <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Polymarket</a>
+    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Poly Watch</a>
   </div>
   <div style="flex:1"></div>
   <a class="nav-link" href="/trade/login/" data-i18n="nav_login" id="nav-login">Log In</a>
@@ -147,7 +147,7 @@ RECORDS_TMPL = """\
     <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
     <a class="nav-link active" href="/trade/" data-i18n="nav_trading">Trading Arena</a>
     <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Polymarket</a>
+    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Poly Watch</a>
   </div>
   <div style="flex:1"></div>
   <a class="nav-link" href="/trade/login/" data-i18n="nav_login">Log In</a>
