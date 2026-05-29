@@ -20,6 +20,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Create .nojekyll
         run: touch .nojekyll
+      - name: Clean source files (Pages build fails with large artifacts)
+        run: rm -rf venv __pycache__ .github/workflows bot_runner.py bot_profiles.py generate_pages.py openrouter.py zhipu.py requirements.txt
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
