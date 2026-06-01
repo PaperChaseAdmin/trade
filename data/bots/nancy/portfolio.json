@@ -1,43 +1,73 @@
 {
   "cash": 548.49,
-  "total_value": 11256.11,
+  "total_value": 11249.77,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 216.9868
+      "current_price": 215.95
     },
     "INTC": {
       "shares": 31,
-      "current_price": 118.46,
+      "current_price": 109.485,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 945.1401
+      "current_price": 1017.0
     }
   },
-  "total_return_pct": 12.56,
+  "total_return_pct": 12.5,
   "total_return_usd": 0.0,
-  "today_pnl": -222.54,
-  "today_pnl_pct": -1.94,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 4,
-  "today_start_value": 11478.65,
-  "today_date": "2026-05-29",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-29T19:33:08Z",
+  "today_start_value": 11249.77,
+  "today_date": "2026-06-01",
+  "last_action": "Semiconductor momentum looks strong after Nvidia's new Arm-based chip announcement, suggesting further upside for tech stocks.",
+  "last_updated": "2026-06-01T13:32:13Z",
   "last_session": {
-    "at": "2026-05-29T19:33:08Z",
-    "fear_greed": 23,
-    "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.2,
-    "vix": 15.45,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-06-01T13:32:13Z",
+    "fear_greed": 29,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.22,
+    "vix": 15.84,
+    "top_movers": [
+      [
+        "QCOM",
+        -6.85
+      ],
+      [
+        "INTC",
+        -5.82
+      ],
+      [
+        "MU",
+        4.82
+      ],
+      [
+        "CRM",
+        4.8
+      ],
+      [
+        "AMD",
+        -3.04
+      ],
+      [
+        "LRCX",
+        -2.89
+      ]
+    ],
+    "news_read": [
+      "Nvidia jumps into PCs with new Arm-based chip debuting in laptops from Microsoft, Dell, HP",
+      "Arm, IBM and Hewlett Packard soar as Nvidia chip 'reinvention' extends software rally",
+      "ServiceNow, Adobe stocks jump as Nvidia\u2019s new AI chip sparks software rally",
+      "Fed's Powell warns Trump's political 'stress test' will wreck public trust in central bank"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Nvidia's PC chip news drove positive sentiment across the sector, with MU up 4.8% and CRM up 4.8% as top watchlist movers. However, with only $48.49 available for new purchases while maintaining a $500 cash reserve, no watchlist stock is affordable enough to buy. I'll stay on the sidelines and watch for any pullbacks that create entry opportunities.",
+    "outlook": "Semiconductor momentum looks strong after Nvidia's new Arm-based chip announcement, suggesting further upside for tech stocks.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -436,6 +466,10 @@
     {
       "timestamp": "2026-05-29T19:33:08Z",
       "value": 11256.11
+    },
+    {
+      "timestamp": "2026-06-01T13:32:13Z",
+      "value": 11249.77
     }
   ]
 }

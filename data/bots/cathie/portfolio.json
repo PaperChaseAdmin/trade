@@ -1,53 +1,84 @@
 {
   "cash": 500.22,
-  "total_value": 10742.86,
+  "total_value": 10434.71,
   "positions": {
     "TSLA": {
       "shares": 7,
       "avg_cost": 408.21,
-      "current_price": 434.7
+      "current_price": 427.5
     },
     "COIN": {
       "shares": 16,
       "avg_cost": 185.6124,
-      "current_price": 188.91
+      "current_price": 179.54
     },
     "NTLA": {
       "shares": 241,
-      "current_price": 14.075,
+      "current_price": 13.76,
       "avg_cost": 12.6113
     },
     "BEAM": {
       "shares": 23,
       "avg_cost": 27.08,
-      "current_price": 33.56
+      "current_price": 32.18
     },
     "PACB": {
       "shares": 9,
       "avg_cost": 1.15,
-      "current_price": 1.47
+      "current_price": 1.45
     }
   },
-  "total_return_pct": 7.43,
+  "total_return_pct": 4.35,
   "total_return_usd": 0.0,
-  "today_pnl": 226.83,
-  "today_pnl_pct": 2.16,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 10516.03,
-  "today_date": "2026-05-29",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-29T19:33:08Z",
+  "today_start_value": 10434.71,
+  "today_date": "2026-06-01",
+  "last_action": "Fear dominates the market, but disruptive innovation themes remain intact for long-term growth.",
+  "last_updated": "2026-06-01T13:32:42Z",
   "last_session": {
-    "at": "2026-05-29T19:33:08Z",
-    "fear_greed": 23,
-    "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.2,
-    "vix": 15.45,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-06-01T13:32:42Z",
+    "fear_greed": 29,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.22,
+    "vix": 15.84,
+    "top_movers": [
+      [
+        "RKLB",
+        -7.33
+      ],
+      [
+        "COIN",
+        -5.65
+      ],
+      [
+        "HOOD",
+        -4.55
+      ],
+      [
+        "PATH",
+        4.05
+      ],
+      [
+        "RXRX",
+        -3.2
+      ],
+      [
+        "TWLO",
+        3.19
+      ]
+    ],
+    "news_read": [
+      "U.S. intercepted Iranian missiles targeting American forces in Kuwait, Central Command says",
+      "AI revolution is \u201850x bigger\u2019 than the dot-com boom: SoftBank's Masayoshi Son to CNBC",
+      "'Disrupted or dead': AI is crushing a generation of startups built before ChatGPT",
+      "Retail had a 'surprisingly robust' first quarter, but the real test is ahead as tax refunds dry up",
+      "Nvidia jumps into PCs with new Arm-based chip debuting in laptops from Microsoft, Dell, HP"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index at 29 signals extreme fear, with COIN down -5.65% and RKLB down -7.33% today, reflecting short\u2011term pressure on growth stocks. Despite the pullback, news highlights AI\u2019s potential to be '50x bigger' than the dot\u2011com boom, reinforcing the thesis that disruptive names like TSLA, COIN, and genomics stocks are on sale. With only $0.22 of expendable cash while maintaining the $500 reserve, no new purchases can be made this session; I will wait for a cash\u2011building opportunity or a dip that allows a meaningful buy within the 30% per\u2011stock limit.",
+    "outlook": "Fear dominates the market, but disruptive innovation themes remain intact for long-term growth.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -446,6 +477,10 @@
     {
       "timestamp": "2026-05-29T19:33:08Z",
       "value": 10742.86
+    },
+    {
+      "timestamp": "2026-06-01T13:32:42Z",
+      "value": 10434.71
     }
   ]
 }

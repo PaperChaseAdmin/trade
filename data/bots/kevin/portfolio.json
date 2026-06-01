@@ -1,58 +1,86 @@
 {
   "cash": 506.69,
-  "total_value": 10020.39,
+  "total_value": 9988.37,
   "positions": {
     "O": {
       "shares": 32,
       "avg_cost": 61.6626,
-      "current_price": 61.125
+      "current_price": 60.874
     },
     "VZ": {
       "shares": 43,
       "avg_cost": 46.05,
-      "current_price": 47.895
+      "current_price": 47.7
     },
     "BTI": {
       "shares": 9,
       "avg_cost": 66.142,
-      "current_price": 61.86
+      "current_price": 62.205
     },
     "T": {
       "shares": 81,
       "avg_cost": 24.505,
-      "current_price": 24.695
+      "current_price": 24.725
     },
     "WPC": {
       "shares": 27,
       "avg_cost": 73.94,
-      "current_price": 74.24
+      "current_price": 73.72
     },
     "OHI": {
       "shares": 20,
       "avg_cost": 48.17,
-      "current_price": 46.835
+      "current_price": 46.48
     }
   },
-  "total_return_pct": 0.2,
+  "total_return_pct": -0.12,
   "total_return_usd": 0.0,
-  "today_pnl": -24.73,
-  "today_pnl_pct": -0.25,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 10045.12,
-  "today_date": "2026-05-29",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-05-29T19:34:39Z",
+  "today_start_value": 9988.37,
+  "today_date": "2026-06-01",
+  "last_action": "Market remains fearful with oversold conditions, presenting potential dividend\u2011value opportunities if cash becomes available.",
+  "last_updated": "2026-06-01T13:33:53Z",
   "last_session": {
-    "at": "2026-05-29T19:34:39Z",
-    "fear_greed": 23,
-    "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.2,
-    "vix": 15.45,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "at": "2026-06-01T13:33:53Z",
+    "fear_greed": 29,
+    "fear_greed_label": "Fear",
+    "sp500_change": 0.22,
+    "vix": 15.84,
+    "top_movers": [
+      [
+        "IBM",
+        5.99
+      ],
+      [
+        "CVX",
+        1.23
+      ],
+      [
+        "PM",
+        -1.16
+      ],
+      [
+        "JNJ",
+        -1.0
+      ],
+      [
+        "WPC",
+        -0.94
+      ],
+      [
+        "ABBV",
+        -0.91
+      ]
+    ],
+    "news_read": [
+      "Strategy holds STRC dividend at 11.5% for fourth straight month",
+      "Nvidia jumps into PCs with new Arm-based chip debuting in laptops from Microsoft, Dell, HP"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=29 (Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "The Fear & Greed index at 29 signals extreme fear, suggesting many dividend stocks are undervalued today. However, with only $506.69 cash and a $500 reserve requirement, I cannot afford a full share of any watchlist ticker without breaching the cash reserve rule. I will continue to monitor price pullbacks and dividend announcements to deploy capital when a suitable entry aligns with both value and cash constraints.",
+    "outlook": "Market remains fearful with oversold conditions, presenting potential dividend\u2011value opportunities if cash becomes available.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -451,6 +479,10 @@
     {
       "timestamp": "2026-05-29T19:34:39Z",
       "value": 10020.39
+    },
+    {
+      "timestamp": "2026-06-01T13:33:53Z",
+      "value": 9988.37
     }
   ]
 }
