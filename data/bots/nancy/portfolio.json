@@ -1,72 +1,71 @@
 {
   "cash": 548.49,
-  "total_value": 11199.95,
+  "total_value": 11381.51,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 218.95
+      "current_price": 221.37
     },
     "INTC": {
       "shares": 31,
-      "current_price": 106.9701,
+      "current_price": 109.845,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 1012.785
+      "current_price": 1026.8199
     }
   },
-  "total_return_pct": 12.0,
+  "total_return_pct": 13.82,
   "total_return_usd": 0.0,
-  "today_pnl": -49.82,
-  "today_pnl_pct": -0.44,
+  "today_pnl": 131.74,
+  "today_pnl_pct": 1.17,
   "total_trades": 4,
   "today_start_value": 11249.77,
   "today_date": "2026-06-01",
-  "last_action": "Market remains fearful but semiconductor-specific news is bullish, suggesting potential short\u2011term upside in tech despite broader risk aversion.",
-  "last_updated": "2026-06-01T14:03:34Z",
+  "last_action": "Market remains fearful with low Fear & Greed index, but semiconductor news is bullish.",
+  "last_updated": "2026-06-01T14:32:43Z",
   "last_session": {
-    "at": "2026-06-01T14:03:34Z",
+    "at": "2026-06-01T14:32:43Z",
     "fear_greed": 29,
     "fear_greed_label": "Fear",
-    "sp500_change": 0.05,
+    "sp500_change": -0.02,
     "vix": 16.14,
     "top_movers": [
       [
-        "QCOM",
-        -9.32
-      ],
-      [
         "CRM",
-        7.5
+        7.52
       ],
       [
-        "INTC",
-        -6.86
-      ],
-      [
-        "AMD",
-        -5.01
+        "QCOM",
+        -6.06
       ],
       [
         "MU",
-        4.6
+        5.91
       ],
       [
         "NVDA",
-        3.74
+        4.88
+      ],
+      [
+        "INTC",
+        -4.12
+      ],
+      [
+        "META",
+        -3.4
       ]
     ],
     "news_read": [
       "Nvidia jumps into PCs with new Arm-based chip debuting in laptops from Microsoft, Dell, HP",
-      "ServiceNow, Adobe stocks jump as Nvidia\u2019s new AI chip sparks software rally",
       "Iran stops negotiations with U.S., vows to 'completely' block Strait of Hormuz: State media"
     ],
     "domain_extra": "",
-    "ai_analysis": "With only $48.49 available above the $500 cash reserve, no whole share can be purchased from the watchlist (all priced above $100). I therefore hold existing positions, watching for a pullback or additional cash inflows to deploy into NVDA or other semiconductor names on further news.",
-    "outlook": "Market remains fearful but semiconductor-specific news is bullish, suggesting potential short\u2011term upside in tech despite broader risk aversion.",
+    "ai_analysis": "Nvidia's new Arm-based chip news supports a bullish stance on NVDA and other semiconductors, yet current cash of $548.49 only allows $48.49 of exposure while maintaining the $500 reserve, making any whole\u2011share purchase impossible without breaching the cash rule. Therefore I hold back and will watch for a pullback or additional capital before adding to semiconductor positions.",
+    "outlook": "Market remains fearful with low Fear & Greed index, but semiconductor news is bullish.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -473,6 +472,10 @@
     {
       "timestamp": "2026-06-01T14:03:34Z",
       "value": 11199.95
+    },
+    {
+      "timestamp": "2026-06-01T14:32:43Z",
+      "value": 11381.51
     }
   ]
 }
