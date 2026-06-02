@@ -1,26 +1,26 @@
 {
   "cash": 506.69,
-  "total_value": 9889.12,
+  "total_value": 9888.58,
   "positions": {
     "O": {
       "shares": 32,
       "avg_cost": 61.6626,
-      "current_price": 59.735
+      "current_price": 59.89
     },
     "VZ": {
       "shares": 43,
       "avg_cost": 46.05,
-      "current_price": 47.635
+      "current_price": 47.88
     },
     "BTI": {
       "shares": 9,
       "avg_cost": 66.142,
-      "current_price": 61.42
+      "current_price": 60.04
     },
     "T": {
       "shares": 81,
       "avg_cost": 24.505,
-      "current_price": 24.6
+      "current_price": 24.59
     },
     "WPC": {
       "shares": 27,
@@ -30,29 +30,59 @@
     "OHI": {
       "shares": 20,
       "avg_cost": 48.17,
-      "current_price": 45.635
+      "current_price": 45.495
     }
   },
   "total_return_pct": -1.11,
   "total_return_usd": 0.0,
-  "today_pnl": -99.25,
-  "today_pnl_pct": -0.99,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 9988.37,
-  "today_date": "2026-06-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-01T19:34:01Z",
+  "today_start_value": 9888.58,
+  "today_date": "2026-06-02",
+  "last_action": "Extreme Fear indicates oversold conditions, but dividend\u2011focused stocks need a clearer catalyst before adding exposure.",
+  "last_updated": "2026-06-02T13:34:08Z",
   "last_session": {
-    "at": "2026-06-01T19:34:01Z",
-    "fear_greed": 29,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.42,
-    "vix": 15.75,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "at": "2026-06-02T13:34:08Z",
+    "fear_greed": 23,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.26,
+    "vix": 16.18,
+    "top_movers": [
+      [
+        "IBM",
+        -2.42
+      ],
+      [
+        "BTI",
+        -1.44
+      ],
+      [
+        "ENB",
+        1.07
+      ],
+      [
+        "PM",
+        -0.85
+      ],
+      [
+        "ABBV",
+        -0.7
+      ],
+      [
+        "O",
+        0.62
+      ]
+    ],
+    "news_read": [
+      "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
+      "Trump picks housing Dir. Bill Pulte as acting intelligence chief, replacing Tulsi Gabbard",
+      "Alphabet plans to raise $80 billion from stock sales to fund AI build-out",
+      "Victoria Secret shares spike 40% after big earnings beat, raised sales outlook"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=23 (Extreme Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "The Fear & Greed index at 23 signals extreme fear and potential value, yet the watchlist shows mixed moves with IBM down -2.4% and BTI down -1.4% while O is up +0.6%. With $506.69 cash and a $500 reserve requirement, only $6.69 is available for new purchases\u2014insufficient to buy a full share of any watchlisted stock priced above $20. I will hold cash and monitor for better entry points or dividend announcements.",
+    "outlook": "Extreme Fear indicates oversold conditions, but dividend\u2011focused stocks need a clearer catalyst before adding exposure.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -507,6 +537,10 @@
     {
       "timestamp": "2026-06-01T19:34:01Z",
       "value": 9889.12
+    },
+    {
+      "timestamp": "2026-06-02T13:34:08Z",
+      "value": 9888.58
     }
   ]
 }

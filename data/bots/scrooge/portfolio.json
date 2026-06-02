@@ -1,68 +1,98 @@
 {
   "cash": 206.08,
-  "total_value": 9731.68,
+  "total_value": 9694.06,
   "positions": {
     "BTI": {
       "shares": 29,
       "avg_cost": 66.275,
-      "current_price": 61.42
+      "current_price": 60.04
     },
     "OHI": {
       "shares": 40,
       "avg_cost": 47.59,
-      "current_price": 45.635
+      "current_price": 45.495
     },
     "MAIN": {
       "shares": 20,
       "avg_cost": 50.63,
-      "current_price": 51.63
+      "current_price": 51.61
     },
     "ARCC": {
       "shares": 50,
       "avg_cost": 18.895,
-      "current_price": 19.065
+      "current_price": 18.998
     },
     "T": {
       "shares": 50,
       "avg_cost": 24.5551,
-      "current_price": 24.6
+      "current_price": 24.59
     },
     "ENB": {
       "shares": 20,
       "avg_cost": 56.3352,
-      "current_price": 55.121
+      "current_price": 55.52
     },
     "O": {
       "shares": 26,
       "avg_cost": 61.88,
-      "current_price": 59.735
+      "current_price": 59.89
     },
     "VZ": {
       "shares": 1,
       "avg_cost": 47.6602,
-      "current_price": 47.635
+      "current_price": 47.88
     }
   },
-  "total_return_pct": -2.68,
+  "total_return_pct": -3.06,
   "total_return_usd": 0.0,
-  "today_pnl": -72.52,
-  "today_pnl_pct": -0.74,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 8,
-  "today_start_value": 9804.2,
-  "today_date": "2026-06-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-01T19:34:47Z",
+  "today_start_value": 9694.06,
+  "today_date": "2026-06-02",
+  "last_action": "Extreme Fear indicates oversold conditions, but limited cash restricts new high-yield purchases.",
+  "last_updated": "2026-06-02T13:35:51Z",
   "last_session": {
-    "at": "2026-06-01T19:34:47Z",
-    "fear_greed": 29,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.42,
-    "vix": 15.75,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "at": "2026-06-02T13:35:51Z",
+    "fear_greed": 23,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.26,
+    "vix": 16.18,
+    "top_movers": [
+      [
+        "IBM",
+        -2.42
+      ],
+      [
+        "BTI",
+        -1.44
+      ],
+      [
+        "ENB",
+        1.07
+      ],
+      [
+        "PM",
+        -0.85
+      ],
+      [
+        "ABBV",
+        -0.7
+      ],
+      [
+        "O",
+        0.62
+      ]
+    ],
+    "news_read": [
+      "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
+      "Trump picks housing Dir. Bill Pulte as acting intelligence chief, replacing Tulsi Gabbard",
+      "Alphabet plans to raise $80 billion from stock sales to fund AI build-out",
+      "Victoria Secret shares spike 40% after big earnings beat, raised sales outlook"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=23 (Extreme Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "Cash reserve is $206.08, leaving only $6.08 available for new buys while maintaining the $200 minimum, insufficient to purchase any watchlist stock at current prices. No dividend cuts were reported for existing holdings, so the rule to hold unless cut applies. We'll monitor for any dividend reductions and watch for a cash inflow from dividends to enable future DRIP purchases.",
+    "outlook": "Extreme Fear indicates oversold conditions, but limited cash restricts new high-yield purchases.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -517,6 +547,10 @@
     {
       "timestamp": "2026-06-01T19:34:47Z",
       "value": 9731.68
+    },
+    {
+      "timestamp": "2026-06-02T13:35:51Z",
+      "value": 9694.06
     }
   ]
 }

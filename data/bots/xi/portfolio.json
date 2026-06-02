@@ -1,53 +1,81 @@
 {
   "cash": 503.97,
-  "total_value": 10078.9,
+  "total_value": 10457.97,
   "positions": {
     "LI": {
       "shares": 180,
       "avg_cost": 16.655,
-      "current_price": 14.605
+      "current_price": 15.638
     },
     "NIO": {
       "shares": 506,
-      "current_price": 5.99,
+      "current_price": 6.075,
       "avg_cost": 5.9293
     },
     "XPEV": {
       "shares": 199,
       "avg_cost": 15.04,
-      "current_price": 17.335
+      "current_price": 17.98
     },
     "BABA": {
       "shares": 3,
       "avg_cost": 135.84,
-      "current_price": 125.965
+      "current_price": 131.925
     },
     "JD": {
       "shares": 3,
       "avg_cost": 32.47,
-      "current_price": 29.175
+      "current_price": 30.47
     }
   },
-  "total_return_pct": 0.79,
+  "total_return_pct": 4.58,
   "total_return_usd": 0.0,
-  "today_pnl": 115.87,
-  "today_pnl_pct": 1.16,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 9963.03,
-  "today_date": "2026-06-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-01T19:36:17Z",
+  "today_start_value": 10457.97,
+  "today_date": "2026-06-02",
+  "last_action": "Extreme fear presents a buying opportunity for Chinese ADRs as stimulus expectations linger.",
+  "last_updated": "2026-06-02T13:37:29Z",
   "last_session": {
-    "at": "2026-06-01T19:36:17Z",
-    "fear_greed": 29,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.42,
-    "vix": 15.75,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "at": "2026-06-02T13:37:29Z",
+    "fear_greed": 23,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.26,
+    "vix": 16.18,
+    "top_movers": [
+      [
+        "LI",
+        7.19
+      ],
+      [
+        "BABA",
+        5.26
+      ],
+      [
+        "XPEV",
+        4.42
+      ],
+      [
+        "JD",
+        4.26
+      ],
+      [
+        "KWEB",
+        3.73
+      ],
+      [
+        "FXI",
+        2.96
+      ]
+    ],
+    "news_read": [
+      "NBA star Stephen Curry partners with Chinese sportswear giant Li-Ning",
+      "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack"
+    ],
+    "domain_extra": "CHINA FOCUS: NBA star Stephen Curry partners with Chinese sportswear giant Li-Ning",
+    "ai_analysis": "LI led the watchlist with a 7.19% gain, followed by BABA +5.26% and XPEV +4.42%, showing strong intraday momentum despite VIX at 16.18. With only $3.97 of excess cash above the $500 reserve, no full-share purchases can be made without breaching the cash rule, so we hold. We'll watch for any further stimulus news or pullbacks to deploy cash when it accumulates.",
+    "outlook": "Extreme fear presents a buying opportunity for Chinese ADRs as stimulus expectations linger.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -502,6 +530,10 @@
     {
       "timestamp": "2026-06-01T19:36:17Z",
       "value": 10078.9
+    },
+    {
+      "timestamp": "2026-06-02T13:37:29Z",
+      "value": 10457.97
     }
   ]
 }

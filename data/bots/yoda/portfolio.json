@@ -1,43 +1,73 @@
 {
   "cash": 1212.39,
-  "total_value": 10219.31,
+  "total_value": 10191.49,
   "positions": {
     "SPY": {
       "shares": 4,
       "avg_cost": 735.73,
-      "current_price": 759.63
+      "current_price": 757.165
     },
     "QQQ": {
       "shares": 4,
       "avg_cost": 717.6132,
-      "current_price": 743.88
+      "current_price": 741.75
     },
     "VTI": {
       "shares": 8,
       "avg_cost": 371.78,
-      "current_price": 374.11
+      "current_price": 372.93
     }
   },
-  "total_return_pct": 2.19,
+  "total_return_pct": 1.91,
   "total_return_usd": 0.0,
-  "today_pnl": 62.48,
-  "today_pnl_pct": 0.62,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 3,
-  "today_start_value": 10156.83,
-  "today_date": "2026-06-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-01T19:35:32Z",
+  "today_start_value": 10191.49,
+  "today_date": "2026-06-02",
+  "last_action": "Fearful the market is, yet steady growth awaits the disciplined investor.",
+  "last_updated": "2026-06-02T13:36:12Z",
   "last_session": {
-    "at": "2026-06-01T19:35:32Z",
-    "fear_greed": 29,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.42,
-    "vix": 15.75,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-06-02T13:36:12Z",
+    "fear_greed": 23,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.26,
+    "vix": 16.18,
+    "top_movers": [
+      [
+        "VWO",
+        0.7
+      ],
+      [
+        "GLD",
+        0.6
+      ],
+      [
+        "VXUS",
+        0.27
+      ],
+      [
+        "VNQ",
+        0.21
+      ],
+      [
+        "SPY",
+        -0.19
+      ],
+      [
+        "QQQ",
+        -0.19
+      ]
+    ],
+    "news_read": [
+      "Polymarket closes its first block trade as prediction markets push for Wall Street adoption",
+      "CoinDesk 20 performance update: Stellar (XLM) falls 8.4%, leading index lower",
+      "Live markets: bitcoin's plunge continues, putting February $60,000 low back in play",
+      "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Extreme fear reads at 23 on the Fear & Greed index, with SPY, QQQ, and VTI each down about 0.2% today. Current holdings of these three ETFs already approach the 30% per\u2011stock limit, leaving little room for additional purchases without exceeding allocation rules. With cash above the $500 reserve but no clear signal to increase exposure, I choose to wait and watch for a clearer dip or rebalancing opportunity.",
+    "outlook": "Fearful the market is, yet steady growth awaits the disciplined investor.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -492,6 +522,10 @@
     {
       "timestamp": "2026-06-01T19:35:32Z",
       "value": 10219.31
+    },
+    {
+      "timestamp": "2026-06-02T13:36:12Z",
+      "value": 10191.49
     }
   ]
 }

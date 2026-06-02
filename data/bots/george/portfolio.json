@@ -1,38 +1,68 @@
 {
   "cash": 502.34,
-  "total_value": 10064.45,
+  "total_value": 10115.72,
   "positions": {
     "TLT": {
       "shares": 59,
-      "current_price": 85.3101,
+      "current_price": 85.81,
       "avg_cost": 83.5269
     },
     "GLD": {
       "shares": 11,
-      "current_price": 411.71,
+      "current_price": 413.69,
       "avg_cost": 415.4155
     }
   },
-  "total_return_pct": 0.64,
+  "total_return_pct": 1.16,
   "total_return_usd": 0.0,
-  "today_pnl": 46.3,
-  "today_pnl_pct": 0.46,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 4,
-  "today_start_value": 10018.15,
-  "today_date": "2026-06-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-01T19:33:16Z",
+  "today_start_value": 10115.72,
+  "today_date": "2026-06-02",
+  "last_action": "Expect continued risk-off sentiment to drive demand for long-term Treasuries as market stress persists.",
+  "last_updated": "2026-06-02T13:33:40Z",
   "last_session": {
-    "at": "2026-06-01T19:33:16Z",
-    "fear_greed": 29,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.42,
-    "vix": 15.75,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "at": "2026-06-02T13:33:40Z",
+    "fear_greed": 23,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.26,
+    "vix": 16.18,
+    "top_movers": [
+      [
+        "BABA",
+        5.26
+      ],
+      [
+        "FXI",
+        2.96
+      ],
+      [
+        "AMZN",
+        -1.52
+      ],
+      [
+        "NVDA",
+        0.63
+      ],
+      [
+        "GLD",
+        0.6
+      ],
+      [
+        "TSLA",
+        0.4
+      ]
+    ],
+    "news_read": [
+      "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
+      "Trump picks housing Dir. Bill Pulte as acting intelligence chief, replacing Tulsi Gabbard",
+      "Alphabet plans to raise $80 billion from stock sales to fund AI build-out",
+      "Victoria Secret shares spike 40% after big earnings beat, raised sales outlook"
+    ],
+    "domain_extra": "MACRO: NASDAQ +0.42%  DOW +0.09%  VIX 16.2 (NORMAL)",
+    "ai_analysis": "The market shows extreme fear with a low VIX, indicating investors are bracing for volatility yet seeking safety. TLT has edged up 0.38% today, reflecting early inflows into bonds, and we have sufficient cash to increase our position while keeping a $300 reserve. Adding to TLT aligns with our conviction to capitalize on systemic risk, and we will monitor further risk-off cues and any shifts in inflation or Fed policy.",
+    "outlook": "Expect continued risk-off sentiment to drive demand for long-term Treasuries as market stress persists.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -487,6 +517,10 @@
     {
       "timestamp": "2026-06-01T19:33:16Z",
       "value": 10064.45
+    },
+    {
+      "timestamp": "2026-06-02T13:33:40Z",
+      "value": 10115.72
     }
   ]
 }

@@ -1,63 +1,93 @@
 {
   "cash": 509.85,
-  "total_value": 10036.05,
+  "total_value": 10005.3,
   "positions": {
     "RTX": {
       "shares": 5,
       "avg_cost": 173.42,
-      "current_price": 175.89
+      "current_price": 174.28
     },
     "HAL": {
       "shares": 20,
       "avg_cost": 42.83,
-      "current_price": 39.475
+      "current_price": 39.83
     },
     "NUE": {
       "shares": 10,
-      "current_price": 251.48,
+      "current_price": 251.99,
       "avg_cost": 224.3625
     },
     "LHX": {
       "shares": 4,
       "avg_cost": 308.92,
-      "current_price": 311.505
+      "current_price": 307.925
     },
     "CVX": {
       "shares": 10,
       "avg_cost": 195.0742,
-      "current_price": 186.52
+      "current_price": 185.18
     },
     "XOM": {
       "shares": 8,
       "avg_cost": 160.55,
-      "current_price": 149.06
+      "current_price": 149.58
     },
     "LMT": {
       "shares": 2,
       "avg_cost": 526.0,
-      "current_price": 519.375
+      "current_price": 513.705
     }
   },
-  "total_return_pct": 0.36,
+  "total_return_pct": 0.05,
   "total_return_usd": 0.0,
-  "today_pnl": 51.69,
-  "today_pnl_pct": 0.52,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 8,
-  "today_start_value": 9984.36,
-  "today_date": "2026-06-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-01T19:31:45Z",
+  "today_start_value": 10005.3,
+  "today_date": "2026-06-02",
+  "last_action": "Despite extreme fear, select America-first names like CAT and HAL show modest strength, suggesting potential rebound if defense spending and infrastructure policies gain traction.",
+  "last_updated": "2026-06-02T13:32:14Z",
   "last_session": {
-    "at": "2026-06-01T19:31:45Z",
-    "fear_greed": 29,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.42,
-    "vix": 15.75,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-06-02T13:32:14Z",
+    "fear_greed": 23,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.26,
+    "vix": 16.18,
+    "top_movers": [
+      [
+        "CAT",
+        1.83
+      ],
+      [
+        "HAL",
+        1.25
+      ],
+      [
+        "GEO",
+        -0.88
+      ],
+      [
+        "NOC",
+        -0.75
+      ],
+      [
+        "LHX",
+        -0.54
+      ],
+      [
+        "GD",
+        -0.49
+      ]
+    ],
+    "news_read": [
+      "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
+      "Trump picks housing Dir. Bill Pulte as acting intelligence chief, replacing Tulsi Gabbard",
+      "Alphabet plans to raise $80 billion from stock sales to fund AI build-out",
+      "Victoria Secret shares spike 40% after big earnings beat, raised sales outlook"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index at 23 signals extreme fear, yet the S&P 500 edged up 0.26% and VIX remains moderate at 16.18, indicating limited panic. Among the watchlist, CAT (+1.8%) and HAL (+1.2%) are the only gainers, aligning with my preference for industrials and energy services, while defense stocks (LMT, RTX, LHX, GD, NOC) are all down. With cash just above the $500 reserve, I cannot afford a full share of any watchlisted stock, so I will hold and wait for a dip or additional capital.",
+    "outlook": "Despite extreme fear, select America-first names like CAT and HAL show modest strength, suggesting potential rebound if defense spending and infrastructure policies gain traction.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -512,6 +542,10 @@
     {
       "timestamp": "2026-06-01T19:31:45Z",
       "value": 10036.05
+    },
+    {
+      "timestamp": "2026-06-02T13:32:14Z",
+      "value": 10005.3
     }
   ]
 }

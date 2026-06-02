@@ -1,53 +1,81 @@
 {
   "cash": 201.06,
-  "total_value": 11071.71,
+  "total_value": 10708.89,
   "positions": {
     "COIN": {
       "shares": 22,
       "avg_cost": 193.13,
-      "current_price": 182.185
+      "current_price": 176.3
     },
     "AMC": {
       "shares": 2500,
       "avg_cost": 1.535,
-      "current_price": 2.115
+      "current_price": 2.04
     },
     "MARA": {
       "shares": 100,
       "avg_cost": 13.34,
-      "current_price": 14.97
+      "current_price": 14.52
     },
     "RIOT": {
       "shares": 2,
       "avg_cost": 27.09,
-      "current_price": 28.305
+      "current_price": 28.02
     },
     "GME": {
       "shares": 1,
       "avg_cost": 21.79,
-      "current_price": 21.465
+      "current_price": 21.19
     }
   },
-  "total_return_pct": 10.72,
+  "total_return_pct": 7.09,
   "total_return_usd": 0.0,
-  "today_pnl": 845.9,
-  "today_pnl_pct": 8.27,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 9,
-  "today_start_value": 10225.81,
-  "today_date": "2026-06-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-01T19:34:46Z",
+  "today_start_value": 10708.89,
+  "today_date": "2026-06-02",
+  "last_action": "Market remains in extreme fear with barely any positive momentum, making aggressive momentum plays unattractive.",
+  "last_updated": "2026-06-02T13:35:22Z",
   "last_session": {
-    "at": "2026-06-01T19:34:46Z",
-    "fear_greed": 29,
-    "fear_greed_label": "Fear",
-    "sp500_change": 0.42,
-    "vix": 15.75,
-    "top_movers": [],
-    "news_read": [],
+    "at": "2026-06-02T13:35:22Z",
+    "fear_greed": 23,
+    "fear_greed_label": "Extreme Fear",
+    "sp500_change": 0.26,
+    "vix": 16.18,
+    "top_movers": [
+      [
+        "MSTR",
+        -5.43
+      ],
+      [
+        "AMC",
+        -4.48
+      ],
+      [
+        "UPST",
+        -2.95
+      ],
+      [
+        "COIN",
+        -2.94
+      ],
+      [
+        "SOFI",
+        -2.48
+      ],
+      [
+        "HOOD",
+        -2.16
+      ]
+    ],
+    "news_read": [
+      "Movement pivots to stablecoin payments as the layer-2 boom loses momentum",
+      "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Today's watchlist shows no stocks with >10% gains; the biggest movers are negative (MSTR -5.4%, AMC -4.5%). Cash is just above the $200 reserve at $201.06, leaving insufficient capital for a meaningful buy while respecting the reserve rule. I'll watch for any breakout above 10% intraday or a spike in short\u2011interest news before considering another trade.",
+    "outlook": "Market remains in extreme fear with barely any positive momentum, making aggressive momentum plays unattractive.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -502,6 +530,10 @@
     {
       "timestamp": "2026-06-01T19:34:46Z",
       "value": 11071.71
+    },
+    {
+      "timestamp": "2026-06-02T13:35:22Z",
+      "value": 10708.89
     }
   ]
 }
