@@ -1,43 +1,71 @@
 {
   "cash": 548.49,
-  "total_value": 11497.05,
+  "total_value": 11515.28,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 216.955
+      "current_price": 215.76
     },
     "INTC": {
       "shares": 31,
-      "current_price": 112.005,
+      "current_price": 111.89,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 1055.52
+      "current_price": 1065.45
     }
   },
-  "total_return_pct": 14.97,
+  "total_return_pct": 15.15,
   "total_return_usd": 0.0,
-  "today_pnl": -309.26,
-  "today_pnl_pct": -2.62,
+  "today_pnl": -291.03,
+  "today_pnl_pct": -2.47,
   "total_trades": 4,
   "today_start_value": 11806.31,
   "today_date": "2026-06-03",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-03T16:03:21Z",
+  "last_action": "Market remains in extreme fear with selective semiconductor strength suggesting a potential short\u2011term bounce in names like QCOM and INTC.",
+  "last_updated": "2026-06-03T16:32:51Z",
   "last_session": {
-    "at": "2026-06-03T16:03:21Z",
+    "at": "2026-06-03T16:32:51Z",
     "fear_greed": 11,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": -0.52,
-    "vix": 16.17,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.59,
+    "vix": 16.24,
+    "top_movers": [
+      [
+        "CRM",
+        -4.42
+      ],
+      [
+        "QCOM",
+        3.72
+      ],
+      [
+        "INTC",
+        3.64
+      ],
+      [
+        "MSFT",
+        -3.57
+      ],
+      [
+        "NVDA",
+        -3.16
+      ],
+      [
+        "AMZN",
+        -2.97
+      ]
+    ],
+    "news_read": [
+      "GOP Sen. Tillis slams Trump intelligence pick Pulte: 'Don't think he has a prayer'",
+      "SpaceX targets fixed $135 IPO roadshow price at $1.75 trillion valuation, source says"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Cash is only $548.49, and maintaining a $500 reserve leaves just $48.49 for new purchases, insufficient to buy a full share of any watchlist stock. I noticed INTC (+3.6%) and QCOM (+3.7%) are today\u2019s top gainers amid semiconductor news, while NVDA and MSFT are down >3%. I\u2019ll monitor for any pullback that creates a cheaper entry or any news\u2011driven catalyst before deploying capital.",
+    "outlook": "Market remains in extreme fear with selective semiconductor strength suggesting a potential short\u2011term bounce in names like QCOM and INTC.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -572,6 +600,10 @@
     {
       "timestamp": "2026-06-03T16:03:21Z",
       "value": 11497.05
+    },
+    {
+      "timestamp": "2026-06-03T16:32:51Z",
+      "value": 11515.28
     }
   ]
 }
