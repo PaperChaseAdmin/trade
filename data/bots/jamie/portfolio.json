@@ -1,53 +1,81 @@
 {
   "cash": 1068.29,
-  "total_value": 10337.41,
+  "total_value": 10302.08,
   "positions": {
     "BAC": {
       "shares": 49,
       "avg_cost": 50.545,
-      "current_price": 52.079
+      "current_price": 51.885
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 300.69,
-      "current_price": 298.7101
+      "current_price": 299.675
     },
     "GS": {
       "shares": 2,
       "avg_cost": 928.01,
-      "current_price": 1051.85
+      "current_price": 1041.51
     },
     "COF": {
       "shares": 10,
       "avg_cost": 183.14,
-      "current_price": 183.06
+      "current_price": 182.02
     },
     "C": {
       "shares": 3,
       "avg_cost": 120.69,
-      "current_price": 131.09
+      "current_price": 130.27
     }
   },
-  "total_return_pct": 3.37,
+  "total_return_pct": 3.02,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -35.33,
+  "today_pnl_pct": -0.34,
   "total_trades": 5,
   "today_start_value": 10337.41,
   "today_date": "2026-06-03",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-03T13:33:57Z",
+  "last_action": "Extreme Fear and declining bank prices present a potential buying opportunity for quality banks once cash permits.",
+  "last_updated": "2026-06-03T14:04:42Z",
   "last_session": {
-    "at": "2026-06-03T13:33:57Z",
+    "at": "2026-06-03T14:04:42Z",
     "fear_greed": 11,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.13,
+    "sp500_change": -0.54,
     "vix": 16.24,
-    "top_movers": [],
-    "news_read": [],
+    "top_movers": [
+      [
+        "GS",
+        -2.17
+      ],
+      [
+        "MS",
+        -1.78
+      ],
+      [
+        "V",
+        -1.65
+      ],
+      [
+        "MA",
+        -1.62
+      ],
+      [
+        "AXP",
+        -1.32
+      ],
+      [
+        "MET",
+        -1.28
+      ]
+    ],
+    "news_read": [
+      "Mortgage rates are easing slightly, but homebuyers are retreating",
+      "Trump says Iran agreed to not have nuclear weapons, but 'they can change their mind'"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index sits at 11 (Extreme Fear), the S&P 500 is down 0.54% and VIX at 16.24, reflecting heightened market anxiety. Notable decliners in the watchlist include GS (-2.2%), MS (-1.8%), and V (-1.6%), while mortgage rates are easing but homebuyer demand is weakening. With only $68.29 available for new purchases while maintaining a $1,000 cash reserve, no whole-share buys from the watchlist are feasible, so I will hold and monitor for a more suitable entry point.",
+    "outlook": "Extreme Fear and declining bank prices present a potential buying opportunity for quality banks once cash permits.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -562,6 +590,10 @@
     {
       "timestamp": "2026-06-03T13:33:57Z",
       "value": 10337.41
+    },
+    {
+      "timestamp": "2026-06-03T14:04:42Z",
+      "value": 10302.08
     }
   ]
 }
