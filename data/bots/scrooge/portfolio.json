@@ -1,68 +1,98 @@
 {
   "cash": 206.08,
-  "total_value": 9699.37,
+  "total_value": 9625.36,
   "positions": {
     "BTI": {
       "shares": 29,
       "avg_cost": 66.275,
-      "current_price": 60.365
+      "current_price": 59.86
     },
     "OHI": {
       "shares": 40,
       "avg_cost": 47.59,
-      "current_price": 44.795
+      "current_price": 44.68
     },
     "MAIN": {
       "shares": 20,
       "avg_cost": 50.63,
-      "current_price": 51.69
+      "current_price": 51.035
     },
     "ARCC": {
       "shares": 50,
       "avg_cost": 18.895,
-      "current_price": 19.111
+      "current_price": 18.75
     },
     "T": {
       "shares": 50,
       "avg_cost": 24.5551,
-      "current_price": 24.595
+      "current_price": 24.075
     },
     "ENB": {
       "shares": 20,
       "avg_cost": 56.3352,
-      "current_price": 56.27
+      "current_price": 56.62
     },
     "O": {
       "shares": 26,
       "avg_cost": 61.88,
-      "current_price": 59.935
+      "current_price": 59.79
     },
     "VZ": {
       "shares": 1,
       "avg_cost": 47.6602,
-      "current_price": 48.0997
+      "current_price": 47.255
     }
   },
-  "total_return_pct": -3.01,
+  "total_return_pct": -3.75,
   "total_return_usd": 0.0,
-  "today_pnl": 5.31,
-  "today_pnl_pct": 0.05,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 8,
-  "today_start_value": 9694.06,
-  "today_date": "2026-06-02",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-02T19:35:43Z",
+  "today_start_value": 9625.36,
+  "today_date": "2026-06-03",
+  "last_action": "Extreme Fear suggests oversold conditions may present buying opportunities for high-yield dividend stocks.",
+  "last_updated": "2026-06-03T13:35:51Z",
   "last_session": {
-    "at": "2026-06-02T19:35:43Z",
-    "fear_greed": 23,
+    "at": "2026-06-03T13:35:51Z",
+    "fear_greed": 11,
     "fear_greed_label": "Extreme Fear",
     "sp500_change": 0.13,
-    "vix": 15.74,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "vix": 16.24,
+    "top_movers": [
+      [
+        "IBM",
+        -3.86
+      ],
+      [
+        "T",
+        -2.35
+      ],
+      [
+        "HTGC",
+        -1.55
+      ],
+      [
+        "VZ",
+        -1.42
+      ],
+      [
+        "MAIN",
+        -1.35
+      ],
+      [
+        "ARCC",
+        -1.27
+      ]
+    ],
+    "news_read": [
+      "Trump says Iran agreed to not have nuclear weapons, but 'they can change their mind'",
+      "Private payrolls grew by 122,000 in May, stronger than expected, ADP reports",
+      "GOP Sen. Tillis slams Trump intelligence pick Pulte: 'Don't think he has a prayer'",
+      "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents"
+    ],
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=11 (Extreme Fear) \u2014 Oversold \u2014 potential value opportunity",
+    "ai_analysis": "The Fear & Greed index at 11 indicates extreme fear, often a contrarian buy signal. Today's biggest decliners in the watchlist are IBM (-3.9%), T (-2.4%), and HTGC (-1.6%), showing price weakness that could increase yields. However, with only $6.08 of available cash above the $200 reserve, there is insufficient capital to make a meaningful purchase while adhering to the 20% per stock limit.",
+    "outlook": "Extreme Fear suggests oversold conditions may present buying opportunities for high-yield dividend stocks.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -573,6 +603,10 @@
     {
       "timestamp": "2026-06-02T19:35:43Z",
       "value": 9699.37
+    },
+    {
+      "timestamp": "2026-06-03T13:35:51Z",
+      "value": 9625.36
     }
   ]
 }

@@ -1,43 +1,71 @@
 {
   "cash": 548.49,
-  "total_value": 11450.11,
+  "total_value": 11806.31,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 222.725
+      "current_price": 222.2199
     },
     "INTC": {
       "shares": 31,
-      "current_price": 107.29,
+      "current_price": 117.64,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 1058.6899
+      "current_price": 1069.42
     }
   },
-  "total_return_pct": 14.5,
+  "total_return_pct": 18.06,
   "total_return_usd": 0.0,
-  "today_pnl": 80.13,
-  "today_pnl_pct": 0.7,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 4,
-  "today_start_value": 11369.98,
-  "today_date": "2026-06-02",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-02T19:32:53Z",
+  "today_start_value": 11806.31,
+  "today_date": "2026-06-03",
+  "last_action": "Extreme fear is weighing on the broader market, but semiconductor strength suggests a potential short\u2011term bounce in tech.",
+  "last_updated": "2026-06-03T13:32:12Z",
   "last_session": {
-    "at": "2026-06-02T19:32:53Z",
-    "fear_greed": 23,
+    "at": "2026-06-03T13:32:12Z",
+    "fear_greed": 11,
     "fear_greed_label": "Extreme Fear",
     "sp500_change": 0.13,
-    "vix": 15.74,
-    "top_movers": [],
-    "news_read": [],
+    "vix": 16.24,
+    "top_movers": [
+      [
+        "INTC",
+        8.05
+      ],
+      [
+        "AMD",
+        3.45
+      ],
+      [
+        "CRM",
+        -2.37
+      ],
+      [
+        "QCOM",
+        -2.16
+      ],
+      [
+        "TSLA",
+        -1.59
+      ],
+      [
+        "AVGO",
+        1.23
+      ]
+    ],
+    "news_read": [
+      "GOP Sen. Tillis slams Trump intelligence pick Pulte: 'Don't think he has a prayer'",
+      "Trump says Iran agreed to not have nuclear weapons, but 'they can change their mind'"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "INTC surged +8.05% and AMD rose +3.45% today, signaling renewed investor interest in semiconductors despite the Fear & Greed index at 11. With cash at $548.49 and a $500 reserve required, there isn't enough buying power to initiate any new positions without breaching the reserve rule, so I'm holding off and watching for further semiconductor news or a pullback that would create a clearer entry point.",
+    "outlook": "Extreme fear is weighing on the broader market, but semiconductor strength suggests a potential short\u2011term bounce in tech.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -548,6 +576,10 @@
     {
       "timestamp": "2026-06-02T19:32:53Z",
       "value": 11450.11
+    },
+    {
+      "timestamp": "2026-06-03T13:32:12Z",
+      "value": 11806.31
     }
   ]
 }

@@ -1,21 +1,21 @@
 {
   "cash": 503.97,
-  "total_value": 10398.68,
+  "total_value": 10112.37,
   "positions": {
     "LI": {
       "shares": 180,
       "avg_cost": 16.655,
-      "current_price": 15.415
+      "current_price": 15.03
     },
     "NIO": {
       "shares": 506,
-      "current_price": 6.035,
+      "current_price": 5.89,
       "avg_cost": 5.9293
     },
     "XPEV": {
       "shares": 199,
       "avg_cost": 15.04,
-      "current_price": 17.9999
+      "current_price": 17.29
     },
     "BABA": {
       "shares": 3,
@@ -25,29 +25,59 @@
     "JD": {
       "shares": 3,
       "avg_cost": 32.47,
-      "current_price": 30.25
+      "current_price": 29.46
     }
   },
-  "total_return_pct": 3.99,
+  "total_return_pct": 1.12,
   "total_return_usd": 0.0,
-  "today_pnl": -59.29,
-  "today_pnl_pct": -0.57,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 6,
-  "today_start_value": 10457.97,
-  "today_date": "2026-06-02",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-02T19:36:53Z",
+  "today_start_value": 10112.37,
+  "today_date": "2026-06-03",
+  "last_action": "Extreme fear in the market presents a buying opportunity for Chinese ADRs as long-term stimulus and tech support remain intact.",
+  "last_updated": "2026-06-03T13:37:27Z",
   "last_session": {
-    "at": "2026-06-02T19:36:53Z",
-    "fear_greed": 23,
+    "at": "2026-06-03T13:37:27Z",
+    "fear_greed": 11,
     "fear_greed_label": "Extreme Fear",
     "sp500_change": 0.13,
-    "vix": 15.74,
-    "top_movers": [],
-    "news_read": [],
+    "vix": 16.24,
+    "top_movers": [
+      [
+        "FUTU",
+        -3.54
+      ],
+      [
+        "XPEV",
+        -3.46
+      ],
+      [
+        "IQ",
+        -3.1
+      ],
+      [
+        "BILI",
+        -2.97
+      ],
+      [
+        "LI",
+        -2.85
+      ],
+      [
+        "KWEB",
+        -2.63
+      ]
+    ],
+    "news_read": [
+      "Trump says Iran agreed to not have nuclear weapons, but 'they can change their mind'",
+      "Private payrolls grew by 122,000 in May, stronger than expected, ADP reports",
+      "GOP Sen. Tillis slams Trump intelligence pick Pulte: 'Don't think he has a prayer'",
+      "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "All watchlist names are down today, with FUTU, XPEV, IQ, BILI, and LI leading the declines. Cash is only $503.97, and maintaining the required $500 reserve leaves virtually no room for new purchases without violating cash constraints. I will hold current positions and monitor for any Chinese policy announcements or economic data releases that could trigger a rebound before considering further buys.",
+    "outlook": "Extreme fear in the market presents a buying opportunity for Chinese ADRs as long-term stimulus and tech support remain intact.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -558,6 +588,10 @@
     {
       "timestamp": "2026-06-02T19:36:53Z",
       "value": 10398.68
+    },
+    {
+      "timestamp": "2026-06-03T13:37:27Z",
+      "value": 10112.37
     }
   ]
 }
