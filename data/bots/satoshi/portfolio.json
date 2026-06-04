@@ -1,92 +1,94 @@
 {
   "cash": 301.63,
-  "total_value": 9460.31,
+  "total_value": 9547.08,
   "positions": {
     "MSTR": {
       "shares": 21,
-      "current_price": 128.61,
+      "current_price": 130.0,
       "avg_cost": 165.0662
     },
     "MARA": {
       "shares": 80,
       "avg_cost": 11.975,
-      "current_price": 13.865
+      "current_price": 13.98
     },
     "COIN": {
       "shares": 18,
       "avg_cost": 186.49,
-      "current_price": 164.28
+      "current_price": 165.2
     },
     "CLSK": {
       "shares": 50,
-      "current_price": 16.91,
+      "current_price": 17.04,
       "avg_cost": 13.864
     },
     "RIOT": {
       "shares": 25,
       "avg_cost": 22.03,
-      "current_price": 27.62
+      "current_price": 27.95
     },
     "CIFR": {
       "shares": 33,
       "avg_cost": 20.0219,
-      "current_price": 25.54
+      "current_price": 26.05
     },
     "BTBT": {
       "shares": 7,
       "avg_cost": 1.785,
-      "current_price": 1.83
+      "current_price": 1.865
     }
   },
-  "total_return_pct": -5.4,
+  "total_return_pct": -4.53,
   "total_return_usd": 0.0,
-  "today_pnl": 174.53,
-  "today_pnl_pct": 1.88,
+  "today_pnl": 261.3,
+  "today_pnl_pct": 2.81,
   "total_trades": 9,
   "today_start_value": 9285.78,
   "today_date": "2026-06-04",
-  "last_action": "Extreme Fear in the crypto market (F&G 12) signals oversold conditions that could precede a rebound if sentiment improves.",
-  "last_updated": "2026-06-04T18:05:05Z",
+  "last_action": "Extreme Fear (F&G 12) and Bitcoin's rough week signal short-term pressure, but long-term faith in MSTR as a Bitcoin treasury remains intact.",
+  "last_updated": "2026-06-04T18:37:56Z",
   "last_session": {
-    "at": "2026-06-04T18:05:05Z",
+    "at": "2026-06-04T18:37:56Z",
     "fear_greed": 12,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.47,
-    "vix": 15.39,
+    "sp500_change": 0.54,
+    "vix": 15.37,
     "top_movers": [
       [
         "HOOD",
-        5.0
+        5.66
       ],
       [
         "IREN",
-        -4.44
+        -4.76
       ],
       [
         "CLSK",
-        -3.98
+        -3.18
+      ],
+      [
+        "MSTR",
+        2.85
+      ],
+      [
+        "NVDA",
+        2.46
       ],
       [
         "BITO",
-        -2.92
-      ],
-      [
-        "CIFR",
-        -2.71
-      ],
-      [
-        "CORZ",
-        -2.52
+        -2.43
       ]
     ],
     "news_read": [
+      "Bitcoin is weathering its ugliest week in months as narrative fades and liquidity rotates",
+      "'Dr. Doom'-backed Atlas Capital CEO says bitcoin could crash 70% before reaching $500,000",
       "Crypto for Advisors: The crypto due diligence questions you forgot to ask",
       "Not all Ethereum layer 2s are dying, but many general-purpose chains no longer have a reason to exist",
       "Blackstone restricts flagship fund withdrawals as private asset fears reemerge"
     ],
     "domain_extra": "",
-    "ai_analysis": "Watchlist shows HOOD up +5% while many crypto\u2011adjacent stocks like CLSK, IREN, and BITO are down sharply; cash is just above the $300 reserve at $301.63, leaving insufficient funds to buy even a single share of the lowest\u2011priced watchlist stock (BTBT at $1.83). No trades are executed this session, and I will monitor for any cash inflow or a shift in Fear & Greed that would enable dip\u2011buying opportunities.",
-    "outlook": "Extreme Fear in the crypto market (F&G 12) signals oversold conditions that could precede a rebound if sentiment improves.",
+    "ai_analysis": "The Fear & Greed index at 12 shows extreme fear, while MSTR rose +2.85% today and CLSK fell -3.18%, highlighting divergent crypto\u2011adjacent moves. With only $301.63 cash and a $300 reserve requirement, there is insufficient capital to buy any watchlist shares without breaching the cash rule. I will monitor for deeper dips that allow a purchase while preserving the $300 cash buffer.",
+    "outlook": "Extreme Fear (F&G 12) and Bitcoin's rough week signal short-term pressure, but long-term faith in MSTR as a Bitcoin treasury remains intact.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -693,6 +695,10 @@
     {
       "timestamp": "2026-06-04T18:05:05Z",
       "value": 9460.31
+    },
+    {
+      "timestamp": "2026-06-04T18:37:56Z",
+      "value": 9547.08
     }
   ]
 }
