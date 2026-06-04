@@ -1,38 +1,66 @@
 {
   "cash": 502.34,
-  "total_value": 10060.9,
+  "total_value": 10066.86,
   "positions": {
     "TLT": {
       "shares": 59,
-      "current_price": 85.4393,
+      "current_price": 85.49,
       "avg_cost": 83.5269
     },
     "GLD": {
       "shares": 11,
-      "current_price": 410.695,
+      "current_price": 410.965,
       "avg_cost": 415.4155
     }
   },
-  "total_return_pct": 0.61,
+  "total_return_pct": 0.67,
   "total_return_usd": 0.0,
-  "today_pnl": -40.23,
-  "today_pnl_pct": -0.4,
+  "today_pnl": -34.27,
+  "today_pnl_pct": -0.34,
   "total_trades": 4,
   "today_start_value": 10101.13,
   "today_date": "2026-06-04",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-04T18:35:38Z",
+  "last_action": "Risk-off sentiment likely to persist, supporting bond prices.",
+  "last_updated": "2026-06-04T19:02:45Z",
   "last_session": {
-    "at": "2026-06-04T18:35:38Z",
+    "at": "2026-06-04T19:02:45Z",
     "fear_greed": 12,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.54,
-    "vix": 15.37,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": 0.53,
+    "vix": 15.38,
+    "top_movers": [
+      [
+        "BAC",
+        3.13
+      ],
+      [
+        "NVDA",
+        2.77
+      ],
+      [
+        "XLF",
+        2.57
+      ],
+      [
+        "AMZN",
+        1.58
+      ],
+      [
+        "TSLA",
+        -1.26
+      ],
+      [
+        "EEM",
+        -1.05
+      ]
+    ],
+    "news_read": [
+      "'Dr. Doom'-backed Atlas Capital CEO says bitcoin could crash 70% before reaching $500,000",
+      "Quantinuum stock opens at $68 per share after IPO"
+    ],
+    "domain_extra": "MACRO: NASDAQ +0.21%  DOW +1.72%  VIX 15.4 (NORMAL)",
+    "ai_analysis": "Fear & Greed at 12 indicates extreme fear, VIX 15.38 normal but low, TLT and GLD show modest gains today; with $502 cash and a $300 reserve, I can allocate about $200 to TLT, adding 2 shares to increase safe-haven exposure while monitoring further fear signals and yield moves.",
+    "outlook": "Risk-off sentiment likely to persist, supporting bond prices.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -643,6 +671,10 @@
     {
       "timestamp": "2026-06-04T18:35:38Z",
       "value": 10060.9
+    },
+    {
+      "timestamp": "2026-06-04T19:02:45Z",
+      "value": 10066.86
     }
   ]
 }
