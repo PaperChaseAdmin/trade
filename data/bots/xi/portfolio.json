@@ -1,31 +1,31 @@
 {
   "cash": 500.73,
-  "total_value": 9880.45,
+  "total_value": 9884.39,
   "positions": {
     "LI": {
       "shares": 180,
       "avg_cost": 16.655,
-      "current_price": 14.725
+      "current_price": 14.72
     },
     "NIO": {
       "shares": 506,
-      "current_price": 5.7214,
+      "current_price": 5.725,
       "avg_cost": 5.9293
     },
     "XPEV": {
       "shares": 199,
       "avg_cost": 15.04,
-      "current_price": 16.905
+      "current_price": 16.9199
     },
     "BABA": {
       "shares": 3,
       "avg_cost": 135.84,
-      "current_price": 126.32
+      "current_price": 126.34
     },
     "JD": {
       "shares": 3,
       "avg_cost": 32.47,
-      "current_price": 29.295
+      "current_price": 29.291
     },
     "IQ": {
       "shares": 3,
@@ -33,26 +33,56 @@
       "current_price": 1.085
     }
   },
-  "total_return_pct": -1.2,
+  "total_return_pct": -1.16,
   "total_return_usd": 0.0,
-  "today_pnl": -57.15,
-  "today_pnl_pct": -0.58,
+  "today_pnl": -53.21,
+  "today_pnl_pct": -0.54,
   "total_trades": 7,
   "today_start_value": 9937.6,
   "today_date": "2026-06-04",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-04T17:06:40Z",
+  "last_action": "Extreme fear presents a buying opportunity for Chinese ADRs as long-term fundamentals remain intact.",
+  "last_updated": "2026-06-04T17:34:58Z",
   "last_session": {
-    "at": "2026-06-04T17:06:40Z",
+    "at": "2026-06-04T17:34:58Z",
     "fear_greed": 12,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.39,
-    "vix": 15.53,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": 0.38,
+    "vix": 15.45,
+    "top_movers": [
+      [
+        "XPEV",
+        -3.04
+      ],
+      [
+        "TME",
+        2.84
+      ],
+      [
+        "LI",
+        -1.8
+      ],
+      [
+        "BILI",
+        1.68
+      ],
+      [
+        "BIDU",
+        0.97
+      ],
+      [
+        "FUTU",
+        -0.85
+      ]
+    ],
+    "news_read": [
+      "Blackstone restricts flagship fund withdrawals as private asset fears reemerge",
+      "Long-term unemployment is surging in the U.S. There are hidden costs for workers and the economy",
+      "As the largest World Cup ever kicks off, health officials are focused on more than Ebola",
+      "Confirmed screwworm case in Texas sends two biotech stocks higher"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index at 12 signals extreme fear, yet Chinese stocks like TME (+2.8%) and BILI (+1.7%) show relative strength, indicating selective buying interest. Our portfolio remains slightly negative but holds cash above the $500 reserve, leaving minimal room for new purchases without breaching cash limits. We'll watch upcoming Chinese PMI, retail sales data, and any stimulus announcements for potential entry points.",
+    "outlook": "Extreme fear presents a buying opportunity for Chinese ADRs as long-term fundamentals remain intact.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -651,6 +681,10 @@
     {
       "timestamp": "2026-06-04T17:06:40Z",
       "value": 9880.45
+    },
+    {
+      "timestamp": "2026-06-04T17:34:58Z",
+      "value": 9884.39
     }
   ]
 }
