@@ -1,77 +1,77 @@
 {
   "cash": 500.73,
-  "total_value": 9927.06,
+  "total_value": 9902.4,
   "positions": {
     "LI": {
       "shares": 180,
       "avg_cost": 16.655,
-      "current_price": 14.69
+      "current_price": 14.725
     },
     "NIO": {
       "shares": 506,
-      "current_price": 5.8099,
+      "current_price": 5.77,
       "avg_cost": 5.9293
     },
     "XPEV": {
       "shares": 199,
       "avg_cost": 15.04,
-      "current_price": 16.93
+      "current_price": 16.885
     },
     "BABA": {
       "shares": 3,
       "avg_cost": 135.84,
-      "current_price": 127.13
+      "current_price": 126.6
     },
     "JD": {
       "shares": 3,
       "avg_cost": 32.47,
-      "current_price": 29.53
+      "current_price": 29.46
     },
     "IQ": {
       "shares": 3,
       "avg_cost": 1.08,
-      "current_price": 1.09
+      "current_price": 1.085
     }
   },
-  "total_return_pct": -0.73,
+  "total_return_pct": -0.98,
   "total_return_usd": 0.0,
-  "today_pnl": -10.54,
-  "today_pnl_pct": -0.11,
+  "today_pnl": -35.2,
+  "today_pnl_pct": -0.35,
   "total_trades": 7,
   "today_start_value": 9937.6,
   "today_date": "2026-06-04",
-  "last_action": "Despite extreme fear, Chinese ADRs show mixed momentum with select names like TME and BILI gaining, suggesting potential rebound if policy support emerges.",
-  "last_updated": "2026-06-04T14:07:22Z",
+  "last_action": "Extreme Fear (F&G 12) signals oversold conditions, yet Chinese ADRs show divergent moves with XPEV down -3.3% while TME and BILI up >2.5%.",
+  "last_updated": "2026-06-04T14:36:45Z",
   "last_session": {
-    "at": "2026-06-04T14:07:22Z",
+    "at": "2026-06-04T14:36:45Z",
     "fear_greed": 12,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": -0.15,
-    "vix": 16.17,
+    "sp500_change": -0.09,
+    "vix": 16.08,
     "top_movers": [
       [
-        "TME",
-        3.72
+        "XPEV",
+        -3.32
       ],
       [
-        "XPEV",
-        -3.09
+        "TME",
+        2.79
       ],
       [
         "BILI",
-        2.75
+        2.72
+      ],
+      [
+        "TIGR",
+        2.57
       ],
       [
         "LI",
-        -1.9
+        -1.73
       ],
       [
-        "PDD",
-        1.45
-      ],
-      [
-        "IQ",
-        1.39
+        "FUTU",
+        -1.2
       ]
     ],
     "news_read": [
@@ -81,8 +81,8 @@
       "Investors can 'buy' SpaceX early with Coinbase perpetual futures on pre-IPOs"
     ],
     "domain_extra": "",
-    "ai_analysis": "The Fear & Greed index at 12 indicates extreme fear, limiting buying power; cash is just above the $500 reserve, leaving only $0.73 available for new purchases, insufficient for any watchlist stock. Today's top movers show TME +3.7% and BILI +2.8% while XPEV -3.1% and LI -1.9% reflect sector volatility. I will monitor upcoming Chinese PMI and retail sales data for stimulus signals before reallocating capital.",
-    "outlook": "Despite extreme fear, Chinese ADRs show mixed momentum with select names like TME and BILI gaining, suggesting potential rebound if policy support emerges.",
+    "ai_analysis": "Today's watchlist leaders are TME (+2.79%), BILI (+2.72%) and TIGR (+2.57%), while XPEV (-3.32%) and LI (-1.73%) lag. Cash is only $500.73, leaving less than $0.73 available for new purchases while maintaining the $500 reserve, which is insufficient to buy even a single share of any watchlisted stock. Therefore, no trades are executed this session, and I will monitor for any cash\u2011increasing opportunities or deeper dips that allow a compliant entry.",
+    "outlook": "Extreme Fear (F&G 12) signals oversold conditions, yet Chinese ADRs show divergent moves with XPEV down -3.3% while TME and BILI up >2.5%.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -653,6 +653,10 @@
     {
       "timestamp": "2026-06-04T14:07:22Z",
       "value": 9927.06
+    },
+    {
+      "timestamp": "2026-06-04T14:36:45Z",
+      "value": 9902.4
     }
   ]
 }
