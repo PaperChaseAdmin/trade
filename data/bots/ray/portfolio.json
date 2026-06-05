@@ -1,43 +1,73 @@
 {
   "cash": 4706.28,
-  "total_value": 9915.15,
+  "total_value": 9902.1,
   "positions": {
     "GLD": {
       "shares": 4,
       "avg_cost": 419.57,
-      "current_price": 401.27
+      "current_price": 399.675
     },
     "TLT": {
       "shares": 23,
-      "current_price": 85.165,
+      "current_price": 85.175,
       "avg_cost": 83.6059
     },
     "IAU": {
       "shares": 20,
       "avg_cost": 84.6252,
-      "current_price": 82.25
+      "current_price": 81.905
     }
   },
-  "total_return_pct": -0.85,
+  "total_return_pct": -0.98,
   "total_return_usd": 0.0,
-  "today_pnl": -18.47,
-  "today_pnl_pct": -0.19,
+  "today_pnl": -31.52,
+  "today_pnl_pct": -0.32,
   "total_trades": 5,
   "today_start_value": 9933.62,
   "today_date": "2026-06-05",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-05T15:03:56Z",
+  "last_action": "Bonds are the best asymmetric trade here with extreme fear, disinflationary pressures building, and labor slack emerging even as payrolls beat.",
+  "last_updated": "2026-06-05T15:33:21Z",
   "last_session": {
-    "at": "2026-06-05T15:03:56Z",
+    "at": "2026-06-05T15:33:21Z",
     "fear_greed": 12,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": -1.03,
-    "vix": 16.28,
-    "top_movers": [],
-    "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "sp500_change": -1.15,
+    "vix": 16.33,
+    "top_movers": [
+      [
+        "GDX",
+        -6.86
+      ],
+      [
+        "EEM",
+        -4.33
+      ],
+      [
+        "GLD",
+        -2.85
+      ],
+      [
+        "IAU",
+        -2.84
+      ],
+      [
+        "VWO",
+        -2.59
+      ],
+      [
+        "DJP",
+        -1.98
+      ]
+    ],
+    "news_read": [
+      "U.S. payrolls rose by 172,000 in May, much more than expected; unemployment at 4.3%",
+      "Alphabet is seeking fresh capital as stock's 4-week losing streak tests investor appetite",
+      "Lululemon cuts annual outlook, citing 'negative' media commentary and disappointing product launches",
+      "No tech, no problem. Dow makes record and traders think these stocks can lead now"
+    ],
+    "domain_extra": "MACRO: NASDAQ -2.14%  DOW -0.31%  VIX 16.3 (NORMAL)",
+    "ai_analysis": "Payrolls beat at 172k but unemployment ticking up to 4.3% is a classic late-cycle signal that often precedes recession. Gold slammed -2.85% because strong headline jobs delayed rate-cut pricing, yet I already hold 4 GLD and 20 IAU\u2014over 18% combined\u2014so I'm capped near my 20% rule and won't add more gold today. Equities and commodities broadly selling off with VIX 16.3 climbing into fear territory makes me want more ballast: TLT at 85.175 is only down -0.39% and offers asymmetric upside if unemployment weakness forces the Fed dovish. I deploy ~$852 to bring bond allocation closer to target without busting the $1,000 cash floor.",
+    "outlook": "Bonds are the best asymmetric trade here with extreme fear, disinflationary pressures building, and labor slack emerging even as payrolls beat.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -672,6 +702,10 @@
     {
       "timestamp": "2026-06-05T15:03:56Z",
       "value": 9915.15
+    },
+    {
+      "timestamp": "2026-06-05T15:33:21Z",
+      "value": 9902.1
     }
   ]
 }
