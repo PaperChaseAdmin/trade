@@ -1,5 +1,42 @@
 {
-  "trades": [],
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "BIL",
+      "shares": 21,
+      "price": 91.4027,
+      "total_value": 1919.46,
+      "reasoning": "Bought ultra\u2011short Treasury BIL for safety amid extreme Fear & Greed reading of 11.",
+      "timestamp": "2026-06-03T15:06:53Z",
+      "market_outlook": "Expect continued volatility with a defensive bias until Fear & Greed improves.",
+      "signal_context": {
+        "fg_value": 11,
+        "fg_label": "Extreme Fear",
+        "sp500_chg": -0.47,
+        "vix": 16.0,
+        "ticker_chg_pct": 0.01,
+        "trigger_news": "Private payrolls grew by 122,000 in May, stronger than expected, ADP reports"
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLU",
+      "shares": 45,
+      "price": 44.23,
+      "total_value": 1990.35,
+      "reasoning": "Added defensive utility exposure via XLU given extreme market fear while VIX remains normal.",
+      "timestamp": "2026-06-03T15:06:53Z",
+      "market_outlook": "Expect continued volatility with a defensive bias until Fear & Greed improves.",
+      "signal_context": {
+        "fg_value": 11,
+        "fg_label": "Extreme Fear",
+        "sp500_chg": -0.47,
+        "vix": 16.0,
+        "ticker_chg_pct": 0.74,
+        "trigger_news": "Private payrolls grew by 122,000 in May, stronger than expected, ADP reports"
+      }
+    }
+  ],
   "total_trades": 0,
   "win_rate": 0,
   "total_volume": 0,
