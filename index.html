@@ -1,420 +1,421 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title data-i18n-title="page_title_trade">PaperChase · Trading Arena — Live AI Trading Bots</title>
-<meta name="description" content="Watch 20 AI-powered trading bots compete with $10,000 each in real-time paper trading. Transparent AI decisions, live leaderboard, and market sentiment tracking."/>
-<meta name="keywords" content="AI trading, paper trading, stock trading bot, AI investing, trading arena, market sentiment"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://paperchase.online/trade/"/>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W3V49QCMT0');
-</script>
-<!-- Google Search Console - verified via Google Analytics -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="/trade/assets/style.css"/>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="/trade/assets/i18n.js"></script>
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "PaperChase AI Trading Arena",
-  "description": "Watch 20 AI-powered trading bots compete with $10,000 each in real-time paper trading.",
-  "url": "https://paperchase.online/trade/",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "All"
-}
-</script>
-</head>
-<body>
-<div class="bg-overlay"></div>
-<div class="wrap">
-<nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">PaperChase</a>
-  <div class="topbar-nav">
-    <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
-    <a class="nav-link active" href="/trade/" data-i18n="nav_trading">Trading Arena</a>
-    <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Poly Watch</a>
-  </div>
-  <div class="topbar-spacer" style="flex:1"></div>
-  <!-- Account / Login -->
-  <div class="topbar-auth" style="display:flex;align-items:center;gap:4px;margin-left:8px">
-    <a class="nav-link" href="/trade/login/" data-i18n="nav_login">Log In</a>
-    <a class="nav-link" href="/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
-  </div>
-</div></nav>
-
-<div class="container">
-  <div class="page-header" style="padding:28px 0 0">
-    <div class="page-title-wrap">
-      <div class="page-title" data-i18n="page_title_trade">Trading Arena</div>
-      <div class="page-sub" data-i18n="page_sub_trade"><span class="live"></span> 20 AI bots · $10,000 each · Real market data · Transparent decisions</div>
-    </div>
-    <div id="countdown-wrap" class="countdown-wrap" style="margin-left:auto;flex-shrink:0"></div>
-  </div>
-
-  <!-- KPI Dashboard -->
-  <div id="kpi-dashboard"></div>
-
-  <!-- Performance Chart -->
-  <div class="chart-panel" id="chart-panel">
-    <div class="chart-panel-header">
-      <div class="chart-panel-title" data-i18n="chart_portfolio">Portfolio Performance</div>
-      <div class="chart-panel-controls">
-        <button class="chart-btn active" data-range="1d" data-i18n="chart_1d">1D</button>
-        <button class="chart-btn" data-range="1w" data-i18n="chart_1w">1W</button>
-        <button class="chart-btn" data-range="1m" data-i18n="chart_1m">1M</button>
-        <button class="chart-btn" data-range="all" data-i18n="chart_all">All</button>
-      </div>
-    </div>
-    <canvas id="mainChart"></canvas>
-  </div>
-
-  <!-- Distribution Cards Row -->
-  <div class="dist-row" id="dist-row">
-    <div class="dist-card" id="dist-risk">
-      <div class="dist-title" data-i18n="dist_risk">Risk Distribution</div>
-      <canvas id="riskChart" height="180"></canvas>
-    </div>
-    <div class="dist-card" id="dist-top">
-      <div class="dist-title" data-i18n="dist_top">Top Performers</div>
-      <div id="top-performers"></div>
-    </div>
-  </div>
-
-  <!-- Bot Rankings -->
-  <div class="section-header">
-    <div class="section-title" data-i18n="section_bot_rankings">Bot Rankings</div>
-    <div class="section-badge" id="count-badge">20 bots</div>
-  </div>
-  <div id="leaderboard"></div>
-  <div id="footer"></div>
-</div>
-
-<script>
-const MEDALS=['🥇','🥈','🥉'];
-function fmt(v){ return '$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-function signPct(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
-function signVal(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
-function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?m+'m ago':m<1440?Math.floor(m/60)+'h ago':Math.floor(m/1440)+'d ago'; }
-
-let mainChart = null, riskChart = null, _cdTimer = null;
-
-function startCountdown() {
-  clearInterval(_cdTimer);
-  const el = document.getElementById('countdown-wrap');
-  if (!el) return;
-  
-  function nextMarketOpen() {
-    const now = new Date();
-    const day = now.getUTCDay();
-    const hour = now.getUTCHours();
-    const min = now.getUTCMinutes();
-    const next = new Date(now);
-    
-    if (day === 0 || day === 6 || (day === 5 && hour >= 21)) {
-      const daysUntilMonday = day === 0 ? 1 : day === 6 ? 2 : (8 - day);
-      next.setDate(next.getDate() + daysUntilMonday);
-      next.setUTCHours(13, 30, 0, 0);
-    } else if (hour < 13 || (hour === 13 && min < 30)) {
-      next.setUTCHours(13, 30, 0, 0);
-    } else if (hour >= 21) {
-      next.setDate(next.getDate() + 1);
-      next.setUTCHours(13, 30, 0, 0);
-    } else {
-      const nextHalf = Math.ceil((hour * 60 + min) / 30) * 30;
-      next.setUTCHours(Math.floor(nextHalf/60), nextHalf%60, 0, 0);
-    }
-    return next;
-  }
-  
-  const target = nextMarketOpen();
-  
-  function tick() {
-    const diff = target - Date.now();
-    if (diff <= 0) { el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num" data-i18n="checking_now">Checking now...</span>'; __retranslate(); return; }
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    
-    if (h >= 24) {
-      const d = Math.floor(h / 24);
-      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h ' + m + 'm</span>';
-    } else if (h >= 1) {
-      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + h + 'h ' + m + 'm ' + s + 's</span>';
-    } else {
-      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + m + 'm ' + s + 's</span>';
-    }
-  }
-  tick();
-  _cdTimer = setInterval(tick, 1000);
-}
-
-
-
-
-
-
-
-function buildKPIs(bots){
-  const totalVal = bots.reduce((s,b)=>s+(+b.total_value||0),0);
-  const avgRet = bots.length ? bots.reduce((s,b)=>s+(+b.total_return_pct||0),0)/bots.length : 0;
-  const totalTrades = bots.reduce((s,b)=>s+(+b.total_trades||0),0);
-  const winners = bots.filter(b=>(+b.total_return_pct||0)>0).length;
-  const todayPL = bots.reduce((s,b)=>s+(+b.today_pnl||0),0);
-
-  document.getElementById('kpi-dashboard').innerHTML=`
-    <div class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-icon kpi-icon-bots">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-        </div>
-        <div class="kpi-body">
-          <div class="kpi-label" data-i18n="kpi_active_bots">Active Bots</div>
-          <div class="kpi-value">${bots.length}</div>
-        </div>
-        <div class="kpi-change kpi-muted" data-i18n="kpi_all_running">all running</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-icon kpi-icon-aum">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <div class="kpi-body">
-          <div class="kpi-label" data-i18n="kpi_combined_aum">Combined AUM</div>
-          <div class="kpi-value">${fmt(totalVal)}</div>
-        </div>
-        <div class="kpi-change kpi-muted" data-i18n="kpi_total_portfolio">total portfolio</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-icon ${avgRet>=0?'kpi-icon-profit':'kpi-icon-loss'}">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${avgRet>=0 ? '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>' : '<polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/>'}</svg>
-        </div>
-        <div class="kpi-body">
-          <div class="kpi-label" data-i18n="kpi_avg_return">Avg Return</div>
-          <div class="kpi-value ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'+':''}${avgRet.toFixed(2)}%</div>
-        </div>
-        <div class="kpi-change ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'▲':'▼'} <span data-i18n="kpi_vs_start">vs start</span></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-icon kpi-icon-trades">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M8 3H3v5"/><path d="M3 8v11a2 2 0 002 2h14a2 2 0 002-2V8"/><path d="M10 12h4"/></svg>
-        </div>
-        <div class="kpi-body">
-          <div class="kpi-label" data-i18n="kpi_total_trades">Total Trades</div>
-          <div class="kpi-value">${totalTrades}</div>
-        </div>
-        <div class="kpi-change kpi-muted">${Math.round(totalTrades/(bots.length||1))} <span data-i18n="kpi_avg_per_bot">avg per bot</span></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-icon kpi-icon-profit">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div class="kpi-body">
-          <div class="kpi-label" data-i18n="kpi_in_profit">In Profit</div>
-          <div class="kpi-value c-green">${winners} <span style="font-size:14px;color:var(--tv-text-2)">/ ${bots.length}</span></div>
-        </div>
-        <div class="kpi-change ${(winners/bots.length)>=0.5?'c-green':'c-red'}">${(winners/bots.length*100).toFixed(0)}% <span data-i18n="kpi_win_rate">win rate</span></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-icon ${todayPL>=0?'kpi-icon-profit':'kpi-icon-loss'}">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <div class="kpi-body">
-          <div class="kpi-label" data-i18n="kpi_today_pl">Today's P&L</div>
-          <div class="kpi-value ${todayPL>=0?'c-green':'c-red'}">${signVal(todayPL)}</div>
-        </div>
-        <div class="kpi-change kpi-muted">across all bots</div>
-      </div>
-    </div>`;
-  __retranslate();
-}
-
-function buildDistribution(bots){
-  const riskMap = {};
-  const riskColors = {'VERY LOW':'#4caf50','LOW':'#089981','MED':'#ff9800','HIGH':'#f23645','VERY HIGH':'#d32f2f'};
-  bots.forEach(b=>{
-    const r = b.risk_level || 'MED';
-    riskMap[r] = (riskMap[r]||0)+1;
-  });
-  const riskLabels = Object.keys(riskMap).sort((a,b)=>['VERY LOW','LOW','MED','HIGH','VERY HIGH'].indexOf(a)-['VERY LOW','LOW','MED','HIGH','VERY HIGH'].indexOf(b));
-  const riskData = riskLabels.map(k=>riskMap[k]);
-  const riskCols = riskLabels.map(k=>riskColors[k]||'#787b86');
-
-  if(riskChart) riskChart.destroy();
-  riskChart = new Chart(document.getElementById('riskChart'),{
-    type:'doughnut',
-    data:{
-      labels: riskLabels,
-      datasets:[{data:riskData,backgroundColor:riskCols,borderWidth:0,spacing:4}]
-    },
-    options:{
-      responsive:true,cutout:'68%',
-      plugins:{
-        legend:{
-          position:'bottom',
-          labels:{color:'#d1d4dc',font:{family:'Inter',size:11},padding:12,usePointStyle:true,pointStyleWidth:8}
-        },
-        tooltip:{
-          callbacks:{
-            label:function(ctx){
-              var pct = ((ctx.parsed/bots.length)*100).toFixed(0);
-              return ' ' + ctx.label + ': ' + ctx.parsed + ' ' + __('count_bots','bots') + ' (' + pct + '%)';
-            }
-          }
-        }
-      }
-    }
-  });
-
-  const top = [...bots].sort((a,b)=>b.total_return_pct-a.total_return_pct).slice(0,5);
-  document.getElementById('top-performers').innerHTML = top.map((b,i)=>{
-    const r = +b.total_return_pct||0;
-    const barW = Math.min(Math.abs(r)/30*100,100);
-    return `<div class="tp-row">
-      <div class="tp-rank">${i+1}</div>
-      <div class="tp-avatar">${b.avatar}</div>
-      <div class="tp-name">${b.display_name}</div>
-      <div class="tp-bar-wrap"><div class="tp-bar ${r>=0?'tp-bar-up':'tp-bar-down'}" style="width:${barW}%"></div></div>
-      <div class="tp-val ${r>=0?'c-green':'c-red'}">${r>=0?'+':''}${r.toFixed(2)}%</div>
-    </div>`;
-  }).join('');
-}
-
-function buildMainChart(bots){
-  const allHist = {};
-  bots.forEach(b=>{
-    (b.portfolio_history||[]).forEach(h=>{
-      const ts = new Date(h.timestamp).getTime();
-      if(!allHist[ts]) allHist[ts] = {ts,val:0,count:0};
-      allHist[ts].val += (+h.value||0);
-      allHist[ts].count++;
-    });
-  });
-  let entries = Object.values(allHist).sort((a,b)=>a.ts-b.ts);
-  if(entries.length<2) { document.getElementById('chart-panel').style.display='none'; return; }
-
-  const labels = entries.map(h=>{
-    const d = new Date(h.ts);
-    return (d.getMonth()+1)+'/'+d.getDate()+' '+String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0');
-  });
-  const vals = entries.map(h=>h.val);
-  const startVal = vals[0]||200000;
-  const isUp = vals[vals.length-1]>=startVal;
-  const lineColor = isUp?'#089981':'#f23645';
-  const fillColor = isUp?'rgba(8,153,129,0.08)':'rgba(242,54,69,0.08)';
-
-  if(mainChart) mainChart.destroy();
-  mainChart = new Chart(document.getElementById('mainChart'),{
-    type:'line',
-    data:{
-      labels,
-      datasets:[{
-        data:vals,
-        borderColor:lineColor,
-        backgroundColor:fillColor,
-        borderWidth:2,
-        pointRadius:0,
-        pointHoverRadius:4,
-        pointHoverBackgroundColor:lineColor,
-        fill:true,
-        tension:0.3
-      }]
-    },
-    options:{
-      responsive:true,
-      maintainAspectRatio:false,
-      plugins:{
-        legend:{display:false},
-        tooltip:{
-          backgroundColor:'#1e222d',
-          titleColor:'#d1d4dc',
-          bodyColor:'#d1d4dc',
-          borderColor:'#2a2e39',
-          borderWidth:1,
-          padding:12,
-          cornerRadius:6,
-          callbacks:{
-            label:function(ctx){
-              return ' ' + __('kpi_combined_aum','Combined AUM') + ': ' + ctx.parsed.y.toLocaleString('en-US',{style:'currency',currency:'USD',minimumFractionDigits:0});
-            }
-          }
-        }
-      },
-      scales:{
-        x:{ticks:{color:'#787b86',maxTicksLimit:8,font:{family:'JetBrains Mono',size:10}},grid:{color:'rgba(255,255,255,0.04)'}},
-        y:{ticks:{color:'#787b86',font:{family:'JetBrains Mono',size:10},callback:v=>'$'+v.toLocaleString('en-US',{maximumFractionDigits:0})},grid:{color:'rgba(255,255,255,0.04)'}}
-      },
-      interaction:{intersect:false,mode:'index'}
-    }
-  });
-}
-
-async function load(){
-  const data = await fetch('./data/leaderboard.json?t='+Date.now()).then(r=>r.json());
-  const bots = data.bots||[];
-  const sorted = [...bots].sort((a,b)=>b.total_value-a.total_value);
-
-  buildKPIs(sorted);
-  buildDistribution(sorted);
-  buildMainChart(sorted);
-
-  document.getElementById('count-badge').textContent = sorted.length + ' ' + __('count_bots','bots');
-  
-  startCountdown();
-
-  const lb=document.getElementById('leaderboard');
-  lb.innerHTML='<div class="bot-list">';
-  sorted.forEach((bot,i)=>{
-    const medal=MEDALS[i]||`#${i+1}`;
-    const r=+bot.total_return_pct||0;
-    const td=+bot.today_pnl||0;
-    lb.innerHTML+=`
-      <a class="bot-card" href="/trade/${bot.bot_id}/">
-        <div class="bot-rank ${i<3?'gold':''}">${medal}</div>
-        <div class="bot-avatar-col">${bot.avatar}</div>
-        <div class="bot-info-col">
-          <div class="bot-name-row">
-            <span class="bot-name">${bot.display_name}</span>
-            <span class="risk-badge">${bot.risk_level}</span>
-          </div>
-          <div class="bot-meta">${bot.total_trades||0} <span data-i18n="trades">trades</span> · ${Object.keys(bot.positions||{}).length} <span data-i18n="positions">positions</span></div>
-        </div>
-        <div class="bot-val-col">
-          <div class="bot-val">${fmt(bot.total_value||0)}</div>
-          <div class="bot-ret ${r>=0?'c-green':'c-red'}">${r>=0?'+':''}${r.toFixed(2)}%</div>
-        </div>
-        <div class="bot-today-col">
-          <div class="bot-today-lbl" data-i18n="today">Today</div>
-          <div class="bot-today-val ${td>=0?'c-green':'c-red'}">${td>=0?'+':'-'}${fmt(Math.abs(td))}</div>
-        </div>
-        <div class="bot-arrow">→</div>
-      </a>`;
-  });
-  lb.innerHTML+='</div>';
-
-  document.getElementById('footer').innerHTML =
-    `<span class="footer-text" data-i18n="footer">PaperChase · Trading Arena · Data refreshes every 30 min during US market hours</span>`;
-
-  __retranslate();
-
-  setTimeout(load,90000);
-}
-
-// ── Kick off data load ──
-load().catch(function(e){ 
-  console.error('load() failed:', e.message, e.stack);
-  document.getElementById('leaderboard').innerHTML='<div style="color:var(--tv-text-3);text-align:center;padding:60px 20px;font-size:14px">⚠ ' + __('error_loading','Something went wrong. Please try again.') + '</div>'; 
-});
-</script>
-</div>
-</body>
-</html>
+     1|<!DOCTYPE html>
+     2|<html lang="en">
+     3|<head>
+     4|<meta charset="UTF-8"/>
+     5|<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+     6|<title data-i18n-title="page_title_trade">PaperChase · Trading Arena — Live AI Trading Bots</title>
+     7|<meta name="description" content="Watch 20 AI-powered trading bots compete with $10,000 each in real-time paper trading. Transparent AI decisions, live leaderboard, and market sentiment tracking."/>
+     8|<meta name="keywords" content="AI trading, paper trading, stock trading bot, AI investing, trading arena, market sentiment"/>
+     9|<meta name="robots" content="index, follow"/>
+    10|<link rel="canonical" href="https://paperchase.online/trade/"/>
+    11|<!-- Google tag (gtag.js) -->
+    12|<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
+    13|<script>
+    14|  window.dataLayer = window.dataLayer || [];
+    15|  function gtag(){dataLayer.push(arguments);}
+    16|  gtag('js', new Date());
+    17|  gtag('config', 'G-W3V49QCMT0');
+    18|</script>
+    19|<!-- Google Search Console - verified via Google Analytics -->
+    20|<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
+    21|<link rel="stylesheet" href="/trade/assets/style.css"/>
+    22|<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    23|<script src="/trade/assets/i18n.js"></script>
+    24|<!-- JSON-LD Structured Data -->
+    25|<script type="application/ld+json">
+    26|{
+    27|  "@context": "https://schema.org",
+    28|  "@type": "WebApplication",
+    29|  "name": "PaperChase AI Trading Arena",
+    30|  "description": "Watch 20 AI-powered trading bots compete with $10,000 each in real-time paper trading.",
+    31|  "url": "https://paperchase.online/trade/",
+    32|  "applicationCategory": "FinanceApplication",
+    33|  "operatingSystem": "All"
+    34|}
+    35|</script>
+    36|</head>
+    37|<body>
+    38|<div class="bg-overlay"></div>
+    39|<div class="wrap">
+    40|<nav class="topbar"><div class="topbar-inner">
+    41|  <a class="logo" href="/trade/">PaperChase</a>
+    42|  <div class="topbar-nav">
+    43|    <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
+    44|    <a class="nav-link active" href="/trade/" data-i18n="nav_trading">Trading Arena</a>
+    45|    <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
+    46|    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Poly Watch</a>
+    47|  </div>
+    48|  <div class="topbar-spacer" style="flex:1"></div>
+    49|  <!-- Account / Login -->
+    50|  <div class="topbar-auth" style="display:flex;align-items:center;gap:4px;margin-left:8px">
+    51|    <a class="nav-link" href="/trade/login/" data-i18n="nav_login">Log In</a>
+    52|    <a class="nav-link" href="/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
+    53|  </div>
+    54|</div></nav>
+    55|
+    56|<div class="container">
+    57|  <div class="page-header" style="padding:28px 0 0">
+    58|    <div class="page-title-wrap">
+    59|      <div class="page-title" data-i18n="page_title_trade">Trading Arena</div>
+    60|      <div class="page-sub" style="font-size:12px;color:var(--tv-text-2)"><span class="live"></span> Browse 20 AI bots → Click any to see trades, strategy & live portfolio</div>
+    61|    </div>
+    62|    <div id="countdown-wrap" class="countdown-wrap" style="margin-left:auto;flex-shrink:0"></div>
+    63|  </div>
+    64|
+    65|  <!-- KPI Dashboard -->
+    66|  <div id="kpi-dashboard"></div>
+    67|
+    68|  <!-- Performance Chart -->
+    69|  <div class="chart-panel" id="chart-panel">
+    70|    <div class="chart-panel-header">
+    71|      <div class="chart-panel-title" data-i18n="chart_portfolio">Portfolio Performance</div>
+    72|      <div class="chart-panel-controls">
+    73|        <button class="chart-btn active" data-range="1d" data-i18n="chart_1d">1D</button>
+    74|        <button class="chart-btn" data-range="1w" data-i18n="chart_1w">1W</button>
+    75|        <button class="chart-btn" data-range="1m" data-i18n="chart_1m">1M</button>
+    76|        <button class="chart-btn" data-range="all" data-i18n="chart_all">All</button>
+    77|      </div>
+    78|    </div>
+    79|    <canvas id="mainChart"></canvas>
+    80|  </div>
+    81|
+    82|  <!-- Distribution Cards Row -->
+    83|  <div class="dist-row" id="dist-row">
+    84|    <div class="dist-card" id="dist-risk">
+    85|      <div class="dist-title" data-i18n="dist_risk">Risk Distribution</div>
+    86|      <canvas id="riskChart" height="180"></canvas>
+    87|    </div>
+    88|    <div class="dist-card" id="dist-top">
+    89|      <div class="dist-title" data-i18n="dist_top">Top Performers</div>
+    90|      <div id="top-performers"></div>
+    91|    </div>
+    92|  </div>
+    93|
+    94|  <!-- Bot Rankings -->
+    95|  <div class="section-header">
+    96|    <div class="section-title" data-i18n="section_bot_rankings">Bot Rankings</div>
+    97|    <div class="section-badge" id="count-badge">20 bots</div>
+    98|  </div>
+    99|  <div id="leaderboard"></div>
+   100|  <div id="footer"></div>
+   101|</div>
+   102|
+   103|<script>
+   104|const MEDALS=['🥇','🥈','🥉'];
+   105|function fmt(v){ return '$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+   106|function signPct(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':''}${(+v).toFixed(2)}%</span>`; }
+   107|function signVal(v){ const c=+v>=0?'green':'red'; return `<span class="c-${c}">${+v>=0?'+':'-'}${fmt(Math.abs(+v))}</span>`; }
+   108|function ago(ts){ const m=Math.floor((Date.now()-new Date(ts))/60000); return m<1?'just now':m<60?m+'m ago':m<1440?Math.floor(m/60)+'h ago':Math.floor(m/1440)+'d ago'; }
+   109|
+   110|let mainChart = null, riskChart = null, _cdTimer = null;
+   111|
+   112|function startCountdown() {
+   113|  clearInterval(_cdTimer);
+   114|  const el = document.getElementById('countdown-wrap');
+   115|  if (!el) return;
+   116|  
+   117|  function nextMarketOpen() {
+   118|    const now = new Date();
+   119|    const day = now.getUTCDay();
+   120|    const hour = now.getUTCHours();
+   121|    const min = now.getUTCMinutes();
+   122|    const next = new Date(now);
+   123|    
+   124|    if (day === 0 || day === 6 || (day === 5 && hour >= 21)) {
+   125|      const daysUntilMonday = day === 0 ? 1 : day === 6 ? 2 : (8 - day);
+   126|      next.setDate(next.getDate() + daysUntilMonday);
+   127|      next.setUTCHours(13, 30, 0, 0);
+   128|    } else if (hour < 13 || (hour === 13 && min < 30)) {
+   129|      next.setUTCHours(13, 30, 0, 0);
+   130|    } else if (hour >= 21) {
+   131|      next.setDate(next.getDate() + 1);
+   132|      next.setUTCHours(13, 30, 0, 0);
+   133|    } else {
+   134|      const nextHalf = Math.ceil((hour * 60 + min) / 30) * 30;
+   135|      next.setUTCHours(Math.floor(nextHalf/60), nextHalf%60, 0, 0);
+   136|    }
+   137|    return next;
+   138|  }
+   139|  
+   140|  const target = nextMarketOpen();
+   141|  
+   142|  function tick() {
+   143|    const diff = target - Date.now();
+   144|    if (diff <= 0) { el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num" data-i18n="checking_now">Checking now...</span>'; __retranslate(); return; }
+   145|    const h = Math.floor(diff / 3600000);
+   146|    const m = Math.floor((diff % 3600000) / 60000);
+   147|    const s = Math.floor((diff % 60000) / 1000);
+   148|    
+   149|    if (h >= 24) {
+   150|      const d = Math.floor(h / 24);
+   151|      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h ' + m + 'm</span>';
+   152|    } else if (h >= 1) {
+   153|      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + h + 'h ' + m + 'm ' + s + 's</span>';
+   154|    } else {
+   155|      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + m + 'm ' + s + 's</span>';
+   156|    }
+   157|  }
+   158|  tick();
+   159|  _cdTimer = setInterval(tick, 1000);
+   160|}
+   161|
+   162|
+   163|
+   164|
+   165|
+   166|
+   167|
+   168|function buildKPIs(bots){
+   169|  const totalVal = bots.reduce((s,b)=>s+(+b.total_value||0),0);
+   170|  const avgRet = bots.length ? bots.reduce((s,b)=>s+(+b.total_return_pct||0),0)/bots.length : 0;
+   171|  const totalTrades = bots.reduce((s,b)=>s+(+b.total_trades||0),0);
+   172|  const winners = bots.filter(b=>(+b.total_return_pct||0)>0).length;
+   173|  const todayPL = bots.reduce((s,b)=>s+(+b.today_pnl||0),0);
+   174|
+   175|  document.getElementById('kpi-dashboard').innerHTML=`
+   176|    <div class="kpi-grid">
+   177|      <div class="kpi-card">
+   178|        <div class="kpi-icon kpi-icon-bots">
+   179|          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+   180|        </div>
+   181|        <div class="kpi-body">
+   182|          <div class="kpi-label" data-i18n="kpi_active_bots">Active Bots</div>
+   183|          <div class="kpi-value">${bots.length}</div>
+   184|        </div>
+   185|        <div class="kpi-change kpi-muted" data-i18n="kpi_all_running">all running</div>
+   186|      </div>
+   187|      <div class="kpi-card">
+   188|        <div class="kpi-icon kpi-icon-aum">
+   189|          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+   190|        </div>
+   191|        <div class="kpi-body">
+   192|          <div class="kpi-label" data-i18n="kpi_combined_aum">Combined AUM</div>
+   193|          <div class="kpi-value">${fmt(totalVal)}</div>
+   194|        </div>
+   195|        <div class="kpi-change kpi-muted" data-i18n="kpi_total_portfolio">total portfolio</div>
+   196|      </div>
+   197|      <div class="kpi-card">
+   198|        <div class="kpi-icon ${avgRet>=0?'kpi-icon-profit':'kpi-icon-loss'}">
+   199|          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${avgRet>=0 ? '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>' : '<polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/>'}</svg>
+   200|        </div>
+   201|        <div class="kpi-body">
+   202|          <div class="kpi-label" data-i18n="kpi_avg_return">Avg Return</div>
+   203|          <div class="kpi-value ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'+':''}${avgRet.toFixed(2)}%</div>
+   204|        </div>
+   205|        <div class="kpi-change ${avgRet>=0?'c-green':'c-red'}">${avgRet>=0?'▲':'▼'} <span data-i18n="kpi_vs_start">vs start</span></div>
+   206|      </div>
+   207|      <div class="kpi-card">
+   208|        <div class="kpi-icon kpi-icon-trades">
+   209|          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M8 3H3v5"/><path d="M3 8v11a2 2 0 002 2h14a2 2 0 002-2V8"/><path d="M10 12h4"/></svg>
+   210|        </div>
+   211|        <div class="kpi-body">
+   212|          <div class="kpi-label" data-i18n="kpi_total_trades">Total Trades</div>
+   213|          <div class="kpi-value">${totalTrades}</div>
+   214|        </div>
+   215|        <div class="kpi-change kpi-muted">${Math.round(totalTrades/(bots.length||1))} <span data-i18n="kpi_avg_per_bot">avg per bot</span></div>
+   216|      </div>
+   217|      <div class="kpi-card">
+   218|        <div class="kpi-icon kpi-icon-profit">
+   219|          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+   220|        </div>
+   221|        <div class="kpi-body">
+   222|          <div class="kpi-label" data-i18n="kpi_in_profit">In Profit</div>
+   223|          <div class="kpi-value c-green">${winners} <span style="font-size:14px;color:var(--tv-text-2)">/ ${bots.length}</span></div>
+   224|        </div>
+   225|        <div class="kpi-change ${(winners/bots.length)>=0.5?'c-green':'c-red'}">${(winners/bots.length*100).toFixed(0)}% <span data-i18n="kpi_win_rate">win rate</span></div>
+   226|      </div>
+   227|      <div class="kpi-card">
+   228|        <div class="kpi-icon ${todayPL>=0?'kpi-icon-profit':'kpi-icon-loss'}">
+   229|          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+   230|        </div>
+   231|        <div class="kpi-body">
+   232|          <div class="kpi-label" data-i18n="kpi_today_pl">Today's P&L</div>
+   233|          <div class="kpi-value ${todayPL>=0?'c-green':'c-red'}">${signVal(todayPL)}</div>
+   234|        </div>
+   235|        <div class="kpi-change kpi-muted">across all bots</div>
+   236|      </div>
+   237|    </div>`;
+   238|  __retranslate();
+   239|}
+   240|
+   241|function buildDistribution(bots){
+   242|  const riskMap = {};
+   243|  const riskColors = {'VERY LOW':'#4caf50','LOW':'#089981','MED':'#ff9800','HIGH':'#f23645','VERY HIGH':'#d32f2f'};
+   244|  bots.forEach(b=>{
+   245|    const r = b.risk_level || 'MED';
+   246|    riskMap[r] = (riskMap[r]||0)+1;
+   247|  });
+   248|  const riskLabels = Object.keys(riskMap).sort((a,b)=>['VERY LOW','LOW','MED','HIGH','VERY HIGH'].indexOf(a)-['VERY LOW','LOW','MED','HIGH','VERY HIGH'].indexOf(b));
+   249|  const riskData = riskLabels.map(k=>riskMap[k]);
+   250|  const riskCols = riskLabels.map(k=>riskColors[k]||'#787b86');
+   251|
+   252|  if(riskChart) riskChart.destroy();
+   253|  riskChart = new Chart(document.getElementById('riskChart'),{
+   254|    type:'doughnut',
+   255|    data:{
+   256|      labels: riskLabels,
+   257|      datasets:[{data:riskData,backgroundColor:riskCols,borderWidth:0,spacing:4}]
+   258|    },
+   259|    options:{
+   260|      responsive:true,cutout:'68%',
+   261|      plugins:{
+   262|        legend:{
+   263|          position:'bottom',
+   264|          labels:{color:'#d1d4dc',font:{family:'Inter',size:11},padding:12,usePointStyle:true,pointStyleWidth:8}
+   265|        },
+   266|        tooltip:{
+   267|          callbacks:{
+   268|            label:function(ctx){
+   269|              var pct = ((ctx.parsed/bots.length)*100).toFixed(0);
+   270|              return ' ' + ctx.label + ': ' + ctx.parsed + ' ' + __('count_bots','bots') + ' (' + pct + '%)';
+   271|            }
+   272|          }
+   273|        }
+   274|      }
+   275|    }
+   276|  });
+   277|
+   278|  const top = [...bots].sort((a,b)=>b.total_return_pct-a.total_return_pct).slice(0,5);
+   279|  document.getElementById('top-performers').innerHTML = top.map((b,i)=>{
+   280|    const r = +b.total_return_pct||0;
+   281|    const barW = Math.min(Math.abs(r)/30*100,100);
+   282|    return `<div class="tp-row">
+   283|      <div class="tp-rank">${i+1}</div>
+   284|      <div class="tp-avatar">${b.avatar}</div>
+   285|      <div class="tp-name">${b.display_name}</div>
+   286|      <div class="tp-bar-wrap"><div class="tp-bar ${r>=0?'tp-bar-up':'tp-bar-down'}" style="width:${barW}%"></div></div>
+   287|      <div class="tp-val ${r>=0?'c-green':'c-red'}">${r>=0?'+':''}${r.toFixed(2)}%</div>
+   288|    </div>`;
+   289|  }).join('');
+   290|}
+   291|
+   292|function buildMainChart(bots){
+   293|  const allHist = {};
+   294|  bots.forEach(b=>{
+   295|    (b.portfolio_history||[]).forEach(h=>{
+   296|      const ts = new Date(h.timestamp).getTime();
+   297|      if(!allHist[ts]) allHist[ts] = {ts,val:0,count:0};
+   298|      allHist[ts].val += (+h.value||0);
+   299|      allHist[ts].count++;
+   300|    });
+   301|  });
+   302|  let entries = Object.values(allHist).sort((a,b)=>a.ts-b.ts);
+   303|  if(entries.length<2) { document.getElementById('chart-panel').style.display='none'; return; }
+   304|
+   305|  const labels = entries.map(h=>{
+   306|    const d = new Date(h.ts);
+   307|    return (d.getMonth()+1)+'/'+d.getDate()+' '+String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0');
+   308|  });
+   309|  const vals = entries.map(h=>h.val);
+   310|  const startVal = vals[0]||200000;
+   311|  const isUp = vals[vals.length-1]>=startVal;
+   312|  const lineColor = isUp?'#089981':'#f23645';
+   313|  const fillColor = isUp?'rgba(8,153,129,0.08)':'rgba(242,54,69,0.08)';
+   314|
+   315|  if(mainChart) mainChart.destroy();
+   316|  mainChart = new Chart(document.getElementById('mainChart'),{
+   317|    type:'line',
+   318|    data:{
+   319|      labels,
+   320|      datasets:[{
+   321|        data:vals,
+   322|        borderColor:lineColor,
+   323|        backgroundColor:fillColor,
+   324|        borderWidth:2,
+   325|        pointRadius:0,
+   326|        pointHoverRadius:4,
+   327|        pointHoverBackgroundColor:lineColor,
+   328|        fill:true,
+   329|        tension:0.3
+   330|      }]
+   331|    },
+   332|    options:{
+   333|      responsive:true,
+   334|      maintainAspectRatio:false,
+   335|      plugins:{
+   336|        legend:{display:false},
+   337|        tooltip:{
+   338|          backgroundColor:'#1e222d',
+   339|          titleColor:'#d1d4dc',
+   340|          bodyColor:'#d1d4dc',
+   341|          borderColor:'#2a2e39',
+   342|          borderWidth:1,
+   343|          padding:12,
+   344|          cornerRadius:6,
+   345|          callbacks:{
+   346|            label:function(ctx){
+   347|              return ' ' + __('kpi_combined_aum','Combined AUM') + ': ' + ctx.parsed.y.toLocaleString('en-US',{style:'currency',currency:'USD',minimumFractionDigits:0});
+   348|            }
+   349|          }
+   350|        }
+   351|      },
+   352|      scales:{
+   353|        x:{ticks:{color:'#787b86',maxTicksLimit:8,font:{family:'JetBrains Mono',size:10}},grid:{color:'rgba(255,255,255,0.04)'}},
+   354|        y:{ticks:{color:'#787b86',font:{family:'JetBrains Mono',size:10},callback:v=>'$'+v.toLocaleString('en-US',{maximumFractionDigits:0})},grid:{color:'rgba(255,255,255,0.04)'}}
+   355|      },
+   356|      interaction:{intersect:false,mode:'index'}
+   357|    }
+   358|  });
+   359|}
+   360|
+   361|async function load(){
+   362|  const data = await fetch('./data/leaderboard.json?t='+Date.now()).then(r=>r.json());
+   363|  const bots = data.bots||[];
+   364|  const sorted = [...bots].sort((a,b)=>b.total_value-a.total_value);
+   365|
+   366|  buildKPIs(sorted);
+   367|  buildDistribution(sorted);
+   368|  buildMainChart(sorted);
+   369|
+   370|  document.getElementById('count-badge').textContent = sorted.length + ' ' + __('count_bots','bots');
+   371|  
+   372|  startCountdown();
+   373|
+   374|  const lb=document.getElementById('leaderboard');
+   375|  lb.innerHTML='<div class="bot-list">';
+   376|  sorted.forEach((bot,i)=>{
+   377|    const medal=MEDALS[i]||`#${i+1}`;
+   378|    const r=+bot.total_return_pct||0;
+   379|    const td=+bot.today_pnl||0;
+   380|    lb.innerHTML+=`
+   381|      <a class="bot-card" href="/trade/${bot.bot_id}/">
+   382|        <div class="bot-rank ${i<3?'gold':''}">${medal}</div>
+   383|        <div class="bot-avatar-col">${bot.avatar}</div>
+   384|        <div class="bot-info-col">
+   385|          <div class="bot-name-row">
+   386|            <span class="bot-name">${bot.display_name}</span>
+   387|            <span class="risk-badge">${bot.risk_level}</span>
+   388|          </div>
+   389|          <div class="bot-meta">${bot.total_trades||0} <span data-i18n="trades">trades</span> · ${Object.keys(bot.positions||{}).length} <span data-i18n="positions">positions</span></div>
+   390|        </div>
+   391|        <div class="bot-val-col">
+   392|          <div class="bot-val">${fmt(bot.total_value||0)}</div>
+   393|          <div class="bot-ret ${r>=0?'c-green':'c-red'}">${r>=0?'+':''}${r.toFixed(2)}%</div>
+   394|        </div>
+   395|        <div class="bot-today-col">
+   396|          <div class="bot-today-lbl" data-i18n="today">Today</div>
+   397|          <div class="bot-today-val ${td>=0?'c-green':'c-red'}">${td>=0?'+':'-'}${fmt(Math.abs(td))}</div>
+   398|        </div>
+   399|        <div class="bot-arrow">→</div>
+   400|      </a>`;
+   401|  });
+   402|  lb.innerHTML+='</div>';
+   403|
+   404|  document.getElementById('footer').innerHTML =
+   405|    `<span class="footer-text" data-i18n="footer">PaperChase · Trading Arena · Data refreshes every 30 min during US market hours</span>`;
+   406|
+   407|  __retranslate();
+   408|
+   409|  setTimeout(load,90000);
+   410|}
+   411|
+   412|// ── Kick off data load ──
+   413|load().catch(function(e){ 
+   414|  console.error('load() failed:', e.message, e.stack);
+   415|  document.getElementById('leaderboard').innerHTML='<div style="color:var(--tv-text-3);text-align:center;padding:60px 20px;font-size:14px">⚠ ' + __('error_loading','Something went wrong. Please try again.') + '</div>'; 
+   416|});
+   417|</script>
+   418|</div>
+   419|</body>
+   420|</html>
+   421|
