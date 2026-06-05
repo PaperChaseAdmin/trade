@@ -12,7 +12,7 @@ from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
 # Global fallback chain — used as last resort if primary AND per-bot fallback both fail
-GLOBAL_FALLBACK_CHAIN = ["nemotron", "minimax"]  # ling removed — discontinued free tier
+GLOBAL_FALLBACK_CHAIN = ["nemotron", "qwen"]  # qwen3-coder: free, 1M ctx, great JSON output
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
@@ -74,12 +74,12 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                 json={
                     "model": or_model_id,
                     "messages": [
-                        {"role": "system", "content": "You are a stock market paper trader. Reply ONLY with valid JSON."},
+                        {"role": "system", "content": "You are a stock market paper trader. Reply ONLY with valid JSON. Do NOT include any reasoning, explanation, or thinking. Your ENTIRE response must be parseable JSON."},
                         {"role": "user", "content": prompt},
                     ],
-                    "temperature": 0.75,
+                    "temperature": 0.1,
                     "max_tokens": 1200,
-                    "response_format": {"type": "text"},
+                    "response_format": {"type": "json_object"},
                 },
                 timeout=45,  # more patience → less fallback churn
             )
@@ -103,12 +103,12 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                         json={
                             "model": or_model_id,
                             "messages": [
-                                {"role": "system", "content": "You are a stock market paper trader. Reply ONLY with valid JSON."},
+                                {"role": "system", "content": "You are a stock market paper trader. Reply ONLY with valid JSON. Do NOT include any reasoning, explanation, or thinking. Your ENTIRE response must be parseable JSON."},
                                 {"role": "user", "content": prompt},
                             ],
-                            "temperature": 0.75,
+                            "temperature": 0.1,
                             "max_tokens": 1200,
-                            "response_format": {"type": "text"},
+                            "response_format": {"type": "json_object"},
                         },
                         timeout=45,
                     )
@@ -192,6 +192,10 @@ def _resolve_model_id(model_name):
         "minimax": "minimax/minimax-m2.5:free",
         "minimax-m2.5": "minimax/minimax-m2.5:free",
         "ling": "inclusionai/ling-2.6-1t:free",
+        "qwen": "qwen/qwen3-coder:free",
+        "qwen3-coder": "qwen/qwen3-coder:free",
+        "kimi": "moonshotai/kimi-k2.6:free",
+        "kimi-k2.6": "moonshotai/kimi-k2.6:free",
     }
     result = mapping.get(model_name)
     if result:

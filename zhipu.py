@@ -1,25 +1,17 @@
 """
-Zhipu (智谱) GLM-4-Flash decision function for PaperChase trading bots.
-Ultimate fallback when OpenRouter's 3 free models all fail.
-OpenAI-compatible API, free tier, no geo-block from HK/US.
-
-Model: glm-4-flash (FREE, 128K context, fast)
-Endpoint: https://open.bigmodel.cn/api/paas/v4/chat/completions
+Zhipu (智谱) GLM-4.5-Air via OpenRouter for PaperChase trading bots.
+Ultimate fallback when OpenRouter's main 3 models all fail.
+Uses OpenRouter API (z-ai/glm-4.5-air:free) — no separate Zhipu key needed.
 """
-
 import os, json, time, requests, re
 from openrouter import _build_prompt, _build_bot_context, calc_value
 
-API_BASE = "https://open.bigmodel.cn/api/paas/v4"
-MODEL = "glm-4-flash"
+MODEL_ID = "z-ai/glm-4.5-air:free"
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
-                 model_name="glm-4-flash", fallback_model=None):
-    """Returns (decision_dict, context_dict) using Zhipu GLM-4-Flash API.
-    
-    Same signature as openrouter.get_decision() for drop-in replacement.
-    """
+                 model_name="glm-4.5-air", fallback_model=None):
+    """Returns (decision_dict, context_dict) using GLM-4.5-Air via OpenRouter."""
     total = pf.get("total_value", calc_value(pf, prices))
     ret = (total - profile["initial_capital"]) / profile["initial_capital"] * 100
 
@@ -42,26 +34,28 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
     prompt = _build_prompt(profile, pf, pos_display, avail, prices, changes, ctx,
                            total, ret, sp500, vix, fg, market_data)
 
-    api_key = os.environ.get("ZHIPU_API_KEY", "")
+    api_key = os.environ.get("OPENROUTER_API_KEY", "")
     if not api_key:
-        raise ValueError("ZHIPU_API_KEY not set")
+        raise ValueError("OPENROUTER_API_KEY not set")
 
     for attempt in range(2):
         try:
             resp = requests.post(
-                f"{API_BASE}/chat/completions",
+                "https://openrouter.ai/api/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {api_key}",
                     "Content-Type": "application/json",
+                    "HTTP-Referer": "https://paperchase.online",
                 },
                 json={
-                    "model": MODEL,
+                    "model": MODEL_ID,
                     "messages": [
-                        {"role": "system", "content": "You are a stock market paper trader. Reply ONLY with valid JSON."},
+                        {"role": "system", "content": "You are a stock market paper trader. Reply ONLY with valid JSON. Do NOT include any reasoning, explanation, or thinking."},
                         {"role": "user", "content": prompt},
                     ],
-                    "temperature": 0.75,
+                    "temperature": 0.1,
                     "max_tokens": 1200,
+                    "response_format": {"type": "json_object"},
                 },
                 timeout=45,
             )
@@ -71,22 +65,19 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                 err = data["error"]
                 msg = err.get("message", str(err))
                 if attempt == 0:
-                    print(f"    Zhipu error: {msg[:100]}, retrying...")
+                    print(f"    GLM-4.5-Air error: {msg[:100]}, retrying...")
                     time.sleep(5)
                     continue
-                raise ValueError(f"Zhipu API error: {msg[:200]}")
+                raise ValueError(f"GLM-4.5-Air error: {msg[:200]}")
 
             content = data["choices"][0]["message"].get("content")
             if not content:
-                raise ValueError("Zhipu returned empty content")
-
-            # Zhipu wraps JSON in ```json ... ``` markdown fences
-            content = content.strip()
-            if content.startswith("```"):
-                # Remove opening fence: ```json or ```
-                content = re.sub(r'^```(?:json)?\s*\n?', '', content)
-                # Remove closing fence: ```
-                content = re.sub(r'\n?```\s*$', '', content)
+                reasoning = data["choices"][0]["message"].get("reasoning", "")
+                json_match = re.search(r'\{.*\}', reasoning, re.DOTALL)
+                if json_match:
+                    content = json_match.group()
+                else:
+                    raise ValueError("GLM-4.5-Air returned empty content")
 
             result = json.loads(content)
             if not isinstance(result, dict):
@@ -94,21 +85,15 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                 if json_match:
                     result = json.loads(json_match.group())
                 else:
-                    raise ValueError(f"Zhipu returned non-dict: {type(result)}")
+                    raise ValueError(f"GLM returned non-dict: {type(result)}")
 
             return result, ctx
 
-        except requests.Timeout:
+        except (requests.Timeout, json.JSONDecodeError) as e:
             if attempt == 0:
-                print(f"    Zhipu timeout, retrying...")
+                print(f"    GLM-4.5-Air {type(e).__name__}, retrying...")
                 time.sleep(5)
-                continue
-            raise TimeoutError("Zhipu timeout after retry")
-        except json.JSONDecodeError:
-            if attempt == 0:
-                print(f"    Zhipu JSON error, retrying...")
-                time.sleep(3)
                 continue
             raise
 
-    raise RuntimeError("Zhipu failed after all attempts")
+    raise RuntimeError("GLM-4.5-Air failed after all attempts")
