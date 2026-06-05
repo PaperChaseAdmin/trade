@@ -1,84 +1,89 @@
 {
-  "cash": 1251.56,
-  "total_value": 9892.14,
+  "cash": 1068.67,
+  "total_value": 9880.98,
   "positions": {
     "GLD": {
       "shares": 4,
       "avg_cost": 419.57,
-      "current_price": 398.44
+      "current_price": 398.41
     },
     "TLT": {
       "shares": 23,
-      "current_price": 85.1913,
+      "current_price": 85.1915,
       "avg_cost": 83.6059
     },
     "IAU": {
       "shares": 20,
       "avg_cost": 84.6252,
-      "current_price": 81.635
+      "current_price": 81.633
     },
     "PDBC": {
       "shares": 112,
       "avg_cost": 17.515,
-      "current_price": 17.515
+      "current_price": 17.465
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 746.52,
-      "current_price": 746.52
+      "current_price": 743.82
+    },
+    "BIL": {
+      "shares": 2,
+      "avg_cost": 91.445,
+      "current_price": 91.445
     }
   },
-  "total_return_pct": -1.08,
+  "total_return_pct": -1.19,
   "total_return_usd": 0.0,
-  "today_pnl": -41.48,
-  "today_pnl_pct": -0.42,
-  "total_trades": 7,
+  "today_pnl": -52.64,
+  "today_pnl_pct": -0.53,
+  "total_trades": 8,
   "today_start_value": 9933.62,
   "today_date": "2026-06-05",
-  "last_action": "Extreme fear with strong payrolls suggests a defensive tilt toward commodities and equities for balanced All Weather exposure.",
-  "last_updated": "2026-06-05T15:57:35Z",
+  "last_action": "Extreme fear and modest VIX indicate near\u2011term risk\u2011off, favoring bonds and cash.",
+  "last_updated": "2026-06-05T17:57:15Z",
   "last_session": {
-    "at": "2026-06-05T15:57:35Z",
+    "at": "2026-06-05T17:57:15Z",
     "fear_greed": 12,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": -1.4,
-    "vix": 16.71,
+    "sp500_change": -1.74,
+    "vix": 18.22,
     "top_movers": [
       [
         "GDX",
-        -7.28
+        -7.4
       ],
       [
         "EEM",
-        -4.65
+        -5.5
+      ],
+      [
+        "VWO",
+        -3.21
       ],
       [
         "IAU",
-        -3.14
+        -3.13
       ],
       [
         "GLD",
         -3.12
       ],
       [
-        "VWO",
-        -2.84
-      ],
-      [
         "DJP",
-        -2.27
+        -2.78
       ]
     ],
     "news_read": [
-      "U.S. payrolls rose by 172,000 in May, much more than expected; unemployment at 4.3%",
       "Alphabet is seeking fresh capital as stock's 4-week losing streak tests investor appetite",
-      "Boeing to start 737 Max production on new assembly line July 6, CEO says",
-      "Lululemon cuts annual outlook, citing 'negative' media commentary and disappointing product launches"
+      "Bitcoin cracks $60,000, sinking to lowest level since October 2024",
+      "Trump wants Bill Pulte to fire big chunk of national intelligence office staff: WSJ",
+      "Prediction market firms face growing scrutiny as Congress weighs regulation"
     ],
-    "domain_extra": "MACRO: NASDAQ -2.37%  DOW -0.56%  VIX 16.7 (NORMAL)",
-    "ai_analysis": "I noted GDX, IAU, GLD down >3% indicating gold weakness, but TLT slightly down; payrolls beat expectations pointing to growth, not recession. To honor the All Weather framework, I added commodity exposure via PDBC and equity via SPY, both within position limits, while preserving over $1k cash for flexibility.",
-    "outlook": "Extreme fear with strong payrolls suggests a defensive tilt toward commodities and equities for balanced All Weather exposure.",
-    "trades_made": 2
+    "domain_extra": "MACRO: NASDAQ -2.95%  DOW -0.83%  VIX 18.2 (NORMAL)",
+    "ai_analysis": "",
+    "outlook": "Extreme fear and modest VIX indicate near\u2011term risk\u2011off, favoring bonds and cash.",
+    "trades_made": 1
   },
   "portfolio_history": [
     {
@@ -720,6 +725,10 @@
     {
       "timestamp": "2026-06-05T15:57:35Z",
       "value": 9892.14
+    },
+    {
+      "timestamp": "2026-06-05T17:57:15Z",
+      "value": 9880.98
     }
   ]
 }
