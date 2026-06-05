@@ -384,6 +384,12 @@ function renderPredHist(history) {
 }
 
 async function loadData() {
+  // Start fresh: only keep predictions from today onwards
+  const hist = JSON.parse(localStorage.getItem('polywatch_predictions') || '[]');
+  const today = new Date().toISOString().split('T')[0];
+  const clean = hist.filter(h => h.date >= today);
+  localStorage.setItem('polywatch_predictions', JSON.stringify(clean));
+  
   try {
     const resp = await fetch('/trade/data/polymarket/scan_results.json?t='+Date.now());
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
