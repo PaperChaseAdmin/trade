@@ -1,487 +1,484 @@
-     1|<!DOCTYPE html>
-     2|<html lang="en">
-     3|<head>
-     4|<meta charset="UTF-8"/>
-     5|<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-     6|<title data-i18n-title="page_title_polymarket">Poly Watch</title>
-     7|<meta name="description" content="AI-powered prediction market scanner. Find high-confidence bets with AI analysis and historical accuracy tracking."/>
-     8|<meta name="robots" content="index, follow"/>
-     9|<link rel="canonical" href="https://paperchase.online/trade/polymarket/"/>
-    10|<!-- Google tag (gtag.js) -->
-    11|<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
-    12|<script>
-    13|  window.dataLayer = window.dataLayer || [];
-    14|  function gtag(){dataLayer.push(arguments);}
-    15|  gtag('js', new Date());
-    16|  gtag('config', 'G-W3V49QCMT0');
-    17|</script>
-    18|<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
-    19|<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    20|<script src="/trade/assets/i18n.js"></script>
-    21|<style>
-    22|:root {
-    23|  --tv-bg: #0a0b0f; --tv-surface: #131722; --tv-surface-2: #1e222d; --tv-surface-3: #2a2e39;
-    24|  --tv-border: #2a2e39; --tv-border-2: #363a45;
-    25|  --tv-text: #d1d4dc; --tv-text-2: #787b86; --tv-text-3: #50535c;
-    26|  --tv-green: #089981; --tv-red: #f23645; --tv-yellow: #ff9800; --tv-blue: #2962ff;
-    27|  --tv-font: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    28|  --tv-mono: 'JetBrains Mono','Fira Code',monospace;
-    29|  --tv-radius: 6px; --tv-radius-sm: 4px;
-    30|}
-    31|*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    32|body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
-    33|.bg-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,11,15,0.88),rgba(10,11,15,0.93),rgba(10,11,15,0.97)),url('https://images.pexels.com/photos/16594725/pexels-photo-16594725.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920') center/cover no-repeat fixed}
-    34|.wrap{position:relative;z-index:1}
-    35|
-    36|.topbar{background:rgba(19,23,34,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--tv-border);position:sticky;top:0;z-index:100}
-    37|.topbar-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:4px;height:52px}
-    38|.logo{font-size:15px;font-weight:800;color:var(--tv-text);text-decoration:none;display:flex;align-items:center;gap:10px;margin-right:20px}
-    39|.topbar-nav{display:flex;align-items:center;gap:0}
-    40|.nav-section{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--tv-text-3);padding:0 10px;margin-right:4px}
-    41|.nav-link{font-size:13px;font-weight:500;color:var(--tv-text-2);text-decoration:none;padding:6px 12px;border-radius:var(--tv-radius-sm);transition:all .15s}
-    42|.nav-link:hover,.nav-link.active{background:var(--tv-surface-2);color:var(--tv-text)}
-    43|.nav-spacer{width:1px;height:20px;background:var(--tv-border-2);margin:0 10px}
-    44|
-    45|.container{max-width:1200px;margin:0 auto;padding:0 20px 80px}
-    46| 
-    47| .page-header{padding:28px 0 0;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px}
-    48|.page-title{font-size:26px;font-weight:700;color:var(--tv-text);letter-spacing:-0.03em}
-    49|.page-title-wrap{display:flex;flex-direction:column;gap:6px}
-    50|.page-sub{font-size:13px;color:var(--tv-text-2);display:flex;align-items:center;gap:6px}
-    51|.live{display:inline-block;width:7px;height:7px;background:var(--tv-green);border-radius:50%;animation:blink 2s infinite;margin-right:5px}
-    52|@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-    53|
-    54|.countdown-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:2px;margin-left:auto;flex-shrink:0}
-    55|.countdown-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tv-text-3)}
-    56|.countdown-num{font-size:16px;font-weight:700;font-family:var(--tv-mono);color:var(--tv-text);white-space:nowrap}
-    57|
-    58|/* Filters */
-    59|.filter-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
-    60|.filter-btn{font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid var(--tv-border);background:var(--tv-surface);color:var(--tv-text-2);cursor:pointer;transition:all .15s;font-family:var(--tv-font)}
-    61|.filter-btn:hover{background:var(--tv-surface-2)}
-    62|.filter-btn.active{background:var(--tv-blue);color:#fff;border-color:var(--tv-blue)}
-    63|.filter-count{font-size:11px;color:var(--tv-text-3);margin-left:auto}
-    64|
-    65|/* Stats bar */
-    66|.stats-bar{display:flex;gap:1px;background:var(--tv-border);border-radius:var(--tv-radius);overflow:hidden;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
-    67|.stat-item{background:var(--tv-surface);padding:12px 16px;flex:1;text-align:center}
-    68|.stat-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tv-text-2);margin-bottom:4px}
-    69|.stat-val{font-size:18px;font-weight:700;font-family:var(--tv-mono);color:var(--tv-text)}
-    70|
-    71|/* Market Card */
-    72|.market-grid{display:flex;flex-direction:column;gap:1px;background:var(--tv-border);border-radius:var(--tv-radius);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.15)}
-    73|.market-card{background:var(--tv-surface);padding:14px 16px;cursor:pointer;transition:background .1s}
-    74|.market-card:hover{background:var(--tv-surface-2)}
-    75|.market-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
-    76|.market-card-question{font-size:14px;font-weight:600;color:var(--tv-text);flex:1;line-height:1.4}
-    77|.market-card-badge{font-size:9px;font-weight:600;padding:2px 7px;border-radius:3px;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
-    78|.badge-yes{background:rgba(8,153,129,.15);color:var(--tv-green);border:1px solid rgba(8,153,129,.2)}
-    79|.badge-review{background:rgba(255,152,0,.15);color:var(--tv-yellow);border:1px solid rgba(255,152,0,.2)}
-    80|.badge-no{background:rgba(242,54,69,.15);color:var(--tv-red);border:1px solid rgba(242,54,69,.2)}
-    81|.badge-tag{font-size:9px;padding:1px 5px;border-radius:2px;background:var(--tv-surface-3);color:var(--tv-text-3);border:1px solid var(--tv-border-2);text-transform:uppercase}
-    82|
-    83|.market-card-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
-    84|.meta-item{font-size:11px;color:var(--tv-text-2)}
-    85|.meta-item strong{color:var(--tv-text);font-family:var(--tv-mono);font-weight:600}
-    86|
-    87|.prob-bar-wrap{height:4px;background:var(--tv-surface-3);border-radius:2px;overflow:hidden;margin-bottom:6px}
-    88|.prob-bar-fill{height:100%;border-radius:2px;transition:width .5s}
-    89|
-    90|.market-card-ai{background:var(--tv-surface-2);border:1px solid var(--tv-border);border-radius:var(--tv-radius-sm);padding:8px 10px;margin-top:6px;font-size:12px;line-height:1.5;color:var(--tv-text-2);display:none}
-    91|.market-card-ai.open{display:block}
-    92|.ai-outlook{font-weight:600;margin-right:4px}
-    93|.ai-conf{font-size:10px;color:var(--tv-text-3)}
-    94|
-    95|/* Top Pick */
-    96|.section-title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tv-text-2)}
-    97|/* Loading */
-    98|.loading{padding:60px;text-align:center;color:var(--tv-text-2);font-size:14px}
-    99|.spinner{width:24px;height:24px;border:2px solid var(--tv-border);border-top-color:var(--tv-blue);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 10px}
-   100|@keyframes spin{to{transform:rotate(360deg)}}
-   101|
-   102|@media(max-width:900px){
-   103|  .stats-bar{flex-wrap:wrap}
-   104|  .stat-item{min-width:33%}
-   105|  .topbar-inner{gap:2px;padding:0 10px}
-   106|  .logo{font-size:13px;margin-right:8px}
-   107|  .nav-link{font-size:11px;padding:4px 6px}
-   108|}
-   109|</style>
-   110|</head>
-   111|<body>
-   112|<div class="bg-overlay"></div>
-   113|<div class="wrap">
-   114|
-   115|<nav class="topbar"><div class="topbar-inner">
-   116|  <a class="logo" href="/trade/">PaperChase</a>
-   117|  <div class="topbar-nav">
-   118|    <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
-   119|    <a class="nav-link" href="/trade/" data-i18n="nav_trading">Trading Arena</a>
-   120|    <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
-   121|    <a class="nav-link active" href="/trade/polymarket/" data-i18n="nav_polymarket">Poly Watch</a>
-   122|  </div>
-   123|  <div class="topbar-spacer" style="flex:1"></div>
-   124|  <!-- Account / Login -->
-   125|  <div class="topbar-auth" style="display:flex;align-items:center;gap:4px;margin-left:8px">
-   126|    <a class="nav-link" href="/trade/login/" data-i18n="nav_login">Log In</a>
-   127|    <a class="nav-link" href="/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
-   128|  </div>
-   129|</div></nav>
-   130|
-   131|<div class="container">
-   132|
-   133|  <div class="page-header">
-   134|    <div class="page-title-wrap">
-   135|      <div class="page-title" data-i18n="page_title_polymarket">Poly Watch</div>
-   136|      <div class="page-sub" style="font-size:12px;color:var(--tv-text-2)"><span class="live"></span> 🏆 Top pick shown first → Filter by category → Click any market for AI analysis</div>
-   137|    </div>
-   138|    <div id="countdown-wrap" class="countdown-wrap" style="margin-left:auto;flex-shrink:0"></div>
-   139|  </div>
-   140|
-   141|  <!-- Stats -->
-   142|  <div class="stats-bar" id="statsBar"></div>
-   143|
-   144|  <!-- TOP PICK -->
-   145|  <div id="topPickSection" style="display:none;margin-bottom:20px">
-   146|    <div class="section-title" style="font-size:12px;margin-bottom:8px;display:flex;align-items:center;gap:8px">
-   147|      <span>🏆 TODAY'S TOP PICK</span>
-   148|      <span id="topPickDate" style="font-size:10px;color:var(--tv-text-3);font-weight:400"></span>
-   149|    </div>
-   150|    <div id="topPickCard" style="background:var(--tv-surface);border:2px solid var(--tv-green);border-radius:var(--tv-radius);padding:18px;box-shadow:0 4px 20px rgba(0,0,0,0.3);cursor:pointer" onclick="toggleAI(this)">
-   151|      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px">
-   152|        <div style="flex:1">
-   153|          <div id="topPickQuestion" style="font-size:15px;font-weight:600;color:var(--tv-text);line-height:1.4;margin-bottom:6px"></div>
-   154|          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-   155|            <span id="topPickAction" style="font-size:13px;font-weight:700;padding:3px 10px;border-radius:4px;display:inline-block"></span>
-   156|            <span id="topPickProb" style="font-size:13px;color:var(--tv-text-2)"></span>
-   157|            <span id="topPickVol" style="font-size:12px;color:var(--tv-text-3)"></span>
-   158|            <span id="topPickTag" style="font-size:10px;font-weight:600;padding:1px 6px;border-radius:2px;background:var(--tv-surface-3);color:var(--tv-text-3)"></span>
-   159|          </div>
-   160|        </div>
-   161|        <div id="topPickScore" style="font-size:24px;font-weight:800;font-family:var(--tv-mono);color:var(--tv-green);flex-shrink:0;text-align:right"></div>
-   162|      </div>
-   163|      <div id="topPickAI" class="market-card-ai" style="display:none">
-   164|        <span id="topPickAIOutlook" class="ai-outlook"></span>
-   165|        <span id="topPickAIConf" class="ai-conf"></span>
-   166|        <span id="topPickAIAnalysis"></span>
-   167|      </div>
-   168|    </div>
-   169|  </div>
-   170|
-   171|  <!-- 10-DAY PREDICTION HISTORY -->
-   172|  <div id="predHistSection" style="display:none;margin-bottom:20px">
-   173|    <div class="section-title" style="font-size:12px;margin-bottom:8px;display:flex;align-items:center;gap:8px">
-   174|      <span>📊 10-DAY PREDICTION TRACK RECORD</span>
-   175|      <span id="predHistAcc" style="font-size:11px;color:var(--tv-text-3);font-weight:400"></span>
-   176|    </div>
-   177|    <div id="predHistTable" style="display:flex;flex-direction:column;gap:2px">
-   178|      <div style="color:var(--tv-text-2);padding:8px;font-size:12px;text-align:center">No prediction history yet — predictions recorded daily</div>
-   179|    </div>
-   180|  </div>
-   181|
-   182|  <!-- Filters -->
-   183|  <div class="filter-bar" id="filterBar">
-   184|    <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)" data-i18n="filter_all">All</button>
-   185|    <button class="filter-btn" data-filter="recommended" onclick="setFilter('recommended',this)" data-i18n="filter_recommended">✅ Recommended</button>
-   186|    <button class="filter-btn" data-filter="review" onclick="setFilter('review',this)" data-i18n="filter_review">⚠️ Review</button>
-   187|    <button class="filter-btn" data-filter="politics" onclick="setFilter('politics',this)" data-i18n="filter_politics">Politics</button>
-   188|    <button class="filter-btn" data-filter="crypto" onclick="setFilter('crypto',this)" data-i18n="filter_crypto">Crypto</button>
-   189|    <button class="filter-btn" data-filter="finance" onclick="setFilter('finance',this)" data-i18n="filter_finance">Finance</button>
-   190|    <button class="filter-btn" data-filter="news" onclick="setFilter('news',this)" data-i18n="filter_news">News</button>
-   191|    <span class="filter-count" id="countLabel">0 markets</span>
-   192|  </div>
-   193|
-   194|  <!-- Market List -->
-   195|  <div id="marketList"><div class="loading"><div class="spinner"></div><span data-i18n="scanning_polymarket">Scanning Poly Watch...</span></div></div>
-   196|
-   197|</div>
-   198|
-   199|<script>
-   200|let allMarkets = [];
-   201|let currentFilter = 'all';
-   202|
-   203|function fmt(v) {
-   204|  if (v == null) return '—';
-   205|  if (v >= 1e6) return '$'+(v/1e6).toFixed(1)+'M';
-   206|  if (v >= 1e3) return '$'+(v/1e3).toFixed(1)+'K';
-   207|  return '$'+v.toFixed(0);
-   208|}
-   209|
-   210|function ago(ts) {
-   211|  if (!ts) return '';
-   212|  const m = Math.floor((Date.now()-new Date(ts))/60000);
-   213|  return m<1 ? __('just_now','just now') : m<60 ? m + __('min_ago','m ago') : Math.floor(m/60) + __('hour_ago','h ago');
-   214|}
-   215|
-   216|function setFilter(f, btn) {
-   217|  currentFilter = f;
-   218|  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-   219|  btn.classList.add('active');
-   220|  renderMarkets();
-   221|}
-   222|
-   223|function renderMarkets() {
-   224|  let filtered = allMarkets;
-   225|  if (currentFilter === 'recommended') {
-   226|    filtered = allMarkets.filter(m => m.heuristic && m.heuristic.score >= 15);
-   227|  } else if (currentFilter === 'review') {
-   228|    filtered = allMarkets.filter(m => m.heuristic && m.heuristic.score < 15 && m.heuristic.score >= 5);
-   229|  } else if (currentFilter !== 'all') {
-   230|    filtered = allMarkets.filter(m => m.tag === currentFilter);
-   231|  }
-   232|  
-   233|  document.getElementById('countLabel').textContent = filtered.length + ' ' + __('count_markets','markets');
-   234|  
-   235|  if (!filtered.length) {
-   236|    document.getElementById('marketList').innerHTML = '<div class="loading" style="padding:40px">' + __('no_markets_filter','No markets found for this filter') + '</div>';
-   237|    return;
-   238|  }
-   239|  
-   240|  let html = '<div class="market-grid">';
-   241|  filtered.forEach((m,i) => {
-   242|    const h = m.heuristic || {};
-   243|    const ai = m.ai || {};
-   244|    const pct = (m.yes_price*100).toFixed(1);
-   245|    const badge = h.score >= 15 ? 'badge-yes' : h.score >= 5 ? 'badge-review' : 'badge-no';
-   246|    const badgeText = h.score >= 15 ? '✅ Yes' : h.score >= 5 ? '⚠️ Review' : '❌ No';
-   247|    const barColor = m.yes_price >= 0.9 ? '#089981' : m.yes_price >= 0.7 ? '#ff9800' : '#f23645';
-   248|    const endDate = m.end_date ? new Date(m.end_date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : 'N/A';
-   249|    
-   250|    const aiHtml = ai.ai_analysis ? 
-   251|      '<div class="market-card-ai open">' +
-   252|        '<span class="ai-outlook" style="color:' + (ai.ai_outlook==='yes'?'var(--tv-green)':'var(--tv-red)') + '">' + (ai.ai_outlook||'neutral').toUpperCase() + '</span>' +
-   253|        '<span class="ai-conf">(' + (ai.ai_confidence||0) + '% ' + __('ai_confidence','confidence') + ')</span> — ' +
-   254|        (ai.ai_analysis||'') +
-   255|      '</div>' : '';
-   256|    
-   257|    html += '<div class="market-card" onclick="toggleAI(this)">' +
-   258|      '<div class="market-card-header">' +
-   259|        '<div class="market-card-question">' + m.question + '</div>' +
-   260|        '<span class="market-card-badge ' + badge + '">' + badgeText + '</span>' +
-   261|      '</div>' +
-   262|      '<div class="market-card-meta">' +
-   263|        '<span class="meta-item">' + __('meta_yes','Yes') + ': <strong class="' + (m.yes_price>=0.9?'c-green':m.yes_price>=0.7?'c-yellow':'') + '">' + pct + '%</strong></span>' +
-   264|        '<span class="meta-item">' + __('meta_ends','Ends') + ': <strong>' + endDate + '</strong></span>' +
-   265|        '<span class="meta-item">' + __('meta_vol','Vol') + ': <strong>' + fmt(m.volume) + '</strong></span>' +
-   266|        '<span class="badge-tag">' + (m.tag||'') + '</span>' +
-   267|        (m.heuristic && m.heuristic.reasons ? '<span class="meta-item" style="color:var(--tv-text-3);font-size:10px">' + m.heuristic.reasons + '</span>' : '') +
-   268|      '</div>' +
-   269|      '<div class="prob-bar-wrap"><div class="prob-bar-fill" style="width:' + pct + '%;background:' + barColor + '"></div></div>' +
-   270|      aiHtml +
-   271|    '</div>';
-   272|  });
-   273|  html += '</div>';
-   274|  
-   275|  document.getElementById('marketList').innerHTML = html;
-   276|}
-   277|
-   278|function toggleAI(el) {
-   279|  const aiEl = el.querySelector('.market-card-ai');
-   280|  if (aiEl) aiEl.classList.toggle('open');
-   281|}
-   282|
-   283|// ── TOP PICK ───────────────────────────────────────────────────────────
-   284|function renderTopPick(markets) {
-   285|  const section = document.getElementById('topPickSection');
-   286|  // Find the market with highest heuristic score
-   287|  const scored = markets.filter(m => m.heuristic && m.heuristic.score > 0)
-   288|    .sort((a, b) => (b.heuristic.score || 0) - (a.heuristic.score || 0));
-   289|  
-   290|  if (scored.length === 0) { section.style.display = 'none'; return; }
-   291|  
-   292|  const top = scored[0];
-   293|  const h = top.heuristic || {};
-   294|  const ai = top.ai || {};
-   295|  const pct = (top.yes_price * 100).toFixed(1);
-   296|  const betYes = top.yes_price >= 0.5;
-   297|  
-   298|  document.getElementById('topPickDate').textContent = new Date().toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-   299|  document.getElementById('topPickQuestion').textContent = top.question;
-   300|  
-   301|  const actionEl = document.getElementById('topPickAction');
-   302|  actionEl.textContent = betYes ? '▸ BET YES' : '▸ BET NO';
-   303|  actionEl.style.background = betYes ? 'rgba(8,153,129,0.2)' : 'rgba(242,54,69,0.2)';
-   304|  actionEl.style.color = betYes ? '#089981' : '#f23645';
-   305|  actionEl.style.border = '1px solid ' + (betYes ? 'rgba(8,153,129,0.3)' : 'rgba(242,54,69,0.3)');
-   306|  
-   307|  document.getElementById('topPickProb').innerHTML = 'Yes: <strong>' + pct + '%</strong>';
-   308|  document.getElementById('topPickVol').textContent = 'Vol: ' + fmt(top.volume);
-   309|  document.getElementById('topPickTag').textContent = (top.tag || '').toUpperCase();
-   310|  document.getElementById('topPickScore').textContent = h.score || '';
-   311|  
-   312|  // AI analysis
-   313|  if (ai.ai_analysis) {
-   314|    document.getElementById('topPickAIOutlook').textContent = (ai.ai_outlook||'neutral').toUpperCase();
-   315|    document.getElementById('topPickAIOutlook').style.color = ai.ai_outlook==='yes' ? '#089981' : '#f23645';
-   316|    document.getElementById('topPickAIConf').textContent = '(' + (ai.ai_confidence||0) + '% confidence)';
-   317|    document.getElementById('topPickAIAnalysis').textContent = ' — ' + ai.ai_analysis;
-   318|  }
-   319|  
-   320|  section.style.display = 'block';
-   321|  
-   322|  // Save to localStorage prediction history
-   323|  savePrediction(top, betYes);
-   324|}
-   325|
-   326|// ── PREDICTION HISTORY (localStorage) ──
-   327|function savePrediction(market, betYes) {
-   328|  const today = new Date().toISOString().split('T')[0];
-   329|  let history = JSON.parse(localStorage.getItem('polywatch_predictions') || '[]');
-   330|  
-   331|  // Don't save duplicate for today
-   332|  if (history.length > 0 && history[0].date === today) return;
-   333|  
-   334|  history.unshift({
-   335|    date: today,
-   336|    question: market.question,
-   337|    bet: betYes ? 'YES' : 'NO',
-   338|    prob: (market.yes_price * 100).toFixed(1) + '%',
-   339|    tag: market.tag || '',
-   340|    score: (market.heuristic || {}).score || 0,
-   341|    result: null,  // Unknown until tomorrow
-   342|    correct: null
-   343|  });
-   344|  
-   345|  // Keep max 15 entries
-   346|  history = history.slice(0, 15);
-   347|  localStorage.setItem('polywatch_predictions', JSON.stringify(history));
-   348|  renderPredHist(history);
-   349|}
-   350|
-   351|
-   352|
-   353|
-   354|
-   355|let _cdTimer = null;
-   356|
-   357|function startCountdown() {
-   358|  clearInterval(_cdTimer);
-   359|  const el = document.getElementById('countdown-wrap');
-   360|  if (!el) return;
-   361|  
-   362|  function nextMarketOpen() {
-   363|    const now = new Date();
-   364|    const day = now.getUTCDay();
-   365|    const hour = now.getUTCHours();
-   366|    const min = now.getUTCMinutes();
-   367|    const next = new Date(now);
-   368|    
-   369|    if (day === 0 || day === 6 || (day === 5 && hour >= 21)) {
-   370|      const daysUntilMonday = day === 0 ? 1 : day === 6 ? 2 : (8 - day);
-   371|      next.setDate(next.getDate() + daysUntilMonday);
-   372|      next.setUTCHours(13, 30, 0, 0);
-   373|    } else if (hour < 13 || (hour === 13 && min < 30)) {
-   374|      next.setUTCHours(13, 30, 0, 0);
-   375|    } else if (hour >= 21) {
-   376|      next.setDate(next.getDate() + 1);
-   377|      next.setUTCHours(13, 30, 0, 0);
-   378|    } else {
-   379|      const nextHalf = Math.ceil((hour * 60 + min) / 30) * 30;
-   380|      next.setUTCHours(Math.floor(nextHalf/60), nextHalf%60, 0, 0);
-   381|    }
-   382|    return next;
-   383|  }
-   384|  
-   385|  const target = nextMarketOpen();
-   386|  
-   387|  function tick() {
-   388|    const diff = target - Date.now();
-   389|    if (diff <= 0) { el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num" data-i18n="checking_now">Checking now...</span>'; __retranslate(); return; }
-   390|    const h = Math.floor(diff / 3600000);
-   391|    const m = Math.floor((diff % 3600000) / 60000);
-   392|    const s = Math.floor((diff % 60000) / 1000);
-   393|    
-   394|    if (h >= 24) {
-   395|      const d = Math.floor(h / 24);
-   396|      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h ' + m + 'm</span>';
-   397|    } else if (h >= 1) {
-   398|      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + h + 'h ' + m + 'm ' + s + 's</span>';
-   399|    } else {
-   400|      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + m + 'm ' + s + 's</span>';
-   401|    }
-   402|  }
-   403|  tick();
-   404|  _cdTimer = setInterval(tick, 1000);
-   405|}
-   406|
-   407|function renderPredHist(history) {
-   408|  const section = document.getElementById('predHistSection');
-   409|  if (!history || history.length === 0) { section.style.display = 'none'; return; }
-   410|  
-   411|  // Calculate accuracy
-   412|  const resolved = history.filter(h => h.correct !== null);
-   413|  const correct = resolved.filter(h => h.correct).length;
-   414|  const total = resolved.length;
-   415|  const accPct = total > 0 ? Math.round(correct / total * 100) : 0;
-   416|  
-   417|  document.getElementById('predHistAcc').textContent = total > 0 ? accPct + '% accuracy (' + correct + '/' + total + ')' : '';
-   418|  
-   419|  const tableHtml = history.slice(0, 10).map(h => {
-   420|    const isResolved = h.correct !== null;
-   421|    const resultColor = h.correct ? '#089981' : '#f23645';
-   422|    const resultIcon = h.correct ? '✅' : '❌';
-   423|    const resultText = h.correct ? 'CORRECT' : 'WRONG';
-   424|    const betColor = h.bet === 'YES' ? '#089981' : '#f23645';
-   425|    
-   426|    return '<div style="display:grid;grid-template-columns:80px 1fr 55px 50px;gap:6px;align-items:center;padding:6px 10px;border-radius:var(--tv-radius-sm);background:' +
-   427|      (isResolved ? (h.correct ? 'rgba(8,153,129,0.05)' : 'rgba(242,54,69,0.05)') : 'var(--tv-surface-2)') +
-   428|      ';font-size:11px;border:1px solid var(--tv-border)">' +
-   429|      '<span style="color:var(--tv-text-3);font-weight:600;font-size:10px">' + h.date.slice(5) + '</span>' +
-   430|      '<span style="color:var(--tv-text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + h.question + '</span>' +
-   431|      '<span style="font-weight:700;color:' + betColor + ';text-align:center">' + h.bet + '</span>' +
-   432|      (isResolved
-   433|        ? '<span style="color:' + resultColor + ';font-weight:600;text-align:right;font-size:11px">' + resultIcon + ' ' + resultText + '</span>'
-   434|        : '<span style="color:var(--tv-text-3);text-align:right;font-size:10px">⏳ Pending</span>') +
-   435|    '</div>';
-   436|  }).join('');
-   437|  
-   438|  document.getElementById('predHistTable').innerHTML = tableHtml;
-   439|  section.style.display = 'block';
-   440|}
-   441|
-   442|async function loadData() {
-   443|  // Start fresh: only keep predictions from today onwards
-   444|  const hist = JSON.parse(localStorage.getItem('polywatch_predictions') || '[]');
-   445|  const today = new Date().toISOString().split('T')[0];
-   446|  const clean = hist.filter(h => h.date >= today);
-   447|  localStorage.setItem('polywatch_predictions', JSON.stringify(clean));
-   448|  
-   449|  try {
-   450|    const resp = await fetch('/trade/data/polymarket/scan_results.json?t='+Date.now());
-   451|    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-   452|    const data = await resp.json();
-   453|    allMarkets = data.markets || [];
-   454|    
-   455|    document.getElementById('lastUpdated') && (document.getElementById('lastUpdated').textContent = __('updated','Updated') + ' ' + ago(data.updated_at));
-   456|    
-   457|    // Stats
-   458|    const total = allMarkets.length;
-   459|    const recommended = allMarkets.filter(m => m.heuristic && m.heuristic.score >= 15).length;
-   460|    const avgYes = total ? (allMarkets.reduce((s,m) => s+m.yes_price, 0)/total*100).toFixed(1) : 0;
-   461|    const totalVol = allMarkets.reduce((s,m) => s+(m.volume||0), 0);
-   462|    
-   463|    document.getElementById('statsBar').innerHTML =
-   464|      '<div class="stat-item"><div class="stat-lbl">' + __('stat_markets','Markets') + '</div><div class="stat-val">' + total + '</div></div>' +
-   465|      '<div class="stat-item"><div class="stat-lbl">' + __('stat_recommended','Recommended') + '</div><div class="stat-val" style="color:var(--tv-green)">' + recommended + '</div></div>' +
-   466|      '<div class="stat-item"><div class="stat-lbl">' + __('stat_avg_yes','Avg Yes%') + '</div><div class="stat-val">' + avgYes + '%</div></div>' +
-   467|      '<div class="stat-item"><div class="stat-lbl">' + __('stat_total_volume','Total Volume') + '</div><div class="stat-val">' + fmt(totalVol) + '</div></div>';
-   468|    
-   469|    renderMarkets();
-   470|    renderTopPick(allMarkets);
-   471|    startCountdown();
-   472|    
-   473|    // Load prediction history
-   474|    const history = JSON.parse(localStorage.getItem('polywatch_predictions') || '[]');
-   475|    renderPredHist(history);
-   476|  } catch(e) {
-   477|    document.getElementById('marketList').innerHTML = '<div class="loading" style="color:var(--tv-red)">⚠ ' + __('error_could_not_load','Could not load') + ': ' + e.message + '<br><small>' + __('error_run_scanner','Run python3 polymarket/scanner.py to generate data') + '</small></div>';
-   478|  }
-   479|}
-   480|
-   481|loadData();
-   482|
-   483|loadData();
-   484|</script>
-   485|</body>
-   486|</html>
-   487|
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title data-i18n-title="page_title_polymarket">Poly Watch</title>
+<meta name="description" content="AI-powered prediction market scanner. Find high-confidence bets with AI analysis and historical accuracy tracking."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://paperchase.online/trade/polymarket/"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W3V49QCMT0');
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/trade/assets/i18n.js"></script>
+<style>
+:root {
+  --tv-bg: #0a0b0f; --tv-surface: #131722; --tv-surface-2: #1e222d; --tv-surface-3: #2a2e39;
+  --tv-border: #2a2e39; --tv-border-2: #363a45;
+  --tv-text: #d1d4dc; --tv-text-2: #787b86; --tv-text-3: #50535c;
+  --tv-green: #089981; --tv-red: #f23645; --tv-yellow: #ff9800; --tv-blue: #2962ff;
+  --tv-font: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --tv-mono: 'JetBrains Mono','Fira Code',monospace;
+  --tv-radius: 6px; --tv-radius-sm: 4px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--tv-bg);color:var(--tv-text);font-family:var(--tv-font);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+.bg-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,11,15,0.88),rgba(10,11,15,0.93),rgba(10,11,15,0.97)),url('https://images.pexels.com/photos/16594725/pexels-photo-16594725.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920') center/cover no-repeat fixed}
+.wrap{position:relative;z-index:1}
+
+.topbar{background:rgba(19,23,34,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--tv-border);position:sticky;top:0;z-index:100}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:4px;height:52px}
+.logo{font-size:15px;font-weight:800;color:var(--tv-text);text-decoration:none;display:flex;align-items:center;gap:10px;margin-right:20px}
+.topbar-nav{display:flex;align-items:center;gap:0}
+.nav-section{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--tv-text-3);padding:0 10px;margin-right:4px}
+.nav-link{font-size:13px;font-weight:500;color:var(--tv-text-2);text-decoration:none;padding:6px 12px;border-radius:var(--tv-radius-sm);transition:all .15s}
+.nav-link:hover,.nav-link.active{background:var(--tv-surface-2);color:var(--tv-text)}
+.nav-spacer{width:1px;height:20px;background:var(--tv-border-2);margin:0 10px}
+
+.container{max-width:1200px;margin:0 auto;padding:0 20px 80px}
+ 
+ .page-header{padding:28px 0 0;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.page-title{font-size:26px;font-weight:700;color:var(--tv-text);letter-spacing:-0.03em}
+.page-title-wrap{display:flex;flex-direction:column;gap:6px}
+.page-sub{font-size:13px;color:var(--tv-text-2);display:flex;align-items:center;gap:6px}
+.live{display:inline-block;width:7px;height:7px;background:var(--tv-green);border-radius:50%;animation:blink 2s infinite;margin-right:5px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+.countdown-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:2px;margin-left:auto;flex-shrink:0}
+.countdown-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tv-text-3)}
+.countdown-num{font-size:16px;font-weight:700;font-family:var(--tv-mono);color:var(--tv-text);white-space:nowrap}
+
+/* Filters */
+.filter-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.filter-btn{font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid var(--tv-border);background:var(--tv-surface);color:var(--tv-text-2);cursor:pointer;transition:all .15s;font-family:var(--tv-font)}
+.filter-btn:hover{background:var(--tv-surface-2)}
+.filter-btn.active{background:var(--tv-blue);color:#fff;border-color:var(--tv-blue)}
+.filter-count{font-size:11px;color:var(--tv-text-3);margin-left:auto}
+
+/* Stats bar */
+.stats-bar{display:flex;gap:1px;background:var(--tv-border);border-radius:var(--tv-radius);overflow:hidden;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.stat-item{background:var(--tv-surface);padding:12px 16px;flex:1;text-align:center}
+.stat-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tv-text-2);margin-bottom:4px}
+.stat-val{font-size:18px;font-weight:700;font-family:var(--tv-mono);color:var(--tv-text)}
+
+/* Market Card */
+.market-grid{display:flex;flex-direction:column;gap:1px;background:var(--tv-border);border-radius:var(--tv-radius);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.market-card{background:var(--tv-surface);padding:14px 16px;cursor:pointer;transition:background .1s}
+.market-card:hover{background:var(--tv-surface-2)}
+.market-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
+.market-card-question{font-size:14px;font-weight:600;color:var(--tv-text);flex:1;line-height:1.4}
+.market-card-badge{font-size:9px;font-weight:600;padding:2px 7px;border-radius:3px;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.badge-yes{background:rgba(8,153,129,.15);color:var(--tv-green);border:1px solid rgba(8,153,129,.2)}
+.badge-review{background:rgba(255,152,0,.15);color:var(--tv-yellow);border:1px solid rgba(255,152,0,.2)}
+.badge-no{background:rgba(242,54,69,.15);color:var(--tv-red);border:1px solid rgba(242,54,69,.2)}
+.badge-tag{font-size:9px;padding:1px 5px;border-radius:2px;background:var(--tv-surface-3);color:var(--tv-text-3);border:1px solid var(--tv-border-2);text-transform:uppercase}
+
+.market-card-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.meta-item{font-size:11px;color:var(--tv-text-2)}
+.meta-item strong{color:var(--tv-text);font-family:var(--tv-mono);font-weight:600}
+
+.prob-bar-wrap{height:4px;background:var(--tv-surface-3);border-radius:2px;overflow:hidden;margin-bottom:6px}
+.prob-bar-fill{height:100%;border-radius:2px;transition:width .5s}
+
+.market-card-ai{background:var(--tv-surface-2);border:1px solid var(--tv-border);border-radius:var(--tv-radius-sm);padding:8px 10px;margin-top:6px;font-size:12px;line-height:1.5;color:var(--tv-text-2);display:none}
+.market-card-ai.open{display:block}
+.ai-outlook{font-weight:600;margin-right:4px}
+.ai-conf{font-size:10px;color:var(--tv-text-3)}
+
+/* Top Pick */
+.section-title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tv-text-2)}
+/* Loading */
+.loading{padding:60px;text-align:center;color:var(--tv-text-2);font-size:14px}
+.spinner{width:24px;height:24px;border:2px solid var(--tv-border);border-top-color:var(--tv-blue);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 10px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media(max-width:900px){
+  .stats-bar{flex-wrap:wrap}
+  .stat-item{min-width:33%}
+  .topbar-inner{gap:2px;padding:0 10px}
+  .logo{font-size:13px;margin-right:8px}
+  .nav-link{font-size:11px;padding:4px 6px}
+}
+</style>
+</head>
+<body>
+<div class="bg-overlay"></div>
+<div class="wrap">
+
+<nav class="topbar"><div class="topbar-inner">
+  <a class="logo" href="/trade/">PaperChase</a>
+  <div class="topbar-nav">
+    <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
+    <a class="nav-link" href="/trade/" data-i18n="nav_trading">Trading Arena</a>
+    <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
+    <a class="nav-link active" href="/trade/polymarket/" data-i18n="nav_polymarket">Poly Watch</a>
+  </div>
+  <div class="topbar-spacer" style="flex:1"></div>
+  <!-- Account / Login -->
+  <div class="topbar-auth" style="display:flex;align-items:center;gap:4px;margin-left:8px">
+    <a class="nav-link" href="/trade/login/" data-i18n="nav_login">Log In</a>
+    <a class="nav-link" href="/trade/register/" style="background:var(--tv-green);color:#fff;border-radius:var(--tv-radius-sm);padding:6px 14px" data-i18n="nav_register">Register</a>
+  </div>
+</div></nav>
+
+<div class="container">
+
+  <div class="page-header">
+    <div class="page-title-wrap">
+      <div class="page-title" data-i18n="page_title_polymarket">Poly Watch</div>
+      <div class="page-sub" data-i18n="page_sub_polymarket">🏆 Top pick shown first → Filter by category → Click any market for AI analysis</div>
+    </div>
+    <div id="countdown-wrap" class="countdown-wrap" style="margin-left:auto;flex-shrink:0"></div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-bar" id="statsBar"></div>
+
+  <!-- TOP PICK -->
+  <div id="topPickSection" style="display:none;margin-bottom:20px">
+    <div class="section-title" style="font-size:12px;margin-bottom:8px;display:flex;align-items:center;gap:8px">
+      <span>🏆 TODAY'S TOP PICK</span>
+      <span id="topPickDate" style="font-size:10px;color:var(--tv-text-3);font-weight:400"></span>
+    </div>
+    <div id="topPickCard" style="background:var(--tv-surface);border:2px solid var(--tv-green);border-radius:var(--tv-radius);padding:18px;box-shadow:0 4px 20px rgba(0,0,0,0.3);cursor:pointer" onclick="toggleAI(this)">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px">
+        <div style="flex:1">
+          <div id="topPickQuestion" style="font-size:15px;font-weight:600;color:var(--tv-text);line-height:1.4;margin-bottom:6px"></div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span id="topPickAction" style="font-size:13px;font-weight:700;padding:3px 10px;border-radius:4px;display:inline-block"></span>
+            <span id="topPickProb" style="font-size:13px;color:var(--tv-text-2)"></span>
+            <span id="topPickVol" style="font-size:12px;color:var(--tv-text-3)"></span>
+            <span id="topPickTag" style="font-size:10px;font-weight:600;padding:1px 6px;border-radius:2px;background:var(--tv-surface-3);color:var(--tv-text-3)"></span>
+          </div>
+        </div>
+        <div id="topPickScore" style="font-size:24px;font-weight:800;font-family:var(--tv-mono);color:var(--tv-green);flex-shrink:0;text-align:right"></div>
+      </div>
+      <div id="topPickAI" class="market-card-ai" style="display:none">
+        <span id="topPickAIOutlook" class="ai-outlook"></span>
+        <span id="topPickAIConf" class="ai-conf"></span>
+        <span id="topPickAIAnalysis"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10-DAY PREDICTION HISTORY -->
+  <div id="predHistSection" style="display:none;margin-bottom:20px">
+    <div class="section-title" style="font-size:12px;margin-bottom:8px;display:flex;align-items:center;gap:8px">
+      <span>📊 10-DAY PREDICTION TRACK RECORD</span>
+      <span id="predHistAcc" style="font-size:11px;color:var(--tv-text-3);font-weight:400"></span>
+    </div>
+    <div id="predHistTable" style="display:flex;flex-direction:column;gap:2px">
+      <div style="color:var(--tv-text-2);padding:8px;font-size:12px;text-align:center">No prediction history yet — predictions recorded daily</div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)" data-i18n="filter_all">All</button>
+    <button class="filter-btn" data-filter="recommended" onclick="setFilter('recommended',this)" data-i18n="filter_recommended">✅ Recommended</button>
+    <button class="filter-btn" data-filter="review" onclick="setFilter('review',this)" data-i18n="filter_review">⚠️ Review</button>
+    <button class="filter-btn" data-filter="politics" onclick="setFilter('politics',this)" data-i18n="filter_politics">Politics</button>
+    <button class="filter-btn" data-filter="crypto" onclick="setFilter('crypto',this)" data-i18n="filter_crypto">Crypto</button>
+    <button class="filter-btn" data-filter="finance" onclick="setFilter('finance',this)" data-i18n="filter_finance">Finance</button>
+    <button class="filter-btn" data-filter="news" onclick="setFilter('news',this)" data-i18n="filter_news">News</button>
+    <span class="filter-count" id="countLabel">0 markets</span>
+  </div>
+
+  <!-- Market List -->
+  <div id="marketList"><div class="loading"><div class="spinner"></div><span data-i18n="scanning_polymarket">Scanning Poly Watch...</span></div></div>
+
+</div>
+
+<script>
+let allMarkets = [];
+let currentFilter = 'all';
+
+function fmt(v) {
+  if (v == null) return '—';
+  if (v >= 1e6) return '$'+(v/1e6).toFixed(1)+'M';
+  if (v >= 1e3) return '$'+(v/1e3).toFixed(1)+'K';
+  return '$'+v.toFixed(0);
+}
+
+function ago(ts) {
+  if (!ts) return '';
+  const m = Math.floor((Date.now()-new Date(ts))/60000);
+  return m<1 ? __('just_now','just now') : m<60 ? m + __('min_ago','m ago') : Math.floor(m/60) + __('hour_ago','h ago');
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMarkets();
+}
+
+function renderMarkets() {
+  let filtered = allMarkets;
+  if (currentFilter === 'recommended') {
+    filtered = allMarkets.filter(m => m.heuristic && m.heuristic.score >= 15);
+  } else if (currentFilter === 'review') {
+    filtered = allMarkets.filter(m => m.heuristic && m.heuristic.score < 15 && m.heuristic.score >= 5);
+  } else if (currentFilter !== 'all') {
+    filtered = allMarkets.filter(m => m.tag === currentFilter);
+  }
+  
+  document.getElementById('countLabel').textContent = filtered.length + ' ' + __('count_markets','markets');
+  
+  if (!filtered.length) {
+    document.getElementById('marketList').innerHTML = '<div class="loading" style="padding:40px">' + __('no_markets_filter','No markets found for this filter') + '</div>';
+    return;
+  }
+  
+  let html = '<div class="market-grid">';
+  filtered.forEach((m,i) => {
+    const h = m.heuristic || {};
+    const ai = m.ai || {};
+    const pct = (m.yes_price*100).toFixed(1);
+    const badge = h.score >= 15 ? 'badge-yes' : h.score >= 5 ? 'badge-review' : 'badge-no';
+    const badgeText = h.score >= 15 ? '✅ Yes' : h.score >= 5 ? '⚠️ Review' : '❌ No';
+    const barColor = m.yes_price >= 0.9 ? '#089981' : m.yes_price >= 0.7 ? '#ff9800' : '#f23645';
+    const endDate = m.end_date ? new Date(m.end_date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : 'N/A';
+    
+    const aiHtml = ai.ai_analysis ? 
+      '<div class="market-card-ai open">' +
+        '<span class="ai-outlook" style="color:' + (ai.ai_outlook==='yes'?'var(--tv-green)':'var(--tv-red)') + '">' + (ai.ai_outlook||'neutral').toUpperCase() + '</span>' +
+        '<span class="ai-conf">(' + (ai.ai_confidence||0) + '% ' + __('ai_confidence','confidence') + ')</span> — ' +
+        (ai.ai_analysis||'') +
+      '</div>' : '';
+    
+    html += '<div class="market-card" onclick="toggleAI(this)">' +
+      '<div class="market-card-header">' +
+        '<div class="market-card-question">' + m.question + '</div>' +
+        '<span class="market-card-badge ' + badge + '">' + badgeText + '</span>' +
+      '</div>' +
+      '<div class="market-card-meta">' +
+        '<span class="meta-item">' + __('meta_yes','Yes') + ': <strong class="' + (m.yes_price>=0.9?'c-green':m.yes_price>=0.7?'c-yellow':'') + '">' + pct + '%</strong></span>' +
+        '<span class="meta-item">' + __('meta_ends','Ends') + ': <strong>' + endDate + '</strong></span>' +
+        '<span class="meta-item">' + __('meta_vol','Vol') + ': <strong>' + fmt(m.volume) + '</strong></span>' +
+        '<span class="badge-tag">' + (m.tag||'') + '</span>' +
+        (m.heuristic && m.heuristic.reasons ? '<span class="meta-item" style="color:var(--tv-text-3);font-size:10px">' + m.heuristic.reasons + '</span>' : '') +
+      '</div>' +
+      '<div class="prob-bar-wrap"><div class="prob-bar-fill" style="width:' + pct + '%;background:' + barColor + '"></div></div>' +
+      aiHtml +
+    '</div>';
+  });
+  html += '</div>';
+  
+  document.getElementById('marketList').innerHTML = html;
+}
+
+function toggleAI(el) {
+  const aiEl = el.querySelector('.market-card-ai');
+  if (aiEl) aiEl.classList.toggle('open');
+}
+
+// ── TOP PICK ───────────────────────────────────────────────────────────
+function renderTopPick(markets) {
+  const section = document.getElementById('topPickSection');
+  // Find the market with highest heuristic score
+  const scored = markets.filter(m => m.heuristic && m.heuristic.score > 0)
+    .sort((a, b) => (b.heuristic.score || 0) - (a.heuristic.score || 0));
+  
+  if (scored.length === 0) { section.style.display = 'none'; return; }
+  
+  const top = scored[0];
+  const h = top.heuristic || {};
+  const ai = top.ai || {};
+  const pct = (top.yes_price * 100).toFixed(1);
+  const betYes = top.yes_price >= 0.5;
+  
+  document.getElementById('topPickDate').textContent = new Date().toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+  document.getElementById('topPickQuestion').textContent = top.question;
+  
+  const actionEl = document.getElementById('topPickAction');
+  actionEl.textContent = betYes ? '▸ BET YES' : '▸ BET NO';
+  actionEl.style.background = betYes ? 'rgba(8,153,129,0.2)' : 'rgba(242,54,69,0.2)';
+  actionEl.style.color = betYes ? '#089981' : '#f23645';
+  actionEl.style.border = '1px solid ' + (betYes ? 'rgba(8,153,129,0.3)' : 'rgba(242,54,69,0.3)');
+  
+  document.getElementById('topPickProb').innerHTML = 'Yes: <strong>' + pct + '%</strong>';
+  document.getElementById('topPickVol').textContent = 'Vol: ' + fmt(top.volume);
+  document.getElementById('topPickTag').textContent = (top.tag || '').toUpperCase();
+  document.getElementById('topPickScore').textContent = h.score || '';
+  
+  // AI analysis
+  if (ai.ai_analysis) {
+    document.getElementById('topPickAIOutlook').textContent = (ai.ai_outlook||'neutral').toUpperCase();
+    document.getElementById('topPickAIOutlook').style.color = ai.ai_outlook==='yes' ? '#089981' : '#f23645';
+    document.getElementById('topPickAIConf').textContent = '(' + (ai.ai_confidence||0) + '% confidence)';
+    document.getElementById('topPickAIAnalysis').textContent = ' — ' + ai.ai_analysis;
+  }
+  
+  section.style.display = 'block';
+  
+  // Save to localStorage prediction history
+  savePrediction(top, betYes);
+}
+
+// ── PREDICTION HISTORY (localStorage) ──
+function savePrediction(market, betYes) {
+  const today = new Date().toISOString().split('T')[0];
+  let history = JSON.parse(localStorage.getItem('polywatch_predictions') || '[]');
+  
+  // Don't save duplicate for today
+  if (history.length > 0 && history[0].date === today) return;
+  
+  history.unshift({
+    date: today,
+    question: market.question,
+    bet: betYes ? 'YES' : 'NO',
+    prob: (market.yes_price * 100).toFixed(1) + '%',
+    tag: market.tag || '',
+    score: (market.heuristic || {}).score || 0,
+    result: null,  // Unknown until tomorrow
+    correct: null
+  });
+  
+  // Keep max 15 entries
+  history = history.slice(0, 15);
+  localStorage.setItem('polywatch_predictions', JSON.stringify(history));
+  renderPredHist(history);
+}
+
+
+let _cdTimer = null;
+
+function startCountdown() {
+  clearInterval(_cdTimer);
+  const el = document.getElementById('countdown-wrap');
+  if (!el) return;
+  
+  function nextMarketOpen() {
+    const now = new Date();
+    const day = now.getUTCDay();
+    const hour = now.getUTCHours();
+    const min = now.getUTCMinutes();
+    const next = new Date(now);
+    
+    if (day === 0 || day === 6 || (day === 5 && hour >= 21)) {
+      const daysUntilMonday = day === 0 ? 1 : day === 6 ? 2 : (8 - day);
+      next.setDate(next.getDate() + daysUntilMonday);
+      next.setUTCHours(13, 30, 0, 0);
+    } else if (hour < 13 || (hour === 13 && min < 30)) {
+      next.setUTCHours(13, 30, 0, 0);
+    } else if (hour >= 21) {
+      next.setDate(next.getDate() + 1);
+      next.setUTCHours(13, 30, 0, 0);
+    } else {
+      const nextHalf = Math.ceil((hour * 60 + min) / 30) * 30;
+      next.setUTCHours(Math.floor(nextHalf/60), nextHalf%60, 0, 0);
+    }
+    return next;
+  }
+  
+  const target = nextMarketOpen();
+  
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) { el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num" data-i18n="checking_now">Checking now...</span>'; __retranslate(); return; }
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    
+    if (h >= 24) {
+      const d = Math.floor(h / 24);
+      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + d + 'd ' + (h%24) + 'h ' + m + 'm</span>';
+    } else if (h >= 1) {
+      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + h + 'h ' + m + 'm ' + s + 's</span>';
+    } else {
+      el.innerHTML = '<span class="countdown-lbl" data-i18n="next_review">Next Review</span><span class="countdown-num">' + m + 'm ' + s + 's</span>';
+    }
+  }
+  tick();
+  _cdTimer = setInterval(tick, 1000);
+}
+
+
+function renderPredHist(history) {
+  const section = document.getElementById('predHistSection');
+  if (!history || history.length === 0) { section.style.display = 'none'; return; }
+  
+  // Calculate accuracy
+  const resolved = history.filter(h => h.correct !== null);
+  const correct = resolved.filter(h => h.correct).length;
+  const total = resolved.length;
+  const accPct = total > 0 ? Math.round(correct / total * 100) : 0;
+  
+  document.getElementById('predHistAcc').textContent = total > 0 ? accPct + '% accuracy (' + correct + '/' + total + ')' : '';
+  
+  const tableHtml = history.slice(0, 10).map(h => {
+    const isResolved = h.correct !== null;
+    const resultColor = h.correct ? '#089981' : '#f23645';
+    const resultIcon = h.correct ? '✅' : '❌';
+    const resultText = h.correct ? 'CORRECT' : 'WRONG';
+    const betColor = h.bet === 'YES' ? '#089981' : '#f23645';
+    
+    return '<div style="display:grid;grid-template-columns:80px 1fr 55px 50px;gap:6px;align-items:center;padding:6px 10px;border-radius:var(--tv-radius-sm);background:' +
+      (isResolved ? (h.correct ? 'rgba(8,153,129,0.05)' : 'rgba(242,54,69,0.05)') : 'var(--tv-surface-2)') +
+      ';font-size:11px;border:1px solid var(--tv-border)">' +
+      '<span style="color:var(--tv-text-3);font-weight:600;font-size:10px">' + h.date.slice(5) + '</span>' +
+      '<span style="color:var(--tv-text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + h.question + '</span>' +
+      '<span style="font-weight:700;color:' + betColor + ';text-align:center">' + h.bet + '</span>' +
+      (isResolved
+        ? '<span style="color:' + resultColor + ';font-weight:600;text-align:right;font-size:11px">' + resultIcon + ' ' + resultText + '</span>'
+        : '<span style="color:var(--tv-text-3);text-align:right;font-size:10px">⏳ Pending</span>') +
+    '</div>';
+  }).join('');
+  
+  document.getElementById('predHistTable').innerHTML = tableHtml;
+  section.style.display = 'block';
+}
+
+async function loadData() {
+  // Start fresh: only keep predictions from today onwards
+  const hist = JSON.parse(localStorage.getItem('polywatch_predictions') || '[]');
+  const today = new Date().toISOString().split('T')[0];
+  const clean = hist.filter(h => h.date >= today);
+  localStorage.setItem('polywatch_predictions', JSON.stringify(clean));
+  
+  try {
+    const resp = await fetch('/trade/data/polymarket/scan_results.json?t='+Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    allMarkets = data.markets || [];
+    
+    document.getElementById('lastUpdated') && (document.getElementById('lastUpdated').textContent = __('updated','Updated') + ' ' + ago(data.updated_at));
+    
+    // Stats
+    const total = allMarkets.length;
+    const recommended = allMarkets.filter(m => m.heuristic && m.heuristic.score >= 15).length;
+    const avgYes = total ? (allMarkets.reduce((s,m) => s+m.yes_price, 0)/total*100).toFixed(1) : 0;
+    const totalVol = allMarkets.reduce((s,m) => s+(m.volume||0), 0);
+    
+    document.getElementById('statsBar').innerHTML =
+      '<div class="stat-item"><div class="stat-lbl">' + __('stat_markets','Markets') + '</div><div class="stat-val">' + total + '</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">' + __('stat_recommended','Recommended') + '</div><div class="stat-val" style="color:var(--tv-green)">' + recommended + '</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">' + __('stat_avg_yes','Avg Yes%') + '</div><div class="stat-val">' + avgYes + '%</div></div>' +
+      '<div class="stat-item"><div class="stat-lbl">' + __('stat_total_volume','Total Volume') + '</div><div class="stat-val">' + fmt(totalVol) + '</div></div>';
+    
+    renderMarkets();
+    renderTopPick(allMarkets);
+    startCountdown();
+    
+    // Load prediction history
+    const history = JSON.parse(localStorage.getItem('polywatch_predictions') || '[]');
+    renderPredHist(history);
+  } catch(e) {
+    document.getElementById('marketList').innerHTML = '<div class="loading" style="color:var(--tv-red)">⚠ ' + __('error_could_not_load','Could not load') + ': ' + e.message + '<br><small>' + __('error_run_scanner','Run python3 polymarket/scanner.py to generate data') + '</small></div>';
+  }
+}
+
+loadData();
+
+loadData();
+</script>
+</body>
+</html>
