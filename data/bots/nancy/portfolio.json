@@ -1,43 +1,72 @@
 {
   "cash": 548.49,
-  "total_value": 10783.77,
+  "total_value": 10623.9,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 214.57
+      "current_price": 211.99
     },
     "INTC": {
       "shares": 31,
-      "current_price": 105.11,
+      "current_price": 104.06,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 939.58
+      "current_price": 917.425
     }
   },
-  "total_return_pct": 7.84,
+  "total_return_pct": 6.24,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -159.87,
+  "today_pnl_pct": -1.48,
   "total_trades": 4,
   "today_start_value": 10783.77,
   "today_date": "2026-06-05",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-05T13:32:14Z",
+  "last_action": "Extreme fear and broad semiconductor sell\u2011off suggest further downside before any rebound.",
+  "last_updated": "2026-06-05T14:02:24Z",
   "last_session": {
-    "at": "2026-06-05T13:32:14Z",
+    "at": "2026-06-05T14:02:24Z",
     "fear_greed": 12,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.41,
-    "vix": 15.95,
-    "top_movers": [],
-    "news_read": [],
+    "sp500_change": -0.98,
+    "vix": 15.99,
+    "top_movers": [
+      [
+        "MU",
+        -7.81
+      ],
+      [
+        "AMD",
+        -7.29
+      ],
+      [
+        "INTC",
+        -6.94
+      ],
+      [
+        "QCOM",
+        -6.51
+      ],
+      [
+        "LRCX",
+        -6.13
+      ],
+      [
+        "AMAT",
+        -5.74
+      ]
+    ],
+    "news_read": [
+      "No tech, no problem. Dow makes record and traders think these stocks can lead now",
+      "AI is designing OpenAI's next model in a sign of 'super intelligence': SoftBank's Masayoshi Son to CNBC",
+      "U.S. payrolls rose by 172,000 in May, much more than expected; unemployment at 4.3%"
+    ],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "The Fear & Greed index is at 12 (Extreme Fear) and the watchlist shows heavy losses led by MU (-7.8%), AMD (-7.3%), INTC (-6.9%) and QCOM (-6.5%). Despite positive news on AI development and stronger\u2011than\u2011expected payrolls, the lack of available cash (only $48.49 above the $500 reserve) prevents any new purchases. I will watch for a cash inflow or a deeper pullback that allows a high\u2011conviction semiconductor buy while maintaining the required cash buffer.",
+    "outlook": "Extreme fear and broad semiconductor sell\u2011off suggest further downside before any rebound.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -660,6 +689,10 @@
     {
       "timestamp": "2026-06-05T13:32:14Z",
       "value": 10783.77
+    },
+    {
+      "timestamp": "2026-06-05T14:02:24Z",
+      "value": 10623.9
     }
   ]
 }

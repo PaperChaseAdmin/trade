@@ -1,76 +1,77 @@
 {
   "cash": 523.19,
-  "total_value": 10097.03,
+  "total_value": 10039.85,
   "positions": {
     "SPY": {
       "shares": 4,
       "avg_cost": 735.73,
-      "current_price": 751.75
+      "current_price": 748.54
     },
     "QQQ": {
       "shares": 4,
       "avg_cost": 717.6132,
-      "current_price": 730.61
+      "current_price": 723.8
     },
     "VTI": {
       "shares": 8,
       "avg_cost": 371.78,
-      "current_price": 370.63
+      "current_price": 368.8699
     },
     "VXUS": {
       "shares": 8,
       "avg_cost": 86.15,
-      "current_price": 84.92
+      "current_price": 84.542
     }
   },
-  "total_return_pct": 0.97,
+  "total_return_pct": 0.4,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -57.18,
+  "today_pnl_pct": -0.57,
   "total_trades": 4,
   "today_start_value": 10097.03,
   "today_date": "2026-06-05",
-  "last_action": "Extreme fear presents a buying opportunity for the index ETFs we favor.",
-  "last_updated": "2026-06-05T13:35:08Z",
+  "last_action": "In extreme fear, the index offers a chance to accumulate, yet cash limits immediate action.",
+  "last_updated": "2026-06-05T14:05:34Z",
   "last_session": {
-    "at": "2026-06-05T13:35:08Z",
+    "at": "2026-06-05T14:05:34Z",
     "fear_greed": 12,
     "fear_greed_label": "Extreme Fear",
-    "sp500_change": 0.41,
-    "vix": 15.95,
+    "sp500_change": -0.98,
+    "vix": 15.99,
     "top_movers": [
       [
-        "VWO",
-        -1.95
-      ],
-      [
         "GLD",
-        -1.77
+        -2.53
       ],
       [
-        "VXUS",
-        -1.48
-      ],
-      [
-        "VEA",
-        -1.46
+        "VWO",
+        -2.32
       ],
       [
         "QQQ",
-        -1.4
+        -2.25
+      ],
+      [
+        "VXUS",
+        -1.98
+      ],
+      [
+        "VEA",
+        -1.82
       ],
       [
         "SCHB",
-        -0.75
+        -1.21
       ]
     ],
     "news_read": [
+      "Jim Cramer's top 10 things to watch in the stock market Friday",
       "CoinDesk 20 performance update: Bitcoin (BTC) price drops 2.8% as index declines",
       "U.S. payrolls rose by 172,000 in May, much more than expected; unemployment at 4.3%"
     ],
     "domain_extra": "",
-    "ai_analysis": "The Fear & Greed index is at 12 (Extreme Fear) and VIX is modest at 15.95, while most watchlist ETFs are down today (e.g., VWO -1.9%, GLD -1.8%). With only $23.19 of available cash after maintaining the $500 reserve, purchasing a full share of any ETF would breach the cash limit, so we refrain from trading and stay positioned for future dips.",
-    "outlook": "Extreme fear presents a buying opportunity for the index ETFs we favor.",
+    "ai_analysis": "Fear & Greed at 12 signals extreme fear; SPY, QQQ, VTI, VXUS all down over 1% today. With only $23.19 available after preserving a $500 cash reserve, purchasing a full share of any watchlisted ETF is impossible. We will await better pricing or additional funds before making a move.",
+    "outlook": "In extreme fear, the index offers a chance to accumulate, yet cash limits immediate action.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -693,6 +694,10 @@
     {
       "timestamp": "2026-06-05T13:35:08Z",
       "value": 10097.03
+    },
+    {
+      "timestamp": "2026-06-05T14:05:34Z",
+      "value": 10039.85
     }
   ]
 }
