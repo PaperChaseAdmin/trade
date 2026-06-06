@@ -171,7 +171,7 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
 
 
 def _resolve_base_name(model_name):
-    """Convert 'minimax', 'nemotron', 'ling' or full model IDs to base name."""
+    """Convert model name strings to base name for model ID resolution."""
     if not model_name:
         return None
     m = str(model_name).lower()
@@ -181,6 +181,10 @@ def _resolve_base_name(model_name):
         return "nemotron"
     if "ling" in m:
         return "ling"
+    if "qwen" in m:
+        return "qwen"
+    if "kimi" in m:
+        return "kimi"
     return model_name
 
 
