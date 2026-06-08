@@ -1,16 +1,16 @@
 {
-  "cash": 1238.14,
-  "total_value": 10537.66,
+  "cash": 1074.54,
+  "total_value": 10531.44,
   "positions": {
     "BAC": {
       "shares": 49,
       "avg_cost": 50.545,
-      "current_price": 54.01
+      "current_price": 53.97
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 300.69,
-      "current_price": 312.8585
+      "current_price": 312.38
     },
     "GS": {
       "shares": 2,
@@ -20,30 +20,55 @@
     "C": {
       "shares": 3,
       "avg_cost": 120.69,
-      "current_price": 134.22
+      "current_price": 134.575
     },
     "WFC": {
-      "shares": 20,
-      "avg_cost": 82.065,
-      "current_price": 81.875
+      "shares": 22,
+      "current_price": 81.8,
+      "avg_cost": 82.0409
     }
   },
-  "total_return_pct": 5.38,
+  "total_return_pct": 5.31,
   "total_return_usd": 0.0,
-  "today_pnl": 11.1,
-  "today_pnl_pct": 0.11,
+  "today_pnl": 4.88,
+  "today_pnl_pct": 0.05,
   "total_trades": 5,
   "today_start_value": 10526.56,
   "today_date": "2026-06-08",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-08T15:42:50Z",
+  "last_updated": "2026-06-08T16:09:52Z",
   "last_session": {
-    "at": "2026-06-08T15:42:50Z",
+    "at": "2026-06-08T16:09:52Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "TRV",
+        -1.76
+      ],
+      [
+        "C",
+        1.62
+      ],
+      [
+        "PGR",
+        -1.62
+      ],
+      [
+        "GS",
+        1.48
+      ],
+      [
+        "MS",
+        1.44
+      ],
+      [
+        "V",
+        -1.04
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
     "ai_analysis": "",
@@ -718,6 +743,10 @@
     {
       "timestamp": "2026-06-08T15:42:50Z",
       "value": 10537.66
+    },
+    {
+      "timestamp": "2026-06-08T16:09:52Z",
+      "value": 10531.44
     }
   ]
 }

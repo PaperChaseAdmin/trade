@@ -1,6 +1,6 @@
 {
   "cash": 1967.13,
-  "total_value": 9990.51,
+  "total_value": 9983.28,
   "positions": {
     "BIL": {
       "shares": 27,
@@ -10,35 +10,35 @@
     "XLU": {
       "shares": 45,
       "avg_cost": 44.23,
-      "current_price": 43.905
+      "current_price": 43.825
     },
     "JPM": {
       "shares": 5,
       "avg_cost": 312.775,
-      "current_price": 312.8585
+      "current_price": 312.38
     },
     "BAC": {
       "shares": 20,
       "avg_cost": 53.67,
-      "current_price": 54.01
+      "current_price": 53.97
     },
     "TLT": {
       "shares": 11,
       "avg_cost": 85.1915,
-      "current_price": 84.91
+      "current_price": 84.87
     }
   },
-  "total_return_pct": -0.09,
+  "total_return_pct": -0.17,
   "total_return_usd": 0.0,
-  "today_pnl": -26.0,
-  "today_pnl_pct": -0.26,
+  "today_pnl": -33.23,
+  "today_pnl_pct": -0.33,
   "total_trades": 6,
   "today_start_value": 10016.51,
   "today_date": "2026-06-08",
-  "last_action": "Market conditions are unclear without VIX or inflation data, so a neutral stance is warranted.",
-  "last_updated": "2026-06-08T15:44:52Z",
+  "last_action": "The market shows mixed signals with utilities down and banks up, but without clear VIX or inflation data, the macro backdrop remains uncertain.",
+  "last_updated": "2026-06-08T16:13:19Z",
   "last_session": {
-    "at": "2026-06-08T15:44:52Z",
+    "at": "2026-06-08T16:13:19Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -46,15 +46,15 @@
     "top_movers": [
       [
         "GS",
-        1.57
+        1.48
       ],
       [
         "XLU",
-        -1.03
+        -1.2
       ],
       [
         "XLRE",
-        -0.92
+        -0.96
       ],
       [
         "VNQ",
@@ -62,17 +62,17 @@
       ],
       [
         "SPY",
-        0.68
+        0.66
       ],
       [
-        "PFF",
-        0.34
+        "BAC",
+        0.27
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "No VIX reading or relevant headlines were provided, removing the typical triggers for Jerome's defensive or risk-on moves. With cash above the $1,000 reserve and no clear inflation or recession signals, holding the current portfolio aligns with a data-dependent, cautious approach. Jerome will watch for any VIX spikes above 30 or drops below 15, as well as any inflation-related news, before considering new trades.",
-    "outlook": "Market conditions are unclear without VIX or inflation data, so a neutral stance is warranted.",
+    "ai_analysis": "I observed XLU down -1.2% while GS rose +1.5% and SPY gained +0.66%, indicating sector rotation but no decisive trend. With VIX and Fear & Greed unavailable, there is no clear signal of high inflation or recession fears to trigger defensive or risk-on moves per my rule set. I will monitor the next VIX reading and upcoming inflation releases for clearer direction.",
+    "outlook": "The market shows mixed signals with utilities down and banks up, but without clear VIX or inflation data, the macro backdrop remains uncertain.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -743,6 +743,10 @@
     {
       "timestamp": "2026-06-08T15:44:52Z",
       "value": 9990.51
+    },
+    {
+      "timestamp": "2026-06-08T16:13:19Z",
+      "value": 9983.28
     }
   ]
 }
