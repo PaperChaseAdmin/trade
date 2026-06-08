@@ -1,31 +1,31 @@
 {
   "cash": 1002.79,
-  "total_value": 9892.03,
+  "total_value": 9886.17,
   "positions": {
     "GLD": {
       "shares": 4,
       "avg_cost": 419.57,
-      "current_price": 397.64
+      "current_price": 397.3883
     },
     "TLT": {
       "shares": 23,
-      "current_price": 85.005,
+      "current_price": 84.91,
       "avg_cost": 83.6059
     },
     "IAU": {
       "shares": 20,
       "avg_cost": 84.6252,
-      "current_price": 81.485
+      "current_price": 81.43
     },
     "PDBC": {
       "shares": 112,
       "avg_cost": 17.515,
-      "current_price": 17.635
+      "current_price": 17.66
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 746.52,
-      "current_price": 744.86
+      "current_price": 742.75
     },
     "BIL": {
       "shares": 2,
@@ -35,20 +35,20 @@
     "EEM": {
       "shares": 1,
       "avg_cost": 65.88,
-      "current_price": 66.13
+      "current_price": 65.98
     }
   },
-  "total_return_pct": -1.08,
+  "total_return_pct": -1.14,
   "total_return_usd": 0.0,
-  "today_pnl": 1.31,
-  "today_pnl_pct": 0.01,
+  "today_pnl": -4.55,
+  "today_pnl_pct": -0.05,
   "total_trades": 8,
   "today_start_value": 9890.72,
   "today_date": "2026-06-08",
-  "last_action": "Markets show a risk\u2011on tilt with emerging markets and commodities gaining, suggesting mild inflationary pressure.",
-  "last_updated": "2026-06-08T15:04:59Z",
+  "last_action": "Market shows mixed signals with emerging markets and commodities up, but inflation concerns remain moderate.",
+  "last_updated": "2026-06-08T15:38:16Z",
   "last_session": {
-    "at": "2026-06-08T15:04:59Z",
+    "at": "2026-06-08T15:38:16Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -56,7 +56,11 @@
     "top_movers": [
       [
         "EEM",
-        2.38
+        2.11
+      ],
+      [
+        "PDBC",
+        1.15
       ],
       [
         "GSG",
@@ -64,25 +68,21 @@
       ],
       [
         "GDX",
-        1.05
-      ],
-      [
-        "SPY",
-        1.01
+        0.98
       ],
       [
         "VWO",
-        1.01
+        0.78
       ],
       [
-        "PDBC",
-        1.0
+        "SPY",
+        0.68
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "EEM rose 2.4% today, leading the watchlist, while GSG and GDX each gained about 1.1%, indicating strength in commodities and gold miners. Cash is only $1002.79, just above the $1000 reserve, leaving insufficient funds to buy any whole shares without breaching the cash limit. I will monitor further moves in inflation\u2011sensitive assets and wait for a better entry point or a cash increase before adding positions.",
-    "outlook": "Markets show a risk\u2011on tilt with emerging markets and commodities gaining, suggesting mild inflationary pressure.",
+    "ai_analysis": "EEM rose 2.1% and PDBC 1.15% indicating strength in emerging markets and commodities, while GLD and IAU show modest gains. However, cash reserves are only $2.79 above the $1000 minimum, insufficient to purchase any full shares from the watchlist without breaching the reserve rule, so no trades are executed.",
+    "outlook": "Market shows mixed signals with emerging markets and commodities up, but inflation concerns remain moderate.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -749,6 +749,10 @@
     {
       "timestamp": "2026-06-08T15:04:59Z",
       "value": 9892.03
+    },
+    {
+      "timestamp": "2026-06-08T15:38:16Z",
+      "value": 9886.17
     }
   ]
 }
