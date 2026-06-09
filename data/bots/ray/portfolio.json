@@ -1,63 +1,88 @@
 {
   "cash": 1002.79,
-  "total_value": 9864.65,
+  "total_value": 9844.11,
   "positions": {
     "GLD": {
       "shares": 4,
       "avg_cost": 419.57,
-      "current_price": 397.46
+      "current_price": 396.08
     },
     "TLT": {
       "shares": 23,
-      "current_price": 84.95,
+      "current_price": 85.0018,
       "avg_cost": 83.6059
     },
     "IAU": {
       "shares": 20,
       "avg_cost": 84.6252,
-      "current_price": 81.45
+      "current_price": 81.18
     },
     "PDBC": {
       "shares": 112,
       "avg_cost": 17.515,
-      "current_price": 17.415
+      "current_price": 17.39
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 746.52,
-      "current_price": 744.47
+      "current_price": 740.6601
     },
     "BIL": {
       "shares": 2,
       "avg_cost": 91.445,
-      "current_price": 91.465
+      "current_price": 91.4662
     },
     "EEM": {
       "shares": 1,
       "avg_cost": 65.88,
-      "current_price": 66.82
+      "current_price": 66.43
     }
   },
-  "total_return_pct": -1.35,
+  "total_return_pct": -1.56,
   "total_return_usd": 0.0,
-  "today_pnl": -6.78,
-  "today_pnl_pct": -0.07,
+  "today_pnl": -27.32,
+  "today_pnl_pct": -0.28,
   "total_trades": 8,
   "today_start_value": 9871.43,
   "today_date": "2026-06-09",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-09T14:08:15Z",
+  "last_action": "Commodities continue to sell off with PDBC down -1.33% and broad commodity weakness while emerging markets EEM and VWO firm, suggesting mixed signals on growth expectations rather than clear recession",
+  "last_updated": "2026-06-09T14:34:16Z",
   "last_session": {
-    "at": "2026-06-09T14:08:15Z",
+    "at": "2026-06-09T14:34:16Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "GSG",
+        -1.57
+      ],
+      [
+        "PDBC",
+        -1.33
+      ],
+      [
+        "EEM",
+        1.0
+      ],
+      [
+        "VWO",
+        0.89
+      ],
+      [
+        "DJP",
+        -0.79
+      ],
+      [
+        "TLT",
+        0.45
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "My All Weather portfolio remains balanced with no single position near the 20% cap: TLT 19.8%, PDBC 19.7%, IAU 16.5%, GLD 16.0%, SPY 15.0%, BIL 1.9%, EEM 0.7%. Cash is at $1,002.79, barely above my $1,000 minimum reserve. My gold and commodity positions (GLD/IAU/PDBC) are all underwater, reflecting disinflationary commodity pressure, while TLT gains on recession hedging. Without clear inflation acceleration or recession confirmation from news or Fear & Greed/VIX data, and with cash too thin for meaningful repositioning, I am holding and rebalancing internally rather than deploying limited capital; watching to see if commodity weakness extends below support or if TLT strength signals genuine flight-to-safety.",
+    "outlook": "Commodities continue to sell off with PDBC down -1.33% and broad commodity weakness while emerging markets EEM and VWO firm, suggesting mixed signals on growth expectations rather than clear recession or inflation extremes.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -776,6 +801,10 @@
     {
       "timestamp": "2026-06-09T14:08:15Z",
       "value": 9864.65
+    },
+    {
+      "timestamp": "2026-06-09T14:34:16Z",
+      "value": 9844.11
     }
   ]
 }
