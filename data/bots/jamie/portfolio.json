@@ -1,78 +1,78 @@
 {
   "cash": 1074.54,
-  "total_value": 10474.01,
+  "total_value": 10459.6,
   "positions": {
     "BAC": {
       "shares": 49,
       "avg_cost": 50.545,
-      "current_price": 54.8101
+      "current_price": 54.785
     },
     "JPM": {
       "shares": 8,
       "avg_cost": 300.69,
-      "current_price": 311.39
+      "current_price": 311.06
     },
     "GS": {
       "shares": 2,
       "avg_cost": 928.01,
-      "current_price": 1006.14
+      "current_price": 1001.795
     },
     "C": {
       "shares": 3,
       "avg_cost": 120.69,
-      "current_price": 133.735
+      "current_price": 133.705
     },
     "WFC": {
       "shares": 22,
-      "current_price": 82.235,
+      "current_price": 82.155,
       "avg_cost": 82.0409
     }
   },
-  "total_return_pct": 4.74,
+  "total_return_pct": 4.6,
   "total_return_usd": 0.0,
-  "today_pnl": -14.88,
-  "today_pnl_pct": -0.14,
+  "today_pnl": -29.29,
+  "today_pnl_pct": -0.28,
   "total_trades": 5,
   "today_start_value": 10488.89,
   "today_date": "2026-06-10",
-  "last_action": "Interest rates are steady, supporting bank valuations while insurance names show mixed momentum.",
-  "last_updated": "2026-06-10T19:04:31Z",
+  "last_action": "Interest rates are steady; bank stocks show mixed moves but fundamentals remain solid.",
+  "last_updated": "2026-06-10T19:38:28Z",
   "last_session": {
-    "at": "2026-06-10T19:04:31Z",
+    "at": "2026-06-10T19:38:28Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
+        "GS",
+        -2.94
+      ],
+      [
         "COF",
         -2.65
       ],
       [
-        "GS",
-        -2.57
-      ],
-      [
         "PGR",
-        2.14
+        2.27
       ],
       [
         "PRU",
-        1.98
+        1.9
       ],
       [
-        "MET",
-        1.45
+        "MS",
+        -1.44
       ],
       [
-        "MA",
-        -1.23
+        "AXP",
+        -1.36
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Watchlist shows PGR and PRU up >2% on positive insurance sentiment, but GS and COF down over 2.5% on profit-taking. Current BAC position already nears the 25% portfolio limit, leaving little room for additional bank exposure without exceeding concentration constraints. Cash reserves are just above the $1,000 threshold, allowing only a small purchase that would breach the BAC limit, so we hold back and monitor for pullbacks in other financials like MET or AXP for future entry.",
-    "outlook": "Interest rates are steady, supporting bank valuations while insurance names show mixed momentum.",
+    "ai_analysis": "BAC already exceeds the 25% portfolio limit, so no additional purchase is allowed. Other watchlist stocks are too expensive to buy while keeping the $1,000 cash reserve. No trades executed this session.",
+    "outlook": "Interest rates are steady; bank stocks show mixed moves but fundamentals remain solid.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -883,6 +883,10 @@
     {
       "timestamp": "2026-06-10T19:04:31Z",
       "value": 10474.01
+    },
+    {
+      "timestamp": "2026-06-10T19:38:28Z",
+      "value": 10459.6
     }
   ]
 }
