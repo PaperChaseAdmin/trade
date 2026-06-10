@@ -1,58 +1,83 @@
 {
   "cash": 2012.0,
-  "total_value": 9574.6,
+  "total_value": 9569.55,
   "positions": {
     "OXY": {
       "shares": 30,
       "avg_cost": 58.72,
-      "current_price": 57.6
+      "current_price": 57.48
     },
     "F": {
       "shares": 51,
-      "current_price": 14.355,
+      "current_price": 14.31,
       "avg_cost": 13.1
     },
     "KR": {
       "shares": 20,
       "avg_cost": 66.965,
-      "current_price": 63.98
+      "current_price": 64.335
     },
     "JD": {
       "shares": 70,
       "avg_cost": 31.295,
-      "current_price": 28.615
+      "current_price": 28.595
     },
     "BABA": {
       "shares": 15,
       "avg_cost": 130.4099,
-      "current_price": 116.2
+      "current_price": 115.87
     },
     "PFE": {
       "shares": 3,
       "avg_cost": 25.795,
-      "current_price": 25.615
+      "current_price": 25.645
     }
   },
-  "total_return_pct": -4.25,
+  "total_return_pct": -4.3,
   "total_return_usd": 0.0,
-  "today_pnl": 15.4,
-  "today_pnl_pct": 0.16,
+  "today_pnl": 10.35,
+  "today_pnl_pct": 0.11,
   "total_trades": 6,
   "today_start_value": 9559.2,
   "today_date": "2026-06-10",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-10T18:35:00Z",
+  "last_action": "Market remains neutral with mixed signals, suggesting caution and patience.",
+  "last_updated": "2026-06-10T19:04:16Z",
   "last_session": {
-    "at": "2026-06-10T18:35:00Z",
+    "at": "2026-06-10T19:04:16Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "GEO",
+        5.03
+      ],
+      [
+        "F",
+        -4.31
+      ],
+      [
+        "BABA",
+        -3.23
+      ],
+      [
+        "KHC",
+        2.67
+      ],
+      [
+        "KR",
+        2.13
+      ],
+      [
+        "NUE",
+        -1.74
+      ]
+    ],
     "news_read": [],
-    "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
+    "ai_analysis": "Cash is just above the $2000 reserve at $2012, leaving only $12 available for new purchases, insufficient to buy any watchlist stock at current prices. F shows the largest intraday drop at -4.31% but adding to the position would breach cash limits; GEO rose 5% but is already expensive. I will wait for a better entry or a cash increase before deploying capital.",
+    "outlook": "Market remains neutral with mixed signals, suggesting caution and patience.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -859,6 +884,10 @@
     {
       "timestamp": "2026-06-10T18:35:00Z",
       "value": 9574.6
+    },
+    {
+      "timestamp": "2026-06-10T19:04:16Z",
+      "value": 9569.55
     }
   ]
 }
