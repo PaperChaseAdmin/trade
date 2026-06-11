@@ -1,68 +1,68 @@
 {
   "cash": 548.49,
-  "total_value": 10475.91,
+  "total_value": 10742.08,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 200.495
+      "current_price": 202.04
     },
     "INTC": {
       "shares": 31,
-      "current_price": 107.06,
+      "current_price": 114.81,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 900.285
+      "current_price": 900.97
     }
   },
-  "total_return_pct": 4.76,
+  "total_return_pct": 7.42,
   "total_return_usd": 0.0,
-  "today_pnl": -153.14,
-  "today_pnl_pct": -1.44,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 4,
-  "today_start_value": 10629.05,
-  "today_date": "2026-06-10",
-  "last_action": "Semiconductor stocks are under pressure today, suggesting a cautious near-term outlook.",
-  "last_updated": "2026-06-10T19:36:58Z",
+  "today_start_value": 10742.08,
+  "today_date": "2026-06-11",
+  "last_action": "Semiconductor stocks are showing strong intraday momentum, but limited cash and near\u2011position limits prevent new buys today.",
+  "last_updated": "2026-06-11T13:33:34Z",
   "last_session": {
-    "at": "2026-06-10T19:36:58Z",
+    "at": "2026-06-11T13:33:34Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "QCOM",
-        -6.3
+        "INTC",
+        7.4
+      ],
+      [
+        "AMAT",
+        5.29
+      ],
+      [
+        "LRCX",
+        5.09
       ],
       [
         "AMD",
-        -4.81
+        2.34
       ],
       [
-        "AVGO",
-        -4.75
-      ],
-      [
-        "TSLA",
-        -3.8
+        "CRM",
+        -1.81
       ],
       [
         "MU",
-        -3.8
-      ],
-      [
-        "NVDA",
-        -3.63
+        1.35
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "The watchlist shows heavy declines in QCOM (-6.3%), AMD (-4.8%), AVGO (-4.8%), and NVDA (-3.6%), while only AMAT is slightly up (+0.17%). With cash at $548.49 and a $500 reserve requirement, there is insufficient capital to purchase even a single share of any watchlist stock without breaching the reserve rule, so no trades are executed. I will monitor for a rebound or any news that could trigger a buying opportunity while preserving the cash buffer.",
-    "outlook": "Semiconductor stocks are under pressure today, suggesting a cautious near-term outlook.",
+    "ai_analysis": "INTC (+7.4%), AMAT (+5.3%) and LRCX (+5.1%) lead the watchlist, reflecting bullish sentiment in chip equipment. NVDA (+1.21%) and MU (+1.35%) also rose, yet existing positions already approach the 35% per\u2011stock cap. With only $48.49 available for trading while preserving a $500 cash reserve, no full share can be purchased, so we hold.",
+    "outlook": "Semiconductor stocks are showing strong intraday momentum, but limited cash and near\u2011position limits prevent new buys today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -877,6 +877,10 @@
     {
       "timestamp": "2026-06-10T19:36:58Z",
       "value": 10475.91
+    },
+    {
+      "timestamp": "2026-06-11T13:33:34Z",
+      "value": 10742.08
     }
   ]
 }
