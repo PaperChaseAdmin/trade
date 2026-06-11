@@ -1,26 +1,26 @@
 {
   "cash": 522.74,
-  "total_value": 9883.93,
+  "total_value": 9877.77,
   "positions": {
     "XLE": {
       "shares": 14,
-      "current_price": 58.315,
+      "current_price": 58.25,
       "avg_cost": 59.7191
     },
     "XLI": {
       "shares": 3,
       "avg_cost": 169.79,
-      "current_price": 172.1
+      "current_price": 172.02
     },
     "XLY": {
       "shares": 6,
-      "current_price": 113.725,
+      "current_price": 113.68,
       "avg_cost": 115.6065
     },
     "XLP": {
       "shares": 4,
       "avg_cost": 85.3399,
-      "current_price": 85.49
+      "current_price": 85.52
     },
     "XLU": {
       "shares": 8,
@@ -29,65 +29,90 @@
     },
     "XLB": {
       "shares": 23,
-      "current_price": 50.285,
+      "current_price": 50.265,
       "avg_cost": 50.3695
     },
     "XLC": {
       "shares": 9,
-      "current_price": 110.95,
+      "current_price": 110.965,
       "avg_cost": 114.575
     },
     "GLD": {
       "shares": 3,
-      "current_price": 374.28,
+      "current_price": 374.06,
       "avg_cost": 410.9017
     },
     "TLT": {
       "shares": 4,
       "avg_cost": 83.555,
-      "current_price": 85.185
+      "current_price": 85.17
     },
     "XLK": {
       "shares": 6,
       "avg_cost": 185.44,
-      "current_price": 178.45
+      "current_price": 177.99
     },
     "XLV": {
       "shares": 5,
       "avg_cost": 154.2,
-      "current_price": 153.71
+      "current_price": 153.67
     },
     "XLF": {
       "shares": 22,
       "avg_cost": 52.575,
-      "current_price": 52.155
+      "current_price": 52.115
     },
     "XLRE": {
       "shares": 1,
       "avg_cost": 45.175,
-      "current_price": 44.75
+      "current_price": 44.765
     }
   },
-  "total_return_pct": -1.16,
+  "total_return_pct": -1.22,
   "total_return_usd": 0.0,
-  "today_pnl": 3.54,
-  "today_pnl_pct": 0.04,
+  "today_pnl": -2.62,
+  "today_pnl_pct": -0.03,
   "total_trades": 35,
   "today_start_value": 9880.39,
   "today_date": "2026-06-11",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-11T17:00:09Z",
+  "last_action": "Market shows mixed sector performance with industrials and materials leading, while real estate lags.",
+  "last_updated": "2026-06-11T17:10:08Z",
   "last_session": {
-    "at": "2026-06-11T17:00:09Z",
+    "at": "2026-06-11T17:10:08Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "XLI",
+        1.42
+      ],
+      [
+        "XLB",
+        1.39
+      ],
+      [
+        "XLK",
+        0.93
+      ],
+      [
+        "QQQ",
+        0.91
+      ],
+      [
+        "XLU",
+        0.57
+      ],
+      [
+        "XLV",
+        0.54
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Today's top movers are XLI +1.42% and XLB +1.39%, indicating strength in industrials and materials; XLRE is the worst performer at -0.49%. With cash reserve above $500, I allocated $44.77 to buy one share of XLRE, the most underperforming sector ETF, to move toward equal weighting. No other trades were made due to cash constraints and the 12% per stock limit.",
+    "outlook": "Market shows mixed sector performance with industrials and materials leading, while real estate lags.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -934,6 +959,10 @@
     {
       "timestamp": "2026-06-11T17:00:09Z",
       "value": 9883.93
+    },
+    {
+      "timestamp": "2026-06-11T17:10:08Z",
+      "value": 9877.77
     }
   ]
 }

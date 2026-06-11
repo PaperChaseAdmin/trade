@@ -1,34 +1,34 @@
 {
   "cash": 548.49,
-  "total_value": 10707.15,
+  "total_value": 10671.26,
   "positions": {
     "NVDA": {
       "shares": 15,
       "avg_cost": 222.55,
-      "current_price": 201.02
+      "current_price": 200.395
     },
     "INTC": {
       "shares": 31,
-      "current_price": 111.5857,
+      "current_price": 111.275,
       "avg_cost": 107.06
     },
     "MU": {
       "shares": 4,
       "avg_cost": 698.5999,
-      "current_price": 921.05
+      "current_price": 916.8299
     }
   },
-  "total_return_pct": 7.07,
+  "total_return_pct": 6.71,
   "total_return_usd": 0.0,
-  "today_pnl": -34.93,
-  "today_pnl_pct": -0.33,
+  "today_pnl": -70.82,
+  "today_pnl_pct": -0.66,
   "total_trades": 4,
   "today_start_value": 10742.08,
   "today_date": "2026-06-11",
-  "last_action": "Semiconductor strength continues with LRCX and AMAT leading gains, but limited cash restricts new purchases.",
-  "last_updated": "2026-06-11T16:56:04Z",
+  "last_action": "Cash constraints limit new purchases; awaiting better entry or liquidity.",
+  "last_updated": "2026-06-11T17:03:09Z",
   "last_session": {
-    "at": "2026-06-11T16:56:04Z",
+    "at": "2026-06-11T17:03:09Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -36,33 +36,33 @@
     "top_movers": [
       [
         "LRCX",
-        7.83
+        7.43
       ],
       [
         "AMAT",
-        6.16
+        6.24
       ],
       [
         "INTC",
-        4.33
-      ],
-      [
-        "MU",
-        3.23
+        4.17
       ],
       [
         "CRM",
-        -3.03
+        -3.0
+      ],
+      [
+        "MU",
+        2.93
       ],
       [
         "MSFT",
-        -2.71
+        -2.82
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Watchlist shows LRCX +7.8%, AMAT +6.2%, INTC +4.3%, MU +3.2% as top movers; however, cash after maintaining $500 reserve is only $48.49, insufficient to buy even a single share of any watchlisted stock. No trades executed this session.",
-    "outlook": "Semiconductor strength continues with LRCX and AMAT leading gains, but limited cash restricts new purchases.",
+    "ai_analysis": "With only $48.49 available while maintaining a $500 cash reserve, no whole share from the watchlist can be purchased. Current positions are already near the 35% per stock limit, especially MU at ~34%. Therefore, holding is prudent until more cash becomes available or prices adjust.",
+    "outlook": "Cash constraints limit new purchases; awaiting better entry or liquidity.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -909,6 +909,10 @@
     {
       "timestamp": "2026-06-11T16:56:04Z",
       "value": 10707.15
+    },
+    {
+      "timestamp": "2026-06-11T17:03:09Z",
+      "value": 10671.26
     }
   ]
 }
