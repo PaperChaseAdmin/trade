@@ -1,58 +1,83 @@
 {
   "cash": 270.41,
-  "total_value": 10553.3,
+  "total_value": 10511.19,
   "positions": {
     "COIN": {
       "shares": 21,
       "avg_cost": 193.13,
-      "current_price": 154.75
+      "current_price": 154.35
     },
     "AMC": {
       "shares": 2500,
       "avg_cost": 1.535,
-      "current_price": 2.2301
+      "current_price": 2.2197
     },
     "MARA": {
       "shares": 100,
       "avg_cost": 13.34,
-      "current_price": 12.955
+      "current_price": 12.885
     },
     "RIOT": {
       "shares": 2,
       "avg_cost": 27.09,
-      "current_price": 25.25
+      "current_price": 25.0799
     },
     "GME": {
       "shares": 1,
       "avg_cost": 21.79,
-      "current_price": 22.095
+      "current_price": 22.0614
     },
     "HOOD": {
       "shares": 1,
       "avg_cost": 85.51,
-      "current_price": 89.79
+      "current_price": 89.455
     }
   },
-  "total_return_pct": 5.53,
+  "total_return_pct": 5.11,
   "total_return_usd": 0.0,
-  "today_pnl": 456.1,
-  "today_pnl_pct": 4.52,
+  "today_pnl": 413.99,
+  "today_pnl_pct": 4.1,
   "total_trades": 9,
   "today_start_value": 10097.2,
   "today_date": "2026-06-11",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-11T15:37:12Z",
+  "last_action": "Momentum is lacking today with no watchlist stocks showing the 10%+ surge needed for a aggressive entry.",
+  "last_updated": "2026-06-11T16:07:25Z",
   "last_session": {
-    "at": "2026-06-11T15:37:12Z",
+    "at": "2026-06-11T16:07:25Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "AMC",
+        6.73
+      ],
+      [
+        "RIOT",
+        4.17
+      ],
+      [
+        "HOOD",
+        3.58
+      ],
+      [
+        "RIVN",
+        3.56
+      ],
+      [
+        "MARA",
+        2.22
+      ],
+      [
+        "META",
+        -1.68
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Today's top movers are AMC (+6.7%), RIOT (+4.2%), HOOD (+3.6%) and RIVN (+3.6%), all solid but below the 10% threshold that triggers my buy signal. With cash at $270.41 and a $200 reserve required, I have only $70.41 to deploy, which would be too small to meaningfully chase these moves. I'll wait for a stronger breakout before deploying capital.",
+    "outlook": "Momentum is lacking today with no watchlist stocks showing the 10%+ surge needed for a aggressive entry.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -887,6 +912,10 @@
     {
       "timestamp": "2026-06-11T15:37:12Z",
       "value": 10553.3
+    },
+    {
+      "timestamp": "2026-06-11T16:07:25Z",
+      "value": 10511.19
     }
   ]
 }
