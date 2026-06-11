@@ -1,21 +1,21 @@
 {
   "cash": 206.08,
-  "total_value": 9805.92,
+  "total_value": 9762.69,
   "positions": {
     "BTI": {
       "shares": 29,
       "avg_cost": 66.275,
-      "current_price": 61.41
+      "current_price": 61.0
     },
     "OHI": {
       "shares": 40,
       "avg_cost": 47.59,
-      "current_price": 46.29
+      "current_price": 46.01
     },
     "MAIN": {
       "shares": 20,
       "avg_cost": 50.63,
-      "current_price": 51.8
+      "current_price": 51.71
     },
     "ARCC": {
       "shares": 50,
@@ -25,35 +25,35 @@
     "T": {
       "shares": 50,
       "avg_cost": 24.5551,
-      "current_price": 23.295
+      "current_price": 23.16
     },
     "ENB": {
       "shares": 20,
       "avg_cost": 56.3352,
-      "current_price": 56.8088
+      "current_price": 56.74
     },
     "O": {
       "shares": 26,
       "avg_cost": 61.88,
-      "current_price": 62.775
+      "current_price": 62.39
     },
     "VZ": {
       "shares": 1,
       "avg_cost": 47.6602,
-      "current_price": 48.02
+      "current_price": 47.825
     }
   },
-  "total_return_pct": -1.94,
+  "total_return_pct": -2.37,
   "total_return_usd": 0.0,
-  "today_pnl": 11.56,
-  "today_pnl_pct": 0.12,
+  "today_pnl": -31.67,
+  "today_pnl_pct": -0.32,
   "total_trades": 8,
   "today_start_value": 9794.36,
   "today_date": "2026-06-11",
-  "last_action": "Market is neutral with modest gains in high-yield names, but cash reserves limit new purchases.",
-  "last_updated": "2026-06-11T15:08:34Z",
+  "last_action": "Market is neutral with modest gains in high-yield names like VZ and WPC, but cash constraints limit new purchases.",
+  "last_updated": "2026-06-11T15:36:28Z",
   "last_session": {
-    "at": "2026-06-11T15:08:34Z",
+    "at": "2026-06-11T15:36:28Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -61,33 +61,33 @@
     "top_movers": [
       [
         "VZ",
-        2.27
+        1.84
       ],
       [
         "WPC",
-        1.2
+        0.9
       ],
       [
-        "IBM",
-        -1.13
+        "MO",
+        -0.57
+      ],
+      [
+        "SCHD",
+        0.57
+      ],
+      [
+        "ENB",
+        0.53
       ],
       [
         "O",
-        1.05
-      ],
-      [
-        "OHI",
-        0.94
-      ],
-      [
-        "PM",
-        0.9
+        0.49
       ]
     ],
     "news_read": [],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "Cash is $206.08, requiring at least $200 reserve, leaving only $6.08 for investment, insufficient to buy any watchlist stock priced above $15. Watchlist shows VZ up 2.3% and WPC up 1.2%, indicating some strength in telecom and REIT sectors, but no dividend cuts reported. Will monitor for any dividend reductions or a cash increase from dividends to enable future buys.",
-    "outlook": "Market is neutral with modest gains in high-yield names, but cash reserves limit new purchases.",
+    "ai_analysis": "Cash stands at $206.08, insufficient to buy even the lowest-priced watchlist stock (HTGC at $15.5) while maintaining the $200 reserve. No dividend cuts have been announced, so existing holdings are held and dividends will be reinvested when received. Next session will watch for dividend accruals to increase cash for future buying.",
+    "outlook": "Market is neutral with modest gains in high-yield names like VZ and WPC, but cash constraints limit new purchases.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -918,6 +918,10 @@
     {
       "timestamp": "2026-06-11T15:08:34Z",
       "value": 9805.92
+    },
+    {
+      "timestamp": "2026-06-11T15:36:28Z",
+      "value": 9762.69
     }
   ]
 }
