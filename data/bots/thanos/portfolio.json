@@ -1,93 +1,118 @@
 {
   "cash": 522.74,
-  "total_value": 9895.95,
+  "total_value": 9882.97,
   "positions": {
     "XLE": {
       "shares": 14,
-      "current_price": 58.445,
+      "current_price": 58.285,
       "avg_cost": 59.7191
     },
     "XLI": {
       "shares": 3,
       "avg_cost": 169.79,
-      "current_price": 172.35
+      "current_price": 171.965
     },
     "XLY": {
       "shares": 6,
-      "current_price": 114.08,
+      "current_price": 113.76,
       "avg_cost": 115.6065
     },
     "XLP": {
       "shares": 4,
       "avg_cost": 85.3399,
-      "current_price": 85.545
+      "current_price": 85.445
     },
     "XLU": {
       "shares": 8,
-      "current_price": 44.27,
+      "current_price": 44.265,
       "avg_cost": 43.935
     },
     "XLB": {
       "shares": 23,
-      "current_price": 50.3,
+      "current_price": 50.24,
       "avg_cost": 50.3695
     },
     "XLC": {
       "shares": 9,
-      "current_price": 110.84,
+      "current_price": 110.93,
       "avg_cost": 114.575
     },
     "GLD": {
       "shares": 3,
-      "current_price": 375.46,
+      "current_price": 374.44,
       "avg_cost": 410.9017
     },
     "TLT": {
       "shares": 4,
       "avg_cost": 83.555,
-      "current_price": 85.22
+      "current_price": 85.145
     },
     "XLK": {
       "shares": 6,
       "avg_cost": 185.44,
-      "current_price": 178.92
+      "current_price": 178.51
     },
     "XLV": {
       "shares": 5,
       "avg_cost": 154.2,
-      "current_price": 153.84
+      "current_price": 153.77
     },
     "XLF": {
       "shares": 22,
       "avg_cost": 52.575,
-      "current_price": 52.175
+      "current_price": 52.155
     },
     "XLRE": {
       "shares": 1,
       "avg_cost": 45.175,
-      "current_price": 44.82
+      "current_price": 44.7798
     }
   },
-  "total_return_pct": -1.04,
+  "total_return_pct": -1.17,
   "total_return_usd": 0.0,
-  "today_pnl": 15.56,
-  "today_pnl_pct": 0.16,
+  "today_pnl": 2.58,
+  "today_pnl_pct": 0.03,
   "total_trades": 35,
   "today_start_value": 9880.39,
   "today_date": "2026-06-11",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-11T16:10:28Z",
+  "last_action": "Market shows mixed sector performance with industrials and materials leading; rebalancing toward underweight staples maintains balance.",
+  "last_updated": "2026-06-11T16:38:01Z",
   "last_session": {
-    "at": "2026-06-11T16:10:28Z",
+    "at": "2026-06-11T16:38:01Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "XLI",
+        1.4
+      ],
+      [
+        "XLB",
+        1.29
+      ],
+      [
+        "XLK",
+        1.12
+      ],
+      [
+        "QQQ",
+        1.11
+      ],
+      [
+        "XLV",
+        0.61
+      ],
+      [
+        "XLU",
+        0.61
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "XLP's market value ($341.78) is far below the equal-weight target of ~$761, indicating underweight. XLI and XLB are overweight due to today's gains (+1.4%, +1.29%). Buying one share of XLP adds $85.45, moving toward balance while keeping cash above $500 reserve. No other trades are needed as further purchases would exceed cash limit or violate max 12% per stock rule.",
+    "outlook": "Market shows mixed sector performance with industrials and materials leading; rebalancing toward underweight staples maintains balance.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -926,6 +951,10 @@
     {
       "timestamp": "2026-06-11T16:10:28Z",
       "value": 9895.95
+    },
+    {
+      "timestamp": "2026-06-11T16:38:01Z",
+      "value": 9882.97
     }
   ]
 }
