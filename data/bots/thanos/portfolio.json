@@ -1,84 +1,84 @@
 {
   "cash": 522.74,
-  "total_value": 10068.51,
+  "total_value": 10064.74,
   "positions": {
     "XLE": {
       "shares": 14,
-      "current_price": 57.96,
+      "current_price": 57.73,
       "avg_cost": 59.7191
     },
     "XLI": {
       "shares": 3,
       "avg_cost": 169.79,
-      "current_price": 176.23
+      "current_price": 176.12
     },
     "XLY": {
       "shares": 6,
-      "current_price": 115.35,
+      "current_price": 116.04,
       "avg_cost": 115.6065
     },
     "XLP": {
       "shares": 4,
       "avg_cost": 85.3399,
-      "current_price": 85.46
+      "current_price": 85.75
     },
     "XLU": {
       "shares": 8,
-      "current_price": 44.375,
+      "current_price": 44.455,
       "avg_cost": 43.935
     },
     "XLB": {
       "shares": 23,
-      "current_price": 52.235,
+      "current_price": 52.285,
       "avg_cost": 50.3695
     },
     "XLC": {
       "shares": 9,
-      "current_price": 112.05,
+      "current_price": 111.905,
       "avg_cost": 114.575
     },
     "GLD": {
       "shares": 3,
-      "current_price": 387.9489,
+      "current_price": 388.345,
       "avg_cost": 410.9017
     },
     "TLT": {
       "shares": 4,
       "avg_cost": 83.555,
-      "current_price": 85.7509
+      "current_price": 85.735
     },
     "XLK": {
       "shares": 6,
       "avg_cost": 185.44,
-      "current_price": 185.3
+      "current_price": 184.7
     },
     "XLV": {
       "shares": 5,
       "avg_cost": 154.2,
-      "current_price": 153.86
+      "current_price": 153.775
     },
     "XLF": {
       "shares": 22,
       "avg_cost": 52.575,
-      "current_price": 53.34
+      "current_price": 53.205
     },
     "XLRE": {
       "shares": 1,
       "avg_cost": 45.175,
-      "current_price": 45.415
+      "current_price": 45.285
     }
   },
-  "total_return_pct": 0.69,
+  "total_return_pct": 0.65,
   "total_return_usd": 0.0,
-  "today_pnl": 41.23,
-  "today_pnl_pct": 0.41,
+  "today_pnl": 37.46,
+  "today_pnl_pct": 0.37,
   "total_trades": 35,
   "today_start_value": 10027.28,
   "today_date": "2026-06-12",
-  "last_action": "Market shows mixed sector performance with materials and energy leading, while consumer discretionary lags, indicating a need for rebalancing once cash permits.",
-  "last_updated": "2026-06-12T16:22:00Z",
+  "last_action": "Sector performance is mixed with materials leading and several laggards, but cash constraints limit rebalancing today.",
+  "last_updated": "2026-06-12T18:30:03Z",
   "last_session": {
-    "at": "2026-06-12T16:22:00Z",
+    "at": "2026-06-12T18:30:03Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -86,33 +86,33 @@
     "top_movers": [
       [
         "XLB",
-        1.96
-      ],
-      [
-        "XLE",
-        1.45
+        2.08
       ],
       [
         "XLF",
-        1.36
+        1.1
       ],
       [
-        "XLK",
-        1.13
+        "XLE",
+        1.07
+      ],
+      [
+        "XLU",
+        0.92
       ],
       [
         "XLRE",
-        1.09
+        0.81
       ],
       [
-        "XLY",
-        -0.81
+        "XLK",
+        0.8
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Today's top movers are XLB (+2.0%), XLE (+1.4%), XLF (+1.4%) and XLK (+1.1%), while XLY (-0.8%) and XLV (-0.14%) are weakest. With only $22.74 excess cash above the $500 reserve, no full share of any watchlist ETF can be purchased, so rebalancing is deferred. We will watch for a pullback in leaders or a cash increase to buy laggards and restore balance.",
-    "outlook": "Market shows mixed sector performance with materials and energy leading, while consumer discretionary lags, indicating a need for rebalancing once cash permits.",
+    "ai_analysis": "Today's top movers are XLB +2.1%, XLF +1.1%, XLE +1.1%, while XLV, XLY, XLC and TLT show negative or minimal gains. The cheapest ETF, TLT at $85.73, exceeds the allowable cash spend of $22.74 needed to keep a $500 reserve, so no purchases can be made without violating the cash rule. We'll watch for a pullback in cash or a dip in underperformers to enable future balancing trades.",
+    "outlook": "Sector performance is mixed with materials leading and several laggards, but cash constraints limit rebalancing today.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -1007,6 +1007,10 @@
     {
       "timestamp": "2026-06-12T16:22:00Z",
       "value": 10068.51
+    },
+    {
+      "timestamp": "2026-06-12T18:30:03Z",
+      "value": 10064.74
     }
   ]
 }
