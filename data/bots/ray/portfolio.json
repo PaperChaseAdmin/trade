@@ -1,45 +1,45 @@
 {
   "cash": 1000.0,
-  "total_value": 9785.33,
+  "total_value": 9798.5,
   "positions": {
     "GLD": {
       "shares": 5,
-      "current_price": 386.04,
+      "current_price": 387.5899,
       "avg_cost": 412.042
     },
     "TLT": {
       "shares": 23,
-      "current_price": 85.64,
+      "current_price": 85.7099,
       "avg_cost": 83.6059
     },
     "PDBC": {
       "shares": 112,
       "avg_cost": 17.515,
-      "current_price": 17.08
+      "current_price": 17.06
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 746.52,
-      "current_price": 742.92
+      "current_price": 743.825
     },
     "BIL": {
       "shares": 2,
       "avg_cost": 91.445,
-      "current_price": 91.51
+      "current_price": 91.505
     },
     "EEM": {
       "shares": 1,
       "avg_cost": 65.88,
-      "current_price": 68.025
+      "current_price": 68.13
     },
     "GSG": {
       "shares": 6,
       "avg_cost": 31.52,
-      "current_price": 30.65
+      "current_price": 30.615
     },
     "IAU": {
       "shares": 13,
-      "current_price": 79.105,
+      "current_price": 79.44,
       "avg_cost": 77.6569
     },
     "TIPS": {
@@ -48,17 +48,17 @@
       "avg_cost": 0.0005
     }
   },
-  "total_return_pct": -2.15,
+  "total_return_pct": -2.02,
   "total_return_usd": 0.0,
-  "today_pnl": 5.61,
-  "today_pnl_pct": 0.06,
+  "today_pnl": 18.78,
+  "today_pnl_pct": 0.19,
   "total_trades": 8,
   "today_start_value": 9779.72,
   "today_date": "2026-06-12",
-  "last_action": "Mixed signals with commodities and equities showing modest gains while inflation-protected securities slide, suggesting uncertainty about inflation trajectory.",
-  "last_updated": "2026-06-12T15:07:54Z",
+  "last_action": "Inflation pressures appear to be easing as TIPS fell sharply, while gold miners show strength.",
+  "last_updated": "2026-06-12T15:33:40Z",
   "last_session": {
-    "at": "2026-06-12T15:07:54Z",
+    "at": "2026-06-12T15:33:40Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -70,29 +70,29 @@
       ],
       [
         "GDX",
-        1.99
-      ],
-      [
-        "FXI",
-        1.12
+        2.71
       ],
       [
         "GSG",
-        -1.07
+        -1.11
       ],
       [
         "PDBC",
-        -0.93
+        -1.04
       ],
       [
-        "VWO",
-        0.8
+        "FXI",
+        1.03
+      ],
+      [
+        "EEM",
+        0.95
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Today's watchlist shows TIPS down -16.7% indicating potential deflation worries, while GDX (+2.0%) and FXI (+1.1%) reflect some risk-on sentiment in gold miners and Chinese equities. Cash is exactly at the $1,000 reserve limit, leaving no room for new purchases without violating the reserve rule, so I held back on buying. I will watch for clearer inflation or recession signals and any pullback that creates cash flexibility before considering new positions.",
-    "outlook": "Mixed signals with commodities and equities showing modest gains while inflation-protected securities slide, suggesting uncertainty about inflation trajectory.",
+    "ai_analysis": "Today's watchlist shows TIPS down -16.7% signaling lower inflation expectations, while GDX up +2.7% indicates gold equity strength. Our current holdings are underweight gold (GLD, IAU) and overweight bonds (TLT) but cash is exactly at the $1,000 reserve limit, preventing any new purchases without breaching the rule. We will monitor inflation data and bond yields for rebalancing opportunities once cash increases.",
+    "outlook": "Inflation pressures appear to be easing as TIPS fell sharply, while gold miners show strength.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -979,6 +979,10 @@
     {
       "timestamp": "2026-06-12T15:07:54Z",
       "value": 9785.33
+    },
+    {
+      "timestamp": "2026-06-12T15:33:40Z",
+      "value": 9798.5
     }
   ]
 }
