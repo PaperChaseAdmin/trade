@@ -1,93 +1,118 @@
 {
   "cash": 522.74,
-  "total_value": 10038.18,
+  "total_value": 10073.61,
   "positions": {
     "XLE": {
       "shares": 14,
-      "current_price": 57.885,
+      "current_price": 57.88,
       "avg_cost": 59.7191
     },
     "XLI": {
       "shares": 3,
       "avg_cost": 169.79,
-      "current_price": 175.81
+      "current_price": 176.53
     },
     "XLY": {
       "shares": 6,
-      "current_price": 115.5,
+      "current_price": 116.12,
       "avg_cost": 115.6065
     },
     "XLP": {
       "shares": 4,
       "avg_cost": 85.3399,
-      "current_price": 85.46
+      "current_price": 85.645
     },
     "XLU": {
       "shares": 8,
-      "current_price": 44.575,
+      "current_price": 44.4299,
       "avg_cost": 43.935
     },
     "XLB": {
       "shares": 23,
-      "current_price": 52.03,
+      "current_price": 52.19,
       "avg_cost": 50.3695
     },
     "XLC": {
       "shares": 9,
-      "current_price": 111.81,
+      "current_price": 112.29,
       "avg_cost": 114.575
     },
     "GLD": {
       "shares": 3,
-      "current_price": 384.245,
+      "current_price": 386.04,
       "avg_cost": 410.9017
     },
     "TLT": {
       "shares": 4,
       "avg_cost": 83.555,
-      "current_price": 85.49
+      "current_price": 85.64
     },
     "XLK": {
       "shares": 6,
       "avg_cost": 185.44,
-      "current_price": 184.21
+      "current_price": 185.04
     },
     "XLV": {
       "shares": 5,
       "avg_cost": 154.2,
-      "current_price": 153.48
+      "current_price": 154.21
     },
     "XLF": {
       "shares": 22,
       "avg_cost": 52.575,
-      "current_price": 53.2
+      "current_price": 53.535
     },
     "XLRE": {
       "shares": 1,
       "avg_cost": 45.175,
-      "current_price": 45.445
+      "current_price": 45.5
     }
   },
-  "total_return_pct": 0.38,
+  "total_return_pct": 0.74,
   "total_return_usd": 0.0,
-  "today_pnl": 10.9,
-  "today_pnl_pct": 0.11,
+  "today_pnl": 46.33,
+  "today_pnl_pct": 0.46,
   "total_trades": 35,
   "today_start_value": 10027.28,
   "today_date": "2026-06-12",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-06-12T14:37:38Z",
+  "last_action": "Sector rotation is likely to persist, requiring periodic rebalancing to maintain universal equilibrium.",
+  "last_updated": "2026-06-12T15:10:57Z",
   "last_session": {
-    "at": "2026-06-12T14:37:38Z",
+    "at": "2026-06-12T15:10:57Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "XLB",
+        1.87
+      ],
+      [
+        "XLF",
+        1.75
+      ],
+      [
+        "XLE",
+        1.35
+      ],
+      [
+        "XLRE",
+        1.29
+      ],
+      [
+        "XLK",
+        0.99
+      ],
+      [
+        "XLU",
+        0.84
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "Today's top performers were XLB (+1.9%) and XLF (+1.8%), while XLC and GLD showed negative moves; our portfolio reflects gains in XLB (+$41.87) and XLF (+$21.12) and losses in XLE (-$25.75) and XLC (-$20.56). To restore balance we would sell some of the outperforming XLB and XLF and buy the lagging XLE, XLC, and GLD, but with only $22.74 available above the $500 cash reserve we cannot execute any full-share purchases, so we hold.",
+    "outlook": "Sector rotation is likely to persist, requiring periodic rebalancing to maintain universal equilibrium.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -970,6 +995,10 @@
     {
       "timestamp": "2026-06-12T14:37:38Z",
       "value": 10038.18
+    },
+    {
+      "timestamp": "2026-06-12T15:10:57Z",
+      "value": 10073.61
     }
   ]
 }
