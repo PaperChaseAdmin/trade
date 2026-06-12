@@ -1,45 +1,45 @@
 {
   "cash": 1022.8,
-  "total_value": 9779.72,
+  "total_value": 9780.39,
   "positions": {
     "GLD": {
       "shares": 5,
-      "current_price": 385.74,
+      "current_price": 384.51,
       "avg_cost": 412.042
     },
     "TLT": {
       "shares": 23,
-      "current_price": 85.625,
+      "current_price": 85.51,
       "avg_cost": 83.6059
     },
     "PDBC": {
       "shares": 112,
       "avg_cost": 17.515,
-      "current_price": 17.1101
+      "current_price": 17.2401
     },
     "SPY": {
       "shares": 2,
       "avg_cost": 746.52,
-      "current_price": 739.535
+      "current_price": 737.86
     },
     "BIL": {
       "shares": 2,
       "avg_cost": 91.445,
-      "current_price": 91.51
+      "current_price": 91.505
     },
     "EEM": {
       "shares": 1,
       "avg_cost": 65.88,
-      "current_price": 67.47
+      "current_price": 67.69
     },
     "GSG": {
       "shares": 6,
       "avg_cost": 31.52,
-      "current_price": 30.74
+      "current_price": 31.0
     },
     "IAU": {
       "shares": 13,
-      "current_price": 79.07,
+      "current_price": 78.7996,
       "avg_cost": 77.6569
     },
     "TIPS": {
@@ -50,49 +50,49 @@
   },
   "total_return_pct": -2.2,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 0.67,
+  "today_pnl_pct": 0.01,
   "total_trades": 8,
   "today_start_value": 9779.72,
   "today_date": "2026-06-12",
-  "last_action": "Mixed signals: commodities weakening while gold miners and China equities show strength, suggesting no clear inflation or recession trigger.",
-  "last_updated": "2026-06-12T13:33:52Z",
+  "last_action": "Mixed signals: commodities and equities show modest strength while bonds and gold weaken, suggesting a transition phase with no clear macro trend.",
+  "last_updated": "2026-06-12T14:04:19Z",
   "last_session": {
-    "at": "2026-06-12T13:33:52Z",
+    "at": "2026-06-12T14:04:19Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "GSG",
-        -1.59
-      ],
-      [
         "GDX",
-        1.31
+        1.57
       ],
       [
         "FXI",
-        1.15
-      ],
-      [
-        "PDBC",
-        -0.75
-      ],
-      [
-        "VWO",
-        0.54
+        1.0
       ],
       [
         "TLT",
-        -0.41
+        -0.54
+      ],
+      [
+        "VWO",
+        0.51
+      ],
+      [
+        "GLD",
+        -0.45
+      ],
+      [
+        "IAU",
+        -0.34
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Gold (GLD) and commodities (PDBC, GSG) are near 20% limits and showing mixed performance; bonds (TLT) slightly down but already over the 20% concentration limit. With only $22.80 available for new purchases while keeping cash \u2265 $1000, any meaningful position would exceed concentration limits or be too small to impact the portfolio. Therefore, I hold off on new trades and will watch for clearer inflation or recession signals before rebalancing.",
-    "outlook": "Mixed signals: commodities weakening while gold miners and China equities show strength, suggesting no clear inflation or recession trigger.",
+    "ai_analysis": "Watchlist top movers: GDX +1.6% and FXI +1.0% indicate commodity and emerging market strength; TLT -0.5% and GLD -0.5% show bond and gold weakness. With cash just above $1k and most positions near the 20% limit, adding new exposure would risk over-concentration and violate the reserve rule, so we hold.",
+    "outlook": "Mixed signals: commodities and equities show modest strength while bonds and gold weaken, suggesting a transition phase with no clear macro trend.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -967,6 +967,10 @@
     {
       "timestamp": "2026-06-12T13:33:52Z",
       "value": 9779.72
+    },
+    {
+      "timestamp": "2026-06-12T14:04:19Z",
+      "value": 9780.39
     }
   ]
 }
