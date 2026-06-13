@@ -138,7 +138,7 @@ Replace yes with no/neutral and adjust numbers. Only say yes+confidence>90 if tr
                 "HTTP-Referer": "https://paperchase.online",
             },
             json={
-                "model": "meta-llama/llama-3.3-70b-instruct:free",
+                "model": "google/gemma-4-31b-it:free",
                 "messages": [{"role": "user", "content": prompt}],
                 "temperature": 0.1,
                 "max_tokens": 200,
