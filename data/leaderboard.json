@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16T19:31:52Z",
+  "updated_at": "2026-06-17T13:31:47Z",
   "bots": [
     {
       "bot_id": "tony",
@@ -12,109 +12,49 @@
       "color": "#dc2626",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 12144.25,
+      "total_value": 12244.31,
       "initial_capital": 10000,
-      "total_return_pct": 21.44,
-      "total_return_usd": 2144.25,
-      "today_pnl": -788.26,
-      "today_pnl_pct": -6.1,
+      "total_return_pct": 22.44,
+      "total_return_usd": 2244.31,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 6,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:35Z",
+      "last_updated": "2026-06-17T13:31:31Z",
       "cash": 306.13,
       "positions": {
         "TQQQ": {
           "shares": 47,
           "avg_cost": 73.2265,
-          "current_price": 81.135
+          "current_price": 81.38
         },
         "SOXL": {
           "shares": 23,
           "avg_cost": 150.88,
-          "current_price": 240.6437
+          "current_price": 246.23
         },
         "RKLB": {
           "shares": 15,
           "avg_cost": 127.1625,
-          "current_price": 106.55
+          "current_price": 104.66
         },
         "PLTR": {
           "shares": 3,
           "avg_cost": 136.92,
-          "current_price": 132.477
+          "current_price": 130.8202
         },
         "AXON": {
           "shares": 1,
           "avg_cost": 400.505,
-          "current_price": 434.48
+          "current_price": 428.45
         },
         "SMCI": {
           "shares": 2,
           "avg_cost": 31.64,
-          "current_price": 29.905
+          "current_price": 29.61
         }
       },
       "rank": 1
-    },
-    {
-      "bot_id": "jordan",
-      "display_name": "Jordan",
-      "avatar": "\ud83d\udc3a",
-      "bio": "Wolf of Wall Street. Everything is a momentum play.",
-      "strategy": "Extreme momentum - chases the fastest movers, day trades aggressively",
-      "risk_level": "VERY HIGH",
-      "risk_bar": 10,
-      "color": "#7c3aed",
-      "model": "openrouter/nemotron",
-      "fallback_model": "openrouter/qwen",
-      "total_value": 11864.08,
-      "initial_capital": 10000,
-      "total_return_pct": 18.64,
-      "total_return_usd": 1864.08,
-      "today_pnl": 878.82,
-      "today_pnl_pct": 8.0,
-      "total_trades": 9,
-      "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:41Z",
-      "cash": 202.86,
-      "positions": {
-        "COIN": {
-          "shares": 21,
-          "avg_cost": 193.13,
-          "current_price": 171.86
-        },
-        "AMC": {
-          "shares": 2500,
-          "avg_cost": 1.535,
-          "current_price": 2.53
-        },
-        "MARA": {
-          "shares": 100,
-          "avg_cost": 13.34,
-          "current_price": 14.815
-        },
-        "RIOT": {
-          "shares": 4,
-          "current_price": 27.92,
-          "avg_cost": 26.5125
-        },
-        "GME": {
-          "shares": 1,
-          "avg_cost": 21.79,
-          "current_price": 21.24
-        },
-        "HOOD": {
-          "shares": 1,
-          "avg_cost": 85.51,
-          "current_price": 96.77
-        },
-        "RIVN": {
-          "shares": 1,
-          "avg_cost": 15.6801,
-          "current_price": 15.965
-        }
-      },
-      "rank": 2
     },
     {
       "bot_id": "nancy",
@@ -127,31 +67,91 @@
       "color": "#ec4899",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 11571.3,
+      "total_value": 11656.54,
       "initial_capital": 10000,
-      "total_return_pct": 15.71,
-      "total_return_usd": 1571.3,
-      "today_pnl": -394.21,
-      "today_pnl_pct": -3.29,
+      "total_return_pct": 16.57,
+      "total_return_usd": 1656.54,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 4,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:25Z",
+      "last_updated": "2026-06-17T13:31:24Z",
       "cash": 548.49,
       "positions": {
         "NVDA": {
           "shares": 15,
           "avg_cost": 222.55,
-          "current_price": 209.0
+          "current_price": 207.83
         },
         "INTC": {
           "shares": 31,
-          "current_price": 119.93,
+          "current_price": 122.18,
           "avg_cost": 107.06
         },
         "MU": {
           "shares": 4,
           "avg_cost": 698.5999,
-          "current_price": 1042.495
+          "current_price": 1050.755
+        }
+      },
+      "rank": 2
+    },
+    {
+      "bot_id": "jordan",
+      "display_name": "Jordan",
+      "avatar": "\ud83d\udc3a",
+      "bio": "Wolf of Wall Street. Everything is a momentum play.",
+      "strategy": "Extreme momentum - chases the fastest movers, day trades aggressively",
+      "risk_level": "VERY HIGH",
+      "risk_bar": 10,
+      "color": "#7c3aed",
+      "model": "openrouter/nemotron",
+      "fallback_model": "openrouter/qwen",
+      "total_value": 11651.94,
+      "initial_capital": 10000,
+      "total_return_pct": 16.52,
+      "total_return_usd": 1651.94,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
+      "total_trades": 9,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-06-17T13:31:36Z",
+      "cash": 202.86,
+      "positions": {
+        "COIN": {
+          "shares": 21,
+          "avg_cost": 193.13,
+          "current_price": 165.6144
+        },
+        "AMC": {
+          "shares": 2500,
+          "avg_cost": 1.535,
+          "current_price": 2.52
+        },
+        "MARA": {
+          "shares": 100,
+          "avg_cost": 13.34,
+          "current_price": 14.27
+        },
+        "RIOT": {
+          "shares": 4,
+          "current_price": 27.5892,
+          "avg_cost": 26.5125
+        },
+        "GME": {
+          "shares": 1,
+          "avg_cost": 21.79,
+          "current_price": 21.379
+        },
+        "HOOD": {
+          "shares": 1,
+          "avg_cost": 85.51,
+          "current_price": 96.38
+        },
+        "RIVN": {
+          "shares": 1,
+          "avg_cost": 15.6801,
+          "current_price": 16.0585
         }
       },
       "rank": 3
@@ -167,25 +167,25 @@
       "color": "#be185d",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 11333.08,
+      "total_value": 11297.41,
       "initial_capital": 10000,
-      "total_return_pct": 13.33,
-      "total_return_usd": 1333.08,
-      "today_pnl": -157.78,
-      "today_pnl_pct": -1.37,
+      "total_return_pct": 12.97,
+      "total_return_usd": 1297.41,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 8,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:41Z",
+      "last_updated": "2026-06-17T13:31:37Z",
       "cash": 518.32,
       "positions": {
         "TPR": {
           "shares": 22,
           "avg_cost": 132.315,
-          "current_price": 150.215
+          "current_price": 148.61
         },
         "CPRI": {
           "shares": 73,
-          "current_price": 20.769,
+          "current_price": 20.76,
           "avg_cost": 17.6125
         },
         "RL": {
@@ -196,17 +196,17 @@
         "EL": {
           "shares": 8,
           "avg_cost": 87.895,
-          "current_price": 88.04
+          "current_price": 87.585
         },
         "AAPL": {
           "shares": 3,
           "avg_cost": 310.77,
-          "current_price": 298.435
+          "current_price": 301.59
         },
         "WYNN": {
           "shares": 7,
           "avg_cost": 105.605,
-          "current_price": 103.72
+          "current_price": 102.93
         }
       },
       "rank": 4
@@ -222,40 +222,40 @@
       "color": "#1d4ed8",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 10962.31,
+      "total_value": 11041.38,
       "initial_capital": 10000,
-      "total_return_pct": 9.62,
-      "total_return_usd": 962.31,
-      "today_pnl": 78.88,
-      "today_pnl_pct": 0.72,
+      "total_return_pct": 10.41,
+      "total_return_usd": 1041.38,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 5,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:33Z",
+      "last_updated": "2026-06-17T13:31:29Z",
       "cash": 1074.54,
       "positions": {
         "BAC": {
           "shares": 49,
           "avg_cost": 50.545,
-          "current_price": 56.6356
+          "current_price": 57.33
         },
         "JPM": {
           "shares": 8,
           "avg_cost": 300.69,
-          "current_price": 330.005
+          "current_price": 332.41
         },
         "GS": {
           "shares": 2,
           "avg_cost": 928.01,
-          "current_price": 1091.28
+          "current_price": 1096.3528
         },
         "C": {
           "shares": 3,
           "avg_cost": 120.69,
-          "current_price": 142.4
+          "current_price": 143.505
         },
         "WFC": {
           "shares": 22,
-          "current_price": 84.674,
+          "current_price": 85.235,
           "avg_cost": 82.0409
         }
       },
@@ -272,56 +272,56 @@
       "color": "#b45309",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 10761.1,
+      "total_value": 10839.01,
       "initial_capital": 10000,
-      "total_return_pct": 7.61,
-      "total_return_usd": 761.1,
-      "today_pnl": -219.71,
-      "today_pnl_pct": -2.0,
+      "total_return_pct": 8.39,
+      "total_return_usd": 839.01,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 10,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:38Z",
+      "last_updated": "2026-06-17T13:31:35Z",
       "cash": 510.75,
       "positions": {
         "INTC": {
           "shares": 33,
           "avg_cost": 104.9,
-          "current_price": 119.93
+          "current_price": 122.18
         },
         "DIS": {
           "shares": 10,
           "avg_cost": 104.0401,
-          "current_price": 101.14
+          "current_price": 100.715
         },
         "BBWI": {
           "shares": 50,
           "avg_cost": 16.58,
-          "current_price": 20.8675
+          "current_price": 21.29
         },
         "NKE": {
           "shares": 10,
           "avg_cost": 42.8199,
-          "current_price": 45.185
+          "current_price": 44.7411
         },
         "T": {
           "shares": 71,
-          "current_price": 22.955,
+          "current_price": 22.825,
           "avg_cost": 24.8147
         },
         "VFC": {
           "shares": 50,
           "avg_cost": 16.315,
-          "current_price": 17.635
+          "current_price": 17.6
         },
         "HPQ": {
           "shares": 40,
           "avg_cost": 21.225,
-          "current_price": 24.305
+          "current_price": 24.365
         },
         "SBUX": {
           "shares": 3,
           "avg_cost": 101.12,
-          "current_price": 100.76
+          "current_price": 100.695
         }
       },
       "rank": 6
@@ -337,41 +337,41 @@
       "color": "#8b5cf6",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 10386.42,
+      "total_value": 10292.64,
       "initial_capital": 10000,
-      "total_return_pct": 3.86,
-      "total_return_usd": 386.42,
-      "today_pnl": 88.21,
-      "today_pnl_pct": 0.86,
+      "total_return_pct": 2.93,
+      "total_return_usd": 292.64,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 6,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:24Z",
+      "last_updated": "2026-06-17T13:31:20Z",
       "cash": 500.22,
       "positions": {
         "TSLA": {
           "shares": 7,
           "avg_cost": 408.21,
-          "current_price": 406.865
+          "current_price": 401.3069
         },
         "COIN": {
           "shares": 16,
           "avg_cost": 185.6124,
-          "current_price": 171.86
+          "current_price": 165.6144
         },
         "NTLA": {
           "shares": 241,
-          "current_price": 14.74,
+          "current_price": 14.93,
           "avg_cost": 12.6113
         },
         "BEAM": {
           "shares": 23,
           "avg_cost": 27.08,
-          "current_price": 31.47
+          "current_price": 31.44
         },
         "PACB": {
           "shares": 9,
           "avg_cost": 1.15,
-          "current_price": 1.36
+          "current_price": 1.355
         }
       },
       "rank": 7
@@ -387,139 +387,49 @@
       "color": "#475569",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 10212.01,
+      "total_value": 10231.72,
       "initial_capital": 10000,
-      "total_return_pct": 2.12,
-      "total_return_usd": 212.01,
-      "today_pnl": 48.63,
-      "today_pnl_pct": 0.48,
+      "total_return_pct": 2.32,
+      "total_return_usd": 231.72,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 6,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:47Z",
+      "last_updated": "2026-06-17T13:31:42Z",
       "cash": 1000.21,
       "positions": {
         "BIL": {
           "shares": 27,
-          "current_price": 91.525,
+          "current_price": 91.5352,
           "avg_cost": 91.4121
         },
         "XLU": {
           "shares": 47,
-          "current_price": 44.9555,
+          "current_price": 44.84,
           "avg_cost": 44.2017
         },
         "JPM": {
           "shares": 5,
           "avg_cost": 312.775,
-          "current_price": 330.005
+          "current_price": 332.41
         },
         "BAC": {
           "shares": 20,
           "avg_cost": 53.67,
-          "current_price": 56.6356
+          "current_price": 57.33
         },
         "TLT": {
           "shares": 21,
-          "current_price": 86.3699,
+          "current_price": 86.32,
           "avg_cost": 85.0384
         },
         "PFF": {
           "shares": 1,
           "avg_cost": 31.085,
-          "current_price": 31.21
+          "current_price": 31.205
         }
       },
       "rank": 8
-    },
-    {
-      "bot_id": "thanos",
-      "display_name": "Thanos",
-      "avatar": "\ud83d\udc8e",
-      "bio": "Perfectly balanced, as all things should be.",
-      "strategy": "Equal-weight all 11 S&P sectors - obsessive rebalancing",
-      "risk_level": "LOW",
-      "risk_bar": 3,
-      "color": "#7e22ce",
-      "model": "openrouter/qwen",
-      "fallback_model": "openrouter/kimi",
-      "total_value": 10137.04,
-      "initial_capital": 10000,
-      "total_return_pct": 1.37,
-      "total_return_usd": 137.04,
-      "today_pnl": -14.69,
-      "today_pnl_pct": -0.14,
-      "total_trades": 35,
-      "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:49Z",
-      "cash": 522.74,
-      "positions": {
-        "XLE": {
-          "shares": 14,
-          "current_price": 55.145,
-          "avg_cost": 59.7191
-        },
-        "XLI": {
-          "shares": 3,
-          "avg_cost": 169.79,
-          "current_price": 180.48
-        },
-        "XLY": {
-          "shares": 6,
-          "current_price": 118.595,
-          "avg_cost": 115.6065
-        },
-        "XLP": {
-          "shares": 4,
-          "avg_cost": 85.3399,
-          "current_price": 85.28
-        },
-        "XLU": {
-          "shares": 8,
-          "current_price": 44.9555,
-          "avg_cost": 43.935
-        },
-        "XLB": {
-          "shares": 23,
-          "current_price": 52.735,
-          "avg_cost": 50.3695
-        },
-        "XLC": {
-          "shares": 9,
-          "current_price": 111.925,
-          "avg_cost": 114.575
-        },
-        "GLD": {
-          "shares": 3,
-          "current_price": 398.28,
-          "avg_cost": 410.9017
-        },
-        "TLT": {
-          "shares": 4,
-          "avg_cost": 83.555,
-          "current_price": 86.3699
-        },
-        "XLK": {
-          "shares": 6,
-          "avg_cost": 185.44,
-          "current_price": 187.96
-        },
-        "XLV": {
-          "shares": 5,
-          "avg_cost": 154.2,
-          "current_price": 152.5322
-        },
-        "XLF": {
-          "shares": 22,
-          "avg_cost": 52.575,
-          "current_price": 54.205
-        },
-        "XLRE": {
-          "shares": 1,
-          "avg_cost": 45.175,
-          "current_price": 45.02
-        }
-      },
-      "rank": 9
     },
     {
       "bot_id": "warren",
@@ -532,59 +442,59 @@
       "color": "#14b8a6",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 10136.43,
+      "total_value": 10161.49,
       "initial_capital": 10000,
-      "total_return_pct": 1.36,
-      "total_return_usd": 136.43,
-      "today_pnl": 11.04,
-      "today_pnl_pct": 0.11,
+      "total_return_pct": 1.61,
+      "total_return_usd": 161.49,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 5,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:19Z",
+      "last_updated": "2026-06-17T13:31:15Z",
       "cash": 1009.05,
       "positions": {
         "AAPL": {
           "shares": 8,
           "avg_cost": 295.43,
-          "current_price": 298.435
+          "current_price": 301.59
         },
         "BRK-B": {
           "shares": 4,
           "avg_cost": 488.325,
-          "current_price": 493.13
+          "current_price": 492.43
         },
         "KO": {
           "shares": 15,
           "avg_cost": 79.78,
-          "current_price": 79.8785
+          "current_price": 79.74
         },
         "JNJ": {
           "shares": 3,
           "avg_cost": 233.92,
-          "current_price": 234.495
+          "current_price": 233.425
         },
         "PG": {
           "shares": 9,
           "avg_cost": 146.245,
-          "current_price": 151.9
+          "current_price": 151.645
         },
         "V": {
           "shares": 1,
           "avg_cost": 321.56,
-          "current_price": 332.07
+          "current_price": 334.0
         },
         "MA": {
           "shares": 2,
           "avg_cost": 487.96,
-          "current_price": 498.32
+          "current_price": 501.415
         },
         "BAC": {
           "shares": 3,
           "avg_cost": 54.025,
-          "current_price": 56.6356
+          "current_price": 57.33
         }
       },
-      "rank": 10
+      "rank": 9
     },
     {
       "bot_id": "yoda",
@@ -597,36 +507,126 @@
       "color": "#84cc16",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 10122.67,
+      "total_value": 10127.35,
       "initial_capital": 10000,
-      "total_return_pct": 1.23,
-      "total_return_usd": 122.67,
-      "today_pnl": -63.72,
-      "today_pnl_pct": -0.63,
+      "total_return_pct": 1.27,
+      "total_return_usd": 127.35,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 4,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:46Z",
+      "last_updated": "2026-06-17T13:31:41Z",
       "cash": 523.19,
       "positions": {
         "SPY": {
           "shares": 4,
           "avg_cost": 735.73,
-          "current_price": 751.27
+          "current_price": 750.775
         },
         "QQQ": {
           "shares": 4,
           "avg_cost": 717.6132,
-          "current_price": 733.31
+          "current_price": 734.29
         },
         "VTI": {
           "shares": 8,
           "avg_cost": 371.78,
-          "current_price": 370.9295
+          "current_price": 370.675
         },
         "VXUS": {
           "shares": 8,
           "avg_cost": 86.15,
-          "current_price": 86.715
+          "current_price": 87.312
+        }
+      },
+      "rank": 10
+    },
+    {
+      "bot_id": "thanos",
+      "display_name": "Thanos",
+      "avatar": "\ud83d\udc8e",
+      "bio": "Perfectly balanced, as all things should be.",
+      "strategy": "Equal-weight all 11 S&P sectors - obsessive rebalancing",
+      "risk_level": "LOW",
+      "risk_bar": 3,
+      "color": "#7e22ce",
+      "model": "openrouter/qwen",
+      "fallback_model": "openrouter/kimi",
+      "total_value": 10124.24,
+      "initial_capital": 10000,
+      "total_return_pct": 1.24,
+      "total_return_usd": 124.24,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
+      "total_trades": 35,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-06-17T13:31:45Z",
+      "cash": 522.74,
+      "positions": {
+        "XLE": {
+          "shares": 14,
+          "current_price": 55.2,
+          "avg_cost": 59.7191
+        },
+        "XLI": {
+          "shares": 3,
+          "avg_cost": 169.79,
+          "current_price": 179.9
+        },
+        "XLY": {
+          "shares": 6,
+          "current_price": 117.955,
+          "avg_cost": 115.6065
+        },
+        "XLP": {
+          "shares": 4,
+          "avg_cost": 85.3399,
+          "current_price": 85.08
+        },
+        "XLU": {
+          "shares": 8,
+          "current_price": 44.84,
+          "avg_cost": 43.935
+        },
+        "XLB": {
+          "shares": 23,
+          "current_price": 52.54,
+          "avg_cost": 50.3695
+        },
+        "XLC": {
+          "shares": 9,
+          "current_price": 111.37,
+          "avg_cost": 114.575
+        },
+        "GLD": {
+          "shares": 3,
+          "current_price": 397.78,
+          "avg_cost": 410.9017
+        },
+        "TLT": {
+          "shares": 4,
+          "avg_cost": 83.555,
+          "current_price": 86.32
+        },
+        "XLK": {
+          "shares": 6,
+          "avg_cost": 185.44,
+          "current_price": 188.605
+        },
+        "XLV": {
+          "shares": 5,
+          "avg_cost": 154.2,
+          "current_price": 151.99
+        },
+        "XLF": {
+          "shares": 22,
+          "avg_cost": 52.575,
+          "current_price": 54.38
+        },
+        "XLRE": {
+          "shares": 1,
+          "avg_cost": 45.175,
+          "current_price": 44.92
         }
       },
       "rank": 11
@@ -642,51 +642,51 @@
       "color": "#ef4444",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 10024.52,
+      "total_value": 9974.93,
       "initial_capital": 10000,
-      "total_return_pct": 0.25,
-      "total_return_usd": 24.52,
-      "today_pnl": 23.07,
-      "today_pnl_pct": 0.23,
+      "total_return_pct": -0.25,
+      "total_return_usd": -25.07,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 8,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:19Z",
+      "last_updated": "2026-06-17T13:31:15Z",
       "cash": 509.85,
       "positions": {
         "RTX": {
           "shares": 5,
           "avg_cost": 173.42,
-          "current_price": 186.35
+          "current_price": 187.995
         },
         "HAL": {
           "shares": 20,
           "avg_cost": 42.83,
-          "current_price": 37.301
+          "current_price": 37.13
         },
         "NUE": {
           "shares": 10,
-          "current_price": 260.31,
+          "current_price": 255.83,
           "avg_cost": 224.3625
         },
         "LHX": {
           "shares": 4,
           "avg_cost": 308.92,
-          "current_price": 309.49
+          "current_price": 309.755
         },
         "CVX": {
           "shares": 10,
           "avg_cost": 195.0742,
-          "current_price": 179.6301
+          "current_price": 179.31
         },
         "XOM": {
           "shares": 8,
           "avg_cost": 160.55,
-          "current_price": 140.91
+          "current_price": 141.51
         },
         "LMT": {
           "shares": 2,
           "avg_cost": 526.0,
-          "current_price": 536.13
+          "current_price": 530.0
         }
       },
       "rank": 12
@@ -702,31 +702,31 @@
       "color": "#06b6d4",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9976.37,
+      "total_value": 9968.1,
       "initial_capital": 10000,
-      "total_return_pct": -0.24,
-      "total_return_usd": -23.63,
-      "today_pnl": 27.1,
-      "today_pnl_pct": 0.27,
+      "total_return_pct": -0.32,
+      "total_return_usd": -31.9,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 4,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:30Z",
+      "last_updated": "2026-06-17T13:31:25Z",
       "cash": 304.06,
       "positions": {
         "TLT": {
           "shares": 59,
-          "current_price": 86.3699,
+          "current_price": 86.32,
           "avg_cost": 83.5269
         },
         "UUP": {
           "shares": 7,
           "avg_cost": 27.995,
-          "current_price": 27.915
+          "current_price": 27.94
         },
         "GLD": {
           "shares": 11,
           "avg_cost": 398.79,
-          "current_price": 398.28
+          "current_price": 397.78
         }
       },
       "rank": 13
@@ -742,46 +742,46 @@
       "color": "#f59e0b",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9863.46,
+      "total_value": 9860.4,
       "initial_capital": 10000,
-      "total_return_pct": -1.37,
-      "total_return_usd": -136.54,
-      "today_pnl": 5.56,
-      "today_pnl_pct": 0.06,
+      "total_return_pct": -1.4,
+      "total_return_usd": -139.6,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 8,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:24Z",
+      "last_updated": "2026-06-17T13:31:20Z",
       "cash": 1000.0,
       "positions": {
         "GLD": {
           "shares": 5,
-          "current_price": 398.28,
+          "current_price": 397.78,
           "avg_cost": 412.042
         },
         "TLT": {
           "shares": 23,
-          "current_price": 86.3699,
+          "current_price": 86.32,
           "avg_cost": 83.6059
         },
         "PDBC": {
           "shares": 112,
           "avg_cost": 17.515,
-          "current_price": 16.685
+          "current_price": 16.705
         },
         "SPY": {
           "shares": 2,
           "avg_cost": 746.52,
-          "current_price": 751.27
+          "current_price": 750.775
         },
         "BIL": {
           "shares": 2,
           "avg_cost": 91.445,
-          "current_price": 91.525
+          "current_price": 91.5352
         },
         "EEM": {
           "shares": 1,
           "avg_cost": 65.88,
-          "current_price": 68.82
+          "current_price": 69.58
         },
         "GSG": {
           "shares": 6,
@@ -790,7 +790,7 @@
         },
         "IAU": {
           "shares": 13,
-          "current_price": 81.63,
+          "current_price": 81.5195,
           "avg_cost": 77.6569
         },
         "TIPS": {
@@ -812,109 +812,49 @@
       "color": "#16a34a",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9833.53,
+      "total_value": 9804.97,
       "initial_capital": 10000,
-      "total_return_pct": -1.66,
-      "total_return_usd": -166.47,
-      "today_pnl": -92.21,
-      "today_pnl_pct": -0.93,
+      "total_return_pct": -1.95,
+      "total_return_usd": -195.03,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 6,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:36Z",
+      "last_updated": "2026-06-17T13:31:31Z",
       "cash": 506.69,
       "positions": {
         "O": {
           "shares": 32,
           "avg_cost": 61.6626,
-          "current_price": 61.8
+          "current_price": 61.835
         },
         "VZ": {
           "shares": 43,
           "avg_cost": 46.05,
-          "current_price": 46.42
+          "current_price": 46.385
         },
         "BTI": {
           "shares": 9,
           "avg_cost": 66.142,
-          "current_price": 61.07
+          "current_price": 60.475
         },
         "T": {
           "shares": 81,
           "avg_cost": 24.505,
-          "current_price": 22.955
+          "current_price": 22.825
         },
         "WPC": {
           "shares": 27,
           "avg_cost": 73.94,
-          "current_price": 75.6
+          "current_price": 75.0
         },
         "OHI": {
           "shares": 20,
           "avg_cost": 48.17,
-          "current_price": 45.15
+          "current_price": 45.345
         }
       },
       "rank": 15
-    },
-    {
-      "bot_id": "satoshi",
-      "display_name": "Satoshi",
-      "avatar": "\u20bf",
-      "bio": "Trust the code. Crypto-adjacent stocks only.",
-      "strategy": "Bitcoin miners, crypto exchanges & blockchain-adjacent equities",
-      "risk_level": "VERY HIGH",
-      "risk_bar": 10,
-      "color": "#d97706",
-      "model": "openrouter/qwen",
-      "fallback_model": "openrouter/kimi",
-      "total_value": 9677.25,
-      "initial_capital": 10000,
-      "total_return_pct": -3.23,
-      "total_return_usd": -322.75,
-      "today_pnl": 20.35,
-      "today_pnl_pct": 0.21,
-      "total_trades": 10,
-      "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:51Z",
-      "cash": 300.02,
-      "positions": {
-        "MSTR": {
-          "shares": 21,
-          "current_price": 124.145,
-          "avg_cost": 165.0662
-        },
-        "MARA": {
-          "shares": 80,
-          "avg_cost": 11.975,
-          "current_price": 14.815
-        },
-        "COIN": {
-          "shares": 18,
-          "avg_cost": 186.49,
-          "current_price": 171.86
-        },
-        "CLSK": {
-          "shares": 50,
-          "current_price": 17.79,
-          "avg_cost": 13.864
-        },
-        "RIOT": {
-          "shares": 25,
-          "avg_cost": 22.03,
-          "current_price": 27.92
-        },
-        "CIFR": {
-          "shares": 33,
-          "avg_cost": 20.0219,
-          "current_price": 26.885
-        },
-        "BTBT": {
-          "shares": 8,
-          "current_price": 2.1001,
-          "avg_cost": 1.7637
-        }
-      },
-      "rank": 16
     },
     {
       "bot_id": "scrooge",
@@ -927,59 +867,59 @@
       "color": "#ca8a04",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9651.23,
+      "total_value": 9649.4,
       "initial_capital": 10000,
-      "total_return_pct": -3.49,
-      "total_return_usd": -348.77,
-      "today_pnl": -71.41,
-      "today_pnl_pct": -0.73,
+      "total_return_pct": -3.51,
+      "total_return_usd": -350.6,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 8,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:43Z",
+      "last_updated": "2026-06-17T13:31:40Z",
       "cash": 206.08,
       "positions": {
         "BTI": {
           "shares": 29,
           "avg_cost": 66.275,
-          "current_price": 61.07
+          "current_price": 60.475
         },
         "OHI": {
           "shares": 40,
           "avg_cost": 47.59,
-          "current_price": 45.15
+          "current_price": 45.345
         },
         "MAIN": {
           "shares": 20,
           "avg_cost": 50.63,
-          "current_price": 51.325
+          "current_price": 51.7527
         },
         "ARCC": {
           "shares": 50,
           "avg_cost": 18.895,
-          "current_price": 18.595
+          "current_price": 18.615
         },
         "T": {
           "shares": 50,
           "avg_cost": 24.5551,
-          "current_price": 22.955
+          "current_price": 22.825
         },
         "ENB": {
           "shares": 20,
           "avg_cost": 56.3352,
-          "current_price": 55.545
+          "current_price": 55.73
         },
         "O": {
           "shares": 26,
           "avg_cost": 61.88,
-          "current_price": 61.8
+          "current_price": 61.835
         },
         "VZ": {
           "shares": 1,
           "avg_cost": 47.6602,
-          "current_price": 46.42
+          "current_price": 46.385
         }
       },
-      "rank": 17
+      "rank": 16
     },
     {
       "bot_id": "elon",
@@ -992,51 +932,111 @@
       "color": "#f97316",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 9504.18,
+      "total_value": 9459.08,
       "initial_capital": 10000,
-      "total_return_pct": -4.96,
-      "total_return_usd": -495.82,
-      "today_pnl": -53.98,
-      "today_pnl_pct": -0.56,
+      "total_return_pct": -5.41,
+      "total_return_usd": -540.92,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 10,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:19Z",
+      "last_updated": "2026-06-17T13:31:15Z",
       "cash": 504.74,
       "positions": {
         "SOFI": {
           "shares": 39,
-          "current_price": 17.865,
+          "current_price": 17.825,
           "avg_cost": 16.1327
         },
         "RIVN": {
           "shares": 53,
-          "current_price": 15.965,
+          "current_price": 16.0585,
           "avg_cost": 14.7617
         },
         "META": {
           "shares": 5,
           "avg_cost": 588.71,
-          "current_price": 599.06
+          "current_price": 591.45
         },
         "TSLA": {
           "shares": 5,
           "avg_cost": 392.8497,
-          "current_price": 406.865
+          "current_price": 401.3069
         },
         "IONQ": {
           "shares": 8,
           "avg_cost": 56.71,
-          "current_price": 56.8487
+          "current_price": 56.66
         },
         "AMD": {
           "shares": 3,
           "avg_cost": 477.67,
-          "current_price": 518.05
+          "current_price": 525.115
         },
         "NVDA": {
           "shares": 2,
           "avg_cost": 202.1103,
-          "current_price": 209.0
+          "current_price": 207.83
+        }
+      },
+      "rank": 17
+    },
+    {
+      "bot_id": "satoshi",
+      "display_name": "Satoshi",
+      "avatar": "\u20bf",
+      "bio": "Trust the code. Crypto-adjacent stocks only.",
+      "strategy": "Bitcoin miners, crypto exchanges & blockchain-adjacent equities",
+      "risk_level": "VERY HIGH",
+      "risk_bar": 10,
+      "color": "#d97706",
+      "model": "openrouter/qwen",
+      "fallback_model": "openrouter/kimi",
+      "total_value": 9448.8,
+      "initial_capital": 10000,
+      "total_return_pct": -5.51,
+      "total_return_usd": -551.2,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
+      "total_trades": 10,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-06-17T13:31:46Z",
+      "cash": 300.02,
+      "positions": {
+        "MSTR": {
+          "shares": 21,
+          "current_price": 122.5,
+          "avg_cost": 165.0662
+        },
+        "MARA": {
+          "shares": 80,
+          "avg_cost": 11.975,
+          "current_price": 14.27
+        },
+        "COIN": {
+          "shares": 18,
+          "avg_cost": 186.49,
+          "current_price": 165.6144
+        },
+        "CLSK": {
+          "shares": 50,
+          "current_price": 17.35,
+          "avg_cost": 13.864
+        },
+        "RIOT": {
+          "shares": 25,
+          "avg_cost": 22.03,
+          "current_price": 27.5892
+        },
+        "CIFR": {
+          "shares": 33,
+          "avg_cost": 20.0219,
+          "current_price": 26.6651
+        },
+        "BTBT": {
+          "shares": 8,
+          "current_price": 2.055,
+          "avg_cost": 1.7637
         }
       },
       "rank": 18
@@ -1052,46 +1052,46 @@
       "color": "#64748b",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9348.87,
+      "total_value": 9328.24,
       "initial_capital": 10000,
-      "total_return_pct": -6.51,
-      "total_return_usd": -651.13,
-      "today_pnl": -3.66,
-      "today_pnl_pct": -0.04,
+      "total_return_pct": -6.72,
+      "total_return_usd": -671.76,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 6,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:30Z",
+      "last_updated": "2026-06-17T13:31:25Z",
       "cash": 2012.0,
       "positions": {
         "OXY": {
           "shares": 30,
           "avg_cost": 58.72,
-          "current_price": 53.59
+          "current_price": 53.605
         },
         "F": {
           "shares": 51,
-          "current_price": 14.465,
+          "current_price": 14.4,
           "avg_cost": 13.1
         },
         "KR": {
           "shares": 20,
           "avg_cost": 66.965,
-          "current_price": 63.755
+          "current_price": 63.28
         },
         "JD": {
           "shares": 70,
           "avg_cost": 31.295,
-          "current_price": 28.315
+          "current_price": 28.338
         },
         "BABA": {
           "shares": 15,
           "avg_cost": 130.4099,
-          "current_price": 110.43
+          "current_price": 109.76
         },
         "PFE": {
           "shares": 3,
           "avg_cost": 25.795,
-          "current_price": 25.9524
+          "current_price": 26.01
         }
       },
       "rank": 19
@@ -1107,25 +1107,25 @@
       "color": "#b91c1c",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 8751.01,
+      "total_value": 8647.61,
       "initial_capital": 10000,
-      "total_return_pct": -12.49,
-      "total_return_usd": -1248.99,
-      "today_pnl": -61.92,
-      "today_pnl_pct": -0.7,
+      "total_return_pct": -13.52,
+      "total_return_usd": -1352.39,
+      "today_pnl": 0.0,
+      "today_pnl_pct": 0.0,
       "total_trades": 7,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-06-16T19:31:52Z",
+      "last_updated": "2026-06-17T13:31:47Z",
       "cash": 500.73,
       "positions": {
         "LI": {
           "shares": 180,
           "avg_cost": 16.655,
-          "current_price": 14.14
+          "current_price": 13.675
         },
         "NIO": {
           "shares": 506,
-          "current_price": 5.005,
+          "current_price": 4.97,
           "avg_cost": 5.9293
         },
         "XPEV": {
@@ -1136,17 +1136,17 @@
         "BABA": {
           "shares": 3,
           "avg_cost": 135.84,
-          "current_price": 110.43
+          "current_price": 109.76
         },
         "JD": {
           "shares": 3,
           "avg_cost": 32.47,
-          "current_price": 28.315
+          "current_price": 28.338
         },
         "IQ": {
           "shares": 3,
           "avg_cost": 1.08,
-          "current_price": 1.05
+          "current_price": 1.035
         }
       },
       "rank": 20
