@@ -1,57 +1,62 @@
 {
-  "cash": 4133.51,
-  "total_value": 9998.92,
+  "cash": 3761.03,
+  "total_value": 10009.71,
   "positions": {
     "QQQ": {
       "shares": 4,
       "avg_cost": 726.8423,
-      "current_price": 726.5727
+      "current_price": 728.83
     },
     "VTI": {
       "shares": 8,
       "avg_cost": 369.89,
-      "current_price": 369.89
+      "current_price": 370.11
+    },
+    "GLD": {
+      "shares": 1,
+      "avg_cost": 372.48,
+      "current_price": 372.48
     }
   },
-  "total_return_pct": -0.01,
+  "total_return_pct": 0.1,
   "total_return_usd": 0.0,
-  "today_pnl": -1.08,
-  "today_pnl_pct": -0.01,
+  "today_pnl": 9.71,
+  "today_pnl_pct": 0.1,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T19:17:30Z",
+  "last_updated": "2026-07-01T19:45:29Z",
   "last_session": {
-    "at": "2026-07-01T19:17:30Z",
+    "at": "2026-07-01T19:45:29Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "QQQ",
-        -1.32
+        "GLD",
+        1.11
       ],
       [
-        "GLD",
-        1.26
+        "QQQ",
+        -1.05
       ],
       [
         "VEA",
-        -1.16
+        -1.02
       ],
       [
         "VXUS",
-        -1.03
+        -0.89
       ],
       [
         "VNQ",
-        0.8
+        0.6
       ],
       [
         "VWO",
-        -0.75
+        -0.54
       ]
     ],
     "news_read": [],
@@ -464,6 +469,10 @@
     {
       "timestamp": "2026-07-01T19:17:30Z",
       "value": 9998.92
+    },
+    {
+      "timestamp": "2026-07-01T19:45:29Z",
+      "value": 10009.71
     }
   ]
 }
