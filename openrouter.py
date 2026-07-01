@@ -1,6 +1,6 @@
 """
 OpenRouter decision function for PaperChase trading bots.
-OpenAI-compatible API that routes to free models (Nemotron, MiniMax, Ling).
+OpenAI-compatible API that routes to free models (Gemma, Llama, DeepSeek, Mistral).
 Includes per-bot fallback model support for resilience.
 
 If the primary model fails (provider error / rate limit / content=null),
@@ -12,7 +12,7 @@ from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
 # Global fallback chain — used as last resort if primary AND per-bot fallback both fail
-GLOBAL_FALLBACK_CHAIN = ["nemotron", "qwen"]  # qwen3-coder: free, 1M ctx, great JSON output
+GLOBAL_FALLBACK_CHAIN = ["llama", "gemma", "deepseek", "mistral", "dolphin"]
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
@@ -175,31 +175,44 @@ def _resolve_base_name(model_name):
     if not model_name:
         return None
     m = str(model_name).lower()
-    if "minimax" in m:
-        return "minimax"
-    if "nemotron" in m:
-        return "nemotron"
-    if "ling" in m:
-        return "ling"
+    if "gemma" in m:
+        return "gemma"
+    if "llama" in m or "maverick" in m:
+        return "llama"
+    if "deepseek" in m:
+        return "deepseek"
+    if "mistral" in m or "dolphin" in m:
+        return "mistral"
     if "qwen" in m:
-        return "qwen"
-    if "kimi" in m:
-        return "kimi"
+        return "deepseek"
     return model_name
 
 
 def _resolve_model_id(model_name):
     """Map short model name to full OpenRouter model ID."""
     mapping = {
-        "nemotron": "nvidia/nemotron-3-super-120b-a12b:free",
-        "nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b:free",
-        "minimax": "minimax/minimax-m2.5:free",
-        "minimax-m2.5": "minimax/minimax-m2.5:free",
-        "ling": "inclusionai/ling-2.6-1t:free",
-        "qwen": "qwen/qwen3-coder:free",
-        "qwen3-coder": "qwen/qwen3-coder:free",
-        "kimi": "moonshotai/kimi-k2.6:free",
-        "kimi-k2.6": "moonshotai/kimi-k2.6:free",
+        # === WORKING FREE MODELS (mid-2026) ===
+        "gemma": "google/gemma-4-31b-it:free",
+        "google/gemma-4-31b-it": "google/gemma-4-31b-it:free",
+        "llama": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
+        "meta-llama/llama-4-maverick-17b-128e-instruct": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
+        "deepseek": "deepseek/deepseek-chat-v3-0324:free",
+        "deepseek/deepseek-chat-v3-0324": "deepseek/deepseek-chat-v3-0324:free",
+        "mistral": "mistralai/mistral-small-3.1-24b-instruct:free",
+        "mistralai/mistral-small-3.1-24b-instruct": "mistralai/mistral-small-3.1-24b-instruct:free",
+        "dolphin": "cognitivecomputations/dolphin3.0-mistral-24b:free",
+        "cognitivecomputations/dolphin3.0-mistral-24b": "cognitivecomputations/dolphin3.0-mistral-24b:free",
+        # Legacy names -- backwards compat with bot_profiles.py
+
+        "nemotron": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
+        "nemotron-3-super-120b-a12b": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
+        "minimax": "google/gemma-4-31b-it:free",
+        "minimax-m2.5": "google/gemma-4-31b-it:free",
+        "ling": "mistralai/mistral-small-3.1-24b-instruct:free",
+        "qwen": "deepseek/deepseek-chat-v3-0324:free",
+        "qwen3-coder": "deepseek/deepseek-chat-v3-0324:free",
+        "kimi": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
+        "kimi-k2.6": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
     }
     result = mapping.get(model_name)
     if result:

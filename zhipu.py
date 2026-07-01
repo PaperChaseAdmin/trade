@@ -1,17 +1,17 @@
 """
-Zhipu (智谱) GLM-4.5-Air via OpenRouter for PaperChase trading bots.
+Zhipu (智谱) Zhipu-fallback via OpenRouter for PaperChase trading bots.
 Ultimate fallback when OpenRouter's main 3 models all fail.
 Uses OpenRouter API (z-ai/glm-4.5-air:free) — no separate Zhipu key needed.
 """
 import os, json, time, requests, re
 from openrouter import _build_prompt, _build_bot_context, calc_value
 
-MODEL_ID = "z-ai/glm-4.5-air:free"
+MODEL_ID = "google/gemma-4-31b-it:free"
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
                  model_name="glm-4.5-air", fallback_model=None):
-    """Returns (decision_dict, context_dict) using GLM-4.5-Air via OpenRouter."""
+    """Returns (decision_dict, context_dict) using Zhipu-fallback via OpenRouter."""
     total = pf.get("total_value", calc_value(pf, prices))
     ret = (total - profile["initial_capital"]) / profile["initial_capital"] * 100
 
@@ -65,10 +65,10 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                 err = data["error"]
                 msg = err.get("message", str(err))
                 if attempt == 0:
-                    print(f"    GLM-4.5-Air error: {msg[:100]}, retrying...")
+                    print(f"    Zhipu-fallback error: {msg[:100]}, retrying...")
                     time.sleep(5)
                     continue
-                raise ValueError(f"GLM-4.5-Air error: {msg[:200]}")
+                raise ValueError(f"Zhipu-fallback error: {msg[:200]}")
 
             content = data["choices"][0]["message"].get("content")
             if not content:
@@ -77,7 +77,7 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                 if json_match:
                     content = json_match.group()
                 else:
-                    raise ValueError("GLM-4.5-Air returned empty content")
+                    raise ValueError("Zhipu-fallback returned empty content")
 
             result = json.loads(content)
             if not isinstance(result, dict):
@@ -85,15 +85,15 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                 if json_match:
                     result = json.loads(json_match.group())
                 else:
-                    raise ValueError(f"GLM returned non-dict: {type(result)}")
+                    raise ValueError(f"Gemma returned non-dict: {type(result)}")
 
             return result, ctx
 
         except (requests.Timeout, json.JSONDecodeError) as e:
             if attempt == 0:
-                print(f"    GLM-4.5-Air {type(e).__name__}, retrying...")
+                print(f"    Zhipu-fallback {type(e).__name__}, retrying...")
                 time.sleep(5)
                 continue
             raise
 
-    raise RuntimeError("GLM-4.5-Air failed after all attempts")
+    raise RuntimeError("Zhipu-fallback failed after all attempts")
