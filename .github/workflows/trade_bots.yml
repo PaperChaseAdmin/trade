@@ -8,15 +8,15 @@ on:
     # Last reactivation: 2026-06-07 (hermes redesign)
     - cron: '0,30 13-21 * * 1-5'
   workflow_dispatch:
-  inputs:
-    force_run:
-      description: 'Run even when market is closed (TEST MODE)'
-      required: false
-      default: '0'
-      type: choice
-      options:
-        - '0'
-        - '1'
+    inputs:
+      force_run:
+        description: 'Run even when market is closed (TEST MODE)'
+        required: false
+        default: '0'
+        type: choice
+        options:
+          - '0'
+          - '1'
 
 concurrency:
   group: trade-bots
