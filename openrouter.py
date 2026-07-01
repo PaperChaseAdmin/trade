@@ -209,6 +209,7 @@ def _resolve_model_id(model_name):
         "minimax": "google/gemma-4-31b-it:free",
         "minimax-m2.5": "google/gemma-4-31b-it:free",
         "ling": "mistralai/mistral-small-3.1-24b-instruct:free",
+        "ling-2.6-1t": "mistralai/mistral-small-3.1-24b-instruct:free",
         "qwen": "deepseek/deepseek-chat-v3-0324:free",
         "qwen3-coder": "deepseek/deepseek-chat-v3-0324:free",
         "kimi": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
