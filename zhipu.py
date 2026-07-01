@@ -6,7 +6,7 @@ Uses OpenRouter API (z-ai/glm-4.5-air:free) — no separate Zhipu key needed.
 import os, json, time, requests, re
 from openrouter import _build_prompt, _build_bot_context, calc_value
 
-MODEL_ID = "google/gemma-4-31b-it:free"
+MODEL_ID = "nvidia/nemotron-3-super-120b-a12b:free"
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,

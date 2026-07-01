@@ -12,7 +12,7 @@ from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
 # Global fallback chain — used as last resort if primary AND per-bot fallback both fail
-GLOBAL_FALLBACK_CHAIN = ["llama", "gemma", "deepseek", "mistral", "dolphin"]
+GLOBAL_FALLBACK_CHAIN = ["nemotron", "gemma", "cohere", "liquid"]
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
@@ -191,29 +191,29 @@ def _resolve_base_name(model_name):
 def _resolve_model_id(model_name):
     """Map short model name to full OpenRouter model ID."""
     mapping = {
-        # === WORKING FREE MODELS (mid-2026) ===
-        "gemma": "google/gemma-4-31b-it:free",
-        "google/gemma-4-31b-it": "google/gemma-4-31b-it:free",
-        "llama": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
-        "meta-llama/llama-4-maverick-17b-128e-instruct": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
-        "deepseek": "deepseek/deepseek-chat-v3-0324:free",
-        "deepseek/deepseek-chat-v3-0324": "deepseek/deepseek-chat-v3-0324:free",
-        "mistral": "mistralai/mistral-small-3.1-24b-instruct:free",
-        "mistralai/mistral-small-3.1-24b-instruct": "mistralai/mistral-small-3.1-24b-instruct:free",
-        "dolphin": "cognitivecomputations/dolphin3.0-mistral-24b:free",
-        "cognitivecomputations/dolphin3.0-mistral-24b": "cognitivecomputations/dolphin3.0-mistral-24b:free",
-        # Legacy names -- backwards compat with bot_profiles.py
-
-        "nemotron": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
-        "nemotron-3-super-120b-a12b": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
-        "minimax": "google/gemma-4-31b-it:free",
-        "minimax-m2.5": "google/gemma-4-31b-it:free",
-        "ling": "mistralai/mistral-small-3.1-24b-instruct:free",
-        "ling-2.6-1t": "mistralai/mistral-small-3.1-24b-instruct:free",
-        "qwen": "deepseek/deepseek-chat-v3-0324:free",
-        "qwen3-coder": "deepseek/deepseek-chat-v3-0324:free",
-        "kimi": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
-        "kimi-k2.6": "meta-llama/llama-4-maverick-17b-128e-instruct:free",
+        # === CONFIRMED WORKING FREE MODELS (tested 2026-07-01 from HK) ===
+        "nemotron": "nvidia/nemotron-3-super-120b-a12b:free",
+        "nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b:free",
+        "gemma": "google/gemma-4-26b-a4b-it:free",
+        "google/gemma-4-26b-a4b-it": "google/gemma-4-26b-a4b-it:free",
+        "cohere": "cohere/north-mini-code:free",
+        "cohere/north-mini-code": "cohere/north-mini-code:free",
+        "liquid": "liquid/lfm-2.5-1.2b-thinking:free",
+        "liquid/lfm-2.5-1.2b-thinking": "liquid/lfm-2.5-1.2b-thinking:free",
+        # Legacy names — backwards compat with bot_profiles.py
+        "qwen": "nvidia/nemotron-3-super-120b-a12b:free",
+        "qwen3-coder": "nvidia/nemotron-3-super-120b-a12b:free",
+        "kimi": "nvidia/nemotron-3-super-120b-a12b:free",
+        "kimi-k2.6": "nvidia/nemotron-3-super-120b-a12b:free",
+        "minimax": "google/gemma-4-26b-a4b-it:free",
+        "minimax-m2.5": "google/gemma-4-26b-a4b-it:free",
+        "ling": "cohere/north-mini-code:free",
+        "ling-2.6-1t": "cohere/north-mini-code:free",
+        # Fallback-only (not tested from HK but kept for diversity)
+        "llama": "nvidia/nemotron-3-super-120b-a12b:free",
+        "deepseek": "nvidia/nemotron-3-super-120b-a12b:free",
+        "mistral": "cohere/north-mini-code:free",
+        "dolphin": "cohere/north-mini-code:free",
     }
     result = mapping.get(model_name)
     if result:
