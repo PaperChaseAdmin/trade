@@ -1,25 +1,56 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
+  "cash": 8013.75,
+  "total_value": 10000.0,
+  "positions": {
+    "HTGC": {
+      "shares": 125,
+      "avg_cost": 15.89,
+      "current_price": 15.89
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
+  "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T04:52:40Z",
+  "last_updated": "2026-07-01T18:49:10Z",
   "last_session": {
-    "at": "2026-07-01T04:52:40Z",
+    "at": "2026-07-01T18:49:10Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "IBM",
+        2.54
+      ],
+      [
+        "BTI",
+        -1.46
+      ],
+      [
+        "ENB",
+        -1.29
+      ],
+      [
+        "VZ",
+        -1.26
+      ],
+      [
+        "GLD",
+        1.22
+      ],
+      [
+        "PM",
+        -1.09
+      ]
+    ],
     "news_read": [],
-    "domain_extra": "",
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
     "ai_analysis": "",
     "outlook": "Analysis unavailable",
     "trades_made": 0
@@ -420,6 +451,10 @@
     {
       "timestamp": "2026-07-01T04:52:40Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:49:10Z",
+      "value": 10000.0
     }
   ]
 }

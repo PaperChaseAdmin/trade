@@ -1,23 +1,54 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
+  "cash": 9742.24,
+  "total_value": 10000.0,
+  "positions": {
+    "WFC": {
+      "shares": 3,
+      "avg_cost": 85.92,
+      "current_price": 85.92
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
+  "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T04:52:29Z",
+  "last_updated": "2026-07-01T18:44:30Z",
   "last_session": {
-    "at": "2026-07-01T04:52:29Z",
+    "at": "2026-07-01T18:44:30Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "WFC",
+        3.94
+      ],
+      [
+        "PGR",
+        3.33
+      ],
+      [
+        "PRU",
+        3.2
+      ],
+      [
+        "AXP",
+        3.14
+      ],
+      [
+        "MET",
+        3.07
+      ],
+      [
+        "BAC",
+        2.39
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
     "ai_analysis": "",
@@ -420,6 +451,10 @@
     {
       "timestamp": "2026-07-01T04:52:29Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:44:30Z",
+      "value": 10000.0
     }
   ]
 }
