@@ -1,27 +1,58 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 6057.2,
+  "total_value": 10191.8,
+  "positions": {
+    "SOXL": {
+      "shares": 18,
+      "current_price": 229.7,
+      "avg_cost": 219.0444
+    }
+  },
+  "total_return_pct": 1.92,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 191.8,
+  "today_pnl_pct": 1.92,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T04:52:34Z",
+  "last_action": "The market shows mixed signals, but SOXL's decline offers a potential entry point amid broader volatility.",
+  "last_updated": "2026-07-01T19:42:45Z",
   "last_session": {
-    "at": "2026-07-01T04:52:34Z",
+    "at": "2026-07-01T19:42:45Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "SOXL",
+        -14.29
+      ],
+      [
+        "CRWD",
+        9.7
+      ],
+      [
+        "PLTR",
+        8.52
+      ],
+      [
+        "MRVL",
+        -6.57
+      ],
+      [
+        "AXON",
+        5.48
+      ],
+      [
+        "AMD",
+        -5.0
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "SOXL's significant drop and my strict risk management align with current market conditions.",
+    "outlook": "The market shows mixed signals, but SOXL's decline offers a potential entry point amid broader volatility.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -420,6 +451,18 @@
     {
       "timestamp": "2026-07-01T04:52:34Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:50:34Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-01T19:12:40Z",
+      "value": 9992.0
+    },
+    {
+      "timestamp": "2026-07-01T19:42:45Z",
+      "value": 10191.8
     }
   ]
 }

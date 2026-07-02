@@ -1,23 +1,54 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 5626.72,
+  "total_value": 9975.88,
+  "positions": {
+    "COIN": {
+      "shares": 27,
+      "current_price": 161.08,
+      "avg_cost": 161.9733
+    }
+  },
+  "total_return_pct": -0.24,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -24.12,
+  "today_pnl_pct": -0.24,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T04:52:39Z",
+  "last_updated": "2026-07-01T19:40:35Z",
   "last_session": {
-    "at": "2026-07-01T04:52:39Z",
+    "at": "2026-07-01T19:40:35Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "RIOT",
+        -10.35
+      ],
+      [
+        "COIN",
+        10.18
+      ],
+      [
+        "META",
+        9.21
+      ],
+      [
+        "MSTR",
+        8.71
+      ],
+      [
+        "HOOD",
+        8.71
+      ],
+      [
+        "PLTR",
+        8.52
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
     "ai_analysis": "",
@@ -420,6 +451,18 @@
     {
       "timestamp": "2026-07-01T04:52:39Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:47:49Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-01T19:10:14Z",
+      "value": 9970.6
+    },
+    {
+      "timestamp": "2026-07-01T19:40:35Z",
+      "value": 9975.88
     }
   ]
 }

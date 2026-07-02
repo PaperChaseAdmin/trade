@@ -1,23 +1,54 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 7054.7,
+  "total_value": 9997.5,
+  "positions": {
+    "AAPL": {
+      "shares": 10,
+      "current_price": 294.28,
+      "avg_cost": 294.53
+    }
+  },
+  "total_return_pct": -0.03,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -2.5,
+  "today_pnl_pct": -0.03,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T04:52:23Z",
+  "last_updated": "2026-07-01T19:35:03Z",
   "last_session": {
-    "at": "2026-07-01T04:52:23Z",
+    "at": "2026-07-01T19:35:03Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "LRCX",
+        -10.16
+      ],
+      [
+        "META",
+        9.21
+      ],
+      [
+        "AMAT",
+        -9.11
+      ],
+      [
+        "MU",
+        -7.79
+      ],
+      [
+        "INTC",
+        -7.62
+      ],
+      [
+        "AMD",
+        -5.0
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
     "ai_analysis": "",
@@ -420,6 +451,18 @@
     {
       "timestamp": "2026-07-01T04:52:23Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:40:38Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T19:04:49Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-01T19:35:03Z",
+      "value": 9997.5
     }
   ]
 }

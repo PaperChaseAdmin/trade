@@ -1,23 +1,59 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 6108.7,
+  "total_value": 10002.59,
+  "positions": {
+    "GD": {
+      "shares": 8,
+      "avg_cost": 362.105,
+      "current_price": 362.43
+    },
+    "CAT": {
+      "shares": 1,
+      "avg_cost": 994.455,
+      "current_price": 994.455
+    }
+  },
+  "total_return_pct": 0.03,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 2.59,
+  "today_pnl_pct": 0.03,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T04:52:17Z",
+  "last_updated": "2026-07-01T19:34:49Z",
   "last_session": {
-    "at": "2026-07-01T04:52:17Z",
+    "at": "2026-07-01T19:34:49Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "CAT",
+        -6.71
+      ],
+      [
+        "GEO",
+        2.81
+      ],
+      [
+        "HAL",
+        -2.4
+      ],
+      [
+        "GD",
+        2.31
+      ],
+      [
+        "NUE",
+        -2.2
+      ],
+      [
+        "GM",
+        -2.18
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
     "ai_analysis": "",
@@ -420,6 +456,18 @@
     {
       "timestamp": "2026-07-01T04:52:17Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:36:01Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T19:01:46Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-01T19:34:49Z",
+      "value": 10002.59
     }
   ]
 }

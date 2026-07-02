@@ -1,27 +1,58 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 6596.21,
+  "total_value": 9978.89,
+  "positions": {
+    "COIN": {
+      "shares": 21,
+      "avg_cost": 162.085,
+      "current_price": 161.08
+    }
+  },
+  "total_return_pct": -0.21,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -21.11,
+  "today_pnl_pct": -0.21,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T04:52:50Z",
+  "last_action": "Crypto volatility remains high, requiring caution despite positive sentiment signals.",
+  "last_updated": "2026-07-01T19:47:22Z",
   "last_session": {
-    "at": "2026-07-01T04:52:50Z",
+    "at": "2026-07-01T19:47:22Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "RIOT",
+        -10.35
+      ],
+      [
+        "COIN",
+        10.18
+      ],
+      [
+        "MSTR",
+        8.71
+      ],
+      [
+        "HOOD",
+        8.71
+      ],
+      [
+        "HUT",
+        -7.21
+      ],
+      [
+        "CIFR",
+        -6.29
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "RIOT's -10.3% dip and COIN's +10.2% surge highlight short-term opportunities, while MSTR's stability suggests long-term confidence. I maintain a reserve to mitigate risks.",
+    "outlook": "Crypto volatility remains high, requiring caution despite positive sentiment signals.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -420,6 +451,18 @@
     {
       "timestamp": "2026-07-01T04:52:50Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:51:40Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-01T19:21:56Z",
+      "value": 9974.27
+    },
+    {
+      "timestamp": "2026-07-01T19:47:22Z",
+      "value": 9978.89
     }
   ]
 }

@@ -1,23 +1,64 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 3761.03,
+  "total_value": 10009.71,
+  "positions": {
+    "QQQ": {
+      "shares": 4,
+      "avg_cost": 726.8423,
+      "current_price": 728.83
+    },
+    "VTI": {
+      "shares": 8,
+      "avg_cost": 369.89,
+      "current_price": 370.11
+    },
+    "GLD": {
+      "shares": 1,
+      "avg_cost": 372.48,
+      "current_price": 372.48
+    }
+  },
+  "total_return_pct": 0.1,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 9.71,
+  "today_pnl_pct": 0.1,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-01",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-01T04:52:45Z",
+  "last_updated": "2026-07-01T19:45:29Z",
   "last_session": {
-    "at": "2026-07-01T04:52:45Z",
+    "at": "2026-07-01T19:45:29Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "GLD",
+        1.11
+      ],
+      [
+        "QQQ",
+        -1.05
+      ],
+      [
+        "VEA",
+        -1.02
+      ],
+      [
+        "VXUS",
+        -0.89
+      ],
+      [
+        "VNQ",
+        0.6
+      ],
+      [
+        "VWO",
+        -0.54
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
     "ai_analysis": "",
@@ -420,6 +461,18 @@
     {
       "timestamp": "2026-07-01T04:52:45Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:50:16Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-01T19:17:30Z",
+      "value": 9998.92
+    },
+    {
+      "timestamp": "2026-07-01T19:45:29Z",
+      "value": 10009.71
     }
   ]
 }
