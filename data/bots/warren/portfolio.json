@@ -1,18 +1,24 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
+  "cash": 8022.35,
+  "total_value": 10000.0,
+  "positions": {
+    "KO": {
+      "shares": 24,
+      "avg_cost": 82.402,
+      "current_price": 82.402
+    }
+  },
   "total_return_pct": 0.0,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
+  "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-02",
-  "last_action": "Market sentiment is neutral with modest upside; I expect limited movement until clearer valuation signals appear.",
-  "last_updated": "2026-07-02T14:01:12Z",
+  "last_action": "Analysis unavailable",
+  "last_updated": "2026-07-02T14:31:29Z",
   "last_session": {
-    "at": "2026-07-02T14:01:12Z",
+    "at": "2026-07-02T14:31:29Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -20,33 +26,33 @@
     "top_movers": [
       [
         "AAPL",
-        2.85
-      ],
-      [
-        "WMT",
-        1.93
-      ],
-      [
-        "CVX",
-        1.7
+        3.78
       ],
       [
         "ABBV",
-        1.34
+        2.44
+      ],
+      [
+        "WMT",
+        1.98
+      ],
+      [
+        "CVX",
+        1.97
       ],
       [
         "JNJ",
-        1.18
+        1.79
       ],
       [
-        "MCD",
-        0.98
+        "V",
+        1.59
       ]
     ],
     "news_read": [],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "Today's watchlist showed AAPL leading with +2.9% gain, followed by WMT and CVX, but no stock displayed a clear discount to intrinsic value; all are trading near recent highs with modest moves. I prefer to keep cash reserves and wait for a more attractive entry point on a quality moat company like JNJ or PG before deploying capital.",
-    "outlook": "Market sentiment is neutral with modest upside; I expect limited movement until clearer valuation signals appear.",
+    "ai_analysis": "",
+    "outlook": "Analysis unavailable",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -57,6 +63,10 @@
     {
       "timestamp": "2026-07-02T14:01:12Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-02T14:31:29Z",
+      "value": 10000.0
     }
   ]
 }
