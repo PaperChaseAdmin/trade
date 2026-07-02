@@ -1,52 +1,57 @@
 {
-  "cash": 9350.0,
-  "total_value": 10000.0,
+  "cash": 9244.18,
+  "total_value": 10005.0,
   "positions": {
     "PLTR": {
       "shares": 5,
       "avg_cost": 130.0,
-      "current_price": 130.0
+      "current_price": 131.0
+    },
+    "RKLB": {
+      "shares": 1,
+      "avg_cost": 105.82,
+      "current_price": 105.82
     }
   },
-  "total_return_pct": 0.0,
+  "total_return_pct": 0.05,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 5.0,
+  "today_pnl_pct": 0.05,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-02",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-02T13:39:33Z",
+  "last_updated": "2026-07-02T14:15:25Z",
   "last_session": {
-    "at": "2026-07-02T13:39:33Z",
+    "at": "2026-07-02T14:15:25Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "PLTR",
-        3.49
+        "RKLB",
+        5.83
+      ],
+      [
+        "ARM",
+        5.78
       ],
       [
         "SMCI",
-        3.0
+        4.67
       ],
       [
-        "ANET",
-        -2.24
+        "PLTR",
+        4.19
       ],
       [
-        "AXON",
-        -1.63
+        "IONQ",
+        4.19
       ],
       [
-        "RKLB",
-        1.48
-      ],
-      [
-        "SOXL",
-        -1.28
+        "CRWD",
+        3.04
       ]
     ],
     "news_read": [],
@@ -59,6 +64,10 @@
     {
       "timestamp": "2026-07-02T13:39:33Z",
       "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-02T14:15:25Z",
+      "value": 10005.0
     }
   ]
 }

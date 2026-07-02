@@ -1,52 +1,57 @@
 {
-  "cash": 7351.93,
-  "total_value": 10000.01,
+  "cash": 5081.13,
+  "total_value": 10042.83,
   "positions": {
     "LMT": {
       "shares": 5,
       "avg_cost": 529.615,
-      "current_price": 529.615
+      "current_price": 538.18
+    },
+    "BA": {
+      "shares": 10,
+      "avg_cost": 227.08,
+      "current_price": 227.08
     }
   },
-  "total_return_pct": 0.0,
+  "total_return_pct": 0.43,
   "total_return_usd": 0.0,
-  "today_pnl": 0.01,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 42.83,
+  "today_pnl_pct": 0.43,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-02",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-02T13:33:57Z",
+  "last_updated": "2026-07-02T14:03:12Z",
   "last_session": {
-    "at": "2026-07-02T13:33:57Z",
+    "at": "2026-07-02T14:03:12Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "LMT",
-        2.2
-      ],
-      [
-        "LHX",
-        2.1
+        "BA",
+        3.86
       ],
       [
         "NOC",
-        2.09
+        3.66
       ],
       [
-        "BA",
-        1.93
+        "LHX",
+        3.39
       ],
       [
-        "GM",
-        1.81
+        "LMT",
+        3.07
       ],
       [
-        "F",
-        1.69
+        "RTX",
+        2.79
+      ],
+      [
+        "CVX",
+        1.7
       ]
     ],
     "news_read": [],
@@ -59,6 +64,10 @@
     {
       "timestamp": "2026-07-02T13:33:57Z",
       "value": 10000.01
+    },
+    {
+      "timestamp": "2026-07-02T14:03:12Z",
+      "value": 10042.83
     }
   ]
 }

@@ -1,64 +1,68 @@
 {
   "cash": 9428.45,
-  "total_value": 10000.0,
+  "total_value": 10018.0,
   "positions": {
     "HOOD": {
       "shares": 5,
       "avg_cost": 114.31,
-      "current_price": 114.31
+      "current_price": 117.91
     }
   },
-  "total_return_pct": 0.0,
+  "total_return_pct": 0.18,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 18.0,
+  "today_pnl_pct": 0.18,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-02",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-02T13:34:36Z",
+  "last_action": "Monitor CRSP and HOOD for sustained momentum before executing trades.",
+  "last_updated": "2026-07-02T14:06:45Z",
   "last_session": {
-    "at": "2026-07-02T13:34:36Z",
+    "at": "2026-07-02T14:06:45Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
+        "CRSP",
+        9.91
+      ],
+      [
         "HOOD",
-        5.52
+        8.58
       ],
       [
         "COIN",
-        4.81
-      ],
-      [
-        "PLTR",
-        3.49
-      ],
-      [
-        "RXRX",
-        3.0
+        6.78
       ],
       [
         "NTLA",
-        2.9
+        6.15
       ],
       [
-        "BEAM",
-        2.84
+        "RKLB",
+        5.83
+      ],
+      [
+        "RXRX",
+        5.45
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "CRSP's 9.9% gain and HOOD's 8.6% surge present strong opportunities, while maintaining cash reserves ensures flexibility. Next, assess CRSP's fundamentals and HOOD's valuation before committing.",
+    "outlook": "Monitor CRSP and HOOD for sustained momentum before executing trades.",
     "trades_made": 0
   },
   "portfolio_history": [
     {
       "timestamp": "2026-07-02T13:34:36Z",
       "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-02T14:06:45Z",
+      "value": 10018.0
     }
   ]
 }
