@@ -1,16 +1,468 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 7054.7,
+  "total_value": 9997.5,
+  "positions": {
+    "AAPL": {
+      "shares": 10,
+      "current_price": 294.28,
+      "avg_cost": 294.53
+    }
+  },
+  "total_return_pct": -0.03,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -2.5,
+  "today_pnl_pct": -0.03,
   "total_trades": 0,
   "today_start_value": 10000,
-  "today_date": "2026-05-02",
-  "last_action": "",
-  "last_updated": "",
-  "last_session": {},
-  "portfolio_history": []
+  "today_date": "2026-07-01",
+  "last_action": "Analysis unavailable",
+  "last_updated": "2026-07-01T19:35:03Z",
+  "last_session": {
+    "at": "2026-07-01T19:35:03Z",
+    "fear_greed": null,
+    "fear_greed_label": null,
+    "sp500_change": null,
+    "vix": null,
+    "top_movers": [
+      [
+        "LRCX",
+        -10.16
+      ],
+      [
+        "META",
+        9.21
+      ],
+      [
+        "AMAT",
+        -9.11
+      ],
+      [
+        "MU",
+        -7.79
+      ],
+      [
+        "INTC",
+        -7.62
+      ],
+      [
+        "AMD",
+        -5.0
+      ]
+    ],
+    "news_read": [],
+    "domain_extra": "",
+    "ai_analysis": "",
+    "outlook": "Analysis unavailable",
+    "trades_made": 0
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-06-22T13:31:21Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T14:01:27Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T14:31:10Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T15:01:39Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T15:31:22Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T16:01:33Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T16:31:22Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T17:01:42Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T17:31:18Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T17:43:00Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T18:01:33Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T18:31:32Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T19:01:19Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-22T19:31:20Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T13:31:29Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T14:01:40Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T14:31:13Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T15:01:30Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T15:31:20Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T15:46:46Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T16:01:32Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T16:31:19Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T17:01:24Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T17:31:24Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T17:52:45Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T18:01:37Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T18:31:17Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T19:01:32Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-23T19:31:22Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T13:31:17Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T14:01:18Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T14:31:18Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T15:01:25Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T15:33:01Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T16:01:17Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T16:31:31Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T17:01:12Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T17:31:24Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T17:53:25Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T18:01:16Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T18:31:34Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T19:01:21Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T19:31:19Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-24T19:44:10Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T13:31:25Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T14:01:38Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T14:31:31Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T15:01:20Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T15:31:16Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T15:39:27Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T16:01:14Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T16:31:16Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T17:01:26Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T17:31:14Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T18:01:16Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T18:08:48Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T18:31:14Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T19:01:39Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-25T19:31:14Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-26T13:31:18Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-26T14:01:33Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-26T14:31:22Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-26T15:01:11Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-26T15:23:00Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-26T15:31:13Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-26T17:16:15Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-26T19:18:36Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T13:31:16Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T14:01:19Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T14:31:11Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T15:01:20Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T15:31:19Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T16:01:24Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T16:31:11Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T16:38:26Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T17:01:15Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T17:31:09Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T18:01:25Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T18:31:21Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T19:01:20Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T19:04:26Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-29T19:31:23Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T13:31:17Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T14:01:20Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T14:31:35Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T15:01:29Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T15:26:08Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T15:31:46Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T16:01:13Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T16:31:13Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T17:01:27Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T17:23:37Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T17:31:26Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T18:01:23Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T18:31:10Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T19:01:24Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T19:18:35Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-06-30T19:31:31Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T04:52:23Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T18:40:38Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-07-01T19:04:49Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-01T19:35:03Z",
+      "value": 9997.5
+    }
+  ]
 }
