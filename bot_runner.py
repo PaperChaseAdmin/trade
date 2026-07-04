@@ -20,7 +20,7 @@ ET = pytz.timezone("America/New_York")
 DATA_DIR          = "data/bots"
 LEADERBOARD_FILE  = "data/leaderboard.json"
 MARKET_SENTINEL   = "https://paperchase.online/market-sentinel/data/market_data.json"
-MAX_WORKERS       = 3   # concurrent bots — lower to avoid OpenRouter rate limits
+MAX_WORKERS       = 1   # concurrent bots — single worker to avoid OpenRouter rate limits
 
 
 # ── Market Hours ──────────────────────────────────────────────────────────────

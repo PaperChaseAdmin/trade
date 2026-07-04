@@ -12,7 +12,7 @@ from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
 # Global fallback chain — used as last resort if primary AND per-bot fallback both fail
-GLOBAL_FALLBACK_CHAIN = ["nemotron", "gemma", "cohere", "liquid"]
+GLOBAL_FALLBACK_CHAIN = ["nemotron", "gemma", "cohere", "liquid", "qwen3-coder", "llama70b", "nvidia/nemotron-3-ultra-550b-a55b:free"]
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
@@ -171,21 +171,27 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
 
 
 def _resolve_base_name(model_name):
-    """Convert model name strings to base name for model ID resolution."""
+    """Convert model name strings to base name for model ID resolution.
+    ponytail: pass through unrecognized names — _resolve_model_id handles the mapping."""
     if not model_name:
         return None
     m = str(model_name).lower()
-    if "gemma" in m:
+    if "gemma" in m and "26b" in m:
         return "gemma"
-    if "llama" in m or "maverick" in m:
-        return "llama"
-    if "deepseek" in m:
-        return "deepseek"
-    if "mistral" in m or "dolphin" in m:
-        return "mistral"
-    if "qwen" in m:
-        return "deepseek"
-    return model_name
+    if "nemotron" in m and "ultra" in m:
+        return "nemotron-ultra"
+    if "nemotron" in m:
+        return "nemotron"
+    if "llama" in m and "70b" in m:
+        return "llama70b"
+    if "qwen" in m and "coder" in m:
+        return "qwen3-coder"
+    if "cohere" in m:
+        return "cohere"
+    if "liquid" in m:
+        return "liquid"
+    # Pass through — _resolve_model_id has the definitive mapping
+    return m
 
 
 def _resolve_model_id(model_name):
@@ -200,6 +206,13 @@ def _resolve_model_id(model_name):
         "cohere/north-mini-code": "cohere/north-mini-code:free",
         "liquid": "liquid/lfm-2.5-1.2b-thinking:free",
         "liquid/lfm-2.5-1.2b-thinking": "liquid/lfm-2.5-1.2b-thinking:free",
+        # Global chain diversifiers (different providers = better rate limit survival)
+        "qwen3-coder": "qwen/qwen3-coder:free",
+        "qwen/qwen3-coder": "qwen/qwen3-coder:free",
+        "llama70b": "meta-llama/llama-3.3-70b-instruct:free",
+        "meta-llama/llama-3.3-70b-instruct": "meta-llama/llama-3.3-70b-instruct:free",
+        "nemotron-ultra": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3-ultra-550b-a55b": "nvidia/nemotron-3-ultra-550b-a55b:free",
         # Legacy names — backwards compat with bot_profiles.py
         "qwen": "nvidia/nemotron-3-super-120b-a12b:free",
         "qwen3-coder": "nvidia/nemotron-3-super-120b-a12b:free",
