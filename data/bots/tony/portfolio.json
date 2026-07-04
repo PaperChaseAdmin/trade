@@ -1,16 +1,52 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 9244.18,
+  "total_value": 9999.41,
+  "positions": {
+    "PLTR": {
+      "shares": 5,
+      "avg_cost": 130.0,
+      "current_price": 130.37
+    },
+    "RKLB": {
+      "shares": 1,
+      "avg_cost": 105.82,
+      "current_price": 103.38
+    }
+  },
+  "total_return_pct": -0.01,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -0.59,
+  "today_pnl_pct": -0.01,
   "total_trades": 0,
   "today_start_value": 10000,
-  "today_date": "2026-05-02",
-  "last_action": "",
-  "last_updated": "",
-  "last_session": {},
-  "portfolio_history": []
+  "today_date": "2026-07-02",
+  "last_action": "Analysis unavailable",
+  "last_updated": "2026-07-02T14:45:46Z",
+  "last_session": {
+    "at": "2026-07-02T14:45:46Z",
+    "fear_greed": null,
+    "fear_greed_label": null,
+    "sp500_change": null,
+    "vix": null,
+    "top_movers": [],
+    "news_read": [],
+    "domain_extra": "",
+    "ai_analysis": "",
+    "outlook": "Analysis unavailable",
+    "trades_made": 0
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-07-02T13:39:33Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-02T14:15:25Z",
+      "value": 10005.0
+    },
+    {
+      "timestamp": "2026-07-02T14:45:46Z",
+      "value": 9999.41
+    }
+  ]
 }

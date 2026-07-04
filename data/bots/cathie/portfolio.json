@@ -1,16 +1,77 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 6613.15,
+  "total_value": 10009.52,
+  "positions": {
+    "HOOD": {
+      "shares": 5,
+      "avg_cost": 114.31,
+      "current_price": 116.215
+    },
+    "TSLA": {
+      "shares": 7,
+      "avg_cost": 402.185,
+      "current_price": 402.185
+    }
+  },
+  "total_return_pct": 0.1,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 9.52,
+  "today_pnl_pct": 0.1,
   "total_trades": 0,
   "today_start_value": 10000,
-  "today_date": "2026-05-02",
-  "last_action": "",
-  "last_updated": "",
-  "last_session": {},
-  "portfolio_history": []
+  "today_date": "2026-07-02",
+  "last_action": "Analysis unavailable",
+  "last_updated": "2026-07-02T14:33:04Z",
+  "last_session": {
+    "at": "2026-07-02T14:33:04Z",
+    "fear_greed": null,
+    "fear_greed_label": null,
+    "sp500_change": null,
+    "vix": null,
+    "top_movers": [
+      [
+        "CRSP",
+        8.25
+      ],
+      [
+        "HOOD",
+        6.73
+      ],
+      [
+        "COIN",
+        6.01
+      ],
+      [
+        "TSLA",
+        -5.41
+      ],
+      [
+        "BEAM",
+        4.06
+      ],
+      [
+        "PLTR",
+        3.92
+      ]
+    ],
+    "news_read": [],
+    "domain_extra": "",
+    "ai_analysis": "",
+    "outlook": "Analysis unavailable",
+    "trades_made": 0
+  },
+  "portfolio_history": [
+    {
+      "timestamp": "2026-07-02T13:34:36Z",
+      "value": 10000.0
+    },
+    {
+      "timestamp": "2026-07-02T14:06:45Z",
+      "value": 10018.0
+    },
+    {
+      "timestamp": "2026-07-02T14:33:04Z",
+      "value": 10009.52
+    }
+  ]
 }
