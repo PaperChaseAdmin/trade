@@ -1,29 +1,59 @@
 {
   "cash": 8111.7,
-  "total_value": 10001.05,
+  "total_value": 10002.25,
   "positions": {
     "GLD": {
       "shares": 5,
       "avg_cost": 377.66,
-      "current_price": 377.87
+      "current_price": 378.11
+    },
+    "TIPS": {
+      "shares": 1,
+      "avg_cost": 0.0004,
+      "current_price": 0.0004
     }
   },
-  "total_return_pct": 0.01,
+  "total_return_pct": 0.02,
   "total_return_usd": 0.0,
-  "today_pnl": 1.05,
-  "today_pnl_pct": 0.01,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 0,
-  "today_start_value": 10000,
-  "today_date": "2026-07-02",
+  "today_start_value": 10002.25,
+  "today_date": "2026-07-05",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-02T14:36:34Z",
+  "last_updated": "2026-07-05T03:06:12Z",
   "last_session": {
-    "at": "2026-07-02T14:36:34Z",
+    "at": "2026-07-05T03:06:12Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "TIPS",
+        -20.0
+      ],
+      [
+        "GDX",
+        4.48
+      ],
+      [
+        "IAU",
+        2.04
+      ],
+      [
+        "GLD",
+        2.03
+      ],
+      [
+        "EEM",
+        -1.17
+      ],
+      [
+        "PDBC",
+        0.57
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
     "ai_analysis": "",
@@ -42,6 +72,10 @@
     {
       "timestamp": "2026-07-02T14:36:34Z",
       "value": 10001.05
+    },
+    {
+      "timestamp": "2026-07-05T03:06:12Z",
+      "value": 10002.25
     }
   ]
 }

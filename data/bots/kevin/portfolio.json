@@ -1,31 +1,61 @@
 {
-  "cash": 8050.6,
-  "total_value": 10007.56,
+  "cash": 6223.25,
+  "total_value": 10013.64,
   "positions": {
     "MO": {
       "shares": 27,
       "avg_cost": 72.2,
-      "current_price": 72.48
+      "current_price": 72.705
+    },
+    "ABBV": {
+      "shares": 7,
+      "avg_cost": 261.05,
+      "current_price": 261.05
     }
   },
-  "total_return_pct": 0.08,
+  "total_return_pct": 0.14,
   "total_return_usd": 0.0,
-  "today_pnl": 7.56,
-  "today_pnl_pct": 0.08,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 0,
-  "today_start_value": 10000,
-  "today_date": "2026-07-02",
+  "today_start_value": 10013.64,
+  "today_date": "2026-07-05",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-02T14:44:00Z",
+  "last_updated": "2026-07-05T03:15:16Z",
   "last_session": {
-    "at": "2026-07-02T14:44:00Z",
+    "at": "2026-07-05T03:15:16Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "ABBV",
+        3.99
+      ],
+      [
+        "JNJ",
+        3.57
+      ],
+      [
+        "KO",
+        3.51
+      ],
+      [
+        "O",
+        3.27
+      ],
+      [
+        "PM",
+        2.58
+      ],
+      [
+        "OHI",
+        2.55
+      ]
+    ],
     "news_read": [],
-    "domain_extra": "",
+    "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
     "ai_analysis": "",
     "outlook": "Analysis unavailable",
     "trades_made": 0
@@ -42,6 +72,10 @@
     {
       "timestamp": "2026-07-02T14:44:00Z",
       "value": 10007.56
+    },
+    {
+      "timestamp": "2026-07-05T03:15:16Z",
+      "value": 10013.64
     }
   ]
 }
