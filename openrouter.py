@@ -245,7 +245,11 @@ def _build_prompt(profile, pf, pos_display, avail, prices, changes, ctx, total, 
 
     news_lines = "\n".join(f"  • {h}" for h in ctx["selected_news"]) or "  (no relevant headlines available)"
 
-    return f"""You are {profile['display_name']}, a paper trader on PaperChase Trading Arena.
+    return f"""Reply ONLY valid JSON. No other text.
+Format: {{"trades":[{{"action":"BUY","ticker":"AAPL","shares":5,"reasoning":"..."}}],"market_outlook":"...","analysis":"..."}}
+No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}
+
+You are {profile['display_name']}, a paper trader on PaperChase Trading Arena.
 
 PERSONALITY: {profile['prompt_persona']}
 
@@ -265,10 +269,7 @@ NEWS RELEVANT TO YOUR STRATEGY:
 {ctx['domain_extra']}
 
 RULES: Only BUY from your watchlist. Max {int(profile['max_position_pct']*100)}% per stock. Keep >=${profile['min_cash_reserve']} cash reserve. Max {profile['max_trades_per_session']} trades this session.
-
-Reply ONLY valid JSON:
-{{"trades":[{{"action":"BUY","ticker":"AAPL","shares":5,"reasoning":"one sentence citing specific data"}}],"market_outlook":"one sentence","analysis":"2-3 sentences: what specific data points you noticed, why you acted or held back, what you're watching next"}}
-No trades: {{"trades":[],"market_outlook":"...","analysis":"..."}}"""
+"""
 
 
 def _build_bot_context(bot_id, profile, prices, changes, market_data):
