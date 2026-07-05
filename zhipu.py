@@ -6,7 +6,7 @@ Uses OpenRouter API (z-ai/glm-4.5-air:free) — no separate Zhipu key needed.
 import os, json, time, requests, re
 from openrouter import _build_prompt, _build_bot_context, calc_value
 
-MODEL_ID = "qwen/qwen3-coder:free"
+MODEL_ID = "qwen/qwen3-coder"
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,

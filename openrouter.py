@@ -12,7 +12,7 @@ from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
 # Global fallback chain — used as last resort if primary AND per-bot fallback both fail
-GLOBAL_FALLBACK_CHAIN = ["openrouter/free", "nemotron", "gemma", "cohere", "liquid", "qwen3-coder", "llama70b", "nvidia/nemotron-3-ultra-550b-a55b:free"]
+GLOBAL_FALLBACK_CHAIN = ["nemotron", "gemma", "cohere", "liquid", "qwen3-coder", "llama70b", "nemotron-ultra"]
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
@@ -198,35 +198,35 @@ def _resolve_model_id(model_name):
     """Map short model name to full OpenRouter model ID."""
     mapping = {
         # === CONFIRMED WORKING FREE MODELS (tested 2026-07-01 from HK) ===
-        "nemotron": "nvidia/nemotron-3-super-120b-a12b:free",
-        "nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b:free",
-        "gemma": "google/gemma-4-26b-a4b-it:free",
-        "google/gemma-4-26b-a4b-it": "google/gemma-4-26b-a4b-it:free",
-        "cohere": "cohere/north-mini-code:free",
-        "cohere/north-mini-code": "cohere/north-mini-code:free",
-        "liquid": "liquid/lfm-2.5-1.2b-thinking:free",
-        "liquid/lfm-2.5-1.2b-thinking": "liquid/lfm-2.5-1.2b-thinking:free",
+        "nemotron": "nvidia/nemotron-3-super-120b-a12b",
+        "nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b",
+        "gemma": "google/gemma-4-26b-a4b-it",
+        "google/gemma-4-26b-a4b-it": "google/gemma-4-26b-a4b-it",
+        "cohere": "cohere/north-mini-code",
+        "cohere/north-mini-code": "cohere/north-mini-code",
+        "liquid": "liquid/lfm-2.5-1.2b-thinking",
+        "liquid/lfm-2.5-1.2b-thinking": "liquid/lfm-2.5-1.2b-thinking",
         # Global chain diversifiers (different providers = better rate limit survival)
-        "qwen3-coder": "qwen/qwen3-coder:free",
-        "qwen/qwen3-coder": "qwen/qwen3-coder:free",
-        "llama70b": "meta-llama/llama-3.3-70b-instruct:free",
-        "meta-llama/llama-3.3-70b-instruct": "meta-llama/llama-3.3-70b-instruct:free",
-        "nemotron-ultra": "nvidia/nemotron-3-ultra-550b-a55b:free",
-        "nvidia/nemotron-3-ultra-550b-a55b": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "qwen3-coder": "qwen/qwen3-coder",
+        "qwen/qwen3-coder": "qwen/qwen3-coder",
+        "llama70b": "meta-llama/llama-3.3-70b-instruct",
+        "meta-llama/llama-3.3-70b-instruct": "meta-llama/llama-3.3-70b-instruct",
+        "nemotron-ultra": "nvidia/nemotron-3-ultra-550b-a55b",
+        "nvidia/nemotron-3-ultra-550b-a55b": "nvidia/nemotron-3-ultra-550b-a55b",
         # Legacy names — backwards compat with bot_profiles.py
-        "qwen": "nvidia/nemotron-3-super-120b-a12b:free",
-        "qwen3-coder": "nvidia/nemotron-3-super-120b-a12b:free",
-        "kimi": "nvidia/nemotron-3-super-120b-a12b:free",
-        "kimi-k2.6": "nvidia/nemotron-3-super-120b-a12b:free",
-        "minimax": "google/gemma-4-26b-a4b-it:free",
-        "minimax-m2.5": "google/gemma-4-26b-a4b-it:free",
-        "ling": "cohere/north-mini-code:free",
-        "ling-2.6-1t": "cohere/north-mini-code:free",
+        "qwen": "nvidia/nemotron-3-super-120b-a12b",
+        "qwen3-coder": "nvidia/nemotron-3-super-120b-a12b",
+        "kimi": "nvidia/nemotron-3-super-120b-a12b",
+        "kimi-k2.6": "nvidia/nemotron-3-super-120b-a12b",
+        "minimax": "google/gemma-4-26b-a4b-it",
+        "minimax-m2.5": "google/gemma-4-26b-a4b-it",
+        "ling": "cohere/north-mini-code",
+        "ling-2.6-1t": "cohere/north-mini-code",
         # Fallback-only (not tested from HK but kept for diversity)
-        "llama": "nvidia/nemotron-3-super-120b-a12b:free",
-        "deepseek": "nvidia/nemotron-3-super-120b-a12b:free",
-        "mistral": "cohere/north-mini-code:free",
-        "dolphin": "cohere/north-mini-code:free",
+        "llama": "nvidia/nemotron-3-super-120b-a12b",
+        "deepseek": "nvidia/nemotron-3-super-120b-a12b",
+        "mistral": "cohere/north-mini-code",
+        "dolphin": "cohere/north-mini-code",
     }
     result = mapping.get(model_name)
     if result:
