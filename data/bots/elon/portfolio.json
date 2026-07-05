@@ -1,34 +1,59 @@
 {
-  "cash": 8498.14,
-  "total_value": 10044.42,
+  "cash": 6957.04,
+  "total_value": 10057.86,
   "positions": {
     "AAPL": {
-      "shares": 5,
-      "avg_cost": 296.49,
-      "current_price": 305.32
+      "shares": 10,
+      "current_price": 308.22,
+      "avg_cost": 302.355
     },
     "RIVN": {
       "shares": 1,
       "avg_cost": 19.41,
-      "current_price": 19.68
+      "current_price": 18.625
     }
   },
-  "total_return_pct": 0.44,
+  "total_return_pct": 0.58,
   "total_return_usd": 0.0,
-  "today_pnl": 44.42,
-  "today_pnl_pct": 0.44,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 0,
-  "today_start_value": 10000,
-  "today_date": "2026-07-02",
+  "today_start_value": 10057.86,
+  "today_date": "2026-07-05",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-02T14:36:46Z",
+  "last_updated": "2026-07-05T02:45:28Z",
   "last_session": {
-    "at": "2026-07-02T14:36:46Z",
+    "at": "2026-07-05T02:45:28Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "RIVN",
+        8.44
+      ],
+      [
+        "MSTR",
+        7.9
+      ],
+      [
+        "TSLA",
+        -7.49
+      ],
+      [
+        "META",
+        -4.9
+      ],
+      [
+        "AAPL",
+        4.84
+      ],
+      [
+        "IONQ",
+        -4.44
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
     "ai_analysis": "",
@@ -47,6 +72,10 @@
     {
       "timestamp": "2026-07-02T14:36:46Z",
       "value": 10044.42
+    },
+    {
+      "timestamp": "2026-07-05T02:45:28Z",
+      "value": 10057.86
     }
   ]
 }

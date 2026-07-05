@@ -8,20 +8,45 @@
   "today_pnl_pct": 0.0,
   "total_trades": 0,
   "today_start_value": 10000,
-  "today_date": "2026-07-02",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-02T14:53:41Z",
+  "today_date": "2026-07-05",
+  "last_action": "Analysed \u2014 no trades",
+  "last_updated": "2026-07-05T03:23:22Z",
   "last_session": {
-    "at": "2026-07-02T14:53:41Z",
+    "at": "2026-07-05T03:23:22Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
-    "top_movers": [],
+    "top_movers": [
+      [
+        "XLU",
+        2.21
+      ],
+      [
+        "XLF",
+        1.53
+      ],
+      [
+        "VNQ",
+        1.24
+      ],
+      [
+        "XLRE",
+        1.13
+      ],
+      [
+        "BAC",
+        0.63
+      ],
+      [
+        "TIP",
+        0.15
+      ]
+    ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
+    "ai_analysis": "VIX and Fear & Greed indices are unavailable, preventing assessment of inflation or recession fears. Watchlist shows modest gains in utilities and banks, but without clear macro signals, Jerome prefers to stay in cash and await data. Next session will monitor for VIX readings and any relevant headlines to guide defensive or risk-on moves.",
+    "outlook": "",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -35,6 +60,10 @@
     },
     {
       "timestamp": "2026-07-02T14:53:41Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-07-05T03:23:22Z",
       "value": 10000
     }
   ]
