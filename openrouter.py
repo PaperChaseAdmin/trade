@@ -12,7 +12,7 @@ from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
 # Global fallback chain — used as last resort if primary AND per-bot fallback both fail
-GLOBAL_FALLBACK_CHAIN = ["nemotron", "gemma", "cohere", "liquid", "qwen3-coder", "llama70b", "nemotron-ultra"]
+GLOBAL_FALLBACK_CHAIN = ["deepseek/deepseek-chat", "mistralai/mistral-small-24b-instruct-2501", "qwen/qwen2.5-72b-instruct", "nemotron", "gemma"]
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
