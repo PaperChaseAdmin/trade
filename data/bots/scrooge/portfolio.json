@@ -1,18 +1,24 @@
 {
-  "cash": 10000,
-  "total_value": 10000,
-  "positions": {},
-  "total_return_pct": 0.0,
+  "cash": 8005.62,
+  "total_value": 9999.99,
+  "positions": {
+    "HTGC": {
+      "shares": 125,
+      "avg_cost": 15.955,
+      "current_price": 15.955
+    }
+  },
+  "total_return_pct": -0.0,
   "total_return_usd": 0.0,
-  "today_pnl": 0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -0.01,
+  "today_pnl_pct": -0.0,
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-05",
-  "last_action": "Stable with cautious optimism",
-  "last_updated": "2026-07-05T03:23:11Z",
+  "last_action": "Analysis unavailable",
+  "last_updated": "2026-07-05T14:46:37Z",
   "last_session": {
-    "at": "2026-07-05T03:23:11Z",
+    "at": "2026-07-05T14:46:37Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -45,8 +51,8 @@
     ],
     "news_read": [],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "The 4%+ dividend yield stocks in my watchlist show strong momentum, particularly ABBV and OHI, while maintaining a balanced portfolio with cash reserves. I will monitor VIX levels closely for volatility.",
-    "outlook": "Stable with cautious optimism",
+    "ai_analysis": "",
+    "outlook": "Analysis unavailable",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -65,6 +71,10 @@
     {
       "timestamp": "2026-07-05T03:23:11Z",
       "value": 10000
+    },
+    {
+      "timestamp": "2026-07-05T14:46:37Z",
+      "value": 9999.99
     }
   ]
 }
