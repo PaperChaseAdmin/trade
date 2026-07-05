@@ -81,7 +81,7 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                     "max_tokens": 1200,
                     "response_format": {"type": "json_object"},
                 },
-                timeout=45,  # more patience → less fallback churn
+                timeout=90,  # more patience → less fallback churn
             )
             data = resp.json()
             if "error" in data:
@@ -110,7 +110,7 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                             "max_tokens": 1200,
                             "response_format": {"type": "json_object"},
                         },
-                        timeout=45,
+                        timeout=90,
                     )
                     data = resp.json()
                     if "error" in data:
