@@ -1,62 +1,67 @@
 {
-  "cash": 5444.59,
-  "total_value": 10057.87,
+  "cash": 4389.3,
+  "total_value": 9985.72,
   "positions": {
     "AAPL": {
       "shares": 10,
-      "current_price": 308.22,
+      "current_price": 307.87,
       "avg_cost": 302.355
     },
     "RIVN": {
       "shares": 1,
       "avg_cost": 19.41,
-      "current_price": 18.625
+      "current_price": 18.68
     },
     "MSTR": {
       "shares": 15,
       "avg_cost": 100.83,
-      "current_price": 100.83
+      "current_price": 96.25
+    },
+    "AMD": {
+      "shares": 2,
+      "avg_cost": 527.645,
+      "current_price": 527.645
     }
   },
-  "total_return_pct": 0.58,
+  "total_return_pct": -0.14,
   "total_return_usd": 0.0,
-  "today_pnl": 0.01,
+  "today_pnl": 0.0,
   "today_pnl_pct": 0.0,
   "total_trades": 0,
-  "today_start_value": 10057.86,
-  "today_date": "2026-07-05",
+  "today_start_value": 9985.72,
+  "today_date": "2026-07-06",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-05T14:37:48Z",
+  "last_updated": "2026-07-06T13:31:47Z",
   "last_session": {
-    "at": "2026-07-05T14:37:48Z",
+    "at": "2026-07-06T13:31:47Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "RIVN",
-        8.44
-      ],
-      [
         "MSTR",
-        7.9
+        -3.98
       ],
       [
-        "TSLA",
-        -7.49
+        "AMD",
+        2.18
       ],
       [
         "META",
-        -4.9
-      ],
-      [
-        "AAPL",
-        4.84
+        2.0
       ],
       [
         "IONQ",
-        -4.44
+        1.93
+      ],
+      [
+        "COIN",
+        -1.4
+      ],
+      [
+        "TSLA",
+        1.17
       ]
     ],
     "news_read": [],
@@ -85,6 +90,10 @@
     {
       "timestamp": "2026-07-05T14:37:48Z",
       "value": 10057.87
+    },
+    {
+      "timestamp": "2026-07-06T13:31:47Z",
+      "value": 9985.72
     }
   ]
 }
