@@ -1,62 +1,67 @@
 {
-  "cash": 6682.28,
-  "total_value": 10001.29,
+  "cash": 6050.08,
+  "total_value": 10002.82,
   "positions": {
     "HTGC": {
       "shares": 125,
       "avg_cost": 15.955,
-      "current_price": 16.09
+      "current_price": 16.1399
     },
     "T": {
       "shares": 38,
       "avg_cost": 20.83,
-      "current_price": 20.42
+      "current_price": 20.325
     },
     "MAIN": {
       "shares": 10,
       "avg_cost": 53.18,
-      "current_price": 53.18
+      "current_price": 53.07
+    },
+    "O": {
+      "shares": 10,
+      "avg_cost": 63.22,
+      "current_price": 63.22
     }
   },
-  "total_return_pct": 0.01,
+  "total_return_pct": 0.03,
   "total_return_usd": 0.0,
-  "today_pnl": -11.2,
-  "today_pnl_pct": -0.11,
+  "today_pnl": -9.67,
+  "today_pnl_pct": -0.1,
   "total_trades": 0,
   "today_start_value": 10012.49,
   "today_date": "2026-07-06",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-06T14:12:05Z",
+  "last_updated": "2026-07-06T14:42:35Z",
   "last_session": {
-    "at": "2026-07-06T14:12:05Z",
+    "at": "2026-07-06T14:42:35Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
+        "IBM",
+        2.54
+      ],
+      [
         "MAIN",
-        2.35
+        2.14
       ],
       [
         "ABBV",
-        -2.22
-      ],
-      [
-        "IBM",
-        1.88
+        -1.9
       ],
       [
         "MO",
-        -1.4
+        -1.61
       ],
       [
-        "O",
-        -0.97
+        "T",
+        -1.24
       ],
       [
         "HTGC",
-        0.81
+        1.13
       ]
     ],
     "news_read": [],
@@ -93,6 +98,10 @@
     {
       "timestamp": "2026-07-06T14:12:05Z",
       "value": 10001.29
+    },
+    {
+      "timestamp": "2026-07-06T14:42:35Z",
+      "value": 10002.82
     }
   ]
 }
