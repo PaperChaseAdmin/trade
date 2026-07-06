@@ -1,57 +1,62 @@
 {
-  "cash": 3299.15,
-  "total_value": 10040.2,
+  "cash": 2176.9,
+  "total_value": 10123.48,
   "positions": {
     "AAPL": {
       "shares": 11,
-      "current_price": 307.87,
+      "current_price": 309.2,
       "avg_cost": 304.2155
     },
     "AVGO": {
       "shares": 9,
       "avg_cost": 372.72,
-      "current_price": 372.72
+      "current_price": 380.3475
+    },
+    "AMD": {
+      "shares": 2,
+      "avg_cost": 561.125,
+      "current_price": 561.125
     }
   },
-  "total_return_pct": 0.4,
+  "total_return_pct": 1.23,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": 83.28,
+  "today_pnl_pct": 0.83,
   "total_trades": 0,
   "today_start_value": 10040.2,
   "today_date": "2026-07-06",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-06T13:33:55Z",
+  "last_updated": "2026-07-06T14:04:58Z",
   "last_session": {
-    "at": "2026-07-06T13:33:55Z",
+    "at": "2026-07-06T14:04:58Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
+        "AMD",
+        8.5
+      ],
+      [
+        "QCOM",
+        5.87
+      ],
+      [
         "AVGO",
-        3.6
-      ],
-      [
-        "LRCX",
-        3.05
-      ],
-      [
-        "AMAT",
-        2.98
+        5.55
       ],
       [
         "INTC",
-        2.78
+        4.22
       ],
       [
-        "MU",
-        2.67
+        "LRCX",
+        2.74
       ],
       [
-        "AMD",
-        2.18
+        "TSLA",
+        2.42
       ]
     ],
     "news_read": [],
@@ -84,6 +89,10 @@
     {
       "timestamp": "2026-07-06T13:33:55Z",
       "value": 10040.2
+    },
+    {
+      "timestamp": "2026-07-06T14:04:58Z",
+      "value": 10123.48
     }
   ]
 }
