@@ -1,94 +1,94 @@
 {
   "cash": 208.11,
-  "total_value": 10051.69,
+  "total_value": 10048.41,
   "positions": {
     "HTGC": {
       "shares": 125,
       "avg_cost": 15.955,
-      "current_price": 15.865
+      "current_price": 15.84
     },
     "T": {
       "shares": 39,
-      "current_price": 21.315,
+      "current_price": 21.305,
       "avg_cost": 20.8362
     },
     "MAIN": {
       "shares": 10,
       "avg_cost": 53.18,
-      "current_price": 51.18
+      "current_price": 51.19
     },
     "O": {
       "shares": 31,
-      "current_price": 63.55,
+      "current_price": 63.54,
       "avg_cost": 63.6706
     },
     "VZ": {
       "shares": 13,
-      "current_price": 43.04,
+      "current_price": 43.07,
       "avg_cost": 42.1835
     },
     "MO": {
       "shares": 20,
       "avg_cost": 71.62,
-      "current_price": 73.8
+      "current_price": 73.73
     },
     "GLD": {
       "shares": 1,
       "avg_cost": 380.44,
-      "current_price": 370.73
+      "current_price": 370.385
     },
     "PM": {
       "shares": 2,
       "avg_cost": 182.2283,
-      "current_price": 188.46
+      "current_price": 188.68
     },
     "IBM": {
       "shares": 1,
       "avg_cost": 299.72,
-      "current_price": 300.8
+      "current_price": 301.66
     },
     "ENB": {
       "shares": 11,
-      "current_price": 55.04,
+      "current_price": 55.05,
       "avg_cost": 53.675
     },
     "ABBV": {
       "shares": 1,
       "avg_cost": 255.8736,
-      "current_price": 253.705
+      "current_price": 254.49
     },
     "WPC": {
       "shares": 2,
       "avg_cost": 70.81,
-      "current_price": 71.285
+      "current_price": 71.11
     },
     "BTI": {
       "shares": 3,
       "avg_cost": 61.93,
-      "current_price": 61.75
+      "current_price": 61.71
     },
     "OHI": {
       "shares": 3,
       "avg_cost": 50.01,
-      "current_price": 49.41
+      "current_price": 49.455
     },
     "ARCC": {
       "shares": 7,
       "avg_cost": 18.595,
-      "current_price": 18.3084
+      "current_price": 18.3
     }
   },
-  "total_return_pct": 0.52,
+  "total_return_pct": 0.48,
   "total_return_usd": 0.0,
-  "today_pnl": 20.86,
-  "today_pnl_pct": 0.21,
+  "today_pnl": 17.58,
+  "today_pnl_pct": 0.18,
   "total_trades": 0,
   "today_start_value": 10030.83,
   "today_date": "2026-07-08",
-  "last_action": "Market is neutral with moderate sentiment; dividend-paying assets remain attractive for cash flow. No dividend cuts signaled, so holding existing high-yield positions is prudent.",
-  "last_updated": "2026-07-08T15:09:21Z",
+  "last_action": "Market neutral; focus on high-yield dividend stocks; cash reserve maintained.",
+  "last_updated": "2026-07-08T15:22:48Z",
   "last_session": {
-    "at": "2026-07-08T15:09:21Z",
+    "at": "2026-07-08T15:22:48Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -96,33 +96,33 @@
     "top_movers": [
       [
         "MAIN",
-        -2.35
+        -2.29
       ],
       [
         "GLD",
-        -1.78
+        -1.88
       ],
       [
         "IBM",
-        -1.76
-      ],
-      [
-        "MO",
-        1.14
-      ],
-      [
-        "T",
-        1.07
+        -1.46
       ],
       [
         "VZ",
-        1.07
+        1.13
+      ],
+      [
+        "MO",
+        1.06
+      ],
+      [
+        "T",
+        1.02
       ]
     ],
     "news_read": [],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "Cash reserve is $208.11, requiring at least $200 to be kept, leaving only $8.11 available for new purchases. Watchlist stocks are priced above $15, making any new buy infeasible without violating the cash reserve rule. Therefore, no trades are executed this session; we continue to hold HTGC, T, MAIN, O, VZ, MO, GLD, PM, IBM, ENB, ABBV, WPC, BTI, OHI, ARCC and await better entry points or dividend increases.",
-    "outlook": "Market is neutral with moderate sentiment; dividend-paying assets remain attractive for cash flow. No dividend cuts signaled, so holding existing high-yield positions is prudent.",
+    "ai_analysis": "Cash $208.11, need to keep >=$200, leaving only $8.11 for new purchases. No watchlist stock priced <=$8.11, so no buys. No dividend cuts signaled, so holding existing positions. Will await better entry or cash accumulation.",
+    "outlook": "Market neutral; focus on high-yield dividend stocks; cash reserve maintained.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -257,6 +257,10 @@
     {
       "timestamp": "2026-07-08T15:09:21Z",
       "value": 10051.69
+    },
+    {
+      "timestamp": "2026-07-08T15:22:48Z",
+      "value": 10048.41
     }
   ]
 }
