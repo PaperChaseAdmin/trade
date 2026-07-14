@@ -9,10 +9,10 @@
   "total_trades": 0,
   "today_start_value": 10000,
   "today_date": "2026-07-14",
-  "last_action": "Market data is incomplete; without clear VIX or inflation signals, maintaining a neutral stance is prudent.",
-  "last_updated": "2026-07-14T13:44:51Z",
+  "last_action": "Insufficient data to determine market conditions. Awaiting VIX and Fear & Greed Index updates.",
+  "last_updated": "2026-07-14T14:08:21Z",
   "last_session": {
-    "at": "2026-07-14T13:44:51Z",
+    "at": "2026-07-14T14:08:21Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -20,33 +20,33 @@
     "top_movers": [
       [
         "GS",
-        4.55
+        6.82
+      ],
+      [
+        "BAC",
+        2.04
       ],
       [
         "JPM",
-        -1.57
-      ],
-      [
-        "XLU",
-        0.78
+        1.65
       ],
       [
         "XLF",
-        -0.57
+        0.96
       ],
       [
-        "IEF",
-        0.33
+        "XLU",
+        0.68
       ],
       [
         "PFF",
-        0.31
+        0.48
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Given the absence of VIX readings and relevant news, there is no compelling reason to deviate from cash. Defensive assets would be considered if VIX exceeded 30, while risk rotation would occur if VIX fell below 15. Until such thresholds are known, preserving capital and waiting for clearer macro indicators aligns with a data-dependent approach.",
-    "outlook": "Market data is incomplete; without clear VIX or inflation signals, maintaining a neutral stance is prudent.",
+    "ai_analysis": "Current market data is incomplete. No trades will be executed until key indicators like VIX and Fear & Greed Index are available.",
+    "outlook": "Insufficient data to determine market conditions. Awaiting VIX and Fear & Greed Index updates.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -364,6 +364,10 @@
     },
     {
       "timestamp": "2026-07-14T13:44:51Z",
+      "value": 10000
+    },
+    {
+      "timestamp": "2026-07-14T14:08:21Z",
       "value": 10000
     }
   ]
