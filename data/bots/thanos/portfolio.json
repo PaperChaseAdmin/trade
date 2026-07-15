@@ -1,7 +1,13 @@
 {
-  "cash": 10025.21,
+  "cash": 9745.86,
   "total_value": 10025.21,
-  "positions": {},
+  "positions": {
+    "XLE": {
+      "shares": 5,
+      "avg_cost": 55.87,
+      "current_price": 55.87
+    }
+  },
   "total_return_pct": 0.25,
   "total_return_usd": 0.0,
   "today_pnl": -1.69,
@@ -10,37 +16,37 @@
   "today_start_value": 10026.9,
   "today_date": "2026-07-15",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-15T15:14:07Z",
+  "last_updated": "2026-07-15T15:37:25Z",
   "last_session": {
-    "at": "2026-07-15T15:14:07Z",
+    "at": "2026-07-15T15:37:25Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "XLV",
-        -1.55
+        "XLE",
+        -1.89
+      ],
+      [
+        "XLK",
+        -1.79
       ],
       [
         "XLC",
-        1.49
-      ],
-      [
-        "GLD",
-        1.49
+        1.77
       ],
       [
         "XLY",
-        1.29
+        1.57
       ],
       [
         "XLF",
-        1.28
+        0.8
       ],
       [
-        "XLE",
-        -0.94
+        "XLP",
+        0.65
       ]
     ],
     "news_read": [],
@@ -432,6 +438,10 @@
     },
     {
       "timestamp": "2026-07-15T15:14:07Z",
+      "value": 10025.21
+    },
+    {
+      "timestamp": "2026-07-15T15:37:25Z",
       "value": 10025.21
     }
   ]
