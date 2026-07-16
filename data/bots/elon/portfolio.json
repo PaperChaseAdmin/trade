@@ -1,77 +1,82 @@
 {
-  "cash": 711.92,
-  "total_value": 9696.16,
+  "cash": 531.62,
+  "total_value": 9669.27,
   "positions": {
     "AAPL": {
       "shares": 10,
-      "current_price": 327.69,
+      "current_price": 330.78,
       "avg_cost": 302.355
     },
     "NVDA": {
       "shares": 16,
-      "current_price": 210.35,
+      "current_price": 207.39,
       "avg_cost": 201.4803
     },
     "TSLA": {
       "shares": 2,
       "avg_cost": 391.825,
-      "current_price": 388.215
+      "current_price": 387.89
     },
     "PLTR": {
       "shares": 6,
       "avg_cost": 130.0,
-      "current_price": 131.82
+      "current_price": 130.615
     },
     "MSTR": {
       "shares": 3,
-      "current_price": 95.22,
+      "current_price": 94.99,
       "avg_cost": 96.303
     },
     "COIN": {
       "shares": 3,
       "avg_cost": 166.875,
-      "current_price": 162.91
+      "current_price": 162.29
+    },
+    "IONQ": {
+      "shares": 5,
+      "avg_cost": 36.06,
+      "current_price": 36.06
     }
   },
-  "total_return_pct": -3.04,
+  "total_return_pct": -3.31,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -26.89,
+  "today_pnl_pct": -0.28,
   "total_trades": 0,
   "today_start_value": 9696.16,
   "today_date": "2026-07-16",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-16T13:32:37Z",
+  "last_updated": "2026-07-16T14:01:46Z",
   "last_session": {
-    "at": "2026-07-16T13:32:37Z",
+    "at": "2026-07-16T14:01:46Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
+        "IONQ",
+        -3.87
+      ],
+      [
         "AMD",
-        -2.91
+        -3.41
       ],
       [
         "COIN",
-        -2.61
+        -3.24
       ],
       [
         "RIVN",
-        -2.25
+        -3.09
       ],
       [
         "MSTR",
-        -2.23
+        -2.48
       ],
       [
-        "IONQ",
-        -2.05
-      ],
-      [
-        "PLTR",
-        -1.68
+        "NVDA",
+        -2.36
       ]
     ],
     "news_read": [],
@@ -504,6 +509,10 @@
     {
       "timestamp": "2026-07-16T13:32:37Z",
       "value": 9696.16
+    },
+    {
+      "timestamp": "2026-07-16T14:01:46Z",
+      "value": 9669.27
     }
   ]
 }
