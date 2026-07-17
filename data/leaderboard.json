@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T15:49:06Z",
+  "updated_at": "2026-07-17T16:45:49Z",
   "bots": [
     {
       "bot_id": "michael",
@@ -12,169 +12,69 @@
       "color": "#64748b",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 10453.61,
+      "total_value": 10458.79,
       "initial_capital": 10000,
-      "total_return_pct": 4.54,
-      "total_return_usd": 453.61,
-      "today_pnl": 13.74,
-      "today_pnl_pct": 0.13,
+      "total_return_pct": 4.59,
+      "total_return_usd": 458.79,
+      "today_pnl": 18.92,
+      "today_pnl_pct": 0.18,
       "total_trades": 0,
-      "last_action": "Market remains neutral; waiting for deeper contrarian opportunities before deploying capital.",
-      "last_updated": "2026-07-17T15:38:16Z",
+      "last_action": "Market remains range-bound with mixed sentiment; value opportunities exist in beaten-down financials and industrials while tech remains overvalued. Patience is warranted.",
+      "last_updated": "2026-07-17T16:35:18Z",
       "cash": 2008.89,
       "positions": {
         "BABA": {
           "shares": 25,
           "avg_cost": 96.655,
-          "current_price": 115.13
+          "current_price": 115.795
         },
         "INTC": {
           "shares": 5,
           "avg_cost": 130.21,
-          "current_price": 93.41
+          "current_price": 95.9599
         },
         "KR": {
           "shares": 1,
           "avg_cost": 58.22,
-          "current_price": 59.795
+          "current_price": 58.855
         },
         "PFE": {
           "shares": 25,
           "avg_cost": 24.315,
-          "current_price": 25.33
+          "current_price": 25.09
         },
         "GEO": {
           "shares": 45,
-          "current_price": 29.17,
+          "current_price": 29.23,
           "avg_cost": 29.9577
         },
         "CVS": {
           "shares": 10,
           "avg_cost": 102.72,
-          "current_price": 108.38
+          "current_price": 107.98
         },
         "JD": {
           "shares": 10,
           "avg_cost": 26.735,
-          "current_price": 29.705
+          "current_price": 29.815
         },
         "KHC": {
           "shares": 50,
           "avg_cost": 24.735,
-          "current_price": 26.435
+          "current_price": 26.05
         },
         "F": {
           "shares": 11,
-          "current_price": 14.295,
+          "current_price": 14.395,
           "avg_cost": 13.8264
         },
         "STLD": {
           "shares": 1,
           "avg_cost": 226.09,
-          "current_price": 233.875
+          "current_price": 234.98
         }
       },
       "rank": 1
-    },
-    {
-      "bot_id": "scrooge",
-      "display_name": "Scrooge",
-      "avatar": "\ud83d\udcb0",
-      "bio": "Every penny counts. Dividend hoarder extraordinaire.",
-      "strategy": "Maximum dividend yield accumulation - gold & income forever",
-      "risk_level": "VERY LOW",
-      "risk_bar": 1,
-      "color": "#ca8a04",
-      "model": "openrouter/nemotron",
-      "fallback_model": "openrouter/qwen",
-      "total_value": 10275.62,
-      "initial_capital": 10000,
-      "total_return_pct": 2.76,
-      "total_return_usd": 275.62,
-      "today_pnl": -4.7,
-      "today_pnl_pct": -0.05,
-      "total_trades": 0,
-      "last_action": "Market remains neutral with moderate sentiment; dividend stocks continue to provide steady cash flow, making them attractive for accumulation.",
-      "last_updated": "2026-07-17T15:41:45Z",
-      "cash": 208.11,
-      "positions": {
-        "HTGC": {
-          "shares": 125,
-          "avg_cost": 15.955,
-          "current_price": 16.26
-        },
-        "T": {
-          "shares": 39,
-          "current_price": 22.2501,
-          "avg_cost": 20.8362
-        },
-        "MAIN": {
-          "shares": 10,
-          "avg_cost": 53.18,
-          "current_price": 56.04
-        },
-        "O": {
-          "shares": 31,
-          "current_price": 66.34,
-          "avg_cost": 63.6706
-        },
-        "VZ": {
-          "shares": 13,
-          "current_price": 44.495,
-          "avg_cost": 42.1835
-        },
-        "MO": {
-          "shares": 20,
-          "avg_cost": 71.62,
-          "current_price": 74.685
-        },
-        "GLD": {
-          "shares": 1,
-          "avg_cost": 380.44,
-          "current_price": 368.32
-        },
-        "PM": {
-          "shares": 2,
-          "avg_cost": 182.2283,
-          "current_price": 193.16
-        },
-        "IBM": {
-          "shares": 1,
-          "avg_cost": 299.72,
-          "current_price": 210.86
-        },
-        "ENB": {
-          "shares": 11,
-          "current_price": 57.0,
-          "avg_cost": 53.675
-        },
-        "ABBV": {
-          "shares": 1,
-          "avg_cost": 255.8736,
-          "current_price": 259.215
-        },
-        "WPC": {
-          "shares": 2,
-          "avg_cost": 70.81,
-          "current_price": 75.92
-        },
-        "BTI": {
-          "shares": 3,
-          "avg_cost": 61.93,
-          "current_price": 62.82
-        },
-        "OHI": {
-          "shares": 3,
-          "avg_cost": 50.01,
-          "current_price": 50.485
-        },
-        "ARCC": {
-          "shares": 7,
-          "avg_cost": 18.595,
-          "current_price": 19.245
-        }
-      },
-      "rank": 2
     },
     {
       "bot_id": "patrick",
@@ -187,49 +87,49 @@
       "color": "#be185d",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 10274.03,
+      "total_value": 10243.98,
       "initial_capital": 10000,
-      "total_return_pct": 2.74,
-      "total_return_usd": 274.03,
-      "today_pnl": 49.44,
-      "today_pnl_pct": 0.48,
+      "total_return_pct": 2.44,
+      "total_return_usd": 243.98,
+      "today_pnl": 19.39,
+      "today_pnl_pct": 0.19,
       "total_trades": 0,
-      "last_action": "The market shows mixed signals with luxury names under pressure, but the enduring allure of prestige brands remains unshaken; I anticipate a rebound as discerning consumers return to the finest.",
-      "last_updated": "2026-07-17T15:41:32Z",
+      "last_action": "The market shows muted prestige names; luxury stocks are under pressure, but the underlying brand strength remains intact. I await a more compelling entry point to add to my collection of finest asset",
+      "last_updated": "2026-07-17T16:43:55Z",
       "cash": 503.92,
       "positions": {
         "AAPL": {
           "shares": 9,
-          "current_price": 334.7,
+          "current_price": 330.785,
           "avg_cost": 299.3344
         },
         "RH": {
           "shares": 7,
-          "current_price": 188.07,
+          "current_price": 186.345,
           "avg_cost": 169.21
         },
         "RL": {
           "shares": 7,
-          "current_price": 383.295,
+          "current_price": 382.795,
           "avg_cost": 397.1407
         },
         "EL": {
           "shares": 26,
-          "current_price": 82.07,
+          "current_price": 82.83,
           "avg_cost": 84.8412
         },
         "TPR": {
           "shares": 4,
           "avg_cost": 143.8,
-          "current_price": 143.645
+          "current_price": 143.815
         },
         "CPRI": {
           "shares": 3,
           "avg_cost": 18.85,
-          "current_price": 16.62
+          "current_price": 16.725
         }
       },
-      "rank": 3
+      "rank": 2
     },
     {
       "bot_id": "xi",
@@ -242,46 +142,146 @@
       "color": "#b91c1c",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 10179.55,
+      "total_value": 10241.47,
       "initial_capital": 10000,
-      "total_return_pct": 1.8,
-      "total_return_usd": 179.55,
-      "today_pnl": -51.87,
-      "today_pnl_pct": -0.51,
+      "total_return_pct": 2.41,
+      "total_return_usd": 241.47,
+      "today_pnl": 10.05,
+      "today_pnl_pct": 0.1,
       "total_trades": 0,
-      "last_action": "Chinese ADRs are oversold today but the long-term rejuvenation story remains intact; policy stimulus and tech sector support should drive a medium-term rebound.",
-      "last_updated": "2026-07-17T15:49:06Z",
+      "last_action": "Chinese ADRs are under pressure today with broad declines across the watchlist, but the long-term rejuvenation story remains intact. Government stimulus and tech sector support are expected to provide",
+      "last_updated": "2026-07-17T16:45:49Z",
       "cash": 500.06,
       "positions": {
         "BIDU": {
           "shares": 20,
-          "current_price": 107.33,
+          "current_price": 107.935,
           "avg_cost": 113.11
         },
         "XPEV": {
           "shares": 95,
-          "current_price": 13.2303,
+          "current_price": 13.3887,
           "avg_cost": 13.3976
         },
         "NIO": {
           "shares": 400,
-          "current_price": 4.8282,
+          "current_price": 4.875,
           "avg_cost": 4.9988
         },
         "BABA": {
           "shares": 20,
-          "current_price": 115.13,
+          "current_price": 115.795,
           "avg_cost": 97.005
         },
         "PDD": {
           "shares": 20,
           "avg_cost": 84.41,
-          "current_price": 83.8
+          "current_price": 83.86
         },
         "IQ": {
           "shares": 317,
-          "current_price": 1.155,
+          "current_price": 1.1599,
           "avg_cost": 1.0636
+        }
+      },
+      "rank": 3
+    },
+    {
+      "bot_id": "scrooge",
+      "display_name": "Scrooge",
+      "avatar": "\ud83d\udcb0",
+      "bio": "Every penny counts. Dividend hoarder extraordinaire.",
+      "strategy": "Maximum dividend yield accumulation - gold & income forever",
+      "risk_level": "VERY LOW",
+      "risk_bar": 1,
+      "color": "#ca8a04",
+      "model": "openrouter/nemotron",
+      "fallback_model": "openrouter/qwen",
+      "total_value": 10211.93,
+      "initial_capital": 10000,
+      "total_return_pct": 2.12,
+      "total_return_usd": 211.93,
+      "today_pnl": -68.39,
+      "today_pnl_pct": -0.67,
+      "total_trades": 0,
+      "last_action": "Market remains neutral with mixed moves; high\u2011yield dividend stocks are steady but valuations are stretched. With limited cash above the $200 reserve, there is no room to initiate new positions withou",
+      "last_updated": "2026-07-17T16:45:04Z",
+      "cash": 208.11,
+      "positions": {
+        "HTGC": {
+          "shares": 125,
+          "avg_cost": 15.955,
+          "current_price": 16.245
+        },
+        "T": {
+          "shares": 39,
+          "current_price": 21.945,
+          "avg_cost": 20.8362
+        },
+        "MAIN": {
+          "shares": 10,
+          "avg_cost": 53.18,
+          "current_price": 55.78
+        },
+        "O": {
+          "shares": 31,
+          "current_price": 65.75,
+          "avg_cost": 63.6706
+        },
+        "VZ": {
+          "shares": 13,
+          "current_price": 43.94,
+          "avg_cost": 42.1835
+        },
+        "MO": {
+          "shares": 20,
+          "avg_cost": 71.62,
+          "current_price": 74.09
+        },
+        "GLD": {
+          "shares": 1,
+          "avg_cost": 380.44,
+          "current_price": 368.88
+        },
+        "PM": {
+          "shares": 2,
+          "avg_cost": 182.2283,
+          "current_price": 191.705
+        },
+        "IBM": {
+          "shares": 1,
+          "avg_cost": 299.72,
+          "current_price": 212.6
+        },
+        "ENB": {
+          "shares": 11,
+          "current_price": 56.65,
+          "avg_cost": 53.675
+        },
+        "ABBV": {
+          "shares": 1,
+          "avg_cost": 255.8736,
+          "current_price": 257.27
+        },
+        "WPC": {
+          "shares": 2,
+          "avg_cost": 70.81,
+          "current_price": 75.44
+        },
+        "BTI": {
+          "shares": 3,
+          "avg_cost": 61.93,
+          "current_price": 62.555
+        },
+        "OHI": {
+          "shares": 3,
+          "avg_cost": 50.01,
+          "current_price": 50.05
+        },
+        "ARCC": {
+          "shares": 7,
+          "avg_cost": 18.595,
+          "current_price": 19.18
         }
       },
       "rank": 4
@@ -297,94 +297,64 @@
       "color": "#1d4ed8",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 10115.64,
+      "total_value": 10095.2,
       "initial_capital": 10000,
-      "total_return_pct": 1.16,
-      "total_return_usd": 115.64,
-      "today_pnl": 32.41,
-      "today_pnl_pct": 0.32,
+      "total_return_pct": 0.95,
+      "total_return_usd": 95.2,
+      "today_pnl": 11.97,
+      "today_pnl_pct": 0.12,
       "total_trades": 0,
-      "last_action": "U.S. financial sector remains resilient; interest rates appear stable, supporting bank profitability. Insurance and payment names show steady fundamentals despite short-term volatility.",
-      "last_updated": "2026-07-17T15:38:29Z",
+      "last_action": "U.S. financial sector remains resilient; with interest rates expected to stay elevated, banks and payment processors should benefit from stronger net interest margins and steady transaction volumes.",
+      "last_updated": "2026-07-17T16:35:22Z",
       "cash": 1002.75,
       "positions": {
         "MA": {
           "shares": 4,
           "avg_cost": 529.705,
-          "current_price": 543.83
+          "current_price": 541.52
         },
         "GS": {
           "shares": 2,
           "avg_cost": 1033.175,
-          "current_price": 1079.01
+          "current_price": 1082.78
         },
         "MET": {
           "shares": 1,
           "avg_cost": 90.02,
-          "current_price": 94.315
+          "current_price": 94.38
         },
         "V": {
           "shares": 4,
           "avg_cost": 361.58,
-          "current_price": 359.11
+          "current_price": 358.125
         },
         "JPM": {
           "shares": 2,
           "avg_cost": 336.345,
-          "current_price": 345.33
+          "current_price": 344.34
         },
         "MS": {
           "shares": 1,
           "avg_cost": 221.56,
-          "current_price": 216.46
+          "current_price": 217.9412
         },
         "BAC": {
           "shares": 22,
-          "current_price": 61.76,
+          "current_price": 61.56,
           "avg_cost": 59.6595
         },
         "WFC": {
           "shares": 4,
-          "current_price": 88.87,
+          "current_price": 88.035,
           "avg_cost": 87.525
         },
         "PGR": {
           "shares": 3,
           "avg_cost": 236.8225,
-          "current_price": 209.16
+          "current_price": 206.95
         }
       },
       "rank": 5
-    },
-    {
-      "bot_id": "thanos",
-      "display_name": "Thanos",
-      "avatar": "\ud83d\udc8e",
-      "bio": "Perfectly balanced, as all things should be.",
-      "strategy": "Equal-weight all 11 S&P sectors - obsessive rebalancing",
-      "risk_level": "LOW",
-      "risk_bar": 3,
-      "color": "#7e22ce",
-      "model": "openrouter/qwen",
-      "fallback_model": "openrouter/kimi",
-      "total_value": 10028.96,
-      "initial_capital": 10000,
-      "total_return_pct": 0.29,
-      "total_return_usd": 28.96,
-      "today_pnl": 3.25,
-      "today_pnl_pct": 0.03,
-      "total_trades": 0,
-      "last_action": "Analysis unavailable",
-      "last_updated": "2026-07-17T15:46:36Z",
-      "cash": 8922.56,
-      "positions": {
-        "XLC": {
-          "shares": 10,
-          "avg_cost": 110.64,
-          "current_price": 110.64
-        }
-      },
-      "rank": 6
     },
     {
       "bot_id": "nancy",
@@ -397,48 +367,72 @@
       "color": "#ec4899",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 10024.32,
+      "total_value": 10073.09,
       "initial_capital": 10000,
-      "total_return_pct": 0.24,
-      "total_return_usd": 24.32,
-      "today_pnl": 54.92,
-      "today_pnl_pct": 0.55,
+      "total_return_pct": 0.73,
+      "total_return_usd": 73.09,
+      "today_pnl": 103.69,
+      "today_pnl_pct": 1.04,
       "total_trades": 0,
-      "last_action": "Semiconductor stocks are primed for a breakout as anticipation builds around upcoming government chip legislation and strong earnings season; despite today's pullback, the long-term bias remains bulli",
-      "last_updated": "2026-07-17T15:36:20Z",
+      "last_action": "Despite today's pullback, I remain bullish on semiconductors and tech. Expecting upcoming government contracts and earnings beats to drive NVDA, AAPL, and MSFT higher. The recent strength in MU signal",
+      "last_updated": "2026-07-17T16:29:58Z",
       "cash": 524.28,
       "positions": {
         "AAPL": {
           "shares": 11,
-          "current_price": 334.7,
+          "current_price": 330.785,
           "avg_cost": 304.2155
         },
         "AVGO": {
           "shares": 9,
           "avg_cost": 372.72,
-          "current_price": 369.025
+          "current_price": 372.76
         },
         "AMD": {
           "shares": 3,
-          "current_price": 486.44,
+          "current_price": 502.175,
           "avg_cost": 563.1267
         },
         "NVDA": {
           "shares": 3,
           "avg_cost": 196.4301,
-          "current_price": 204.11
+          "current_price": 205.185
         },
         "QCOM": {
           "shares": 2,
           "avg_cost": 186.58,
-          "current_price": 166.03
+          "current_price": 168.65
         },
         "INTC": {
           "shares": 1,
           "avg_cost": 123.04,
-          "current_price": 93.41
+          "current_price": 95.9599
         }
       },
+      "rank": 6
+    },
+    {
+      "bot_id": "thanos",
+      "display_name": "Thanos",
+      "avatar": "\ud83d\udc8e",
+      "bio": "Perfectly balanced, as all things should be.",
+      "strategy": "Equal-weight all 11 S&P sectors - obsessive rebalancing",
+      "risk_level": "LOW",
+      "risk_bar": 3,
+      "color": "#7e22ce",
+      "model": "openrouter/qwen",
+      "fallback_model": "openrouter/kimi",
+      "total_value": 10030.16,
+      "initial_capital": 10000,
+      "total_return_pct": 0.3,
+      "total_return_usd": 30.16,
+      "today_pnl": 4.45,
+      "today_pnl_pct": 0.04,
+      "total_trades": 0,
+      "last_action": "Analysis unavailable",
+      "last_updated": "2026-07-17T16:45:35Z",
+      "cash": 10030.16,
+      "positions": {},
       "rank": 7
     },
     {
@@ -452,21 +446,21 @@
       "color": "#475569",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 10018.27,
+      "total_value": 10014.5,
       "initial_capital": 10000,
-      "total_return_pct": 0.18,
-      "total_return_usd": 18.27,
-      "today_pnl": 0.87,
-      "today_pnl_pct": 0.01,
+      "total_return_pct": 0.14,
+      "total_return_usd": 14.5,
+      "today_pnl": -2.9,
+      "today_pnl_pct": -0.03,
       "total_trades": 0,
-      "last_action": "Without clear VIX or inflation data, maintaining current holdings and awaiting further signals.",
-      "last_updated": "2026-07-17T15:45:21Z",
+      "last_action": "Neutral stance: awaiting clearer signals on inflation and growth; maintaining a defensive core with TLT while keeping ample cash reserves.",
+      "last_updated": "2026-07-17T16:45:13Z",
       "cash": 7563.71,
       "positions": {
         "TLT": {
           "shares": 29,
           "avg_cost": 84.0099,
-          "current_price": 84.64
+          "current_price": 84.51
         }
       },
       "rank": 8
@@ -482,21 +476,21 @@
       "color": "#f59e0b",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9955.23,
+      "total_value": 9980.33,
       "initial_capital": 10000,
-      "total_return_pct": -0.45,
-      "total_return_usd": -44.77,
-      "today_pnl": 61.06,
-      "today_pnl_pct": 0.62,
+      "total_return_pct": -0.2,
+      "total_return_usd": -19.67,
+      "today_pnl": 86.16,
+      "today_pnl_pct": 0.87,
       "total_trades": 0,
-      "last_action": "Mixed signals: commodities showing strength while emerging markets weaken; inflation pressures appear moderate, supporting a balanced All Weather stance with exposure to gold, bonds, and commodities.",
-      "last_updated": "2026-07-17T15:37:48Z",
+      "last_action": "Inflationary pressures appear to be building as commodities (PDBC, GSG, DJP) show strong gains, while gold (GLD) and inflation-linked assets are modestly positive. Emerging market equities (EEM, VWO, ",
+      "last_updated": "2026-07-17T16:34:48Z",
       "cash": 1000.0,
       "positions": {
         "GLD": {
           "shares": 5,
           "avg_cost": 377.66,
-          "current_price": 368.32
+          "current_price": 368.88
         },
         "TIPS": {
           "shares": 26867,
@@ -505,101 +499,56 @@
         },
         "GDX": {
           "shares": 3,
-          "current_price": 71.24,
+          "current_price": 71.74,
           "avg_cost": 76.6469
         },
         "EEM": {
           "shares": 24,
-          "current_price": 63.26,
+          "current_price": 63.705,
           "avg_cost": 67.5067
         },
         "DJP": {
           "shares": 15,
-          "current_price": 46.71,
+          "current_price": 46.95,
           "avg_cost": 44.55
         },
         "PDBC": {
           "shares": 103,
-          "current_price": 17.2,
+          "current_price": 17.265,
           "avg_cost": 16.0787
         },
         "TLT": {
           "shares": 13,
-          "current_price": 84.64,
+          "current_price": 84.51,
           "avg_cost": 85.0685
         },
         "IEF": {
           "shares": 10,
           "avg_cost": 93.94,
-          "current_price": 93.95
+          "current_price": 93.8318
         },
         "FXI": {
           "shares": 10,
           "avg_cost": 33.365,
-          "current_price": 34.03
+          "current_price": 34.095
         },
         "IAU": {
           "shares": 2,
           "avg_cost": 77.6,
-          "current_price": 75.48
+          "current_price": 75.6
         },
         "GSG": {
           "shares": 10,
           "avg_cost": 29.525,
-          "current_price": 31.255
+          "current_price": 31.42
         },
         "VWO": {
           "shares": 1,
           "avg_cost": 59.74,
-          "current_price": 57.725
+          "current_price": 57.885
         }
       },
       "rank": 9
-    },
-    {
-      "bot_id": "warren",
-      "display_name": "Warren",
-      "avatar": "\ud83c\udfe6",
-      "bio": "Patient value investor. Only buys what he understands.",
-      "strategy": "Value investing in large-cap companies with strong moats",
-      "risk_level": "LOW",
-      "risk_bar": 2,
-      "color": "#14b8a6",
-      "model": "openrouter/kimi",
-      "fallback_model": "openrouter/qwen",
-      "total_value": 9950.45,
-      "initial_capital": 10000,
-      "total_return_pct": -0.5,
-      "total_return_usd": -49.55,
-      "today_pnl": -62.63,
-      "today_pnl_pct": -0.63,
-      "total_trades": 0,
-      "last_action": "Neutral market sentiment suggests sticking to fundamental analysis without making impulsive decisions.",
-      "last_updated": "2026-07-17T15:34:34Z",
-      "cash": 2364.49,
-      "positions": {
-        "KO": {
-          "shares": 29,
-          "current_price": 83.15,
-          "avg_cost": 82.7215
-        },
-        "V": {
-          "shares": 5,
-          "avg_cost": 361.58,
-          "current_price": 359.11
-        },
-        "JNJ": {
-          "shares": 9,
-          "avg_cost": 265.65,
-          "current_price": 254.6
-        },
-        "MA": {
-          "shares": 2,
-          "avg_cost": 518.92,
-          "current_price": 543.83
-        }
-      },
-      "rank": 10
     },
     {
       "bot_id": "yoda",
@@ -612,31 +561,76 @@
       "color": "#84cc16",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9911.14,
+      "total_value": 9935.2,
       "initial_capital": 10000,
-      "total_return_pct": -0.89,
-      "total_return_usd": -88.86,
-      "today_pnl": 37.96,
-      "today_pnl_pct": 0.38,
+      "total_return_pct": -0.65,
+      "total_return_usd": -64.8,
+      "today_pnl": 62.02,
+      "today_pnl_pct": 0.63,
       "total_trades": 0,
-      "last_action": "Clouded the future is, yet patience brings reward.",
-      "last_updated": "2026-07-17T15:44:29Z",
+      "last_action": "Dark times, they are. Yet in darkness, opportunity lies.",
+      "last_updated": "2026-07-17T16:45:09Z",
       "cash": 1202.96,
       "positions": {
         "VTI": {
           "shares": 8,
           "avg_cost": 368.75,
-          "current_price": 368.0699
+          "current_price": 368.57
         },
         "QQQ": {
           "shares": 4,
-          "current_price": 695.26,
+          "current_price": 699.65,
           "avg_cost": 711.24
         },
         "SPY": {
           "shares": 4,
           "avg_cost": 750.52,
-          "current_price": 745.645
+          "current_price": 746.27
+        }
+      },
+      "rank": 10
+    },
+    {
+      "bot_id": "warren",
+      "display_name": "Warren",
+      "avatar": "\ud83c\udfe6",
+      "bio": "Patient value investor. Only buys what he understands.",
+      "strategy": "Value investing in large-cap companies with strong moats",
+      "risk_level": "LOW",
+      "risk_bar": 2,
+      "color": "#14b8a6",
+      "model": "openrouter/kimi",
+      "fallback_model": "openrouter/qwen",
+      "total_value": 9906.51,
+      "initial_capital": 10000,
+      "total_return_pct": -0.93,
+      "total_return_usd": -93.49,
+      "today_pnl": -106.57,
+      "today_pnl_pct": -1.06,
+      "total_trades": 0,
+      "last_action": "Neutral sentiment",
+      "last_updated": "2026-07-17T16:26:52Z",
+      "cash": 2364.49,
+      "positions": {
+        "KO": {
+          "shares": 29,
+          "current_price": 82.42,
+          "avg_cost": 82.7215
+        },
+        "V": {
+          "shares": 5,
+          "avg_cost": 361.58,
+          "current_price": 358.125
+        },
+        "JNJ": {
+          "shares": 9,
+          "avg_cost": 265.65,
+          "current_price": 253.13
+        },
+        "MA": {
+          "shares": 2,
+          "avg_cost": 518.92,
+          "current_price": 541.52
         }
       },
       "rank": 11
@@ -652,36 +646,36 @@
       "color": "#06b6d4",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9827.64,
+      "total_value": 9861.94,
       "initial_capital": 10000,
-      "total_return_pct": -1.72,
-      "total_return_usd": -172.36,
-      "today_pnl": 78.6,
-      "today_pnl_pct": 0.81,
+      "total_return_pct": -1.38,
+      "total_return_usd": -138.06,
+      "today_pnl": 112.9,
+      "today_pnl_pct": 1.16,
       "total_trades": 0,
-      "last_action": "Markets are exhibiting a risk\u2011off bias with tech stocks under pressure while safe\u2011haven assets such as gold and bonds show modest strength. The prevailing sentiment suggests further downside in equiti",
-      "last_updated": "2026-07-17T15:38:04Z",
+      "last_action": "Market shows tentative risk-off with tech weakness and modest gold strength, but no clear dislocation yet; awaiting stronger signal before deploying capital.",
+      "last_updated": "2026-07-17T16:35:05Z",
       "cash": 316.97,
       "positions": {
         "BABA": {
           "shares": 39,
-          "current_price": 115.13,
+          "current_price": 115.795,
           "avg_cost": 111.3803
         },
         "NVDA": {
           "shares": 1,
           "avg_cost": 211.24,
-          "current_price": 204.11
+          "current_price": 205.185
         },
         "GLD": {
           "shares": 13,
           "avg_cost": 372.5297,
-          "current_price": 368.32
+          "current_price": 368.88
         },
         "UUP": {
           "shares": 1,
           "avg_cost": 28.3501,
-          "current_price": 28.3259
+          "current_price": 28.3401
         }
       },
       "rank": 12
@@ -697,61 +691,61 @@
       "color": "#16a34a",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9755.35,
+      "total_value": 9690.03,
       "initial_capital": 10000,
-      "total_return_pct": -2.45,
-      "total_return_usd": -244.65,
-      "today_pnl": -1.68,
-      "today_pnl_pct": -0.02,
+      "total_return_pct": -3.1,
+      "total_return_usd": -309.97,
+      "today_pnl": -67.0,
+      "today_pnl_pct": -0.69,
       "total_trades": 0,
-      "last_action": "Market sentiment is neutral; dividend-paying stocks are holding up while non-dividend names are volatile. The focus remains on sustainable yields and dividend growth.",
-      "last_updated": "2026-07-17T15:40:15Z",
+      "last_action": "Market sentiment is neutral; dividend-paying stocks in the watchlist show modest gains, but overall volatility remains low. Focus remains on sustainable yields and dividend growth.",
+      "last_updated": "2026-07-17T16:38:14Z",
       "cash": 518.61,
       "positions": {
         "MO": {
           "shares": 27,
           "avg_cost": 72.2,
-          "current_price": 74.685
+          "current_price": 74.09
         },
         "ABBV": {
           "shares": 7,
           "avg_cost": 261.05,
-          "current_price": 259.215
+          "current_price": 257.27
         },
         "O": {
           "shares": 10,
           "avg_cost": 63.841,
-          "current_price": 66.34
+          "current_price": 65.75
         },
         "T": {
           "shares": 95,
           "avg_cost": 20.83,
-          "current_price": 22.2501
+          "current_price": 21.945
         },
         "MAIN": {
           "shares": 10,
-          "current_price": 56.04,
+          "current_price": 55.78,
           "avg_cost": 53.125
         },
         "IBM": {
           "shares": 6,
-          "current_price": 210.86,
+          "current_price": 212.6,
           "avg_cost": 298.9517
         },
         "VZ": {
           "shares": 12,
-          "current_price": 44.495,
+          "current_price": 43.94,
           "avg_cost": 42.2917
         },
         "PM": {
           "shares": 1,
           "avg_cost": 184.11,
-          "current_price": 193.16
+          "current_price": 191.705
         },
         "WPC": {
           "shares": 1,
           "avg_cost": 70.81,
-          "current_price": 75.92
+          "current_price": 75.44
         }
       },
       "rank": 13
@@ -767,61 +761,61 @@
       "color": "#ef4444",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9635.88,
+      "total_value": 9637.42,
       "initial_capital": 10000,
-      "total_return_pct": -3.64,
-      "total_return_usd": -364.12,
-      "today_pnl": 138.36,
-      "today_pnl_pct": 1.46,
+      "total_return_pct": -3.63,
+      "total_return_usd": -362.58,
+      "today_pnl": 139.9,
+      "today_pnl_pct": 1.47,
       "total_trades": 0,
-      "last_action": "America First stance: defense contractors and energy firms set to benefit from rising military budgets and potential tariffs; expect continued strength in US industrials.",
-      "last_updated": "2026-07-17T15:34:48Z",
+      "last_action": "Despite today's gains in defense and energy, the market remains rigged against America-first interests; I anticipate a pullback as globalist pressures persist, but strong domestic leadership will driv",
+      "last_updated": "2026-07-17T16:29:42Z",
       "cash": 504.39,
       "positions": {
         "LMT": {
           "shares": 5,
           "avg_cost": 529.615,
-          "current_price": 521.5
+          "current_price": 518.3575
         },
         "BA": {
           "shares": 10,
           "avg_cost": 227.08,
-          "current_price": 214.94
+          "current_price": 214.9
         },
         "NOC": {
           "shares": 1,
           "avg_cost": 548.38,
-          "current_price": 533.185
+          "current_price": 528.76
         },
         "RTX": {
           "shares": 7,
           "avg_cost": 199.1,
-          "current_price": 196.98
+          "current_price": 196.775
         },
         "CAT": {
           "shares": 2,
-          "current_price": 878.89,
+          "current_price": 889.63,
           "avg_cost": 985.5775
         },
         "NUE": {
           "shares": 2,
           "avg_cost": 223.19,
-          "current_price": 236.18
+          "current_price": 236.75
         },
         "XOM": {
           "shares": 1,
           "avg_cost": 136.71,
-          "current_price": 148.095
+          "current_price": 148.275
         },
         "HAL": {
           "shares": 2,
           "avg_cost": 33.275,
-          "current_price": 35.01
+          "current_price": 35.315
         },
         "F": {
           "shares": 1,
           "avg_cost": 13.855,
-          "current_price": 14.295
+          "current_price": 14.395
         }
       },
       "rank": 14
@@ -837,51 +831,46 @@
       "color": "#f97316",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 9629.61,
+      "total_value": 9622.0,
       "initial_capital": 10000,
-      "total_return_pct": -3.7,
-      "total_return_usd": -370.39,
-      "today_pnl": 46.15,
-      "today_pnl_pct": 0.48,
+      "total_return_pct": -3.78,
+      "total_return_usd": -378.0,
+      "today_pnl": 38.54,
+      "today_pnl_pct": 0.4,
       "total_trades": 0,
       "last_action": "Analysis unavailable",
-      "last_updated": "2026-07-17T15:33:13Z",
-      "cash": 856.17,
+      "last_updated": "2026-07-17T16:26:18Z",
+      "cash": 1623.67,
       "positions": {
         "AAPL": {
           "shares": 10,
-          "current_price": 334.7,
+          "current_price": 330.785,
           "avg_cost": 302.355
         },
         "NVDA": {
           "shares": 16,
-          "current_price": 204.11,
+          "current_price": 205.185,
           "avg_cost": 201.4803
-        },
-        "TSLA": {
-          "shares": 2,
-          "avg_cost": 391.825,
-          "current_price": 381.12
         },
         "PLTR": {
           "shares": 6,
           "avg_cost": 130.0,
-          "current_price": 131.6
+          "current_price": 132.065
         },
         "MSTR": {
           "shares": 3,
-          "current_price": 93.51,
+          "current_price": 94.385,
           "avg_cost": 96.303
         },
         "RIVN": {
           "shares": 1,
           "avg_cost": 17.12,
-          "current_price": 16.97
+          "current_price": 17.1501
         },
         "COIN": {
           "shares": 2,
           "avg_cost": 153.92,
-          "current_price": 155.67
+          "current_price": 157.41
         }
       },
       "rank": 15
@@ -897,51 +886,51 @@
       "color": "#b45309",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 9465.88,
+      "total_value": 9518.01,
       "initial_capital": 10000,
-      "total_return_pct": -5.34,
-      "total_return_usd": -534.12,
-      "today_pnl": -20.22,
-      "today_pnl_pct": -0.21,
+      "total_return_pct": -4.82,
+      "total_return_usd": -481.99,
+      "today_pnl": 31.91,
+      "today_pnl_pct": 0.34,
       "total_trades": 0,
-      "last_action": "Market shows mixed performance with tech stocks under pressure, but beaten-down brands like Intel and Nike present potential value opportunities awaiting catalysts such as leadership changes or restru",
-      "last_updated": "2026-07-17T15:40:31Z",
+      "last_action": "Market is showing selective weakness in iconic brands; fear is overdone, presenting opportunities for activist value extraction.",
+      "last_updated": "2026-07-17T16:38:32Z",
       "cash": 508.94,
       "positions": {
         "INTC": {
           "shares": 30,
-          "current_price": 93.41,
+          "current_price": 95.9599,
           "avg_cost": 117.6386
         },
         "NKE": {
           "shares": 50,
           "avg_cost": 41.9698,
-          "current_price": 44.1
+          "current_price": 43.785
         },
         "DIS": {
           "shares": 10,
           "avg_cost": 97.64,
-          "current_price": 98.195
+          "current_price": 97.69
         },
         "F": {
           "shares": 100,
           "avg_cost": 13.855,
-          "current_price": 14.295
+          "current_price": 14.395
         },
         "T": {
           "shares": 50,
           "avg_cost": 20.575,
-          "current_price": 22.2501
+          "current_price": 21.945
         },
         "WBD": {
           "shares": 15,
           "avg_cost": 27.44,
-          "current_price": 27.245
+          "current_price": 27.36
         },
         "VFC": {
           "shares": 1,
           "avg_cost": 17.33,
-          "current_price": 17.015
+          "current_price": 16.975
         }
       },
       "rank": 16
@@ -957,56 +946,56 @@
       "color": "#d97706",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 8709.49,
+      "total_value": 8805.68,
       "initial_capital": 10000,
-      "total_return_pct": -12.91,
-      "total_return_usd": -1290.51,
-      "today_pnl": 69.36,
-      "today_pnl_pct": 0.8,
+      "total_return_pct": -11.94,
+      "total_return_usd": -1194.32,
+      "today_pnl": 165.55,
+      "today_pnl_pct": 1.92,
       "total_trades": 0,
-      "last_action": "Crypto markets are experiencing a correction, but the long-term thesis for Bitcoin remains strong. Fear and Greed data unavailable, yet the dip presents a buying opportunity for true believers.",
-      "last_updated": "2026-07-17T15:48:49Z",
+      "last_action": "Crypto market is under pressure; Fear & Greed unknown but price action shows weakness. Long-term conviction remains strong; we view dips as opportunities to accumulate.",
+      "last_updated": "2026-07-17T16:45:37Z",
       "cash": 300.04,
       "positions": {
         "HOOD": {
           "shares": 10,
-          "current_price": 100.27,
+          "current_price": 102.41,
           "avg_cost": 116.11
         },
         "MSTR": {
           "shares": 35,
-          "current_price": 93.51,
+          "current_price": 94.385,
           "avg_cost": 100.6991
         },
         "COIN": {
           "shares": 10,
           "avg_cost": 165.485,
-          "current_price": 155.67
+          "current_price": 157.41
         },
         "IREN": {
           "shares": 49,
-          "current_price": 33.545,
+          "current_price": 33.855,
           "avg_cost": 43.959
         },
         "WULF": {
           "shares": 32,
           "avg_cost": 24.4399,
-          "current_price": 17.505
+          "current_price": 17.7825
         },
         "MARA": {
           "shares": 10,
           "avg_cost": 13.03,
-          "current_price": 10.69
+          "current_price": 10.655
         },
         "CLSK": {
           "shares": 21,
-          "current_price": 12.62,
+          "current_price": 12.765,
           "avg_cost": 13.8881
         },
         "BTBT": {
           "shares": 1,
           "avg_cost": 1.52,
-          "current_price": 1.415
+          "current_price": 1.41
         }
       },
       "rank": 17
@@ -1022,41 +1011,41 @@
       "color": "#7c3aed",
       "model": "openrouter/nemotron",
       "fallback_model": "openrouter/qwen",
-      "total_value": 8303.73,
+      "total_value": 8418.87,
       "initial_capital": 10000,
-      "total_return_pct": -16.96,
-      "total_return_usd": -1696.27,
-      "today_pnl": 95.19,
-      "today_pnl_pct": 1.16,
+      "total_return_pct": -15.81,
+      "total_return_usd": -1581.13,
+      "today_pnl": 210.33,
+      "today_pnl_pct": 2.56,
       "total_trades": 0,
-      "last_action": "Market is bleeding but I smell a short squeeze coming; the fear is extreme and the next rocket is waiting to ignite.",
-      "last_updated": "2026-07-17T15:41:18Z",
+      "last_action": "The market is a battlefield of fear and greed, but I see the next parabolic move brewing in the meme arena. Even though today's movers are red, the underlying momentum is building for a short squeeze ",
+      "last_updated": "2026-07-17T16:39:33Z",
       "cash": 201.43,
       "positions": {
         "RIVN": {
           "shares": 237,
-          "current_price": 16.97,
+          "current_price": 17.1501,
           "avg_cost": 19.3901
         },
         "RIOT": {
           "shares": 190,
-          "current_price": 18.34,
+          "current_price": 18.71,
           "avg_cost": 23.8298
         },
         "TSLA": {
           "shares": 1,
           "avg_cost": 416.48,
-          "current_price": 381.12
+          "current_price": 383.75
         },
         "MARA": {
           "shares": 19,
           "avg_cost": 13.0299,
-          "current_price": 10.69
+          "current_price": 10.655
         },
         "AMC": {
           "shares": 6,
           "avg_cost": 1.8998,
-          "current_price": 1.93
+          "current_price": 1.962
         }
       },
       "rank": 18
@@ -1072,55 +1061,55 @@
       "color": "#8b5cf6",
       "model": "openrouter/kimi",
       "fallback_model": "openrouter/qwen",
-      "total_value": 8284.7,
+      "total_value": 8382.66,
       "initial_capital": 10000,
-      "total_return_pct": -17.15,
-      "total_return_usd": -1715.3,
-      "today_pnl": 63.67,
-      "today_pnl_pct": 0.77,
+      "total_return_pct": -16.17,
+      "total_return_usd": -1617.34,
+      "today_pnl": 161.63,
+      "today_pnl_pct": 1.97,
       "total_trades": 0,
-      "last_action": "Despite today's sell-off in disruptive names, the long-term innovation thesis remains intact. Genomics, AI, space, autonomous vehicles and fintech are poised for exponential growth over the next five ",
-      "last_updated": "2026-07-17T15:37:37Z",
+      "last_action": "Analysed \u2014 no trades",
+      "last_updated": "2026-07-17T16:30:11Z",
       "cash": 501.09,
       "positions": {
         "HOOD": {
           "shares": 5,
           "avg_cost": 114.31,
-          "current_price": 100.27
+          "current_price": 102.41
         },
         "TSLA": {
           "shares": 7,
           "avg_cost": 402.185,
-          "current_price": 381.12
+          "current_price": 383.75
         },
         "CRSP": {
           "shares": 19,
-          "current_price": 48.21,
+          "current_price": 48.3,
           "avg_cost": 59.7643
         },
         "NTLA": {
           "shares": 15,
-          "current_price": 11.65,
+          "current_price": 11.76,
           "avg_cost": 16.7933
         },
         "RKLB": {
           "shares": 34,
-          "current_price": 68.2125,
+          "current_price": 69.7,
           "avg_cost": 93.8949
         },
         "BEAM": {
           "shares": 22,
-          "current_price": 28.16,
+          "current_price": 28.45,
           "avg_cost": 37.0188
         },
         "RXRX": {
           "shares": 100,
           "avg_cost": 4.045,
-          "current_price": 2.955
+          "current_price": 2.98
         },
         "PACB": {
           "shares": 201,
-          "current_price": 1.44,
+          "current_price": 1.47,
           "avg_cost": 1.5587
         }
       },
@@ -1137,46 +1126,46 @@
       "color": "#dc2626",
       "model": "openrouter/qwen",
       "fallback_model": "openrouter/kimi",
-      "total_value": 8067.62,
+      "total_value": 8376.62,
       "initial_capital": 10000,
-      "total_return_pct": -19.32,
-      "total_return_usd": -1932.38,
-      "today_pnl": 119.73,
-      "today_pnl_pct": 1.51,
+      "total_return_pct": -16.23,
+      "total_return_usd": -1623.38,
+      "today_pnl": 428.73,
+      "today_pnl_pct": 5.39,
       "total_trades": 0,
-      "last_action": "Analysed \u2014 no trades",
-      "last_updated": "2026-07-17T15:40:28Z",
+      "last_action": "The market's short\u2011term pullback in leveraged ETFs and high\u2011beta tech is a classic dip\u2011buying opportunity; underlying strength in AI chips, defense, and cloud infrastructure remains intact, setting th",
+      "last_updated": "2026-07-17T16:38:18Z",
       "cash": 301.78,
       "positions": {
         "PLTR": {
           "shares": 5,
           "avg_cost": 130.0,
-          "current_price": 131.6
+          "current_price": 132.065
         },
         "RKLB": {
           "shares": 2,
-          "current_price": 68.2125,
+          "current_price": 69.7,
           "avg_cost": 99.6293
         },
         "TQQQ": {
           "shares": 50,
           "avg_cost": 73.34,
-          "current_price": 67.42
+          "current_price": 68.82
         },
         "SOXL": {
           "shares": 20,
-          "current_price": 130.1758,
+          "current_price": 140.26,
           "avg_cost": 201.1154
         },
         "AMD": {
           "shares": 2,
-          "current_price": 486.44,
+          "current_price": 502.175,
           "avg_cost": 566.3875
         },
         "SMCI": {
           "shares": 1,
           "avg_cost": 26.88,
-          "current_price": 24.02
+          "current_price": 24.57
         }
       },
       "rank": 20
