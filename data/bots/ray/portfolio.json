@@ -1,46 +1,46 @@
 {
   "cash": 1000.0,
-  "total_value": 9980.33,
+  "total_value": 9977.11,
   "positions": {
     "GLD": {
       "shares": 5,
       "avg_cost": 377.66,
-      "current_price": 368.88
+      "current_price": 368.125
     },
     "TIPS": {
       "shares": 26867,
-      "current_price": 0.0003,
+      "current_price": 0.0002,
       "avg_cost": 0.0003
     },
     "GDX": {
       "shares": 3,
-      "current_price": 71.74,
+      "current_price": 71.79,
       "avg_cost": 76.6469
     },
     "EEM": {
       "shares": 24,
-      "current_price": 63.705,
+      "current_price": 63.65,
       "avg_cost": 67.5067
     },
     "DJP": {
       "shares": 15,
-      "current_price": 46.95,
+      "current_price": 47.0499,
       "avg_cost": 44.55
     },
     "PDBC": {
       "shares": 103,
-      "current_price": 17.265,
+      "current_price": 17.285,
       "avg_cost": 16.0787
     },
     "TLT": {
       "shares": 13,
-      "current_price": 84.51,
+      "current_price": 84.535,
       "avg_cost": 85.0685
     },
     "IEF": {
       "shares": 10,
       "avg_cost": 93.94,
-      "current_price": 93.8318
+      "current_price": 93.85
     },
     "FXI": {
       "shares": 10,
@@ -50,64 +50,64 @@
     "IAU": {
       "shares": 2,
       "avg_cost": 77.6,
-      "current_price": 75.6
+      "current_price": 75.445
     },
     "GSG": {
       "shares": 10,
       "avg_cost": 29.525,
-      "current_price": 31.42
+      "current_price": 31.49
     },
     "VWO": {
       "shares": 1,
       "avg_cost": 59.74,
-      "current_price": 57.885
+      "current_price": 57.8452
     }
   },
-  "total_return_pct": -0.2,
+  "total_return_pct": -0.23,
   "total_return_usd": 0.0,
-  "today_pnl": 86.16,
-  "today_pnl_pct": 0.87,
+  "today_pnl": 82.94,
+  "today_pnl_pct": 0.84,
   "total_trades": 0,
   "today_start_value": 9894.17,
   "today_date": "2026-07-17",
-  "last_action": "Inflationary pressures appear to be building as commodities (PDBC, GSG, DJP) show strong gains, while gold (GLD) and inflation-linked assets are modestly positive. Emerging market equities (EEM, VWO, ",
-  "last_updated": "2026-07-17T16:34:48Z",
+  "last_action": "Inflation remains sticky but growth is slowing; expect bond yields to rise modestly while gold and commodities offer hedge. All-Weather stance suggests maintaining diversified exposure with a slight t",
+  "last_updated": "2026-07-17T17:45:38Z",
   "last_session": {
-    "at": "2026-07-17T16:34:48Z",
+    "at": "2026-07-17T17:45:38Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "PDBC",
-        1.8
+        "TIPS",
+        -33.33
       ],
       [
         "GSG",
-        1.72
+        1.94
+      ],
+      [
+        "PDBC",
+        1.92
       ],
       [
         "VWO",
-        -1.62
+        -1.71
       ],
       [
         "DJP",
-        1.43
+        1.64
       ],
       [
         "FXI",
-        -1.25
-      ],
-      [
-        "GLD",
-        1.1
+        -1.26
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Current portfolio is diversified across gold (GLD, IAU), commodities (PDBC, DJP, GSG), bonds (TLT, IEF, TIPS, SHY, BIL), and emerging market equities (EEM, VWO, FXI). Commodities have risen today, boosting PDBC and GSG P&L, while precious metals show small gains. Emerging market exposure is under pressure, dragging down EEM and VWO. Bond positions are largely unchanged, reflecting stable yields. Cash reserve sits at the required $1,000 limit, leaving no room for new purchases without violating the cash rule. Therefore, no trades are executed this session; the focus remains on monitoring macro indicators for rebalancing opportunities when cash permits.",
-    "outlook": "Inflationary pressures appear to be building as commodities (PDBC, GSG, DJP) show strong gains, while gold (GLD) and inflation-linked assets are modestly positive. Emerging market equities (EEM, VWO, FXI) are weakening, indicating potential risk-off sentiment. Bond holdings (TLT, IEF) are flat, suggesting the market is pricing in steady rates. Overall, the environment leans toward an inflationary regime with moderate growth, warranting a cautious stance and readiness to increase inflation hedges if cash becomes available.",
+    "ai_analysis": "Watchlist shows TIPS down sharply (-33%) indicating real yield pressure, while commodities like GSG, PDBC, DJP are up 1.6-1.9%. Gold (GLD, IAU) up ~0.85%. Equity exposure (EEM, FXI, VWO) negative. With cash at minimum reserve, no new buys are advisable; consider rebalancing if cash increases.",
+    "outlook": "Inflation remains sticky but growth is slowing; expect bond yields to rise modestly while gold and commodities offer hedge. All-Weather stance suggests maintaining diversified exposure with a slight tilt toward bonds and gold.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -606,6 +606,10 @@
     {
       "timestamp": "2026-07-17T16:34:48Z",
       "value": 9980.33
+    },
+    {
+      "timestamp": "2026-07-17T17:45:38Z",
+      "value": 9977.11
     }
   ]
 }
