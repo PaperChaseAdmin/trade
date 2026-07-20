@@ -1,76 +1,76 @@
 {
   "cash": 208.11,
-  "total_value": 10102.98,
+  "total_value": 10105.96,
   "positions": {
     "HTGC": {
       "shares": 125,
       "avg_cost": 15.955,
-      "current_price": 15.885
+      "current_price": 15.865
     },
     "T": {
       "shares": 39,
-      "current_price": 21.875,
+      "current_price": 21.91,
       "avg_cost": 20.8362
     },
     "MAIN": {
       "shares": 10,
       "avg_cost": 53.18,
-      "current_price": 53.99
+      "current_price": 53.76
     },
     "O": {
       "shares": 31,
-      "current_price": 65.0863,
+      "current_price": 65.04,
       "avg_cost": 63.6706
     },
     "VZ": {
       "shares": 13,
-      "current_price": 43.43,
+      "current_price": 43.5,
       "avg_cost": 42.1835
     },
     "MO": {
       "shares": 20,
       "avg_cost": 71.62,
-      "current_price": 73.89
+      "current_price": 74.26
     },
     "GLD": {
       "shares": 1,
       "avg_cost": 380.44,
-      "current_price": 368.03
+      "current_price": 368.0026
     },
     "PM": {
       "shares": 2,
       "avg_cost": 182.2283,
-      "current_price": 192.03
+      "current_price": 192.65
     },
     "IBM": {
       "shares": 1,
       "avg_cost": 299.72,
-      "current_price": 215.62
+      "current_price": 215.456
     },
     "ENB": {
       "shares": 11,
-      "current_price": 56.05,
+      "current_price": 55.95,
       "avg_cost": 53.675
     },
     "ABBV": {
       "shares": 1,
       "avg_cost": 255.8736,
-      "current_price": 253.71
+      "current_price": 253.23
     },
     "WPC": {
       "shares": 2,
       "avg_cost": 70.81,
-      "current_price": 75.13
+      "current_price": 75.115
     },
     "BTI": {
       "shares": 3,
       "avg_cost": 61.93,
-      "current_price": 62.3699
+      "current_price": 62.42
     },
     "OHI": {
       "shares": 3,
       "avg_cost": 50.01,
-      "current_price": 49.61
+      "current_price": 49.595
     },
     "ARCC": {
       "shares": 7,
@@ -78,17 +78,17 @@
       "current_price": 18.855
     }
   },
-  "total_return_pct": 1.03,
+  "total_return_pct": 1.06,
   "total_return_usd": 0.0,
-  "today_pnl": -95.38,
-  "today_pnl_pct": -0.94,
+  "today_pnl": -92.4,
+  "today_pnl_pct": -0.91,
   "total_trades": 0,
   "today_start_value": 10198.36,
   "today_date": "2026-07-20",
-  "last_action": "Market sentiment is neutral; dividend yields remain attractive but cash is limited. No new buys feasible without violating cash reserve rule.",
-  "last_updated": "2026-07-20T17:06:45Z",
+  "last_action": "Market sentiment is neutral (Fear & Greed 50). Dividend yields remain attractive; we prefer to hold existing high-yield positions and wait for better entry prices given limited cash reserves.",
+  "last_updated": "2026-07-20T17:35:38Z",
   "last_session": {
-    "at": "2026-07-20T17:06:45Z",
+    "at": "2026-07-20T17:35:38Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -96,11 +96,11 @@
     "top_movers": [
       [
         "MAIN",
-        -2.49
+        -2.91
       ],
       [
         "HTGC",
-        -1.79
+        -1.89
       ],
       [
         "ARCC",
@@ -108,21 +108,21 @@
       ],
       [
         "IBM",
-        1.4
-      ],
-      [
-        "OHI",
-        -1.19
+        1.36
       ],
       [
         "ENB",
-        -1.18
+        -1.34
+      ],
+      [
+        "OHI",
+        -1.22
       ]
     ],
     "news_read": [],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "With $208.11 cash and a $200 reserve requirement, only $8.11 is available for investment, insufficient to purchase even a single share of any watchlist stock. All current holdings are dividend-paying and no dividend cuts have been announced, so the Scrooge strategy dictates holding and reinvesting dividends when they occur. Focus remains on monitoring for any dividend reductions or opportunities when cash accumulates.",
-    "outlook": "Market sentiment is neutral; dividend yields remain attractive but cash is limited. No new buys feasible without violating cash reserve rule.",
+    "ai_analysis": "Cash is $208.11, requiring a $200 reserve leaves only $8.11 for new purchases. All watchlist stocks exceed this price, so no BUY orders can be placed without violating the cash reserve rule. Selling dividend payers is contrary to the Scrooge strategy unless dividends are cut, which is not indicated. Therefore we maintain current holdings and await either a price dip or additional capital.",
+    "outlook": "Market sentiment is neutral (Fear & Greed 50). Dividend yields remain attractive; we prefer to hold existing high-yield positions and wait for better entry prices given limited cash reserves.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -661,6 +661,10 @@
     {
       "timestamp": "2026-07-20T17:06:45Z",
       "value": 10102.98
+    },
+    {
+      "timestamp": "2026-07-20T17:35:38Z",
+      "value": 10105.96
     }
   ]
 }
