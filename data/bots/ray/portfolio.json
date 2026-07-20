@@ -1,11 +1,11 @@
 {
   "cash": 1000.0,
-  "total_value": 9988.6,
+  "total_value": 9981.25,
   "positions": {
     "GLD": {
       "shares": 5,
       "avg_cost": 377.66,
-      "current_price": 367.9
+      "current_price": 367.43
     },
     "TIPS": {
       "shares": 26867,
@@ -14,66 +14,66 @@
     },
     "GDX": {
       "shares": 3,
-      "current_price": 71.41,
+      "current_price": 70.93,
       "avg_cost": 76.6469
     },
     "EEM": {
       "shares": 24,
-      "current_price": 64.02,
+      "current_price": 63.935,
       "avg_cost": 67.5067
     },
     "DJP": {
       "shares": 15,
-      "current_price": 46.97,
+      "current_price": 47.015,
       "avg_cost": 44.55
     },
     "PDBC": {
       "shares": 103,
-      "current_price": 17.285,
+      "current_price": 17.29,
       "avg_cost": 16.0787
     },
     "TLT": {
       "shares": 13,
-      "current_price": 84.305,
+      "current_price": 84.185,
       "avg_cost": 85.0685
     },
     "IEF": {
       "shares": 10,
       "avg_cost": 93.94,
-      "current_price": 93.73
+      "current_price": 93.6601
     },
     "FXI": {
       "shares": 10,
       "avg_cost": 33.365,
-      "current_price": 35.1
+      "current_price": 35.065
     },
     "IAU": {
       "shares": 2,
       "avg_cost": 77.6,
-      "current_price": 75.41
+      "current_price": 75.29
     },
     "GSG": {
       "shares": 10,
       "avg_cost": 29.525,
-      "current_price": 31.48
+      "current_price": 31.5085
     },
     "VWO": {
       "shares": 1,
       "avg_cost": 59.74,
-      "current_price": 58.225
+      "current_price": 58.085
     }
   },
-  "total_return_pct": -0.11,
+  "total_return_pct": -0.19,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -7.35,
+  "today_pnl_pct": -0.07,
   "total_trades": 0,
   "today_start_value": 9988.6,
   "today_date": "2026-07-20",
-  "last_action": "Macro environment remains mixed with no clear inflation or recession signals; maintaining All Weather diversification across gold, bonds, commodities, and equities to preserve capital in any regime.",
-  "last_updated": "2026-07-20T13:34:39Z",
+  "last_action": "Mixed signals with modest commodity strength and slight equity gains, but bonds softening; no clear inflation or recession trigger, so maintain All Weather stance.",
+  "last_updated": "2026-07-20T14:04:51Z",
   "last_session": {
-    "at": "2026-07-20T13:34:39Z",
+    "at": "2026-07-20T14:04:51Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -81,33 +81,33 @@
     "top_movers": [
       [
         "FXI",
-        2.84
+        2.74
       ],
       [
         "EEM",
-        1.17
+        0.93
+      ],
+      [
+        "GDX",
+        -0.56
       ],
       [
         "VWO",
-        0.67
-      ],
-      [
-        "SPY",
-        0.59
+        0.43
       ],
       [
         "TLT",
-        -0.25
+        -0.39
       ],
       [
         "GSG",
-        0.25
+        0.35
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Current cash reserve is exactly $1,000, meeting the minimum required. Any purchase would reduce cash below this threshold, so no trades are executed this session. Watchlist shows FXI (+2.8%) and EEM (+1.2%) leading gains, while TLT (-0.2%) slightly down. Existing positions reflect modest losses in gold and bonds, with gains in commodity exposure (PDBC, GSG). The portfolio stays within the 20% per\u2011position limit and remains balanced for steady, predictable returns.",
-    "outlook": "Macro environment remains mixed with no clear inflation or recession signals; maintaining All Weather diversification across gold, bonds, commodities, and equities to preserve capital in any regime.",
+    "ai_analysis": "Watchlist shows FXI and EEM up, GDX down, TLT down, GSG up slightly. Portfolio currently overweight equities and commodities relative to target All Weather weights; bonds and gold are slightly underweight. With cash reserve at minimum, no new purchases can be made without violating cash rule. Recommend holding current allocations and rebalancing when cash permits or after a sell signal.",
+    "outlook": "Mixed signals with modest commodity strength and slight equity gains, but bonds softening; no clear inflation or recession trigger, so maintain All Weather stance.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -618,6 +618,10 @@
     {
       "timestamp": "2026-07-20T13:34:39Z",
       "value": 9988.6
+    },
+    {
+      "timestamp": "2026-07-20T14:04:51Z",
+      "value": 9981.25
     }
   ]
 }
