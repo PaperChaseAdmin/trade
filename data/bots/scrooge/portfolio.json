@@ -1,94 +1,94 @@
 {
   "cash": 208.11,
-  "total_value": 10144.33,
+  "total_value": 10115.59,
   "positions": {
     "HTGC": {
       "shares": 125,
       "avg_cost": 15.955,
-      "current_price": 16.01
+      "current_price": 15.9302
     },
     "T": {
       "shares": 39,
-      "current_price": 21.98,
+      "current_price": 21.925,
       "avg_cost": 20.8362
     },
     "MAIN": {
       "shares": 10,
       "avg_cost": 53.18,
-      "current_price": 54.48
+      "current_price": 54.065
     },
     "O": {
       "shares": 31,
-      "current_price": 65.25,
+      "current_price": 65.1,
       "avg_cost": 63.6706
     },
     "VZ": {
       "shares": 13,
-      "current_price": 43.5201,
+      "current_price": 43.475,
       "avg_cost": 42.1835
     },
     "MO": {
       "shares": 20,
       "avg_cost": 71.62,
-      "current_price": 74.29
+      "current_price": 74.12
     },
     "GLD": {
       "shares": 1,
       "avg_cost": 380.44,
-      "current_price": 367.59
+      "current_price": 367.67
     },
     "PM": {
       "shares": 2,
       "avg_cost": 182.2283,
-      "current_price": 192.69
+      "current_price": 191.98
     },
     "IBM": {
       "shares": 1,
       "avg_cost": 299.72,
-      "current_price": 215.46
+      "current_price": 214.585
     },
     "ENB": {
       "shares": 11,
-      "current_price": 55.97,
+      "current_price": 55.99,
       "avg_cost": 53.675
     },
     "ABBV": {
       "shares": 1,
       "avg_cost": 255.8736,
-      "current_price": 253.5301
+      "current_price": 253.1698
     },
     "WPC": {
       "shares": 2,
       "avg_cost": 70.81,
-      "current_price": 75.65
+      "current_price": 75.4
     },
     "BTI": {
       "shares": 3,
       "avg_cost": 61.93,
-      "current_price": 62.625
+      "current_price": 62.52
     },
     "OHI": {
       "shares": 3,
       "avg_cost": 50.01,
-      "current_price": 49.67
+      "current_price": 49.6
     },
     "ARCC": {
       "shares": 7,
       "avg_cost": 18.595,
-      "current_price": 18.975
+      "current_price": 18.91
     }
   },
-  "total_return_pct": 1.44,
+  "total_return_pct": 1.16,
   "total_return_usd": 0.0,
-  "today_pnl": -54.03,
-  "today_pnl_pct": -0.53,
+  "today_pnl": -82.77,
+  "today_pnl_pct": -0.81,
   "total_trades": 0,
   "today_start_value": 10198.36,
   "today_date": "2026-07-20",
-  "last_action": "Market is neutral; focus on high-yield dividend stocks for steady cash flow.",
-  "last_updated": "2026-07-20T18:41:35Z",
+  "last_action": "Market sentiment is neutral (Fear & Greed ~50). High-dividend yields remain attractive; however, limited cash after maintaining a $200 reserve restricts new purchases.",
+  "last_updated": "2026-07-20T19:04:58Z",
   "last_session": {
-    "at": "2026-07-20T18:41:35Z",
+    "at": "2026-07-20T19:04:58Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -96,33 +96,33 @@
     "top_movers": [
       [
         "MAIN",
-        -1.61
-      ],
-      [
-        "IBM",
-        1.31
-      ],
-      [
-        "ENB",
-        -1.29
-      ],
-      [
-        "OHI",
-        -1.08
-      ],
-      [
-        "ARCC",
-        -1.02
+        -2.36
       ],
       [
         "HTGC",
-        -0.99
+        -1.48
+      ],
+      [
+        "ARCC",
+        -1.36
+      ],
+      [
+        "ENB",
+        -1.27
+      ],
+      [
+        "OHI",
+        -1.21
+      ],
+      [
+        "O",
+        -0.93
       ]
     ],
     "news_read": [],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "Current portfolio shows strong positions in HTGC, T, MAIN, O, VZ, MO, etc. Cash reserve is $208.11, requiring at least $200 kept, leaving only $8.11 for new purchases, insufficient for any full share of watchlist stocks. No dividend cuts signaled, so holding existing DRIP positions is optimal. Consider adding GLD as treasure reserve if price dips further.",
-    "outlook": "Market is neutral; focus on high-yield dividend stocks for steady cash flow.",
+    "ai_analysis": "Current portfolio holds several high-yield positions (HTGC, T, MAIN, O, VZ, MO, PM, ENB, ABBV, WPC, BTI, OHI, ARCC, GLD). Watchlist shows most stocks down today, with MAIN (-2.4%) and HTGC (-1.5%) leading declines. No dividend cuts reported. With $208.11 cash and a $200 reserve, only $8.11 is available for investment, insufficient to buy even a single share of any watchlist stock. Therefore, no trades are executed this session; we will await additional capital or a dividend cut to consider selling.",
+    "outlook": "Market sentiment is neutral (Fear & Greed ~50). High-dividend yields remain attractive; however, limited cash after maintaining a $200 reserve restricts new purchases.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -673,6 +673,10 @@
     {
       "timestamp": "2026-07-20T18:41:35Z",
       "value": 10144.33
+    },
+    {
+      "timestamp": "2026-07-20T19:04:58Z",
+      "value": 10115.59
     }
   ]
 }
