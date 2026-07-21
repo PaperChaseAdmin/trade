@@ -1,11 +1,11 @@
 {
   "cash": 1000.0,
-  "total_value": 9987.62,
+  "total_value": 10066.53,
   "positions": {
     "GLD": {
       "shares": 5,
       "avg_cost": 377.66,
-      "current_price": 368.16
+      "current_price": 371.71
     },
     "TIPS": {
       "shares": 26867,
@@ -14,12 +14,12 @@
     },
     "GDX": {
       "shares": 3,
-      "current_price": 70.99,
+      "current_price": 72.72,
       "avg_cost": 76.6469
     },
     "EEM": {
       "shares": 24,
-      "current_price": 63.615,
+      "current_price": 65.115,
       "avg_cost": 67.5067
     },
     "DJP": {
@@ -29,85 +29,85 @@
     },
     "PDBC": {
       "shares": 103,
-      "current_price": 17.38,
+      "current_price": 17.585,
       "avg_cost": 16.0787
     },
     "TLT": {
       "shares": 13,
-      "current_price": 83.955,
+      "current_price": 83.74,
       "avg_cost": 85.0685
     },
     "IEF": {
       "shares": 10,
       "avg_cost": 93.94,
-      "current_price": 93.56
+      "current_price": 93.3951
     },
     "FXI": {
       "shares": 10,
       "avg_cost": 33.365,
-      "current_price": 35.095
+      "current_price": 34.82
     },
     "IAU": {
       "shares": 2,
       "avg_cost": 77.6,
-      "current_price": 75.465
+      "current_price": 76.1799
     },
     "GSG": {
       "shares": 10,
       "avg_cost": 29.525,
-      "current_price": 31.64
+      "current_price": 32.01
     },
     "VWO": {
       "shares": 1,
       "avg_cost": 59.74,
-      "current_price": 57.91
+      "current_price": 58.83
     }
   },
-  "total_return_pct": -0.12,
+  "total_return_pct": 0.67,
   "total_return_usd": 0.0,
-  "today_pnl": -0.98,
-  "today_pnl_pct": -0.01,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 0,
-  "today_start_value": 9988.6,
-  "today_date": "2026-07-20",
-  "last_action": "Macro environment shows mixed signals: commodity-linked equities (FXI, GSG, PDBC) are up modestly while long-duration bonds (TLT) and gold (GLD) are slightly down. Inflation pressures appear contained",
-  "last_updated": "2026-07-20T19:33:50Z",
+  "today_start_value": 10066.53,
+  "today_date": "2026-07-21",
+  "last_action": "Inflation pressures appear to be building as commodities and gold show strength, while emerging market equities also gain. Bond markets remain steady, suggesting a mixed environment where All Weather ",
+  "last_updated": "2026-07-21T13:35:12Z",
   "last_session": {
-    "at": "2026-07-20T19:33:50Z",
+    "at": "2026-07-21T13:35:12Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "FXI",
-        2.83
-      ],
-      [
-        "GSG",
-        0.76
-      ],
-      [
-        "PDBC",
-        0.75
-      ],
-      [
-        "TLT",
-        -0.67
+        "GDX",
+        2.64
       ],
       [
         "EEM",
-        0.51
+        2.45
       ],
       [
-        "GDX",
-        -0.48
+        "VWO",
+        1.57
+      ],
+      [
+        "GSG",
+        1.2
+      ],
+      [
+        "PDBC",
+        1.18
+      ],
+      [
+        "GLD",
+        1.12
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "With cash at the $1,000 reserve limit, no additional buying can be done without breaching the cash rule. Current positions are diversified across gold (GLD, IAU), commodities (DJP, PDBC, GSG), bonds (TLT, IEF, TIPS), and equities (EEM, FXI, VWO). The slight weakness in gold and bonds offers potential rebalancing opportunities if cash becomes available, but for now we hold steady.",
-    "outlook": "Macro environment shows mixed signals: commodity-linked equities (FXI, GSG, PDBC) are up modestly while long-duration bonds (TLT) and gold (GLD) are slightly down. Inflation pressures appear contained, supporting a balanced All Weather stance with emphasis on bonds and gold for stability.",
+    "ai_analysis": "Current portfolio holds exposure across gold (GLD, IAU), silver miners (GDX), broad commodities (PDBC, GSG), TIPS, emerging market equities (EEM, VWO, FXI), and Treasuries (TLT, IEF). Cash is at the required $1,000 reserve, leaving no room for new purchases without violating the cash rule. Until cash increases (e.g., from position gains or new allocations), the best course is to hold and monitor for rebalancing opportunities that keep any single position under 20% of total equity.",
+    "outlook": "Inflation pressures appear to be building as commodities and gold show strength, while emerging market equities also gain. Bond markets remain steady, suggesting a mixed environment where All Weather diversification is warranted.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -666,6 +666,10 @@
     {
       "timestamp": "2026-07-20T19:33:50Z",
       "value": 9987.62
+    },
+    {
+      "timestamp": "2026-07-21T13:35:12Z",
+      "value": 10066.53
     }
   ]
 }
