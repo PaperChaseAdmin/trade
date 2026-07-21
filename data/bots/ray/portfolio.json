@@ -1,11 +1,11 @@
 {
   "cash": 1000.0,
-  "total_value": 10066.53,
+  "total_value": 10059.56,
   "positions": {
     "GLD": {
       "shares": 5,
       "avg_cost": 377.66,
-      "current_price": 371.71
+      "current_price": 371.87
     },
     "TIPS": {
       "shares": 26867,
@@ -14,12 +14,12 @@
     },
     "GDX": {
       "shares": 3,
-      "current_price": 72.72,
+      "current_price": 72.475,
       "avg_cost": 76.6469
     },
     "EEM": {
       "shares": 24,
-      "current_price": 65.115,
+      "current_price": 64.99,
       "avg_cost": 67.5067
     },
     "DJP": {
@@ -29,51 +29,51 @@
     },
     "PDBC": {
       "shares": 103,
-      "current_price": 17.585,
+      "current_price": 17.58,
       "avg_cost": 16.0787
     },
     "TLT": {
       "shares": 13,
-      "current_price": 83.74,
+      "current_price": 83.614,
       "avg_cost": 85.0685
     },
     "IEF": {
       "shares": 10,
       "avg_cost": 93.94,
-      "current_price": 93.3951
+      "current_price": 93.3197
     },
     "FXI": {
       "shares": 10,
       "avg_cost": 33.365,
-      "current_price": 34.82
+      "current_price": 34.725
     },
     "IAU": {
       "shares": 2,
       "avg_cost": 77.6,
-      "current_price": 76.1799
+      "current_price": 76.225
     },
     "GSG": {
       "shares": 10,
       "avg_cost": 29.525,
-      "current_price": 32.01
+      "current_price": 31.995
     },
     "VWO": {
       "shares": 1,
       "avg_cost": 59.74,
-      "current_price": 58.83
+      "current_price": 58.709
     }
   },
-  "total_return_pct": 0.67,
+  "total_return_pct": 0.6,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -6.97,
+  "today_pnl_pct": -0.07,
   "total_trades": 0,
   "today_start_value": 10066.53,
   "today_date": "2026-07-21",
-  "last_action": "Inflation pressures appear to be building as commodities and gold show strength, while emerging market equities also gain. Bond markets remain steady, suggesting a mixed environment where All Weather ",
-  "last_updated": "2026-07-21T13:35:12Z",
+  "last_action": "Inflation remains subdued, growth shows signs of slowing, prompting a bias toward bonds and gold as defensive holdings while maintaining commodity exposure for diversification.",
+  "last_updated": "2026-07-21T14:02:56Z",
   "last_session": {
-    "at": "2026-07-21T13:35:12Z",
+    "at": "2026-07-21T14:02:56Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -81,19 +81,15 @@
     "top_movers": [
       [
         "GDX",
-        2.64
+        2.5
       ],
       [
         "EEM",
-        2.45
+        2.28
       ],
       [
         "VWO",
-        1.57
-      ],
-      [
-        "GSG",
-        1.2
+        1.36
       ],
       [
         "PDBC",
@@ -101,13 +97,17 @@
       ],
       [
         "GLD",
-        1.12
+        1.16
+      ],
+      [
+        "GSG",
+        1.15
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Current portfolio holds exposure across gold (GLD, IAU), silver miners (GDX), broad commodities (PDBC, GSG), TIPS, emerging market equities (EEM, VWO, FXI), and Treasuries (TLT, IEF). Cash is at the required $1,000 reserve, leaving no room for new purchases without violating the cash rule. Until cash increases (e.g., from position gains or new allocations), the best course is to hold and monitor for rebalancing opportunities that keep any single position under 20% of total equity.",
-    "outlook": "Inflation pressures appear to be building as commodities and gold show strength, while emerging market equities also gain. Bond markets remain steady, suggesting a mixed environment where All Weather diversification is warranted.",
+    "ai_analysis": "Current watchlist shows strength in gold miners (GDX) and emerging markets (EEM, VWO) but commodities (PDBC, GSG) also up. With cash at the $1000 reserve limit, no additional buying can be done without violating the reserve rule. The All Weather approach suggests maintaining existing allocations: gold (GLD, IAU), bonds (TLT, IEF, SHY, BIL), commodities (PDBC, GSG, GDX), and equities (EEM, VWO, FXI). No trades are executed this session.",
+    "outlook": "Inflation remains subdued, growth shows signs of slowing, prompting a bias toward bonds and gold as defensive holdings while maintaining commodity exposure for diversification.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -670,6 +670,10 @@
     {
       "timestamp": "2026-07-21T13:35:12Z",
       "value": 10066.53
+    },
+    {
+      "timestamp": "2026-07-21T14:02:56Z",
+      "value": 10059.56
     }
   ]
 }
