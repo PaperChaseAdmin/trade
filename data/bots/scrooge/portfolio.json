@@ -1,128 +1,128 @@
 {
   "cash": 208.11,
-  "total_value": 10159.54,
+  "total_value": 10141.54,
   "positions": {
     "HTGC": {
       "shares": 125,
       "avg_cost": 15.955,
-      "current_price": 16.3177
+      "current_price": 16.285
     },
     "T": {
       "shares": 39,
-      "current_price": 22.025,
+      "current_price": 21.98,
       "avg_cost": 20.8362
     },
     "MAIN": {
       "shares": 10,
       "avg_cost": 53.18,
-      "current_price": 55.025
+      "current_price": 54.845
     },
     "O": {
       "shares": 31,
-      "current_price": 64.96,
+      "current_price": 64.87,
       "avg_cost": 63.6706
     },
     "VZ": {
       "shares": 13,
-      "current_price": 43.405,
+      "current_price": 43.3259,
       "avg_cost": 42.1835
     },
     "MO": {
       "shares": 20,
       "avg_cost": 71.62,
-      "current_price": 73.5208
+      "current_price": 73.35
     },
     "GLD": {
       "shares": 1,
       "avg_cost": 380.44,
-      "current_price": 373.94
+      "current_price": 373.51
     },
     "PM": {
       "shares": 2,
       "avg_cost": 182.2283,
-      "current_price": 190.87
+      "current_price": 190.48
     },
     "IBM": {
       "shares": 1,
       "avg_cost": 299.72,
-      "current_price": 210.97
+      "current_price": 211.33
     },
     "ENB": {
       "shares": 11,
-      "current_price": 55.505,
+      "current_price": 55.53,
       "avg_cost": 53.675
     },
     "ABBV": {
       "shares": 1,
       "avg_cost": 255.8736,
-      "current_price": 256.31
+      "current_price": 255.505
     },
     "WPC": {
       "shares": 2,
       "avg_cost": 70.81,
-      "current_price": 75.42
+      "current_price": 75.15
     },
     "BTI": {
       "shares": 3,
       "avg_cost": 61.93,
-      "current_price": 61.9399
+      "current_price": 61.67
     },
     "OHI": {
       "shares": 3,
       "avg_cost": 50.01,
-      "current_price": 50.14
+      "current_price": 50.0201
     },
     "ARCC": {
       "shares": 7,
       "avg_cost": 18.595,
-      "current_price": 19.065
+      "current_price": 19.06
     }
   },
-  "total_return_pct": 1.6,
+  "total_return_pct": 1.42,
   "total_return_usd": 0.0,
-  "today_pnl": 18.36,
-  "today_pnl_pct": 0.18,
+  "today_pnl": 0.36,
+  "today_pnl_pct": 0.0,
   "total_trades": 0,
   "today_start_value": 10141.18,
   "today_date": "2026-07-21",
-  "last_action": "Market sentiment is neutral (Fear & Greed ~50). With limited cash ($208) and a $200 reserve requirement, there is insufficient capital to initiate new positions in high\u2011yield dividend stocks. The focu",
-  "last_updated": "2026-07-21T16:39:39Z",
+  "last_action": "Market neutral; focus on high-yield dividend stocks; cash reserve maintained.",
+  "last_updated": "2026-07-21T17:09:07Z",
   "last_session": {
-    "at": "2026-07-21T16:39:39Z",
+    "at": "2026-07-21T17:09:07Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
+        "MO",
+        -1.75
+      ],
+      [
         "GLD",
-        1.73
+        1.62
       ],
       [
         "HTGC",
-        1.6
+        1.4
       ],
       [
-        "MO",
-        -1.55
-      ],
-      [
-        "ABBV",
-        1.15
-      ],
-      [
-        "OHI",
-        1.13
+        "BTI",
+        -1.34
       ],
       [
         "PM",
-        -0.95
+        -1.16
+      ],
+      [
+        "OHI",
+        0.93
       ]
     ],
     "news_read": [],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "Current portfolio consists of high\u2011yielding REITs, BDCs, telecoms, tobacco, and gold, all generating dividends above 4% except GLD which serves as a store of value. Watchlist shows modest price moves; HTGC and GLD are up today, but none are cheap enough to buy with the available $8.11 after reserving $200. No dividend cuts have been announced, so selling is contrary to Scrooge\u2019s rule. Therefore, no trades are executed this session.",
-    "outlook": "Market sentiment is neutral (Fear & Greed ~50). With limited cash ($208) and a $200 reserve requirement, there is insufficient capital to initiate new positions in high\u2011yield dividend stocks. The focus remains on holding existing dividend payers and waiting for a better entry or additional cash inflow.",
+    "ai_analysis": "Current cash $208.11, need to keep >=$200, leaving only $8.11 for new purchases. No watchlist stock priced <=$8.11, so no buys today. Existing dividend payers HTGC, T, MAIN, O, VZ, MO, PM, ENB, WPC, OHI, ARCC, BTI, GLD (as treasure) all hold; no dividend cuts signaled. Will monitor for any dividend reductions and reinvest dividends via DRIP when paid.",
+    "outlook": "Market neutral; focus on high-yield dividend stocks; cash reserve maintained.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -709,6 +709,10 @@
     {
       "timestamp": "2026-07-21T16:39:39Z",
       "value": 10159.54
+    },
+    {
+      "timestamp": "2026-07-21T17:09:07Z",
+      "value": 10141.54
     }
   ]
 }
