@@ -1,69 +1,69 @@
 {
   "cash": 504.15,
-  "total_value": 9699.68,
+  "total_value": 9691.07,
   "positions": {
     "AAPL": {
       "shares": 10,
-      "current_price": 323.89,
+      "current_price": 323.875,
       "avg_cost": 302.355
     },
     "NVDA": {
       "shares": 16,
-      "current_price": 213.795,
+      "current_price": 213.59,
       "avg_cost": 201.4803
     },
     "PLTR": {
       "shares": 6,
       "avg_cost": 130.0,
-      "current_price": 123.75
+      "current_price": 123.58
     },
     "MSTR": {
       "shares": 3,
-      "current_price": 100.09,
+      "current_price": 99.86,
       "avg_cost": 96.303
     },
     "RIVN": {
       "shares": 3,
-      "current_price": 17.225,
+      "current_price": 17.155,
       "avg_cost": 17.35
     },
     "COIN": {
       "shares": 2,
       "avg_cost": 153.92,
-      "current_price": 168.16
+      "current_price": 167.68
     },
     "SOFI": {
       "shares": 6,
-      "current_price": 17.065,
+      "current_price": 17.075,
       "avg_cost": 17.3601
     },
     "AMD": {
       "shares": 1,
       "avg_cost": 512.98,
-      "current_price": 555.78
+      "current_price": 554.01
     },
     "GOOGL": {
       "shares": 1,
       "avg_cost": 358.45,
-      "current_price": 347.08
+      "current_price": 346.62
     },
     "RBLX": {
       "shares": 2,
       "avg_cost": 53.885,
-      "current_price": 49.95
+      "current_price": 49.88
     }
   },
-  "total_return_pct": -3.0,
+  "total_return_pct": -3.09,
   "total_return_usd": 0.0,
-  "today_pnl": 46.29,
-  "today_pnl_pct": 0.48,
+  "today_pnl": 37.68,
+  "today_pnl_pct": 0.39,
   "total_trades": 0,
   "today_start_value": 9653.39,
   "today_date": "2026-07-22",
-  "last_action": "Market shows mixed sentiment with NVDA leading momentum while many tech names are under pressure; extreme fear not indicated, but watchlist dip presents buying opportunities for disruptive names.",
-  "last_updated": "2026-07-22T18:01:32Z",
+  "last_action": "Tech sector shows mixed signals with NVDA leading momentum (+3.1%) while many growth names like PLTR, RBLX, COIN are down sharply. Lack of Fear & Greed data makes sentiment unclear, but extreme moves ",
+  "last_updated": "2026-07-22T18:18:59Z",
   "last_session": {
-    "at": "2026-07-22T18:01:32Z",
+    "at": "2026-07-22T18:18:59Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -71,15 +71,19 @@
     "top_movers": [
       [
         "PLTR",
-        -6.69
+        -6.83
       ],
       [
         "RBLX",
-        -4.9
+        -5.01
       ],
       [
         "COIN",
-        -4.4
+        -4.58
+      ],
+      [
+        "RIVN",
+        -3.38
       ],
       [
         "SOFI",
@@ -87,17 +91,13 @@
       ],
       [
         "NVDA",
-        3.14
-      ],
-      [
-        "RIVN",
-        -3.06
+        3.11
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Current positions are profitable in AAPL, NVDA, MSTR, COIN, AMD; PLTR and RBLX show sharp declines, suggesting potential mean-reversion. Cash reserve limits immediate buying; will wait for deeper dip or additional funds to deploy into high-conviction momentum stocks like TSLA or NVDA while maintaining <35% concentration.",
-    "outlook": "Market shows mixed sentiment with NVDA leading momentum while many tech names are under pressure; extreme fear not indicated, but watchlist dip presents buying opportunities for disruptive names.",
+    "ai_analysis": "Current portfolio is heavily weighted in AAPL and NVDA, both showing gains. Several positions are underwater (PLTR, SOFI, RIVN, RBLX, GOOGL). Cash stands at $504.15, requiring a $500 reserve leaves only $4.15 for new buys, insufficient for any watchlist stock. Therefore no trades are executed this session; will monitor for dips and re-evaluate if cash increases or Fear & Greed signals extreme fear.",
+    "outlook": "Tech sector shows mixed signals with NVDA leading momentum (+3.1%) while many growth names like PLTR, RBLX, COIN are down sharply. Lack of Fear & Greed data makes sentiment unclear, but extreme moves suggest caution. Keeping cash reserve limits buying power.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -748,6 +748,10 @@
     {
       "timestamp": "2026-07-22T18:01:32Z",
       "value": 9699.68
+    },
+    {
+      "timestamp": "2026-07-22T18:18:59Z",
+      "value": 9691.07
     }
   ]
 }
