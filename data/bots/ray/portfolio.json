@@ -1,11 +1,11 @@
 {
   "cash": 1000.0,
-  "total_value": 10104.8,
+  "total_value": 10135.21,
   "positions": {
     "GLD": {
       "shares": 5,
       "avg_cost": 377.66,
-      "current_price": 374.7899
+      "current_price": 379.53
     },
     "TIPS": {
       "shares": 26867,
@@ -14,12 +14,12 @@
     },
     "GDX": {
       "shares": 3,
-      "current_price": 73.74,
+      "current_price": 76.315,
       "avg_cost": 76.6469
     },
     "EEM": {
       "shares": 24,
-      "current_price": 65.32,
+      "current_price": 64.745,
       "avg_cost": 67.5067
     },
     "DJP": {
@@ -29,28 +29,28 @@
     },
     "PDBC": {
       "shares": 103,
-      "current_price": 17.645,
+      "current_price": 17.78,
       "avg_cost": 16.0787
     },
     "TLT": {
       "shares": 13,
-      "current_price": 83.69,
+      "current_price": 83.6,
       "avg_cost": 85.0685
     },
     "IEF": {
       "shares": 10,
       "avg_cost": 93.94,
-      "current_price": 93.325
+      "current_price": 93.2701
     },
     "FXI": {
       "shares": 10,
       "avg_cost": 33.365,
-      "current_price": 34.66
+      "current_price": 34.53
     },
     "IAU": {
       "shares": 2,
       "avg_cost": 77.6,
-      "current_price": 76.8
+      "current_price": 77.8
     },
     "GSG": {
       "shares": 10,
@@ -60,20 +60,20 @@
     "VWO": {
       "shares": 1,
       "avg_cost": 59.74,
-      "current_price": 58.855
+      "current_price": 58.755
     }
   },
-  "total_return_pct": 1.05,
+  "total_return_pct": 1.35,
   "total_return_usd": 0.0,
-  "today_pnl": 38.27,
-  "today_pnl_pct": 0.38,
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
   "total_trades": 0,
-  "today_start_value": 10066.53,
-  "today_date": "2026-07-21",
-  "last_action": "Inflation pressures appear to be building as gold and commodities show strength; equity markets show mixed signals; bond yields relatively stable.",
-  "last_updated": "2026-07-21T19:36:19Z",
+  "today_start_value": 10135.21,
+  "today_date": "2026-07-22",
+  "last_action": "Inflation remains sticky but growth is showing signs of slowing, suggesting a stagflationary environment. In such a climate, the All Weather approach favors holding gold and commodities as inflation h",
+  "last_updated": "2026-07-22T13:32:54Z",
   "last_session": {
-    "at": "2026-07-21T19:36:19Z",
+    "at": "2026-07-22T13:32:54Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -81,33 +81,33 @@
     "top_movers": [
       [
         "GDX",
-        4.3
-      ],
-      [
-        "EEM",
-        2.78
+        2.9
       ],
       [
         "IAU",
-        1.94
+        1.28
       ],
       [
         "GLD",
-        1.93
+        1.27
       ],
       [
-        "VWO",
-        1.61
+        "EEM",
+        -0.93
       ],
       [
-        "GSG",
-        1.56
+        "PDBC",
+        0.74
+      ],
+      [
+        "FXI",
+        -0.3
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "Given the All Weather approach, we would increase exposure to gold (GLD, IAU) and commodities (PDBC, DJP, GSG) to hedge inflation, but cash reserves are at the minimum $1000, limiting new purchases. We remain diversified and will wait for cash inflow or rebalancing opportunities.",
-    "outlook": "Inflation pressures appear to be building as gold and commodities show strength; equity markets show mixed signals; bond yields relatively stable.",
+    "ai_analysis": "Current portfolio shows gains in gold (GLD, IAU), commodities (PDBC, GSG, DJP), and some equity exposure (FXI). Losses are concentrated in TIPS (due to real yield changes) and emerging markets (EEM, VWO). With cash at exactly $1000, we cannot initiate new buys without violating the cash reserve rule. Therefore, we hold the existing allocation and monitor macro data for any shift that would warrant a rebalance, such as a clear break in inflation trends or a decisive move in growth indicators.",
+    "outlook": "Inflation remains sticky but growth is showing signs of slowing, suggesting a stagflationary environment. In such a climate, the All Weather approach favors holding gold and commodities as inflation hedges while maintaining a core bond position for deflation protection. The recent strength in GDX and IAU indicates continued demand for precious metals, while bond ETFs like TLT and IEF are flat, reflecting uncertainty around rates. We will stay diversified and avoid overconcentration, keeping cash reserves intact for future rebalancing opportunities.",
     "trades_made": 0
   },
   "portfolio_history": [
@@ -718,6 +718,10 @@
     {
       "timestamp": "2026-07-21T19:36:19Z",
       "value": 10104.8
+    },
+    {
+      "timestamp": "2026-07-22T13:32:54Z",
+      "value": 10135.21
     }
   ]
 }
