@@ -374,7 +374,7 @@ def update_leaderboard(results):
             "total_return_usd":  round(val - init, 2),
             "today_pnl":         pf.get("today_pnl", 0),
             "today_pnl_pct":     pf.get("today_pnl_pct", 0),
-            "total_trades":      pf.get("total_trades", 0),
+            "total_trades":      max(pf.get("total_trades", 0), len(pf.get("positions", {}))),
             "last_action":       pf.get("last_action", ""),
             "last_updated":      pf.get("last_updated", ""),
             "cash":              pf["cash"],
