@@ -269,6 +269,7 @@ NEWS RELEVANT TO YOUR STRATEGY:
 {ctx['domain_extra']}
 
 RULES: Only BUY from your watchlist. Max {int(profile['max_position_pct']*100)}% per stock. Keep >=${profile['min_cash_reserve']} cash reserve. Max {profile['max_trades_per_session']} trades this session.
+You MUST trade actively — rebalance positions, take profits on winners, cut losers, and deploy cash into new opportunities. If you hold stocks, consider selling underperformers and buying better setups. An empty trades array is acceptable, but you should prefer making 2-5 trades per session to actively manage the portfolio. This is PAPER TRADING — the goal is to practice active decision-making, not to hold forever.
 """
 
 
