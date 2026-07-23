@@ -15,22 +15,18 @@ DETAIL_TMPL = """\
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>BOTNAME · AI Trading Bot · PaperChase</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>BOTNAME &middot; AI Trading Bot &middot; PaperChase</title>
 <meta name="description" content="Watch BOTNAME, an AI-powered trading bot with a BOTSTRATEGY strategy. Real portfolio, live trades, transparent AI decisions on PaperChase."/>
 <meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://paperchase.online/trade/BOTID/"/>
-<!-- Google tag (gtag.js) -->
+<link rel="canonical" href="https://paperchase.online/trading-arena/BOTID/"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W3V49QCMT0');
-</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="/trade/assets/style.css"/>
-<script src="/trade/assets/i18n.js"></script>
-<script src="/trade/assets/supabase-client.js"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-W3V49QCMT0');</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="/assets/design-system.css"/>
+<script src="/assets/countdown.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
   const BOT_ID='BOTID',BOT_COLOR='BOTCOLOR',BOT_NAME='BOTNAME';
@@ -40,81 +36,62 @@ DETAIL_TMPL = """\
   const BOT_WATCHLIST=BOTWATCHLIST;
   const BOT_MAX_POSITION=BOTMAXPOSITION,BOT_MAX_TRADES=BOTMAXTRADES,BOT_MIN_CASH=BOTMINCASH;
 </script>
+<style>
+.bot-hero{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.bot-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;flex-shrink:0}
+.bot-meta h1{font-size:20px;font-weight:700;color:var(--pc-heading);margin:0;line-height:1.2}
+.bot-meta .sub{font-size:11px;color:var(--pc-text-2);margin-top:1px}
+.outlook-card{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius-lg);padding:16px;margin-bottom:16px}
+.outlook-card .lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--pc-text-3);margin-bottom:6px}
+.outlook-card .txt{font-size:12px;color:var(--pc-text);line-height:1.5}
+.specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin-bottom:16px}
+.specs .si{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius);padding:10px 12px}
+.specs .si .sl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--pc-text-3)}
+.specs .si .sv{font-size:14px;font-weight:700;font-family:var(--pc-mono);color:var(--pc-heading);margin-top:1px}
+.st{font-size:12px;font-weight:700;color:var(--pc-heading);margin-bottom:10px;margin-top:16px}
+</style>
 </head>
 <body>
-<div class="bg-overlay"></div>
 
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">PaperChase</a>
+  <a class="logo" href="/">PaperChase<span>.</span></a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
-    <a class="nav-link active" href="/trade/" data-i18n="nav_trading">Trading Arena</a>
-    <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Poly Watch</a>
+    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
+    <a class="nav-link" href="/crypto-pulse/">Crypto Pulse</a>
+    <a class="nav-link" href="/poly-watch/">Poly Watch</a>
+    <a class="nav-link" href="/stock-pick/">Stock Pick</a>
+    <a class="nav-link active" href="/trading-arena/">Trading Arena</a>
   </div>
-  <div style="flex:1"></div>
-  <a class="nav-link" href="/trade/login/" data-i18n="nav_login" id="nav-login">Log In</a>
-  <a class="nav-link" href="/trade/register/" data-i18n="nav_register" id="nav-register">Register</a>
-  <a class="nav-link" href="/trade/account/" data-i18n="nav_account" id="nav-account" style="display:none">Account</a>
-  <a class="nav-link" href="#" onclick="if(window.PaperChaseAuth)PaperChaseAuth.signOut()" data-i18n="nav_logout" id="nav-logout" style="display:none">Log Out</a>
+  <div class="topbar-spacer"></div>
+  <div class="topbar-auth">
+    <a class="nav-link" href="/login/">Log In</a>
+    <a href="/register/" style="display:inline-flex;align-items:center;font-size:12px;font-weight:600;padding:6px 14px;border-radius:var(--pc-radius);background:var(--pc-brand);color:#fff;text-decoration:none">Register</a>
+  </div>
 </div></nav>
+
 <div class="container">
-  <a class="back-link" href="/trade/" data-i18n="nav_all_bots">← All Bots</a>
-  <div class="favourite-bar" style="display:flex;justify-content:flex-end;align-items:center;padding:8px 0">
-    <button id="favBtn" class="fav-btn" onclick="toggleFavourite()" style="background:none;border:1px solid var(--tv-border-2,#363a45);border-radius:var(--tv-radius-sm,4px);padding:6px 12px;cursor:pointer;font-size:13px;color:var(--tv-text-2,#787b86);display:none">
-      <span id="favIcon">&#9734;</span> <span id="favLabel" data-i18n="favourite_add">Add to Favourites</span>
-    </button>
-  </div>
-  <div id="loading" style="text-align:center;padding:40px;color:var(--tv-text-2)" data-i18n="loading_bot">Loading BOTNAME...</div>
+  <a href="/trading-arena/" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--pc-text-3);text-decoration:none;margin-bottom:10px">&larr; Back to Arena</a>
+  <div id="loading" class="loading">Loading BOTNAME...</div>
   <div id="app" style="display:none">
     <div id="hero"></div>
     <div id="outlook"></div>
-    <div id="countdown-wrap"></div>
-    <div id="prices-bar"></div>
+    <div id="countdown-wrap" class="countdown-wrap" style="margin-bottom:16px"></div>
+    <div id="prices-bar" class="specs"></div>
     <div id="last-session"></div>
-    <div id="specs"></div>
-    <div id="chart"></div>
+    <div id="specs" class="specs"></div>
+    <div class="st">&#x1F4C8; Portfolio Performance</div>
+    <div id="chart" style="background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius-lg);padding:16px;margin-bottom:16px"><canvas id="mainChart"></canvas></div>
+    <div class="st">&#x1F4E6; Current Positions</div>
     <div id="positions"></div>
+    <div class="st">&#x1F4CB; Trade History</div>
     <div id="trades"></div>
     <div id="follow"></div>
   </div>
-  <a href="/trade/BOTID/records/" class="nav-link" style="display:inline-block;margin-top:12px" data-i18n="nav_full_records">&#128196; Full Trade Records</a>
+  <a href="/trading-arena/BOTID/records/" style="display:inline-block;margin-top:12px;font-size:12px;color:var(--pc-text-2)">&#x1F4C4; Full Trade Records</a>
 </div>
 
-<script src="/trade/assets/bot-detail.js"></script>
-<script>
-async function checkFavStatus() {
-  if (!window.PaperChaseAuth) return;
-  var session = await PaperChaseAuth.getSession();
-  var btn = document.getElementById('favBtn');
-  if (!btn) return;
-  if (!session) { btn.style.display = 'none'; return; }
-  btn.style.display = '';
-  var isFav = await PaperChaseAuth.isFavourite(BOT_ID);
-  document.getElementById('favIcon').textContent = isFav ? '\u2605' : '\u2606';
-  document.getElementById('favLabel').textContent = isFav ? 'Remove from Favourites' : 'Add to Favourites';
-}
-async function toggleFavourite() {
-  if (!window.PaperChaseAuth) return;
-  var session = await PaperChaseAuth.getSession();
-  if (!session) { alert('Please log in to add favourites.'); return; }
-  var isFav = await PaperChaseAuth.isFavourite(BOT_ID);
-  if (isFav) {
-    await PaperChaseAuth.removeFavourite(BOT_ID);
-  } else {
-    await PaperChaseAuth.addFavourite(BOT_ID, BOT_NAME, BOT_AVATAR);
-  }
-  checkFavStatus();
-}
-checkFavStatus();
-</script>
-<script>
-document.addEventListener('i18nReady', function () {
-  if (window.__retranslate) window.__retranslate();
-});
-</script>
-</body></html>
-"""
+<script src="/trading-arena/assets/bot-detail.js"></script>
+</body></html>"""
 
 RECORDS_TMPL = """\
 <!DOCTYPE html>
@@ -122,50 +99,49 @@ RECORDS_TMPL = """\
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>BOTNAME Trade Records · PaperChase</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>BOTNAME Trade Records &middot; PaperChase</title>
 <meta name="description" content="Complete trade history for BOTNAME AI trading bot on PaperChase."/>
 <meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://paperchase.online/trade/BOTID/records/"/>
-<!-- Google tag (gtag.js) -->
+<link rel="canonical" href="https://paperchase.online/trading-arena/BOTID/records/"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3V49QCMT0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W3V49QCMT0');
-</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="/trade/assets/style.css"/>
-<script src="/trade/assets/i18n.js"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-W3V49QCMT0');</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="/assets/design-system.css"/>
 </head>
 <body>
-<div class="bg-overlay"></div>
 
 <nav class="topbar"><div class="topbar-inner">
-  <a class="logo" href="/trade/">PaperChase</a>
+  <a class="logo" href="/">PaperChase<span>.</span></a>
   <div class="topbar-nav">
-    <a class="nav-link" href="/" data-i18n="nav_home">Home</a>
-    <a class="nav-link active" href="/trade/" data-i18n="nav_trading">Trading Arena</a>
-    <a class="nav-link" href="/market-sentinel/" data-i18n="nav_sentinel">Market Sentinel</a>
-    <a class="nav-link" href="/trade/polymarket/" data-i18n="nav_polymarket">Poly Watch</a>
+    <a class="nav-link" href="/market-sentinel/">Market Sentinel</a>
+    <a class="nav-link" href="/crypto-pulse/">Crypto Pulse</a>
+    <a class="nav-link" href="/poly-watch/">Poly Watch</a>
+    <a class="nav-link" href="/stock-pick/">Stock Pick</a>
+    <a class="nav-link active" href="/trading-arena/">Trading Arena</a>
   </div>
-  <div style="flex:1"></div>
-  <a class="nav-link" href="/trade/login/" data-i18n="nav_login">Log In</a>
-  <a class="nav-link" href="/trade/register/" data-i18n="nav_register">Register</a>
+  <div class="topbar-spacer"></div>
+  <div class="topbar-auth">
+    <a class="nav-link" href="/login/">Log In</a>
+    <a href="/register/" style="display:inline-flex;align-items:center;font-size:12px;font-weight:600;padding:6px 14px;border-radius:var(--pc-radius);background:var(--pc-brand);color:#fff;text-decoration:none">Register</a>
+  </div>
 </div></nav>
+
 <div class="container">
-  <a class="back-link" href="/trade/BOTID/" data-i18n="records_back_to_bot">&#8592; BOTAVATAR BOTNAME</a>
-  <div class="page-header">
-    <div class="page-title-wrap">
-      <div class="page-title" data-i18n="records_title">BOTAVATAR BOTNAME &#8212; Trade Records</div>
-      <div class="page-sub" data-i18n="records_subtitle">Complete history &#183; All times UTC</div>
+  <a href="/trading-arena/BOTID/" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--pc-text-3);text-decoration:none;margin-bottom:10px">&larr; BOTAVATAR BOTNAME</a>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+    <div>
+      <h1 style="font-size:22px;font-weight:700;color:var(--pc-heading);letter-spacing:-0.03em;margin:0">BOTAVATAR BOTNAME &mdash; Trade Records</h1>
+      <p style="font-size:12px;color:var(--pc-text-2);margin-top:1px">Complete history &middot; All times UTC</p>
     </div>
   </div>
-  <div id="stats" class="stats-grid" style="grid-template-columns:repeat(4,1fr)"></div>
-  <div style="display:flex;gap:8px;margin-bottom:12px">
-    <button class="nav-link active" onclick="setFilter('all',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface);color:var(--tv-text)" data-i18n="records_filter_all">All</button>
-    <button class="nav-link" onclick="setFilter('buy',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface);color:var(--tv-text)" data-i18n="records_filter_buys">Buys</button>
-    <button class="nav-link" onclick="setFilter('sell',this)" style="cursor:pointer;border:none;font-size:12px;background:var(--tv-surface);color:var(--tv-text)" data-i18n="records_filter_sells">Sells</button>
+  <div id="stats" class="specs" style="grid-template-columns:repeat(4,1fr)"></div>
+  <div style="display:flex;gap:6px;margin-bottom:12px">
+    <button class="on" onclick="setFilter('all',this)" style="font-size:10px;font-weight:600;padding:5px 10px;border:1px solid var(--pc-border);border-radius:var(--pc-radius);background:var(--pc-brand);color:#fff;cursor:pointer">All</button>
+    <button onclick="setFilter('buy',this)" style="font-size:10px;font-weight:600;padding:5px 10px;border:1px solid var(--pc-border);border-radius:var(--pc-radius);background:var(--pc-surface);color:var(--pc-text-2);cursor:pointer">Buys</button>
+    <button onclick="setFilter('sell',this)" style="font-size:10px;font-weight:600;padding:5px 10px;border:1px solid var(--pc-border);border-radius:var(--pc-radius);background:var(--pc-surface);color:var(--pc-text-2);cursor:pointer">Sells</button>
   </div>
   <div id="records-list"></div>
 </div>
@@ -173,20 +149,14 @@ RECORDS_TMPL = """\
 <script>
   const BOT_ID='BOTID',BOT_COLOR='BOTCOLOR',BOT_NAME='BOTNAME',BOT_AVATAR='BOTAVATAR';
 </script>
-<script src="/trade/assets/records.js"></script>
-<script>
-document.addEventListener('i18nReady', function () {
-  if (window.__retranslate) window.__retranslate();
-});
-</script>
-</body></html>
-"""
+<script src="/trading-arena/assets/records.js"></script>
+</body></html>"""
 
-# ── GENERATE ──
+# ---- GENERATE ----
 count = 0
 for bot_id, p in BOT_PROFILES.items():
     os.makedirs(f"{bot_id}", exist_ok=True)
-    
+
     replacements = {
         'BOTID': bot_id,
         'BOTNAME': p["display_name"],
@@ -203,16 +173,16 @@ for bot_id, p in BOT_PROFILES.items():
         'BOTMAXTRADES': str(p["max_trades_per_session"]),
         'BOTMINCASH': str(p["min_cash_reserve"]),
     }
-    
+
     html = DETAIL_TMPL
     for k, v in sorted(replacements.items(), key=lambda x: -len(x[0])):
         html = html.replace(k, v)
-    
+
     with open(f"{bot_id}/index.html", "w", encoding="utf-8") as f:
         f.write(html)
-    
+
     os.makedirs(f"{bot_id}/records", exist_ok=True)
-    
+
     rec_html = RECORDS_TMPL
     rec_replacements = {
         'BOTID': bot_id,
@@ -222,10 +192,10 @@ for bot_id, p in BOT_PROFILES.items():
     }
     for k, v in sorted(rec_replacements.items(), key=lambda x: -len(x[0])):
         rec_html = rec_html.replace(k, v)
-    
+
     with open(f"{bot_id}/records/index.html", "w", encoding="utf-8") as f:
         f.write(rec_html)
-    
+
     count += 1
 
-print(f"\n{count} bots × 2 pages = {count*2} HTML files generated")
+print(f"\n{count} bots x 2 pages = {count*2} HTML files generated")
