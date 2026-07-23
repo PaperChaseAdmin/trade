@@ -6,7 +6,7 @@ Supports multiple AI models: Gemini 2.0 Flash, OpenRouter free models.
 Each bot has a primary + fallback model for resilience.
 """
 
-import os, json, time, requests, yfinance as yf
+import os, json, time, requests, yfinance as yf, glob
 from datetime import datetime, date
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import pytz
@@ -383,9 +383,26 @@ def update_leaderboard(results):
     bots.sort(key=lambda b: b["total_return_pct"], reverse=True)
     for i, b in enumerate(bots):
         b["rank"] = i + 1
+    # Aggregate portfolio history (use median bot's history or average)
+    all_hist = {}
+    for pf_file in glob.glob("data/bots/*/portfolio.json"):
+        try:
+            pf = load_json(pf_file)
+            for h in pf.get("portfolio_history", []):
+                ts = h.get("timestamp","")
+                val = h.get("value",10000)
+                if ts:
+                    all_hist.setdefault(ts, []).append(val)
+        except: pass
+    agg_hist = [10000]
+    if all_hist:
+        sorted_ts = sorted(all_hist.keys())
+        agg_hist = [sum(all_hist[t])/len(all_hist[t]) for t in sorted_ts]
+
     save_json(LEADERBOARD_FILE, {
         "updated_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "bots": bots
+        "bots": bots,
+        "portfolio_history": agg_hist,
     })
     print(f"  Leaderboard updated ({len(bots)} bots)")
 

@@ -117,7 +117,7 @@ td{padding:8px 10px;border-bottom:1px solid var(--pc-border);font-size:12px;colo
 .session-block-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--pc-text-3);margin-bottom:4px}
 .spec-card{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius-lg);padding:16px;margin-bottom:16px}
 .spec-card-title{font-size:11px;font-weight:700;color:var(--pc-heading);margin-bottom:10px}
-.spec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1px;background:var(--pc-border);border-radius:var(--pc-radius);overflow:hidden}
+.spec-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--pc-border);border-radius:var(--pc-radius);overflow:hidden}
 .spec-item{background:var(--pc-surface-2);padding:12px 14px}
 .spec-label{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--pc-text-3);margin-bottom:2px}
 .spec-val{font-size:14px;font-weight:600;color:var(--pc-heading)}
@@ -156,9 +156,9 @@ td{padding:8px 10px;border-bottom:1px solid var(--pc-border);font-size:12px;colo
     <div id="hero"></div>
     <div id="outlook"></div>
     <div id="countdown-wrap" class="countdown-wrap" style="margin-bottom:16px"></div>
-    <div id="prices-bar" class="specs"></div>
+    <div id="prices-bar"></div>
     <div id="last-session"></div>
-    <div id="specs" class="specs"></div>
+    <div id="specs"></div>
     <div class="st">&#x1F4C8; Portfolio Performance</div>
     <div id="chart" style="background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius-lg);padding:16px;margin-bottom:16px"><canvas id="mainChart"></canvas></div>
     <div class="st">&#x1F4E6; Current Positions</div>
