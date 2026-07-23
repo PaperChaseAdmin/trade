@@ -1,34 +1,39 @@
 {
-  "cash": 4850.91,
-  "total_value": 9930.34,
+  "cash": 4020.37,
+  "total_value": 9914.81,
   "positions": {
     "NVDA": {
       "shares": 1,
       "avg_cost": 211.24,
-      "current_price": 209.34
+      "current_price": 209.025
     },
     "GLD": {
       "shares": 13,
       "avg_cost": 372.5297,
-      "current_price": 372.425
+      "current_price": 371.255
     },
     "UUP": {
       "shares": 1,
       "avg_cost": 28.3501,
-      "current_price": 28.56
+      "current_price": 28.555
+    },
+    "TLT": {
+      "shares": 10,
+      "avg_cost": 83.054,
+      "current_price": 83.054
     }
   },
-  "total_return_pct": -0.7,
+  "total_return_pct": -0.85,
   "total_return_usd": 0.0,
-  "today_pnl": 0.0,
-  "today_pnl_pct": 0.0,
+  "today_pnl": -15.53,
+  "today_pnl_pct": -0.16,
   "total_trades": 0,
   "today_start_value": 9930.34,
   "today_date": "2026-07-23",
   "last_action": "Analysis unavailable",
-  "last_updated": "2026-07-23T13:42:18Z",
+  "last_updated": "2026-07-23T14:08:01Z",
   "last_session": {
-    "at": "2026-07-23T13:42:18Z",
+    "at": "2026-07-23T14:08:01Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
@@ -36,27 +41,27 @@
     "top_movers": [
       [
         "TSLA",
-        -9.88
+        -12.54
       ],
       [
         "AMZN",
-        -3.24
+        -3.67
       ],
       [
         "META",
-        -2.79
+        -2.78
       ],
       [
         "GLD",
-        -1.75
+        -2.03
       ],
       [
-        "XLE",
-        1.71
+        "BABA",
+        -1.49
       ],
       [
         "QQQ",
-        -1.57
+        -1.46
       ]
     ],
     "news_read": [],
@@ -733,6 +738,10 @@
     {
       "timestamp": "2026-07-23T13:42:18Z",
       "value": 9930.34
+    },
+    {
+      "timestamp": "2026-07-23T14:08:01Z",
+      "value": 9914.81
     }
   ]
 }
