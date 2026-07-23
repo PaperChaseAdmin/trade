@@ -37,6 +37,7 @@ DETAIL_TMPL = """\
   const BOT_MAX_POSITION=BOTMAXPOSITION,BOT_MAX_TRADES=BOTMAXTRADES,BOT_MIN_CASH=BOTMINCASH;
 </script>
 <style>
+:root{--bot-color:var(--pc-brand); --tv-text-2:var(--pc-text-2); --tv-text-3:var(--pc-text-3)}
 .bot-hero{display:flex;align-items:center;gap:14px;margin-bottom:16px}
 .bot-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;flex-shrink:0}
 .bot-meta h1{font-size:20px;font-weight:700;color:var(--pc-heading);margin:0;line-height:1.2}
@@ -50,8 +51,8 @@ DETAIL_TMPL = """\
 .outlook-card{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius-lg);padding:20px;margin-bottom:16px}
 .outlook-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--pc-text-3);margin-bottom:6px}
 .outlook{font-size:13px;color:var(--pc-text);line-height:1.6}
-.metrics-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-bottom:16px}
-.metric{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius);padding:14px 16px}
+.metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.metric{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius);padding:16px 18px}
 .metric-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--pc-text-3);margin-bottom:2px}
 .metric-val{font-size:18px;font-weight:700;font-family:var(--pc-mono);color:var(--pc-heading);margin-top:1px}
 .metric-val.profit{color:var(--pc-green)}
@@ -108,6 +109,26 @@ td{padding:8px 10px;border-bottom:1px solid var(--pc-border);font-size:12px;colo
 .filter-btn.on{background:var(--pc-brand);border-color:var(--pc-brand);color:#fff}
 .session-ctx{display:flex;flex-wrap:wrap;gap:2px;margin:4px 0}
 .signal-ctx{display:flex;flex-wrap:wrap;gap:3px;margin-top:6px}
+.session-card{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius-lg);padding:20px;margin-bottom:16px}
+.session-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.session-title{font-size:13px;font-weight:700;color:var(--pc-heading)}
+.session-time{font-size:10px;color:var(--pc-text-3);font-family:var(--pc-mono)}
+.session-block{background:var(--pc-surface-hover);border-radius:var(--pc-radius);padding:12px;margin-bottom:8px}
+.session-block-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--pc-text-3);margin-bottom:4px}
+.spec-card{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius-lg);padding:16px;margin-bottom:16px}
+.spec-card-title{font-size:11px;font-weight:700;color:var(--pc-heading);margin-bottom:10px}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1px;background:var(--pc-border);border-radius:var(--pc-radius);overflow:hidden}
+.spec-item{background:var(--pc-surface-2);padding:12px 14px}
+.spec-label{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--pc-text-3);margin-bottom:2px}
+.spec-val{font-size:14px;font-weight:600;color:var(--pc-heading)}
+.spec-sub{font-size:11px;color:var(--pc-text-2);margin-top:2px}
+.prices-bar{background:var(--pc-surface);border:1px solid var(--pc-border);border-radius:var(--pc-radius-lg);padding:16px;margin-bottom:16px}
+.prices-bar-title{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--pc-text-3);margin-bottom:8px}
+.prices-bar-items{display:flex;flex-wrap:wrap;gap:4px}
+.risk-meter{display:flex;align-items:center;gap:3px;margin-top:4px}
+.risk-track{flex:1;height:4px;background:var(--pc-surface-3);border-radius:2px;overflow:hidden}
+.risk-fill{height:100%;border-radius:2px;transition:width.3s}
+.risk-text{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--pc-text-3)}
 </style>
 </head>
 <body>
