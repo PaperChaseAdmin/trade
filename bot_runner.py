@@ -398,6 +398,10 @@ def update_leaderboard(results):
     if all_hist:
         sorted_ts = sorted(all_hist.keys())
         agg_hist = [sum(all_hist[t])/len(all_hist[t]) for t in sorted_ts]
+        # Downsample to max 100 points for chart performance
+        if len(agg_hist) > 100:
+            step = len(agg_hist) // 100
+            agg_hist = [agg_hist[i] for i in range(0, len(agg_hist), step)][:100]
 
     save_json(LEADERBOARD_FILE, {
         "updated_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
