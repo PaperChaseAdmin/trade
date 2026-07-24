@@ -143,10 +143,10 @@ td{padding:8px 10px;border-bottom:1px solid var(--pc-border);font-size:12px;colo
   .hero-name{font-size:18px;text-align:center}
   .hero-bio,.hero-strategy{font-size:11px;text-align:center}
   .risk-meter{justify-content:center}
-  .metrics-row{grid-template-columns:repeat(4,1fr);gap:6px}
-  .metric{padding:8px}
-  .metric-val{font-size:11px}
-  .metric-lbl{font-size:8px}
+  .metrics-row{grid-template-columns:repeat(4,1fr);gap:4px}
+  .metric{padding:6px 4px}
+  .metric-val{font-size:10px}
+  .metric-lbl{font-size:7px;letter-spacing:.03em}
   .countdown-wrap{justify-content:center}
   .spec-grid{grid-template-columns:repeat(3,1fr)}
   .spec-item{padding:8px 10px}
@@ -160,11 +160,6 @@ td{padding:8px 10px;border-bottom:1px solid var(--pc-border);font-size:12px;colo
   .ticker-chip{font-size:10px;padding:2px 8px}
   .st{font-size:13px}
   #chart{padding:8px!important}
-  .container{padding:16px!important}
-  .metrics-row{grid-template-columns:repeat(4,1fr);gap:4px}
-  .metric{padding:6px 4px}
-  .metric-val{font-size:10px}
-  .metric-lbl{font-size:7px;letter-spacing:.03em}
 }
 </style>
 </head>
@@ -182,7 +177,6 @@ td{padding:8px 10px;border-bottom:1px solid var(--pc-border);font-size:12px;colo
 </div></nav>
 
 <div class="container">
-  <!-- Nav removed temporarily -->
   <a class="back-link" href="/trading-arena/">&larr; Back to Arena</a>
   <div id="loading" class="loading">Loading BOTNAME...</div>
   <div id="app" style="display:none">
@@ -238,7 +232,6 @@ RECORDS_TMPL = """\
 </div></nav>
 
 <div class="container">
-  <!-- Nav removed temporarily -->
   <a class="back-link" href="/trading-arena/">&larr; Back to Arena</a>
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
     <div>
