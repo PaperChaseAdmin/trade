@@ -183,7 +183,7 @@ td{padding:8px 10px;border-bottom:1px solid var(--pc-border);font-size:12px;colo
 
 <div class="container">
   <!-- Nav removed temporarily -->
-  <a class="back-link"
+  <a class="back-link" href="/trading-arena/">&larr; Back to Arena</a>
   <div id="loading" class="loading">Loading BOTNAME...</div>
   <div id="app" style="display:none">
     <div id="hero"></div>
@@ -239,7 +239,7 @@ RECORDS_TMPL = """\
 
 <div class="container">
   <!-- Nav removed temporarily -->
-  <a class="back-link"
+  <a class="back-link" href="/trading-arena/">&larr; Back to Arena</a>
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
     <div>
       <h1 style="font-size:22px;font-weight:700;color:var(--pc-heading);letter-spacing:-0.03em;margin:0">BOTAVATAR BOTNAME &mdash; Trade Records</h1>
