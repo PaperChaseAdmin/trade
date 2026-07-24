@@ -215,7 +215,7 @@ function renderFollowGuide(){
         '<div class="follow-step"><span class="follow-num">2</span><span>When you see a <span class="badge badge-buy">BUY</span>, consider opening a position at market price in your broker for the same ticker.</span></div>'+
         '<div class="follow-step"><span class="follow-num">3</span><span>When you see a <span class="badge badge-sell">SELL</span>, consider closing or trimming your position in that ticker.</span></div>'+
         '<div class="follow-step"><span class="follow-num">4</span><span>Read the <strong>Reasoning</strong> column \u2014 the AI explains its logic for every trade so you can judge whether it aligns with your own view.</span></div>'+
-        '<div class="follow-step"><span class="follow-num">5</span><span>Check <a href="/trade/'+BOT_ID+'/records/" style="color:var(--tv-blue)">Full Trade Records \u2192</a> for the complete history, win rate, and total volume.</span></div>'+
+        '<div class="follow-step"><span class="follow-num">5</span><span>Check <a href="/trading-arena/'+BOT_ID+'/records/" style="color:var(--pc-brand)">Full Trade Records \u2192</a> for the complete history, win rate, and total volume.</span></div>'+
       '</div>'+
       '<div class="follow-warning">'+
         '\u26a0 This bot trades with <strong>simulated paper money only</strong>. Past performance does not guarantee future results. Nothing on this page is financial advice. Always do your own due diligence before trading real money.'+
@@ -290,8 +290,17 @@ function renderHero(pf){
 }
 
 function renderOutlook(pf){
-  if(!pf.last_action||pf.last_action.startsWith('Init')) return;
-  $('outlook').innerHTML='<div class="outlook" style="--bot-color:'+BOT_COLOR+'"><div class="outlook-lbl">Latest Thinking</div>'+pf.last_action+'</div>';
+  if(pf.last_action&&!pf.last_action.startsWith('Init')&&pf.last_action!=='...'){
+    $('outlook').innerHTML='<div class="outlook" style="--bot-color:'+BOT_COLOR+'"><div class="outlook-lbl">Latest Thinking</div>'+pf.last_action+'</div>';
+    return;
+  }
+  // Fall back to last session AI analysis
+  const s=pf.last_session;
+  if(s&&s.ai_analysis){
+    $('outlook').innerHTML='<div class="outlook" style="--bot-color:'+BOT_COLOR+'"><div class="outlook-lbl">Latest Thinking</div>'+s.ai_analysis+'</div>';
+    return;
+  }
+  $('outlook').innerHTML='<div class="outlook-lbl" style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--pc-text-3);margin-bottom:6px">Latest Thinking</div><div style="font-size:12px;color:var(--pc-text-3);padding:8px 0">Analysis unavailable</div>';
 }
 
 function renderLastSession(pf){
@@ -354,60 +363,28 @@ function renderLastSession(pf){
 
 function renderChart(pf){
   const hist=(pf.portfolio_history||[]).slice(-120);
-  if(hist.length<2){ document.querySelector('.chart-wrap canvas').style.display='none'; return; }
-  const labels=hist.map(function(h){ const d=new Date(h.timestamp); return (d.getMonth()+1)+'/'+d.getDate()+' '+String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0'); });
+  const el=$('chart');
+  if(hist.length<2){ el.innerHTML='<div style="text-align:center;padding:40px;color:var(--pc-text-3);font-size:12px">Not enough data</div>'; return; }
   const vals=hist.map(function(h){ return h.value; });
-  const isUp=vals[vals.length-1]>=10000;
-  const color=isUp?'#089981':'#f23645';
-  if(chart) chart.destroy();
-  const canvas=$('chart');
-  chart=new Chart(canvas,{
-    type:'line',
-    data:{
-      labels:labels,
-      datasets:[{
-        data:vals,
-        borderColor:color,
-        backgroundColor:color.replace(')',',0.06)').replace('rgb','rgba'),
-        borderWidth:2,
-        pointRadius:0,
-        pointHoverRadius:4,
-        pointHoverBackgroundColor:color,
-        fill:true,
-        tension:0.3
-      }]
-    },
-    options:{
-      responsive:true,
-      maintainAspectRatio:false,
-      plugins:{
-        legend:{display:false},
-        tooltip:{
-          backgroundColor:'#1e222d',
-          titleColor:'#d1d4dc',
-          bodyColor:'#d1d4dc',
-          borderColor:'#2a2e39',
-          borderWidth:1,
-          padding:12,
-          cornerRadius:6,
-          callbacks:{
-            label:function(ctx){ return ' $'+ctx.parsed.y.toLocaleString('en-US',{minimumFractionDigits:2}); }
-          }
-        }
-      },
-      scales:{
-        x:{
-          ticks:{color:'#787b86',maxTicksLimit:8,font:{family:'JetBrains Mono',size:10}},
-          grid:{color:'rgba(255,255,255,0.04)'}
-        },
-        y:{
-          ticks:{color:'#787b86',font:{family:'JetBrains Mono',size:10},callback:function(v){ return '$'+v.toLocaleString('en-US',{maximumFractionDigits:0}); }},
-          grid:{color:'rgba(255,255,255,0.04)'}
-        }
-      },
-      interaction:{intersect:false,mode:'index'}
-    }
-  });
+  const min=Math.min.apply(null,vals), max=Math.max.apply(null,vals), range=max-min||1;
+  const isUp=vals[vals.length-1]>=vals[0];
+  const lineColor=isUp?'var(--pc-green)':'var(--pc-red)';
+  const fillColor=isUp?'rgba(43,138,94,0.08)':'rgba(197,75,75,0.08)';
+  var labels=hist.map(function(h){var d=new Date(h.timestamp);return(d.getMonth()+1)+'/'+d.getDate();});
+  var w=el.offsetWidth||1000,h=220,p=16;
+  var xs=function(i){return p+(w-p*2)*(i/vals.length);};
+  var ys=function(v){return p+h-(h-p*2)*(v-min)/range;};
+  var pts=vals.map(function(v,i){return xs(i)+','+ys(v);}).join(' ');
+  var fmt=function(v){return v>=1000?'$'+(v/1000).toFixed(1)+'K':'$'+v.toFixed(0);};
+  el.innerHTML='<svg width="100%" height="'+(h+p*2)+'" viewBox="0 0 '+w+' '+(h+p*2)+'" style="display:block">'+
+    '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="'+lineColor+'" stop-opacity="0.3"/><stop offset="100%" stop-color="'+lineColor+'" stop-opacity="0.01"/></linearGradient></defs>'+
+    '<polygon points="'+xs(0)+','+ys(vals[0])+' '+pts+' '+xs(vals.length-1)+','+(h+p)+' '+xs(0)+','+(h+p)+'" fill="url(#g)"/>'+
+    '<polyline points="'+pts+'" fill="none" stroke="'+lineColor+'" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>'+
+    '<text x="'+p+'" y="'+(p-4)+'" font-size="10" fill="var(--pc-text-3)">'+fmt(max)+'</text>'+
+    '<text x="'+p+'" y="'+(h+p+12)+'" font-size="10" fill="var(--pc-text-3)">'+fmt(min)+'</text>'+
+    '<text x="'+p+'" y="'+(h+p*2-2)+'" font-size="9" fill="var(--pc-text-3)">'+labels[0]+'</text>'+
+    '<text x="'+(w-p)+'" y="'+(h+p*2-2)+'" font-size="9" fill="var(--pc-text-3)" text-anchor="end">'+labels[labels.length-1]+'</text>'+
+  '</svg>';
 }
 
 function renderTrades(trades){
