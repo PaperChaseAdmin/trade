@@ -11,8 +11,8 @@ import os, json, time, requests, re
 from datetime import date, datetime
 from bot_profiles import BOT_PROFILES
 
-# Global fallback chain — used as last resort if primary AND per-bot fallback both fail
-GLOBAL_FALLBACK_CHAIN = ["deepseek/deepseek-chat", "mistralai/mistral-small-24b-instruct-2501", "qwen/qwen2.5-72b-instruct", "nemotron", "gemma"]
+# Global fallback chain — verified free models only (checked 2026-08-12)
+GLOBAL_FALLBACK_CHAIN = ["nemotron", "gemma", "cohere", "nemotron-ultra", "gpt-oss"]
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
@@ -195,44 +195,39 @@ def _resolve_base_name(model_name):
 
 
 def _resolve_model_id(model_name):
-    """Map short model name to full OpenRouter model ID."""
+    """Map short model name to full OpenRouter model ID (always FREE)."""
     mapping = {
-        # === CONFIRMED WORKING FREE MODELS (tested 2026-07-01 from HK) ===
-        "nemotron": "nvidia/nemotron-3-super-120b-a12b",
-        "nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b",
-        "gemma": "google/gemma-4-26b-a4b-it",
-        "google/gemma-4-26b-a4b-it": "google/gemma-4-26b-a4b-it",
-        "cohere": "cohere/north-mini-code",
-        "cohere/north-mini-code": "cohere/north-mini-code",
-        "liquid": "liquid/lfm-2.5-1.2b-thinking",
-        "liquid/lfm-2.5-1.2b-thinking": "liquid/lfm-2.5-1.2b-thinking",
-        # Global chain diversifiers (different providers = better rate limit survival)
-        "qwen3-coder": "qwen/qwen3-coder",
-        "qwen/qwen3-coder": "qwen/qwen3-coder",
-        "llama70b": "meta-llama/llama-3.3-70b-instruct",
-        "meta-llama/llama-3.3-70b-instruct": "meta-llama/llama-3.3-70b-instruct",
-        "nemotron-ultra": "nvidia/nemotron-3-ultra-550b-a55b",
-        "nvidia/nemotron-3-ultra-550b-a55b": "nvidia/nemotron-3-ultra-550b-a55b",
+        # === VERIFIED FREE MODELS (checked 2026-08-12 via OpenRouter API) ===
+        "nemotron": "nvidia/nemotron-3-super-120b-a12b:free",
+        "nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b:free",
+        "nemotron-3.5": "nvidia/nemotron-3.5-lightning:free",
+        "nemotron-ultra": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3-ultra-550b-a55b": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "gemma": "google/gemma-4-26b-a4b-it:free",
+        "google/gemma-4-26b-a4b-it": "google/gemma-4-26b-a4b-it:free",
+        "gemma-4-31b": "google/gemma-4-31b-it:free",
+        "cohere": "cohere/north-mini-code:free",
+        "cohere/north-mini-code": "cohere/north-mini-code:free",
+        "gpt-oss": "openai/gpt-oss-20b:free",
         # Legacy names — backwards compat with bot_profiles.py
-        "qwen": "nvidia/nemotron-3-super-120b-a12b",
-        "qwen3-coder": "nvidia/nemotron-3-super-120b-a12b",
-        "kimi": "nvidia/nemotron-3-super-120b-a12b",
-        "kimi-k2.6": "nvidia/nemotron-3-super-120b-a12b",
-        "minimax": "google/gemma-4-26b-a4b-it",
-        "minimax-m2.5": "google/gemma-4-26b-a4b-it",
-        "ling": "cohere/north-mini-code",
-        "ling-2.6-1t": "cohere/north-mini-code",
-        # Fallback-only (not tested from HK but kept for diversity)
-        "llama": "nvidia/nemotron-3-super-120b-a12b",
-        "deepseek": "nvidia/nemotron-3-super-120b-a12b",
-        "mistral": "cohere/north-mini-code",
-        "dolphin": "cohere/north-mini-code",
+        "qwen": "nvidia/nemotron-3-super-120b-a12b:free",
+        "qwen3-coder": "nvidia/nemotron-3-super-120b-a12b:free",
+        "kimi": "nvidia/nemotron-3-super-120b-a12b:free",
+        "kimi-k2.6": "nvidia/nemotron-3-super-120b-a12b:free",
+        "minimax": "google/gemma-4-26b-a4b-it:free",
+        "minimax-m2.5": "google/gemma-4-26b-a4b-it:free",
+        "ling": "cohere/north-mini-code:free",
+        "ling-2.6-1t": "cohere/north-mini-code:free",
+        "llama": "nvidia/nemotron-3-super-120b-a12b:free",
+        "deepseek": "nvidia/nemotron-3-super-120b-a12b:free",
+        "mistral": "cohere/north-mini-code:free",
+        "dolphin": "cohere/north-mini-code:free",
     }
     result = mapping.get(model_name)
     if result:
-        return result
+        return result if result.endswith(":free") else f"{result}:free"
     if ":" in model_name or "/" in model_name:
-        return model_name
+        return model_name if model_name.endswith(":free") else f"{model_name}:free"
     return f"{model_name}:free"
 
 
