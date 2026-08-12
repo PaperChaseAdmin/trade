@@ -479,7 +479,7 @@ def run_bot(bot_id, prices, changes, market_data):
                 "sp500_chg":        sp500_v,
                 "vix":              vix_v,
                 "ticker_chg_pct":   changes.get(rec["ticker"], None),
-                "trigger_news":     ctx.get("selected_news", [None])[0],
+                "trigger_news":     ((ctx or {}).get("selected_news") or [None])[0],
             }
             new_trades.append(rec)
             print(f"    OK {rec['action']} {rec['shares']}x {rec['ticker']} @${rec['price']:.2f}")
