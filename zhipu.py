@@ -1,12 +1,12 @@
 """
 Zhipu (智谱) Zhipu-fallback via OpenRouter for PaperChase trading bots.
-Ultimate fallback when OpenRouter's main 3 models all fail.
-Uses OpenRouter API (z-ai/glm-4.5-air:free) — no separate Zhipu key needed.
+Ultimate fallback when OpenRouter's main models all fail.
+Uses OpenRouter API (nvidia/nemotron-3-super-120b-a12b:free) — no separate Zhipu key needed.
 """
 import os, json, time, requests, re
 from openrouter import _build_prompt, _build_bot_context, calc_value
 
-MODEL_ID = "deepseek/deepseek-chat"
+MODEL_ID = "nvidia/nemotron-3-super-120b-a12b:free"
 
 
 def get_decision(bot_id, profile, pf, prices, changes, market_data,
@@ -85,7 +85,7 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
                 if json_match:
                     result = json.loads(json_match.group())
                 else:
-                    raise ValueError(f"Gemma returned non-dict: {type(result)}")
+                    raise ValueError(f"Zhipu-fallback returned non-dict: {type(result)}")
 
             return result, ctx
 

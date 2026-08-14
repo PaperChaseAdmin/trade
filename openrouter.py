@@ -48,16 +48,28 @@ def get_decision(bot_id, profile, pf, prices, changes, market_data,
     if not api_key:
         raise ValueError("OPENROUTER_API_KEY not set")
 
-    # Build model list: primary → per-bot fallback → global chain
+    # Build model list: primary → per-bot fallback → global chain.
+    # Dedupe on the RESOLVED model ID — aliases (e.g. qwen vs gpt-oss) can
+    # resolve to the same endpoint; never call the same model twice per decision.
     base_primary = _resolve_base_name(model_name)
     base_fallback = _resolve_base_name(fallback_model) if fallback_model else None
-    
-    models_to_try = [base_primary]
-    if base_fallback and base_fallback != base_primary:
-        models_to_try.append(base_fallback)
+
+    models_to_try = []
+    seen_ids = set()
+
+    def _add(name):
+        if not name:
+            return
+        rid = _resolve_model_id(name)
+        if rid in seen_ids:
+            return
+        seen_ids.add(rid)
+        models_to_try.append(name)
+
+    _add(base_primary)
+    _add(base_fallback)
     for m in GLOBAL_FALLBACK_CHAIN:
-        if m not in models_to_try:
-            models_to_try.append(m)
+        _add(m)
 
     last_error = None
     for attempt_model in models_to_try:
@@ -209,16 +221,18 @@ def _resolve_model_id(model_name):
         "cohere": "cohere/north-mini-code:free",
         "cohere/north-mini-code": "cohere/north-mini-code:free",
         "gpt-oss": "openai/gpt-oss-20b:free",
-        # Legacy names — backwards compat with bot_profiles.py
-        "qwen": "nvidia/nemotron-3-super-120b-a12b:free",
-        "qwen3-coder": "nvidia/nemotron-3-super-120b-a12b:free",
-        "kimi": "nvidia/nemotron-3-super-120b-a12b:free",
-        "kimi-k2.6": "nvidia/nemotron-3-super-120b-a12b:free",
-        "minimax": "google/gemma-4-26b-a4b-it:free",
-        "minimax-m2.5": "google/gemma-4-26b-a4b-it:free",
-        "ling": "cohere/north-mini-code:free",
-        "ling-2.6-1t": "cohere/north-mini-code:free",
-        "llama": "nvidia/nemotron-3-super-120b-a12b:free",
+        # Legacy names — backwards compat with bot_profiles.py.
+        # Each legacy name resolves to a DISTINCT verified free model so bots
+        # get real model isolation and per-bot fallbacks are meaningful.
+        "qwen": "openai/gpt-oss-20b:free",
+        "qwen3-coder": "openai/gpt-oss-20b:free",
+        "kimi": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "kimi-k2.6": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "minimax": "google/gemma-4-31b-it:free",
+        "minimax-m2.5": "google/gemma-4-31b-it:free",
+        "ling": "nvidia/nemotron-3.5-lightning:free",
+        "ling-2.6-1t": "nvidia/nemotron-3.5-lightning:free",
+        "llama": "google/gemma-4-26b-a4b-it:free",
         "deepseek": "nvidia/nemotron-3-super-120b-a12b:free",
         "mistral": "cohere/north-mini-code:free",
         "dolphin": "cohere/north-mini-code:free",

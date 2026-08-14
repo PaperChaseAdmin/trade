@@ -1,12 +1,9 @@
 name: Run Trading Bots
 
 on:
-  schedule:
-    # Every 30 min, Mon–Fri, 13:00–21:00 UTC (covers EDT 9:00am–5:00pm & EST 8:00am–4:00pm)
-    # NOTE: GitHub disables scheduled workflows after 60 days of repo inactivity.
-    # ANY push to ANY file on the default branch reactivates the schedule.
-    # Last reactivation: 2026-06-07 (hermes redesign)
-    - cron: '0,30 13-21 * * 1-5'
+  # Triggered by cron-job.org job 8148615 (Mon–Fri 13:00–20:30 UTC every 30 min).
+  # GH Actions `schedule:` removed — it overlapped cron-job.org → double triggers
+  # every half hour, and cancel-in-progress killed half the runs mid-AI-call.
   workflow_dispatch:
     inputs:
       force_run:
@@ -20,7 +17,7 @@ on:
 
 concurrency:
   group: trade-bots
-  cancel-in-progress: true
+  cancel-in-progress: false   # queue instead of killing a run that's past 30 min
 
 jobs:
   trade:
