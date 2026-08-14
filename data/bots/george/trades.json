@@ -1,3 +1,130 @@
 {
-  "trades": []
+  "trades": [
+    {
+      "action": "BUY",
+      "ticker": "GLD",
+      "shares": 12,
+      "price": 402.44,
+      "total_value": 4829.28,
+      "reasoning": "Gold is showing resilience amid equity volatility; with SPY up only 0.25% and GLD down just -0.7% despite risk-on sentiment, this suggests hidden strength. I'm initiating a meaningful position as a hedge against potential mean reversion in equities and inflation persistence. At $402.44, 12 shares co",
+      "timestamp": "2026-08-13T13:36:29Z",
+      "market_outlook": "Market is exhibiting complacency with narrow leadership. The lack of follow-through in equities despite positive news, coupled with relative strength in bonds and gold, suggests a potential inflection point. I'm positioning for increased volatility and a rotation out of momentum into real assets and hedges.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": -0.7,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "TLT",
+      "shares": 30,
+      "price": 82.6,
+      "total_value": 2478.0,
+      "reasoning": "TLT up 0.6% while equities show mixed strength indicates early rotation into duration as a hedge. Bonds are underowned and offer convexity if growth surprises to the downside. 30 shares at $82.60 = ~$2,478 \u2014 a meaningful but not extreme bet, preserving cash for tactical shifts.",
+      "timestamp": "2026-08-13T13:36:29Z",
+      "market_outlook": "Market is exhibiting complacency with narrow leadership. The lack of follow-through in equities despite positive news, coupled with relative strength in bonds and gold, suggests a potential inflection point. I'm positioning for increased volatility and a rotation out of momentum into real assets and hedges.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.6,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLF",
+      "shares": 17,
+      "price": 58.22,
+      "total_value": 989.74,
+      "reasoning": "Financials up 0.55% with steady momentum; banks benefit from higher-for-longer rates and steepening yield curve expectations. This is a proxy for economic resilience without overextending into frothy tech. 17 shares at $58.22 = ~$990 \u2014 a small but active position to begin sector rotation.",
+      "timestamp": "2026-08-13T13:36:29Z",
+      "market_outlook": "Market is exhibiting complacency with narrow leadership. The lack of follow-through in equities despite positive news, coupled with relative strength in bonds and gold, suggests a potential inflection point. I'm positioning for increased volatility and a rotation out of momentum into real assets and hedges.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.55,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "SELL",
+      "ticker": "XLF",
+      "shares": 17,
+      "price": 58.09,
+      "total_value": 987.53,
+      "reasoning": "XLF is flat (+0.26%) and underperforming relative to broader financials and tech. No clear catalyst, and sector is sensitive to rate volatility. Exiting to redeploy capital into higher-conviction macro hedges (GLD) and momentum leaders (META, TSLA). Frees up ~$988 for better opportunities.",
+      "timestamp": "2026-08-13T14:08:11Z",
+      "market_outlook": "Market is exhibiting divergent behavior: tech and select discretionary names (META, TSLA) are strengthening, while commodities (XLE, BABA) and gold are weakening short-term. However, gold's resilience despite dollar strength (UUP flat) suggests hidden risk aversion. I'm balancing momentum long positions in tech with a defensive gold hedge \u2014 preparing for either continued tech leadership or a sudden risk-off shift. Reflexivity suggests today's leaders could accelerate, but I'm hedging for the break.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.26,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "META",
+      "shares": 4,
+      "price": 589.63,
+      "total_value": 2358.52,
+      "reasoning": "META is a top watchlist performer (+1.73%) with strong momentum and AI-driven growth narrative. Market is rewarding innovation and ad recovery. Current tech exposure (QQQ) is good but single-stock META offers higher alpha potential. Adding to winner with conviction \u2014 still well under 50% limit per s",
+      "timestamp": "2026-08-13T14:08:11Z",
+      "market_outlook": "Market is exhibiting divergent behavior: tech and select discretionary names (META, TSLA) are strengthening, while commodities (XLE, BABA) and gold are weakening short-term. However, gold's resilience despite dollar strength (UUP flat) suggests hidden risk aversion. I'm balancing momentum long positions in tech with a defensive gold hedge \u2014 preparing for either continued tech leadership or a sudden risk-off shift. Reflexivity suggests today's leaders could accelerate, but I'm hedging for the break.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 1.73,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "TLT",
+      "shares": 2,
+      "price": 82.2194,
+      "total_value": 164.44,
+      "reasoning": "TLT is down -0.45% but remains a key asset for systemic risk hedging. Bonds often rally when fear rises. Adding to TLT to increase duration exposure and hedge equity volatility.",
+      "timestamp": "2026-08-14T13:36:04Z",
+      "market_outlook": "Market shows mild bullishness in tech (TSLA, META, NVDA) but gold and bonds are diverging \u2014 GLD up, TLT down slightly. This divergence suggests uncertainty. I anticipate a potential shift toward risk-off as reflexive feedback loops could turn negative if liquidity tightens or growth surprises to the downside.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": -0.45,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "SELL",
+      "ticker": "META",
+      "shares": 2,
+      "price": 599.535,
+      "total_value": 1199.07,
+      "reasoning": "META is up 0.91% and has delivered strong PnL (+39.62). Taking partial profits to rebalance into macro hedges (GLD, TLT) and reduce equity concentration.",
+      "timestamp": "2026-08-14T13:36:04Z",
+      "market_outlook": "Market shows mild bullishness in tech (TSLA, META, NVDA) but gold and bonds are diverging \u2014 GLD up, TLT down slightly. This divergence suggests uncertainty. I anticipate a potential shift toward risk-off as reflexive feedback loops could turn negative if liquidity tightens or growth surprises to the downside.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.91,
+        "trigger_news": null
+      }
+    }
+  ]
 }

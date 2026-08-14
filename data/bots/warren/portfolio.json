@@ -1,84 +1,74 @@
 {
-  "cash": 1168.92,
-  "total_value": 10168.56,
+  "cash": 1849.65,
+  "total_value": 10224.23,
   "positions": {
     "KO": {
       "shares": 29,
-      "current_price": 86.56,
+      "current_price": 87.34,
       "avg_cost": 82.7215
     },
     "V": {
-      "shares": 5,
-      "avg_cost": 361.58,
-      "current_price": 362.37
-    },
-    "JNJ": {
-      "shares": 3,
-      "avg_cost": 265.65,
-      "current_price": 259.82
+      "shares": 7,
+      "current_price": 366.48,
+      "avg_cost": 361.6657
     },
     "MA": {
       "shares": 4,
-      "current_price": 562.62,
+      "current_price": 568.49,
       "avg_cost": 529.0675
     },
-    "BRK-B": {
-      "shares": 2,
-      "avg_cost": 532.3,
-      "current_price": 518.705
-    },
-    "AAPL": {
-      "shares": 2,
-      "avg_cost": 305.1,
-      "current_price": 305.1
+    "ABBV": {
+      "shares": 4,
+      "avg_cost": 250.6,
+      "current_price": 250.6
     }
   },
-  "total_return_pct": 1.69,
+  "total_return_pct": 2.24,
   "total_return_usd": 0.0,
-  "today_pnl": -19.75,
-  "today_pnl_pct": -0.19,
-  "total_trades": 0,
-  "today_start_value": 10188.31,
-  "today_date": "2026-08-11",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-08-11T19:33:00Z",
+  "today_pnl": 0.0,
+  "today_pnl_pct": 0.0,
+  "total_trades": 10,
+  "today_start_value": 10224.23,
+  "today_date": "2026-08-14",
+  "last_action": "Market is neutral with mixed signals. No extreme fear or greed. Focus remains on fundamentals: buy quality businesses at fair prices, sell laggards, and maintain discipline.",
+  "last_updated": "2026-08-14T13:32:18Z",
   "last_session": {
-    "at": "2026-08-11T19:33:00Z",
+    "at": "2026-08-14T13:32:18Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "BRK-B",
-        -2.06
-      ],
-      [
-        "AAPL",
-        -1.15
-      ],
-      [
-        "PG",
-        -0.95
-      ],
-      [
         "ABBV",
-        0.93
-      ],
-      [
-        "CVX",
-        0.81
+        0.83
       ],
       [
         "JNJ",
-        -0.75
+        -0.48
+      ],
+      [
+        "CVX",
+        0.42
+      ],
+      [
+        "JPM",
+        -0.36
+      ],
+      [
+        "V",
+        0.28
+      ],
+      [
+        "MA",
+        0.26
       ]
     ],
     "news_read": [],
     "domain_extra": "VALUE CONTEXT: Fear&Greed=50 (Neutral) \u2014 Moderate sentiment \u2014 stick to fundamentals",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "PG is a drag on performance with negative PnL and no momentum. ABBV offers superior momentum, strong fundamentals, and a wide moat. Selling PG frees ~$865 cash, enabling a disciplined ABBV purchase. Portfolio remains concentrated in high-quality names (KO, V, MA) with room to add ABBV. Cash reserve stays well above $1000. Trades align with value discipline: cut underperformer, add momentum-supported quality.",
+    "outlook": "Market is neutral with mixed signals. No extreme fear or greed. Focus remains on fundamentals: buy quality businesses at fair prices, sell laggards, and maintain discipline.",
+    "trades_made": 2
   },
   "portfolio_history": [
     {
@@ -840,6 +830,18 @@
     {
       "timestamp": "2026-08-11T19:33:00Z",
       "value": 10168.56
+    },
+    {
+      "timestamp": "2026-08-13T13:32:44Z",
+      "value": 10165.41
+    },
+    {
+      "timestamp": "2026-08-13T14:03:12Z",
+      "value": 10181.45
+    },
+    {
+      "timestamp": "2026-08-14T13:32:18Z",
+      "value": 10224.23
     }
   ]
 }

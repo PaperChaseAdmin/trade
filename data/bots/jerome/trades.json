@@ -1,3 +1,166 @@
 {
-  "trades": []
+  "trades": [
+    {
+      "action": "SELL",
+      "ticker": "TLT",
+      "shares": 5,
+      "price": 82.6,
+      "total_value": 413.0,
+      "reasoning": "TLT up 0.6% today; taking partial profit as bond rally may be extended. Maintain core position but reduce exposure to lock in gains.",
+      "timestamp": "2026-08-13T13:42:24Z",
+      "market_outlook": "Market shows mixed signals with modest gains in rate-sensitive sectors. VIX and Fear & Greed not provided, but bond and bank strength suggests neither extreme fear nor greed. Proceeding with cautious rebalancing.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.6,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "BIL",
+      "shares": 7,
+      "price": 91.51,
+      "total_value": 640.57,
+      "reasoning": "BIL flat today; adding to short-term Treasury exposure as a defensive cash equivalent. Low volatility, high liquidity, aligns with data-dependent stance.",
+      "timestamp": "2026-08-13T13:42:24Z",
+      "market_outlook": "Market shows mixed signals with modest gains in rate-sensitive sectors. VIX and Fear & Greed not provided, but bond and bank strength suggests neither extreme fear nor greed. Proceeding with cautious rebalancing.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.0,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLF",
+      "shares": 10,
+      "price": 58.22,
+      "total_value": 582.2,
+      "reasoning": "XLF up 0.55%; banks benefiting from higher rates. Adding to financials as inflation remains a concern and yield curve dynamics support bank margins.",
+      "timestamp": "2026-08-13T13:42:24Z",
+      "market_outlook": "Market shows mixed signals with modest gains in rate-sensitive sectors. VIX and Fear & Greed not provided, but bond and bank strength suggests neither extreme fear nor greed. Proceeding with cautious rebalancing.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.55,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "SELL",
+      "ticker": "TLT",
+      "shares": 5,
+      "price": 82.8101,
+      "total_value": 414.05,
+      "reasoning": "TLT up 0.85% today; taking partial profits as bond exposure may be overextended short-term. Maintaining core position but reducing to rebalance toward cash and defensive sectors given lack of clear macro triggers.",
+      "timestamp": "2026-08-13T14:15:37Z",
+      "market_outlook": "Market conditions lack clear directional signals: Fear & Greed and VIX data unavailable. Price action shows mild rotation into real estate (XLRE, VNQ) and financials (GS), with bonds (TLT) and utilities (XLU) modestly higher. No evidence of inflation spikes or recession fears. Proceeding with cautious rebalancing \u2014 reducing extended bond and utility positions to add to underperforming financials, which offer better risk-adjusted returns in a higher-for-longer rates scenario.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.85,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLF",
+      "shares": 10,
+      "price": 58.09,
+      "total_value": 580.9,
+      "reasoning": "XLF up only 0.26% today despite rising rates environment; banks underperforming relative to peers. Adding to position as financials benefit from higher rates and yield curve normalization. Still below 25% allocation limit.",
+      "timestamp": "2026-08-13T14:15:37Z",
+      "market_outlook": "Market conditions lack clear directional signals: Fear & Greed and VIX data unavailable. Price action shows mild rotation into real estate (XLRE, VNQ) and financials (GS), with bonds (TLT) and utilities (XLU) modestly higher. No evidence of inflation spikes or recession fears. Proceeding with cautious rebalancing \u2014 reducing extended bond and utility positions to add to underperforming financials, which offer better risk-adjusted returns in a higher-for-longer rates scenario.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.26,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "SELL",
+      "ticker": "XLU",
+      "shares": 5,
+      "price": 44.0717,
+      "total_value": 220.36,
+      "reasoning": "XLU up 0.55% today; utilities are defensive but not signaling recession fears (VIX unknown, no headlines). Taking profits to rotate into financials which offer better value in current rate environment. Maintaining core utility exposure.",
+      "timestamp": "2026-08-13T14:15:37Z",
+      "market_outlook": "Market conditions lack clear directional signals: Fear & Greed and VIX data unavailable. Price action shows mild rotation into real estate (XLRE, VNQ) and financials (GS), with bonds (TLT) and utilities (XLU) modestly higher. No evidence of inflation spikes or recession fears. Proceeding with cautious rebalancing \u2014 reducing extended bond and utility positions to add to underperforming financials, which offer better risk-adjusted returns in a higher-for-longer rates scenario.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.55,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "SELL",
+      "ticker": "TLT",
+      "shares": 2,
+      "price": 82.2194,
+      "total_value": 164.44,
+      "reasoning": "TLT down 0.45% today, underperforming as defensive bond; reduce exposure to rebalance toward better risk-adjusted opportunities given neutral VIX and no clear recession signal.",
+      "timestamp": "2026-08-14T13:43:03Z",
+      "market_outlook": "Market conditions show mixed signals with no extreme fear or greed data. VIX is not elevated, reducing immediate need for defensive bonds like TLT. Financials (XLF) are holding up better than other sectors, suggesting resilience. Inflation appears data-dependent without urgent spikes, supporting a balanced, gradual rebalancing approach.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": -0.45,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "XLF",
+      "shares": 10,
+      "price": 58.18,
+      "total_value": 581.8,
+      "reasoning": "XLF down only 0.19% today, relatively resilient financials; add to position to increase exposure to banks which benefit from higher rates and steady inflation data, aligning with Fed policy stance.",
+      "timestamp": "2026-08-14T13:43:03Z",
+      "market_outlook": "Market conditions show mixed signals with no extreme fear or greed data. VIX is not elevated, reducing immediate need for defensive bonds like TLT. Financials (XLF) are holding up better than other sectors, suggesting resilience. Inflation appears data-dependent without urgent spikes, supporting a balanced, gradual rebalancing approach.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": -0.19,
+        "trigger_news": null
+      }
+    },
+    {
+      "action": "BUY",
+      "ticker": "SHY",
+      "shares": 5,
+      "price": 82.065,
+      "total_value": 410.32,
+      "reasoning": "SHY up 0.04% today, stable short-term Treasury; increase cash-equivalent holdings to maintain liquidity and dry powder for future opportunities while earning yield.",
+      "timestamp": "2026-08-14T13:43:03Z",
+      "market_outlook": "Market conditions show mixed signals with no extreme fear or greed data. VIX is not elevated, reducing immediate need for defensive bonds like TLT. Financials (XLF) are holding up better than other sectors, suggesting resilience. Inflation appears data-dependent without urgent spikes, supporting a balanced, gradual rebalancing approach.",
+      "signal_context": {
+        "fg_value": null,
+        "fg_label": null,
+        "sp500_chg": null,
+        "vix": null,
+        "ticker_chg_pct": 0.04,
+        "trigger_news": null
+      }
+    }
+  ]
 }

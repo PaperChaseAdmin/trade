@@ -1,6 +1,6 @@
 {
-  "cash": 1088.45,
-  "total_value": 10278.27,
+  "cash": 3750.93,
+  "total_value": 10262.21,
   "positions": {
     "TIPS": {
       "shares": 26867,
@@ -9,96 +9,86 @@
     },
     "DJP": {
       "shares": 10,
-      "current_price": 48.49,
+      "current_price": 48.86,
       "avg_cost": 44.55
     },
     "PDBC": {
       "shares": 105,
-      "current_price": 17.8915,
-      "avg_cost": 16.1117
-    },
-    "TLT": {
-      "shares": 24,
-      "current_price": 82.155,
-      "avg_cost": 84.2528
-    },
-    "IEF": {
-      "shares": 11,
-      "current_price": 92.885,
-      "avg_cost": 93.8441
+      "current_price": 17.745,
+      "avg_cost": 16.3985
     },
     "FXI": {
       "shares": 5,
       "avg_cost": 33.365,
-      "current_price": 35.635
+      "current_price": 34.795
     },
     "IAU": {
-      "shares": 2,
-      "avg_cost": 77.6,
-      "current_price": 82.17
+      "shares": 10,
+      "current_price": 82.46,
+      "avg_cost": 81.4195
     },
     "GSG": {
-      "shares": 40,
-      "current_price": 32.51,
+      "shares": 30,
+      "current_price": 32.15,
       "avg_cost": 32.0725
     },
     "GLD": {
       "shares": 5,
       "avg_cost": 373.15,
-      "current_price": 400.91
+      "current_price": 402.29
     },
     "GDX": {
       "shares": 2,
-      "avg_cost": 90.14,
-      "current_price": 90.01
+      "avg_cost": 89.78,
+      "current_price": 89.78
     }
   },
-  "total_return_pct": 2.78,
+  "total_return_pct": 2.62,
   "total_return_usd": 0.0,
-  "today_pnl": 7.91,
-  "today_pnl_pct": 0.08,
-  "total_trades": 0,
-  "today_start_value": 10270.36,
-  "today_date": "2026-08-11",
-  "last_action": "Analysis unavailable",
-  "last_updated": "2026-08-11T19:35:10Z",
+  "today_pnl": -0.01,
+  "today_pnl_pct": -0.0,
+  "total_trades": 12,
+  "today_start_value": 10262.22,
+  "today_date": "2026-08-14",
+  "last_action": "Inflationary pressures are building as evidenced by strength in gold (GLD +0.86%, IAU +0.83%) and gold miners (GDX +1.64%). Bonds (TLT, IEF) are weakening, which aligns with rising inflation expectati",
+  "last_updated": "2026-08-14T13:35:23Z",
   "last_session": {
-    "at": "2026-08-11T19:35:10Z",
+    "at": "2026-08-14T13:35:23Z",
     "fear_greed": null,
     "fear_greed_label": null,
     "sp500_change": null,
     "vix": null,
     "top_movers": [
       [
-        "FXI",
-        -2.34
-      ],
-      [
-        "GSG",
-        0.59
-      ],
-      [
         "GDX",
-        -0.54
-      ],
-      [
-        "IAU",
-        -0.41
+        1.64
       ],
       [
         "GLD",
-        -0.4
+        0.86
       ],
       [
-        "PDBC",
-        0.39
+        "IAU",
+        0.83
+      ],
+      [
+        "TLT",
+        -0.45
+      ],
+      [
+        "VWO",
+        -0.45
+      ],
+      [
+        "FXI",
+        -0.19
       ]
     ],
     "news_read": [],
     "domain_extra": "",
-    "ai_analysis": "",
-    "outlook": "Analysis unavailable",
-    "trades_made": 0
+    "ai_analysis": "The portfolio is overweight bonds and underweight commodities relative to the current inflationary environment. I'm reducing bond exposure (selling TLT, IEF) and clearing a negligible TIPS position to deploy cash into GDX (gold miners) and PDBC (commodities). This maintains diversification while increasing allocation to inflation beneficiaries. All positions remain under 20% portfolio limit, and cash reserves stay well above $1000. The strategy aligns with All Weather principles: owning assets that perform well in rising inflation.",
+    "outlook": "Inflationary pressures are building as evidenced by strength in gold (GLD +0.86%, IAU +0.83%) and gold miners (GDX +1.64%). Bonds (TLT, IEF) are weakening, which aligns with rising inflation expectations. The Fed may be behind the curve, supporting further commodity and gold strength. No signs of recession yet, so maintaining growth-oriented inflation hedges is appropriate.",
+    "trades_made": 4
   },
   "portfolio_history": [
     {
@@ -860,6 +850,18 @@
     {
       "timestamp": "2026-08-11T19:35:10Z",
       "value": 10278.27
+    },
+    {
+      "timestamp": "2026-08-13T13:35:46Z",
+      "value": 10285.14
+    },
+    {
+      "timestamp": "2026-08-13T14:07:01Z",
+      "value": 10262.39
+    },
+    {
+      "timestamp": "2026-08-14T13:35:23Z",
+      "value": 10262.21
     }
   ]
 }
